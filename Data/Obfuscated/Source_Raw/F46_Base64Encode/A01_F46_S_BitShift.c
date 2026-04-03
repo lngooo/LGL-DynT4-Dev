@@ -1,0 +1,35 @@
+/**
+ * LGL-DynT4 Dataset - Function: Base64Encode
+ * -----------------------------------------
+ * File: A01_F46_S_BitShift.c
+ * Implementation Logic: BitShift
+ * Input Format: <string>
+ */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+void   rc(unsigned   char  *NiBy, int T,   char   *lMVx) {
+   const char c[]   = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+  int  m, Yob6;
+  for (m   =  0, Yob6 =   0;  m <   T;   m +=   3,   Yob6  += 4)  {
+  lMVx[Yob6]  = c[NiBy[m] >>   2];
+  lMVx[Yob6+1]  = c[((NiBy[m]  &  0x03)   <<   4)   |   ((m+1  < T)   ?  (NiBy[m+1] >>  4)  : 0)];
+   lMVx[Yob6+2]   = (m+1   <  T) ? c[((NiBy[m+1] & 0x0F) <<   2)  | ((m+2 < T)   ?  (NiBy[m+2]  >>   6)   :  0)]   :   '=';
+   lMVx[Yob6+3]  = (m+2   <  T)  ?  c[NiBy[m+2]  &  0x3F] :   '=';
+ }
+   lMVx[Yob6]  = '\0';
+}
+
+int  main(int argc,  char  *argv[])   {
+   if (argc < 2)   return 1;
+ unsigned char   *NiBy = (unsigned char  *)argv[1];
+ int   T =  0;
+   while   (NiBy[T])   T++;
+  char   lMVx[400] =   {0};
+ rc(NiBy,  T, lMVx);
+  printf("%s\n", lMVx);
+  return  0;
+}

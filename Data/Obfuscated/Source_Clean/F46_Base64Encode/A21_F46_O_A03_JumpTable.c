@@ -1,0 +1,14 @@
+void  CD5(unsigned   char *s,  int  HJG4, char *vVi)  {
+  const char  *EtK9  = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+ for(int Xo0=0;  Xo0<HJG4;   Xo0+=3)   {
+   unsigned   int  p  =   (s[Xo0]<<16) | (Xo0+1<HJG4?s[Xo0+1]<<8:0)  | (Xo0+2<HJG4?s[Xo0+2]:0);
+  for(int   BKp9=0;   BKp9<4;   BKp9++)   {
+  int  j   =   BKp9;
+  if(j ==  0)  vVi[(Xo0/3)*4] =  EtK9[(p>>18)&63];
+   else if(j  ==   1)   vVi[(Xo0/3)*4+1]  =  EtK9[(p>>12)&63];
+  else if(j ==   2)  vVi[(Xo0/3)*4+2]   =  (Xo0+1<HJG4)?EtK9[(p>>6)&63]:'=';
+  else  vVi[(Xo0/3)*4+3]   = (Xo0+2<HJG4)?EtK9[p&63]:'=';
+ }
+  }
+  vVi[((HJG4+2)/3)*4]  =   0;
+}

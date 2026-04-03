@@ -1,0 +1,86 @@
+@.str = constant [4 x i8] c"%s\0A\00"
+define dso_local void @UNB8(i8* %0) {
+  %2 = alloca i8*
+  %3 = alloca i8*
+  %4 = alloca i8*
+  store i8* %0, i8** %2
+  %6 = load i8*, i8** %2
+  store i8* %6, i8** %3
+  %8 = load i8*, i8** %2
+  store i8* %8, i8** %4
+  br label %9
+9:
+  %10 = load i8*, i8** %3
+  %11 = load i8, i8* %10
+  %12 = icmp ne i8 %11, 0
+  br i1 %12, label %14, label %13
+13:
+  br label %39
+14:
+  %15 = load i8*, i8** %3
+  %16 = load i8, i8* %15
+  %17 = sext i8 %16 to i32
+  %18 = icmp eq i32 %17, 32
+  br i1 %18, label %29, label %19
+19:
+  %20 = load i8*, i8** %3
+  %21 = load i8, i8* %20
+  %22 = sext i8 %21 to i32
+  %23 = icmp sge i32 %22, 9
+  br i1 %23, label %24, label %30
+24:
+  %25 = load i8*, i8** %3
+  %26 = load i8, i8* %25
+  %27 = sext i8 %26 to i32
+  %28 = icmp sle i32 %27, 13
+  br i1 %28, label %29, label %30
+29:
+  br label %36
+30:
+  %31 = load i8*, i8** %3
+  %32 = load i8, i8* %31
+  %33 = load i8*, i8** %4
+  store i8 %32, i8* %33
+  %34 = load i8*, i8** %4
+  %35 = getelementptr inbounds i8, i8* %34, i32 1
+  store i8* %35, i8** %4
+  br label %36
+36:
+  %37 = load i8*, i8** %3
+  %38 = getelementptr inbounds i8, i8* %37, i32 1
+  store i8* %38, i8** %3
+  br label %9
+39:
+  %40 = load i8*, i8** %4
+  store i8 0, i8* %40
+  ret void
+}
+define dso_local i32 @main(i32 %0, i8** %1) {
+  %3 = alloca i32
+  %4 = alloca i32
+  %5 = alloca i8**
+  store i32 0, i32* %3
+  store i32 %0, i32* %4
+  store i8** %1, i8*** %5
+  %6 = load i32, i32* %4
+  %7 = icmp slt i32 %6, 2
+  br i1 %7, label %8, label %9
+8:
+  store i32 0, i32* %3
+  br label %17
+9:
+  %10 = load i8**, i8*** %5
+  %11 = getelementptr inbounds i8*, i8** %10, i64 1
+  %12 = load i8*, i8** %11
+  call void @UNB8(i8* %12)
+  %13 = load i8**, i8*** %5
+  %14 = getelementptr inbounds i8*, i8** %13, i64 1
+  %15 = load i8*, i8** %14
+  %16 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str, i64 0, i64 0), i8* %15)
+  store i32 0, i32* %3
+  br label %17
+17:
+  %18 = load i32, i32* %3
+  ret i32 %18
+}
+declare i32 @printf(i8*, ...)

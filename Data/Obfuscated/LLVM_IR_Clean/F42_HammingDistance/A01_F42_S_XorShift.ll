@@ -1,0 +1,36 @@
+define dso_local i32 @f(i32 %0, i32 %1) {
+  %3 = alloca i32
+  %4 = alloca i32
+  %5 = alloca i32
+  %6 = alloca i32
+  store i32 %0, i32* %3
+  store i32 %1, i32* %4
+  %8 = load i32, i32* %3
+  %9 = load i32, i32* %4
+  %10 = xor i32 %8, %9
+  store i32 %10, i32* %5
+  store i32 0, i32* %6
+  br label %12
+12:
+  %13 = load i32, i32* %5
+  %14 = icmp ugt i32 %13, 0
+  br i1 %14, label %15, label %25
+15:
+  %16 = load i32, i32* %5
+  %17 = and i32 %16, 1
+  %18 = icmp ne i32 %17, 0
+  br i1 %18, label %19, label %22
+19:
+  %20 = load i32, i32* %6
+  %21 = add nsw i32 %20, 1
+  store i32 %21, i32* %6
+  br label %22
+22:
+  %23 = load i32, i32* %5
+  %24 = lshr i32 %23, 1
+  store i32 %24, i32* %5
+  br label %12
+25:
+  %26 = load i32, i32* %6
+  ret i32 %26
+}

@@ -1,0 +1,166 @@
+D:\programFiles\Anaconda3\envs\LGL-DynT4\python.exe F:\MyCodeClone\LGL-DynT4\Scripts\Audit_SourceRaw1_static.py
+--------------------------------------------------------------------------------
+DATASET AUDIT REPORT: LGL-DynT4 INTEGRITY VERIFICATION
+Timestamp: 2026-02-04
+Target Directory: F:\MyCodeClone\LGL-DynT4\Data\Source_Raw
+Total Function Groups Identified: 50
+--------------------------------------------------------------------------------
+ANALYZING GROUP: F01_Sum
+    STATUS: PASSED
+................................................................................
+ANALYZING GROUP: F02_GCD
+    STATUS: PASSED
+................................................................................
+ANALYZING GROUP: F03_Factorial
+    STATUS: PASSED
+................................................................................
+ANALYZING GROUP: F04_Fibonacci
+    STATUS: PASSED
+................................................................................
+ANALYZING GROUP: F05_Sqrt
+    STATUS: PASSED
+................................................................................
+ANALYZING GROUP: F06_IsPrime
+    STATUS: PASSED
+................................................................................
+ANALYZING GROUP: F07_Power
+    STATUS: PASSED
+................................................................................
+ANALYZING GROUP: F08_Abs
+    STATUS: PASSED
+................................................................................
+ANALYZING GROUP: F09_NewtonRoot
+    STATUS: PASSED
+................................................................................
+ANALYZING GROUP: F10_Log2
+    STATUS: PASSED
+................................................................................
+ANALYZING GROUP: F11_BinarySearch
+    STATUS: PASSED
+................................................................................
+ANALYZING GROUP: F12_BubbleSort
+    STATUS: PASSED
+................................................................................
+ANALYZING GROUP: F13_QuickSort
+    STATUS: PASSED
+................................................................................
+ANALYZING GROUP: F14_ArrayReverse
+    STATUS: PASSED
+................................................................................
+ANALYZING GROUP: F15_FindMax
+    STATUS: PASSED
+................................................................................
+ANALYZING GROUP: F16_MergeSort
+    STATUS: PASSED
+................................................................................
+ANALYZING GROUP: F17_ArrayRotate
+    STATUS: PASSED
+................................................................................
+ANALYZING GROUP: F18_KthSmallest
+    STATUS: PASSED
+................................................................................
+ANALYZING GROUP: F19_RemoveDuplicates
+    STATUS: PASSED
+................................................................................
+ANALYZING GROUP: F20_SelectionSort
+    STATUS: PASSED
+................................................................................
+ANALYZING GROUP: F21_ShellSort
+    STATUS: PASSED
+................................................................................
+ANALYZING GROUP: F22_InsertionSort
+    STATUS: PASSED
+................................................................................
+ANALYZING GROUP: F23_LinearSearch
+    STATUS: PASSED
+................................................................................
+ANALYZING GROUP: F24_ArraySum
+    STATUS: PASSED
+................................................................................
+ANALYZING GROUP: F25_ArrayAverage
+    STATUS: PASSED
+................................................................................
+ANALYZING GROUP: F26_StrLen
+    STATUS: PASSED
+................................................................................
+ANALYZING GROUP: F27_StrCmp
+    STATUS: PASSED
+................................................................................
+ANALYZING GROUP: F28_IsPalindrome
+    STATUS: PASSED
+................................................................................
+ANALYZING GROUP: F29_AnagramCheck
+    STATUS: PASSED
+................................................................................
+ANALYZING GROUP: F30_SubStrFind
+    STATUS: PASSED
+................................................................................
+ANALYZING GROUP: F31_WordCount
+    STATUS: PASSED
+................................................................................
+ANALYZING GROUP: F32_StrCompress
+    STATUS: PASSED
+................................................................................
+ANALYZING GROUP: F33_LCP
+    STATUS: PASSED
+................................................................................
+ANALYZING GROUP: F34_CharFrequency
+    STATUS: PASSED
+................................................................................
+ANALYZING GROUP: F35_VowelCount
+    STATUS: PASSED
+................................................................................
+ANALYZING GROUP: F36_CaseToggle
+    STATUS: PASSED
+................................................................................
+ANALYZING GROUP: F37_TrimSpace
+    STATUS: PASSED
+................................................................................
+ANALYZING GROUP: F38_ReverseWords
+    STATUS: PASSED
+................................................................................
+ANALYZING GROUP: F39_TitleCase
+    STATUS: PASSED
+................................................................................
+ANALYZING GROUP: F40_HexToInt
+    STATUS: PASSED
+................................................................................
+ANALYZING GROUP: F41_BitCount
+    STATUS: PASSED
+................................................................................
+ANALYZING GROUP: F42_HammingDistance
+    STATUS: PASSED
+................................................................................
+ANALYZING GROUP: F43_IsPowerOfTwo
+    STATUS: PASSED
+................................................................................
+ANALYZING GROUP: F44_ByteSwap
+    STATUS: PASSED
+................................................................................
+ANALYZING GROUP: F45_GrayCode
+    STATUS: PASSED
+................................................................................
+ANALYZING GROUP: F46_Base64Encode
+    STATUS: PASSED
+................................................................................
+ANALYZING GROUP: F47_XorCipher
+    STATUS: PASSED
+................................................................................
+ANALYZING GROUP: F48_RLEEncode
+    STATUS: PASSED
+................................................................................
+ANALYZING GROUP: F49_CaesarCipher
+    STATUS: PASSED
+................................................................................
+ANALYZING GROUP: F50_IntToRoman
+    STATUS: PASSED
+................................................................................
+
+FINAL SUMMARY REPORT
+------------------------------
+Total Files Audited: 1050
+Total Violations:    0
+------------------------------
+CONCLUSION: Dataset complies with LGL-DynT4 integrity standards.
+
+Process finished with exit code 0

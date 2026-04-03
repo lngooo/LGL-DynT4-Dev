@@ -1,0 +1,162 @@
+D:\programFiles\Anaconda3\envs\LGL-DynT4\python.exe F:\MyCodeClone\LGL-DynT4\Scripts\Audit_SourceClean.py
+
+>>> Processing Subdirectory: F01_Sum
+  [EXPECTED] int Sum(int n)
+
+>>> Processing Subdirectory: F02_GCD
+  [EXPECTED] int GCD(int a, int b)
+
+>>> Processing Subdirectory: F03_Factorial
+  [EXPECTED] long long Factorial(int n)
+
+>>> Processing Subdirectory: F04_Fibonacci
+  [EXPECTED] int Fibonacci(int n)
+
+>>> Processing Subdirectory: F05_Sqrt
+  [EXPECTED] int Sqrt(int n)
+
+>>> Processing Subdirectory: F06_IsPrime
+  [EXPECTED] int IsPrime(int n)
+
+>>> Processing Subdirectory: F07_Power
+  [EXPECTED] int Power(int base, int exp)
+
+>>> Processing Subdirectory: F08_Abs
+  [EXPECTED] int Abs(int n)
+
+>>> Processing Subdirectory: F09_NewtonRoot
+  [EXPECTED] int NewtonRoot(int n)
+
+>>> Processing Subdirectory: F10_Log2
+  [EXPECTED] int Log2(int n)
+
+>>> Processing Subdirectory: F11_BinarySearch
+  [EXPECTED] int BinarySearch(int arr[], int size, int target)
+
+>>> Processing Subdirectory: F12_BubbleSort
+  [EXPECTED] void BubbleSort(int arr[], int n)
+
+>>> Processing Subdirectory: F13_QuickSort
+  [EXPECTED] void QuickSort(int arr[], int low, int high)
+
+>>> Processing Subdirectory: F14_ArrayReverse
+  [EXPECTED] void ArrayReverse(int arr[], int size)
+
+>>> Processing Subdirectory: F15_FindMax
+  [EXPECTED] int FindMax(int arr[], int n)
+
+>>> Processing Subdirectory: F16_MergeSort
+  [EXPECTED] void MergeSort(int arr[], int l, int r)
+
+>>> Processing Subdirectory: F17_ArrayRotate
+  [EXPECTED] void ArrayRotate(int arr[], int n, int k)
+
+>>> Processing Subdirectory: F18_KthSmallest
+  [EXPECTED] int KthSmallest(int arr[], int l, int r, int k)
+
+>>> Processing Subdirectory: F19_RemoveDuplicates
+  [EXPECTED] int RemoveDuplicates(int arr[], int n)
+
+>>> Processing Subdirectory: F20_SelectionSort
+  [EXPECTED] void SelectionSort(int arr[], int n)
+
+>>> Processing Subdirectory: F21_ShellSort
+  [EXPECTED] void ShellSort(int *a, int n)
+
+>>> Processing Subdirectory: F22_InsertionSort
+  [EXPECTED] void InsertionSort(int arr[], int n)
+
+>>> Processing Subdirectory: F23_LinearSearch
+  [EXPECTED] int LinearSearch(int arr[], int n, int target)
+
+>>> Processing Subdirectory: F24_ArraySum
+  [EXPECTED] int ArraySum(int arr[], int n)
+
+>>> Processing Subdirectory: F25_ArrayAverage
+  [EXPECTED] double ArrayAverage(int arr[], int n)
+
+>>> Processing Subdirectory: F26_StrLen
+  [EXPECTED] int StrLen(const char *s)
+
+>>> Processing Subdirectory: F27_StrCmp
+  [EXPECTED] int StrCmp(const char *s1, const char *s2)
+
+>>> Processing Subdirectory: F28_IsPalindrome
+  [EXPECTED] int IsPalindrome(char *str)
+
+>>> Processing Subdirectory: F29_AnagramCheck
+  [EXPECTED] int AnagramCheck(char* s1, char* s2)
+
+>>> Processing Subdirectory: F30_SubStrFind
+  [EXPECTED] int SubStrFind(char* text, char* pattern)
+
+>>> Processing Subdirectory: F31_WordCount
+  [EXPECTED] int WordCount(char* s)
+
+>>> Processing Subdirectory: F32_StrCompress
+  [EXPECTED] void StrCompress(char* s)
+
+>>> Processing Subdirectory: F33_LCP
+  [EXPECTED] void LCP(char **strs, int n, char *res)
+
+>>> Processing Subdirectory: F34_CharFrequency
+  [EXPECTED] int CharFrequency(char* s, char c)
+
+>>> Processing Subdirectory: F35_VowelCount
+  [EXPECTED] int VowelCount(const char* s)
+
+>>> Processing Subdirectory: F36_CaseToggle
+  [EXPECTED] void CaseToggle(char* s)
+
+>>> Processing Subdirectory: F37_TrimSpace
+  [EXPECTED] void TrimSpace(char* s)
+
+>>> Processing Subdirectory: F38_ReverseWords
+  [EXPECTED] void ReverseWords(char *s)
+
+>>> Processing Subdirectory: F39_TitleCase
+  [EXPECTED] void TitleCase(char* s)
+
+>>> Processing Subdirectory: F40_HexToInt
+  [EXPECTED] int HexToInt(const char* s)
+
+>>> Processing Subdirectory: F41_BitCount
+  [EXPECTED] int BitCount(uint32_t n)
+
+>>> Processing Subdirectory: F42_HammingDistance
+  [EXPECTED] int HammingDistance(unsigned int x, unsigned int y)
+
+>>> Processing Subdirectory: F43_IsPowerOfTwo
+  [EXPECTED] int IsPowerOfTwo(unsigned int n)
+
+>>> Processing Subdirectory: F44_ByteSwap
+  [EXPECTED] uint32_t ByteSwap(uint32_t x)
+
+>>> Processing Subdirectory: F45_GrayCode
+  [EXPECTED] unsigned int GrayCode(unsigned int n)
+
+>>> Processing Subdirectory: F46_Base64Encode
+  [EXPECTED] void Base64Encode(unsigned char *input, int len, char *output)
+
+>>> Processing Subdirectory: F47_XorCipher
+  [EXPECTED] void XorCipher(char *data, char *key)
+
+>>> Processing Subdirectory: F48_RLEEncode
+  [EXPECTED] void RLEEncode(const char *in, char *out)
+
+>>> Processing Subdirectory: F49_CaesarCipher
+  [EXPECTED] void CaesarCipher(char *str, int shift)
+
+>>> Processing Subdirectory: F50_IntToRoman
+  [EXPECTED] void IntToRoman(int num, char* res)
+
+============================================================
+FINAL AUDIT SUMMARY
+============================================================
+Total Subdirectories Scanned : 50
+Passed                       : 50
+Failed                       : 0
+Status                       : ALL PASSED
+============================================================
+
+Process finished with exit code 0

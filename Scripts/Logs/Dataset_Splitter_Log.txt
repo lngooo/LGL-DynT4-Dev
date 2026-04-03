@@ -1,0 +1,15 @@
+D:\programFiles\Anaconda3\envs\LGL-DynT4\python.exe F:\MyCodeClone\LGL-DynT4\Scripts\Dataset_Splitter.py
+
+==================================================
+DATASET SPLIT LOG (Ratio 1:1)
+==================================================
+[Train] F-IDs (40): F26, F24, F20, F12, F05, F46, F27, F10, F30, F17, F32, F22, F13, F04, F40, F39, F11, F25, F36, F01, F44, F19, F34, F49, F42, F31, F29, F21, F23, F43, F47, F37, F33, F45, F14, F50, F48, F03, F28, F38
+      -> Generated 8400 Pos pairs, 8400 Neg pairs.
+[Val] F-IDs (5): F06, F35, F07, F09, F15
+      -> Generated 1050 Pos pairs, 1050 Neg pairs.
+[Test] F-IDs (5): F16, F18, F02, F08, F41
+      -> Generated 1050 Pos pairs, 1050 Neg pairs.
+==================================================
+INFO: Task Complete: Full_Pairs.csv generated with 21000 total records.
+
+Process finished with exit code 0

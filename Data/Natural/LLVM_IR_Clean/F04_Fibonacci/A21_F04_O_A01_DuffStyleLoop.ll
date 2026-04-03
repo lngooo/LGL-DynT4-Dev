@@ -1,0 +1,58 @@
+define dso_local i64 @Fibonacci(i32 %0) {
+  %2 = alloca i64
+  %3 = alloca i32
+  %4 = alloca i64
+  %5 = alloca i64
+  %6 = alloca i64
+  %7 = alloca i32
+  %8 = alloca i32
+  store i32 %0, i32* %3
+  store i64 0, i64* %4
+  store i64 1, i64* %5
+  %13 = load i32, i32* %3
+  store i32 %13, i32* %7
+  %14 = load i32, i32* %3
+  %15 = icmp eq i32 %14, 0
+  br i1 %15, label %16, label %17
+16:
+  store i64 0, i64* %2
+  store i32 1, i32* %8
+  br label %36
+17:
+  %18 = load i32, i32* %3
+  %19 = icmp eq i32 %18, 1
+  br i1 %19, label %20, label %21
+20:
+  store i64 1, i64* %2
+  store i32 1, i32* %8
+  br label %36
+21:
+  %22 = load i32, i32* %7
+  %23 = add nsw i32 %22, -1
+  store i32 %23, i32* %7
+  br label %24
+24:
+  %25 = load i64, i64* %4
+  %26 = load i64, i64* %5
+  %27 = add nsw i64 %25, %26
+  store i64 %27, i64* %6
+  %28 = load i64, i64* %5
+  store i64 %28, i64* %4
+  %29 = load i64, i64* %6
+  store i64 %29, i64* %5
+  br label %30
+30:
+  %31 = load i32, i32* %7
+  %32 = add nsw i32 %31, -1
+  store i32 %32, i32* %7
+  %33 = icmp sgt i32 %32, 0
+  br i1 %33, label %24, label %34
+34:
+  %35 = load i64, i64* %5
+  store i64 %35, i64* %2
+  store i32 1, i32* %8
+  br label %36
+36:
+  %41 = load i64, i64* %2
+  ret i64 %41
+}

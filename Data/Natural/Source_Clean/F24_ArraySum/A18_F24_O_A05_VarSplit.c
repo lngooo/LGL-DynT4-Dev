@@ -1,0 +1,8 @@
+int ArraySum(int arr[], int n) {
+    int s1 = 0, s2 = 0;
+    for (int i = 0; i < n; i++) {
+        if (i % 2 == 0) s1 += arr[i];
+        else s2 += arr[i];
+    }
+    return s1 + s2;
+}

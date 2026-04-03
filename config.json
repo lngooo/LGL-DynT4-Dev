@@ -1,0 +1,419 @@
+{
+  "dataset_name": "LGL-DynT4",
+  "version": "1.0.0",
+  "functions": {
+    "F01": {
+      "name": "Sum",
+      "desc": "Sum 1 to n.",
+      "params": ["int"],
+      "params_spec": [
+        { "name": "n", "strategy": "range", "constraints": [1, 1000] }
+      ]
+    },
+    "F02": {
+      "name": "GCD",
+      "desc": "Greatest Common Divisor.",
+      "params": ["int", "int"],
+      "params_spec": [
+        { "name": "a", "strategy": "range", "constraints": [1, 2000] },
+        { "name": "b", "strategy": "range", "constraints": [1, 2000] }
+      ]
+    },
+    "F03": {
+      "name": "Factorial",
+      "desc": "n! calculation.",
+      "params": ["int"],
+      "params_spec": [
+        { "name": "n", "strategy": "range", "constraints": [1, 20] }
+      ]
+    },
+    "F04": {
+      "name": "Fibonacci",
+      "desc": "N-th Fibonacci number.",
+      "params": ["int"],
+      "params_spec": [
+        { "name": "n", "strategy": "range", "constraints": [1, 30] }
+      ]
+    },
+    "F05": {
+      "name": "Sqrt",
+      "desc": "Integer square root.",
+      "params": ["int"],
+      "params_spec": [
+        { "name": "n", "strategy": "range", "constraints": [1, 10000] }
+      ]
+    },
+    "F06": {
+      "name": "IsPrime",
+      "desc": "Primality test.",
+      "params": ["int"],
+      "params_spec": [
+        { "name": "n", "strategy": "range", "constraints": [2, 5000] }
+      ]
+    },
+    "F07": {
+      "name": "Power",
+      "desc": "Exponentiation.",
+      "params": ["int", "int"],
+      "params_spec": [
+        { "name": "base", "strategy": "range", "constraints": [2, 10] },
+        { "name": "exp", "strategy": "range", "constraints": [1, 10] }
+      ]
+    },
+    "F08": {
+      "name": "Abs",
+      "desc": "Absolute value.",
+      "params": ["int"],
+      "params_spec": [
+        { "name": "n", "strategy": "range", "constraints": [-1000, 1000] }
+      ]
+    },
+    "F09": {
+      "name": "NewtonRoot",
+      "desc": "Square root via Newton method.",
+      "params": ["int"],
+      "params_spec": [
+        { "name": "n", "strategy": "range", "constraints": [1, 1000] }
+      ]
+    },
+    "F10": {
+      "name": "Log2",
+      "desc": "Binary logarithm (floor).",
+      "params": ["int"],
+      "params_spec": [
+        { "name": "n", "strategy": "range", "constraints": [1, 1024] }
+      ]
+    },
+    "F11": {
+      "name": "BinarySearch",
+      "desc": "Find in sorted array.",
+      "params": ["int", "int_array"],
+      "params_spec": [
+        { "name": "target", "strategy": "range", "constraints": [1, 1000] },
+        { "name": "arr", "strategy": "array_gen", "constraints": { "size": [10, 100], "val": [1, 1000], "sorted": true } }
+      ]
+    },
+    "F12": {
+      "name": "BubbleSort",
+      "desc": "Adjacent swap sorting.",
+      "params": ["int_array"],
+      "params_spec": [
+        { "name": "arr", "strategy": "array_gen", "constraints": { "size": [5, 50], "val": [-500, 500] } }
+      ]
+    },
+    "F13": {
+      "name": "QuickSort",
+      "desc": "Pivot-based sorting.",
+      "params": ["int_array"],
+      "params_spec": [
+        { "name": "arr", "strategy": "array_gen", "constraints": { "size": [5, 50], "val": [-500, 500] } }
+      ]
+    },
+    "F14": {
+      "name": "ArrayReverse",
+      "desc": "In-place reversal.",
+      "params": ["int_array"],
+      "params_spec": [
+        { "name": "arr", "strategy": "array_gen", "constraints": { "size": [5, 50], "val": [-500, 500] } }
+      ]
+    },
+    "F15": {
+      "name": "FindMax",
+      "desc": "Max element in array.",
+      "params": ["int_array"],
+      "params_spec": [
+        { "name": "arr", "strategy": "array_gen", "constraints": { "size": [10, 100], "val": [-1000, 1000] } }
+      ]
+    },
+    "F16": {
+      "name": "MergeSort",
+      "desc": "Stable DC sorting.",
+      "params": ["int_array"],
+      "params_spec": [
+        { "name": "arr", "strategy": "array_gen", "constraints": { "size": [5, 50], "val": [-500, 500] } }
+      ]
+    },
+    "F17": {
+      "name": "ArrayRotate",
+      "desc": "Left rotate by k.",
+      "params": ["int", "int_array"],
+      "params_spec": [
+        { "name": "k", "strategy": "range", "constraints": [1, 10] },
+        { "name": "arr", "strategy": "array_gen", "constraints": { "size": [5, 10], "val": [-100, 100] } }
+      ]
+    },
+    "F18": {
+      "name": "KthSmallest",
+      "desc": "K-th element in array.",
+      "params": ["int", "int_array"],
+      "params_spec": [
+        { "name": "k", "strategy": "range", "constraints": [1, 10] },
+        { "name": "arr", "strategy": "array_gen", "constraints": { "size": [10, 50], "val": [-500, 500] } }
+      ]
+    },
+    "F19": {
+      "name": "RemoveDuplicates",
+      "desc": "Unique elements only.",
+      "params": ["int_array"],
+      "params_spec": [
+        { "name": "arr", "strategy": "array_gen", "constraints": { "size": [10, 100], "val": [1, 50] } }
+      ]
+    },
+    "F20": {
+      "name": "SelectionSort",
+      "desc": "Min-search sorting.",
+      "params": ["int_array"],
+      "params_spec": [
+        { "name": "arr", "strategy": "array_gen", "constraints": { "size": [5, 50], "val": [-500, 500] } }
+      ]
+    },
+    "F21": {
+      "name": "ShellSort",
+      "desc": "Gap-based insertion sort.",
+      "params": ["int_array"],
+      "params_spec": [
+        { "name": "arr", "strategy": "array_gen", "constraints": { "size": [5, 50], "val": [-500, 500] } }
+      ]
+    },
+    "F22": {
+      "name": "InsertionSort",
+      "desc": "One-by-one sorting.",
+      "params": ["int_array"],
+      "params_spec": [
+        { "name": "arr", "strategy": "array_gen", "constraints": { "size": [5, 50], "val": [-500, 500] } }
+      ]
+    },
+    "F23": {
+      "name": "LinearSearch",
+      "desc": "Sequential scan.",
+      "params": ["int", "int_array"],
+      "params_spec": [
+        { "name": "target", "strategy": "range", "constraints": [1, 1000] },
+        { "name": "arr", "strategy": "array_gen", "constraints": { "size": [10, 100], "val": [1, 1000] } }
+      ]
+    },
+    "F24": {
+      "name": "ArraySum",
+      "desc": "Total sum of elements.",
+      "params": ["int_array"],
+      "params_spec": [
+        { "name": "arr", "strategy": "array_gen", "constraints": { "size": [10, 100], "val": [-100, 100] } }
+      ]
+    },
+    "F25": {
+      "name": "ArrayAverage",
+      "desc": "Mean value.",
+      "params": ["int_array"],
+      "params_spec": [
+        { "name": "arr", "strategy": "array_gen", "constraints": { "size": [10, 100], "val": [0, 1000] } }
+      ]
+    },
+    "F26": {
+      "name": "StrLen",
+      "desc": "Length of string.",
+      "params": ["string"],
+      "params_spec": [
+        { "name": "s", "strategy": "str_gen", "constraints": { "len": [1, 100] } }
+      ]
+    },
+    "F27": {
+      "name": "StrCmp",
+      "desc": "Compare two strings.",
+      "params": ["string", "string"],
+      "params_spec": [
+        { "name": "s1", "strategy": "str_gen", "constraints": { "len": [1, 50] } },
+        { "name": "s2", "strategy": "str_gen", "constraints": { "len": [1, 50] } }
+      ]
+    },
+    "F28": {
+      "name": "IsPalindrome",
+      "desc": "Symmetry check.",
+      "params": ["string"],
+      "params_spec": [
+        { "name": "s", "strategy": "str_gen", "constraints": { "len": [1, 50] } }
+      ]
+    },
+    "F29": {
+      "name": "AnagramCheck",
+      "desc": "Same chars, different order.",
+      "params": ["string", "string"],
+      "params_spec": [
+        { "name": "s1", "strategy": "str_gen", "constraints": { "len": [1, 50] } },
+        { "name": "s2", "strategy": "str_gen", "constraints": { "len": [1, 50] } }
+      ]
+    },
+    "F30": {
+      "name": "SubStrFind",
+      "desc": "Locate pattern in text.",
+      "params": ["string", "string"],
+      "params_spec": [
+        { "name": "haystack", "strategy": "str_gen", "constraints": { "len": [10, 100] } },
+        { "name": "needle", "strategy": "str_gen", "constraints": { "len": [1, 5] } }
+      ]
+    },
+    "F31": {
+      "name": "WordCount",
+      "desc": "Count words in string.",
+      "params": ["string"],
+      "params_spec": [
+        { "name": "s", "strategy": "str_gen", "constraints": { "len": [20, 200], "allow_spaces": true } }
+      ]
+    },
+    "F32": {
+      "name": "StrCompress",
+      "desc": "RLE compression.",
+      "params": ["string"],
+      "params_spec": [
+        { "name": "s", "strategy": "str_gen", "constraints": { "len": [10, 100] } }
+      ]
+    },
+    "F33": {
+      "name": "LCP",
+      "desc": "Longest Common Prefix.",
+      "params": ["string_array"],
+      "params_spec": [
+        { "name": "strs", "strategy": "str_array_gen", "constraints": { "count": [3, 10], "len": [5, 20] } }
+      ]
+    },
+    "F34": {
+      "name": "CharFrequency",
+      "desc": "Count occurrences of char.",
+      "params": ["string", "char"],
+      "params_spec": [
+        { "name": "s", "strategy": "str_gen", "constraints": { "len": [10, 100] } },
+        { "name": "c", "strategy": "char_gen", "constraints": { "charset": "alpha" } }
+      ]
+    },
+    "F35": {
+      "name": "VowelCount",
+      "desc": "Count a,e,i,o,u.",
+      "params": ["string"],
+      "params_spec": [
+        { "name": "s", "strategy": "str_gen", "constraints": { "len": [10, 100] } }
+      ]
+    },
+    "F36": {
+      "name": "CaseToggle",
+      "desc": "Swap upper/lower case.",
+      "params": ["string"],
+      "params_spec": [
+        { "name": "s", "strategy": "str_gen", "constraints": { "len": [5, 50] } }
+      ]
+    },
+    "F37": {
+      "name": "TrimSpace",
+      "desc": "Remove whitespaces.",
+      "params": ["string"],
+      "params_spec": [
+        { "name": "s", "strategy": "str_gen", "constraints": { "len": [5, 50], "allow_spaces": true } }
+      ]
+    },
+    "F38": {
+      "name": "ReverseWords",
+      "desc": "Reverse word order.",
+      "params": ["string"],
+      "params_spec": [
+        { "name": "s", "strategy": "str_gen", "constraints": { "len": [10, 100], "allow_spaces": true } }
+      ]
+    },
+    "F39": {
+      "name": "TitleCase",
+      "desc": "Capitalize first letters.",
+      "params": ["string"],
+      "params_spec": [
+        { "name": "s", "strategy": "str_gen", "constraints": { "len": [10, 100], "allow_spaces": true } }
+      ]
+    },
+    "F40": {
+      "name": "HexToInt",
+      "desc": "Hex string to decimal.",
+      "params": ["string"],
+      "params_spec": [
+        { "name": "hex", "strategy": "hex_gen", "constraints": { "len": [1, 8] } }
+      ]
+    },
+    "F41": {
+      "name": "BitCount",
+      "desc": "Count set bits (1s).",
+      "params": ["int"],
+      "params_spec": [
+        { "name": "n", "strategy": "range", "constraints": [0, 2147483647] }
+      ]
+    },
+    "F42": {
+      "name": "HammingDistance",
+      "desc": "Bitwise difference count.",
+      "params": ["int", "int"],
+      "params_spec": [
+        { "name": "n1", "strategy": "range", "constraints": [0, 2147483647] },
+        { "name": "n2", "strategy": "range", "constraints": [0, 2147483647] }
+      ]
+    },
+    "F43": {
+      "name": "IsPowerOfTwo",
+      "desc": "Power of 2 bit-check.",
+      "params": ["int"],
+      "params_spec": [
+        { "name": "n", "strategy": "range", "constraints": [0, 2147483647] }
+      ]
+    },
+    "F44": {
+      "name": "ByteSwap",
+      "desc": "Endianness swap.",
+      "params": ["int"],
+      "params_spec": [
+        { "name": "n", "strategy": "range", "constraints": [0, 2147483647] }
+      ]
+    },
+    "F45": {
+      "name": "GrayCode",
+      "desc": "Binary to Gray conversion.",
+      "params": ["int"],
+      "params_spec": [
+        { "name": "n", "strategy": "range", "constraints": [0, 1024] }
+      ]
+    },
+    "F46": {
+      "name": "Base64Encode",
+      "desc": "Binary-to-text encoding.",
+      "params": ["string"],
+      "params_spec": [
+        { "name": "s", "strategy": "str_gen", "constraints": { "len": [5, 50] } }
+      ]
+    },
+    "F47": {
+      "name": "XorCipher",
+      "desc": "Symmetric XOR encryption.",
+      "params": ["string", "char"],
+      "params_spec": [
+        { "name": "data", "strategy": "str_gen", "constraints": { "len": [5, 100] } },
+        { "name": "key", "strategy": "char_gen", "constraints": { "charset": "all" } }
+      ]
+    },
+    "F48": {
+      "name": "RLEEncode",
+      "desc": "Run-length encoding.",
+      "params": ["string"],
+      "params_spec": [
+        { "name": "s", "strategy": "str_gen", "constraints": { "len": [10, 100] } }
+      ]
+    },
+    "F49": {
+      "name": "CaesarCipher",
+      "desc": "Shift cipher encryption.",
+      "params": ["string", "int"],
+      "params_spec": [
+        { "name": "text", "strategy": "str_gen", "constraints": { "len": [5, 100] } },
+        { "name": "shift", "strategy": "range", "constraints": [1, 25] }
+      ]
+    },
+    "F50": {
+      "name": "IntToRoman",
+      "desc": "Integer to Roman numeral.",
+      "params": ["int"],
+      "params_spec": [
+        { "name": "n", "strategy": "range", "constraints": [1, 3999] }
+      ]
+    }
+  }
+}

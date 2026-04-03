@@ -1,0 +1,73 @@
+@.str = constant [2 x i8] c"M\00"
+@.str.1 = constant [3 x i8] c"CM\00"
+@.str.2 = constant [2 x i8] c"D\00"
+@.str.3 = constant [3 x i8] c"CD\00"
+@.str.4 = constant [2 x i8] c"C\00"
+@.str.5 = constant [3 x i8] c"XC\00"
+@.str.6 = constant [2 x i8] c"L\00"
+@.str.7 = constant [3 x i8] c"XL\00"
+@.str.8 = constant [2 x i8] c"X\00"
+@.str.9 = constant [3 x i8] c"IX\00"
+@.str.10 = constant [2 x i8] c"V\00"
+@.str.11 = constant [3 x i8] c"IV\00"
+@.str.12 = constant [2 x i8] c"I\00"
+@__const.IntToRoman.sy = constant [13 x i8*] [i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.1, i32 0, i32 0), i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.2, i32 0, i32 0), i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.3, i32 0, i32 0), i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.4, i32 0, i32 0), i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.5, i32 0, i32 0), i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.6, i32 0, i32 0), i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.7, i32 0, i32 0), i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.8, i32 0, i32 0), i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.9, i32 0, i32 0), i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.10, i32 0, i32 0), i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.11, i32 0, i32 0), i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.12, i32 0, i32 0)]
+@__const.IntToRoman.va = constant [13 x i32] [i32 1000, i32 900, i32 500, i32 400, i32 100, i32 90, i32 50, i32 40, i32 10, i32 9, i32 5, i32 4, i32 1]
+define dso_local void @IntToRoman(i32 %0, i8* %1) {
+  %3 = alloca i32
+  %4 = alloca i8*
+  %5 = alloca [13 x i8*]
+  %6 = alloca [13 x i32]
+  %7 = alloca i32
+  %8 = alloca i32
+  store i32 %0, i32* %3
+  store i8* %1, i8** %4
+  %13 = load i8*, i8** %4
+  %14 = getelementptr inbounds i8, i8* %13, i64 0
+  store i8 0, i8* %14
+  store i32 0, i32* %7
+  store i32 42, i32* %8
+  br label %17
+17:
+  %18 = load i32, i32* %3
+  %19 = icmp sgt i32 %18, 0
+  br i1 %19, label %20, label %47
+20:
+  %21 = load i32, i32* %8
+  %22 = mul nsw i32 %21, 3
+  %23 = sdiv i32 %22, 2
+  store i32 %23, i32* %8
+  %24 = load i32, i32* %3
+  %25 = load i32, i32* %7
+  %26 = sext i32 %25 to i64
+  %27 = getelementptr inbounds [13 x i32], [13 x i32]* %6, i64 0, i64 %26
+  %28 = load i32, i32* %27
+  %29 = icmp sge i32 %24, %28
+  br i1 %29, label %30, label %43
+30:
+  %31 = load i8*, i8** %4
+  %32 = load i32, i32* %7
+  %33 = sext i32 %32 to i64
+  %34 = getelementptr inbounds [13 x i8*], [13 x i8*]* %5, i64 0, i64 %33
+  %35 = load i8*, i8** %34
+  %36 = call i8* @strcat(i8* %31, i8* %35)
+  %37 = load i32, i32* %7
+  %38 = sext i32 %37 to i64
+  %39 = getelementptr inbounds [13 x i32], [13 x i32]* %6, i64 0, i64 %38
+  %40 = load i32, i32* %39
+  %41 = load i32, i32* %3
+  %42 = sub nsw i32 %41, %40
+  store i32 %42, i32* %3
+  br label %46
+43:
+  %44 = load i32, i32* %7
+  %45 = add nsw i32 %44, 1
+  store i32 %45, i32* %7
+  br label %46
+46:
+  br label %17
+47:
+  ret void
+}
+declare void @llvm.memcpy.p0i8.p0i8.i64(i8* noalias nocapture writeonly, i8* noalias nocapture readonly, i64, i1 immarg)
+declare i8* @strcat(i8*, i8*)

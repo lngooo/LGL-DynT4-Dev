@@ -1,0 +1,417 @@
+D:\programFiles\Anaconda3\envs\LGL-DynT4\python.exe F:\MyCodeClone\LGL-DynT4\Scripts\Audit_SourceRaw2_dynamic.py
+
+================================================================================
+LGL-DynT4 DYNAMIC CONSISTENCY AUDIT (WITH TIMEOUT CONTROL)
+Target Source_Raw: F:\MyCodeClone\LGL-DynT4\Data\Source_Raw
+Settings: TOLERANCE=0.99, TIMEOUT=10s
+================================================================================
+
+>>> AUDITING GROUP: F01_Sum (21 files)
+  [TEST CASE 1] Input Args: ['100']
+    [REFERENCE] Expected Output: '5050'
+  [RESULT] SUCCESS: Case 1 consistent.
+  [TEST CASE 2] Input Args: ['1000']
+    [REFERENCE] Expected Output: '500500'
+  [RESULT] SUCCESS: Case 2 consistent.
+
+>>> AUDITING GROUP: F02_GCD (21 files)
+  [TEST CASE 1] Input Args: ['48', '18']
+    [REFERENCE] Expected Output: '6'
+  [RESULT] SUCCESS: Case 1 consistent.
+  [TEST CASE 2] Input Args: ['101', '103']
+    [REFERENCE] Expected Output: '1'
+  [RESULT] SUCCESS: Case 2 consistent.
+
+>>> AUDITING GROUP: F03_Factorial (21 files)
+  [TEST CASE 1] Input Args: ['5']
+    [REFERENCE] Expected Output: '120'
+  [RESULT] SUCCESS: Case 1 consistent.
+  [TEST CASE 2] Input Args: ['12']
+    [REFERENCE] Expected Output: '479001600'
+  [RESULT] SUCCESS: Case 2 consistent.
+
+>>> AUDITING GROUP: F04_Fibonacci (21 files)
+  [TEST CASE 1] Input Args: ['10']
+    [REFERENCE] Expected Output: '55'
+  [RESULT] SUCCESS: Case 1 consistent.
+  [TEST CASE 2] Input Args: ['30']
+    [REFERENCE] Expected Output: '832040'
+  [RESULT] SUCCESS: Case 2 consistent.
+
+>>> AUDITING GROUP: F05_Sqrt (21 files)
+  [TEST CASE 1] Input Args: ['64']
+    [REFERENCE] Expected Output: '8'
+  [RESULT] SUCCESS: Case 1 consistent.
+  [TEST CASE 2] Input Args: ['9999']
+    [REFERENCE] Expected Output: '99'
+  [RESULT] SUCCESS: Case 2 consistent.
+
+>>> AUDITING GROUP: F06_IsPrime (21 files)
+  [TEST CASE 1] Input Args: ['17']
+    [REFERENCE] Expected Output: '1'
+  [RESULT] SUCCESS: Case 1 consistent.
+  [TEST CASE 2] Input Args: ['100']
+    [REFERENCE] Expected Output: '0'
+  [RESULT] SUCCESS: Case 2 consistent.
+
+>>> AUDITING GROUP: F07_Power (21 files)
+  [TEST CASE 1] Input Args: ['2', '10']
+    [REFERENCE] Expected Output: '1024'
+  [RESULT] SUCCESS: Case 1 consistent.
+  [TEST CASE 2] Input Args: ['3', '5']
+    [REFERENCE] Expected Output: '243'
+  [RESULT] SUCCESS: Case 2 consistent.
+
+>>> AUDITING GROUP: F08_Abs (21 files)
+  [TEST CASE 1] Input Args: ['-500']
+    [REFERENCE] Expected Output: '500'
+  [RESULT] SUCCESS: Case 1 consistent.
+  [TEST CASE 2] Input Args: ['999']
+    [REFERENCE] Expected Output: '999'
+  [RESULT] SUCCESS: Case 2 consistent.
+
+>>> AUDITING GROUP: F09_NewtonRoot (21 files)
+  [TEST CASE 1] Input Args: ['256']
+    [REFERENCE] Expected Output: '16'
+  [RESULT] SUCCESS: Case 1 consistent.
+  [TEST CASE 2] Input Args: ['729']
+    [REFERENCE] Expected Output: '27'
+  [RESULT] SUCCESS: Case 2 consistent.
+
+>>> AUDITING GROUP: F10_Log2 (21 files)
+  [TEST CASE 1] Input Args: ['1024']
+    [REFERENCE] Expected Output: '10'
+  [RESULT] SUCCESS: Case 1 consistent.
+  [TEST CASE 2] Input Args: ['500']
+    [REFERENCE] Expected Output: '8'
+  [RESULT] SUCCESS: Case 2 consistent.
+
+>>> AUDITING GROUP: F11_BinarySearch (21 files)
+  [TEST CASE 1] Input Args: ['11', '1', '3', '5', '7', '9', '11', '13', '15', '17', '19', '7']
+    [REFERENCE] Expected Output: '5'
+  [RESULT] SUCCESS: Case 1 consistent.
+  [TEST CASE 2] Input Args: ['5', '2', '4', '6', '8', '10', '1']
+    [REFERENCE] Expected Output: '-1'
+  [RESULT] SUCCESS: Case 2 consistent.
+
+>>> AUDITING GROUP: F12_BubbleSort (21 files)
+  [TEST CASE 1] Input Args: ['5', '5', '4', '3', '2', '1']
+    [REFERENCE] Expected Output: '1 2 3 4 5 5'
+  [RESULT] SUCCESS: Case 1 consistent.
+  [TEST CASE 2] Input Args: ['4', '10', '20', '30', '40']
+    [REFERENCE] Expected Output: '4 10 20 30 40'
+  [RESULT] SUCCESS: Case 2 consistent.
+
+>>> AUDITING GROUP: F13_QuickSort (21 files)
+  [TEST CASE 1] Input Args: ['5', '3', '1', '4', '5', '2']
+    [REFERENCE] Expected Output: '1 2 3 4 5 5'
+  [RESULT] SUCCESS: Case 1 consistent.
+  [TEST CASE 2] Input Args: ['4', '99', '10', '50', '20']
+    [REFERENCE] Expected Output: '4 10 20 50 99'
+  [RESULT] SUCCESS: Case 2 consistent.
+
+>>> AUDITING GROUP: F14_ArrayReverse (21 files)
+  [TEST CASE 1] Input Args: ['5', '1', '2', '3', '4', '5']
+    [REFERENCE] Expected Output: '5 4 3 2 1 5'
+  [RESULT] SUCCESS: Case 1 consistent.
+  [TEST CASE 2] Input Args: ['3', '10', '20', '30']
+    [REFERENCE] Expected Output: '30 20 10 3'
+  [RESULT] SUCCESS: Case 2 consistent.
+
+>>> AUDITING GROUP: F15_FindMax (21 files)
+  [TEST CASE 1] Input Args: ['5', '1', '5', '3', '9', '2']
+    [REFERENCE] Expected Output: '9'
+  [RESULT] SUCCESS: Case 1 consistent.
+  [TEST CASE 2] Input Args: ['3', '-10', '-5', '-20']
+    [REFERENCE] Expected Output: '3'
+  [RESULT] SUCCESS: Case 2 consistent.
+
+>>> AUDITING GROUP: F16_MergeSort (21 files)
+  [TEST CASE 1] Input Args: ['4', '38', '27', '43', '3']
+    [REFERENCE] Expected Output: '3 4 27 38 43'
+  [RESULT] SUCCESS: Case 1 consistent.
+  [TEST CASE 2] Input Args: ['4', '100', '0', '50', '-10']
+    [REFERENCE] Expected Output: '-10 0 4 50 100'
+  [RESULT] SUCCESS: Case 2 consistent.
+
+>>> AUDITING GROUP: F17_ArrayRotate (21 files)
+  [TEST CASE 1] Input Args: ['2', '1', '2', '3', '4', '5']
+    [REFERENCE] Expected Output: '3 4 5 1 2'
+  [RESULT] SUCCESS: Case 1 consistent.
+  [TEST CASE 2] Input Args: ['1', '10', '20', '30', '40']
+    [REFERENCE] Expected Output: '20 30 40 10'
+  [RESULT] SUCCESS: Case 2 consistent.
+
+>>> AUDITING GROUP: F18_KthSmallest (21 files)
+  [TEST CASE 1] Input Args: ['6', '3', '10', '50', '20', '40', '30', '2']
+    [REFERENCE] Expected Output: '40'
+  [RESULT] SUCCESS: Case 1 consistent.
+  [TEST CASE 2] Input Args: ['4', '1', '5', '2', '8', '3']
+    [REFERENCE] Expected Output: '5'
+  [RESULT] SUCCESS: Case 2 consistent.
+
+>>> AUDITING GROUP: F19_RemoveDuplicates (21 files)
+  [TEST CASE 1] Input Args: ['5', '1', '1', '2', '2', '3']
+    [REFERENCE] Expected Output: '5 1 2 3'
+  [RESULT] SUCCESS: Case 1 consistent.
+  [TEST CASE 2] Input Args: ['3', '4', '4', '4']
+    [REFERENCE] Expected Output: '3 4'
+  [RESULT] SUCCESS: Case 2 consistent.
+
+>>> AUDITING GROUP: F20_SelectionSort (21 files)
+  [TEST CASE 1] Input Args: ['3', '3', '2', '1']
+    [REFERENCE] Expected Output: '1 2 3 3'
+  [RESULT] SUCCESS: Case 1 consistent.
+  [TEST CASE 2] Input Args: ['4', '50', '10', '40', '20']
+    [REFERENCE] Expected Output: '4 10 20 40 50'
+  [RESULT] SUCCESS: Case 2 consistent.
+
+>>> AUDITING GROUP: F21_ShellSort (21 files)
+  [TEST CASE 1] Input Args: ['4', '12', '7', '1', '5']
+    [REFERENCE] Expected Output: '1 4 5 7 12'
+  [RESULT] SUCCESS: Case 1 consistent.
+  [TEST CASE 2] Input Args: ['4', '100', '50', '20', '10']
+    [REFERENCE] Expected Output: '4 10 20 50 100'
+  [RESULT] SUCCESS: Case 2 consistent.
+
+>>> AUDITING GROUP: F22_InsertionSort (21 files)
+  [TEST CASE 1] Input Args: ['4', '3', '1', '4', '2']
+    [REFERENCE] Expected Output: '1 2 3 4 4'
+  [RESULT] SUCCESS: Case 1 consistent.
+  [TEST CASE 2] Input Args: ['4', '9', '8', '7', '6']
+    [REFERENCE] Expected Output: '4 6 7 8 9'
+  [RESULT] SUCCESS: Case 2 consistent.
+
+>>> AUDITING GROUP: F23_LinearSearch (21 files)
+  [TEST CASE 1] Input Args: ['2', '1', '2', '3', '4', '5', '3', '3']
+    [REFERENCE] Expected Output: '1'
+  [RESULT] SUCCESS: Case 1 consistent.
+  [TEST CASE 2] Input Args: ['3', '10', '20', '5', '5']
+    [REFERENCE] Expected Output: '-1'
+  [RESULT] SUCCESS: Case 2 consistent.
+
+>>> AUDITING GROUP: F24_ArraySum (21 files)
+  [TEST CASE 1] Input Args: ['3', '1', '2', '3']
+    [REFERENCE] Expected Output: '9'
+  [RESULT] SUCCESS: Case 1 consistent.
+  [TEST CASE 2] Input Args: ['5', '10', '20', '30', '40', '50']
+    [REFERENCE] Expected Output: '155'
+  [RESULT] SUCCESS: Case 2 consistent.
+
+>>> AUDITING GROUP: F25_ArrayAverage (21 files)
+  [TEST CASE 1] Input Args: ['5', '1', '2', '3', '4', '5']
+    [REFERENCE] Expected Output: '3.33'
+  [RESULT] SUCCESS: Case 1 consistent.
+  [TEST CASE 2] Input Args: ['2', '10', '20']
+    [REFERENCE] Expected Output: '10.67'
+  [RESULT] SUCCESS: Case 2 consistent.
+
+>>> AUDITING GROUP: F26_StrLen (21 files)
+  [TEST CASE 1] Input Args: ['hello']
+    [REFERENCE] Expected Output: '5'
+  [RESULT] SUCCESS: Case 1 consistent.
+  [TEST CASE 2] Input Args: ['lgl_dynt4_dataset']
+    [REFERENCE] Expected Output: '17'
+  [RESULT] SUCCESS: Case 2 consistent.
+
+>>> AUDITING GROUP: F27_StrCmp (21 files)
+  [TEST CASE 1] Input Args: ['abc', 'abc']
+    [REFERENCE] Expected Output: '0'
+  [RESULT] SUCCESS: Case 1 consistent.
+  [TEST CASE 2] Input Args: ['abc', 'abd']
+    [REFERENCE] Expected Output: '-1'
+  [RESULT] SUCCESS: Case 2 consistent.
+
+>>> AUDITING GROUP: F28_IsPalindrome (21 files)
+  [TEST CASE 1] Input Args: ['level']
+    [REFERENCE] Expected Output: '1'
+  [RESULT] SUCCESS: Case 1 consistent.
+  [TEST CASE 2] Input Args: ['hello']
+    [REFERENCE] Expected Output: '0'
+  [RESULT] SUCCESS: Case 2 consistent.
+
+>>> AUDITING GROUP: F29_AnagramCheck (21 files)
+  [TEST CASE 1] Input Args: ['listen', 'silent']
+    [REFERENCE] Expected Output: '1'
+  [RESULT] SUCCESS: Case 1 consistent.
+  [TEST CASE 2] Input Args: ['hello', 'world']
+    [REFERENCE] Expected Output: '0'
+  [RESULT] SUCCESS: Case 2 consistent.
+
+>>> AUDITING GROUP: F30_SubStrFind (21 files)
+  [TEST CASE 1] Input Args: ['the_quick_brown_fox', 'brown']
+    [REFERENCE] Expected Output: '10'
+  [RESULT] SUCCESS: Case 1 consistent.
+  [TEST CASE 2] Input Args: ['mississippi', 'issi']
+    [REFERENCE] Expected Output: '1'
+  [RESULT] SUCCESS: Case 2 consistent.
+
+>>> AUDITING GROUP: F31_WordCount (21 files)
+  [TEST CASE 1] Input Args: ['hello world']
+    [REFERENCE] Expected Output: '2'
+  [RESULT] SUCCESS: Case 1 consistent.
+  [TEST CASE 2] Input Args: ['one two three four']
+    [REFERENCE] Expected Output: '4'
+  [RESULT] SUCCESS: Case 2 consistent.
+
+>>> AUDITING GROUP: F32_StrCompress (21 files)
+  [TEST CASE 1] Input Args: ['aaabbc']
+    [REFERENCE] Expected Output: 'a3b2c1'
+  [RESULT] SUCCESS: Case 1 consistent.
+  [TEST CASE 2] Input Args: ['abcde']
+    [REFERENCE] Expected Output: 'a1b1c1d1e1'
+  [RESULT] SUCCESS: Case 2 consistent.
+
+>>> AUDITING GROUP: F33_LCP (21 files)
+  [TEST CASE 1] Input Args: ['flower', 'flow', 'flight']
+    [REFERENCE] Expected Output: 'fl'
+  [RESULT] SUCCESS: Case 1 consistent.
+  [TEST CASE 2] Input Args: ['dog', 'racecar']
+    [REFERENCE] Expected Output: ''
+  [RESULT] SUCCESS: Case 2 consistent.
+
+>>> AUDITING GROUP: F34_CharFrequency (21 files)
+  [TEST CASE 1] Input Args: ['banana', 'a']
+    [REFERENCE] Expected Output: '3'
+  [RESULT] SUCCESS: Case 1 consistent.
+  [TEST CASE 2] Input Args: ['test', 'z']
+    [REFERENCE] Expected Output: '0'
+  [RESULT] SUCCESS: Case 2 consistent.
+
+>>> AUDITING GROUP: F35_VowelCount (21 files)
+  [TEST CASE 1] Input Args: ['education']
+    [REFERENCE] Expected Output: '5'
+  [RESULT] SUCCESS: Case 1 consistent.
+  [TEST CASE 2] Input Args: ['sky']
+    [REFERENCE] Expected Output: '0'
+  [RESULT] SUCCESS: Case 2 consistent.
+
+>>> AUDITING GROUP: F36_CaseToggle (21 files)
+  [TEST CASE 1] Input Args: ['Hello']
+    [REFERENCE] Expected Output: 'hELLO'
+  [RESULT] SUCCESS: Case 1 consistent.
+  [TEST CASE 2] Input Args: ['aBcD']
+    [REFERENCE] Expected Output: 'AbCd'
+  [RESULT] SUCCESS: Case 2 consistent.
+
+>>> AUDITING GROUP: F37_TrimSpace (21 files)
+  [TEST CASE 1] Input Args: [' hello ']
+    [REFERENCE] Expected Output: 'hello'
+  [RESULT] SUCCESS: Case 1 consistent.
+  [TEST CASE 2] Input Args: ['no_space']
+    [REFERENCE] Expected Output: 'no_space'
+  [RESULT] SUCCESS: Case 2 consistent.
+
+>>> AUDITING GROUP: F38_ReverseWords (21 files)
+  [TEST CASE 1] Input Args: ['hello world']
+    [REFERENCE] Expected Output: 'world hello'
+  [RESULT] SUCCESS: Case 1 consistent.
+  [TEST CASE 2] Input Args: ['i love coding']
+    [REFERENCE] Expected Output: 'coding love i'
+  [RESULT] SUCCESS: Case 2 consistent.
+
+>>> AUDITING GROUP: F39_TitleCase (21 files)
+  [TEST CASE 1] Input Args: ['hello world']
+    [REFERENCE] Expected Output: 'Hello World'
+  [RESULT] SUCCESS: Case 1 consistent.
+  [TEST CASE 2] Input Args: ['the quick brown fox']
+    [REFERENCE] Expected Output: 'The Quick Brown Fox'
+  [RESULT] SUCCESS: Case 2 consistent.
+
+>>> AUDITING GROUP: F40_HexToInt (21 files)
+  [TEST CASE 1] Input Args: ['FF']
+    [REFERENCE] Expected Output: '255'
+  [RESULT] SUCCESS: Case 1 consistent.
+  [TEST CASE 2] Input Args: ['1A']
+    [REFERENCE] Expected Output: '26'
+  [RESULT] SUCCESS: Case 2 consistent.
+
+>>> AUDITING GROUP: F41_BitCount (21 files)
+  [TEST CASE 1] Input Args: ['7']
+    [REFERENCE] Expected Output: '3'
+  [RESULT] SUCCESS: Case 1 consistent.
+  [TEST CASE 2] Input Args: ['1024']
+    [REFERENCE] Expected Output: '1'
+  [RESULT] SUCCESS: Case 2 consistent.
+
+>>> AUDITING GROUP: F42_HammingDistance (21 files)
+  [TEST CASE 1] Input Args: ['9', '14']
+    [REFERENCE] Expected Output: '3'
+  [RESULT] SUCCESS: Case 1 consistent.
+  [TEST CASE 2] Input Args: ['0', '255']
+    [REFERENCE] Expected Output: '8'
+  [RESULT] SUCCESS: Case 2 consistent.
+
+>>> AUDITING GROUP: F43_IsPowerOfTwo (21 files)
+  [TEST CASE 1] Input Args: ['64']
+    [REFERENCE] Expected Output: '1'
+  [RESULT] SUCCESS: Case 1 consistent.
+  [TEST CASE 2] Input Args: ['63']
+    [REFERENCE] Expected Output: '0'
+  [RESULT] SUCCESS: Case 2 consistent.
+
+>>> AUDITING GROUP: F44_ByteSwap (21 files)
+  [TEST CASE 1] Input Args: ['1']
+    [REFERENCE] Expected Output: '16777216'
+  [RESULT] SUCCESS: Case 1 consistent.
+  [TEST CASE 2] Input Args: ['255']
+    [REFERENCE] Expected Output: '4278190080'
+  [RESULT] SUCCESS: Case 2 consistent.
+
+>>> AUDITING GROUP: F45_GrayCode (21 files)
+  [TEST CASE 1] Input Args: ['4']
+    [REFERENCE] Expected Output: '6'
+  [RESULT] SUCCESS: Case 1 consistent.
+  [TEST CASE 2] Input Args: ['10']
+    [REFERENCE] Expected Output: '15'
+  [RESULT] SUCCESS: Case 2 consistent.
+
+>>> AUDITING GROUP: F46_Base64Encode (21 files)
+  [TEST CASE 1] Input Args: ['data']
+    [REFERENCE] Expected Output: 'ZGF0YQ=='
+  [RESULT] SUCCESS: Case 1 consistent.
+  [TEST CASE 2] Input Args: ['LGL']
+    [REFERENCE] Expected Output: 'TEdM'
+  [RESULT] SUCCESS: Case 2 consistent.
+
+>>> AUDITING GROUP: F47_XorCipher (21 files)
+  [TEST CASE 1] Input Args: ['secret', 'k']
+    [REFERENCE] Expected Output: '180e08190e1f'
+  [RESULT] SUCCESS: Case 1 consistent.
+  [TEST CASE 2] Input Args: ['hello', 'x']
+    [REFERENCE] Expected Output: '101d141417'
+  [RESULT] SUCCESS: Case 2 consistent.
+
+>>> AUDITING GROUP: F48_RLEEncode (21 files)
+  [TEST CASE 1] Input Args: ['aaabbc']
+    [REFERENCE] Expected Output: 'a3b2c1'
+  [RESULT] SUCCESS: Case 1 consistent.
+  [TEST CASE 2] Input Args: ['abc']
+    [REFERENCE] Expected Output: 'a1b1c1'
+  [RESULT] SUCCESS: Case 2 consistent.
+
+>>> AUDITING GROUP: F49_CaesarCipher (21 files)
+  [TEST CASE 1] Input Args: ['hello', '3']
+    [REFERENCE] Expected Output: 'khoor'
+  [RESULT] SUCCESS: Case 1 consistent.
+  [TEST CASE 2] Input Args: ['abc', '1']
+    [REFERENCE] Expected Output: 'bcd'
+  [RESULT] SUCCESS: Case 2 consistent.
+
+>>> AUDITING GROUP: F50_IntToRoman (21 files)
+  [TEST CASE 1] Input Args: ['1994']
+    [REFERENCE] Expected Output: 'MCMXCIV'
+  [RESULT] SUCCESS: Case 1 consistent.
+  [TEST CASE 2] Input Args: ['3888']
+    [REFERENCE] Expected Output: 'MMMDCCCLXXXVIII'
+  [RESULT] SUCCESS: Case 2 consistent.
+
+================================================================================
+FINAL AUDIT SUMMARY
+  Total Files Audited: 2100
+  Total Violations:    0
+  Failed Functions:    None
+================================================================================
+ALL PASSED: Dataset is dynamically consistent.
+
+Process finished with exit code 0

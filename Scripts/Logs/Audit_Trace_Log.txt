@@ -1,0 +1,21 @@
+D:\programFiles\Anaconda3\envs\LGL-DynT4\python.exe F:\MyCodeClone\LGL-DynT4\Scripts\Audit_Trace_Consistency.py
+INFO: Starting academic audit at: F:\MyCodeClone\LGL-DynT4\Data\Trace
+-----------------------------------------------------------------------------------------------
+INFO: Auditing group F50...
+===============================================================================================
+ACADEMIC DATASET AUDIT REPORT
+-----------------------------------------------------------------------------------------------
+  1. F-Groups (F01-F50):             50 / 50
+  2. A-Implementations (A01-A21):   1050 / 1050
+  3. T-Trace Files (T01-T10):     10500 / 10500
+-----------------------------------------------------------------------------------------------
+  [Error] Missing F Dirs:         0
+  [Error] Missing A Dirs:         0
+  [Error] Missing T Files:        0
+  [Error] Naming Format:          0
+  [Error] Inheritance Mismatch:   0
+  [Error] Input Mismatch:         0
+===============================================================================================
+RESULT: Dataset integrity verified. No critical errors found.
+
+Process finished with exit code 0

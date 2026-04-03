@@ -1,0 +1,40 @@
+@.str = constant [2 x i8] c" \00"
+define dso_local i32 @PcQ(i8* %0) {
+  %2 = alloca i8*
+  %3 = alloca [512 x i8]
+  %4 = alloca [512 x i8]
+  %5 = alloca i32
+  %6 = alloca i8*
+  store i8* %0, i8** %2
+  %9 = getelementptr inbounds [512 x i8], [512 x i8]* %3, i64 0, i64 0
+  call void @llvm.memset.p0i8.i64(i8* align 16 %9, i8 0, i64 512, i1 false)
+  %10 = getelementptr inbounds [512 x i8], [512 x i8]* %3, i64 0, i64 0
+  %11 = load i8*, i8** %2
+  %12 = call i8* @strncpy(i8* %10, i8* %11, i64 511)
+  %13 = getelementptr inbounds [512 x i8], [512 x i8]* %4, i64 0, i64 0
+  %14 = getelementptr inbounds [512 x i8], [512 x i8]* %3, i64 0, i64 0
+  %15 = call i8* @strcpy(i8* %13, i8* %14)
+  store i32 0, i32* %5
+  %18 = getelementptr inbounds [512 x i8], [512 x i8]* %4, i64 0, i64 0
+  %19 = call i8* @strtok(i8* %18, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str, i64 0, i64 0))
+  store i8* %19, i8** %6
+  br label %20
+20:
+  %21 = load i8*, i8** %6
+  %22 = icmp ne i8* %21, null
+  br i1 %22, label %23, label %27
+23:
+  %24 = load i32, i32* %5
+  %25 = add nsw i32 %24, 1
+  store i32 %25, i32* %5
+  %26 = call i8* @strtok(i8* null, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str, i64 0, i64 0))
+  store i8* %26, i8** %6
+  br label %20
+27:
+  %28 = load i32, i32* %5
+  ret i32 %28
+}
+declare void @llvm.memset.p0i8.i64(i8* nocapture writeonly, i8, i64, i1 immarg)
+declare i8* @strncpy(i8*, i8*, i64)
+declare i8* @strcpy(i8*, i8*)
+declare i8* @strtok(i8*, i8*)

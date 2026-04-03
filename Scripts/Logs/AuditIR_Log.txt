@@ -1,0 +1,20 @@
+D:\programFiles\Anaconda3\envs\LGL-DynT4\python.exe F:\MyCodeClone\LGL-DynT4\Scripts\Audit_LLVM_IR.py
+--------------------------------------------------------------------------------
+DATASET AUDIT REPORT: LLVM IR INTEGRITY VERIFICATION
+Timestamp: 2026-02-06
+--------------------------------------------------------------------------------
+
+[TARGET DIRECTORY]: LLVM_IR_Clean
+    - Subfolders Found: 50
+
+[TARGET DIRECTORY]: LLVM_IR_Raw
+    - Subfolders Found: 50
+
+==============================
+FINAL SUMMARY REPORT
+------------------------------
+CONCLUSION: Dataset complies with LLVM_IR integrity standards (50x21).
+STATUS: PASSED
+------------------------------
+
+Process finished with exit code 0
