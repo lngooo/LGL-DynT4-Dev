@@ -45,6 +45,7 @@ LGL-DynT4-Dev/
 ├── Version.txt
 ├── config.json
 └── config_paras.json
+```
 
 ## About This Repository
 
@@ -78,3 +79,4 @@ The paper is currently under review. Please replace the following placeholder in
   year    = {2025},
   note    = {Placeholder citation. Please replace with the final publication information.}
 }
+```
