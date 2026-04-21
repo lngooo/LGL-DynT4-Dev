@@ -45,6 +45,8 @@ LGL-DynT4-Dev/
 ├── Version.txt
 ├── config.json
 └── config_paras.json
+```
+
 ## Directory Description
 
 ### `Data/`
