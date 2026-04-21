@@ -1,6 +1,6 @@
 # LGL-DynT4-Dev
 
-LGL-DynT4-Dev is the development repository for **LGL-DynT4**, a multi-modal benchmark for semantic clone detection with aligned source code, LLVM IR, and dynamic traces.
+LGL-DynT4-Dev is the development repository for **LGL-DynT4: A Multi-Modal Benchmark with Aligned Dynamic Traces for Semantic Clone Detection**.
 
 This repository is intended for development, reconstruction, auditing, and experiments.  
 For the dataset release oriented toward direct use, please visit:
@@ -45,43 +45,6 @@ LGL-DynT4-Dev/
 ├── Version.txt
 ├── config.json
 └── config_paras.json
-## Directory Description
-
-### `Data/`
-
-Stores the main multi-modal data.
-
-#### `Data/Natural/`
-Natural version of the dataset.
-
-- `Source_Raw/`: raw source code
-- `Source_Clean/`: cleaned source code
-- `LLVM_IR_Raw/`: raw LLVM IR
-- `LLVM_IR_Clean/`: cleaned LLVM IR
-
-#### `Data/Obfuscated/`
-Obfuscated version of the dataset.
-
-- `Source_Raw/`: obfuscated raw source code
-- `Source_Clean/`: cleaned obfuscated source code
-- `LLVM_IR_Raw/`: raw LLVM IR generated from the obfuscated branch
-- `LLVM_IR_Clean/`: cleaned LLVM IR generated from the obfuscated branch
-
-### `Manifest/`
-
-Stores split files, pair files, and other index-style metadata used to organize the benchmark.
-
-### `Scripts/`
-
-Main scripts for dataset construction, processing, auditing, and related utilities.
-
-### `Scripts_eva2/`
-
-Additional evaluation scripts and experiment-related utilities.
-
-### `baseline/`
-
-Baseline code and related experiment materials.
 
 ## About This Repository
 
