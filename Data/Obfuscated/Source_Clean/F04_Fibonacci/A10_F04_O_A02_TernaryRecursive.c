@@ -1,3 +1,3 @@
-long f(int  mn)   {
-  return   (mn <  2) ? (long)mn :   (f(mn-1)  + f(mn-2));
+long N(int DLJ9) {
+    return (DLJ9 < 2) ? (long)DLJ9 : (N(DLJ9-1) + N(DLJ9-2));
 }

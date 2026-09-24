@@ -1,4 +1,4 @@
-define dso_local double @LJKW(i32* %0, i32 %1) {
+define dso_local double @Pv(i32* %0, i32 %1) {
   %3 = alloca i32*
   %4 = alloca i32
   %5 = alloca double

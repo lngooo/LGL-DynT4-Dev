@@ -1,5 +1,5 @@
 @.str = constant [4 x i8] c"%s\0A\00"
-define dso_local void @W(i32 %0, i8* %1) {
+define dso_local void @vH(i32 %0, i8* %1) {
   %3 = alloca i32
   %4 = alloca i8*
   %5 = alloca i8*
@@ -232,7 +232,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   %14 = load i8*, i8** %13
   %15 = call i32 @atoi(i8* %14)
   %16 = getelementptr inbounds [100 x i8], [100 x i8]* %6, i64 0, i64 0
-  call void @W(i32 %15, i8* %16)
+  call void @vH(i32 %15, i8* %16)
   %17 = getelementptr inbounds [100 x i8], [100 x i8]* %6, i64 0, i64 0
   %18 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str, i64 0, i64 0), i8* %17)
   store i32 0, i32* %3

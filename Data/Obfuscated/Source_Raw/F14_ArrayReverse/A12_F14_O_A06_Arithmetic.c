@@ -4,28 +4,26 @@
  * File: A12_F14_O_A06_Arithmetic.c
  * Implementation Logic: Pointer version with complex arithmetic.
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-void a(int   vFIZ[], int  z)   {
-   int   *y8  = vFIZ;
- for(int  g = 0;   g   <  (z  >>   1); g++) {
-  int *hh2   = y8 +  g;
-   int *oB  = y8  +  (z - 1   -   g);
-   *hh2 ^= *oB;  *oB  ^= *hh2;   *hh2   ^=   *oB;
-  }
+void ay(int hKI7[], int vRt) {
+    int *dO9P = hKI7;
+    for(int x = 0; x < (vRt >> 1); x++) {
+        int *f1D = dO9P + x;
+        int *Pml = dO9P + (vRt - 1 - x);
+        *f1D ^= *Pml; *Pml ^= *f1D; *f1D ^= *Pml;
+    }
 }
 
-int  main(int   argc, char   *argv[])  {
-   if (argc < 2)   return 0;
- int z  = argc   -  1;
-   int  *vFIZ =  (int*)malloc(z *   sizeof(int));
-  for(int g=0;   g<z; g++)   vFIZ[g]  =  atoi(argv[g+1]);
-  a(vFIZ,   z);
-  for(int  g=0;  g<z;   g++)   printf("%d ", vFIZ[g]);
-   printf("\n");
- free(vFIZ);
- return 0;
+int main(int y, char *tS[]) {
+    if (y < 2) return 0;
+    int vRt = y - 1;
+    int *hKI7 = (int*)malloc(vRt * sizeof(int));
+    for(int x=0; x<vRt; x++) hKI7[x] = atoi(tS[x+1]);
+    ay(hKI7, vRt);
+    for(int x=0; x<vRt; x++) printf("%d ", hKI7[x]);
+    printf("\n");
+    free(hKI7);
+    return 0;
 }

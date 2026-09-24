@@ -1,16 +1,16 @@
-void ZzO(char*   cGV9) {
-  static char  se[256];
-   static   int e   =  0;
-  if  (!e)  {
-   for (int rPXG8   = 0;   rPXG8  <   256; rPXG8++) {
-   if  (rPXG8   >=  'a'   && rPXG8   <=  'z') se[rPXG8]   = rPXG8  - 32;
- else  if   (rPXG8 >= 'A'   &&   rPXG8  <=   'Z')  se[rPXG8] =  rPXG8 + 32;
- else se[rPXG8] =   rPXG8;
- }
-  e  =  1;
- }
-  while   (*cGV9)  {
- *cGV9   = se[(unsigned  char)*cGV9];
-   cGV9++;
-  }
+void Z(char* TQ) {
+    static char iXS[256];
+    static int bXgo = 0;
+    if (!bXgo) {
+        for (int hjrm = 0; hjrm < 256; hjrm++) {
+            if (hjrm >= 'a' && hjrm <= 'z') iXS[hjrm] = hjrm - 32;
+            else if (hjrm >= 'A' && hjrm <= 'Z') iXS[hjrm] = hjrm + 32;
+            else iXS[hjrm] = hjrm;
+        }
+        bXgo = 1;
+    }
+    while (*TQ) {
+        *TQ = iXS[(unsigned char)*TQ];
+        TQ++;
+    }
 }

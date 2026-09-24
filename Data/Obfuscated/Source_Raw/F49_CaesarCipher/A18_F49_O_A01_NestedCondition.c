@@ -5,32 +5,30 @@
  * Implementation Logic: A18_F49_O_A01_NestedCondition
  * Input Format: <string> <shift_int>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
 
-void  dXOJ(char  *YI,  int OZsp) {
+void Yq8A(char *ruMF, int gH) {
 
-   int   hipq  =   (OZsp  % 26   +  26)   %  26;
-   for(int   W=0;   YI[W]; W++) {
-  if(YI[W]  >= 'A')   {
- if(YI[W] <=  'Z')   YI[W]   =  (YI[W]-'A'+hipq)%26+'A';
- else  if(YI[W]  >= 'a')  {
-   if(YI[W] <=   'z')  YI[W] =   (YI[W]-'a'+hipq)%26+'a';
- }
-   }
-   }
+    int LS = (gH % 26 + 26) % 26;
+    for(int VK1I=0; ruMF[VK1I]; VK1I++) {
+        if(ruMF[VK1I] >= 'A') {
+            if(ruMF[VK1I] <= 'Z') ruMF[VK1I] = (ruMF[VK1I]-'A'+LS)%26+'A';
+            else if(ruMF[VK1I] >= 'a') {
+                if(ruMF[VK1I] <= 'z') ruMF[VK1I] = (ruMF[VK1I]-'a'+LS)%26+'a';
+            }
+        }
+    }
 }
 
-int main(int   argc,  char *argv[])   {
-  if (argc   <  3)  {
- return 1;
-   }
- int   OZsp   =  atoi(argv[2]);
-  dXOJ(argv[1], OZsp);
-  printf("%s\n",   argv[1]);
-   return   0;
+int main(int MYe, char *M6T[]) {
+    if (MYe < 3) {
+        return 1;
+    }
+    int gH = atoi(M6T[2]);
+    Yq8A(M6T[1], gH);
+    printf("%s\n", M6T[1]);
+    return 0;
 }

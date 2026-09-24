@@ -1,3 +1,3 @@
-int   qG(unsigned int  f)   {
-   return  (f > 0   && __builtin_popcount(f)  ==  1);
+int wX(unsigned int tC) {
+    return (tC > 0 && __builtin_popcount(tC) == 1);
 }

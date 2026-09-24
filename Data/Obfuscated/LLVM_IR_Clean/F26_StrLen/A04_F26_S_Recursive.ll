@@ -1,4 +1,4 @@
-define dso_local i32 @Tk5(i8* %0) {
+define dso_local i32 @oQ(i8* %0) {
   %2 = alloca i32
   %3 = alloca i8*
   store i8* %0, i8** %3
@@ -13,7 +13,7 @@ define dso_local i32 @Tk5(i8* %0) {
 9:
   %10 = load i8*, i8** %3
   %11 = getelementptr inbounds i8, i8* %10, i64 1
-  %12 = call i32 @Tk5(i8* %11)
+  %12 = call i32 @oQ(i8* %11)
   %13 = add nsw i32 1, %12
   store i32 %13, i32* %2
   br label %14

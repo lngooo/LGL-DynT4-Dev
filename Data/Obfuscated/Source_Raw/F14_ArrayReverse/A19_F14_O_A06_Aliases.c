@@ -4,30 +4,28 @@
  * File: A19_F14_O_A06_Aliases.c
  * Implementation Logic: Pointer aliasing to obscure swaps.
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-void r(int tn[],   int  E) {
- int  *KCmX =  tn;
-  for(int  ou=0;   ou<E/2;   ou++)   {
- int  *y  = &KCmX[ou];
-   int  *rcJC6   =   &KCmX[E-1-ou];
- int CFkQ  = *y;
-   *y  =  *rcJC6;
-  *rcJC6 = CFkQ;
- }
+void cgVd(int kY[], int F) {
+    int *e = kY;
+    for(int UC=0; UC<F/2; UC++) {
+        int *AmV = &e[UC];
+        int *oXh = &e[F-1-UC];
+        int ogp = *AmV;
+        *AmV = *oXh;
+        *oXh = ogp;
+    }
 }
 
-int   main(int  argc, char *argv[])   {
-   if  (argc <   2) return   0;
-  int E   =   argc -  1;
-  int  *tn  =   (int*)malloc(E * sizeof(int));
-   for(int  ou=0; ou<E;  ou++) tn[ou]   =   atoi(argv[ou+1]);
-  r(tn,   E);
-   for(int  ou=0; ou<E; ou++)   printf("%d ", tn[ou]);
- printf("\n");
-  free(tn);
- return 0;
+int main(int my5o, char *E[]) {
+    if (my5o < 2) return 0;
+    int F = my5o - 1;
+    int *kY = (int*)malloc(F * sizeof(int));
+    for(int UC=0; UC<F; UC++) kY[UC] = atoi(E[UC+1]);
+    cgVd(kY, F);
+    for(int UC=0; UC<F; UC++) printf("%d ", kY[UC]);
+    printf("\n");
+    free(kY);
+    return 0;
 }

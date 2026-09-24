@@ -5,36 +5,34 @@
  * Implementation Logic: A07 with redundant memory allocation and string copying.
  * Input Format: <string>
  */
-
-
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
 #include <ctype.h>
 
-void Fn8(char*  WpE6)  {
-  int u8   = strlen(WpE6);
-  char*  ZYnA3 =  malloc(u8 +   1);
-  char*   Gc  =   malloc(u8   + 1);
- Gc[0]  = 0;
-   strcpy(ZYnA3,  WpE6);
- char*   ym   =  strtok(ZYnA3,   " ");
- while(ym) {
-   char   Rz[128];
-   strcpy(Rz, ym);
- Rz[0]  =   toupper(Rz[0]);
- for(int   JiCs=1;  Rz[JiCs];  JiCs++) Rz[JiCs]  =   tolower(Rz[JiCs]);
- strcat(Gc, Rz);
- ym   = strtok(NULL, " ");
-   if(ym)  strcat(Gc,  " ");
-  }
-  strcpy(WpE6, Gc);
-  free(ZYnA3);   free(Gc);
+void Bx(char* rzy7) {
+    int ZeBn = strlen(rzy7);
+    char* ifl = malloc(ZeBn + 1);
+    char* sxb = malloc(ZeBn + 1);
+    sxb[0] = 0;
+    strcpy(ifl, rzy7);
+    char* K = strtok(ifl, " ");
+    while(K) {
+        char N68[128];
+        strcpy(N68, K);
+        N68[0] = toupper(N68[0]);
+        for(int Gf0=1; N68[Gf0]; Gf0++) N68[Gf0] = tolower(N68[Gf0]);
+        strcat(sxb, N68);
+        K = strtok(NULL, " ");
+        if(K) strcat(sxb, " ");
+    }
+    strcpy(rzy7, sxb);
+    free(ifl); free(sxb);
 }
 
-int   main(int  argc,   char*   argv[])   {
-  if  (argc   < 2)   return   0;
-  Fn8(argv[1]);
-  printf("%s",   argv[1]);
-   return   0;
+int main(int lWz, char* uY[]) {
+    if (lWz < 2) return 0;
+    Bx(uY[1]);
+    printf("%s", uY[1]);
+    return 0;
 }

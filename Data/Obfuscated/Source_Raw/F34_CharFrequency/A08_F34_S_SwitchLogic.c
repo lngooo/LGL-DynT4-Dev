@@ -4,24 +4,22 @@
 * File: A08_F34_S_SwitchLogic.c
 * Logic: Using switch for character selection.
 */
-
-
 #include <stdio.h>
 
-int  usUy5(char*   zDj3,   char Qduz)  {
- int  Hh   =   0;
- while (*zDj3) {
- switch   (*zDj3  == Qduz)   {
- case 1:   Hh++;   break;
-   default: break;
- }
-   zDj3++;
-   }
-   return Hh;
+int wT7(char* mw, char gDI7) {
+    int D = 0;
+    while (*mw) {
+        switch (*mw == gDI7) {
+            case 1: D++; break;
+            default: break;
+        }
+        mw++;
+    }
+    return D;
 }
 
-int   main(int  argc,   char*  argv[]) {
- if   (argc < 3) return 0;
-  printf("%d\n",   usUy5(argv[1], argv[2][0]));
-  return  0;
+int main(int n, char* Rg[]) {
+    if (n < 3) return 0;
+    printf("%d\n", wT7(Rg[1], Rg[2][0]));
+    return 0;
 }

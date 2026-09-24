@@ -4,23 +4,21 @@
  * File: A11_F40_O_A01_VarSplit.c
  * Implementation Logic: Splitting 'res' into res_low and res_high.
  */
-
-
 #include <stdio.h>
 
-int   yq0(const char* t)   {
- int kGT  = 0,   ONt0  =   0;
-   while   (*t)   {
-   int   aq   = (*t <= '9')  ?   (*t  - '0')   :   ((*t|32)  -  'a'  +   10);
-  kGT  =  (kGT *   16) + ((ONt0   * 16  + aq)  / 1000000);
- ONt0   = (ONt0  *   16   +  aq) %  1000000;
-   t++;
- }
- return kGT * 1000000   + ONt0;
+int gwP2(const char* JR) {
+    int Tf = 0, QY1O = 0;
+    while (*JR) {
+        int TWqI = (*JR <= '9') ? (*JR - '0') : ((*JR|32) - 'a' + 10);
+        Tf = (Tf * 16) + ((QY1O * 16 + TWqI) / 1000000);
+        QY1O = (QY1O * 16 + TWqI) % 1000000;
+        JR++;
+    }
+    return Tf * 1000000 + QY1O;
 }
 
-int   main(int   argc, char* argv[])   {
- if  (argc  < 2)  return   0;
-  printf("%d",   yq0(argv[1]));
- return   0;
+int main(int XzE, char* uC[]) {
+    if (XzE < 2) return 0;
+    printf("%d", gwP2(uC[1]));
+    return 0;
 }

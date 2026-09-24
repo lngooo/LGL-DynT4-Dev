@@ -1,6 +1,6 @@
 @.str = constant [5 x i8] c"%c%d\00"
 @.str.1 = constant [2 x i8] c"\0A\00"
-define dso_local void @ThtF(i8* %0) {
+define dso_local void @aR(i8* %0) {
   %2 = alloca i8*
   %3 = alloca i32
   store i8* %0, i8** %2
@@ -58,17 +58,17 @@ define dso_local void @ThtF(i8* %0) {
   %46 = load i32, i32* %3
   %47 = sext i32 %46 to i64
   %48 = getelementptr inbounds i8, i8* %45, i64 %47
-  call void @ThtF(i8* %48)
+  call void @aR(i8* %48)
   br label %50
 50:
   ret void
 }
 declare i32 @printf(i8*, ...)
-define dso_local void @NDL(i8* %0) {
+define dso_local void @kQs(i8* %0) {
   %2 = alloca i8*
   store i8* %0, i8** %2
   %3 = load i8*, i8** %2
-  call void @ThtF(i8* %3)
+  call void @aR(i8* %3)
   %4 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.1, i64 0, i64 0))
   ret void
 }

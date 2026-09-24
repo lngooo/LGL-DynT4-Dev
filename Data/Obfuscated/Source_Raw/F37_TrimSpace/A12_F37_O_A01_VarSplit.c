@@ -4,27 +4,25 @@
 * File: A12_F37_O_A01_VarSplit.c
 * Logic: Index j split into j_base and j_offset derived from A01.
 */
-
-
 #include <stdio.h>
 #include <ctype.h>
 
-void   ShJw6(char*   sgI)  {
-  int  QU =  0, SYg8  = 0,  xEj5 =  0;
-   while   (sgI[QU])  {
-  if  (!isspace((unsigned   char)sgI[QU]))   {
- sgI[SYg8  +   xEj5]   =  sgI[QU];
-  if (xEj5   <   10) xEj5++;
-   else {  SYg8 += xEj5;   xEj5   =  1;   }
- }
- QU++;
-   }
-  sgI[SYg8 + xEj5] =  '\0';
+void h(char* N) {
+    int UM = 0, d2 = 0, xpS7 = 0;
+    while (N[UM]) {
+        if (!isspace((unsigned char)N[UM])) {
+            N[d2 + xpS7] = N[UM];
+            if (xpS7 < 10) xpS7++;
+            else { d2 += xpS7; xpS7 = 1; }
+        }
+        UM++;
+    }
+    N[d2 + xpS7] = '\0';
 }
 
-int  main(int   argc, char* argv[]) {
- if  (argc   <   2)  return   0;
-   ShJw6(argv[1]);
-   printf("%s\n",   argv[1]);
- return 0;
+int main(int Scwh, char* E[]) {
+    if (Scwh < 2) return 0;
+    h(E[1]);
+    printf("%s\n", E[1]);
+    return 0;
 }

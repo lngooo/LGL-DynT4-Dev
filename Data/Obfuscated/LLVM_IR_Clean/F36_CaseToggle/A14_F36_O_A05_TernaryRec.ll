@@ -1,4 +1,4 @@
-define dso_local void @ueD(i8* %0) {
+define dso_local void @LeH(i8* %0) {
   %2 = alloca i8*
   store i8* %0, i8** %2
   %3 = load i8*, i8** %2
@@ -58,7 +58,7 @@ define dso_local void @ueD(i8* %0) {
   store i8 %45, i8* %46
   %47 = load i8*, i8** %2
   %48 = getelementptr inbounds i8, i8* %47, i64 1
-  call void @ueD(i8* %48)
+  call void @LeH(i8* %48)
   br label %49
 49:
   ret void

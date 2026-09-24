@@ -1,7 +1,7 @@
-int qH3(const  char *qa, const char *i)   {
- return (*qa ==   '\0'  ||  *qa  !=  *i)   ?   (*(unsigned char*)qa  -   *(unsigned  char*)i)   :  qH3(qa+1, i+1);
+int Pu(const char *I, const char *d) {
+    return (*I == '\0' || *I != *d) ? (*(unsigned char*)I - *(unsigned char*)d) : Pu(I+1, d+1);
 }
 
-int   KO(const  char *qa, const   char *i) {
-   return qH3(qa, i);
+int ymw(const char *I, const char *d) {
+    return Pu(I, d);
 }

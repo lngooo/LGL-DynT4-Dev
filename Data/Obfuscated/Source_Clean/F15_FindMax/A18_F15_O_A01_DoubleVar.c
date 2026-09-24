@@ -1,8 +1,8 @@
-int cEn8(int   wYn6[], int   GsP8)  {
- int  BWxT  =   wYn6[0],  du   =  wYn6[0];
- for(int   HUhE=0;   HUhE<GsP8; HUhE++) {
-   if (wYn6[HUhE] >  BWxT) BWxT   =   wYn6[HUhE];
-  if   (BWxT   >  du)   du =   BWxT;
- }
-   return   du;
+int JA(int Bm2[], int Z) {
+    int Rxla = Bm2[0], RgzC = Bm2[0];
+    for(int h=0; h<Z; h++) {
+        if (Bm2[h] > Rxla) Rxla = Bm2[h];
+        if (Rxla > RgzC) RgzC = Rxla;
+    }
+    return RgzC;
 }

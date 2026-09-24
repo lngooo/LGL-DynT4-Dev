@@ -1,4 +1,4 @@
-define dso_local void @G(i32* %0, i32 %1, i32 %2) {
+define dso_local void @Go(i32* %0, i32 %1, i32 %2) {
   %4 = alloca i32*
   %5 = alloca i32
   %6 = alloca i32
@@ -93,12 +93,12 @@ define dso_local void @G(i32* %0, i32 %1, i32 %2) {
   %81 = load i32*, i32** %4
   %82 = load i32, i32* %5
   %83 = load i32, i32* %7
-  call void @G(i32* %81, i32 %82, i32 %83)
+  call void @Go(i32* %81, i32 %82, i32 %83)
   br label %85
 85:
   ret void
 }
-define dso_local i32 @Nclr3(i32* %0, i32 %1) {
+define dso_local i32 @V(i32* %0, i32 %1) {
   %3 = alloca i32*
   %4 = alloca i32
   %5 = alloca i32*
@@ -154,7 +154,7 @@ define dso_local i32 @Nclr3(i32* %0, i32 %1) {
   %46 = load i32*, i32** %5
   %47 = load i32, i32* %4
   %48 = load i32, i32* %7
-  call void @G(i32* %46, i32 %47, i32 %48)
+  call void @Go(i32* %46, i32 %47, i32 %48)
   br label %49
 49:
   %50 = load i32, i32* %7

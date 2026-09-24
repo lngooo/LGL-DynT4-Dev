@@ -5,21 +5,19 @@
  * Implementation Logic: Parallel bit counting using bitwise masks to count bits in pairs, nibbles, etc.
  * Input Format: <uint32_t>
  */
-
-
 #include <stdio.h>
 #include <stdint.h>
 #include <stdlib.h>
 
-int   Nv(uint32_t  K0)   {
-   K0   = K0 -  ((K0   >>  1) & 0x55555555);
-  K0 =  (K0  & 0x33333333)   +   ((K0  >> 2) & 0x33333333);
-  return  (((K0 +  (K0   >>   4))   &   0x0F0F0F0F) *  0x01010101) >> 24;
+int l(uint32_t whk) {
+    whk = whk - ((whk >> 1) & 0x55555555);
+    whk = (whk & 0x33333333) + ((whk >> 2) & 0x33333333);
+    return (((whk + (whk >> 4)) & 0x0F0F0F0F) * 0x01010101) >> 24;
 }
 
-int main(int   argc,  char*  argv[])   {
-  if   (argc   <  2)   return   0;
- uint32_t   l  =   (uint32_t)strtoul(argv[1],  NULL, 10);
-  printf("%d\n", Nv(l));
-  return 0;
+int main(int DA, char* Bt[]) {
+    if (DA < 2) return 0;
+    uint32_t f2 = (uint32_t)strtoul(Bt[1], NULL, 10);
+    printf("%d\n", l(f2));
+    return 0;
 }

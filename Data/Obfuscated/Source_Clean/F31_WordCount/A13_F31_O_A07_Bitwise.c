@@ -1,11 +1,11 @@
-int   F(char*  VMJy)   {
- int   PvJ =   0;
-   int  IH  =  (1  ^   0);
- while  (*VMJy)  {
- int   AQsj   =   (*VMJy  ==   32 ||   *VMJy ==   9   ||   *VMJy  == 10)   ? 1  :  0;
-  if   (IH  &  (~AQsj &   1)) PvJ =   PvJ   +  1;
-  IH =   AQsj;
- VMJy++;
-  }
-  return   PvJ;
+int f(char* j) {
+    int F5f7 = 0;
+    int da = (1 ^ 0);
+    while (*j) {
+        int lcis = (*j == 32 || *j == 9 || *j == 10) ? 1 : 0;
+        if (da & (~lcis & 1)) F5f7 = F5f7 + 1;
+        da = lcis;
+        j++;
+    }
+    return F5f7;
 }

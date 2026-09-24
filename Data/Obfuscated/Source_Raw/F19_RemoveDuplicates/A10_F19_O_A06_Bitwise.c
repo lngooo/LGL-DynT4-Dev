@@ -5,35 +5,33 @@
  * Implementation Logic: Bitwise
  * Input Format: <val1> <val2> ...
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-int  bC(int   P4[],   int  Av)   {
-   int   u[128]  =  {0},  zEf   =   0;
- for   (int  D   = 0; D  < Av;  D++) {
-   if  (u[D]) continue;
-   for  (int G =   D +  1; G <  Av; G++)  {
-  if  (!(P4[D]   ^  P4[G]))   u[G]  =  1;
-  }
- }
-  for   (int D  =  0;   D  <  Av; D++) if   (!u[D]) P4[zEf++] =  P4[D];
-   return   zEf;
+int wG(int X[], int dR) {
+    int BMV[128] = {0}, B = 0;
+    for (int ssFf = 0; ssFf < dR; ssFf++) {
+        if (BMV[ssFf]) continue;
+        for (int pNjU = ssFf + 1; pNjU < dR; pNjU++) {
+            if (!(X[ssFf] ^ X[pNjU])) BMV[pNjU] = 1;
+        }
+    }
+    for (int ssFf = 0; ssFf < dR; ssFf++) if (!BMV[ssFf]) X[B++] = X[ssFf];
+    return B;
 }
 
-int   main(int  argc,   char *argv[])  {
- if  (argc  < 2)   return   0;
-   int I4   = argc  - 1;
-   int   P4[128];
-   for (int  D  =  0;  D   <  I4;   D++)  {
-   P4[D]  =  atoi(argv[D +   1]);
- }
-  int Azj2 =  bC(P4, I4);
-  for  (int  D   =   0; D   < Azj2; D++) {
-  printf("%d%s", P4[D],  (D   ==  Azj2   - 1  ?  ""   :  " "));
-   }
-   printf("\n");
-  return  0;
+int main(int pr, char *q[]) {
+    if (pr < 2) return 0;
+    int Q0 = pr - 1;
+    int X[128];
+    for (int ssFf = 0; ssFf < Q0; ssFf++) {
+        X[ssFf] = atoi(q[ssFf + 1]);
+    }
+    int mETY = wG(X, Q0);
+    for (int ssFf = 0; ssFf < mETY; ssFf++) {
+        printf("%d%s", X[ssFf], (ssFf == mETY - 1 ? "" : " "));
+    }
+    printf("\n");
+    return 0;
 }

@@ -1,4 +1,4 @@
-define dso_local void @mdNu(i8** %0, i32 %1, i8* %2) {
+define dso_local void @WA(i8** %0, i32 %1, i8* %2) {
   %4 = alloca i8**
   %5 = alloca i32
   %6 = alloca i8*
@@ -29,7 +29,7 @@ define dso_local void @mdNu(i8** %0, i32 %1, i8* %2) {
   %25 = load i32, i32* %5
   %26 = sub nsw i32 %25, 1
   %27 = getelementptr inbounds [128 x i8], [128 x i8]* %7, i64 0, i64 0
-  call void @mdNu(i8** %24, i32 %26, i8* %27)
+  call void @WA(i8** %24, i32 %26, i8* %27)
   store i32 -1, i32* %8
   br label %29
 29:

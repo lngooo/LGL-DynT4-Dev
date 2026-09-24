@@ -1,5 +1,5 @@
-@vO.oqt = internal global [32 x i32] zeroinitializer
-define dso_local i32 @vO(i32 %0) {
+@eC.HIm = internal global [32 x i32] zeroinitializer
+define dso_local i32 @eC(i32 %0) {
   %2 = alloca i32
   %3 = alloca i32
   %4 = alloca i32
@@ -20,7 +20,7 @@ define dso_local i32 @vO(i32 %0) {
   %16 = shl i32 1, %15
   %17 = load i32, i32* %4
   %18 = sext i32 %17 to i64
-  %19 = getelementptr inbounds [32 x i32], [32 x i32]* @vO.oqt, i64 0, i64 %18
+  %19 = getelementptr inbounds [32 x i32], [32 x i32]* @eC.HIm, i64 0, i64 %18
   store i32 %16, i32* %19
   br label %20
 20:
@@ -29,7 +29,7 @@ define dso_local i32 @vO(i32 %0) {
   store i32 %22, i32* %4
   br label %9
 23:
-  store i32* getelementptr inbounds ([32 x i32], [32 x i32]* @vO.oqt, i64 0, i64 0), i32** %5
+  store i32* getelementptr inbounds ([32 x i32], [32 x i32]* @eC.HIm, i64 0, i64 0), i32** %5
   %25 = load i32, i32* %3
   %26 = icmp eq i32 %25, 0
   br i1 %26, label %27, label %28

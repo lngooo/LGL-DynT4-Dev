@@ -1,4 +1,4 @@
-define dso_local i64 @EXKJ(i64 %0, i64 %1) {
+define dso_local i64 @Fhg(i64 %0, i64 %1) {
   %3 = alloca i64
   %4 = alloca i64
   %5 = alloca i64
@@ -26,7 +26,7 @@ define dso_local i64 @EXKJ(i64 %0, i64 %1) {
   %21 = load i64, i64* %3
   ret i64 %21
 }
-define dso_local i64 @Nb(i32 %0) {
+define dso_local i64 @Pg1F(i32 %0) {
   %2 = alloca i64
   %3 = alloca i32
   %4 = alloca i64
@@ -68,7 +68,7 @@ define dso_local i64 @Nb(i32 %0) {
 30:
   %31 = load i64, i64* %7
   %32 = load i64, i64* %4
-  %33 = call i64 @EXKJ(i64 %31, i64 %32)
+  %33 = call i64 @Fhg(i64 %31, i64 %32)
   store i64 %33, i64* %7
   br label %34
 34:

@@ -1,3 +1,3 @@
-void X(int   *aa,   int H) {
-  int  ei=1;while(ei<H/3)ei=(int)(pow(3.0,1.0)*ei+1);while(ei>=1){for(int d=ei;d<H;d++){int dMT=aa[d],kbt=d;while(kbt>=ei&&aa[kbt-ei]>dMT){aa[kbt]=aa[kbt-ei];kbt-=ei;}aa[kbt]=dMT;}ei/=(int)sqrt(9.0);}
+void G7R(int *DwB, int A9AD) {
+    int J=1;while(J<A9AD/3)J=(int)(pow(3.0,1.0)*J+1);while(J>=1){for(int X=J;X<A9AD;X++){int fWiN=DwB[X],YpL=X;while(YpL>=J&&DwB[YpL-J]>fWiN){DwB[YpL]=DwB[YpL-J];YpL-=J;}DwB[YpL]=fWiN;}J/=(int)sqrt(9.0);}
 }

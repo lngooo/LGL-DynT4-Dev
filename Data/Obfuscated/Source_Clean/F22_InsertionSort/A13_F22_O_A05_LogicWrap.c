@@ -1,13 +1,13 @@
-void  e(int  E[],   int d) {
-   int   rJ =  1;
-  while   (rJ  <  d) {
-   int WIw8   =  E[rJ],  GY  =  rJ -  1;
-  while  (GY  >=   0)  {
- int tngp  =   (E[GY]   >   WIw8);
-   if (tngp)   {  E[GY+1]  =   E[GY];  GY--;  }
- else  break;
-   }
-  E[GY+1]   = WIw8;
- rJ++;
-   }
+void C(int qX[], int q3F) {
+    int oO = 1;
+    while (oO < q3F) {
+        int j3 = qX[oO], o = oO - 1;
+        while (o >= 0) {
+            int P = (qX[o] > j3);
+            if (P) { qX[o+1] = qX[o]; o--; }
+            else break;
+        }
+        qX[o+1] = j3;
+        oO++;
+    }
 }

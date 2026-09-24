@@ -5,37 +5,35 @@
  * Implementation Logic: 算法替换：使用 XOR 交换字符实现 A06
  * Input Format: <string>
  */
-
-
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
 #include <stdlib.h>
 
-void ykEL(char  *m) {
-  int  B =   strlen(m);
-  char *nVPY   =   calloc(B   + 1,   1);
-  int  HMP1 =   0;
- for(int X = B  - 1;  X  >=  0;   X--)   {
-   if(m[X]  == 32)   {
-  int HRNX =   X   +  1;
-  while(m[HRNX] != 32   &&  m[HRNX]   !=  0) nVPY[HMP1++] =   m[HRNX++];
- nVPY[HMP1++] =  32;
-   }
-  }
- int   t1  =  0; while(m[t1]  != 32 &&  m[t1]   != 0) nVPY[HMP1++]   = m[t1++];
-   nVPY[HMP1] =   0;
- strcpy(m, nVPY); free(nVPY);
+void q5S1(char *G) {
+    int JTu = strlen(G);
+    char *oZP = calloc(JTu + 1, 1);
+    int ZK = 0;
+    for(int ALJK = JTu - 1; ALJK >= 0; ALJK--) {
+        if(G[ALJK] == 32) {
+            int Aw = ALJK + 1;
+            while(G[Aw] != 32 && G[Aw] != 0) oZP[ZK++] = G[Aw++];
+            oZP[ZK++] = 32;
+        }
+    }
+    int Mq = 0; while(G[Mq] != 32 && G[Mq] != 0) oZP[ZK++] = G[Mq++];
+    oZP[ZK] = 0;
+    strcpy(G, oZP); free(oZP);
 }
 
-int main(int argc,   char *argv[]) {
-  if   (argc  < 2) return   0;
-  char   XWFh[512]  =  "";
- for(int  X   =  1;  X < argc;  X++)  {
-   strcat(XWFh,  argv[X]);
- if(X < argc  - 1)   strcat(XWFh, " ");
-  }
-  ykEL(XWFh);
-   printf("%s\n",  XWFh);
- return 0;
+int main(int EXh, char *Uf9N[]) {
+    if (EXh < 2) return 0;
+    char Em[512] = "";
+    for(int ALJK = 1; ALJK < EXh; ALJK++) {
+        strcat(Em, Uf9N[ALJK]);
+        if(ALJK < EXh - 1) strcat(Em, " ");
+    }
+    q5S1(Em);
+    printf("%s\n", Em);
+    return 0;
 }

@@ -1,4 +1,4 @@
-define dso_local i32 @eJr(i32* %0, i32 %1, i32 %2, i32 %3) {
+define dso_local i32 @o(i32* %0, i32 %1, i32 %2, i32 %3) {
   %5 = alloca i32
   %6 = alloca i32*
   %7 = alloca i32
@@ -76,7 +76,7 @@ define dso_local i32 @eJr(i32* %0, i32 %1, i32 %2, i32 %3) {
 55:
   unreachable
 }
-define dso_local i32 @bHA(i32* %0, i32 %1, i32 %2) {
+define dso_local i32 @Qi5M(i32* %0, i32 %1, i32 %2) {
   %4 = alloca i32*
   %5 = alloca i32
   %6 = alloca i32
@@ -87,6 +87,6 @@ define dso_local i32 @bHA(i32* %0, i32 %1, i32 %2) {
   %8 = load i32, i32* %5
   %9 = sub nsw i32 %8, 1
   %10 = load i32, i32* %6
-  %11 = call i32 @eJr(i32* %7, i32 0, i32 %9, i32 %10)
+  %11 = call i32 @o(i32* %7, i32 0, i32 %9, i32 %10)
   ret i32 %11
 }

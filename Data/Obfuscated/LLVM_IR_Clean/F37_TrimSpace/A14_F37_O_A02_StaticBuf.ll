@@ -1,5 +1,5 @@
-@KvM3 = internal global [4096 x i8] zeroinitializer
-define dso_local void @oF(i8* %0) {
+@BFAd = internal global [4096 x i8] zeroinitializer
+define dso_local void @YBq(i8* %0) {
   %2 = alloca i8*
   %3 = alloca i32
   %4 = alloca i8*
@@ -36,7 +36,7 @@ define dso_local void @oF(i8* %0) {
   %29 = load i8, i8* %28
   %30 = load i32, i32* %3
   %31 = sext i32 %30 to i64
-  %32 = getelementptr inbounds i8, i8* getelementptr inbounds ([4096 x i8], [4096 x i8]* @KvM3, i64 0, i64 0), i64 %31
+  %32 = getelementptr inbounds i8, i8* getelementptr inbounds ([4096 x i8], [4096 x i8]* @BFAd, i64 0, i64 0), i64 %31
   store i8 %29, i8* %32
   %33 = load i32, i32* %3
   %34 = add nsw i32 %33, 1
@@ -50,10 +50,10 @@ define dso_local void @oF(i8* %0) {
 38:
   %39 = load i32, i32* %3
   %40 = sext i32 %39 to i64
-  %41 = getelementptr inbounds i8, i8* getelementptr inbounds ([4096 x i8], [4096 x i8]* @KvM3, i64 0, i64 0), i64 %40
+  %41 = getelementptr inbounds i8, i8* getelementptr inbounds ([4096 x i8], [4096 x i8]* @BFAd, i64 0, i64 0), i64 %40
   store i8 0, i8* %41
   %42 = load i8*, i8** %2
-  %43 = call i8* @strcpy(i8* %42, i8* getelementptr inbounds ([4096 x i8], [4096 x i8]* @KvM3, i64 0, i64 0))
+  %43 = call i8* @strcpy(i8* %42, i8* getelementptr inbounds ([4096 x i8], [4096 x i8]* @BFAd, i64 0, i64 0))
   ret void
 }
 declare i8* @strcpy(i8*, i8*)

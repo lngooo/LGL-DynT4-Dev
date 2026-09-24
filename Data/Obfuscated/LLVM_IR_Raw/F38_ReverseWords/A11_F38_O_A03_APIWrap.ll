@@ -1,7 +1,7 @@
 @.str = constant [2 x i8] c" \00"
-@__const.dB4.bZK = constant [2 x i8] c" \00"
+@__const.cuBX.Ar8 = constant [2 x i8] c" \00"
 @.str.1 = constant [4 x i8] c"%s\0A\00"
-define dso_local void @dB4(i8* %0) {
+define dso_local void @cuBX(i8* %0) {
   %2 = alloca i8*
   %3 = alloca [256 x i8]
   %4 = alloca [64 x i8*]
@@ -67,7 +67,7 @@ define dso_local void @dB4(i8* %0) {
   %56 = icmp sgt i32 %55, 0
   br i1 %56, label %57, label %64
 57:
-  call void @llvm.memcpy.p0i8.p0i8.i64(i8* align 1 %59, i8* align 1 getelementptr inbounds ([2 x i8], [2 x i8]* @__const.dB4.bZK, i32 0, i32 0), i64 2, i1 false)
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* align 1 %59, i8* align 1 getelementptr inbounds ([2 x i8], [2 x i8]* @__const.cuBX.Ar8, i32 0, i32 0), i64 2, i1 false)
   %60 = load i8*, i8** %2
   %61 = getelementptr inbounds [2 x i8], [2 x i8]* %8, i64 0, i64 0
   %62 = call i8* @strcat(i8* %60, i8* %61)
@@ -140,7 +140,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   br label %15
 40:
   %41 = getelementptr inbounds [512 x i8], [512 x i8]* %6, i64 0, i64 0
-  call void @dB4(i8* %41)
+  call void @cuBX(i8* %41)
   %42 = getelementptr inbounds [512 x i8], [512 x i8]* %6, i64 0, i64 0
   %43 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.1, i64 0, i64 0), i8* %42)
   store i32 0, i32* %3

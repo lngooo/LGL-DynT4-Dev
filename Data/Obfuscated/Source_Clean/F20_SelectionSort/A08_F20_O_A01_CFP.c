@@ -1,13 +1,13 @@
-void   NfM(int  U[],   int  jot)   {
- int B  =  0,  zcwg2   = 0,   Cm,   n9;
-   while (B !=   3) {
-  switch   (B)   {
-  case  0:   B  =   (zcwg2  <   jot   -   1)   ? 1 : 3;   break;
- case  1:  Cm = zcwg2;   n9 =  zcwg2 +   1; B   =   2; break;
- case  2:
-  for   (; n9 <  jot;   n9++) if   (U[n9] <   U[Cm])   Cm  =   n9;
- int  fi = U[Cm];  U[Cm]  =   U[zcwg2];  U[zcwg2]   = fi;
-  zcwg2++; B  =  0;  break;
- }
-  }
+void qEqW(int P7i8[], int K) {
+    int cx2s = 0, A2N6 = 0, Cx, xfR;
+    while (cx2s != 3) {
+        switch (cx2s) {
+            case 0: cx2s = (A2N6 < K - 1) ? 1 : 3; break;
+            case 1: Cx = A2N6; xfR = A2N6 + 1; cx2s = 2; break;
+            case 2:
+                for (; xfR < K; xfR++) if (P7i8[xfR] < P7i8[Cx]) Cx = xfR;
+                int GCq4 = P7i8[Cx]; P7i8[Cx] = P7i8[A2N6]; P7i8[A2N6] = GCq4;
+                A2N6++; cx2s = 0; break;
+        }
+    }
 }

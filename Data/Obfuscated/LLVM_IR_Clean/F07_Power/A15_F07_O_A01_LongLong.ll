@@ -1,4 +1,4 @@
-define dso_local i32 @ufMT3(i32 %0, i32 %1) {
+define dso_local i32 @Yv5R(i32 %0, i32 %1) {
   %3 = alloca i32
   %4 = alloca i32
   %5 = alloca i64

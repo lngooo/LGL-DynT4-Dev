@@ -5,33 +5,31 @@
  * Implementation Logic: Math
  * Input Format: <data_string> <key_string>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
 
-void S(char *iV,  char   *Q)   {
- int  vI = 0;   while(Q[vI])  vI++;
-  for(int J4=0;   iV[J4];  J4++) {
-   double V =  sin(0.0);
-  iV[J4]   =   (char)((unsigned   char)iV[J4] ^ (unsigned   char)Q[J4   % vI]);
- }
+void aaK(char *oDl, char *rB) {
+    int C = 0; while(rB[C]) C++;
+    for(int Qj2o=0; oDl[Qj2o]; Qj2o++) {
+        double n = sin(0.0);
+        oDl[Qj2o] = (char)((unsigned char)oDl[Qj2o] ^ (unsigned char)rB[Qj2o % C]);
+    }
 }
 
-int main(int argc, char   *argv[])   {
-  if (argc  < 3) return  0;
-  char   *iV =   argv[1];
-   char  *Q  = argv[2];
-   int  H =   0;
-   while (iV[H])  H++;
+int main(int YA, char *a[]) {
+    if (YA < 3) return 0;
+    char *oDl = a[1];
+    char *rB = a[2];
+    int sTf = 0;
+    while (oDl[sTf]) sTf++;
 
-  S(iV,  Q);
+    aaK(oDl, rB);
 
-  for   (int J4  =   0;   J4  <   H;   J4++)  {
-   printf("%02x",  (unsigned  char)iV[J4]);
-  }
-  printf("\n");
- return  0;
+    for (int Qj2o = 0; Qj2o < sTf; Qj2o++) {
+        printf("%02x", (unsigned char)oDl[Qj2o]);
+    }
+    printf("\n");
+    return 0;
 }

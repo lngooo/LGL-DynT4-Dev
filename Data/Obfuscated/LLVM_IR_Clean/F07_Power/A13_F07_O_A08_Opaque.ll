@@ -1,4 +1,4 @@
-define dso_local i32 @n(i32 %0, i32 %1) {
+define dso_local i32 @z(i32 %0, i32 %1) {
   %3 = alloca i32
   %4 = alloca i32
   %5 = alloca i32
@@ -16,7 +16,7 @@ define dso_local i32 @n(i32 %0, i32 %1) {
   %13 = load i32, i32* %4
   %14 = load i32, i32* %5
   %15 = sdiv i32 %14, 2
-  %16 = call i32 @n(i32 %13, i32 %15)
+  %16 = call i32 @z(i32 %13, i32 %15)
   store i32 %16, i32* %6
   %17 = load i32, i32* %5
   %18 = srem i32 %17, 2

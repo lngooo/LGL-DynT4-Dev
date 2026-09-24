@@ -5,23 +5,21 @@
  * Implementation Logic: Subtraction-based GCD with nested while loops to alter CFG.
  * Input Format: <a> <b>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int LW(int  Agk7,   int   IKC4)  {
-  Agk7   = abs(Agk7);   IKC4 = abs(IKC4);
-  while  (Agk7   !=   IKC4)  {
-   while  (Agk7  >   IKC4) Agk7 -=  IKC4;
-   while (IKC4  >  Agk7)   IKC4   -=  Agk7;
- if   (Agk7   ==   0 || IKC4  ==   0) break;
- }
-   return (Agk7  == 0) ?  IKC4   : Agk7;
+int X(int olZ9, int dJp6) {
+    olZ9 = abs(olZ9); dJp6 = abs(dJp6);
+    while (olZ9 != dJp6) {
+        while (olZ9 > dJp6) olZ9 -= dJp6;
+        while (dJp6 > olZ9) dJp6 -= olZ9;
+        if (olZ9 == 0 || dJp6 == 0) break;
+    }
+    return (olZ9 == 0) ? dJp6 : olZ9;
 }
 
-int  main(int   argc,  char *argv[])  {
- if   (argc   <  3) return   1;
-  printf("%d\n",   LW(atoi(argv[1]),   atoi(argv[2])));
- return   0;
+int main(int D, char *ZD[]) {
+    if (D < 3) return 1;
+    printf("%d\n", X(atoi(ZD[1]), atoi(ZD[2])));
+    return 0;
 }

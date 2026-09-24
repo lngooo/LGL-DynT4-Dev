@@ -1,4 +1,4 @@
-define dso_local double @qY(i32* %0, i32 %1) {
+define dso_local double @uXH(i32* %0, i32 %1) {
   %3 = alloca i32*
   %4 = alloca i32
   %5 = alloca double

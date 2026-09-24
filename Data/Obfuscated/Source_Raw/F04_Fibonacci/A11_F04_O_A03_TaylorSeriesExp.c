@@ -5,28 +5,26 @@
  * Implementation Logic: TaylorSeriesExp
  * Input Format: <arg1>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-long   t(int   n3) {
- double cIa   =  sqrt(5.0);
-   double   IVs4 = (1.0 +   cIa)  /  2.0;
-  return  (long)floor(exp(n3   * log(IVs4)) /  cIa   +  0.5);
+long gZ51(int TfG) {
+    double cp = sqrt(5.0);
+    double CHHN = (1.0 + cp) / 2.0;
+    return (long)floor(exp(TfG * log(CHHN)) / cp + 0.5);
 }
 
-int  main(int   argc,  char *argv[])   {
-  if (argc   <  2)  {
- return   1;
-  }
- int n3  =  atoi(argv[1]);
-   if (n3 <   0)  {
-   printf("0\n");
-   return   0;
-   }
-   long mtYf  = t(n3);
-   printf("%ld\n", mtYf);
-  return  0;
+int main(int xx, char *yAX[]) {
+    if (xx < 2) {
+        return 1;
+    }
+    int TfG = atoi(yAX[1]);
+    if (TfG < 0) {
+        printf("0\n");
+        return 0;
+    }
+    long RMd = gZ51(TfG);
+    printf("%ld\n", RMd);
+    return 0;
 }

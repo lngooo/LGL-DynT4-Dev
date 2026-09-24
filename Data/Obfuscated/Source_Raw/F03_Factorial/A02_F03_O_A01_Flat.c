@@ -5,26 +5,24 @@
  * Implementation Logic: Control flow flattening using switch-case derived from A01.
  * Input Format: <n>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-long long q(int tQ) {
- if   (tQ   <  0)  return  0;
-  long long dD  =   1;
- int wL   =   1,   VG   =   0;
-  while   (VG !=   2)  {
- switch   (VG)   {
-   case 0:   VG  =  (wL   <= tQ) ?  1  : 2; break;
-  case   1:   dD *=   wL; wL++;  VG  = 0;  break;
-   }
-  }
-  return   dD;
+long long jed(int Yt) {
+    if (Yt < 0) return 0;
+    long long ChD = 1;
+    int Sz8 = 1, GIF = 0;
+    while (GIF != 2) {
+        switch (GIF) {
+            case 0: GIF = (Sz8 <= Yt) ? 1 : 2; break;
+            case 1: ChD *= Sz8; Sz8++; GIF = 0; break;
+        }
+    }
+    return ChD;
 }
 
-int   main(int argc,  char *argv[]) {
-   if (argc <  2) return 1;
- printf("%lld\n",  q(atoi(argv[1])));
-   return  0;
+int main(int fMc4, char *VuMq[]) {
+    if (fMc4 < 2) return 1;
+    printf("%lld\n", jed(atoi(VuMq[1])));
+    return 0;
 }

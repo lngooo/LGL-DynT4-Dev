@@ -4,31 +4,29 @@
  * File: A13_F11_O_A01_VarSplit.c
  * Implementation Logic: Mid variable split into two components.
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int  eg(int  Lir[],   int y, int  aSUi9)   {
-  int   af   = 0, QY = y -   1;
- while  (af   <=   QY) {
- int   zDrg1 =  af   /  2;
- int   pEL9   =  QY   /  2;
-   int   cSp1   =  (af %  2 ==   1 && QY   % 2   ==   1)  ?  zDrg1 +  pEL9 +   1  :   zDrg1 +  pEL9;
-   if   (Lir[cSp1]   ==   aSUi9)   return  cSp1;
-  if   (Lir[cSp1] <  aSUi9)  af   = cSp1  +  1;
- else  QY   = cSp1 -  1;
- }
-  return   -1;
+int w03w(int YE4M[], int G, int Ck) {
+    int eG = 0, njl = G - 1;
+    while (eG <= njl) {
+        int xM = eG / 2;
+        int Q = njl / 2;
+        int AZ = (eG % 2 == 1 && njl % 2 == 1) ? xM + Q + 1 : xM + Q;
+        if (YE4M[AZ] == Ck) return AZ;
+        if (YE4M[AZ] < Ck) eG = AZ + 1;
+        else njl = AZ - 1;
+    }
+    return -1;
 }
 
-int main(int argc,   char *argv[]) {
- if   (argc  <  3)   return 1;
- int  aSUi9   =   atoi(argv[1]);
-  int y  =   argc  - 2;
-   int  *Lir  =   (int*)malloc(y *   sizeof(int));
- for(int   oZmk1=0;   oZmk1<y; oZmk1++) Lir[oZmk1]   = atoi(argv[oZmk1+2]);
-  printf("%d\n",   eg(Lir,  y,  aSUi9));
-   free(Lir);
- return   0;
+int main(int UhE, char *EnLk[]) {
+    if (UhE < 3) return 1;
+    int Ck = atoi(EnLk[1]);
+    int G = UhE - 2;
+    int *YE4M = (int*)malloc(G * sizeof(int));
+    for(int bpci=0; bpci<G; bpci++) YE4M[bpci] = atoi(EnLk[bpci+2]);
+    printf("%d\n", w03w(YE4M, G, Ck));
+    free(YE4M);
+    return 0;
 }

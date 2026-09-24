@@ -1,13 +1,13 @@
-void  kj(const char *j,   char  *d)   {
- char *E  =  (char*)j;
-   int   W =  0;
-J1:
- if   (!*E) return;
-  char   NqX = *E;
-   int   DrtD =   1;
-   while  (*(E +   DrtD)   ==  NqX) DrtD++;
-  d[W++]  =  NqX;
- W   += sprintf(d   +  W, "%d", DrtD);
- E +=   DrtD;
-  goto   J1;
+void R(const char *Ly, char *XkX8) {
+    char *p = (char*)Ly;
+    int IJz = 0;
+OSV:
+    if (!*p) return;
+    char Q = *p;
+    int IIaj = 1;
+    while (*(p + IIaj) == Q) IIaj++;
+    XkX8[IJz++] = Q;
+    IJz += sprintf(XkX8 + IJz, "%d", IIaj);
+    p += IIaj;
+    goto OSV;
 }

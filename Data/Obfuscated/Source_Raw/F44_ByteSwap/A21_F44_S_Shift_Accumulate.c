@@ -5,24 +5,22 @@
  * Implementation Logic: Iterative shift-right and shift-left accumulation to reverse byte order.
  * Input Format: <uint32_t>
  */
-
-
 #include <stdio.h>
 #include <stdint.h>
 #include <stdlib.h>
 
-uint32_t GMlg(uint32_t   yYp) {
- uint32_t  QM = 0;
- for   (int   yptE =   0; yptE   <   4;  yptE++) {
-  QM =   (QM   << 8)   |  (yYp  & 0xFF);
- yYp  >>=   8;
-   }
- return QM;
+uint32_t UMZ(uint32_t qEJB) {
+    uint32_t inDy = 0;
+    for (int a = 0; a < 4; a++) {
+        inDy = (inDy << 8) | (qEJB & 0xFF);
+        qEJB >>= 8;
+    }
+    return inDy;
 }
 
-int main(int  argc,  char* argv[])   {
-   if  (argc <  2)   return   0;
-  uint32_t   lOb =   (uint32_t)strtoul(argv[1],  NULL,   10);
-  printf("%u\n",   GMlg(lOb));
- return 0;
+int main(int tDq, char* G[]) {
+    if (tDq < 2) return 0;
+    uint32_t C0 = (uint32_t)strtoul(G[1], NULL, 10);
+    printf("%u\n", UMZ(C0));
+    return 0;
 }

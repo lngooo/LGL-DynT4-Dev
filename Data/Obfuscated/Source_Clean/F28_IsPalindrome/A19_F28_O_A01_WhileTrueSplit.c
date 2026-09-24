@@ -1,11 +1,11 @@
-int  J(char *sjC1)  {
-   int   sU9 = 0;
- int  kQmH  = 0;   while  (sjC1[kQmH])   kQmH++;
-   int oaU  = kQmH -  1;
-   while(1)  {
-   if(sU9  >=   oaU)   break;
-  if(sjC1[sU9]  !=   sjC1[oaU])  return 0;
- sU9++; oaU--;
- }
-  return   1;
+int d(char *m6) {
+    int l = 0;
+    int T = 0; while (m6[T]) T++;
+    int a = T - 1;
+    while(1) {
+        if(l >= a) break;
+        if(m6[l] != m6[a]) return 0;
+        l++; a--;
+    }
+    return 1;
 }

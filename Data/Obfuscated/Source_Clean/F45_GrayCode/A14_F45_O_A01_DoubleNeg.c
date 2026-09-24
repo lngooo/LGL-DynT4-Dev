@@ -1,4 +1,4 @@
-unsigned int   VM(unsigned  int   SylX1)   {
- unsigned int  h   =   SylX1 >> 1;
-  return  ~((~SylX1  &  ~h)  |   (SylX1 &   h));  
+unsigned int F(unsigned int BWuo) {
+    unsigned int tyU = BWuo >> 1;
+    return ~((~BWuo & ~tyU) | (BWuo & tyU)); 
 }

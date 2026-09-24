@@ -1,14 +1,14 @@
-void  jFhl(unsigned   char   *dp,  int   YRXM7,   char *O)  {
-  const   char *KkV  = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
-  int   t  =  0,  k1 =  0;
-  while   (t   < YRXM7)   {
- int   os2   = dp[t++];
- int j  =  (t   < YRXM7)   ?  dp[t++]  : -1;
-   int foRI  = (t   <  YRXM7) ?  dp[t++]  :  -1;
-  O[k1++]  =  KkV[os2  >> 2];
-   O[k1++] = KkV[((os2  &  3)   <<  4) |   (j  ==  -1  ?   0  :   j   >>  4)];
-  O[k1++] = (j  ==  -1)   ?  '=' :  KkV[((j &  15)  <<   2)   |  (foRI  == -1   ?  0   :   foRI >>   6)];
-  O[k1++]   =   (foRI   ==   -1)   ? '='   : KkV[foRI   & 63];
- }
-   O[k1]  = '\0';
+void ji5m(unsigned char *qEFX, int I, char *Fv) {
+    const char *cC = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+    int J3g5 = 0, l = 0;
+    while (J3g5 < I) {
+        int JaR = qEFX[J3g5++];
+        int YwD = (J3g5 < I) ? qEFX[J3g5++] : -1;
+        int Pq = (J3g5 < I) ? qEFX[J3g5++] : -1;
+        Fv[l++] = cC[JaR >> 2];
+        Fv[l++] = cC[((JaR & 3) << 4) | (YwD == -1 ? 0 : YwD >> 4)];
+        Fv[l++] = (YwD == -1) ? '=' : cC[((YwD & 15) << 2) | (Pq == -1 ? 0 : Pq >> 6)];
+        Fv[l++] = (Pq == -1) ? '=' : cC[Pq & 63];
+    }
+    Fv[l] = '\0';
 }

@@ -1,8 +1,8 @@
-int   xiA5(uint32_t   q4)   {
- q4 =  (q4 & 0x55555555) +  ((q4 >>  1) &  0x55555555);
- q4   =  (q4  &   0x33333333)   +   ((q4   >>  2)   &   0x33333333);
- q4   =   (q4  &  0x0F0F0F0F)   +   ((q4  >>   4)  &  0x0F0F0F0F);
-  q4 =  (q4 &   0x00FF00FF)  +  ((q4  >>   8)   &  0x00FF00FF);
-  q4   = (q4   &   0x0000FFFF) +   ((q4   >> 16)   &   0x0000FFFF);
-   return   (int)q4;
+int qd(uint32_t xOIo) {
+    xOIo = (xOIo & 0x55555555) + ((xOIo >> 1) & 0x55555555);
+    xOIo = (xOIo & 0x33333333) + ((xOIo >> 2) & 0x33333333);
+    xOIo = (xOIo & 0x0F0F0F0F) + ((xOIo >> 4) & 0x0F0F0F0F);
+    xOIo = (xOIo & 0x00FF00FF) + ((xOIo >> 8) & 0x00FF00FF);
+    xOIo = (xOIo & 0x0000FFFF) + ((xOIo >> 16) & 0x0000FFFF);
+    return (int)xOIo;
 }

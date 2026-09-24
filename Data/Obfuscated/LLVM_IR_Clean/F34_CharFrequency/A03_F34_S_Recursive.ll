@@ -1,4 +1,4 @@
-define dso_local i32 @YFs(i8* %0, i8 signext %1) {
+define dso_local i32 @Xr(i8* %0, i8 signext %1) {
   %3 = alloca i32
   %4 = alloca i8*
   %5 = alloca i8
@@ -24,7 +24,7 @@ define dso_local i32 @YFs(i8* %0, i8 signext %1) {
   %20 = load i8*, i8** %4
   %21 = getelementptr inbounds i8, i8* %20, i64 1
   %22 = load i8, i8* %5
-  %23 = call i32 @YFs(i8* %21, i8 signext %22)
+  %23 = call i32 @Xr(i8* %21, i8 signext %22)
   %24 = add nsw i32 %19, %23
   store i32 %24, i32* %3
   br label %25

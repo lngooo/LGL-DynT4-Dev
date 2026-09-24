@@ -1,13 +1,13 @@
-int   YyHF5(unsigned int   yxLA)  {
-   if   (yxLA ==  0)  return 0;
- int   ygK   = 0, xNmp =  0;
-   while  (yxLA  > 0) {
-   ygK   +=   (yxLA  &  1);
-  yxLA  >>= 1;
-  if   (yxLA   > 0)   {
-   xNmp  +=   (yxLA  &   1);
-  yxLA   >>=  1;
- }
-   }
- return  (ygK  +   xNmp)   ==  1;
+int Kdxu(unsigned int J3) {
+    if (J3 == 0) return 0;
+    int BLno = 0, fO1 = 0;
+    while (J3 > 0) {
+        BLno += (J3 & 1);
+        J3 >>= 1;
+        if (J3 > 0) {
+            fO1 += (J3 & 1);
+            J3 >>= 1;
+        }
+    }
+    return (BLno + fO1) == 1;
 }

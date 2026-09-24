@@ -4,39 +4,37 @@
  * File: A03_F13_S_MiddlePivot.c
  * Implementation Logic: MiddlePivot
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-void D(int QPS[],  int  o2, int  lxu)   {
-   int kNhw5   = o2,   DkmG =  lxu;
-  int CYY  = QPS[(o2 +   lxu)   /  2];
-   while  (kNhw5  <= DkmG)  {
- while  (QPS[kNhw5] <   CYY) kNhw5++;
-  while  (QPS[DkmG]  > CYY)   DkmG--;
-   if  (kNhw5 <= DkmG) {
-   int   eGpI5  =  QPS[kNhw5];   QPS[kNhw5] =  QPS[DkmG];   QPS[DkmG]   =  eGpI5;
-  kNhw5++;  DkmG--;
- }
-  }
- if (o2 <   DkmG)   D(QPS,   o2, DkmG);
- if  (kNhw5 < lxu)  D(QPS, kNhw5,  lxu);
+void y(int q[], int ds, int YS) {
+    int dDP = ds, e = YS;
+    int QrQ2 = q[(ds + YS) / 2];
+    while (dDP <= e) {
+        while (q[dDP] < QrQ2) dDP++;
+        while (q[e] > QrQ2) e--;
+        if (dDP <= e) {
+            int gbs = q[dDP]; q[dDP] = q[e]; q[e] = gbs;
+            dDP++; e--;
+        }
+    }
+    if (ds < e) y(q, ds, e);
+    if (dDP < YS) y(q, dDP, YS);
 }
 
-int  main(int argc,  char *argv[])   {
- if  (argc   <  2)   return  0;
-  int Qmzj   =   argc -   1;
-  int *QPS =   (int  *)malloc(Qmzj   * sizeof(int));
-  for  (int  kNhw5  =   0;   kNhw5   <   Qmzj;   kNhw5++) QPS[kNhw5]   = atoi(argv[kNhw5 +   1]);
+int main(int oyGT, char *u[]) {
+    if (oyGT < 2) return 0;
+    int MIfl = oyGT - 1;
+    int *q = (int *)malloc(MIfl * sizeof(int));
+    for (int dDP = 0; dDP < MIfl; dDP++) q[dDP] = atoi(u[dDP + 1]);
 
-   D(QPS,  0,   Qmzj   -  1);
+    y(q, 0, MIfl - 1);
 
-  for  (int  kNhw5 =   0; kNhw5  <   Qmzj;   kNhw5++)  {
- printf("%d%s",  QPS[kNhw5], (kNhw5  ==  Qmzj - 1   ?  ""   :   " "));
- }
- printf("\n");
-  free(QPS);
-  return   0;
+    for (int dDP = 0; dDP < MIfl; dDP++) {
+        printf("%d%s", q[dDP], (dDP == MIfl - 1 ? "" : " "));
+    }
+    printf("\n");
+    free(q);
+    return 0;
 }

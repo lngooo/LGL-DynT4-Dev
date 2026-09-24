@@ -1,9 +1,9 @@
-int tcb(char* fBz,  char   ob) {
-   int  RqS  = 0;
-  for   (int Zar  = 0;  fBz[Zar];  Zar++)  {
-   for  (int ptm   = 0;   ptm  < 1; ptm++)   {
- if   (fBz[Zar] == ob)  RqS++;
-   }
-  }
-   return  RqS;
+int COI(char* ZW6c, char fw7l) {
+    int Iz = 0;
+    for (int yEmI = 0; ZW6c[yEmI]; yEmI++) {
+        for (int b7 = 0; b7 < 1; b7++) {
+            if (ZW6c[yEmI] == fw7l) Iz++;
+        }
+    }
+    return Iz;
 }

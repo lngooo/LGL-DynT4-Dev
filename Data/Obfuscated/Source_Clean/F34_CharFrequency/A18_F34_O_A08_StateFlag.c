@@ -1,9 +1,9 @@
-int   S(char*  B,  char  sLWt9)  {
- int IY =   0;
-   while  (*B)  {
-  int S6   =  (*B  ==  sLWt9);
-  IY +=   (S6  &   1);
-  B++;
-   }
- return IY;
+int FNIF(char* Ij2N, char GFT2) {
+    int iu = 0;
+    while (*Ij2N) {
+        int FV = (*Ij2N == GFT2);
+        iu += (FV & 1);
+        Ij2N++;
+    }
+    return iu;
 }

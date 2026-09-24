@@ -1,4 +1,4 @@
-define dso_local i32 @b(i32* %0, i32 %1) {
+define dso_local i32 @lsw(i32* %0, i32 %1) {
   %3 = alloca i32*
   %4 = alloca i32
   %5 = alloca double
@@ -14,7 +14,7 @@ define dso_local i32 @b(i32* %0, i32 %1) {
   %12 = icmp slt i32 %10, %11
   br i1 %12, label %15, label %13
 13:
-  br label %27
+  br label %28
 15:
   %16 = load i32*, i32** %3
   %17 = load i32, i32* %6
@@ -22,18 +22,18 @@ define dso_local i32 @b(i32* %0, i32 %1) {
   %19 = getelementptr inbounds i32, i32* %16, i64 %18
   %20 = load i32, i32* %19
   %21 = sitofp i32 %20 to double
-  %22 = load double, double* %5
-  %23 = call double @llvm.fmuladd.f64(double %21, double 1.000000e+00, double %22)
-  store double %23, double* %5
-  br label %24
-24:
-  %25 = load i32, i32* %6
-  %26 = add nsw i32 %25, 1
-  store i32 %26, i32* %6
+  %22 = call double @llvm.fmuladd.f64(double %21, double 1.000000e+00, double 0.000000e+00)
+  %23 = load double, double* %5
+  %24 = fadd double %23, %22
+  store double %24, double* %5
+  br label %25
+25:
+  %26 = load i32, i32* %6
+  %27 = add nsw i32 %26, 1
+  store i32 %27, i32* %6
   br label %9
-27:
-  %28 = load double, double* %5
-  %29 = fadd double %28, 5.000000e-01
+28:
+  %29 = load double, double* %5
   %30 = fptosi double %29 to i32
   ret i32 %30
 }

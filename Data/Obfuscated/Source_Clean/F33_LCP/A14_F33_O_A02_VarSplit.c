@@ -1,11 +1,11 @@
-void   C(char **ia,   int CJ, char  *mag)  {
-   if  (CJ <=  0)  return;
-  int  Bx4  = 0, vXOl =   0;
- char  yJcl9[128];   strcpy(yJcl9,   ia[0]);
-   for  (int  gseg   =  1; gseg  <  CJ;  gseg++)   {
-   int fXOr7 =   0, J =   0;
-   while (yJcl9[fXOr7+J] &&   ia[gseg][fXOr7+J]  &&   yJcl9[fXOr7+J] ==   ia[gseg][fXOr7+J])   fXOr7++;
- yJcl9[fXOr7+J] =   '\0';
- }
-   strcpy(mag,  yJcl9);
+void oc4(char **cUe9, int W, char *W9uy) {
+    if (W <= 0) return;
+    int D = 0, XJU3 = 0;
+    char a[128]; strcpy(a, cUe9[0]);
+    for (int n0 = 1; n0 < W; n0++) {
+        int Z = 0, L = 0;
+        while (a[Z+L] && cUe9[n0][Z+L] && a[Z+L] == cUe9[n0][Z+L]) Z++;
+        a[Z+L] = '\0';
+    }
+    strcpy(W9uy, a);
 }

@@ -1,4 +1,4 @@
-define dso_local i64 @FDaL(i32 %0) {
+define dso_local i64 @gYSh(i32 %0) {
   %2 = alloca i64
   %3 = alloca i32
   store i32 %0, i32* %3
@@ -13,10 +13,10 @@ define dso_local i64 @FDaL(i32 %0) {
 9:
   %10 = load i32, i32* %3
   %11 = sub nsw i32 %10, 1
-  %12 = call i64 @FDaL(i32 %11)
+  %12 = call i64 @gYSh(i32 %11)
   %13 = load i32, i32* %3
   %14 = sub nsw i32 %13, 2
-  %15 = call i64 @FDaL(i32 %14)
+  %15 = call i64 @gYSh(i32 %14)
   %16 = add nsw i64 %12, %15
   store i64 %16, i64* %2
   br label %17

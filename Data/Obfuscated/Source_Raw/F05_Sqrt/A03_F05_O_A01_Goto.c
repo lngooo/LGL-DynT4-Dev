@@ -5,26 +5,24 @@
  * Implementation Logic: Newton's method using goto to disrupt structured control flow.
  * Input Format: <n>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int p3(int vrH)  {
-  if  (vrH <   0) return   -1;
-   if  (vrH < 2)   return   vrH;
-   long xDUp = vrH, zY =  (xDUp   + 1)  /  2;
-yv:
-  if (!(zY <   xDUp))   goto p;
-   xDUp  =  zY;
- zY  =  (xDUp   + vrH   /  xDUp) / 2;
-  goto  yv;
-p:
- return  (int)xDUp;
+int QwT(int J) {
+    if (J < 0) return -1;
+    if (J < 2) return J;
+    long t2k = J, Yx = (t2k + 1) / 2;
+hm:
+    if (!(Yx < t2k)) goto pY;
+    t2k = Yx;
+    Yx = (t2k + J / t2k) / 2;
+    goto hm;
+pY:
+    return (int)t2k;
 }
 
-int  main(int argc, char   *argv[])   {
-   if  (argc   <   2)  return  1;
-  printf("%d\n",   p3(atoi(argv[1])));
-   return 0;
+int main(int bxJK, char *DZJ[]) {
+    if (bxJK < 2) return 1;
+    printf("%d\n", QwT(atoi(DZJ[1])));
+    return 0;
 }

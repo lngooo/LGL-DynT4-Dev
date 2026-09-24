@@ -1,4 +1,4 @@
-define dso_local i32 @g(i32 %0, i32 %1) {
+define dso_local i32 @rULW(i32 %0, i32 %1) {
   %3 = alloca i32
   %4 = alloca i32
   %5 = alloca [2 x i32]

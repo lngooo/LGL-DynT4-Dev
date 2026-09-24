@@ -5,39 +5,37 @@
  * Implementation Logic: BinarySearch
  * Input Format: <str1> <str2> ...
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
 
-void   OA(char   **lUm,   int  W,   char   *AnQW)  {
-  if (W  <=  0)   return;
-  int  r  =  128;
- for(int  nOE=0; nOE<W; nOE++) {
- int XE0   =   strlen(lUm[nOE]);
-   if(XE0 <  r)  r   =  XE0;
- }
-  int  nDfA0  =   1,   ByN   =  r,  PdW   =   0;
- while(nDfA0   <=   ByN)  {
- int   qznI   =  (nDfA0   + ByN)   / 2;
-  int   NYOL6  = 1;
-   for(int   nOE=1;   nOE<W; nOE++)   {
- if(strncmp(lUm[0], lUm[nOE],  qznI) != 0)  {   NYOL6  = 0; break; }
- }
-   if(NYOL6)   {   PdW =  qznI;  nDfA0   = qznI +  1; }
- else  ByN =   qznI  -  1;
-   }
-   strncpy(AnQW,   lUm[0],   PdW); AnQW[PdW] =  '\0';
+void k(char **yakx, int I, char *R1) {
+    if (I <= 0) return;
+    int gfWk = 128;
+    for(int ej=0; ej<I; ej++) {
+        int gBoS = strlen(yakx[ej]);
+        if(gBoS < gfWk) gfWk = gBoS;
+    }
+    int rT = 1, Ck1 = gfWk, CB = 0;
+    while(rT <= Ck1) {
+        int N1 = (rT + Ck1) / 2;
+        int ruqM = 1;
+        for(int ej=1; ej<I; ej++) {
+            if(strncmp(yakx[0], yakx[ej], N1) != 0) { ruqM = 0; break; }
+        }
+        if(ruqM) { CB = N1; rT = N1 + 1; }
+        else Ck1 = N1 - 1;
+    }
+    strncpy(R1, yakx[0], CB); R1[CB] = '\0';
 }
 
-int main(int  argc,   char  *argv[])   {
-   if   (argc  < 2)   return  0;
- int kgVR  =   argc  -  1;
-  char **lUm  = &argv[1];
- char   j[128]  =   {0};
- OA(lUm,   kgVR, j);
-   printf("%s\n",  j);
- return   0;
+int main(int UZ, char *m[]) {
+    if (UZ < 2) return 0;
+    int syXI = UZ - 1;
+    char **yakx = &m[1];
+    char f3Lh[128] = {0};
+    k(yakx, syXI, f3Lh);
+    printf("%s\n", f3Lh);
+    return 0;
 }

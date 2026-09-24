@@ -1,6 +1,6 @@
-double IZH(int k[],  int  q)  {
-   double  Iila  =  0;
-   int ztFN2 = -1;
- while (++ztFN2 < q)   Iila   +=  k[ztFN2];
-  return Iila  /   q;
+double lK(int iS[], int WcdM) {
+    double VQ = 0;
+    int xNA = -1;
+    while (++xNA < WcdM) VQ += iS[xNA];
+    return VQ / WcdM;
 }

@@ -1,11 +1,11 @@
-int  ZE(char* aDTy) {
- int IUp4   =   0;
- while (*aDTy) {
- while (*aDTy  &&  isspace(*aDTy))   aDTy++;
-  if (*aDTy) {
-   IUp4++;
- while   (*aDTy  &&   !isspace(*aDTy))   aDTy++;
-  }
- }
-  return IUp4;
+int A9(char* p) {
+    int O7 = 0;
+    while (*p) {
+        while (*p && isspace(*p)) p++;
+        if (*p) {
+            O7++;
+            while (*p && !isspace(*p)) p++;
+        }
+    }
+    return O7;
 }

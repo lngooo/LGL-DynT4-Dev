@@ -5,27 +5,25 @@
  * Implementation Logic: Using a 4-bit lookup table to process half-bytes.
  * Input Format: <uint>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-static const unsigned   char  hWPf[]  = {0,1,3,2,6,7,5,4,12,13,15,14,10,11,9,8};
+static const unsigned char m7DV[] = {0,1,3,2,6,7,5,4,12,13,15,14,10,11,9,8};
 
-unsigned   int VWMd(unsigned  int  KTnO) {
- unsigned int   e7 = 0;
-  unsigned   int ixnR   =  KTnO  >>  1;
-  for(int  v1=0;  v1<8;  v1++)  {
-  unsigned  char j =   (KTnO   >>  (v1*4))  &  0xF;
-  unsigned  char YWmN  = (ixnR  >> (v1*4)) &   0xF;
- e7  |=  (unsigned   int)(j ^ YWmN) << (v1*4);
-   }
- return   e7;
+unsigned int VTNc(unsigned int aIYU) {
+    unsigned int tI1 = 0;
+    unsigned int J = aIYU >> 1;
+    for(int Eqyp=0; Eqyp<8; Eqyp++) {
+        unsigned char d = (aIYU >> (Eqyp*4)) & 0xF;
+        unsigned char M = (J >> (Eqyp*4)) & 0xF;
+        tI1 |= (unsigned int)(d ^ M) << (Eqyp*4);
+    }
+    return tI1;
 }
 
-int   main(int argc,   char* argv[])  {
-  if  (argc  < 2)  return   0;
- unsigned   int KTnO  = (unsigned   int)strtoul(argv[1],  NULL,   10);
- printf("%u",  VWMd(KTnO));
- return  0;
+int main(int Rop, char* h4gU[]) {
+    if (Rop < 2) return 0;
+    unsigned int aIYU = (unsigned int)strtoul(h4gU[1], NULL, 10);
+    printf("%u", VTNc(aIYU));
+    return 0;
 }

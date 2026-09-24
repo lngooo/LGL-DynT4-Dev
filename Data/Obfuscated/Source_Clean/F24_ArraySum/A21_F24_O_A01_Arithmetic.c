@@ -1,8 +1,8 @@
-int nqE(int  pt6[],   int  qn6) {
-  int  I6 = 0;
-  for  (int   Fgp3  = 0;   Fgp3   < qn6; Fgp3++)  {
- int   Jsjf  =   pt6[Fgp3];
- I6 =   (I6 -  (-Jsjf));
- }
-   return  I6;
+int nqgv(int D[], int WpWq) {
+    int sSC = 0;
+    for (int YCS = 0; YCS < WpWq; YCS++) {
+        int KrM = D[YCS];
+        sSC = (sSC - (-KrM));
+    }
+    return sSC;
 }

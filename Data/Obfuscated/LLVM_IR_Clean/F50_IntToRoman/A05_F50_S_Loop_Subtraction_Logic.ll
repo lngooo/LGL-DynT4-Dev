@@ -11,7 +11,7 @@
 @.str.10 = constant [2 x i8] c"V\00"
 @.str.11 = constant [3 x i8] c"IV\00"
 @.str.12 = constant [2 x i8] c"I\00"
-define dso_local void @nao2(i32 %0, i8* %1) {
+define dso_local void @Z7r(i32 %0, i8* %1) {
   %3 = alloca i32
   %4 = alloca i8*
   store i32 %0, i32* %3

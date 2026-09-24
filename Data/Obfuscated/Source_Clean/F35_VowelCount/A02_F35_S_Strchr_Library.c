@@ -1,9 +1,9 @@
-int   Y(const  char*  sn6) {
-  int   WwR3 =  0;
-   const char*  r6 =  "aeiouAEIOU";
-  while (*sn6)   {
- if (strchr(r6, *sn6))   WwR3++;
-   sn6++;
- }
-   return WwR3;
+int ONh(const char* h) {
+    int MEkd = 0;
+    const char* H1 = "aeiouAEIOU";
+    while (*h) {
+        if (strchr(H1, *h)) MEkd++;
+        h++;
+    }
+    return MEkd;
 }

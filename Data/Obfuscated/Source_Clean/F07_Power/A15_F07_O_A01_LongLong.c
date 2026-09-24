@@ -1,6 +1,6 @@
-int   ufMT3(int  Os9,  int  exp) {
- long  long MeA =   1;
- long   long  MSJi  =   Os9;
- for  (int jU0  = 0; jU0 <   exp;   jU0++)  MeA *=   MSJi;
-   return (int)MeA;
+int Yv5R(int c, int exp) {
+    long long O = 1;
+    long long bh72 = c;
+    for (int CD = 0; CD < exp; CD++) O *= bh72;
+    return (int)O;
 }

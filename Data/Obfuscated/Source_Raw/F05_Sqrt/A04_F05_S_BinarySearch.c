@@ -5,29 +5,27 @@
  * Implementation Logic: Binary search approach in the range [0, n] (Seed 2).
  * Input Format: <n>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int rfyc(int   q)  {
-  if  (q  < 0)  return  -1;
-  if  (q  <   2) return q;
-   long  xe3   =  0,  ON1  = q,   JXYu  =   0;
-  while (xe3   <=   ON1) {
- long V  =  xe3   +  (ON1 -   xe3)  / 2;
- if  (V   *  V  <= q)   {
-  JXYu   =   V;
- xe3 = V  +  1;
-   }  else {
-  ON1   =  V  -   1;
-   }
-  }
- return (int)JXYu;
+int N4(int e) {
+    if (e < 0) return -1;
+    if (e < 2) return e;
+    long zTU = 0, HAXA = e, i = 0;
+    while (zTU <= HAXA) {
+        long PeC = zTU + (HAXA - zTU) / 2;
+        if (PeC * PeC <= e) {
+            i = PeC;
+            zTU = PeC + 1;
+        } else {
+            HAXA = PeC - 1;
+        }
+    }
+    return (int)i;
 }
 
-int main(int argc,  char  *argv[])   {
-   if  (argc <   2)   return  1;
-  printf("%d\n", rfyc(atoi(argv[1])));
-  return   0;
+int main(int RHwi, char *X9[]) {
+    if (RHwi < 2) return 1;
+    printf("%d\n", N4(atoi(X9[1])));
+    return 0;
 }

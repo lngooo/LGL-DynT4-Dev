@@ -4,23 +4,21 @@
  * File: A20_F08_O_A10_Struct.c
  * Implementation Logic: Wrapping input and sign in a struct.
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-struct rOEo   { int kaml;   int  hy1;   };
+struct yiA { int P4; int OZ; };
 
-int h(int  IrAg)   {
-  struct  rOEo   OKsR;
-  OKsR.kaml   = IrAg;
-   OKsR.hy1  =   (IrAg  < 0);
- if  (OKsR.hy1)  return   -OKsR.kaml;
-  return   OKsR.kaml;
+int y(int EIY) {
+    struct yiA w6KG;
+    w6KG.P4 = EIY;
+    w6KG.OZ = (EIY < 0);
+    if (w6KG.OZ) return -w6KG.P4;
+    return w6KG.P4;
 }
 
-int  main(int argc,   char   *argv[]) {
-  if  (argc <   2) return 1;
-  printf("%d\n",  h(atoi(argv[1])));
-   return 0;
+int main(int yrl, char *u[]) {
+    if (yrl < 2) return 1;
+    printf("%d\n", y(atoi(u[1])));
+    return 0;
 }

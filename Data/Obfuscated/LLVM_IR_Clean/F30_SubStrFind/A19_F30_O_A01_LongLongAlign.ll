@@ -1,4 +1,4 @@
-define dso_local i32 @Cpfg(i8* %0, i8* %1) {
+define dso_local i32 @oA(i8* %0, i8* %1) {
   %3 = alloca i32
   %4 = alloca i8*
   %5 = alloca i8*

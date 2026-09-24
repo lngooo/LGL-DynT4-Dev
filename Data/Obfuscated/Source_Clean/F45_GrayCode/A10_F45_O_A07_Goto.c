@@ -1,11 +1,17 @@
-unsigned int   EXU(unsigned int i)   {
- unsigned   int  NewX4   =   0;
- int V =   0;
-tUSW2:
- if  (V   >=   32)  goto   KOkd4;
- if  (((i  >>   V)  &   1) != ((i >> (V+1))   &  1))   NewX4 |=   (1U <<   V);
- V++;
- goto  tUSW2;
-KOkd4:
-  return   NewX4;
+unsigned int GC(unsigned int aj9) {
+    unsigned int jcHw = 0;
+    int F = 0;
+Su5:
+    if (F >= 32) goto Do;
+    {
+        unsigned int OmA = (aj9 >> F) & 1U;
+        unsigned int k87 = (F == 31) ? 0U : ((aj9 >> (F + 1)) & 1U);
+        if (OmA != k87) {
+            jcHw |= (1U << F);
+        }
+    }
+    F++;
+    goto Su5;
+Do:
+    return jcHw;
 }

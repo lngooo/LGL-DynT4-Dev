@@ -1,6 +1,6 @@
-int FsTu(const  char   *U,  const char   *tLB) {
-   while (!(*U ^ *tLB)  &&   *U)  {
-  U++;   tLB++;
-   }
- return   (int)((unsigned   char)*U   - (unsigned char)*tLB);
+int NKf(const char *oC0, const char *p) {
+    while (!(*oC0 ^ *p) && *oC0) {
+        oC0++; p++;
+    }
+    return (int)((unsigned char)*oC0 - (unsigned char)*p);
 }

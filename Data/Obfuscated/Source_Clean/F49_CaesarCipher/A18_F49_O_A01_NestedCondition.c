@@ -1,12 +1,12 @@
-void  dXOJ(char  *YI,  int OZsp) {
+void Yq8A(char *ruMF, int gH) {
 
-   int   hipq  =   (OZsp  % 26   +  26)   %  26;
-   for(int   W=0;   YI[W]; W++) {
-  if(YI[W]  >= 'A')   {
- if(YI[W] <=  'Z')   YI[W]   =  (YI[W]-'A'+hipq)%26+'A';
- else  if(YI[W]  >= 'a')  {
-   if(YI[W] <=   'z')  YI[W] =   (YI[W]-'a'+hipq)%26+'a';
- }
-   }
-   }
+    int LS = (gH % 26 + 26) % 26;
+    for(int VK1I=0; ruMF[VK1I]; VK1I++) {
+        if(ruMF[VK1I] >= 'A') {
+            if(ruMF[VK1I] <= 'Z') ruMF[VK1I] = (ruMF[VK1I]-'A'+LS)%26+'A';
+            else if(ruMF[VK1I] >= 'a') {
+                if(ruMF[VK1I] <= 'z') ruMF[VK1I] = (ruMF[VK1I]-'a'+LS)%26+'a';
+            }
+        }
+    }
 }

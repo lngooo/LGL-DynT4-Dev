@@ -1,4 +1,4 @@
-define dso_local i32 @F(i32 %0) {
+define dso_local i32 @cJ(i32 %0) {
   %2 = alloca i32
   %3 = alloca float
   %4 = alloca double

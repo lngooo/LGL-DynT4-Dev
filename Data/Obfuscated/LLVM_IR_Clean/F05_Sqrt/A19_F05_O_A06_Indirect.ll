@@ -1,11 +1,11 @@
-define dso_local i32 @OOO(i32 %0) {
+define dso_local i32 @usP(i32 %0) {
   %2 = alloca i32
   store i32 %0, i32* %2
   %3 = load i32, i32* %2
   %4 = lshr i32 %3, 1
   ret i32 %4
 }
-define dso_local i32 @K(i32 %0) {
+define dso_local i32 @P(i32 %0) {
   %2 = alloca i32
   %3 = alloca i32
   %4 = alloca i32
@@ -21,7 +21,7 @@ define dso_local i32 @K(i32 %0) {
 10:
   store i32 0, i32* %4
   store i32 1073741824, i32* %5
-  store i32 (i32)* @OOO, i32 (i32)** %6
+  store i32 (i32)* @usP, i32 (i32)** %6
   br label %14
 14:
   %15 = load i32, i32* %5

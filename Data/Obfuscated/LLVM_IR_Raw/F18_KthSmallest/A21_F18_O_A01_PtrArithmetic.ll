@@ -1,5 +1,5 @@
 @.str = constant [4 x i8] c"%d\0A\00"
-define dso_local i32 @NmDY(i32* %0, i32 %1, i32 %2, i32 %3) {
+define dso_local i32 @XSYQ(i32* %0, i32 %1, i32 %2, i32 %3) {
   %5 = alloca i32
   %6 = alloca i32*
   %7 = alloca i32
@@ -133,7 +133,7 @@ define dso_local i32 @NmDY(i32* %0, i32 %1, i32 %2, i32 %3) {
   %112 = load i32, i32* %11
   %113 = sub nsw i32 %112, 1
   %114 = load i32, i32* %9
-  %115 = call i32 @NmDY(i32* %110, i32 %111, i32 %113, i32 %114)
+  %115 = call i32 @XSYQ(i32* %110, i32 %111, i32 %113, i32 %114)
   br label %123
 116:
   %117 = load i32*, i32** %6
@@ -141,7 +141,7 @@ define dso_local i32 @NmDY(i32* %0, i32 %1, i32 %2, i32 %3) {
   %119 = add nsw i32 %118, 1
   %120 = load i32, i32* %8
   %121 = load i32, i32* %9
-  %122 = call i32 @NmDY(i32* %117, i32 %119, i32 %120, i32 %121)
+  %122 = call i32 @XSYQ(i32* %117, i32 %119, i32 %120, i32 %121)
   br label %123
 123:
   %124 = phi i32 [ %115, %109 ], [ %122, %116 ]
@@ -219,7 +219,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   %54 = load i32, i32* %7
   %55 = sub nsw i32 %54, 1
   %56 = load i32, i32* %6
-  %57 = call i32 @NmDY(i32* %53, i32 0, i32 %55, i32 %56)
+  %57 = call i32 @XSYQ(i32* %53, i32 0, i32 %55, i32 %56)
   store i32 %57, i32* %10
   %58 = load i32, i32* %10
   %59 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str, i64 0, i64 0), i32 %58)

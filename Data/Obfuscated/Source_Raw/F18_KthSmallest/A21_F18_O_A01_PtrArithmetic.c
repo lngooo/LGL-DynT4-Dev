@@ -4,37 +4,35 @@
  * File: A21_F18_O_A01_PtrArithmetic.c
  * Implementation Logic: PtrArithmetic
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-int   NmDY(int  ffB[], int zBhk4,  int WC2,   int GfY)   {
-   if  (zBhk4   > WC2)   return  -1;
-  int  k   =   *(ffB   + WC2), Sap   = zBhk4;
-   for (int  djD = zBhk4;   djD   <   WC2; djD++)   {
-   if   (*(ffB  +   djD) <= k)  {
-  int L2   = *(ffB +  Sap); *(ffB  +  Sap)   = *(ffB   +  djD); *(ffB + djD) = L2;
-  Sap++;
-   }
-  }
- int  L2  =  *(ffB  +  Sap);  *(ffB +   Sap) =   *(ffB   +   WC2);   *(ffB   + WC2) = L2;
- if (Sap   ==  GfY  -  1)  return *(ffB  +   Sap);
-   return (Sap >   GfY - 1)  ? NmDY(ffB,  zBhk4,  Sap  -   1,  GfY) :   NmDY(ffB,   Sap +  1,   WC2,  GfY);
+int XSYQ(int X[], int PyrO, int xahh, int h) {
+    if (PyrO > xahh) return -1;
+    int PQ6G = *(X + xahh), bL = PyrO;
+    for (int rSVg = PyrO; rSVg < xahh; rSVg++) {
+        if (*(X + rSVg) <= PQ6G) {
+            int yE = *(X + bL); *(X + bL) = *(X + rSVg); *(X + rSVg) = yE;
+            bL++;
+        }
+    }
+    int yE = *(X + bL); *(X + bL) = *(X + xahh); *(X + xahh) = yE;
+    if (bL == h - 1) return *(X + bL);
+    return (bL > h - 1) ? XSYQ(X, PyrO, bL - 1, h) : XSYQ(X, bL + 1, xahh, h);
 }
 
-int   main(int argc,  char  *argv[])  {
-  if (argc <  3)  return   0;
-  int  GfY  =   atoi(argv[1]);
-  int DK   =   argc  -  2;
- int  *ffB  = (int  *)malloc(DK  *   sizeof(int));
-  for  (int   Sap   =   0; Sap  < DK;   Sap++)  ffB[Sap]   =   atoi(argv[Sap   + 2]);
+int main(int tKig, char *eT6[]) {
+    if (tKig < 3) return 0;
+    int h = atoi(eT6[1]);
+    int z0 = tKig - 2;
+    int *X = (int *)malloc(z0 * sizeof(int));
+    for (int bL = 0; bL < z0; bL++) X[bL] = atoi(eT6[bL + 2]);
 
-   // 假设   K  是从 1 开始的 (1st  smallest)
-   int  uwZu8  = NmDY(ffB, 0,   DK  - 1,  GfY);
+    // 假设 K 是从 1 开始的 (1st smallest)
+    int z = XSYQ(X, 0, z0 - 1, h);
 
-  printf("%d\n",  uwZu8);
-  free(ffB);
-   return  0;
+    printf("%d\n", z);
+    free(X);
+    return 0;
 }

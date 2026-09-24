@@ -11,7 +11,7 @@ define dso_local i32 @NewtonRoot(i32 %0) {
   br i1 %8, label %9, label %10
 9:
   store i32 -1, i32* %2
-  br label %65
+  br label %77
 10:
   %11 = load i32, i32* %3
   %12 = icmp slt i32 %11, 2
@@ -19,7 +19,7 @@ define dso_local i32 @NewtonRoot(i32 %0) {
 13:
   %14 = load i32, i32* %3
   store i32 %14, i32* %2
-  br label %65
+  br label %77
 15:
   %17 = load i32, i32* %3
   %18 = sitofp i32 %17 to float
@@ -36,7 +36,7 @@ define dso_local i32 @NewtonRoot(i32 %0) {
   %29 = fptosi float %28 to i64
   store i64 %29, i64* %6
   %30 = load i64, i64* %6
-  %31 = icmp eq i64 %30, 0
+  %31 = icmp sle i64 %30, 0
   br i1 %31, label %32, label %33
 32:
   store i64 1, i64* %6
@@ -58,28 +58,45 @@ define dso_local i32 @NewtonRoot(i32 %0) {
   %46 = add nsw i64 %41, %45
   %47 = sdiv i64 %46, 2
   store i64 %47, i64* %6
-  %48 = load i64, i64* %6
-  %49 = add nsw i64 %48, 1
+  br label %48
+48:
+  %49 = load i64, i64* %6
   %50 = load i64, i64* %6
-  %51 = add nsw i64 %50, 1
-  %52 = mul nsw i64 %49, %51
-  %53 = load i32, i32* %3
-  %54 = sext i32 %53 to i64
-  %55 = icmp sle i64 %52, %54
-  br i1 %55, label %56, label %59
-56:
-  %57 = load i64, i64* %6
-  %58 = add nsw i64 %57, 1
-  store i64 %58, i64* %6
+  %51 = mul nsw i64 %49, %50
+  %52 = load i32, i32* %3
+  %53 = sext i32 %52 to i64
+  %54 = icmp sgt i64 %51, %53
+  br i1 %54, label %55, label %58
+55:
+  %56 = load i64, i64* %6
+  %57 = add nsw i64 %56, -1
+  store i64 %57, i64* %6
+  br label %48
+58:
   br label %59
 59:
   %60 = load i64, i64* %6
-  %61 = trunc i64 %60 to i32
-  store i32 %61, i32* %2
-  br label %65
-65:
-  %66 = load i32, i32* %2
-  ret i32 %66
+  %61 = add nsw i64 %60, 1
+  %62 = load i64, i64* %6
+  %63 = add nsw i64 %62, 1
+  %64 = mul nsw i64 %61, %63
+  %65 = load i32, i32* %3
+  %66 = sext i32 %65 to i64
+  %67 = icmp sle i64 %64, %66
+  br i1 %67, label %68, label %71
+68:
+  %69 = load i64, i64* %6
+  %70 = add nsw i64 %69, 1
+  store i64 %70, i64* %6
+  br label %59
+71:
+  %72 = load i64, i64* %6
+  %73 = trunc i64 %72 to i32
+  store i32 %73, i32* %2
+  br label %77
+77:
+  %78 = load i32, i32* %2
+  ret i32 %78
 }
 define dso_local i32 @main(i32 %0, i8** %1) {
   %3 = alloca i32

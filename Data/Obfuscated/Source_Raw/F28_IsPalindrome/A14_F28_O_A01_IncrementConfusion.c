@@ -5,26 +5,24 @@
  * Implementation Logic: IncrementConfusion derived from seed.
  * Input Format: <string>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 #include <string.h>
 
-int  axmM(char  *XdX0) {
-  int o =  0;  while  (XdX0[o]) o++;
-   int   seUB =   -1, psW   =   o;
-  while   (++seUB <  --psW) {
-  if  (XdX0[seUB]   !=   XdX0[psW])   return  0;
- }
-   return 1;
+int C5(char *F) {
+    int vf4 = 0; while (F[vf4]) vf4++;
+    int eli = -1, Rz6 = vf4;
+    while (++eli < --Rz6) {
+        if (F[eli] != F[Rz6]) return 0;
+    }
+    return 1;
 }
 
-int  main(int   argc,   char *argv[])   {
-   if   (argc   <   2)  return 1;
-  char  *XdX0   = argv[1];
- int  QjGX  =  axmM(XdX0);
- printf("%d\n", QjGX);
-  return   0;
+int main(int h7, char *Ou[]) {
+    if (h7 < 2) return 1;
+    char *F = Ou[1];
+    int TY8 = C5(F);
+    printf("%d\n", TY8);
+    return 0;
 }

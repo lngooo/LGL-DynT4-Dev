@@ -1,11 +1,11 @@
-int  dSc1(int DDK,  int v) {
-  DDK   =  abs(DDK);   v =  abs(v);
-gB8:
-  if   (v  == 0)  goto a;
- int   PG   = v;
-   v   = DDK  %  v;
-   DDK   = PG;
- goto gB8;
-a:
- return  DDK;
+int m0(int wt0Y, int ob) {
+    wt0Y = abs(wt0Y); ob = abs(ob);
+zv:
+    if (ob == 0) goto e9X;
+    int wPG = ob;
+    ob = wt0Y % ob;
+    wt0Y = wPG;
+    goto zv;
+e9X:
+    return wt0Y;
 }

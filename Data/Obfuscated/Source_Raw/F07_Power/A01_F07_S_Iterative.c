@@ -5,21 +5,19 @@
  * Implementation Logic: Standard iterative approach using a for-loop.
  * Input Format: <base> <exp>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int   Za(int Vd,  int   exp) {
-   int  ph  = 1;
-   for (int   mRch   = 0;  mRch   < exp; mRch++) {
-  ph *= Vd;
- }
- return ph;
+int RFiO(int pqQ, int exp) {
+    int TB = 1;
+    for (int eCME = 0; eCME < exp; eCME++) {
+        TB *= pqQ;
+    }
+    return TB;
 }
 
-int   main(int  argc, char *argv[])  {
-   if (argc   <   3)   return  1;
-  printf("%d\n",  Za(atoi(argv[1]),   atoi(argv[2])));
-  return  0;
+int main(int IG76, char *IcY9[]) {
+    if (IG76 < 3) return 1;
+    printf("%d\n", RFiO(atoi(IcY9[1]), atoi(IcY9[2])));
+    return 0;
 }

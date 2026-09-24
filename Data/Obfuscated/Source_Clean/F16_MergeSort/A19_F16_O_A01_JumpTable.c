@@ -1,17 +1,17 @@
-void Z4(int DiB[], int  E,  int   Qig)  {
-  if (E  < Qig)  {
-   int  A3  =  (E +   Qig)  /  2;
-  Z4(DiB,   E, A3);
-  Z4(DiB,   A3   +  1, Qig);
- int *qY  =   (int*)malloc((Qig-E+1)*4), eX6=E, zZYK=A3+1,  V3=0;
- bi3:
- if   (eX6  <=   A3   &&   zZYK <= Qig)   {
-   if   (DiB[eX6] <=  DiB[zZYK])   {  qY[V3++] = DiB[eX6++];   goto   bi3;  }
- else {  qY[V3++]  =  DiB[zZYK++]; goto bi3;  }
-   }
-   while  (eX6  <=   A3)  qY[V3++]  =   DiB[eX6++];
-   while (zZYK   <= Qig) qY[V3++] =   DiB[zZYK++];
-  for(int G=0; G<V3;  G++) DiB[E+G]   =   qY[G];
-  free(qY);
-   }
+void Fq(int YwX[], int X, int j2S) {
+    if (X < j2S) {
+        int T = (X + j2S) / 2;
+        Fq(YwX, X, T);
+        Fq(YwX, T + 1, j2S);
+        int *C = (int*)malloc((j2S-X+1)*4), WhgY=X, J=T+1, G=0;
+        kUs:
+        if (WhgY <= T && J <= j2S) {
+            if (YwX[WhgY] <= YwX[J]) { C[G++] = YwX[WhgY++]; goto kUs; }
+            else { C[G++] = YwX[J++]; goto kUs; }
+        }
+        while (WhgY <= T) C[G++] = YwX[WhgY++];
+        while (J <= j2S) C[G++] = YwX[J++];
+        for(int WGFU=0; WGFU<G; WGFU++) YwX[X+WGFU] = C[WGFU];
+        free(C);
+    }
 }

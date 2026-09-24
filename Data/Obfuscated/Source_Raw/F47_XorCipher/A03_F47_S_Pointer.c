@@ -5,34 +5,32 @@
  * Implementation Logic: Pointer
  * Input Format: <data_string> <key_string>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
 
-void UBvO(char *adt,   char *OwC6)   {
-   char   *qeF =   adt,  *M9  = OwC6;
-  while   (*qeF)  {
- if   (!*M9)  M9  =   OwC6;
-   *qeF   ^=   *M9;
-   qeF++; M9++;
- }
+void Euj(char *qyg5, char *Sb) {
+    char *hCZX = qyg5, *ba = Sb;
+    while (*hCZX) {
+        if (!*ba) ba = Sb;
+        *hCZX ^= *ba;
+        hCZX++; ba++;
+    }
 }
 
-int   main(int  argc, char *argv[]) {
- if  (argc < 3) return   0;
- char  *adt =  argv[1];
- char  *OwC6  =  argv[2];
-   int  LL =  0;
- while (adt[LL]) LL++;
+int main(int QV, char *u3i[]) {
+    if (QV < 3) return 0;
+    char *qyg5 = u3i[1];
+    char *Sb = u3i[2];
+    int dmk = 0;
+    while (qyg5[dmk]) dmk++;
 
-   UBvO(adt, OwC6);
+    Euj(qyg5, Sb);
 
- for  (int   qbk  =  0;  qbk   <   LL;  qbk++)  {
- printf("%02x", (unsigned char)adt[qbk]);
-   }
- printf("\n");
-   return  0;
+    for (int e = 0; e < dmk; e++) {
+        printf("%02x", (unsigned char)qyg5[e]);
+    }
+    printf("\n");
+    return 0;
 }

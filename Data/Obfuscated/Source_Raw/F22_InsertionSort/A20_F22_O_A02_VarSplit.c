@@ -4,40 +4,38 @@
  * File: A20_F22_O_A02_VarSplit.c
  * Implementation Logic: VarSplit
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-void  WLm(int  kC[],   int   lv)   {
-  int   w  =   1;
-   while (w  < lv)  {
-  int   ppTE1   =  kC[w];
-  int F   =   0, UPg  =   w   -  1;
-   while (F <=  UPg)   {
-  int   gEVz  =  (F + UPg) /   2;
-  if  (kC[gEVz]   >   ppTE1)  UPg =  gEVz  - 1;
-  else   F =  gEVz  +  1;
- }
-  for  (int   WAa  =   w  - 1; WAa   >=   F; WAa--)  kC[WAa+1] =   kC[WAa];
- kC[F]   =  ppTE1;
-   w++;
-  }
+void V1Bs(int SiUl[], int j) {
+    int L = 1;
+    while (L < j) {
+        int RPD = SiUl[L];
+        int uClG = 0, Xgo = L - 1;
+        while (uClG <= Xgo) {
+            int Fvd = (uClG + Xgo) / 2;
+            if (SiUl[Fvd] > RPD) Xgo = Fvd - 1;
+            else uClG = Fvd + 1;
+        }
+        for (int suyu = L - 1; suyu >= uClG; suyu--) SiUl[suyu+1] = SiUl[suyu];
+        SiUl[uClG] = RPD;
+        L++;
+    }
 }
 
-int   main(int argc,  char  *argv[])  {
-  if   (argc  <  2)   return   0;
-  int  lv   = argc  - 1;
-   int *kC   =   (int   *)malloc(lv *   sizeof(int));
-   for   (int kT  =  0;  kT  <  lv; kT++) kC[kT]  =  atoi(argv[kT   +   1]);
+int main(int jc, char *BH[]) {
+    if (jc < 2) return 0;
+    int j = jc - 1;
+    int *SiUl = (int *)malloc(j * sizeof(int));
+    for (int K4N = 0; K4N < j; K4N++) SiUl[K4N] = atoi(BH[K4N + 1]);
 
-  WLm(kC,  lv);
+    V1Bs(SiUl, j);
 
-   for  (int   kT  =   0; kT   <  lv;   kT++)   {
- printf("%d%s",  kC[kT],  (kT   == lv  -   1   ?  ""  : " "));
- }
- printf("\n");
- free(kC);
-  return 0;
+    for (int K4N = 0; K4N < j; K4N++) {
+        printf("%d%s", SiUl[K4N], (K4N == j - 1 ? "" : " "));
+    }
+    printf("\n");
+    free(SiUl);
+    return 0;
 }

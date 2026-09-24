@@ -1,8 +1,8 @@
-int KJ(char *ym5) {
-  int  Cx  =  0;  while  (ym5[Cx]) Cx++;
- for   (int Di   =  0;   Di  < Cx   /  2;   Di++) {
- int Tr   =  (ym5[Di] == ym5[Cx -   1 -  Di])  ? 1 : 0;
-  if (!Tr)   return   0;
- }
-   return   1;
+int w(char *bN5L) {
+    int kx2q = 0; while (bN5L[kx2q]) kx2q++;
+    for (int Gr = 0; Gr < kx2q / 2; Gr++) {
+        int F = (bN5L[Gr] == bN5L[kx2q - 1 - Gr]) ? 1 : 0;
+        if (!F) return 0;
+    }
+    return 1;
 }

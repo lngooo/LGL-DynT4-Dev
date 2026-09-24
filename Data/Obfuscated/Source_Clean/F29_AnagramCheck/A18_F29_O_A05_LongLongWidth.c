@@ -1,9 +1,9 @@
-int Hkb(char* BoSi0, char* DVQn2)  {
- if  (strlen(BoSi0)   !=  strlen(DVQn2))   return 0;
- long   long   kKVS  = 0,  WVC =   0;
-  for (int gA2  = 0;   BoSi0[gA2];  gA2++) {
-  kKVS  ^= (long long)BoSi0[gA2];   kKVS  ^= (long   long)DVQn2[gA2];
-  WVC   +=   (long long)BoSi0[gA2];   WVC   -=  (long  long)DVQn2[gA2];
-   }
-  return  (kKVS   ==   0LL && WVC  == 0LL);
+int EIkx(char* UJI, char* uV) {
+    if (strlen(UJI) != strlen(uV)) return 0;
+    long long AlL = 0, xDwX = 0;
+    for (int j0R = 0; UJI[j0R]; j0R++) {
+        AlL ^= (long long)UJI[j0R]; AlL ^= (long long)uV[j0R];
+        xDwX += (long long)UJI[j0R]; xDwX -= (long long)uV[j0R];
+    }
+    return (AlL == 0LL && xDwX == 0LL);
 }

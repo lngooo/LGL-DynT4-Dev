@@ -5,37 +5,35 @@
  * Implementation Logic: Ternary
  * Input Format: <val1> <val2> ...
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-int  XnzH(int e[], int   aln)  {
- int   uP =   aln;
-  for   (int   yyGr4  =   0;   yyGr4  < uP; yyGr4++)   {
-   for  (int  gl9  =   yyGr4   +   1;   gl9   < uP;  gl9++)   {
-   int   gg  =  (e[yyGr4]  == e[gl9]);
-  if   (gg)   {
-   for (int   yOxn   = gl9;   yOxn  < uP -   1;   yOxn++) e[yOxn] =  e[yOxn  +  1];
- uP--;  gl9--;
-   }
-   }
-   }
-   return  uP;
+int gCQ(int kiwV[], int aw43) {
+    int hm = aw43;
+    for (int ciz = 0; ciz < hm; ciz++) {
+        for (int Vv5c = ciz + 1; Vv5c < hm; Vv5c++) {
+            int Qm = (kiwV[ciz] == kiwV[Vv5c]);
+            if (Qm) {
+                for (int QrhA = Vv5c; QrhA < hm - 1; QrhA++) kiwV[QrhA] = kiwV[QrhA + 1];
+                hm--; Vv5c--;
+            }
+        }
+    }
+    return hm;
 }
 
-int   main(int  argc,  char   *argv[])  {
-   if  (argc   <   2) return   0;
-   int   cZI  = argc   -  1;
-   int e[128];
- for   (int  yyGr4   =   0;  yyGr4   <  cZI;   yyGr4++) {
-   e[yyGr4] = atoi(argv[yyGr4   +   1]);
-  }
-   int  jfW = XnzH(e,   cZI);
-  for   (int yyGr4 =   0;  yyGr4  < jfW;  yyGr4++)  {
-   printf("%d%s",  e[yyGr4], (yyGr4  ==   jfW -   1   ?  ""  :  " "));
-   }
-   printf("\n");
-  return   0;
+int main(int JFZR, char *uW[]) {
+    if (JFZR < 2) return 0;
+    int GU7V = JFZR - 1;
+    int kiwV[128];
+    for (int ciz = 0; ciz < GU7V; ciz++) {
+        kiwV[ciz] = atoi(uW[ciz + 1]);
+    }
+    int ih9g = gCQ(kiwV, GU7V);
+    for (int ciz = 0; ciz < ih9g; ciz++) {
+        printf("%d%s", kiwV[ciz], (ciz == ih9g - 1 ? "" : " "));
+    }
+    printf("\n");
+    return 0;
 }

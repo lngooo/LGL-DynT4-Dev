@@ -1,11 +1,11 @@
-void   FK(char* lU)   {
-  int   JQ   =   5, Q2   =  10;
-  while  (*lU)   {
- if ((JQ   + Q2) ==  15)  {
-   if   ((*lU >=   'a' &&  *lU  <=   'z')   || (*lU  >=   'A' &&  *lU  <=  'Z')) {
- *lU ^=   32;
-  }
-  }
-  lU++;
- }
+void kBHc(char* H) {
+    int Z = 5, Cgj = 10;
+    while (*H) {
+        if ((Z + Cgj) == 15) {
+            if ((*H >= 'a' && *H <= 'z') || (*H >= 'A' && *H <= 'Z')) {
+                *H ^= 32;
+            }
+        }
+        H++;
+    }
 }

@@ -1,5 +1,5 @@
 @.str = constant [4 x i8] c"%d\0A\00"
-define dso_local i32 @vd1(i32 %0) {
+define dso_local i32 @P(i32 %0) {
   %2 = alloca i32
   %3 = alloca i32
   store i32 %0, i32* %2

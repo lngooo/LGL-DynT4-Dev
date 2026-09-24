@@ -5,18 +5,16 @@
  * Implementation Logic: Classic recursive implementation (Seed 2).
  * Input Format: <n>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int   l(int   dmI2)   {
-  if (dmI2  <=  0) return 0;
- return   dmI2  +  l(dmI2  -  1);
+int Xs(int o) {
+    if (o <= 0) return 0;
+    return o + Xs(o - 1);
 }
 
-int  main(int   argc, char   *argv[])   {
-   if (argc <  2)   return  1;
- printf("%d\n", l(atoi(argv[1])));
- return 0;
+int main(int y, char *DO1[]) {
+    if (y < 2) return 1;
+    printf("%d\n", Xs(atoi(DO1[1])));
+    return 0;
 }

@@ -5,35 +5,33 @@
  * Implementation Logic: PtrOffset
  * Input Format: <val1> <val2> ...
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-int   Ymwk(int  BPA[],  int  UTx9)  {
-   int   *XnP   = BPA;
- for   (int dwRq   = 0;   dwRq < UTx9;  dwRq++)   {
- int  yzm  =  1;
-   for (int  h =  0;  h   <  (int)(XnP  - BPA);  h++)   {
-   if (*(BPA   + h)  ==  *(BPA +  dwRq))  yzm =   0;
-   }
-  if (yzm) { *XnP   = *(BPA + dwRq);  XnP++;  }
- }
- return  (int)(XnP -   BPA);
+int Ly(int g[], int OV) {
+    int *c = g;
+    for (int mT = 0; mT < OV; mT++) {
+        int ge8I = 1;
+        for (int tUE = 0; tUE < (int)(c - g); tUE++) {
+            if (*(g + tUE) == *(g + mT)) ge8I = 0;
+        }
+        if (ge8I) { *c = *(g + mT); c++; }
+    }
+    return (int)(c - g);
 }
 
-int  main(int   argc,  char  *argv[])   {
-   if   (argc <   2)  return 0;
-   int xtQO   =   argc -   1;
-  int BPA[128];
-   for  (int   dwRq  =   0;  dwRq   <  xtQO;   dwRq++)   {
-   BPA[dwRq] =   atoi(argv[dwRq  + 1]);
-  }
-  int W =   Ymwk(BPA,  xtQO);
-  for (int   dwRq   =   0;   dwRq <  W;  dwRq++)  {
- printf("%d%s",   BPA[dwRq],  (dwRq   ==   W  -   1  ?  "" : " "));
-   }
-   printf("\n");
-  return  0;
+int main(int IU, char *ci[]) {
+    if (IU < 2) return 0;
+    int AJ = IU - 1;
+    int g[128];
+    for (int mT = 0; mT < AJ; mT++) {
+        g[mT] = atoi(ci[mT + 1]);
+    }
+    int W22 = Ly(g, AJ);
+    for (int mT = 0; mT < W22; mT++) {
+        printf("%d%s", g[mT], (mT == W22 - 1 ? "" : " "));
+    }
+    printf("\n");
+    return 0;
 }

@@ -5,30 +5,28 @@
  * Implementation Logic: Recursive
  * Input Format: <string>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-void zBW7(unsigned  char *yrD,  int  zye,   char  *pR) {
- const char  *meND =   "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
-  if   (zye <=  0) {   *pR   = '\0';   return; }
-   unsigned   int  TtdH5   =   yrD[0]   << 16 |  (zye   >  1 ?  yrD[1]  <<  8  :   0) |   (zye   >  2  ?   yrD[2] :  0);
- pR[0]  =  meND[(TtdH5  >> 18) &   0x3F];
-   pR[1]   =   meND[(TtdH5   >> 12)   &  0x3F];
-   pR[2]  =   zye > 1   ?  meND[(TtdH5  >>   6) &   0x3F]   :  '=';
-  pR[3] =  zye  >  2  ?   meND[TtdH5  &   0x3F]   :  '=';
-   zBW7(yrD  + 3,   zye  -  3, pR +   4);
+void hpgW(unsigned char *VgL0, int WPJA, char *X) {
+    const char *O = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+    if (WPJA <= 0) { *X = '\0'; return; }
+    unsigned int jW8w = VgL0[0] << 16 | (WPJA > 1 ? VgL0[1] << 8 : 0) | (WPJA > 2 ? VgL0[2] : 0);
+    X[0] = O[(jW8w >> 18) & 0x3F];
+    X[1] = O[(jW8w >> 12) & 0x3F];
+    X[2] = WPJA > 1 ? O[(jW8w >> 6) & 0x3F] : '=';
+    X[3] = WPJA > 2 ? O[jW8w & 0x3F] : '=';
+    hpgW(VgL0 + 3, WPJA - 3, X + 4);
 }
 
-int   main(int argc,   char   *argv[])   {
-   if  (argc  <   2)  return   1;
-   unsigned  char *yrD =   (unsigned   char  *)argv[1];
-   int   zye   =   0;
- while (yrD[zye])   zye++;
-   char   pR[400]   =  {0};
- zBW7(yrD,   zye, pR);
-  printf("%s\n",  pR);
-  return 0;
+int main(int U, char *gLP[]) {
+    if (U < 2) return 1;
+    unsigned char *VgL0 = (unsigned char *)gLP[1];
+    int WPJA = 0;
+    while (VgL0[WPJA]) WPJA++;
+    char X[400] = {0};
+    hpgW(VgL0, WPJA, X);
+    printf("%s\n", X);
+    return 0;
 }

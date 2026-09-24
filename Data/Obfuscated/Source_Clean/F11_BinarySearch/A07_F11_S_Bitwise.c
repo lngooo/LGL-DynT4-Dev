@@ -1,9 +1,9 @@
-int cJ(int W[],  int  PU8, int   Wo)  {
- int   UeWF4 = 0;
- int   WNC1   = 31  -   __builtin_clz(PU8);
-  for   (int  I2 =   WNC1; I2 >=  0;  I2--) {
- int  MM3 =   UeWF4 |   (1  << I2);
- if (MM3 < PU8 &&  W[MM3] <=  Wo) UeWF4   = MM3;
-  }
-   return   (W[UeWF4]   ==   Wo)   ?   UeWF4   :   -1;
+int w(int s[], int Mfs, int yz0Q) {
+    int E = 0;
+    int Io = 31 - __builtin_clz(Mfs);
+    for (int Vz = Io; Vz >= 0; Vz--) {
+        int Ojt = E | (1 << Vz);
+        if (Ojt < Mfs && s[Ojt] <= yz0Q) E = Ojt;
+    }
+    return (s[E] == yz0Q) ? E : -1;
 }

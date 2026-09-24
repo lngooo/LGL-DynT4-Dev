@@ -4,32 +4,30 @@
  * File: A08_F50_O_A02_VariableSplit.c
  * Implementation Logic: Variable splitting on A02 place values.
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-void   li(int pJls,  char* hQpR7)   {
-  char* kaYO0[]   =  {"",  "M", "MM", "MMM"};
-  char*   goV[]   = {"", "C", "CC", "CCC",  "CD", "D", "DC", "DCC", "DCCC",   "CM"};
- char* gUC[]   =   {"",  "X",   "XX", "XXX",   "XL", "L",   "LX", "LXX",  "LXXX",   "XC"};
- char* b3[] = {"",  "I", "II", "III",  "IV",  "V",   "VI", "VII",  "VIII",   "IX"};
+void DxNx(int Q, char* eG5) {
+    char* Vr6R[] = {"", "M", "MM", "MMM"};
+    char* ma[] = {"", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"};
+    char* Mu[] = {"", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"};
+    char* SGZ8[] = {"", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"};
 
- int Bvrg =   pJls   / 100;  // th *  10  + hu
-   int  MtI =   pJls  %   100; //  te * 10  +   on
+    int gKA = Q / 100; // th * 10 + hu
+    int pP = Q % 100; // te * 10 + on
 
- hQpR7[0]  =   '\0';
-  strcat(hQpR7, kaYO0[Bvrg   /   10]);
- strcat(hQpR7,  goV[Bvrg  % 10]);
- strcat(hQpR7,  gUC[MtI  /  10]);
-   strcat(hQpR7,   b3[MtI   %  10]);
+    eG5[0] = '\0';
+    strcat(eG5, Vr6R[gKA / 10]);
+    strcat(eG5, ma[gKA % 10]);
+    strcat(eG5, Mu[pP / 10]);
+    strcat(eG5, SGZ8[pP % 10]);
 }
 
-int main(int  argc, char*   argv[])  {
-  if (argc   <   2) return  0;
-  char   cleX[100];
-  li(atoi(argv[1]), cleX);
- printf("%s\n", cleX);
-   return   0;
+int main(int k5, char* bVPx[]) {
+    if (k5 < 2) return 0;
+    char TNWr[100];
+    DxNx(atoi(bVPx[1]), TNWr);
+    printf("%s\n", TNWr);
+    return 0;
 }

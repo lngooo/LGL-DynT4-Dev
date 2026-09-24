@@ -4,24 +4,22 @@
 * File: A20_F36_O_A02_WhileTrue.c
 * Logic: infinite loop with manual break and pointer increment derived from A02.
 */
-
-
 #include <stdio.h>
 
-void  IMZ(char*   tmA)   {
-   while  (1)  {
-  if  (!*tmA) break;
- unsigned   char  Vi =   (unsigned   char)*tmA;
-  if ((Vi  >=  'a' &&   Vi <= 'z')  ||   (Vi >=   'A' &&   Vi   <=  'Z'))  {
- *tmA  =   (char)(Vi ^ 0x20);
-   }
- tmA++;
- }
+void O(char* g27) {
+    while (1) {
+        if (!*g27) break;
+        unsigned char p = (unsigned char)*g27;
+        if ((p >= 'a' && p <= 'z') || (p >= 'A' && p <= 'Z')) {
+            *g27 = (char)(p ^ 0x20);
+        }
+        g27++;
+    }
 }
 
-int  main(int  argc,  char* argv[]) {
- if  (argc   <   2) return   0;
- IMZ(argv[1]);
-   printf("%s\n", argv[1]);
-   return   0;
+int main(int RSW, char* j5hf[]) {
+    if (RSW < 2) return 0;
+    O(j5hf[1]);
+    printf("%s\n", j5hf[1]);
+    return 0;
 }

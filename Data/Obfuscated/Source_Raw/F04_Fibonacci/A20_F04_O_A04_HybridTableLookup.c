@@ -5,28 +5,26 @@
  * Implementation Logic: HybridTableLookup
  * Input Format: <arg1>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-long  NpkC(int  pu5)   {
-  long eGMh9[] =  {0, 1,  1,   2, 3,  5, 8, 13,   21,   34};
-   if  (pu5   <=   9) return   eGMh9[pu5];
-   return NpkC(pu5 - 1)   + NpkC(pu5  -   2);
+long ZfU(int fBM0) {
+    long Is[] = {0, 1, 1, 2, 3, 5, 8, 13, 21, 34};
+    if (fBM0 <= 9) return Is[fBM0];
+    return ZfU(fBM0 - 1) + ZfU(fBM0 - 2);
 }
 
-int main(int  argc,   char *argv[]) {
-   if   (argc < 2) {
-   return 1;
-  }
- int  pu5   = atoi(argv[1]);
-   if (pu5 < 0)  {
-   printf("0\n");
-   return 0;
- }
- long  zd  =   NpkC(pu5);
-   printf("%ld\n",  zd);
-  return 0;
+int main(int gfu, char *tCM[]) {
+    if (gfu < 2) {
+        return 1;
+    }
+    int fBM0 = atoi(tCM[1]);
+    if (fBM0 < 0) {
+        printf("0\n");
+        return 0;
+    }
+    long kSCw = ZfU(fBM0);
+    printf("%ld\n", kSCw);
+    return 0;
 }

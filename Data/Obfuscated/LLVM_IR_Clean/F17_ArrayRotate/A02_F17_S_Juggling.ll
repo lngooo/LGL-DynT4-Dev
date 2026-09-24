@@ -1,4 +1,4 @@
-define dso_local i32 @wE(i32 %0, i32 %1) {
+define dso_local i32 @Ty(i32 %0, i32 %1) {
   %3 = alloca i32
   %4 = alloca i32
   store i32 %0, i32* %3
@@ -14,13 +14,13 @@ define dso_local i32 @wE(i32 %0, i32 %1) {
   %11 = load i32, i32* %3
   %12 = load i32, i32* %4
   %13 = srem i32 %11, %12
-  %14 = call i32 @wE(i32 %10, i32 %13)
+  %14 = call i32 @Ty(i32 %10, i32 %13)
   br label %15
 15:
   %16 = phi i32 [ %8, %7 ], [ %14, %9 ]
   ret i32 %16
 }
-define dso_local void @CUHu(i32* %0, i32 %1, i32 %2) {
+define dso_local void @gjTB(i32* %0, i32 %1, i32 %2) {
   %4 = alloca i32*
   %5 = alloca i32
   %6 = alloca i32
@@ -45,7 +45,7 @@ define dso_local void @CUHu(i32* %0, i32 %1, i32 %2) {
   store i32 %19, i32* %6
   %21 = load i32, i32* %6
   %22 = load i32, i32* %5
-  %23 = call i32 @wE(i32 %21, i32 %22)
+  %23 = call i32 @Ty(i32 %21, i32 %22)
   store i32 %23, i32* %7
   store i32 0, i32* %8
   br label %25

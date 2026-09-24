@@ -5,32 +5,30 @@
  * Implementation Logic: A12_F49_O_A05_SwitchCase
  * Input Format: <string> <shift_int>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
 
-void   kmWx(char   *H, int  p) {
+void qk(char *E6pN, int oU) {
 
-  int  XvX = (p  % 26 +  26)  % 26;
-   for(int   yIS=0;  H[yIS];  yIS++)   {
- int  UIFU =   (H[yIS]   >=  'a'  &&  H[yIS] <= 'z')  ? 1 :   (H[yIS]   >= 'A'   &&   H[yIS]  <=   'Z' ?  2 : 0);
-  switch(UIFU)  {
-   case   1:  H[yIS]  =   (H[yIS]-'a'+XvX)%26+'a';   break;
-   case  2: H[yIS]  =  (H[yIS]-'A'+XvX)%26+'A';   break;
-  default:   break;
-   }
- }
+    int Pjc = (oU % 26 + 26) % 26;
+    for(int pR=0; E6pN[pR]; pR++) {
+        int bK = (E6pN[pR] >= 'a' && E6pN[pR] <= 'z') ? 1 : (E6pN[pR] >= 'A' && E6pN[pR] <= 'Z' ? 2 : 0);
+        switch(bK) {
+            case 1: E6pN[pR] = (E6pN[pR]-'a'+Pjc)%26+'a'; break;
+            case 2: E6pN[pR] = (E6pN[pR]-'A'+Pjc)%26+'A'; break;
+            default: break;
+        }
+    }
 }
 
-int main(int   argc,  char  *argv[])  {
-   if  (argc <  3)   {
-  return  1;
-  }
-   int  p   = atoi(argv[2]);
-  kmWx(argv[1], p);
-   printf("%s\n",  argv[1]);
- return   0;
+int main(int q, char *e[]) {
+    if (q < 3) {
+        return 1;
+    }
+    int oU = atoi(e[2]);
+    qk(e[1], oU);
+    printf("%s\n", e[1]);
+    return 0;
 }

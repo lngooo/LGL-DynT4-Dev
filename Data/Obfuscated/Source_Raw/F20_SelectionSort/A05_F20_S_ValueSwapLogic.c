@@ -4,40 +4,38 @@
  * File: A05_F20_S_ValueSwapLogic.c
  * Implementation Logic: ValueSwapLogic
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-void  EbRy9(int   rf[],  int wyd)   {
- int ky8,   k;
-  for   (ky8   =   0;  ky8   <   wyd; ky8++) {
-   int   QEh =   rf[ky8];
-  int  pjZD  = ky8;
- for (k =   ky8 +   1;  k   < wyd;  k++)  {
-  if   (rf[k]  < QEh) {
-   QEh = rf[k];
- pjZD =   k;
-   }
- }
-  rf[pjZD]   =  rf[ky8];
-  rf[ky8]   =  QEh;
-   }
+void p(int fKK[], int K) {
+    int cduf, awW;
+    for (cduf = 0; cduf < K; cduf++) {
+        int zGm = fKK[cduf];
+        int WzU = cduf;
+        for (awW = cduf + 1; awW < K; awW++) {
+            if (fKK[awW] < zGm) {
+                zGm = fKK[awW];
+                WzU = awW;
+            }
+        }
+        fKK[WzU] = fKK[cduf];
+        fKK[cduf] = zGm;
+    }
 }
 
-int   main(int  argc, char *argv[])   {
-  if (argc   <   2) return   0;
-  int  wyd   =   argc  - 1;
-   int   *rf  =  (int *)malloc(wyd  *   sizeof(int));
-  for (int  ky8   =   0;   ky8  < wyd;   ky8++) rf[ky8] =   atoi(argv[ky8 +  1]);
+int main(int iSR, char *v[]) {
+    if (iSR < 2) return 0;
+    int K = iSR - 1;
+    int *fKK = (int *)malloc(K * sizeof(int));
+    for (int cduf = 0; cduf < K; cduf++) fKK[cduf] = atoi(v[cduf + 1]);
 
-  EbRy9(rf, wyd);
+    p(fKK, K);
 
-   for (int  ky8   = 0; ky8  < wyd;  ky8++) {
-  printf("%d%s",  rf[ky8], (ky8 ==  wyd  -   1   ? ""  :   " "));
-   }
-  printf("\n");
-   free(rf);
-   return   0;
+    for (int cduf = 0; cduf < K; cduf++) {
+        printf("%d%s", fKK[cduf], (cduf == K - 1 ? "" : " "));
+    }
+    printf("\n");
+    free(fKK);
+    return 0;
 }

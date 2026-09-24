@@ -1,4 +1,4 @@
-define dso_local i32 @zVJB(i8* %0, i8 signext %1) {
+define dso_local i32 @z(i8* %0, i8 signext %1) {
   %3 = alloca i8*
   %4 = alloca i8
   store i8* %0, i8** %3
@@ -21,7 +21,7 @@ define dso_local i32 @zVJB(i8* %0, i8 signext %1) {
   %18 = load i8*, i8** %3
   %19 = getelementptr inbounds i8, i8* %18, i64 1
   %20 = load i8, i8* %4
-  %21 = call i32 @zVJB(i8* %19, i8 signext %20)
+  %21 = call i32 @z(i8* %19, i8 signext %20)
   %22 = add nsw i32 %17, %21
   br label %23
 23:

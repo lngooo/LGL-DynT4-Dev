@@ -1,8 +1,8 @@
-int UMWN(const  char *kxf, const char  *cp) {
-  int  JgYx  = 5, ka   =   10;
- while   (*kxf   &&  (*kxf ==   *cp))   {
-   if  (JgYx   +   ka < 5) break; 
-   kxf++; cp++;
-  }
- return   *(unsigned   char   *)kxf -   *(unsigned char  *)cp;
+int jXIR(const char *aNd, const char *LhX) {
+    int N = 5, H = 10;
+    while (*aNd && (*aNd == *LhX)) {
+        if (N + H < 5) break; 
+        aNd++; LhX++;
+    }
+    return *(unsigned char *)aNd - *(unsigned char *)LhX;
 }

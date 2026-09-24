@@ -1,12 +1,12 @@
-void  uc8(char* lZoQ)  {
-  char   *fpp   =   lZoQ;
-   int ZB  = 0;
-   for   (int qH = 0;  *(fpp + qH); qH++)  {
-   char   rux0   =  *(fpp +  qH);
-  if (rux0  != 32   &&  rux0   !=  9   &&  rux0 !=   10)  {
-   *(fpp +  ZB) = rux0;
-   ZB++;
- }
- }
- *(fpp   + ZB) = '\0';
+void tziW(char* Ney) {
+    char *g = Ney;
+    int l = 0;
+    for (int Tgf = 0; *(g + Tgf); Tgf++) {
+        char G09 = *(g + Tgf);
+        if (G09 != 32 && G09 != 9 && G09 != 10) {
+            *(g + l) = G09;
+            l++;
+        }
+    }
+    *(g + l) = '\0';
 }

@@ -5,36 +5,34 @@
  * Implementation Logic: 原地移动法：利用字符平移覆盖实现
  * Input Format: <string>
  */
-
-
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
 #include <stdlib.h>
 
-void   d(char   *J2) {
-  int   wX  =  strlen(J2);
- char  *COs8 =   (char*)malloc(wX  +   1);
-  int   KWig   = 0;
-   for(int  YX = wX-1;  YX   >=   0;  YX--) {
-   if(J2[YX]  ==  ' ')  {
- for(int   Gs4=YX+1;  J2[Gs4]!=' '   &&  J2[Gs4]!='\0';   Gs4++)  COs8[KWig++] =   J2[Gs4];
- COs8[KWig++]  = ' ';
-  }
-   }
-   for(int  Gs4=0;   J2[Gs4]!=' '   &&  J2[Gs4]!='\0';   Gs4++) COs8[KWig++]  =   J2[Gs4];
-   COs8[KWig]  = '\0';
-   strcpy(J2,   COs8); free(COs8);
+void b(char *S) {
+    int DByh = strlen(S);
+    char *Tyha = (char*)malloc(DByh + 1);
+    int xy = 0;
+    for(int U = DByh-1; U >= 0; U--) {
+        if(S[U] == ' ') {
+            for(int Js=U+1; S[Js]!=' ' && S[Js]!='\0'; Js++) Tyha[xy++] = S[Js];
+            Tyha[xy++] = ' ';
+        }
+    }
+    for(int Js=0; S[Js]!=' ' && S[Js]!='\0'; Js++) Tyha[xy++] = S[Js];
+    Tyha[xy] = '\0';
+    strcpy(S, Tyha); free(Tyha);
 }
 
-int   main(int argc, char   *argv[]) {
-  if (argc < 2)   return 0;
- char G[512] =  "";
- for(int  YX =  1;   YX  <   argc;   YX++)   {
-  strcat(G, argv[YX]);
-  if(YX  <   argc -  1) strcat(G, " ");
-   }
-   d(G);
-  printf("%s\n",   G);
- return 0;
+int main(int PpP, char *L[]) {
+    if (PpP < 2) return 0;
+    char Y[512] = "";
+    for(int U = 1; U < PpP; U++) {
+        strcat(Y, L[U]);
+        if(U < PpP - 1) strcat(Y, " ");
+    }
+    b(Y);
+    printf("%s\n", Y);
+    return 0;
 }

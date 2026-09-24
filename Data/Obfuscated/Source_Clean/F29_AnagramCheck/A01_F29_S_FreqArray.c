@@ -1,12 +1,12 @@
-int   TXw(char*  uejZ,  char*  YUx) {
-  if   (strlen(uejZ)   != strlen(YUx)) return   0;
- int fAn[256]   =  {0};
-  for  (int Ql  =   0;  uejZ[Ql]  !=  '\0';   Ql++)  {
-   fAn[(unsigned  char)uejZ[Ql]]++;
- fAn[(unsigned char)YUx[Ql]]--;
-  }
-   for   (int   Ql = 0;  Ql  < 256;  Ql++)  {
-  if   (fAn[Ql]  !=   0)   return   0;
- }
-   return   1;
+int UdN(char* fRW5, char* aVRf) {
+    if (strlen(fRW5) != strlen(aVRf)) return 0;
+    int LX6[256] = {0};
+    for (int SRM = 0; fRW5[SRM] != '\0'; SRM++) {
+        LX6[(unsigned char)fRW5[SRM]]++;
+        LX6[(unsigned char)aVRf[SRM]]--;
+    }
+    for (int SRM = 0; SRM < 256; SRM++) {
+        if (LX6[SRM] != 0) return 0;
+    }
+    return 1;
 }

@@ -5,25 +5,23 @@
  * Implementation Logic: Standard approach using XOR to find differing bits, then counting them via shifting.
  * Input Format: <uint1> <uint2>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int  f(unsigned  int  sa0, unsigned int  Ecw8) {
- unsigned int  kHR5   =  sa0   ^   Ecw8;
-  int   OO1  =  0;
-   while   (kHR5 >   0)  {
-   if (kHR5   &   1)  OO1++;
-  kHR5  >>=  1;
- }
-  return OO1;
+int S(unsigned int ms, unsigned int tC4) {
+    unsigned int t = ms ^ tC4;
+    int GML7 = 0;
+    while (t > 0) {
+        if (t & 1) GML7++;
+        t >>= 1;
+    }
+    return GML7;
 }
 
-int   main(int   argc,  char* argv[])  {
- if (argc  <  3) return   0;
- unsigned   int A  = (unsigned   int)strtoul(argv[1], NULL, 10);
-   unsigned  int  hoZF1   =   (unsigned  int)strtoul(argv[2],  NULL, 10);
-   printf("%d", f(A,   hoZF1));
-   return  0;
+int main(int arD, char* Z[]) {
+    if (arD < 3) return 0;
+    unsigned int a3 = (unsigned int)strtoul(Z[1], NULL, 10);
+    unsigned int NRy = (unsigned int)strtoul(Z[2], NULL, 10);
+    printf("%d", S(a3, NRy));
+    return 0;
 }

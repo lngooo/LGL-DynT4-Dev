@@ -1,4 +1,4 @@
-define dso_local void @eC(i8* %0, i32 %1) {
+define dso_local void @Gqpa(i8* %0, i32 %1) {
   %3 = alloca i8*
   %4 = alloca i32
   store i8* %0, i8** %3
@@ -19,7 +19,7 @@ define dso_local void @eC(i8* %0, i32 %1) {
 15:
   %16 = load i8*, i8** %3
   %17 = getelementptr inbounds i8, i8* %16, i64 1
-  call void @eC(i8* %17, i32 1)
+  call void @Gqpa(i8* %17, i32 1)
   br label %37
 18:
   %19 = load i32, i32* %4
@@ -44,7 +44,7 @@ define dso_local void @eC(i8* %0, i32 %1) {
   store i8 %33, i8* %34
   %35 = load i8*, i8** %3
   %36 = getelementptr inbounds i8, i8* %35, i64 1
-  call void @eC(i8* %36, i32 0)
+  call void @Gqpa(i8* %36, i32 0)
   br label %37
 37:
   ret void
@@ -52,10 +52,10 @@ define dso_local void @eC(i8* %0, i32 %1) {
 declare i32 @isspace(i32)
 declare i32 @toupper(i32)
 declare i32 @tolower(i32)
-define dso_local void @Vom2(i8* %0) {
+define dso_local void @N7(i8* %0) {
   %2 = alloca i8*
   store i8* %0, i8** %2
   %3 = load i8*, i8** %2
-  call void @eC(i8* %3, i32 1)
+  call void @Gqpa(i8* %3, i32 1)
   ret void
 }

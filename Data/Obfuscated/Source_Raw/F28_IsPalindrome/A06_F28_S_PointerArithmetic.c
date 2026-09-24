@@ -5,28 +5,26 @@
  * Implementation Logic: PointerArithmetic derived from seed.
  * Input Format: <string>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 #include <string.h>
 
-int M(char *B8)   {
-  char *jlg  =   B8;
-   while (*jlg) jlg++;
- jlg--;
- while   (B8  < jlg)  {
- if   (*B8  !=  *jlg) return   0;
- B8++;  jlg--;
-  }
-  return  1;
+int o(char *Om) {
+    char *QUC = Om;
+    while (*QUC) QUC++;
+    QUC--;
+    while (Om < QUC) {
+        if (*Om != *QUC) return 0;
+        Om++; QUC--;
+    }
+    return 1;
 }
 
-int   main(int  argc, char  *argv[])  {
-  if (argc   <   2)   return   1;
-  char  *B8 =  argv[1];
- int   WWjJ  =  M(B8);
-   printf("%d\n",  WWjJ);
-   return  0;
+int main(int C, char *p[]) {
+    if (C < 2) return 1;
+    char *Om = p[1];
+    int Jkj = o(Om);
+    printf("%d\n", Jkj);
+    return 0;
 }

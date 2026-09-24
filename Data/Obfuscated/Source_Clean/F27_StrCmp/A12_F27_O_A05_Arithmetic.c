@@ -1,7 +1,7 @@
-int e(const  char   *b,  const  char  *ucr)   {
-  while   (!(*b  - *ucr) && *b   !=   0)  {
- b  =   (char*)((size_t)b   + 1);
- ucr  =   (char*)((size_t)ucr   + 1);
-   }
- return   (int)(*(unsigned   char*)b - *(unsigned  char*)ucr);
+int lb(const char *Uhvf, const char *z) {
+    while (!(*Uhvf - *z) && *Uhvf != 0) {
+        Uhvf = (char*)((size_t)Uhvf + 1);
+        z = (char*)((size_t)z + 1);
+    }
+    return (int)(*(unsigned char*)Uhvf - *(unsigned char*)z);
 }

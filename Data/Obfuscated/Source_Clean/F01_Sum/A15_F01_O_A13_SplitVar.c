@@ -1,8 +1,8 @@
-int  eL(int JH)   {
-   int   e3 = 0, ItC   =  0;
-  for   (int   sxp3   =   1;  sxp3 <= JH;  sxp3++) {
-  if (sxp3  % 2   ==   0) e3  += sxp3;
- else   ItC  +=   sxp3;
- }
-   return  e3 + ItC;
+int R(int d) {
+    int UvZ3 = 0, p = 0;
+    for (int mI = 1; mI <= d; mI++) {
+        if (mI % 2 == 0) UvZ3 += mI;
+        else p += mI;
+    }
+    return UvZ3 + p;
 }

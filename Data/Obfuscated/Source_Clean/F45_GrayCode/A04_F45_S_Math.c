@@ -1,4 +1,4 @@
-unsigned  int DW(unsigned  int AQC) {
- unsigned   int XXl   =   AQC   >>   1;
-  return   (AQC   |   XXl)   -  (AQC &   XXl);
+unsigned int k(unsigned int VU) {
+    unsigned int R8Vj = VU >> 1;
+    return (VU | R8Vj) - (VU & R8Vj);
 }

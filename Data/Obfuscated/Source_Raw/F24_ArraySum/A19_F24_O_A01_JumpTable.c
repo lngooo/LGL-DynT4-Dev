@@ -4,29 +4,27 @@
  * File: A19_F24_O_A01_JumpTable.c
  * Implementation Logic: JumpTable
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-int   V(int lCJ[],  int  xfH)  {
-  int GVPG   =   0,   P  =  0;
-Cr:
- if  (P >= xfH) return  GVPG;
-  GVPG  += lCJ[P++];
-  goto  Cr;
+int GPhZ(int kpD[], int a) {
+    int R = 0, HE3y = 0;
+Y:
+    if (HE3y >= a) return R;
+    R += kpD[HE3y++];
+    goto Y;
 }
 
-int  main(int   argc,   char  *argv[])  {
-  if   (argc  < 2)   return   0;
-  int xfH  =  argc  -  1;
-  int   *lCJ   =  (int   *)malloc(xfH   * sizeof(int));
- for   (int P  =  0; P <   xfH; P++)  lCJ[P] = atoi(argv[P  +  1]);
+int main(int q4TI, char *T[]) {
+    if (q4TI < 2) return 0;
+    int a = q4TI - 1;
+    int *kpD = (int *)malloc(a * sizeof(int));
+    for (int HE3y = 0; HE3y < a; HE3y++) kpD[HE3y] = atoi(T[HE3y + 1]);
 
-  int   s  =   V(lCJ,   xfH);
- printf("%d\n",   s);
+    int C = GPhZ(kpD, a);
+    printf("%d\n", C);
 
-   free(lCJ);
-  return 0;
+    free(kpD);
+    return 0;
 }

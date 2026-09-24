@@ -1,13 +1,13 @@
-int   NmDY(int  ffB[], int zBhk4,  int WC2,   int GfY)   {
-   if  (zBhk4   > WC2)   return  -1;
-  int  k   =   *(ffB   + WC2), Sap   = zBhk4;
-   for (int  djD = zBhk4;   djD   <   WC2; djD++)   {
-   if   (*(ffB  +   djD) <= k)  {
-  int L2   = *(ffB +  Sap); *(ffB  +  Sap)   = *(ffB   +  djD); *(ffB + djD) = L2;
-  Sap++;
-   }
-  }
- int  L2  =  *(ffB  +  Sap);  *(ffB +   Sap) =   *(ffB   +   WC2);   *(ffB   + WC2) = L2;
- if (Sap   ==  GfY  -  1)  return *(ffB  +   Sap);
-   return (Sap >   GfY - 1)  ? NmDY(ffB,  zBhk4,  Sap  -   1,  GfY) :   NmDY(ffB,   Sap +  1,   WC2,  GfY);
+int XSYQ(int X[], int PyrO, int xahh, int h) {
+    if (PyrO > xahh) return -1;
+    int PQ6G = *(X + xahh), bL = PyrO;
+    for (int rSVg = PyrO; rSVg < xahh; rSVg++) {
+        if (*(X + rSVg) <= PQ6G) {
+            int yE = *(X + bL); *(X + bL) = *(X + rSVg); *(X + rSVg) = yE;
+            bL++;
+        }
+    }
+    int yE = *(X + bL); *(X + bL) = *(X + xahh); *(X + xahh) = yE;
+    if (bL == h - 1) return *(X + bL);
+    return (bL > h - 1) ? XSYQ(X, PyrO, bL - 1, h) : XSYQ(X, bL + 1, xahh, h);
 }

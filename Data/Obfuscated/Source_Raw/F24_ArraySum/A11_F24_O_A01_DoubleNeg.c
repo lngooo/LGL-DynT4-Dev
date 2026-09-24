@@ -4,30 +4,28 @@
  * File: A11_F24_O_A01_DoubleNeg.c
  * Implementation Logic: DoubleNeg
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-int uhNx(int fH[],   int  pqN)   {
- int  Zg = 0, Jp  = 0;
-   while  (!!(Jp < pqN))  {
-   Zg  += fH[Jp];
- Jp++;
-  }
-   return Zg;
+int B(int Y[], int Kq) {
+    int NGI = 0, SZ = 0;
+    while (!!(SZ < Kq)) {
+        NGI += Y[SZ];
+        SZ++;
+    }
+    return NGI;
 }
 
-int main(int argc, char  *argv[])   {
- if  (argc <  2)   return  0;
- int   pqN   =  argc  - 1;
- int  *fH  =   (int   *)malloc(pqN   *   sizeof(int));
-  for   (int Jp   =   0; Jp < pqN; Jp++)  fH[Jp] =  atoi(argv[Jp  +   1]);
+int main(int x, char *nW7B[]) {
+    if (x < 2) return 0;
+    int Kq = x - 1;
+    int *Y = (int *)malloc(Kq * sizeof(int));
+    for (int SZ = 0; SZ < Kq; SZ++) Y[SZ] = atoi(nW7B[SZ + 1]);
 
- int mWj   =  uhNx(fH, pqN);
-  printf("%d\n",  mWj);
+    int VSX = B(Y, Kq);
+    printf("%d\n", VSX);
 
- free(fH);
-   return  0;
+    free(Y);
+    return 0;
 }

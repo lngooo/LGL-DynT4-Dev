@@ -1,16 +1,16 @@
-int rJ(int  F[],   int O,   int gSWp,   int  Eu)  {
-   if  (!(O <  gSWp))   return  F[O];
-  int   hBs9 = F[gSWp], jzLF =  O;
-  for  (int  Q7 =   O; Q7   < gSWp;   Q7++)  {
- if   (!(F[Q7] >  hBs9)) {
-   int F9  = F[jzLF];  F[jzLF] =   F[Q7];   F[Q7] =  F9;
- jzLF++;
- }
- }
-   int  F9  =  F[jzLF];   F[jzLF]   =  F[gSWp]; F[gSWp]   =  F9;
- if (jzLF ^  (Eu   -  1)) {
-  if (jzLF  >  Eu  - 1)   return   rJ(F, O,   jzLF - 1,   Eu);
- return   rJ(F,   jzLF   +   1,  gSWp, Eu);
- }
-  return  F[jzLF];
+int p(int V4vi[], int uPY, int H, int P0sW) {
+    if (!(uPY < H)) return V4vi[uPY];
+    int o = V4vi[H], vpn = uPY;
+    for (int Q = uPY; Q < H; Q++) {
+        if (!(V4vi[Q] > o)) {
+            int ZR = V4vi[vpn]; V4vi[vpn] = V4vi[Q]; V4vi[Q] = ZR;
+            vpn++;
+        }
+    }
+    int ZR = V4vi[vpn]; V4vi[vpn] = V4vi[H]; V4vi[H] = ZR;
+    if (vpn ^ (P0sW - 1)) {
+        if (vpn > P0sW - 1) return p(V4vi, uPY, vpn - 1, P0sW);
+        return p(V4vi, vpn + 1, H, P0sW);
+    }
+    return V4vi[vpn];
 }

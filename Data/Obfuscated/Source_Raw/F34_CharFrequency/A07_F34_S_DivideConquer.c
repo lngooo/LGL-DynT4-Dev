@@ -4,26 +4,24 @@
 * File: A07_F34_S_DivideConquer.c
 * Logic: Divide and conquer approach splitting string range.
 */
-
-
 #include <stdio.h>
 #include <string.h>
 
-int hD(char*  e, int W, int  Vf,   char  GHb) {
-  if (W  > Vf)  return  0;
-  if (W   ==   Vf)   return  (e[W]  == GHb);
-   int A   =   W   +   (Vf  - W) /   2;
-  return   hD(e,   W, A,  GHb)   + hD(e,   A +   1,  Vf,   GHb);
+int QiMi(char* bJZ, int V, int UO0E, char dkKS) {
+    if (V > UO0E) return 0;
+    if (V == UO0E) return (bJZ[V] == dkKS);
+    int X = V + (UO0E - V) / 2;
+    return QiMi(bJZ, V, X, dkKS) + QiMi(bJZ, X + 1, UO0E, dkKS);
 }
 
-int w(char*   e, char GHb) {
-  int   HIw  =   strlen(e);
- if (HIw   ==  0)  return   0;
-   return  hD(e,  0,   HIw -  1,  GHb);
+int bz7(char* bJZ, char dkKS) {
+    int emm = strlen(bJZ);
+    if (emm == 0) return 0;
+    return QiMi(bJZ, 0, emm - 1, dkKS);
 }
 
-int main(int argc,   char*  argv[])  {
- if   (argc < 3) return   0;
- printf("%d\n", w(argv[1],  argv[2][0]));
- return  0;
+int main(int Do, char* i[]) {
+    if (Do < 3) return 0;
+    printf("%d\n", bz7(i[1], i[2][0]));
+    return 0;
 }

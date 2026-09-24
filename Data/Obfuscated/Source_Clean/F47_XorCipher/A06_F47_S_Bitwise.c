@@ -1,10 +1,10 @@
-void   hk8(char *q0, char *CI4)  {
- int W   = 0;  while(CI4[W])   W++;
- int GuEh  = 0;
- while(q0[GuEh])  {
- int   glw5 =  (unsigned   char)q0[GuEh];
- int  Sc0   =  (unsigned   char)CI4[GuEh  %   W];
-   q0[GuEh]  =   (char)(glw5   ^  Sc0);
-  GuEh++;
-   }
+void k(char *DTI, char *Brd) {
+    int OGY = 0; while(Brd[OGY]) OGY++;
+    int VHH = 0;
+    while(DTI[VHH]) {
+        int VI = (unsigned char)DTI[VHH];
+        int Xu = (unsigned char)Brd[VHH % OGY];
+        DTI[VHH] = (char)(VI ^ Xu);
+        VHH++;
+    }
 }

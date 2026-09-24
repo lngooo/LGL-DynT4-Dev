@@ -1,8 +1,8 @@
-uint32_t GMlg(uint32_t   yYp) {
- uint32_t  QM = 0;
- for   (int   yptE =   0; yptE   <   4;  yptE++) {
-  QM =   (QM   << 8)   |  (yYp  & 0xFF);
- yYp  >>=   8;
-   }
- return QM;
+uint32_t UMZ(uint32_t qEJB) {
+    uint32_t inDy = 0;
+    for (int a = 0; a < 4; a++) {
+        inDy = (inDy << 8) | (qEJB & 0xFF);
+        qEJB >>= 8;
+    }
+    return inDy;
 }

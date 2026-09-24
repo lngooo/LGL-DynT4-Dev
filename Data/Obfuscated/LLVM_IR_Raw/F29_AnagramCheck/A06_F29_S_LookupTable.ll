@@ -1,6 +1,6 @@
-@lL7 = internal global [256 x i32] zeroinitializer
+@TL = internal global [256 x i32] zeroinitializer
 @.str = constant [4 x i8] c"%d\0A\00"
-define dso_local i32 @Zwm9(i8* %0, i8* %1) {
+define dso_local i32 @pF(i8* %0, i8* %1) {
   %3 = alloca i32
   %4 = alloca i8*
   %5 = alloca i8*
@@ -25,7 +25,7 @@ define dso_local i32 @Zwm9(i8* %0, i8* %1) {
   %20 = getelementptr inbounds i8, i8* %17, i64 %19
   %21 = load i8, i8* %20
   %22 = zext i8 %21 to i64
-  %23 = getelementptr inbounds [256 x i32], [256 x i32]* @lL7, i64 0, i64 %22
+  %23 = getelementptr inbounds [256 x i32], [256 x i32]* @TL, i64 0, i64 %22
   %24 = load i32, i32* %23
   %25 = add nsw i32 %24, 1
   store i32 %25, i32* %23
@@ -51,7 +51,7 @@ define dso_local i32 @Zwm9(i8* %0, i8* %1) {
   %40 = getelementptr inbounds i8, i8* %37, i64 %39
   %41 = load i8, i8* %40
   %42 = zext i8 %41 to i64
-  %43 = getelementptr inbounds [256 x i32], [256 x i32]* @lL7, i64 0, i64 %42
+  %43 = getelementptr inbounds [256 x i32], [256 x i32]* @TL, i64 0, i64 %42
   %44 = load i32, i32* %43
   %45 = add nsw i32 %44, -1
   store i32 %45, i32* %43
@@ -69,7 +69,7 @@ define dso_local i32 @Zwm9(i8* %0, i8* %1) {
 52:
   %53 = load i32, i32* %6
   %54 = sext i32 %53 to i64
-  %55 = getelementptr inbounds [256 x i32], [256 x i32]* @lL7, i64 0, i64 %54
+  %55 = getelementptr inbounds [256 x i32], [256 x i32]* @TL, i64 0, i64 %54
   %56 = load i32, i32* %55
   %57 = icmp ne i32 %56, 0
   br i1 %57, label %58, label %59
@@ -120,7 +120,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   %13 = load i8**, i8*** %5
   %14 = getelementptr inbounds i8*, i8** %13, i64 2
   %15 = load i8*, i8** %14
-  %16 = call i32 @Zwm9(i8* %12, i8* %15)
+  %16 = call i32 @pF(i8* %12, i8* %15)
   %17 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str, i64 0, i64 0), i32 %16)
   store i32 0, i32* %3
   br label %18

@@ -1,9 +1,9 @@
-int A(const void  *NIz,  const void   *OSW)   {
-  return   (*(int*)NIz -  *(int*)OSW);
+int AI(const void *fwo4, const void *Qv) {
+    return (*(int*)fwo4 - *(int*)Qv);
 }
 
-int   jIa(int   HXb4[],  int II,  int kifW)  {
- int  *d1 =   (int*)bsearch(&kifW,  HXb4,   II, sizeof(int),   A);
- if (d1 == NULL)  return -1;
-   return   (int)(d1   - HXb4);
+int xsn(int J0WP[], int h, int Cp5) {
+    int *cR = (int*)bsearch(&Cp5, J0WP, h, sizeof(int), AI);
+    if (cR == NULL) return -1;
+    return (int)(cR - J0WP);
 }

@@ -1,12 +1,12 @@
-int   l(int   Ry7[],   int   QGEe0,  int   uvM5)   {
- int   iNj3  =  0;
-Yqau1:
-  if (iNj3   >=  QGEe0)   goto  Hr;
-   if   (Ry7[iNj3]   == uvM5) goto  KCM;
-   iNj3++;
-   goto   Yqau1;
-KCM:
-  return iNj3;
-Hr:
-  return   -1;
+int H(int xI[], int k1, int TosZ) {
+    int xv = 0;
+nJUp:
+    if (xv >= k1) goto c;
+    if (xI[xv] == TosZ) goto W;
+    xv++;
+    goto nJUp;
+W:
+    return xv;
+c:
+    return -1;
 }

@@ -4,34 +4,32 @@
  * File: A18_F12_O_A01_DoubleArray.c
  * Implementation Logic: Bubble sort using redundant temp array copy.
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-void  fjVX(int   lx5[],   int   hfj)  {
- int  *EHS3  = (int*)malloc(hfj * sizeof(int));
-  memcpy(EHS3,   lx5,   hfj  *   sizeof(int));
-   for  (int K   =  0; K   <  hfj  -  1;   K++)   {
- for  (int  Yp   =   0; Yp <   hfj   -  K  - 1;  Yp++) {
-  if  (EHS3[Yp]  >  EHS3[Yp+1]) {
- int  p   = EHS3[Yp]; EHS3[Yp]  = EHS3[Yp+1];  EHS3[Yp+1]  =   p;
- }
- }
-   }
- memcpy(lx5, EHS3,   hfj  *   sizeof(int));
-   free(EHS3);
+void GvQk(int w5uJ[], int xAW) {
+    int *UuMp = (int*)malloc(xAW * sizeof(int));
+    memcpy(UuMp, w5uJ, xAW * sizeof(int));
+    for (int yX = 0; yX < xAW - 1; yX++) {
+        for (int x9C = 0; x9C < xAW - yX - 1; x9C++) {
+            if (UuMp[x9C] > UuMp[x9C+1]) {
+                int zaUc = UuMp[x9C]; UuMp[x9C] = UuMp[x9C+1]; UuMp[x9C+1] = zaUc;
+            }
+        }
+    }
+    memcpy(w5uJ, UuMp, xAW * sizeof(int));
+    free(UuMp);
 }
 
-int main(int argc,   char  *argv[]) {
- if  (argc  < 2) return 0;
-   int  hfj  =   argc   -   1;
-  int *lx5  = (int*)malloc(hfj  *   sizeof(int));
-   for (int   K  = 0;   K   <  hfj;   K++) lx5[K] =  atoi(argv[K+1]);
-  fjVX(lx5, hfj);
-  for   (int  K   =   0; K   <   hfj;   K++)  printf("%d ", lx5[K]);
- printf("\n");
- free(lx5);
-   return 0;
+int main(int MbH, char *ta[]) {
+    if (MbH < 2) return 0;
+    int xAW = MbH - 1;
+    int *w5uJ = (int*)malloc(xAW * sizeof(int));
+    for (int yX = 0; yX < xAW; yX++) w5uJ[yX] = atoi(ta[yX+1]);
+    GvQk(w5uJ, xAW);
+    for (int yX = 0; yX < xAW; yX++) printf("%d ", w5uJ[yX]);
+    printf("\n");
+    free(w5uJ);
+    return 0;
 }

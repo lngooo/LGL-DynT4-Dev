@@ -1,5 +1,5 @@
 @.str = constant [65 x i8] c"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/\00"
-define dso_local void @HcQe2(i8* %0, i32 %1, i8* %2) {
+define dso_local void @w9(i8* %0, i32 %1, i8* %2) {
   %4 = alloca i8*
   %5 = alloca i32
   %6 = alloca i8*

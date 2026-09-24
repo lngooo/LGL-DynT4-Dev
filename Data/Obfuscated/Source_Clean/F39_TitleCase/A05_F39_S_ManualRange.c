@@ -1,10 +1,10 @@
-void   f9(char* Q) {
- for (int K  = 0; Q[K]; K++)   {
-   int oG   =   (K   ==   0  || Q[K-1]  ==  ' ');
-  if   (oG)   {
- if  (Q[K]  >= 'a'   &&  Q[K] <= 'z')   Q[K]   = Q[K]  -   'a'  + 'A';
-   }   else  {
- if  (Q[K]   >=   'A' && Q[K]  <=   'Z')  Q[K]  =  Q[K]   - 'A'  +  'a';
-   }
-   }
+void DD4(char* S) {
+    for (int a6 = 0; S[a6]; a6++) {
+        int hfZw = (a6 == 0 || S[a6-1] == ' ');
+        if (hfZw) {
+            if (S[a6] >= 'a' && S[a6] <= 'z') S[a6] = S[a6] - 'a' + 'A';
+        } else {
+            if (S[a6] >= 'A' && S[a6] <= 'Z') S[a6] = S[a6] - 'A' + 'a';
+        }
+    }
 }

@@ -1,8 +1,8 @@
-int   Bax(int   GH, int  exp,  int l)  {
-  if   (exp <=   0)  return   l;
-  return  Bax(GH,  exp  -  1,   l  *   GH);
+int MyN(int Lhww, int exp, int Nl0R) {
+    if (exp <= 0) return Nl0R;
+    return MyN(Lhww, exp - 1, Nl0R * Lhww);
 }
 
-int  KOFl3(int GH, int  exp)  {
-  return Bax(GH,   exp,   1);
+int NLf(int Lhww, int exp) {
+    return MyN(Lhww, exp, 1);
 }

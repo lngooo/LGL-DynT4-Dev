@@ -1,17 +1,17 @@
-void   j(int   VLW2, char*  mmZ)   {
-  long  long   N   =  VLW2;
- mmZ[0] = '\0';
-  while(N  >=  1000LL)  {   strcat(mmZ,   "M");   N   -= 1000; }
-   if(N  >= 900LL)   { strcat(mmZ, "CM"); N  -= 900;   }
-  if(N >=  500LL)   {   strcat(mmZ, "D");  N   -= 500; }
-   if(N >=  400LL)   {  strcat(mmZ,  "CD");  N -=   400;  }
-   while(N  >=  100LL)  {  strcat(mmZ, "C");  N  -=  100;   }
- if(N   >=  90LL)  { strcat(mmZ, "XC");  N   -=  90;   }
-   if(N   >=   50LL)  {   strcat(mmZ, "L");  N -=  50; }
- if(N >=   40LL)  {  strcat(mmZ,   "XL");  N -=  40;  }
-  while(N  >=  10LL)   {   strcat(mmZ, "X"); N -= 10;  }
- if(N >= 9LL)  {  strcat(mmZ, "IX");   N -=  9;   }
-   if(N  >=  5LL)   {   strcat(mmZ, "V");  N   -=  5;  }
-  if(N   >= 4LL)   { strcat(mmZ,   "IV"); N  -=  4;   }
-   while(N   >= 1LL)   { strcat(mmZ,  "I");   N  -=   1;  }
+void k(int eG, char* z) {
+    long long P = eG;
+    z[0] = '\0';
+    while(P >= 1000LL) { strcat(z, "M"); P -= 1000; }
+    if(P >= 900LL) { strcat(z, "CM"); P -= 900; }
+    if(P >= 500LL) { strcat(z, "D"); P -= 500; }
+    if(P >= 400LL) { strcat(z, "CD"); P -= 400; }
+    while(P >= 100LL) { strcat(z, "C"); P -= 100; }
+    if(P >= 90LL) { strcat(z, "XC"); P -= 90; }
+    if(P >= 50LL) { strcat(z, "L"); P -= 50; }
+    if(P >= 40LL) { strcat(z, "XL"); P -= 40; }
+    while(P >= 10LL) { strcat(z, "X"); P -= 10; }
+    if(P >= 9LL) { strcat(z, "IX"); P -= 9; }
+    if(P >= 5LL) { strcat(z, "V"); P -= 5; }
+    if(P >= 4LL) { strcat(z, "IV"); P -= 4; }
+    while(P >= 1LL) { strcat(z, "I"); P -= 1; }
 }

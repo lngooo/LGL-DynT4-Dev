@@ -1,9 +1,9 @@
-void  sR0(int S[],   int FWHl9,  int  tY)   {
- if  (FWHl9 ==  0)  return;
-  tY  %=  FWHl9;
- int *PUe7 = malloc(tY *  sizeof(int));
-   memcpy(PUe7,  S,  tY   *   sizeof(int));
-   memmove(S, S +   tY, (FWHl9   -  tY) *  sizeof(int));
- memcpy(S  + (FWHl9   -  tY), PUe7,  tY  *  sizeof(int));
- free(PUe7);
+void mC(int zn[], int B4y, int xq) {
+    if (B4y == 0) return;
+    xq %= B4y;
+    int *s = malloc(xq * sizeof(int));
+    memcpy(s, zn, xq * sizeof(int));
+    memmove(zn, zn + xq, (B4y - xq) * sizeof(int));
+    memcpy(zn + (B4y - xq), s, xq * sizeof(int));
+    free(s);
 }

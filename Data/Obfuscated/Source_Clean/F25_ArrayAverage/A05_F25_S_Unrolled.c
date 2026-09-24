@@ -1,8 +1,8 @@
-double AQ(int   YAQW[], int lei6)   {
- if   (lei6 <=  0)  return   0.0;
-  double SNp   =   0;
-   int   kFus  =   0;
-  for   (;  kFus   <= lei6  -   2;  kFus +=  2) SNp += (YAQW[kFus]  +   YAQW[kFus+1]);
-  if  (kFus <   lei6) SNp +=  YAQW[kFus];
-   return   SNp  / lei6;
+double fVm(int dno[], int LW) {
+    if (LW <= 0) return 0.0;
+    double DgI4 = 0;
+    int u = 0;
+    for (; u <= LW - 2; u += 2) DgI4 += (dno[u] + dno[u+1]);
+    if (u < LW) DgI4 += dno[u];
+    return DgI4 / LW;
 }

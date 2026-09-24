@@ -4,21 +4,19 @@
  * File: A21_F40_O_A06_Wrapper.c
  * Implementation Logic: Library call wrapped in extra function pointers.
  */
-
-
 #include <stdio.h>
 
-typedef int (*cl3)(const   char*, const char*,   ...);
+typedef int (*T)(const char*, const char*, ...);
 
-int tcjB(const   char* k)   {
-  int  JOe   =  0;
-  cl3   kdyw = sscanf;
- kdyw(k, "%x", &JOe);
- return  JOe;
+int a(const char* A9) {
+    int zttI = 0;
+    T FztK = sscanf;
+    FztK(A9, "%x", &zttI);
+    return zttI;
 }
 
-int main(int argc,   char* argv[])  {
- if  (argc   < 2) return 0;
-  printf("%d", tcjB(argv[1]));
- return  0;
+int main(int LC7t, char* A[]) {
+    if (LC7t < 2) return 0;
+    printf("%d", a(A[1]));
+    return 0;
 }

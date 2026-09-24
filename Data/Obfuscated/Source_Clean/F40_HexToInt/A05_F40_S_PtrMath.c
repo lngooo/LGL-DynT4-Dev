@@ -1,12 +1,12 @@
-int bl6(const char*  G) {
- int  hB =  (int)strlen(G);
-  int   xM   =  0;
- int WWmh3  =  1;
-   for   (int   U3   =   hB -  1;  U3   >=  0;   U3--) {
-   int Cq4   = (G[U3]   | 32);
-  Cq4  =   (Cq4   >=   'a')   ? (Cq4  -  'a' +   10)   : (Cq4 -   '0');
- xM  +=   Cq4   * WWmh3;
-  WWmh3   *= 16;
-   }
-   return  xM;
+int o5(const char* DCiK) {
+    int zRuA = (int)strlen(DCiK);
+    int mD = 0;
+    int h = 1;
+    for (int dP0 = zRuA - 1; dP0 >= 0; dP0--) {
+        int W = (DCiK[dP0] | 32);
+        W = (W >= 'a') ? (W - 'a' + 10) : (W - '0');
+        mD += W * h;
+        h *= 16;
+    }
+    return mD;
 }

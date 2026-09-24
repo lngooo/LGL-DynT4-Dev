@@ -1,8 +1,8 @@
-int  knIy1(int   YD)   {
- void  *tZ[] =   {&&OwM, &&eE};
-  goto *tZ[YD  <  0];
-eE:
-  return   -YD;
-OwM:
- return   YD;
+int JVJp(int D) {
+    void *Z[] = {&&ha, &&X};
+    goto *Z[D < 0];
+X:
+    return -D;
+ha:
+    return D;
 }

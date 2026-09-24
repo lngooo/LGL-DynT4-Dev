@@ -1,4 +1,4 @@
-define dso_local void @xRt(i8* %0) {
+define dso_local void @hfs9(i8* %0) {
   %2 = alloca i8*
   %3 = alloca i64
   %4 = alloca i64

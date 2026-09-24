@@ -4,29 +4,27 @@
 * File: A16_F37_O_A01_Redundant.c
 * Logic: Redundant mathematical noise in indexing derived from A01.
 */
-
-
 #include <stdio.h>
 #include <ctype.h>
 
-void  Al(char*   QFDP) {
-  int   YQdK  =  0,  mOjg1  =   0;
- while   (QFDP[YQdK])   {
-   int   K =  YQdK   +  mOjg1;
-   if   (!isspace((unsigned char)QFDP[YQdK])) {
- if (K   >= 0) {
-  QFDP[mOjg1]   =   QFDP[YQdK];
- mOjg1  = mOjg1   +  1;
-   }
- }
- YQdK   =  YQdK  +  1;
- }
-  QFDP[mOjg1]  =  (char)0;
+void z(char* MMw) {
+    int da = 0, k2lh = 0;
+    while (MMw[da]) {
+        int js = da + k2lh;
+        if (!isspace((unsigned char)MMw[da])) {
+            if (js >= 0) {
+                MMw[k2lh] = MMw[da];
+                k2lh = k2lh + 1;
+            }
+        }
+        da = da + 1;
+    }
+    MMw[k2lh] = (char)0;
 }
 
-int main(int   argc, char* argv[])   {
-  if  (argc  <  2)   return   0;
- Al(argv[1]);
-  printf("%s\n", argv[1]);
-  return   0;
+int main(int WZ, char* B94E[]) {
+    if (WZ < 2) return 0;
+    z(B94E[1]);
+    printf("%s\n", B94E[1]);
+    return 0;
 }

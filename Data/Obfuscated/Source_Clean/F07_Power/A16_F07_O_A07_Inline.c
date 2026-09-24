@@ -1,8 +1,8 @@
-int fJLb(int   Ih, int exp)  {
-   int EK  =   1;
-   asKU:
-   if  (exp   <= 0)  return   EK;
-  EK  *=  Ih;
-   exp--;
-  goto  asKU;
+int Pt(int rf, int exp) {
+    int qfx = 1;
+    dz:
+    if (exp <= 0) return qfx;
+    qfx *= rf;
+    exp--;
+    goto dz;
 }

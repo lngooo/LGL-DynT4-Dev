@@ -5,30 +5,28 @@
  * Implementation Logic: A01_F49_S_IterativeBasic
  * Input Format: <string> <shift_int>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
 
-void y(char  *SXQi,  int   M)  {
+void Vy(char *V, int bix) {
 
- int UolQ7   = 0;
- int  snN6 = (M %  26  + 26)   %  26;
-  while  (SXQi[UolQ7] !=  '\0') {
-   if   (SXQi[UolQ7]   >= 'a'   && SXQi[UolQ7]  <= 'z')   SXQi[UolQ7]  =   (SXQi[UolQ7]  - 'a'   +   snN6)   %  26  +   'a';
-  else  if   (SXQi[UolQ7] >= 'A' &&   SXQi[UolQ7] <= 'Z')  SXQi[UolQ7] =   (SXQi[UolQ7]   -  'A' + snN6)   % 26   +   'A';
-   UolQ7++;
-   }
+    int J6Ca = 0;
+    int yH = (bix % 26 + 26) % 26;
+    while (V[J6Ca] != '\0') {
+        if (V[J6Ca] >= 'a' && V[J6Ca] <= 'z') V[J6Ca] = (V[J6Ca] - 'a' + yH) % 26 + 'a';
+        else if (V[J6Ca] >= 'A' && V[J6Ca] <= 'Z') V[J6Ca] = (V[J6Ca] - 'A' + yH) % 26 + 'A';
+        J6Ca++;
+    }
 }
 
-int   main(int  argc,  char  *argv[])   {
-   if (argc <  3)  {
- return  1;
-  }
-   int  M   =   atoi(argv[2]);
-  y(argv[1],  M);
- printf("%s\n",  argv[1]);
-   return  0;
+int main(int dv70, char *z[]) {
+    if (dv70 < 3) {
+        return 1;
+    }
+    int bix = atoi(z[2]);
+    Vy(z[1], bix);
+    printf("%s\n", z[1]);
+    return 0;
 }

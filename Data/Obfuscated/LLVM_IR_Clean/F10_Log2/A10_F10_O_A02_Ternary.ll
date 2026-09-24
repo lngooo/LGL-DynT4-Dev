@@ -1,4 +1,4 @@
-define dso_local i32 @hB(i32 %0) {
+define dso_local i32 @h(i32 %0) {
   %2 = alloca i32
   store i32 %0, i32* %2
   %3 = load i32, i32* %2
@@ -9,7 +9,7 @@ define dso_local i32 @hB(i32 %0) {
 6:
   %7 = load i32, i32* %2
   %8 = ashr i32 %7, 1
-  %9 = call i32 @hB(i32 %8)
+  %9 = call i32 @h(i32 %8)
   %10 = add nsw i32 1, %9
   br label %11
 11:

@@ -1,5 +1,5 @@
 @.str = constant [4 x i8] c"%d\0A\00"
-define dso_local i32 @QOH(i8* %0, i32 %1) {
+define dso_local i32 @w0G(i8* %0, i32 %1) {
   %3 = alloca i32
   %4 = alloca i8*
   %5 = alloca i32
@@ -28,7 +28,7 @@ define dso_local i32 @QOH(i8* %0, i32 %1) {
 22:
   %23 = load i8*, i8** %4
   %24 = getelementptr inbounds i8, i8* %23, i64 1
-  %25 = call i32 @QOH(i8* %24, i32 0)
+  %25 = call i32 @w0G(i8* %24, i32 0)
   store i32 %25, i32* %3
   br label %38
 26:
@@ -38,14 +38,14 @@ define dso_local i32 @QOH(i8* %0, i32 %1) {
 29:
   %30 = load i8*, i8** %4
   %31 = getelementptr inbounds i8, i8* %30, i64 1
-  %32 = call i32 @QOH(i8* %31, i32 1)
+  %32 = call i32 @w0G(i8* %31, i32 1)
   %33 = add nsw i32 1, %32
   store i32 %33, i32* %3
   br label %38
 34:
   %35 = load i8*, i8** %4
   %36 = getelementptr inbounds i8, i8* %35, i64 1
-  %37 = call i32 @QOH(i8* %36, i32 1)
+  %37 = call i32 @w0G(i8* %36, i32 1)
   store i32 %37, i32* %3
   br label %38
 38:
@@ -53,11 +53,11 @@ define dso_local i32 @QOH(i8* %0, i32 %1) {
   ret i32 %39
 }
 declare i16** @__ctype_b_loc()
-define dso_local i32 @AZfX8(i8* %0) {
+define dso_local i32 @Gka(i8* %0) {
   %2 = alloca i8*
   store i8* %0, i8** %2
   %3 = load i8*, i8** %2
-  %4 = call i32 @QOH(i8* %3, i32 0)
+  %4 = call i32 @w0G(i8* %3, i32 0)
   ret i32 %4
 }
 define dso_local i32 @main(i32 %0, i8** %1) {
@@ -77,7 +77,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   %10 = load i8**, i8*** %5
   %11 = getelementptr inbounds i8*, i8** %10, i64 1
   %12 = load i8*, i8** %11
-  %13 = call i32 @AZfX8(i8* %12)
+  %13 = call i32 @Gka(i8* %12)
   %14 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str, i64 0, i64 0), i32 %13)
   store i32 0, i32* %3
   br label %15

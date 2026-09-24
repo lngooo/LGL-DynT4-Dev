@@ -1,10 +1,10 @@
-@Vtl.DalQ = internal global i32* null
-@Vtl.fWez0 = internal global i32 0
+@T.P = internal global i32* null
+@T.GZt = internal global i32 0
 @.str = constant [5 x i8] c"%d%s\00"
 @.str.1 = constant [1 x i8] zeroinitializer
 @.str.2 = constant [2 x i8] c" \00"
 @.str.3 = constant [2 x i8] c"\0A\00"
-define dso_local void @Vtl(i32* %0, i32 %1, i32 %2) {
+define dso_local void @T(i32* %0, i32 %1, i32 %2) {
   %4 = alloca i32*
   %5 = alloca i32
   %6 = alloca i32
@@ -23,13 +23,13 @@ define dso_local void @Vtl(i32* %0, i32 %1, i32 %2) {
   %15 = icmp sgt i32 %14, 0
   br i1 %15, label %16, label %22
 16:
-  %17 = load i32, i32* @Vtl.fWez0
+  %17 = load i32, i32* @T.GZt
   %18 = icmp ne i32 %17, 0
   br i1 %18, label %22, label %19
 19:
   %20 = call noalias i8* @malloc(i64 1024)
-  store i32* %21, i32** @Vtl.DalQ
-  store i32 1, i32* @Vtl.fWez0
+  store i32* %21, i32** @T.P
+  store i32 1, i32* @T.GZt
   br label %22
 22:
   %23 = load i32, i32* %5
@@ -47,12 +47,12 @@ define dso_local void @Vtl(i32* %0, i32 %1, i32 %2) {
   %34 = load i32*, i32** %4
   %35 = load i32, i32* %5
   %36 = load i32, i32* %7
-  call void @Vtl(i32* %34, i32 %35, i32 %36)
+  call void @T(i32* %34, i32 %35, i32 %36)
   %37 = load i32*, i32** %4
   %38 = load i32, i32* %7
   %39 = add nsw i32 %38, 1
   %40 = load i32, i32* %6
-  call void @Vtl(i32* %37, i32 %39, i32 %40)
+  call void @T(i32* %37, i32 %39, i32 %40)
   %42 = load i32, i32* %5
   store i32 %42, i32* %8
   %44 = load i32, i32* %7
@@ -107,7 +107,7 @@ define dso_local void @Vtl(i32* %0, i32 %1, i32 %2) {
   br label %84
 84:
   %85 = phi i32 [ %76, %70 ], [ %83, %77 ]
-  %86 = load i32*, i32** @Vtl.DalQ
+  %86 = load i32*, i32** @T.P
   %87 = load i32, i32* %10
   %88 = add nsw i32 %87, 1
   store i32 %88, i32* %10
@@ -130,7 +130,7 @@ define dso_local void @Vtl(i32* %0, i32 %1, i32 %2) {
   %100 = sext i32 %98 to i64
   %101 = getelementptr inbounds i32, i32* %97, i64 %100
   %102 = load i32, i32* %101
-  %103 = load i32*, i32** @Vtl.DalQ
+  %103 = load i32*, i32** @T.P
   %104 = load i32, i32* %10
   %105 = add nsw i32 %104, 1
   store i32 %105, i32* %10
@@ -153,7 +153,7 @@ define dso_local void @Vtl(i32* %0, i32 %1, i32 %2) {
   %117 = sext i32 %115 to i64
   %118 = getelementptr inbounds i32, i32* %114, i64 %117
   %119 = load i32, i32* %118
-  %120 = load i32*, i32** @Vtl.DalQ
+  %120 = load i32*, i32** @T.P
   %121 = load i32, i32* %10
   %122 = add nsw i32 %121, 1
   store i32 %122, i32* %10
@@ -171,7 +171,7 @@ define dso_local void @Vtl(i32* %0, i32 %1, i32 %2) {
   %130 = icmp sle i32 %128, %129
   br i1 %130, label %131, label %144
 131:
-  %132 = load i32*, i32** @Vtl.DalQ
+  %132 = load i32*, i32** @T.P
   %133 = load i32, i32* %8
   %134 = sext i32 %133 to i64
   %135 = getelementptr inbounds i32, i32* %132, i64 %134
@@ -203,7 +203,7 @@ define dso_local void @Vtl(i32* %0, i32 %1, i32 %2) {
   %159 = icmp ne i32 %158, 0
   br i1 %159, label %161, label %160
 160:
-  store i32 0, i32* @Vtl.fWez0
+  store i32 0, i32* @T.GZt
   br label %161
 161:
   ret void
@@ -267,7 +267,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   %46 = load i32*, i32** %7
   %47 = load i32, i32* %6
   %48 = sub nsw i32 %47, 1
-  call void @Vtl(i32* %46, i32 0, i32 %48)
+  call void @T(i32* %46, i32 0, i32 %48)
   store i32 0, i32* %9
   br label %50
 50:

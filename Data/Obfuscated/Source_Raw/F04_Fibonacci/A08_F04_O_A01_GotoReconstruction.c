@@ -5,34 +5,32 @@
  * Implementation Logic: GotoReconstruction
  * Input Format: <arg1>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-long di4(int xOA)   {
-   long  G   =  0,   qd   =   1,   jJNi6;
-  int fBd  = 2;
-   if   (xOA == 0) return   0;
-  if (xOA  ==   1) return  1;
-   qyT:
-   if  (fBd  >   xOA) goto   KDCz;
-  jJNi6   = G   + qd;  G = qd;   qd = jJNi6;   fBd++;
- goto   qyT;
-  KDCz: return qd;
+long S6xf(int gpBL) {
+    long Hfz3 = 0, Vvo = 1, Xke;
+    int H = 2;
+    if (gpBL == 0) return 0;
+    if (gpBL == 1) return 1;
+    Xw:
+    if (H > gpBL) goto U90;
+    Xke = Hfz3 + Vvo; Hfz3 = Vvo; Vvo = Xke; H++;
+    goto Xw;
+    U90: return Vvo;
 }
 
-int   main(int   argc, char   *argv[])   {
- if   (argc   <   2)  {
-   return 1;
-   }
-   int  xOA   =  atoi(argv[1]);
-   if   (xOA  < 0) {
- printf("0\n");
-   return  0;
-   }
-  long   jb3 =   di4(xOA);
-   printf("%ld\n",  jb3);
-  return  0;
+int main(int pg, char *qm[]) {
+    if (pg < 2) {
+        return 1;
+    }
+    int gpBL = atoi(qm[1]);
+    if (gpBL < 0) {
+        printf("0\n");
+        return 0;
+    }
+    long Mj = S6xf(gpBL);
+    printf("%ld\n", Mj);
+    return 0;
 }

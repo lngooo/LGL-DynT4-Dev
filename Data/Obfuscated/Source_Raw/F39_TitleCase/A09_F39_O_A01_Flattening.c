@@ -5,26 +5,24 @@
  * Implementation Logic: Control Flow Flattening of A01 using switch-case state variable.
  * Input Format: <string>
  */
-
-
 #include <stdio.h>
 #include <ctype.h>
 
-void vt(char*   sw)  {
-   int SVn =  1,   dk9   =   0,  lfD  =  1;
-   while (SVn !=   0)   {
-   switch (SVn)  {
-  case 1:   if (sw[dk9]  ==  '\0') SVn  = 0;   else   SVn  =   2;  break;
-   case  2:   if  (isspace(sw[dk9]))  {   lfD  = 1;  SVn   =  5;   } else  SVn   = 3;   break;
-  case   3:  if   (lfD)  { sw[dk9] =   toupper(sw[dk9]);   lfD =  0;  }  else   sw[dk9]   =   tolower(sw[dk9]);  SVn = 5;  break;
-  case 5:   dk9++;  SVn   = 1; break;
-   }
-  }
+void G(char* kU) {
+    int kadl = 1, Ns = 0, O7 = 1;
+    while (kadl != 0) {
+        switch (kadl) {
+            case 1: if (kU[Ns] == '\0') kadl = 0; else kadl = 2; break;
+            case 2: if (isspace(kU[Ns])) { O7 = 1; kadl = 5; } else kadl = 3; break;
+            case 3: if (O7) { kU[Ns] = toupper(kU[Ns]); O7 = 0; } else kU[Ns] = tolower(kU[Ns]); kadl = 5; break;
+            case 5: Ns++; kadl = 1; break;
+        }
+    }
 }
 
-int main(int argc, char*  argv[])   {
-   if   (argc   <  2) return  0;
- vt(argv[1]);
-  printf("%s",   argv[1]);
-  return 0;
+int main(int iQ, char* dq[]) {
+    if (iQ < 2) return 0;
+    G(dq[1]);
+    printf("%s", dq[1]);
+    return 0;
 }

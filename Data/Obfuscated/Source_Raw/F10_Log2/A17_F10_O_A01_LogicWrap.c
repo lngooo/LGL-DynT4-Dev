@@ -5,27 +5,25 @@
  * Implementation Logic: LogicWrap
  * Input Format: <integer>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-int   VSy(int ye)   {
- int   BGd  = 0;
-   for   (;  ye   >   1;   ye  >>= 1)  {
-   int   TEl = 0;
-   for(int   VDs=0;  VDs<1;   VDs++) TEl++;
- BGd   +=   TEl;
-  }
- return   BGd;
+int hgWQ(int av) {
+    int O9Z = 0;
+    for (; av > 1; av >>= 1) {
+        int JHx = 0;
+        for(int c=0; c<1; c++) JHx++;
+        O9Z += JHx;
+    }
+    return O9Z;
 }
 
-int  main(int  argc, char  *argv[])  {
-   if  (argc   <  2)   return  0;
- int  ye   = atoi(argv[1]);
-  if (ye  <=   0)  return 0; 
- int  Avn  =  VSy(ye);
-   printf("%d\n",   Avn);
-  return   0;
+int main(int Fi, char *gqNm[]) {
+    if (Fi < 2) return 0;
+    int av = atoi(gqNm[1]);
+    if (av <= 0) return 0; 
+    int h7 = hgWQ(av);
+    printf("%d\n", h7);
+    return 0;
 }

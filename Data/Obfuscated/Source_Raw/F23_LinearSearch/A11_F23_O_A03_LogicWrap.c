@@ -5,31 +5,29 @@
  * Implementation Logic: LogicWrap
  * Input Format: <target> <val1> <val2> ...
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-int  i0(int  z[], int kb5,   int y)   {
-   if  (kb5   <= 0)   return   -1;
-   int  gi2  = z[kb5-1],  QxZ  =  -1;
- z[kb5-1]  =  y;
- while  (z[++QxZ]   !=   y);
- z[kb5-1]  =  gi2;
-  if   (QxZ  ==   kb5  -  1)  return  (gi2  ==   y)  ?   QxZ  :   -1;
-  return  QxZ;
+int g(int Seyi[], int k, int C3) {
+    if (k <= 0) return -1;
+    int c = Seyi[k-1], FkOZ = -1;
+    Seyi[k-1] = C3;
+    while (Seyi[++FkOZ] != C3);
+    Seyi[k-1] = c;
+    if (FkOZ == k - 1) return (c == C3) ? FkOZ : -1;
+    return FkOZ;
 }
 
-int   main(int argc,  char *argv[])   {
-  if  (argc <  3)  return   1;
-   int   y  =  atoi(argv[1]);
-  int S5 =  argc   -   2;
- int  z[100];
-   for (int  QxZ  =   0;  QxZ <  S5; QxZ++)  {
-  z[QxZ]  =   atoi(argv[QxZ  +   2]);
-  }
- int   DHX   = i0(z,  S5,   y);
-  printf("%d\n",  DHX);
- return   0;
+int main(int iV3J, char *zash[]) {
+    if (iV3J < 3) return 1;
+    int C3 = atoi(zash[1]);
+    int sU74 = iV3J - 2;
+    int Seyi[100];
+    for (int FkOZ = 0; FkOZ < sU74; FkOZ++) {
+        Seyi[FkOZ] = atoi(zash[FkOZ + 2]);
+    }
+    int HuN = g(Seyi, sU74, C3);
+    printf("%d\n", HuN);
+    return 0;
 }

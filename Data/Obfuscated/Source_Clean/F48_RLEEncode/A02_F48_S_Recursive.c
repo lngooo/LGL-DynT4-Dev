@@ -1,9 +1,9 @@
-void  Xcvp(const char *tcR,   char *z) {
-   if   (*tcR   == '\0')   return;
- int r = 1;
-  while   (tcR[r] !=   '\0' && tcR[r]   == tcR[0])  r++;
-   char   BhO[16];
- sprintf(BhO,  "%c%d",  tcR[0], r);
-  strcat(z,  BhO);
-   Xcvp(tcR  + r,   z);
+void ut(const char *h, char *wXK) {
+    if (*h == '\0') return;
+    int CbyM = 1;
+    while (h[CbyM] != '\0' && h[CbyM] == h[0]) CbyM++;
+    char eN[16];
+    sprintf(eN, "%c%d", h[0], CbyM);
+    strcat(wXK, eN);
+    ut(h + CbyM, wXK);
 }

@@ -1,5 +1,5 @@
 @.str = constant [4 x i8] c"%d\0A\00"
-define dso_local i32 @HM(i32 %0, i32 %1) {
+define dso_local i32 @sJFc(i32 %0, i32 %1) {
   %3 = alloca i32
   %4 = alloca i32
   store i32 %0, i32* %3
@@ -17,7 +17,7 @@ define dso_local i32 @HM(i32 %0, i32 %1) {
   %15 = xor i32 %5, %14
   ret i32 %15
 }
-define dso_local i32 @jm(i32* %0, i32 %1) {
+define dso_local i32 @qt(i32* %0, i32 %1) {
   %3 = alloca i32*
   %4 = alloca i32
   %5 = alloca i32 (i32, i32)*
@@ -25,7 +25,7 @@ define dso_local i32 @jm(i32* %0, i32 %1) {
   %7 = alloca i32
   store i32* %0, i32** %3
   store i32 %1, i32* %4
-  store i32 (i32, i32)* @HM, i32 (i32, i32)** %5
+  store i32 (i32, i32)* @sJFc, i32 (i32, i32)** %5
   %10 = load i32*, i32** %3
   %11 = getelementptr inbounds i32, i32* %10, i64 0
   %12 = load i32, i32* %11
@@ -115,7 +115,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
 44:
   %45 = load i32*, i32** %7
   %46 = load i32, i32* %6
-  %47 = call i32 @jm(i32* %45, i32 %46)
+  %47 = call i32 @qt(i32* %45, i32 %46)
   %48 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str, i64 0, i64 0), i32 %47)
   %49 = load i32*, i32** %7
   call void @free(i8* %50)

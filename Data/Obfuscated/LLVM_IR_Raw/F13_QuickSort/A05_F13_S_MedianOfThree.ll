@@ -2,7 +2,7 @@
 @.str.1 = constant [1 x i8] zeroinitializer
 @.str.2 = constant [2 x i8] c" \00"
 @.str.3 = constant [2 x i8] c"\0A\00"
-define dso_local void @pOU2(i32* %0, i32 %1, i32 %2) {
+define dso_local void @H9RN(i32* %0, i32 %1, i32 %2) {
   %4 = alloca i32*
   %5 = alloca i32
   %6 = alloca i32
@@ -234,7 +234,7 @@ define dso_local void @pOU2(i32* %0, i32 %1, i32 %2) {
   %202 = load i32*, i32** %4
   %203 = load i32, i32* %5
   %204 = load i32, i32* %13
-  call void @pOU2(i32* %202, i32 %203, i32 %204)
+  call void @H9RN(i32* %202, i32 %203, i32 %204)
   br label %205
 205:
   %206 = load i32, i32* %12
@@ -245,7 +245,7 @@ define dso_local void @pOU2(i32* %0, i32 %1, i32 %2) {
   %210 = load i32*, i32** %4
   %211 = load i32, i32* %12
   %212 = load i32, i32* %6
-  call void @pOU2(i32* %210, i32 %211, i32 %212)
+  call void @H9RN(i32* %210, i32 %211, i32 %212)
   br label %213
 213:
   br label %218
@@ -310,7 +310,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   %46 = load i32*, i32** %7
   %47 = load i32, i32* %6
   %48 = sub nsw i32 %47, 1
-  call void @pOU2(i32* %46, i32 0, i32 %48)
+  call void @H9RN(i32* %46, i32 0, i32 %48)
   store i32 0, i32* %9
   br label %50
 50:

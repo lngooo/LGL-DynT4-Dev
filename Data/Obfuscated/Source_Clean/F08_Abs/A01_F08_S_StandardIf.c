@@ -1,6 +1,6 @@
-int r6(int  U)   {
- if (U <  0)   {
- return   -U;
-  }
-  return  U;
+int Y(int GsOT) {
+    if (GsOT < 0) {
+        return -GsOT;
+    }
+    return GsOT;
 }

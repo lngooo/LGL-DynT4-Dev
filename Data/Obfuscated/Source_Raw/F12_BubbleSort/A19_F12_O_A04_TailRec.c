@@ -4,33 +4,31 @@
  * File: A19_F12_O_A04_TailRec.c
  * Implementation Logic: Bubble sort as tail-recursive single-pass helper.
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-void   IN4(int   Ki[], int  j2)  {
-  if (j2   <= 1) return;
-  for (int   t1   =  0;  t1   <   j2  - 1;  t1++)   {
-  if   (Ki[t1]  >   Ki[t1+1])  {
-  int  BTC   =  Ki[t1];   Ki[t1] =   Ki[t1+1];  Ki[t1+1]   = BTC;
- }
-  }
-   IN4(Ki, j2 -   1);
+void on2(int bX0[], int JGJ) {
+    if (JGJ <= 1) return;
+    for (int gc = 0; gc < JGJ - 1; gc++) {
+        if (bX0[gc] > bX0[gc+1]) {
+            int wjiq = bX0[gc]; bX0[gc] = bX0[gc+1]; bX0[gc+1] = wjiq;
+        }
+    }
+    on2(bX0, JGJ - 1);
 }
 
-void paNf(int   Ki[],  int j2) {
- IN4(Ki, j2);
+void Lpo(int bX0[], int JGJ) {
+    on2(bX0, JGJ);
 }
 
-int main(int argc,  char   *argv[]) {
- if  (argc <   2)  return   0;
- int j2  =   argc  -   1;
-   int   *Ki = (int*)malloc(j2  *   sizeof(int));
-  for (int  t1   =   0;   t1   <  j2;   t1++)   Ki[t1]   = atoi(argv[t1+1]);
-   paNf(Ki, j2);
-   for   (int t1 =   0;   t1 < j2; t1++)  printf("%d ",  Ki[t1]);
-  printf("\n");
- free(Ki);
-   return   0;
+int main(int Ztf, char *K6nU[]) {
+    if (Ztf < 2) return 0;
+    int JGJ = Ztf - 1;
+    int *bX0 = (int*)malloc(JGJ * sizeof(int));
+    for (int gc = 0; gc < JGJ; gc++) bX0[gc] = atoi(K6nU[gc+1]);
+    Lpo(bX0, JGJ);
+    for (int gc = 0; gc < JGJ; gc++) printf("%d ", bX0[gc]);
+    printf("\n");
+    free(bX0);
+    return 0;
 }

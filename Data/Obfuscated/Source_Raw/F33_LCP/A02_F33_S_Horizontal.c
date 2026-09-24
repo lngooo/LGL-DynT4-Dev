@@ -5,29 +5,27 @@
  * Implementation Logic: Horizontal
  * Input Format: <str1> <str2> ...
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
 
-void  R3(char  **Z,  int   kq3,  char *QmX2) {
-   if (kq3  <=  0)   return;
-   strcpy(QmX2,   Z[0]);
- for  (int U =   1;   U  < kq3;   U++)   {
-  int  GQl  =  0;
- while   (QmX2[GQl]  &&   Z[U][GQl] &&  QmX2[GQl]  ==   Z[U][GQl])  GQl++;
- QmX2[GQl]  =   '\0';
-   }
+void Z(char **YMI, int cE, char *IkQ) {
+    if (cE <= 0) return;
+    strcpy(IkQ, YMI[0]);
+    for (int F = 1; F < cE; F++) {
+        int YA = 0;
+        while (IkQ[YA] && YMI[F][YA] && IkQ[YA] == YMI[F][YA]) YA++;
+        IkQ[YA] = '\0';
+    }
 }
 
-int main(int  argc,   char   *argv[])  {
- if (argc  < 2)  return   0;
- int t9   =   argc - 1;
-   char **Z = &argv[1];
- char NOIx4[128] = {0};
-  R3(Z,  t9, NOIx4);
-  printf("%s\n",   NOIx4);
-  return  0;
+int main(int gfG, char *Kr[]) {
+    if (gfG < 2) return 0;
+    int B = gfG - 1;
+    char **YMI = &Kr[1];
+    char wWC[128] = {0};
+    Z(YMI, B, wWC);
+    printf("%s\n", wWC);
+    return 0;
 }

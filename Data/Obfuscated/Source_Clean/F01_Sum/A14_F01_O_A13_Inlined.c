@@ -1,8 +1,8 @@
-int  dHa(int  fXHR)  {
-   int   jBHG  =  0;
-s:
- if (fXHR  <=  0) return  jBHG;
-   jBHG   +=   fXHR;
-  fXHR--;
-  goto s;
+int eGp(int QFn) {
+    int U7 = 0;
+pYEZ:
+    if (QFn <= 0) return U7;
+    U7 += QFn;
+    QFn--;
+    goto pYEZ;
 }

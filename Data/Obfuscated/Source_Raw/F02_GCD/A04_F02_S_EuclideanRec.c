@@ -5,19 +5,17 @@
  * Implementation Logic: Recursive Euclidean algorithm (Seed 2).
  * Input Format: <a> <b>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int SGh7(int   PEs7,   int   btoH)  {
-  PEs7   =   abs(PEs7);   btoH =  abs(btoH);
-   if   (btoH ==  0)   return  PEs7;
-   return SGh7(btoH, PEs7  % btoH);
+int lL9(int cgM, int wUYu) {
+    cgM = abs(cgM); wUYu = abs(wUYu);
+    if (wUYu == 0) return cgM;
+    return lL9(wUYu, cgM % wUYu);
 }
 
-int  main(int   argc, char   *argv[])   {
- if (argc <   3)  return  1;
-   printf("%d\n",   SGh7(atoi(argv[1]),   atoi(argv[2])));
- return  0;
+int main(int MGhy, char *qc[]) {
+    if (MGhy < 3) return 1;
+    printf("%d\n", lL9(atoi(qc[1]), atoi(qc[2])));
+    return 0;
 }

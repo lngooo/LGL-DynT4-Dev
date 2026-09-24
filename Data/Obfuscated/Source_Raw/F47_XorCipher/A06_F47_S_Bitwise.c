@@ -5,36 +5,34 @@
  * Implementation Logic: Bitwise
  * Input Format: <data_string> <key_string>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
 
-void   hk8(char *q0, char *CI4)  {
- int W   = 0;  while(CI4[W])   W++;
- int GuEh  = 0;
- while(q0[GuEh])  {
- int   glw5 =  (unsigned   char)q0[GuEh];
- int  Sc0   =  (unsigned   char)CI4[GuEh  %   W];
-   q0[GuEh]  =   (char)(glw5   ^  Sc0);
-  GuEh++;
-   }
+void k(char *DTI, char *Brd) {
+    int OGY = 0; while(Brd[OGY]) OGY++;
+    int VHH = 0;
+    while(DTI[VHH]) {
+        int VI = (unsigned char)DTI[VHH];
+        int Xu = (unsigned char)Brd[VHH % OGY];
+        DTI[VHH] = (char)(VI ^ Xu);
+        VHH++;
+    }
 }
 
-int  main(int   argc, char   *argv[]) {
- if   (argc   <   3) return 0;
-   char   *q0   = argv[1];
-   char   *CI4  = argv[2];
-  int  sRVM = 0;
- while (q0[sRVM]) sRVM++;
+int main(int TYEi, char *YlbV[]) {
+    if (TYEi < 3) return 0;
+    char *DTI = YlbV[1];
+    char *Brd = YlbV[2];
+    int zEi = 0;
+    while (DTI[zEi]) zEi++;
 
-  hk8(q0,   CI4);
+    k(DTI, Brd);
 
-   for  (int GuEh  =   0;  GuEh < sRVM;   GuEh++)  {
-   printf("%02x", (unsigned  char)q0[GuEh]);
-  }
-   printf("\n");
-  return   0;
+    for (int VHH = 0; VHH < zEi; VHH++) {
+        printf("%02x", (unsigned char)DTI[VHH]);
+    }
+    printf("\n");
+    return 0;
 }

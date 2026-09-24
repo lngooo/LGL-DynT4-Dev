@@ -1,4 +1,4 @@
-define dso_local void @ykB(i8* %0, i32 %1, i32 %2) {
+define dso_local void @g(i8* %0, i32 %1, i32 %2) {
   %4 = alloca i8*
   %5 = alloca i32
   %6 = alloca i32
@@ -45,23 +45,23 @@ define dso_local void @ykB(i8* %0, i32 %1, i32 %2) {
   %39 = add nsw i32 %38, 1
   %40 = load i32, i32* %6
   %41 = add nsw i32 %40, 1
-  call void @ykB(i8* %37, i32 %39, i32 %41)
+  call void @g(i8* %37, i32 %39, i32 %41)
   br label %47
 42:
   %43 = load i8*, i8** %4
   %44 = load i32, i32* %5
   %45 = add nsw i32 %44, 1
   %46 = load i32, i32* %6
-  call void @ykB(i8* %43, i32 %45, i32 %46)
+  call void @g(i8* %43, i32 %45, i32 %46)
   br label %47
 47:
   ret void
 }
 declare i32 @isspace(i32)
-define dso_local void @CK5(i8* %0) {
+define dso_local void @C7Y(i8* %0) {
   %2 = alloca i8*
   store i8* %0, i8** %2
   %3 = load i8*, i8** %2
-  call void @ykB(i8* %3, i32 0, i32 0)
+  call void @g(i8* %3, i32 0, i32 0)
   ret void
 }

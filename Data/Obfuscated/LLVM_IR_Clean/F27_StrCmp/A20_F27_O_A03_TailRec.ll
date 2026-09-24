@@ -1,4 +1,4 @@
-define dso_local i32 @qH3(i8* %0, i8* %1) {
+define dso_local i32 @Pu(i8* %0, i8* %1) {
   %3 = alloca i8*
   %4 = alloca i8*
   store i8* %0, i8** %3
@@ -31,19 +31,19 @@ define dso_local i32 @qH3(i8* %0, i8* %1) {
   %27 = getelementptr inbounds i8, i8* %26, i64 1
   %28 = load i8*, i8** %4
   %29 = getelementptr inbounds i8, i8* %28, i64 1
-  %30 = call i32 @qH3(i8* %27, i8* %29)
+  %30 = call i32 @Pu(i8* %27, i8* %29)
   br label %31
 31:
   %32 = phi i32 [ %24, %17 ], [ %30, %25 ]
   ret i32 %32
 }
-define dso_local i32 @KO(i8* %0, i8* %1) {
+define dso_local i32 @ymw(i8* %0, i8* %1) {
   %3 = alloca i8*
   %4 = alloca i8*
   store i8* %0, i8** %3
   store i8* %1, i8** %4
   %5 = load i8*, i8** %3
   %6 = load i8*, i8** %4
-  %7 = call i32 @qH3(i8* %5, i8* %6)
+  %7 = call i32 @Pu(i8* %5, i8* %6)
   ret i32 %7
 }

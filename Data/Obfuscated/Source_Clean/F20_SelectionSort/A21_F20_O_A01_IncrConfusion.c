@@ -1,8 +1,8 @@
-void  GeKQ7(int   hzbM[], int   w)  {
- int JU =   -1;
- while (++JU   <  w)  {
- int Xs6   = JU,  vq4 =  JU;
-  while (++vq4   < w)  if   (hzbM[vq4]   <   hzbM[Xs6])  Xs6  =  vq4;
- int tgm   = hzbM[JU]; hzbM[JU]  = hzbM[Xs6];   hzbM[Xs6]   =  tgm;
-  }
+void BG8z(int ql[], int R2) {
+    int zgL = -1;
+    while (++zgL < R2) {
+        int kYn = zgL, B4CB = zgL;
+        while (++B4CB < R2) if (ql[B4CB] < ql[kYn]) kYn = B4CB;
+        int uNg = ql[zgL]; ql[zgL] = ql[kYn]; ql[kYn] = uNg;
+    }
 }

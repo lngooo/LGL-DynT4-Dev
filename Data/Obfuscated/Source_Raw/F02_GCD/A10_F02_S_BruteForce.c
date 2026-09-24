@@ -5,23 +5,21 @@
  * Implementation Logic: Brute force search from min(a,b) down to 1 (Seed 5).
  * Input Format: <a> <b>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int  RDQ0(int EE9,  int   HNv) {
-  EE9   =  abs(EE9);   HNv  =  abs(HNv);
- if  (EE9   ==   0 ||  HNv ==  0) return  EE9  | HNv;
- int UCHp6 =  (EE9  <   HNv)  ? EE9 :  HNv;
-   for   (int  xJi = UCHp6;  xJi   >=  1;  xJi--)  {
-  if (EE9 %  xJi   ==  0 && HNv   %  xJi == 0)  return  xJi;
-   }
-   return   1;
+int W5C(int JC5k, int CqWp) {
+    JC5k = abs(JC5k); CqWp = abs(CqWp);
+    if (JC5k == 0 || CqWp == 0) return JC5k | CqWp;
+    int XXH = (JC5k < CqWp) ? JC5k : CqWp;
+    for (int OprC = XXH; OprC >= 1; OprC--) {
+        if (JC5k % OprC == 0 && CqWp % OprC == 0) return OprC;
+    }
+    return 1;
 }
 
-int  main(int  argc,   char *argv[]) {
-  if (argc  <   3)  return  1;
-  printf("%d\n", RDQ0(atoi(argv[1]),  atoi(argv[2])));
- return   0;
+int main(int T, char *prv[]) {
+    if (T < 3) return 1;
+    printf("%d\n", W5C(atoi(prv[1]), atoi(prv[2])));
+    return 0;
 }

@@ -1,12 +1,12 @@
-int  ens(int  RkH6[],  int  cdhw2,  int  cePi,   int  gG2)   {
-   while (!!(cdhw2  <=   cePi)) {
-   int   UIF5   =  RkH6[cePi], e   =  cdhw2;
-   for (int   DUC6   =  cdhw2;   DUC6 <   cePi;  DUC6++)  {
-   if (!!(RkH6[DUC6]  <=   UIF5))  { int   kcC  = RkH6[e];  RkH6[e]  =   RkH6[DUC6]; RkH6[DUC6] = kcC;  e++;  }
-   }
- int  kcC =   RkH6[e];  RkH6[e]   =  RkH6[cePi];   RkH6[cePi]   =   kcC;
-   if (!!(e  == gG2   -   1))  return  RkH6[e];
- if (e   >   gG2 -  1)   cePi  =  e  -  1; else cdhw2  = e  +   1;
-   }
-   return  -1;
+int tDsy(int eviT[], int mj6m, int a, int Fz7) {
+    while (!!(mj6m <= a)) {
+        int zVxy = eviT[a], tPLe = mj6m;
+        for (int c6hy = mj6m; c6hy < a; c6hy++) {
+            if (!!(eviT[c6hy] <= zVxy)) { int mW = eviT[tPLe]; eviT[tPLe] = eviT[c6hy]; eviT[c6hy] = mW; tPLe++; }
+        }
+        int mW = eviT[tPLe]; eviT[tPLe] = eviT[a]; eviT[a] = mW;
+        if (!!(tPLe == Fz7 - 1)) return eviT[tPLe];
+        if (tPLe > Fz7 - 1) a = tPLe - 1; else mj6m = tPLe + 1;
+    }
+    return -1;
 }

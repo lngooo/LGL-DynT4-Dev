@@ -1,3 +1,3 @@
-int  hB(int  es)   {
- return   (es  <=   1)  ?   0 :   1 + hB(es  >> 1);
+int h(int j8fX) {
+    return (j8fX <= 1) ? 0 : 1 + h(j8fX >> 1);
 }

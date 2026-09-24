@@ -1,10 +1,10 @@
-int   L(int  NyIV[],   int   iK) {
-   int   Jq[128], T   =  0;
-  for  (int   aI  =  0; aI   <   iK;  aI++)   {
- int   Fl2 =  NyIV[aI],   BztU = -1, pXvI   =   0;
-   while   (++BztU  <  T)   if  (Jq[BztU]  ==  Fl2)  pXvI  = 1;
-   if (!pXvI)  Jq[T++]   =   Fl2;
-   }
-  for  (int aI  =   0;  aI  <  T; aI++) NyIV[aI] =  Jq[aI];
-  return  T;
+int r(int r8w[], int pu5d) {
+    int ca[128], Q = 0;
+    for (int nsE = 0; nsE < pu5d; nsE++) {
+        int MgB = r8w[nsE], q8 = -1, xvth = 0;
+        while (++q8 < Q) if (ca[q8] == MgB) xvth = 1;
+        if (!xvth) ca[Q++] = MgB;
+    }
+    for (int nsE = 0; nsE < Q; nsE++) r8w[nsE] = ca[nsE];
+    return Q;
 }

@@ -1,7 +1,7 @@
-struct   cB0   {  int  FEdK; };
+struct EDui { int aeq; };
 
-int v1(const   char  *Mlp) {
-  struct   cB0   qSaC   =  {0};
-   while  (Mlp[qSaC.FEdK]) qSaC.FEdK++;
-  return qSaC.FEdK;
+int n7U(const char *d) {
+    struct EDui ijE0 = {0};
+    while (d[ijE0.aeq]) ijE0.aeq++;
+    return ijE0.aeq;
 }

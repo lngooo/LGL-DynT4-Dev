@@ -1,6 +1,6 @@
-@Pbs4.BVR7 = internal constant [11 x i32] [i32 0, i32 1, i32 3, i32 6, i32 10, i32 15, i32 21, i32 28, i32 36, i32 45, i32 55]
+@NZP.Qg8 = internal constant [11 x i32] [i32 0, i32 1, i32 3, i32 6, i32 10, i32 15, i32 21, i32 28, i32 36, i32 45, i32 55]
 @.str = constant [4 x i8] c"%d\0A\00"
-define dso_local i32 @Pbs4(i32 %0) {
+define dso_local i32 @NZP(i32 %0) {
   %2 = alloca i32
   %3 = alloca i32
   store i32 %0, i32* %3
@@ -14,7 +14,7 @@ define dso_local i32 @Pbs4(i32 %0) {
 9:
   %10 = load i32, i32* %3
   %11 = sext i32 %10 to i64
-  %12 = getelementptr inbounds [11 x i32], [11 x i32]* @Pbs4.BVR7, i64 0, i64 %11
+  %12 = getelementptr inbounds [11 x i32], [11 x i32]* @NZP.Qg8, i64 0, i64 %11
   %13 = load i32, i32* %12
   store i32 %13, i32* %2
   br label %20
@@ -48,7 +48,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   %11 = getelementptr inbounds i8*, i8** %10, i64 1
   %12 = load i8*, i8** %11
   %13 = call i32 @atoi(i8* %12)
-  %14 = call i32 @Pbs4(i32 %13)
+  %14 = call i32 @NZP(i32 %13)
   %15 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str, i64 0, i64 0), i32 %14)
   store i32 0, i32* %3
   br label %16

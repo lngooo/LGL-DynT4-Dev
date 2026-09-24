@@ -1,6 +1,6 @@
 @.str = constant [4 x i8] c"%d \00"
 @.str.1 = constant [2 x i8] c"\0A\00"
-define dso_local void @R(i32* %0, i32 %1, i32 %2) {
+define dso_local void @D5YS(i32* %0, i32 %1, i32 %2) {
   %4 = alloca i32*
   %5 = alloca i32
   %6 = alloca i32
@@ -42,12 +42,12 @@ define dso_local void @R(i32* %0, i32 %1, i32 %2) {
   %35 = add nsw i32 %34, 1
   %36 = load i32, i32* %6
   %37 = sub nsw i32 %36, 1
-  call void @R(i32* %33, i32 %35, i32 %37)
+  call void @D5YS(i32* %33, i32 %35, i32 %37)
   br label %39
 39:
   ret void
 }
-define dso_local void @emuf9(i32* %0, i32 %1) {
+define dso_local void @UpTG(i32* %0, i32 %1) {
   %3 = alloca i32*
   %4 = alloca i32
   store i32* %0, i32** %3
@@ -59,7 +59,7 @@ define dso_local void @emuf9(i32* %0, i32 %1) {
   %8 = load i32*, i32** %3
   %9 = load i32, i32* %4
   %10 = sub nsw i32 %9, 1
-  call void @R(i32* %8, i32 0, i32 %10)
+  call void @D5YS(i32* %8, i32 0, i32 %10)
   br label %11
 11:
   ret void
@@ -121,7 +121,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
 45:
   %46 = load i32*, i32** %7
   %47 = load i32, i32* %6
-  call void @emuf9(i32* %46, i32 %47)
+  call void @UpTG(i32* %46, i32 %47)
   store i32 0, i32* %9
   br label %49
 49:

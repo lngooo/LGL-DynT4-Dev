@@ -1,4 +1,4 @@
-define dso_local void @JCjE5(i8** %0, i32 %1, i8* %2) {
+define dso_local void @kWV(i8** %0, i32 %1, i8* %2) {
   %4 = alloca i8**
   %5 = alloca i32
   %6 = alloca i8*

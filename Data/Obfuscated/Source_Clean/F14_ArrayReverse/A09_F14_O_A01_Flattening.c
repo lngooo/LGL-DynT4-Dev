@@ -1,10 +1,10 @@
-void   AwI1(int LhDE9[],   int v)  {
-   int  JA8   = 0, Ke7 = v  -  1, yt   =  0;
-  while  (yt !=  -1)   {
-  switch (yt)   {
-   case   0: yt  =   (JA8  <  Ke7)  ? 1 :   2; break;
-  case 1:   {   int   OO   =  LhDE9[JA8]; LhDE9[JA8] =  LhDE9[Ke7];   LhDE9[Ke7]  =   OO;   JA8++; Ke7--;   yt = 0;   break;  }
-   case  2:   yt  =   -1;  break;
- }
-   }
+void A(int H[], int R) {
+    int woUs = 0, mcb = R - 1, d = 0;
+    while (d != -1) {
+        switch (d) {
+            case 0: d = (woUs < mcb) ? 1 : 2; break;
+            case 1: { int MO = H[woUs]; H[woUs] = H[mcb]; H[mcb] = MO; woUs++; mcb--; d = 0; break; }
+            case 2: d = -1; break;
+        }
+    }
 }

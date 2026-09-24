@@ -4,26 +4,24 @@
 * File: A21_F32_O_A01_LongLong.c
 * Implementation Logic: Uses long long for all counters derived from A01.
 */
-
-
 #include <stdio.h>
 #include <string.h>
 
-void Qn(char* Qrx4)   {
-   long long  x2 = (long   long)strlen(Qrx4);
- for   (long long  fPHb  =  0;  fPHb <  x2; fPHb++) {
-   long   long VyP   =  1;
- while   (fPHb   + 1   <   x2  && Qrx4[fPHb]  ==   Qrx4[fPHb  +   1]) {
-  VyP++;
-   fPHb++;
-   }
-   printf("%c%lld",  Qrx4[fPHb],  VyP);
-   }
-   printf("\n");
+void SZr(char* Oz) {
+    long long gyE = (long long)strlen(Oz);
+    for (long long pu = 0; pu < gyE; pu++) {
+        long long v = 1;
+        while (pu + 1 < gyE && Oz[pu] == Oz[pu + 1]) {
+            v++;
+            pu++;
+        }
+        printf("%c%lld", Oz[pu], v);
+    }
+    printf("\n");
 }
 
-int main(int argc, char* argv[]) {
-   if   (argc  <  2)   return  0;
- Qn(argv[1]);
-   return   0;
+int main(int EWp, char* FoB[]) {
+    if (EWp < 2) return 0;
+    SZr(FoB[1]);
+    return 0;
 }

@@ -4,32 +4,30 @@
  * File: A12_F22_O_A01_Ternary.c
  * Implementation Logic: Ternary
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-void  r(int y[], int   G)   {
- for   (int   AXdd   =  1;  AXdd  < G;   AXdd++) {
- int  h   =   y[AXdd], Vm  =   AXdd  -   1;
-  for (;  (Vm >=  0  ? y[Vm]   > h : 0);   Vm--)  y[Vm+1]   = y[Vm];
-   y[Vm+1]   = h;
-  }
+void KQu(int lCD[], int C) {
+    for (int D = 1; D < C; D++) {
+        int w = lCD[D], O2Jn = D - 1;
+        for (; (O2Jn >= 0 ? lCD[O2Jn] > w : 0); O2Jn--) lCD[O2Jn+1] = lCD[O2Jn];
+        lCD[O2Jn+1] = w;
+    }
 }
 
-int   main(int  argc,  char  *argv[])  {
-  if (argc <  2) return   0;
-  int  G   =   argc  -   1;
- int   *y =  (int  *)malloc(G * sizeof(int));
-  for (int  AXdd =  0;  AXdd  < G;  AXdd++) y[AXdd]  =   atoi(argv[AXdd + 1]);
+int main(int dL8f, char *NJu[]) {
+    if (dL8f < 2) return 0;
+    int C = dL8f - 1;
+    int *lCD = (int *)malloc(C * sizeof(int));
+    for (int D = 0; D < C; D++) lCD[D] = atoi(NJu[D + 1]);
 
-   r(y,  G);
+    KQu(lCD, C);
 
-  for  (int   AXdd =   0;  AXdd   <   G; AXdd++)   {
-  printf("%d%s",   y[AXdd], (AXdd  ==  G   -  1 ?  ""   : " "));
-   }
-  printf("\n");
-   free(y);
-  return   0;
+    for (int D = 0; D < C; D++) {
+        printf("%d%s", lCD[D], (D == C - 1 ? "" : " "));
+    }
+    printf("\n");
+    free(lCD);
+    return 0;
 }

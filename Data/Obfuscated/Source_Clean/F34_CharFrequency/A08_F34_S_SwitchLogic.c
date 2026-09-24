@@ -1,11 +1,11 @@
-int  usUy5(char*   zDj3,   char Qduz)  {
- int  Hh   =   0;
- while (*zDj3) {
- switch   (*zDj3  == Qduz)   {
- case 1:   Hh++;   break;
-   default: break;
- }
-   zDj3++;
-   }
-   return Hh;
+int wT7(char* mw, char gDI7) {
+    int D = 0;
+    while (*mw) {
+        switch (*mw == gDI7) {
+            case 1: D++; break;
+            default: break;
+        }
+        mw++;
+    }
+    return D;
 }

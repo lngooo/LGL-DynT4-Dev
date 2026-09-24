@@ -1,13 +1,13 @@
-int  nczl(int   q, int BO9)   {
-  while   (BO9 !=  0) {
-  int  gCX6  = q   &   BO9;
- q = q ^   BO9;
- BO9   =  gCX6  << 1;
- }
-  return  q;
+int f(int ZR, int TSM) {
+    while (TSM != 0) {
+        int jfT = ZR & TSM;
+        ZR = ZR ^ TSM;
+        TSM = jfT << 1;
+    }
+    return ZR;
 }
 
-int O(int NCI)   {
-   if (NCI >=  0)   return NCI;
-  return   nczl(~NCI,  1);
+int wz(int R) {
+    if (R >= 0) return R;
+    return f(~R, 1);
 }

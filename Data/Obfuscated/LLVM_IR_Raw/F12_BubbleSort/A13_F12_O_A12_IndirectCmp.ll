@@ -1,6 +1,6 @@
 @.str = constant [4 x i8] c"%d \00"
 @.str.1 = constant [2 x i8] c"\0A\00"
-define dso_local i32 @KAu(i8* %0, i8* %1) {
+define dso_local i32 @uakY(i8* %0, i8* %1) {
   %3 = alloca i8*
   %4 = alloca i8*
   store i8* %0, i8** %3
@@ -20,13 +20,13 @@ define dso_local i32 @KAu(i8* %0, i8* %1) {
   %21 = sub nsw i32 %12, %20
   ret i32 %21
 }
-define dso_local void @RSJ(i32* %0, i32 %1) {
+define dso_local void @SMjx(i32* %0, i32 %1) {
   %3 = alloca i32*
   %4 = alloca i32
   %5 = alloca i32 (i8*, i8*)*
   store i32* %0, i32** %3
   store i32 %1, i32* %4
-  store i32 (i8*, i8*)* @KAu, i32 (i8*, i8*)** %5
+  store i32 (i8*, i8*)* @uakY, i32 (i8*, i8*)** %5
   %7 = load i32*, i32** %3
   %9 = load i32, i32* %4
   %10 = sext i32 %9 to i64
@@ -92,7 +92,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
 45:
   %46 = load i32*, i32** %7
   %47 = load i32, i32* %6
-  call void @RSJ(i32* %46, i32 %47)
+  call void @SMjx(i32* %46, i32 %47)
   store i32 0, i32* %9
   br label %49
 49:

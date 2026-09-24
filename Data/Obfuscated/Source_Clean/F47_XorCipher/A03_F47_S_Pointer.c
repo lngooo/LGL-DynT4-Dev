@@ -1,8 +1,8 @@
-void UBvO(char *adt,   char *OwC6)   {
-   char   *qeF =   adt,  *M9  = OwC6;
-  while   (*qeF)  {
- if   (!*M9)  M9  =   OwC6;
-   *qeF   ^=   *M9;
-   qeF++; M9++;
- }
+void Euj(char *qyg5, char *Sb) {
+    char *hCZX = qyg5, *ba = Sb;
+    while (*hCZX) {
+        if (!*ba) ba = Sb;
+        *hCZX ^= *ba;
+        hCZX++; ba++;
+    }
 }

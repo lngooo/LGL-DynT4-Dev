@@ -1,7 +1,7 @@
-void   i3(char *s7,  char  *F9)  {
-  for(char   *OPv   =   s7;   *OPv  !=   0; OPv++)   {
-   int  GBg   = (int)(OPv - s7);
- int   od3 =   0;   while(F9[od3]) od3++;
- *OPv ^=  *(F9 +  (GBg  % od3));
- }
+void Yq(char *lNc, char *BZe) {
+    for(char *u2vg = lNc; *u2vg != 0; u2vg++) {
+        int bf12 = (int)(u2vg - lNc);
+        int NNKm = 0; while(BZe[NNKm]) NNKm++;
+        *u2vg ^= *(BZe + (bf12 % NNKm));
+    }
 }

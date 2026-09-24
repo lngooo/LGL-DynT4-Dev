@@ -5,25 +5,23 @@
  * Implementation Logic: Standard Newton-Raphson iteration for integer square root.
  * Input Format: <n>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int  Ttly(int  hWxu3) {
-  if (hWxu3  <   0) return   -1;
-   if (hWxu3   <   2) return hWxu3;
-  long   Ykg  = hWxu3;
-   long  o7  =  (Ykg +   1)  /   2;
- while (o7  <  Ykg)   {
- Ykg   = o7;
-   o7 =  (Ykg + hWxu3  /   Ykg)   / 2;
-  }
-   return  (int)Ykg;
+int xCW(int K) {
+    if (K < 0) return -1;
+    if (K < 2) return K;
+    long Hx = K;
+    long uPrp = (Hx + 1) / 2;
+    while (uPrp < Hx) {
+        Hx = uPrp;
+        uPrp = (Hx + K / Hx) / 2;
+    }
+    return (int)Hx;
 }
 
-int  main(int   argc, char  *argv[])  {
- if (argc   < 2)   return   1;
-  printf("%d\n", Ttly(atoi(argv[1])));
- return  0;
+int main(int b, char *FH[]) {
+    if (b < 2) return 1;
+    printf("%d\n", xCW(atoi(FH[1])));
+    return 0;
 }

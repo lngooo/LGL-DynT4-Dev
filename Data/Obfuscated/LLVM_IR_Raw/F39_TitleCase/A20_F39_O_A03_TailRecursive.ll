@@ -1,6 +1,6 @@
-@puLl.FZLu = internal global i32 1
+@bxUr.vYDz = internal global i32 1
 @.str = constant [3 x i8] c"%s\00"
-define dso_local void @puLl(i8* %0) {
+define dso_local void @bxUr(i8* %0) {
   %2 = alloca i8*
   %3 = alloca i32
   %4 = alloca i32
@@ -29,10 +29,10 @@ define dso_local void @puLl(i8* %0) {
   %23 = icmp ne i32 %22, 0
   br i1 %23, label %24, label %25
 24:
-  store i32 1, i32* @puLl.FZLu
+  store i32 1, i32* @bxUr.vYDz
   br label %58
 25:
-  %26 = load i32, i32* @puLl.FZLu
+  %26 = load i32, i32* @bxUr.vYDz
   %27 = icmp ne i32 %26, 0
   br i1 %27, label %28, label %41
 28:
@@ -68,7 +68,7 @@ define dso_local void @puLl(i8* %0) {
   %56 = trunc i32 %55 to i8
   %57 = load i8*, i8** %2
   store i8 %56, i8* %57
-  store i32 0, i32* @puLl.FZLu
+  store i32 0, i32* @bxUr.vYDz
   br label %58
 58:
   %59 = load i8*, i8** %2
@@ -96,7 +96,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   %10 = load i8**, i8*** %5
   %11 = getelementptr inbounds i8*, i8** %10, i64 1
   %12 = load i8*, i8** %11
-  call void @puLl(i8* %12)
+  call void @bxUr(i8* %12)
   %13 = load i8**, i8*** %5
   %14 = getelementptr inbounds i8*, i8** %13, i64 1
   %15 = load i8*, i8** %14

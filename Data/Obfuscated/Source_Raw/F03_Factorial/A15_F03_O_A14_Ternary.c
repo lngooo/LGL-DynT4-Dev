@@ -5,20 +5,18 @@
  * Implementation Logic: Decrement logic compressed with ternary and comma operators.
  * Input Format: <n>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-long  long t(int   E1)  {
-  long   long c7 =   1;
-   if   (E1 <  0)  return   0;
- for   (;   E1  >   1;   c7   *= E1,  E1--);
- return   c7;
+long long sXZo(int oOm) {
+    long long RWU = 1;
+    if (oOm < 0) return 0;
+    for (; oOm > 1; RWU *= (oOm > 1 ? oOm : 1), oOm = (oOm > 1 ? oOm - 1 : oOm));
+    return RWU;
 }
 
-int   main(int   argc, char  *argv[]) {
- if  (argc <   2) return  1;
-   printf("%lld\n", t(atoi(argv[1])));
-  return   0;
+int main(int Og, char *t[]) {
+    if (Og < 2) return 1;
+    printf("%lld\n", sXZo(atoi(t[1])));
+    return 0;
 }

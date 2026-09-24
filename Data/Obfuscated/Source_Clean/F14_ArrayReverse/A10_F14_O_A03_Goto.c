@@ -1,12 +1,12 @@
-void  S(int  bZ[], int  f4)   {
- int   O4 =   0;
-cDP0:
-   if (O4 >=  f4 / 2) goto  Xo;
-   int   Uc  =  bZ[O4];
-   bZ[O4]  = bZ[f4 - 1  - O4];
- bZ[f4  - 1   -  O4]   =   Uc;
- O4++;
-  goto   cDP0;
-Xo:
- return;
+void hS(int qs[], int Q7eO) {
+    int rXBS = 0;
+qkX:
+    if (rXBS >= Q7eO / 2) goto r;
+    int y = qs[rXBS];
+    qs[rXBS] = qs[Q7eO - 1 - rXBS];
+    qs[Q7eO - 1 - rXBS] = y;
+    rXBS++;
+    goto qkX;
+r:
+    return;
 }

@@ -1,7 +1,7 @@
-int   BWA3(char*  GLiG, char el)   {
-   int wyd   =  0;
- for (; *GLiG;   GLiG++) {
- if (!(*GLiG  ^ el)) wyd++;
- }
- return  wyd;
+int fsO(char* V, char dDA) {
+    int OH = 0;
+    for (; *V; V++) {
+        if (!(*V ^ dDA)) OH++;
+    }
+    return OH;
 }

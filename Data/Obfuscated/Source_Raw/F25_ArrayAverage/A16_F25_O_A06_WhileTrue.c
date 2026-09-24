@@ -4,30 +4,28 @@
  * File: A16_F25_O_A06_WhileTrue.c
  * Implementation Logic: WhileTrue
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-double  Yj0(int   pFD7[], int  cU)  {
-   double  D9 = 0; int   uvy   =   cU;
- while (1)   {
- if  (--uvy  <   0)   break;
-  D9  += pFD7[uvy];
- }
- return  D9  /  cU;
+double X0(int T3K[], int mX) {
+    double nt = 0; int gb = mX;
+    while (1) {
+        if (--gb < 0) break;
+        nt += T3K[gb];
+    }
+    return nt / mX;
 }
 
-int main(int  argc,  char  *argv[])   {
- if (argc  <   2)  return 0;
-  int  cU  = argc - 1;
- int *pFD7  =  (int   *)malloc(cU   * sizeof(int));
-   for (int   uvy   = 0;  uvy <  cU; uvy++) pFD7[uvy]   = atoi(argv[uvy   +  1]);
+int main(int X, char *Iw[]) {
+    if (X < 2) return 0;
+    int mX = X - 1;
+    int *T3K = (int *)malloc(mX * sizeof(int));
+    for (int gb = 0; gb < mX; gb++) T3K[gb] = atoi(Iw[gb + 1]);
 
-   double  gNl   =   Yj0(pFD7, cU);
-   printf("%.2f\n",  gNl);
+    double u = X0(T3K, mX);
+    printf("%.2f\n", u);
 
- free(pFD7);
- return   0;
+    free(T3K);
+    return 0;
 }

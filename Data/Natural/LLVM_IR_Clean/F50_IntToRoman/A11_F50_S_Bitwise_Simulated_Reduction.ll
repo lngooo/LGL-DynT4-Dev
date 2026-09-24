@@ -19,48 +19,67 @@ define dso_local void @IntToRoman(i32 %0, i8* %1) {
   %5 = alloca [13 x i8*]
   %6 = alloca [13 x i32]
   %7 = alloca i32
+  %8 = alloca i32
+  %9 = alloca i32
   store i32 %0, i32* %3
   store i8* %1, i8** %4
-  %12 = load i8*, i8** %4
-  %13 = getelementptr inbounds i8, i8* %12, i64 0
-  store i8 0, i8* %13
+  %14 = load i8*, i8** %4
+  %15 = getelementptr inbounds i8, i8* %14, i64 0
+  store i8 0, i8* %15
   store i32 0, i32* %7
-  br label %15
-15:
-  %16 = load i32, i32* %3
-  %17 = icmp sgt i32 %16, 0
-  br i1 %17, label %18, label %42
-18:
-  %19 = load i32, i32* %3
-  %20 = load i32, i32* %7
-  %21 = sext i32 %20 to i64
-  %22 = getelementptr inbounds [13 x i32], [13 x i32]* %6, i64 0, i64 %21
-  %23 = load i32, i32* %22
-  %24 = icmp sge i32 %19, %23
-  br i1 %24, label %25, label %38
+  br label %17
+17:
+  %18 = load i32, i32* %3
+  %19 = icmp sgt i32 %18, 0
+  br i1 %19, label %20, label %23
+20:
+  %21 = load i32, i32* %7
+  %22 = icmp slt i32 %21, 13
+  br label %23
+23:
+  %24 = phi i1 [ false, %17 ], [ %22, %20 ]
+  br i1 %24, label %25, label %61
 25:
-  %26 = load i8*, i8** %4
-  %27 = load i32, i32* %7
-  %28 = sext i32 %27 to i64
-  %29 = getelementptr inbounds [13 x i8*], [13 x i8*]* %5, i64 0, i64 %28
-  %30 = load i8*, i8** %29
-  %31 = call i8* @strcat(i8* %26, i8* %30)
-  %32 = load i32, i32* %3
-  %33 = load i32, i32* %7
-  %34 = sext i32 %33 to i64
-  %35 = getelementptr inbounds [13 x i32], [13 x i32]* %6, i64 0, i64 %34
-  %36 = load i32, i32* %35
-  %37 = sub nsw i32 %32, %36
-  store i32 %37, i32* %3
-  br label %41
-38:
-  %39 = load i32, i32* %7
-  %40 = add nsw i32 %39, 1
-  store i32 %40, i32* %7
-  br label %41
-41:
-  br label %15
-42:
+  %27 = load i32, i32* %3
+  %28 = load i32, i32* %7
+  %29 = sext i32 %28 to i64
+  %30 = getelementptr inbounds [13 x i32], [13 x i32]* %6, i64 0, i64 %29
+  %31 = load i32, i32* %30
+  %32 = icmp sge i32 %27, %31
+  %33 = zext i1 %32 to i32
+  %34 = sub nsw i32 0, %33
+  store i32 %34, i32* %8
+  %36 = load i32, i32* %7
+  %37 = sext i32 %36 to i64
+  %38 = getelementptr inbounds [13 x i32], [13 x i32]* %6, i64 0, i64 %37
+  %39 = load i32, i32* %38
+  %40 = shl i32 %39, 0
+  %41 = load i32, i32* %8
+  %42 = and i32 %40, %41
+  store i32 %42, i32* %9
+  %43 = load i32, i32* %9
+  %44 = icmp ne i32 %43, 0
+  br i1 %44, label %45, label %55
+45:
+  %46 = load i8*, i8** %4
+  %47 = load i32, i32* %7
+  %48 = sext i32 %47 to i64
+  %49 = getelementptr inbounds [13 x i8*], [13 x i8*]* %5, i64 0, i64 %48
+  %50 = load i8*, i8** %49
+  %51 = call i8* @strcat(i8* %46, i8* %50)
+  %52 = load i32, i32* %9
+  %53 = load i32, i32* %3
+  %54 = sub nsw i32 %53, %52
+  store i32 %54, i32* %3
+  br label %58
+55:
+  %56 = load i32, i32* %7
+  %57 = add nsw i32 %56, 1
+  store i32 %57, i32* %7
+  br label %58
+58:
+  br label %17
+61:
   ret void
 }
 declare void @llvm.memcpy.p0i8.p0i8.i64(i8* noalias nocapture writeonly, i8* noalias nocapture readonly, i64, i1 immarg)

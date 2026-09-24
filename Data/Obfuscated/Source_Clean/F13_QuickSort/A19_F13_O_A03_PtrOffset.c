@@ -1,14 +1,14 @@
-void   wsw2(int   nd5[],  int  xnK,   int lJq)   {
-  if (xnK >=   lJq) return;
-   int EqxD = *(nd5   +  (xnK  +  lJq) / 2), wMpL =   xnK,   rUCk   =   lJq;
-  while (wMpL   <= rUCk) {
-   while  (*(nd5  +  wMpL) < EqxD)   wMpL++;
- while  (*(nd5 + rUCk)  >  EqxD)  rUCk--;
-   if   (wMpL   <= rUCk)  {
- int  nIxC7  = *(nd5   +   wMpL); *(nd5 +   wMpL)   =  *(nd5   + rUCk); *(nd5 + rUCk)   = nIxC7;
- wMpL++;   rUCk--;
- }
-  }
-   if (xnK <  rUCk)   wsw2(nd5, xnK, rUCk);
- if   (wMpL  <  lJq) wsw2(nd5, wMpL,  lJq);
+void MKi(int z[], int u, int Y) {
+    if (u >= Y) return;
+    int IDz = *(z + (u + Y) / 2), pNpJ = u, Ey = Y;
+    while (pNpJ <= Ey) {
+        while (*(z + pNpJ) < IDz) pNpJ++;
+        while (*(z + Ey) > IDz) Ey--;
+        if (pNpJ <= Ey) {
+            int v = *(z + pNpJ); *(z + pNpJ) = *(z + Ey); *(z + Ey) = v;
+            pNpJ++; Ey--;
+        }
+    }
+    if (u < Ey) MKi(z, u, Ey);
+    if (pNpJ < Y) MKi(z, pNpJ, Y);
 }

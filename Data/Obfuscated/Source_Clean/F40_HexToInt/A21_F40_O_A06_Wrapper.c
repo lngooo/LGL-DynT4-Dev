@@ -1,8 +1,8 @@
-typedef int (*cl3)(const   char*, const char*,   ...);
+typedef int (*T)(const char*, const char*, ...);
 
-int tcjB(const   char* k)   {
-  int  JOe   =  0;
-  cl3   kdyw = sscanf;
- kdyw(k, "%x", &JOe);
- return  JOe;
+int a(const char* A9) {
+    int zttI = 0;
+    T FztK = sscanf;
+    FztK(A9, "%x", &zttI);
+    return zttI;
 }

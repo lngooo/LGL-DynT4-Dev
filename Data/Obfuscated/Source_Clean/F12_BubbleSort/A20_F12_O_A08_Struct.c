@@ -1,23 +1,23 @@
-struct Kd   {  int   MC6; int   Ta;   int  QoU; };
+struct U { int YEl; int SSK0; int M; };
 
-void  W(int  WR[], int d)  {
-   struct  Kd ixwm8 = {0, d -   1,   1};
- while (ixwm8.QoU) {
-   ixwm8.QoU   = 0;
- for   (int   TA   =   ixwm8.MC6; TA  < ixwm8.Ta;  TA++)   {
-   if   (WR[TA] >   WR[TA+1])  {
-  int   lz   =   WR[TA]; WR[TA]  =  WR[TA+1];  WR[TA+1]  = lz;
-   ixwm8.QoU =  1;
-   }
-   }
-  if   (!ixwm8.QoU) break;
- ixwm8.QoU   =   0;   ixwm8.Ta--;
- for   (int  TA = ixwm8.Ta   - 1;  TA   >=  ixwm8.MC6;  TA--) {
-  if   (WR[TA]   > WR[TA+1])  {
-   int  lz   =   WR[TA];   WR[TA] =   WR[TA+1];   WR[TA+1]  =  lz;
-   ixwm8.QoU  = 1;
-   }
-   }
- ixwm8.MC6++;
-   }
+void cUZ(int fXd6[], int w40) {
+    struct U A73h = {0, w40 - 1, 1};
+    while (A73h.M) {
+        A73h.M = 0;
+        for (int VP = A73h.YEl; VP < A73h.SSK0; VP++) {
+            if (fXd6[VP] > fXd6[VP+1]) {
+                int O = fXd6[VP]; fXd6[VP] = fXd6[VP+1]; fXd6[VP+1] = O;
+                A73h.M = 1;
+            }
+        }
+        if (!A73h.M) break;
+        A73h.M = 0; A73h.SSK0--;
+        for (int VP = A73h.SSK0 - 1; VP >= A73h.YEl; VP--) {
+            if (fXd6[VP] > fXd6[VP+1]) {
+                int O = fXd6[VP]; fXd6[VP] = fXd6[VP+1]; fXd6[VP+1] = O;
+                A73h.M = 1;
+            }
+        }
+        A73h.YEl++;
+    }
 }

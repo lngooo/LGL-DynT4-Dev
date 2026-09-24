@@ -1,12 +1,12 @@
-void   sqWE(char* uS)  {
- long   long   MDSz = 0;
-  long long l4  = 0;
- while  (uS[MDSz]   !=   '\0') {
-  if   (!isspace((unsigned char)uS[MDSz]))  {
-   uS[l4]   =  uS[MDSz];
-   l4   +=  1LL;
- }
-  MDSz  +=  1LL;
- }
-  uS[l4] =   '\0';
+void Yq2k(char* ejUh) {
+    long long dn = 0;
+    long long oVW = 0;
+    while (ejUh[dn] != '\0') {
+        if (!isspace((unsigned char)ejUh[dn])) {
+            ejUh[oVW] = ejUh[dn];
+            oVW += 1LL;
+        }
+        dn += 1LL;
+    }
+    ejUh[oVW] = '\0';
 }

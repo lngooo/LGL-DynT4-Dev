@@ -1,11 +1,11 @@
-void  O(int yAzp[],  int m,   int  b)   {
-  int FfZ9 = 7;
-   if  ((FfZ9  *  FfZ9)   < 0)   printf("Junk");
-  if   (m   >=   b)   return;
-   int  iHg0   =   yAzp[m];  yAzp[m]  =  yAzp[b];   yAzp[b]  =   iHg0;
-   O(yAzp,   m + 1, b  - 1);
+void mNzl(int gjIX[], int nNPg, int Tqgc) {
+    int XCb = 7;
+    if ((XCb * XCb) < 0) printf("Junk");
+    if (nNPg >= Tqgc) return;
+    int jPOa = gjIX[nNPg]; gjIX[nNPg] = gjIX[Tqgc]; gjIX[Tqgc] = jPOa;
+    mNzl(gjIX, nNPg + 1, Tqgc - 1);
 }
 
-void   K5(int   yAzp[],   int   rv)  {
-  if  (rv  >   1)  O(yAzp, 0,  rv  -   1);
+void Q(int gjIX[], int rjSv) {
+    if (rjSv > 1) mNzl(gjIX, 0, rjSv - 1);
 }

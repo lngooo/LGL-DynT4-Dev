@@ -1,5 +1,5 @@
 @.str = constant [4 x i8] c"%d\0A\00"
-define dso_local i32 @YoV(i32* %0, i32 %1, i32 %2, i32 %3) {
+define dso_local i32 @M(i32* %0, i32 %1, i32 %2, i32 %3) {
   %5 = alloca i32
   %6 = alloca i32*
   %7 = alloca i32
@@ -234,7 +234,7 @@ define dso_local i32 @YoV(i32* %0, i32 %1, i32 %2, i32 %3) {
   %206 = load i32, i32* %7
   %207 = load i32, i32* %16
   %208 = load i32, i32* %9
-  %209 = call i32 @YoV(i32* %205, i32 %206, i32 %207, i32 %208)
+  %209 = call i32 @M(i32* %205, i32 %206, i32 %207, i32 %208)
   store i32 %209, i32* %5
   store i32 1, i32* %18
   br label %234
@@ -255,7 +255,7 @@ define dso_local i32 @YoV(i32* %0, i32 %1, i32 %2, i32 %3) {
   %223 = load i32, i32* %7
   %224 = sub nsw i32 %222, %223
   %225 = sub nsw i32 %221, %224
-  %226 = call i32 @YoV(i32* %218, i32 %219, i32 %220, i32 %225)
+  %226 = call i32 @M(i32* %218, i32 %219, i32 %220, i32 %225)
   store i32 %226, i32* %5
   store i32 1, i32* %18
   br label %234
@@ -338,7 +338,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   %54 = load i32, i32* %7
   %55 = sub nsw i32 %54, 1
   %56 = load i32, i32* %6
-  %57 = call i32 @YoV(i32* %53, i32 0, i32 %55, i32 %56)
+  %57 = call i32 @M(i32* %53, i32 0, i32 %55, i32 %56)
   store i32 %57, i32* %10
   %58 = load i32, i32* %10
   %59 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str, i64 0, i64 0), i32 %58)

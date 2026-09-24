@@ -1,15 +1,15 @@
-void S(unsigned  char  *s,  int kOmq,  char  *s2)   {
-   const  char *vuo  =   "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
- int f   =  0;
-   while (f  <   kOmq)   {
-   unsigned  int cXBg1 = (s[f]   << 16)   |  (f+1<kOmq  ?  s[f+1] <<   8   :   0) | (f+2<kOmq  ?  s[f+2]  :  0);
- for(int   vmMK=0; vmMK<4;   vmMK++)   {
-  if   (vmMK == 0)  s2[(f/3)*4+vmMK] =  vuo[(cXBg1  >>   18) &   0x3F];
- else  if (vmMK   == 1) s2[(f/3)*4+vmMK]   =  vuo[(cXBg1   >>  12)   &  0x3F];
-   else  if   (vmMK  == 2)  s2[(f/3)*4+vmMK] =  (f+1  <  kOmq) ?   vuo[(cXBg1   >>  6) & 0x3F] :  '=';
-   else   s2[(f/3)*4+vmMK]  =  (f+2   <   kOmq) ?   vuo[cXBg1 &  0x3F] : '=';
-   }
-  f +=   3;
-   }
- s2[((kOmq+2)/3)*4]  = 0;
+void NUN(unsigned char *gSM, int VM, char *iD) {
+    const char *WF = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+    int I3 = 0;
+    while (I3 < VM) {
+        unsigned int y = (gSM[I3] << 16) | (I3+1<VM ? gSM[I3+1] << 8 : 0) | (I3+2<VM ? gSM[I3+2] : 0);
+        for(int wP=0; wP<4; wP++) {
+            if (wP == 0) iD[(I3/3)*4+wP] = WF[(y >> 18) & 0x3F];
+            else if (wP == 1) iD[(I3/3)*4+wP] = WF[(y >> 12) & 0x3F];
+            else if (wP == 2) iD[(I3/3)*4+wP] = (I3+1 < VM) ? WF[(y >> 6) & 0x3F] : '=';
+            else iD[(I3/3)*4+wP] = (I3+2 < VM) ? WF[y & 0x3F] : '=';
+        }
+        I3 += 3;
+    }
+    iD[((VM+2)/3)*4] = 0;
 }

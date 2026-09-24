@@ -1,10 +1,10 @@
-static  const   int   v4[16] =  {0,   1, 1,   2, 1, 2, 2, 3,   1, 2,  2, 3,   2,   3,  3, 4};
+static const int Nhz[16] = {0, 1, 1, 2, 1, 2, 2, 3, 1, 2, 2, 3, 2, 3, 3, 4};
 
-int  Pf(uint32_t  LN3)   {
- int  M =  0;
-   for  (int   hX8   =  0;  hX8   <   8;  hX8++)   {
-  M  += v4[LN3   & 0xF];
-   LN3 >>= 4;
-  }
-  return M;
+int WM(uint32_t T8) {
+    int rLC = 0;
+    for (int oK4 = 0; oK4 < 8; oK4++) {
+        rLC += Nhz[T8 & 0xF];
+        T8 >>= 4;
+    }
+    return rLC;
 }

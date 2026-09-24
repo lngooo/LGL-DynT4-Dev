@@ -4,38 +4,36 @@
  * File: A07_F20_O_A01_Goto.c
  * Implementation Logic: Goto
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-void  D(int dYzF4[], int  ZFvS8)   {
-   int tqs  = 0,  ju0,   EnMA;
-req1:
- if (tqs   >=  ZFvS8   -  1)  return;
-  EnMA =   tqs; ju0  =  tqs   +   1;
-cVqe:
-  if  (ju0 >=  ZFvS8)  goto   eRKb;
-  if (dYzF4[ju0]  <  dYzF4[EnMA])   EnMA =   ju0;
-  ju0++; goto   cVqe;
-eRKb:
-  {  int   rnfA =   dYzF4[EnMA];   dYzF4[EnMA] =   dYzF4[tqs];  dYzF4[tqs] = rnfA;  }
- tqs++; goto  req1;
+void CYi(int sxN[], int c5TX) {
+    int pnNM = 0, gZaj, J3Z;
+F:
+    if (pnNM >= c5TX - 1) return;
+    J3Z = pnNM; gZaj = pnNM + 1;
+D:
+    if (gZaj >= c5TX) goto k7s;
+    if (sxN[gZaj] < sxN[J3Z]) J3Z = gZaj;
+    gZaj++; goto D;
+k7s:
+    { int er = sxN[J3Z]; sxN[J3Z] = sxN[pnNM]; sxN[pnNM] = er; }
+    pnNM++; goto F;
 }
 
-int   main(int   argc,   char  *argv[]) {
-  if   (argc  <   2)  return 0;
-  int ZFvS8  = argc  -   1;
-   int   *dYzF4   = (int  *)malloc(ZFvS8 * sizeof(int));
-  for  (int   tqs   = 0;  tqs   < ZFvS8; tqs++)  dYzF4[tqs]   = atoi(argv[tqs  + 1]);
+int main(int wfe, char *TX[]) {
+    if (wfe < 2) return 0;
+    int c5TX = wfe - 1;
+    int *sxN = (int *)malloc(c5TX * sizeof(int));
+    for (int pnNM = 0; pnNM < c5TX; pnNM++) sxN[pnNM] = atoi(TX[pnNM + 1]);
 
-  D(dYzF4,  ZFvS8);
+    CYi(sxN, c5TX);
 
-   for  (int tqs   = 0;   tqs   <   ZFvS8;  tqs++)  {
-  printf("%d%s",   dYzF4[tqs], (tqs   == ZFvS8  -  1 ?  "" :  " "));
- }
- printf("\n");
-  free(dYzF4);
-  return 0;
+    for (int pnNM = 0; pnNM < c5TX; pnNM++) {
+        printf("%d%s", sxN[pnNM], (pnNM == c5TX - 1 ? "" : " "));
+    }
+    printf("\n");
+    free(sxN);
+    return 0;
 }

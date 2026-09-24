@@ -4,30 +4,28 @@
  * File: A03_F25_S_PointerArithmetic.c
  * Implementation Logic: PointerArithmetic
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-double  MlP5(int  pALm[],  int Dg4) {
-   if (Dg4   <= 0) return 0.0;
- double bS = 0;
-   int Wr =   Dg4;
-  int  *dkZ = pALm;
- while  (Wr--)   bS   += *dkZ++;
- return bS /   Dg4;
+double Q(int v[], int tn) {
+    if (tn <= 0) return 0.0;
+    double jr = 0;
+    int P = tn;
+    int *wF = v;
+    while (P--) jr += *wF++;
+    return jr / tn;
 }
 
-int  main(int  argc, char  *argv[]) {
- if  (argc <   2) return  0;
-   int   Dg4 = argc  -  1;
-  int *pALm  = (int  *)malloc(Dg4   * sizeof(int));
-  for  (int XbOX   =  0;  XbOX   <  Dg4;  XbOX++)   pALm[XbOX]   = atoi(argv[XbOX +   1]);
+int main(int K6O6, char *V[]) {
+    if (K6O6 < 2) return 0;
+    int tn = K6O6 - 1;
+    int *v = (int *)malloc(tn * sizeof(int));
+    for (int Vm = 0; Vm < tn; Vm++) v[Vm] = atoi(V[Vm + 1]);
 
- double   Yn5  =   MlP5(pALm, Dg4);
- printf("%.2f\n", Yn5);
+    double Qcz = Q(v, tn);
+    printf("%.2f\n", Qcz);
 
-  free(pALm);
-   return  0;
+    free(v);
+    return 0;
 }

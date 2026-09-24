@@ -5,28 +5,26 @@
  * Implementation Logic: Control-flow flattening variant of A01 using a state machine and switch-case.
  * Input Format: <uint32_t>
  */
-
-
 #include <stdio.h>
 #include <stdint.h>
 #include <stdlib.h>
 
-int m(uint32_t  WfFS) {
- int xqn   =  0;
-   int lt  =  1;
- while   (lt   != 0) {
-   switch   (lt)   {
- case  1:  if  (WfFS >   0)  lt =  2;   else  lt   = 0;  break;
-  case  2:   xqn   +=   (WfFS  &  1); lt  = 3;  break;
-   case   3:  WfFS  >>=   1; lt = 1; break;
-   }
- }
-   return   xqn;
+int Ns6(uint32_t Nzw) {
+    int AQB = 0;
+    int tv = 1;
+    while (tv != 0) {
+        switch (tv) {
+            case 1: if (Nzw > 0) tv = 2; else tv = 0; break;
+            case 2: AQB += (Nzw & 1); tv = 3; break;
+            case 3: Nzw >>= 1; tv = 1; break;
+        }
+    }
+    return AQB;
 }
 
-int   main(int  argc, char*   argv[])  {
-   if  (argc   < 2)   return  0;
-  uint32_t gQss   =   (uint32_t)strtoul(argv[1], NULL,   10);
-  printf("%d\n",   m(gQss));
- return  0;
+int main(int sVo, char* TqY[]) {
+    if (sVo < 2) return 0;
+    uint32_t Y = (uint32_t)strtoul(TqY[1], NULL, 10);
+    printf("%d\n", Ns6(Y));
+    return 0;
 }

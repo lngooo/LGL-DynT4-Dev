@@ -1,4 +1,4 @@
-define dso_local i32 @O(i32 %0) {
+define dso_local i32 @Y7n(i32 %0) {
   %2 = alloca i32
   store i32 %0, i32* %2
   %3 = load i32, i32* %2
@@ -22,7 +22,7 @@ define dso_local i32 @O(i32 %0) {
 15:
   %16 = load i32, i32* %2
   %17 = lshr i32 %16, 1
-  %18 = call i32 @O(i32 %17)
+  %18 = call i32 @Y7n(i32 %17)
   br label %19
 19:
   %20 = phi i32 [ 0, %14 ], [ %18, %15 ]

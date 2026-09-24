@@ -1,5 +1,5 @@
 @.str = constant [4 x i8] c"%d\0A\00"
-define dso_local i32 @LG1(i32* %0, i32 %1, i32 %2, i32 %3) {
+define dso_local i32 @W(i32* %0, i32 %1, i32 %2, i32 %3) {
   %5 = alloca i32
   %6 = alloca i32*
   %7 = alloca i32
@@ -121,7 +121,7 @@ define dso_local i32 @LG1(i32* %0, i32 %1, i32 %2, i32 %3) {
   %101 = load i32, i32* %7
   %102 = load i32, i32* %14
   %103 = load i32, i32* %9
-  %104 = call i32 @LG1(i32* %100, i32 %101, i32 %102, i32 %103)
+  %104 = call i32 @W(i32* %100, i32 %101, i32 %102, i32 %103)
   store i32 %104, i32* %5
   store i32 1, i32* %15
   br label %117
@@ -136,7 +136,7 @@ define dso_local i32 @LG1(i32* %0, i32 %1, i32 %2, i32 %3) {
   %113 = sub nsw i32 %111, %112
   %114 = add nsw i32 %113, 1
   %115 = sub nsw i32 %110, %114
-  %116 = call i32 @LG1(i32* %106, i32 %108, i32 %109, i32 %115)
+  %116 = call i32 @W(i32* %106, i32 %108, i32 %109, i32 %115)
   store i32 %116, i32* %5
   store i32 1, i32* %15
   br label %117
@@ -211,7 +211,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   %54 = load i32, i32* %7
   %55 = sub nsw i32 %54, 1
   %56 = load i32, i32* %6
-  %57 = call i32 @LG1(i32* %53, i32 0, i32 %55, i32 %56)
+  %57 = call i32 @W(i32* %53, i32 0, i32 %55, i32 %56)
   store i32 %57, i32* %10
   %58 = load i32, i32* %10
   %59 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str, i64 0, i64 0), i32 %58)

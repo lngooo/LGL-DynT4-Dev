@@ -4,29 +4,27 @@
  * File: A14_F24_O_A01_DummyLoop.c
  * Implementation Logic: DummyLoop
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-int rz(int  yY5[],  int  fF8)  {
-   int  WFb3   =  0;
-  for   (int   jVO =   0;   jVO  < fF8;   jVO++) {
-   for(int C=0;  C<1;   C++)   WFb3  +=  yY5[jVO];
-  }
-   return   WFb3;
+int qzcQ(int O[], int Jwfn) {
+    int tsW = 0;
+    for (int CRD = 0; CRD < Jwfn; CRD++) {
+        for(int j=0; j<1; j++) tsW += O[CRD];
+    }
+    return tsW;
 }
 
-int   main(int argc, char *argv[])  {
- if   (argc  <  2) return   0;
-  int fF8  = argc  - 1;
- int   *yY5 = (int *)malloc(fF8  *   sizeof(int));
-   for  (int  jVO =  0;  jVO <   fF8;   jVO++)  yY5[jVO]   = atoi(argv[jVO   +   1]);
+int main(int Nw, char *AWbW[]) {
+    if (Nw < 2) return 0;
+    int Jwfn = Nw - 1;
+    int *O = (int *)malloc(Jwfn * sizeof(int));
+    for (int CRD = 0; CRD < Jwfn; CRD++) O[CRD] = atoi(AWbW[CRD + 1]);
 
-  int  vG1 = rz(yY5, fF8);
-   printf("%d\n",  vG1);
+    int JVF = qzcQ(O, Jwfn);
+    printf("%d\n", JVF);
 
- free(yY5);
-  return 0;
+    free(O);
+    return 0;
 }

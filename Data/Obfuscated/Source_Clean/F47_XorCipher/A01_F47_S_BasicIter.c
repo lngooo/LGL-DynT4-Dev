@@ -1,6 +1,6 @@
-void U9(char  *miuO, char  *BlTd)   {
- int OT6 =  0; while   (BlTd[OT6])  OT6++;
-  for (int BUmL1 =   0;   miuO[BUmL1]  !=   '\0';  BUmL1++) {
-  miuO[BUmL1]  ^= BlTd[BUmL1 %   OT6];
- }
+void Ld(char *XvWM, char *u63N) {
+    int dh = 0; while (u63N[dh]) dh++;
+    for (int p9 = 0; XvWM[p9] != '\0'; p9++) {
+        XvWM[p9] ^= u63N[p9 % dh];
+    }
 }

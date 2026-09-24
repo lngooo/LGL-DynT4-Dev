@@ -1,6 +1,6 @@
-@jeO.UZH = internal global i32 0
+@K.X = internal global i32 0
 @.str = constant [4 x i8] c"%d\0A\00"
-define dso_local i32 @jeO(i32* %0, i32 %1, i32 %2) {
+define dso_local i32 @K(i32* %0, i32 %1, i32 %2) {
   %4 = alloca i32
   %5 = alloca i32*
   %6 = alloca i32
@@ -13,7 +13,7 @@ define dso_local i32 @jeO(i32* %0, i32 %1, i32 %2) {
   %10 = icmp sle i32 %9, 0
   br i1 %10, label %11, label %12
 11:
-  store i32 0, i32* @jeO.UZH
+  store i32 0, i32* @K.X
   store i32 -1, i32* %4
   br label %32
 12:
@@ -24,22 +24,22 @@ define dso_local i32 @jeO(i32* %0, i32 %1, i32 %2) {
   %17 = icmp eq i32 %15, %16
   br i1 %17, label %18, label %23
 18:
-  %20 = load i32, i32* @jeO.UZH
+  %20 = load i32, i32* @K.X
   store i32 %20, i32* %8
-  store i32 0, i32* @jeO.UZH
+  store i32 0, i32* @K.X
   %21 = load i32, i32* %8
   store i32 %21, i32* %4
   br label %32
 23:
-  %24 = load i32, i32* @jeO.UZH
+  %24 = load i32, i32* @K.X
   %25 = add nsw i32 %24, 1
-  store i32 %25, i32* @jeO.UZH
+  store i32 %25, i32* @K.X
   %26 = load i32*, i32** %5
   %27 = getelementptr inbounds i32, i32* %26, i64 1
   %28 = load i32, i32* %6
   %29 = sub nsw i32 %28, 1
   %30 = load i32, i32* %7
-  %31 = call i32 @jeO(i32* %27, i32 %29, i32 %30)
+  %31 = call i32 @K(i32* %27, i32 %29, i32 %30)
   store i32 %31, i32* %4
   br label %32
 32:
@@ -104,7 +104,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   %47 = getelementptr inbounds [100 x i32], [100 x i32]* %8, i64 0, i64 0
   %48 = load i32, i32* %7
   %49 = load i32, i32* %6
-  %50 = call i32 @jeO(i32* %47, i32 %48, i32 %49)
+  %50 = call i32 @K(i32* %47, i32 %48, i32 %49)
   store i32 %50, i32* %10
   %51 = load i32, i32* %10
   %52 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str, i64 0, i64 0), i32 %51)

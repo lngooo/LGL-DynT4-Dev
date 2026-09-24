@@ -4,37 +4,35 @@
  * File: A18_F18_O_A01_JumpTable.c
  * Implementation Logic: JumpTable
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-int  tWM(int   wh[],   int  UMV, int  P,   int x)  {
-  if   (UMV   > P)  return  -1;
-   int  R =   wh[P],  KwI1  =  UMV;
-   for  (int Ia  =  UMV;   Ia   <  P; Ia++)   if (wh[Ia]  <=   R) {  int  PM=wh[KwI1];  wh[KwI1]=wh[Ia];   wh[Ia]=PM; KwI1++;  }
-   int  PM=wh[KwI1];  wh[KwI1]=wh[P]; wh[P]=PM;
-   int  sqj = KwI1 - (x   -  1);
-  if (sqj == 0)  return  wh[KwI1];
- goto   *(&&O +  (sqj  >   0  ? 0   : (&&NFsc - &&O)));
-O:
-   return   tWM(wh,  UMV,   KwI1  -   1,  x);
-NFsc:
-   return   tWM(wh,  KwI1   +  1,   P,  x);
+int i2u(int KVat[], int L, int yB, int XxZ) {
+    if (L > yB) return -1;
+    int HQ = KVat[yB], gz = L;
+    for (int I = L; I < yB; I++) if (KVat[I] <= HQ) { int uj08=KVat[gz]; KVat[gz]=KVat[I]; KVat[I]=uj08; gz++; }
+    int uj08=KVat[gz]; KVat[gz]=KVat[yB]; KVat[yB]=uj08;
+    int oFR = gz - (XxZ - 1);
+    if (oFR == 0) return KVat[gz];
+    goto *(&&jMsj + (oFR > 0 ? 0 : (&&M - &&jMsj)));
+jMsj:
+    return i2u(KVat, L, gz - 1, XxZ);
+M:
+    return i2u(KVat, gz + 1, yB, XxZ);
 }
 
-int   main(int  argc,   char   *argv[])   {
-   if  (argc   < 3) return   0;
-  int x =  atoi(argv[1]);
- int  LL   = argc  -   2;
- int  *wh   = (int *)malloc(LL  *   sizeof(int));
-   for (int  KwI1  = 0; KwI1 < LL; KwI1++)  wh[KwI1]  =  atoi(argv[KwI1   +   2]);
+int main(int tGS, char *O1nF[]) {
+    if (tGS < 3) return 0;
+    int XxZ = atoi(O1nF[1]);
+    int T9y = tGS - 2;
+    int *KVat = (int *)malloc(T9y * sizeof(int));
+    for (int gz = 0; gz < T9y; gz++) KVat[gz] = atoi(O1nF[gz + 2]);
 
- // 假设  K  是从 1 开始的   (1st smallest)
-   int   TN  = tWM(wh,  0,   LL   - 1,   x);
+    // 假设 K 是从 1 开始的 (1st smallest)
+    int Z = i2u(KVat, 0, T9y - 1, XxZ);
 
-  printf("%d\n",   TN);
-  free(wh);
- return  0;
+    printf("%d\n", Z);
+    free(KVat);
+    return 0;
 }

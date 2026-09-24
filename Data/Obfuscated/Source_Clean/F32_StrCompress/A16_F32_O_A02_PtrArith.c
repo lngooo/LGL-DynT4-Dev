@@ -1,10 +1,10 @@
-void  x6(char* TAYR)  {
- char *WQ  = TAYR;
-  while  (*WQ)   {
-   char  *Qh  =   WQ;
- while (*(Qh  +  1)   ==   *WQ) Qh++;
- printf("%c%d",  *WQ,   (int)(Qh  -   WQ +   1));
- WQ  = Qh  +  1;
-   }
-   printf("\n");
+void A(char* v) {
+    char *Cj = v;
+    while (*Cj) {
+        char *UP = Cj;
+        while (*(UP + 1) == *Cj) UP++;
+        printf("%c%d", *Cj, (int)(UP - Cj + 1));
+        Cj = UP + 1;
+    }
+    printf("\n");
 }

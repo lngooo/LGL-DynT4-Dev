@@ -1,7 +1,7 @@
-int WiP2(const  char   *caH,  const char  *a)  {
- int   z   =   0;
-   for  (z   = 0;   caH[z] !=   '\0';  z++) {
-  if (caH[z] != a[z])   return   (unsigned  char)caH[z]  - (unsigned char)a[z];
-   }
-   return   (unsigned   char)caH[z]  -   (unsigned  char)a[z];
+int VzW(const char *X0l, const char *fvwN) {
+    int u1 = 0;
+    for (u1 = 0; X0l[u1] != '\0'; u1++) {
+        if (X0l[u1] != fvwN[u1]) return (unsigned char)X0l[u1] - (unsigned char)fvwN[u1];
+    }
+    return (unsigned char)X0l[u1] - (unsigned char)fvwN[u1];
 }

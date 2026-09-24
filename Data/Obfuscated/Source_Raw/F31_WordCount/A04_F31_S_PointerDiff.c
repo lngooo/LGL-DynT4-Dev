@@ -5,25 +5,23 @@
 * Implementation Logic: Uses nested while loops with pointer arithmetic to skip whitespace and words.
 * Input Format: <string>
 */
-
-
 #include <stdio.h>
 #include <ctype.h>
 
-int  ZE(char* aDTy) {
- int IUp4   =   0;
- while (*aDTy) {
- while (*aDTy  &&  isspace(*aDTy))   aDTy++;
-  if (*aDTy) {
-   IUp4++;
- while   (*aDTy  &&   !isspace(*aDTy))   aDTy++;
-  }
- }
-  return IUp4;
+int A9(char* p) {
+    int O7 = 0;
+    while (*p) {
+        while (*p && isspace(*p)) p++;
+        if (*p) {
+            O7++;
+            while (*p && !isspace(*p)) p++;
+        }
+    }
+    return O7;
 }
 
-int   main(int   argc, char* argv[])   {
-   if (argc   < 2) return  0;
- printf("%d\n", ZE(argv[1]));
-  return 0;
+int main(int dwD, char* P3Be[]) {
+    if (dwD < 2) return 0;
+    printf("%d\n", A9(P3Be[1]));
+    return 0;
 }

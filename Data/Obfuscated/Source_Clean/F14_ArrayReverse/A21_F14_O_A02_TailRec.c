@@ -1,10 +1,10 @@
-void   b6(int DLI[],  int  FSV5,   int  ALs)  {
-   while(FSV5 <   ALs)  {
-   int fD  = DLI[FSV5]; DLI[FSV5] =   DLI[ALs];   DLI[ALs]   =   fD;
- FSV5++; ALs--;
-   }
+void r(int h2[], int DAkW, int o4s) {
+    while(DAkW < o4s) {
+        int YY = h2[DAkW]; h2[DAkW] = h2[o4s]; h2[o4s] = YY;
+        DAkW++; o4s--;
+    }
 }
 
-void  Q(int   ZuoR[], int T7)  {
-   if(T7   >  1) b6(ZuoR,  0, T7   - 1);
+void KJ(int fA[], int nLE1) {
+    if(nLE1 > 1) r(fA, 0, nLE1 - 1);
 }

@@ -4,29 +4,27 @@
  * File: A21_F25_O_A01_Arithmetic.c
  * Implementation Logic: Arithmetic
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-double  WN(int  xdzG[],  int   Rp)   {
-  double pQy   =  0;
-  for   (int  dlfQ  =   0; dlfQ   < Rp; dlfQ++)   {
- pQy =  pQy   -   (-xdzG[dlfQ]);
-  }
-   return   pQy  / (double)Rp;
+double x4(int Y[], int bF) {
+    double tz = 0;
+    for (int qNu = 0; qNu < bF; qNu++) {
+        tz = tz - (-Y[qNu]);
+    }
+    return tz / (double)bF;
 }
 
-int  main(int argc,   char *argv[])   {
-  if  (argc < 2)  return   0;
- int   Rp =  argc  - 1;
- int   *xdzG = (int *)malloc(Rp   *  sizeof(int));
- for   (int   dlfQ =  0; dlfQ  <  Rp;   dlfQ++)   xdzG[dlfQ]   =  atoi(argv[dlfQ   +  1]);
+int main(int v, char *E[]) {
+    if (v < 2) return 0;
+    int bF = v - 1;
+    int *Y = (int *)malloc(bF * sizeof(int));
+    for (int qNu = 0; qNu < bF; qNu++) Y[qNu] = atoi(E[qNu + 1]);
 
- double  PRkJ2   =   WN(xdzG,  Rp);
-   printf("%.2f\n",   PRkJ2);
+    double V = x4(Y, bF);
+    printf("%.2f\n", V);
 
-   free(xdzG);
- return   0;
+    free(Y);
+    return 0;
 }

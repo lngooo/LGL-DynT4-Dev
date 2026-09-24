@@ -1,3 +1,3 @@
-int   zVJB(char*   NV, char Y5)   {
-   return   !*NV   ? 0   :  (*NV   ==   Y5   ? 1  :   0)  +  zVJB(NV + 1,  Y5);
+int z(char* aXv, char gRqz) {
+    return !*aXv ? 0 : (*aXv == gRqz ? 1 : 0) + z(aXv + 1, gRqz);
 }

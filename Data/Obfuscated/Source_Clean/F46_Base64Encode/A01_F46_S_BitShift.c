@@ -1,11 +1,11 @@
-void   rc(unsigned   char  *NiBy, int T,   char   *lMVx) {
-   const char c[]   = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
-  int  m, Yob6;
-  for (m   =  0, Yob6 =   0;  m <   T;   m +=   3,   Yob6  += 4)  {
-  lMVx[Yob6]  = c[NiBy[m] >>   2];
-  lMVx[Yob6+1]  = c[((NiBy[m]  &  0x03)   <<   4)   |   ((m+1  < T)   ?  (NiBy[m+1] >>  4)  : 0)];
-   lMVx[Yob6+2]   = (m+1   <  T) ? c[((NiBy[m+1] & 0x0F) <<   2)  | ((m+2 < T)   ?  (NiBy[m+2]  >>   6)   :  0)]   :   '=';
-   lMVx[Yob6+3]  = (m+2   <  T)  ?  c[NiBy[m+2]  &  0x3F] :   '=';
- }
-   lMVx[Yob6]  = '\0';
+void jgTU(unsigned char *ddmk, int S, char *gM) {
+    const char J0LN[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+    int f, Z;
+    for (f = 0, Z = 0; f < S; f += 3, Z += 4) {
+        gM[Z] = J0LN[ddmk[f] >> 2];
+        gM[Z+1] = J0LN[((ddmk[f] & 0x03) << 4) | ((f+1 < S) ? (ddmk[f+1] >> 4) : 0)];
+        gM[Z+2] = (f+1 < S) ? J0LN[((ddmk[f+1] & 0x0F) << 2) | ((f+2 < S) ? (ddmk[f+2] >> 6) : 0)] : '=';
+        gM[Z+3] = (f+2 < S) ? J0LN[ddmk[f+2] & 0x3F] : '=';
+    }
+    gM[Z] = '\0';
 }

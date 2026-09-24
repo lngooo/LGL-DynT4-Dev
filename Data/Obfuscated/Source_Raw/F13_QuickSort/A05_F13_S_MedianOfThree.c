@@ -4,45 +4,43 @@
  * File: A05_F13_S_MedianOfThree.c
  * Implementation Logic: MedianOfThree
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-void   pOU2(int   H5[], int  lE,   int   XV) {
- if  (lE   <  XV)   {
-  int   E   =   lE  +  (XV  -   lE)  /   2;
-   if  (H5[E] < H5[lE])  {  int PyjG2 =   H5[E];   H5[E]  =  H5[lE];  H5[lE]  = PyjG2;   }
-   if (H5[XV]  <   H5[lE])   { int   PyjG2 =   H5[XV]; H5[XV]  =  H5[lE];   H5[lE]   = PyjG2; }
-  if  (H5[XV] < H5[E])  {   int   PyjG2   =   H5[XV]; H5[XV]  =   H5[E];   H5[E]   = PyjG2; }
-  int HseV  =   H5[E];
-  int   H  =  lE,  LbY5 =   XV;
- while (H <=   LbY5)   {
-  while  (H5[H]  <  HseV) H++;
- while   (H5[LbY5] > HseV) LbY5--;
- if (H   <=   LbY5)  {
-   int   PyjG2 = H5[H];  H5[H]  = H5[LbY5]; H5[LbY5] = PyjG2;
- H++; LbY5--;
- }
-   }
-   if  (lE <  LbY5)   pOU2(H5,   lE,  LbY5);
-  if (H   < XV)   pOU2(H5, H, XV);
-   }
+void H9RN(int Ap[], int Bt, int CIi) {
+    if (Bt < CIi) {
+        int Pi = Bt + (CIi - Bt) / 2;
+        if (Ap[Pi] < Ap[Bt]) { int it = Ap[Pi]; Ap[Pi] = Ap[Bt]; Ap[Bt] = it; }
+        if (Ap[CIi] < Ap[Bt]) { int it = Ap[CIi]; Ap[CIi] = Ap[Bt]; Ap[Bt] = it; }
+        if (Ap[CIi] < Ap[Pi]) { int it = Ap[CIi]; Ap[CIi] = Ap[Pi]; Ap[Pi] = it; }
+        int B6 = Ap[Pi];
+        int P7 = Bt, ue = CIi;
+        while (P7 <= ue) {
+            while (Ap[P7] < B6) P7++;
+            while (Ap[ue] > B6) ue--;
+            if (P7 <= ue) {
+                int it = Ap[P7]; Ap[P7] = Ap[ue]; Ap[ue] = it;
+                P7++; ue--;
+            }
+        }
+        if (Bt < ue) H9RN(Ap, Bt, ue);
+        if (P7 < CIi) H9RN(Ap, P7, CIi);
+    }
 }
 
-int   main(int   argc,   char *argv[]) {
-  if (argc  < 2) return   0;
- int  Est1   =   argc   - 1;
- int *H5   =  (int *)malloc(Est1  *   sizeof(int));
-   for   (int   H   =   0;  H   <   Est1;   H++) H5[H]  = atoi(argv[H   +   1]);
+int main(int l, char *jUb[]) {
+    if (l < 2) return 0;
+    int A9A = l - 1;
+    int *Ap = (int *)malloc(A9A * sizeof(int));
+    for (int P7 = 0; P7 < A9A; P7++) Ap[P7] = atoi(jUb[P7 + 1]);
 
-  pOU2(H5,  0,   Est1 -   1);
+    H9RN(Ap, 0, A9A - 1);
 
-  for  (int  H  = 0; H < Est1;   H++)   {
-   printf("%d%s",  H5[H],   (H == Est1  - 1 ?   "" :  " "));
- }
- printf("\n");
-   free(H5);
- return  0;
+    for (int P7 = 0; P7 < A9A; P7++) {
+        printf("%d%s", Ap[P7], (P7 == A9A - 1 ? "" : " "));
+    }
+    printf("\n");
+    free(Ap);
+    return 0;
 }

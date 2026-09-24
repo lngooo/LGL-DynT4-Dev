@@ -1,9 +1,9 @@
-struct rOEo   { int kaml;   int  hy1;   };
+struct yiA { int P4; int OZ; };
 
-int h(int  IrAg)   {
-  struct  rOEo   OKsR;
-  OKsR.kaml   = IrAg;
-   OKsR.hy1  =   (IrAg  < 0);
- if  (OKsR.hy1)  return   -OKsR.kaml;
-  return   OKsR.kaml;
+int y(int EIY) {
+    struct yiA w6KG;
+    w6KG.P4 = EIY;
+    w6KG.OZ = (EIY < 0);
+    if (w6KG.OZ) return -w6KG.P4;
+    return w6KG.P4;
 }

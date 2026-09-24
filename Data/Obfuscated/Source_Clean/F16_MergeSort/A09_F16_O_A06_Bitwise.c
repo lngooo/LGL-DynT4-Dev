@@ -1,17 +1,17 @@
-void  Ls(int   q[],   int   uv,   int LXFH)  {
-  if  (uv  <  LXFH) {
-   int   Z9   =   (uv  + LXFH) >>  1;
-   Ls(q,   uv,   Z9);
-  Ls(q,  Z9  + 1, LXFH);
-   int   NKi =  Z9   - uv  +   1, Wk   =   LXFH  -  Z9;
-   int   Rtr[64], TI[64];
-  for(int  IneW9=0; IneW9<NKi;   IneW9++)   Rtr[IneW9] =  q[uv+IneW9];
- for(int   PU=0; PU<Wk;  PU++) TI[PU] = q[Z9+1+PU];
-   Rtr[NKi] = ~(1   <<   31); TI[Wk] =  ~(1  << 31);
-  int IneW9   =  0, PU   =  0;
-  for(int   wbas=uv;   wbas<=LXFH;   wbas++)   {
- int TQyg = (Rtr[IneW9] <= TI[PU]);
-   q[wbas]   =   TQyg   ? Rtr[IneW9++]   : TI[PU++];
-   }
-  }
+void B2(int Mn[], int URm, int lAYj) {
+    if (URm < lAYj) {
+        int s = (URm + lAYj) >> 1;
+        B2(Mn, URm, s);
+        B2(Mn, s + 1, lAYj);
+        int pNC = s - URm + 1, xL = lAYj - s;
+        int faEi[64], SzR[64];
+        for(int Ty=0; Ty<pNC; Ty++) faEi[Ty] = Mn[URm+Ty];
+        for(int VMqe=0; VMqe<xL; VMqe++) SzR[VMqe] = Mn[s+1+VMqe];
+        faEi[pNC] = ~(1 << 31); SzR[xL] = ~(1 << 31);
+        int Ty = 0, VMqe = 0;
+        for(int J=URm; J<=lAYj; J++) {
+            int d = (faEi[Ty] <= SzR[VMqe]);
+            Mn[J] = d ? faEi[Ty++] : SzR[VMqe++];
+        }
+    }
 }

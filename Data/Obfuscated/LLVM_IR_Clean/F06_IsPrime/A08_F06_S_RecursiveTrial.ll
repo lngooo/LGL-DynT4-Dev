@@ -1,4 +1,4 @@
-define dso_local i32 @d(i32 %0, i32 %1) {
+define dso_local i32 @p2ot(i32 %0, i32 %1) {
   %3 = alloca i32
   %4 = alloca i32
   %5 = alloca i32
@@ -26,14 +26,14 @@ define dso_local i32 @d(i32 %0, i32 %1) {
   %19 = load i32, i32* %4
   %20 = load i32, i32* %5
   %21 = add nsw i32 %20, 1
-  %22 = call i32 @d(i32 %19, i32 %21)
+  %22 = call i32 @p2ot(i32 %19, i32 %21)
   store i32 %22, i32* %3
   br label %23
 23:
   %24 = load i32, i32* %3
   ret i32 %24
 }
-define dso_local i32 @e(i32 %0) {
+define dso_local i32 @AJHi(i32 %0) {
   %2 = alloca i32
   %3 = alloca i32
   store i32 %0, i32* %3
@@ -45,7 +45,7 @@ define dso_local i32 @e(i32 %0) {
   br label %10
 7:
   %8 = load i32, i32* %3
-  %9 = call i32 @d(i32 %8, i32 2)
+  %9 = call i32 @p2ot(i32 %8, i32 2)
   store i32 %9, i32* %2
   br label %10
 10:

@@ -1,5 +1,5 @@
-@aBva.ff3 = internal global [4 x [4 x i32]] [[4 x i32] [i32 0, i32 1, i32 2, i32 3], [4 x i32] [i32 1, i32 1, i32 1, i32 1], [4 x i32] [i32 2, i32 1, i32 2, i32 1], [4 x i32] [i32 3, i32 1, i32 1, i32 3]]
-define dso_local i32 @aBva(i32 %0, i32 %1) {
+@gB9x.DB0U = internal global [4 x [4 x i32]] [[4 x i32] [i32 0, i32 1, i32 2, i32 3], [4 x i32] [i32 1, i32 1, i32 1, i32 1], [4 x i32] [i32 2, i32 1, i32 2, i32 1], [4 x i32] [i32 3, i32 1, i32 1, i32 3]]
+define dso_local i32 @gB9x(i32 %0, i32 %1) {
   %3 = alloca i32
   %4 = alloca i32
   %5 = alloca i32
@@ -21,7 +21,7 @@ define dso_local i32 @aBva(i32 %0, i32 %1) {
 15:
   %16 = load i32, i32* %4
   %17 = sext i32 %16 to i64
-  %18 = getelementptr inbounds [4 x [4 x i32]], [4 x [4 x i32]]* @aBva.ff3, i64 0, i64 %17
+  %18 = getelementptr inbounds [4 x [4 x i32]], [4 x [4 x i32]]* @gB9x.DB0U, i64 0, i64 %17
   %19 = load i32, i32* %5
   %20 = sext i32 %19 to i64
   %21 = getelementptr inbounds [4 x i32], [4 x i32]* %18, i64 0, i64 %20
@@ -40,7 +40,7 @@ define dso_local i32 @aBva(i32 %0, i32 %1) {
   %30 = load i32, i32* %4
   %31 = load i32, i32* %5
   %32 = srem i32 %30, %31
-  %33 = call i32 @aBva(i32 %29, i32 %32)
+  %33 = call i32 @gB9x(i32 %29, i32 %32)
   br label %34
 34:
   %35 = phi i32 [ %27, %26 ], [ %33, %28 ]

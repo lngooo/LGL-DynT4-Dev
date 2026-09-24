@@ -1,14 +1,14 @@
-int   H3(char*   NXJ, char*  xt2) {
- int  udj  = 0,   n2[256]   =  {0},   f7 = 0;
-   while (udj   !=   -1)   {
- switch (udj)  {
- case  0:   udj   =   (strlen(NXJ)  != strlen(xt2)) ? 4  :  1; break;
-   case 1:   if  (NXJ[f7])  { n2[(unsigned char)NXJ[f7]]++;  n2[(unsigned  char)xt2[f7]]--; f7++;   }  else udj =   2; break;
-  case 2:   f7   = 0; udj =  3;   break;
- case  3:   if  (f7   < 256)   { if  (n2[f7] !=   0) return 0; f7++;   }  else   udj  = 5;   break;
-   case   4:  return  0;
-   case  5:   return   1;
-   }
-  }
- return 0;
+int g7r(char* rmTM, char* skLi) {
+    int bhd = 0, JEx[256] = {0}, u1 = 0;
+    while (bhd != -1) {
+        switch (bhd) {
+            case 0: bhd = (strlen(rmTM) != strlen(skLi)) ? 4 : 1; break;
+            case 1: if (rmTM[u1]) { JEx[(unsigned char)rmTM[u1]]++; JEx[(unsigned char)skLi[u1]]--; u1++; } else bhd = 2; break;
+            case 2: u1 = 0; bhd = 3; break;
+            case 3: if (u1 < 256) { if (JEx[u1] != 0) return 0; u1++; } else bhd = 5; break;
+            case 4: return 0;
+            case 5: return 1;
+        }
+    }
+    return 0;
 }

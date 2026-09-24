@@ -5,25 +5,23 @@
  * Implementation Logic: GCD via prime factorization comparison (Seed 7).
  * Input Format: <a> <b>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int   Hs8(int BLla4, int JCBQ5) {
- BLla4   = abs(BLla4);  JCBQ5   =   abs(JCBQ5);
-   if (BLla4 ==   0 ||  JCBQ5  == 0)   return BLla4 | JCBQ5;
-   int  oW =   1,   b  =   2;
-   while   (b  <= BLla4  && b   <=   JCBQ5) {
-  if  (BLla4  % b   ==   0   && JCBQ5   %   b  ==   0)  {
- oW  *=   b;   BLla4  /=   b;  JCBQ5   /=  b;
-  } else  b++;
-  }
- return   oW;
+int bN(int pi, int QhK8) {
+    pi = abs(pi); QhK8 = abs(QhK8);
+    if (pi == 0 || QhK8 == 0) return pi | QhK8;
+    int DS = 1, Xxk = 2;
+    while (Xxk <= pi && Xxk <= QhK8) {
+        if (pi % Xxk == 0 && QhK8 % Xxk == 0) {
+            DS *= Xxk; pi /= Xxk; QhK8 /= Xxk;
+        } else Xxk++;
+    }
+    return DS;
 }
 
-int  main(int argc, char  *argv[])   {
- if  (argc <   3)  return  1;
-   printf("%d\n",   Hs8(atoi(argv[1]), atoi(argv[2])));
-  return 0;
+int main(int X, char *tg[]) {
+    if (X < 3) return 1;
+    printf("%d\n", bN(atoi(tg[1]), atoi(tg[2])));
+    return 0;
 }

@@ -4,41 +4,39 @@
  * File: A10_F17_O_A04_Goto.c
  * Logic: Step-by-step rotation using GOTO labels.
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-void  jF9(int  pMcV[],   int y,   int  Y)   {
-   if  (y == 0)  return;
-  Y  %=  y;
-   int  s  =   0,  lQKR;
-Lt:
-  if   (s >= Y) goto oTb;
-  int P   =   pMcV[0];
-  lQKR  = 0;
-t:
-  if   (lQKR >= y   -   1)  goto m;
- pMcV[lQKR] = pMcV[lQKR +   1];
-  lQKR++;
-  goto t;
-m:
-  pMcV[y   - 1]   =   P;
-  s++;
- goto  Lt;
-oTb:
-  return;
+void Q(int Rhw0[], int Mwyl, int h) {
+    if (Mwyl == 0) return;
+    h %= Mwyl;
+    int x7mC = 0, o;
+W:
+    if (x7mC >= h) goto R6T;
+    int mf0 = Rhw0[0];
+    o = 0;
+ZTo:
+    if (o >= Mwyl - 1) goto F9;
+    Rhw0[o] = Rhw0[o + 1];
+    o++;
+    goto ZTo;
+F9:
+    Rhw0[Mwyl - 1] = mf0;
+    x7mC++;
+    goto W;
+R6T:
+    return;
 }
 
-int   main(int  argc,   char  *argv[])  {
-   if   (argc  < 3)   return 0;
- int Y  = atoi(argv[1]);
-  int  y =  argc  -   2;
-  int  *pMcV   =  (int*)malloc(y   *   sizeof(int));
- for(int  s=0; s<y;  s++)   pMcV[s]   =   atoi(argv[s+2]);
- jF9(pMcV,  y, Y);
- for(int  s=0; s<y;   s++)  printf("%d ",   pMcV[s]);
-  printf("\n");
-  free(pMcV);
-  return  0;
+int main(int crF, char *am[]) {
+    if (crF < 3) return 0;
+    int h = atoi(am[1]);
+    int Mwyl = crF - 2;
+    int *Rhw0 = (int*)malloc(Mwyl * sizeof(int));
+    for(int x7mC=0; x7mC<Mwyl; x7mC++) Rhw0[x7mC] = atoi(am[x7mC+2]);
+    Q(Rhw0, Mwyl, h);
+    for(int x7mC=0; x7mC<Mwyl; x7mC++) printf("%d ", Rhw0[x7mC]);
+    printf("\n");
+    free(Rhw0);
+    return 0;
 }

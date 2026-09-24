@@ -1,5 +1,5 @@
 @.str = constant [2 x i8] c" \00"
-define dso_local void @PeAZ(i8* %0) {
+define dso_local void @G(i8* %0) {
   %2 = alloca i8*
   %3 = alloca [1024 x i8]
   %4 = alloca i8*

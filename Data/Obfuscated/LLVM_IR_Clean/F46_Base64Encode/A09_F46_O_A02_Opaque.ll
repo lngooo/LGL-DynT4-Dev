@@ -1,5 +1,5 @@
 @.str = constant [65 x i8] c"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/\00"
-define dso_local void @OJ(i8* %0, i32 %1, i8* %2) {
+define dso_local void @b(i8* %0, i32 %1, i8* %2) {
   %4 = alloca i8*
   %5 = alloca i32
   %6 = alloca i8*
@@ -128,7 +128,7 @@ define dso_local void @OJ(i8* %0, i32 %1, i8* %2) {
   %106 = sub nsw i32 %105, 3
   %107 = load i8*, i8** %6
   %108 = getelementptr inbounds i8, i8* %107, i64 4
-  call void @OJ(i8* %104, i32 %106, i8* %108)
+  call void @b(i8* %104, i32 %106, i8* %108)
   br label %110
 110:
   br label %112

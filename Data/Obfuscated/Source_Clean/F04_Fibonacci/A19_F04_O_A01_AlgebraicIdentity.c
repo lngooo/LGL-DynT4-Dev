@@ -1,8 +1,8 @@
-long  K9(int tN)  {
-  long UK7  = 0,  H =   1;
-  if (tN   ==  0) return 0;
-   for  (int OJI   =   2; OJI  <=   tN;  OJI++) {
- H = UK7   +   H;  UK7  = H  - UK7;
-   }
-   return (tN ==   1)  ?  1 :   H;
+long Gz0(int qcWP) {
+    long sw = 0, P = 1;
+    if (qcWP == 0) return 0;
+    for (int rhZ = 2; rhZ <= qcWP; rhZ++) {
+        P = sw + P; sw = P - sw;
+    }
+    return (qcWP == 1) ? 1 : P;
 }

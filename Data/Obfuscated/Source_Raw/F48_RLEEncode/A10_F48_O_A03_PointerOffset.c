@@ -5,32 +5,30 @@
  * Implementation Logic: PointerOffset
  * Input Format: <string>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
 
-void   W(const  char  *eZRN,  char *S) {
- char *qQtJ9  =  (char*)eZRN;
-   int dcYN  =   0;
- while  (*(qQtJ9))  {
-   int  xpG   = 0;
-   char beM =   *qQtJ9;
-  while  (*(qQtJ9  +   xpG)   ==  beM)  xpG++;
- *(S   +   dcYN++) =  beM;
-   dcYN  +=   sprintf(S +   dcYN, "%d", xpG);
-   qQtJ9   +=  xpG;
-  }
-  S[dcYN]   =   0;
+void athp(const char *Hld, char *M0p) {
+    char *u = (char*)Hld;
+    int MH = 0;
+    while (*(u)) {
+        int WM = 0;
+        char za = *u;
+        while (*(u + WM) == za) WM++;
+        *(M0p + MH++) = za;
+        MH += sprintf(M0p + MH, "%d", WM);
+        u += WM;
+    }
+    M0p[MH] = 0;
 }
 
-int main(int   argc, char  *argv[]) {
-   if  (argc < 2) return   0;
-  char  *XoN0 = argv[1];
- char   Y[256] = {0};
-  W(XoN0, Y);
-   printf("%s\n",  Y);
-  return 0;
+int main(int a, char *s[]) {
+    if (a < 2) return 0;
+    char *dPQ = s[1];
+    char zj1N[256] = {0};
+    athp(dPQ, zj1N);
+    printf("%s\n", zj1N);
+    return 0;
 }

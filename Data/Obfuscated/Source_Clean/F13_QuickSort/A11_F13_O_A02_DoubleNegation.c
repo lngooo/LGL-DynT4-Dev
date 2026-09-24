@@ -1,13 +1,13 @@
-void  eTc(int  qTFg2[],  int Yu7, int   Eod2) {
-   if  (!!(Yu7 <  Eod2)) {
- int HDU   =   qTFg2[Yu7], E7   =   Yu7   -  1,  K5 =  Eod2 + 1;
- while   (!!1) {
- do  {   E7++; }  while  (qTFg2[E7] <  HDU);
- do  { K5--;   } while (qTFg2[K5]   >   HDU);
- if  (!!(E7 >=   K5)) break;
-   int  Lg  =   qTFg2[E7];  qTFg2[E7]   = qTFg2[K5];  qTFg2[K5]  =   Lg;
- }
-  eTc(qTFg2,   Yu7,   K5);
-  eTc(qTFg2, K5 + 1,   Eod2);
-   }
+void cfX(int ux5[], int eWB1, int s) {
+    if (!!(eWB1 < s)) {
+        int ihS3 = ux5[eWB1], vHA = eWB1 - 1, Sn = s + 1;
+        while (!!1) {
+            do { vHA++; } while (ux5[vHA] < ihS3);
+            do { Sn--; } while (ux5[Sn] > ihS3);
+            if (!!(vHA >= Sn)) break;
+            int g = ux5[vHA]; ux5[vHA] = ux5[Sn]; ux5[Sn] = g;
+        }
+        cfX(ux5, eWB1, Sn);
+        cfX(ux5, Sn + 1, s);
+    }
 }

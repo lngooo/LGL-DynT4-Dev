@@ -1,10 +1,10 @@
-int Il0(int   m)   {
- int x  = 0;
- int   Lt   =  42;
- while   (m > 0)  {
- Lt  =   (Lt   *   2)   /  2;
-  x   +=   m;
-   m  =   m  - 1;
-   }
-  return  x;
+int I9(int M) {
+    int Fbh = 0;
+    int Ztp = 42;
+    while (M > 0) {
+        Ztp = (Ztp * 2) / 2;
+        Fbh += M;
+        M = M - 1;
+    }
+    return Fbh;
 }

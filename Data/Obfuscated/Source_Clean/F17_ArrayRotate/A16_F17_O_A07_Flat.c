@@ -1,16 +1,16 @@
-void oPkx7(int   Yi1[], int   xm6, int vucl)   {
-  if  (xm6   <=  1)   return;
-   vucl   %=  xm6; if(vucl==0)  return;
-  int  YrbN5 =  0,   rvW  = 0, vU =   0,   xq5, CcEq;
- while(YrbN5 <  xm6) {
-  switch(vU)   {
-  case  0:   xq5   =  rvW;   CcEq   =  Yi1[rvW];   vU =   1; break;
- case   1: {
-  int Y8   = (xq5  -   vucl  +   xm6)   % xm6;
-  int S =   Yi1[Y8]; Yi1[Y8] =  CcEq;  CcEq  =   S; xq5 =  Y8; YrbN5++;
- if(xq5 ==  rvW)  {   rvW++;  vU   =  0; }  else   vU = 1;
-   break;
-   }
-  }
- }
+void NtA(int kgD[], int F, int aO) {
+    if (F <= 1) return;
+    aO %= F; if(aO==0) return;
+    int So = 0, NnpE = 0, ZVy = 0, zl, x;
+    while(So < F) {
+        switch(ZVy) {
+            case 0: zl = NnpE; x = kgD[NnpE]; ZVy = 1; break;
+            case 1: {
+                int e = (zl - aO + F) % F;
+                int bJh = kgD[e]; kgD[e] = x; x = bJh; zl = e; So++;
+                if(zl == NnpE) { NnpE++; ZVy = 0; } else ZVy = 1;
+                break;
+            }
+        }
+    }
 }

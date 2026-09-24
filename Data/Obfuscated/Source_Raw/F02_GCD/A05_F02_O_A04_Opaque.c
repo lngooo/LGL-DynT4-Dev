@@ -5,20 +5,18 @@
  * Implementation Logic: Recursive GCD with opaque predicates to confuse analysis.
  * Input Format: <a> <b>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int  VuO(int  P,  int   r)   {
-   if (r  == 0)   {
-   if ((P  *  P   +   1)   >  0) return   abs(P);
-   }
- return  VuO(abs(r),   abs(P)  %   abs(r));
+int aH7Z(int xB, int Q) {
+    if (Q == 0) {
+        if ((xB * xB + 1) > 0) return abs(xB);
+    }
+    return aH7Z(abs(Q), abs(xB) % abs(Q));
 }
 
-int  main(int argc,   char   *argv[])   {
-   if   (argc <   3)   return  1;
-   printf("%d\n",  VuO(atoi(argv[1]), atoi(argv[2])));
-  return  0;
+int main(int NuQ, char *U[]) {
+    if (NuQ < 3) return 1;
+    printf("%d\n", aH7Z(atoi(U[1]), atoi(U[2])));
+    return 0;
 }

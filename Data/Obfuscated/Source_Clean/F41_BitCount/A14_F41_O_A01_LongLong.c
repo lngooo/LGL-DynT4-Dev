@@ -1,9 +1,9 @@
-int LGYM(uint32_t  hv) {
-  unsigned long   long NNsU  =   hv;
-  int   F   =  0;
-   while (NNsU  >  0)  {
-  if   ((NNsU   % 2ULL)  ==  1ULL) F++;
- NNsU = NNsU   >> 1;
-  }
- return F;
+int Q(uint32_t YDx7) {
+    unsigned long long C = YDx7;
+    int jXEN = 0;
+    while (C > 0) {
+        if ((C % 2ULL) == 1ULL) jXEN++;
+        C = C >> 1;
+    }
+    return jXEN;
 }

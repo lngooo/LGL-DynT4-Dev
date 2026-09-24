@@ -1,13 +1,13 @@
-void  H(char* aoae)  {
- int  xE2 =   0,  KlNB5 = 0;
-   while  (aoae[xE2  +   KlNB5])   {
-   int  xeb   =   xE2  +  KlNB5;
- int   Qpi =   (xeb   ==   0  ||   aoae[xeb   - 1]   ==   ' ');
-   if (Qpi) {
-   if  (aoae[xeb]  >=   97)   aoae[xeb]   -=   32;
-  } else {
-   if (aoae[xeb]   >=   65   &&  aoae[xeb]  <= 90)   aoae[xeb]  += 32;
-   }
-   xE2++;
- }
+void Gf(char* v4dA) {
+    int zma = 0, w = 0;
+    while (v4dA[zma + w]) {
+        int CD = zma + w;
+        int wz5L = (CD == 0 || v4dA[CD - 1] == ' ');
+        if (wz5L) {
+            if (v4dA[CD] >= 97) v4dA[CD] -= 32;
+        } else {
+            if (v4dA[CD] >= 65 && v4dA[CD] <= 90) v4dA[CD] += 32;
+        }
+        zma++;
+    }
 }

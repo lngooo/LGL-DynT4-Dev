@@ -1,4 +1,4 @@
-define dso_local i32 @rJ(i32* %0, i32 %1, i32 %2, i32 %3) {
+define dso_local i32 @p(i32* %0, i32 %1, i32 %2, i32 %3) {
   %5 = alloca i32
   %6 = alloca i32*
   %7 = alloca i32
@@ -129,7 +129,7 @@ define dso_local i32 @rJ(i32* %0, i32 %1, i32 %2, i32 %3) {
   %112 = load i32, i32* %11
   %113 = sub nsw i32 %112, 1
   %114 = load i32, i32* %9
-  %115 = call i32 @rJ(i32* %110, i32 %111, i32 %113, i32 %114)
+  %115 = call i32 @p(i32* %110, i32 %111, i32 %113, i32 %114)
   store i32 %115, i32* %5
   store i32 1, i32* %15
   br label %129
@@ -139,7 +139,7 @@ define dso_local i32 @rJ(i32* %0, i32 %1, i32 %2, i32 %3) {
   %119 = add nsw i32 %118, 1
   %120 = load i32, i32* %8
   %121 = load i32, i32* %9
-  %122 = call i32 @rJ(i32* %117, i32 %119, i32 %120, i32 %121)
+  %122 = call i32 @p(i32* %117, i32 %119, i32 %120, i32 %121)
   store i32 %122, i32* %5
   store i32 1, i32* %15
   br label %129

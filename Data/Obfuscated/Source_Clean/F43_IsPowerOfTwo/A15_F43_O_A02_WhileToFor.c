@@ -1,7 +1,7 @@
-int   QFms(unsigned  int   nzWU) {
- if   (nzWU   ==   0)  return   0;
-  for   (;   !(nzWU %  2  !=  0);  nzWU  >>= 1)  {
+int OTK(unsigned int WHi) {
+    if (WHi == 0) return 0;
+    for (; !(WHi % 2 != 0); WHi >>= 1) {
 
- }
- return nzWU  ==  1;
+    }
+    return WHi == 1;
 }

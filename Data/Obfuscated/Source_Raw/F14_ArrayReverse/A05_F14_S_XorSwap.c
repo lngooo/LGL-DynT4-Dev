@@ -4,27 +4,25 @@
  * File: A05_F14_S_XorSwap.c
  * Implementation Logic: In-place reversal using XOR swap algorithm.
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-void D(int   KjDj[],   int gMZv)  {
-   for   (int   h = 0, VoQV2   =  gMZv  -   1; h  <  VoQV2;  h++,   VoQV2--)   {
- KjDj[h] ^=  KjDj[VoQV2];
-  KjDj[VoQV2]   ^= KjDj[h];
-  KjDj[h] ^=   KjDj[VoQV2];
-  }
+void fiGe(int qiN[], int r2q) {
+    for (int V = 0, M = r2q - 1; V < M; V++, M--) {
+        qiN[V] ^= qiN[M];
+        qiN[M] ^= qiN[V];
+        qiN[V] ^= qiN[M];
+    }
 }
 
-int  main(int  argc, char  *argv[])  {
- if   (argc < 2) return  0;
- int  gMZv  =  argc  -  1;
-  int *KjDj  = (int*)malloc(gMZv *   sizeof(int));
-  for(int h=0;  h<gMZv; h++)  KjDj[h] = atoi(argv[h+1]);
-   D(KjDj,   gMZv);
-  for(int   h=0;   h<gMZv;  h++)   printf("%d ",   KjDj[h]);
-  printf("\n");
-  free(KjDj);
-   return 0;
+int main(int LV, char *QC[]) {
+    if (LV < 2) return 0;
+    int r2q = LV - 1;
+    int *qiN = (int*)malloc(r2q * sizeof(int));
+    for(int V=0; V<r2q; V++) qiN[V] = atoi(QC[V+1]);
+    fiGe(qiN, r2q);
+    for(int V=0; V<r2q; V++) printf("%d ", qiN[V]);
+    printf("\n");
+    free(qiN);
+    return 0;
 }

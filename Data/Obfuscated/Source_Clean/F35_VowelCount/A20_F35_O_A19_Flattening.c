@@ -1,14 +1,14 @@
-int   NVJy(const   char*  jhC7)   {
- int   kupg =   0, iiLW   =   1;
- while  (iiLW)  {
-  if  (*jhC7   == 0)   {  iiLW  =   0; }
-  else {
- char  KlF = *jhC7;
- int   Xjl = (KlF=='a'||KlF=='e'||KlF=='i'||KlF=='o'||KlF=='u'||
-  KlF=='A'||KlF=='E'||KlF=='I'||KlF=='O'||KlF=='U') ?   1  :  0;
- kupg +=  Xjl;
-   jhC7++;
- }
-  }
-  return   kupg;
+int h3(const char* ADWQ) {
+    int dh = 0, h = 1;
+    while (h) {
+        if (*ADWQ == 0) { h = 0; }
+        else {
+            char y = *ADWQ;
+            int gi6l = (y=='a'||y=='e'||y=='i'||y=='o'||y=='u'||
+                       y=='A'||y=='E'||y=='I'||y=='O'||y=='U') ? 1 : 0;
+            dh += gi6l;
+            ADWQ++;
+        }
+    }
+    return dh;
 }

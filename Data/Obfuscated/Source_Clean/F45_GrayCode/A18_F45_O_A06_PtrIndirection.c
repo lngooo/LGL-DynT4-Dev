@@ -1,11 +1,11 @@
-unsigned  int eIqg2(unsigned   int   oNZ) {
-  unsigned  int  LeYV = 0;
-   unsigned  int g =   oNZ >> 1;
-   const unsigned  int *CPdT8   =   &oNZ;
-   for(int DL=0;   DL<8; DL++)   {
- unsigned  char hzJ0 =   (*CPdT8  >> (DL*4))  & 0xF;
- unsigned char  iaR  =  (g  >> (DL*4)) & 0xF;
-   LeYV   |= (unsigned  int)(hzJ0  ^  iaR) <<   (DL*4);
-   }
- return  LeYV;
+unsigned int GKE(unsigned int jip) {
+    unsigned int rZn = 0;
+    unsigned int dtU = jip >> 1;
+    const unsigned int *VWyJ = &jip;
+    for(int hj=0; hj<8; hj++) {
+        unsigned char v = (*VWyJ >> (hj*4)) & 0xF;
+        unsigned char qMVW = (dtU >> (hj*4)) & 0xF;
+        rZn |= (unsigned int)(v ^ qMVW) << (hj*4);
+    }
+    return rZn;
 }

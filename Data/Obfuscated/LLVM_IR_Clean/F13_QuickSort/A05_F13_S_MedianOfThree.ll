@@ -1,4 +1,4 @@
-define dso_local void @pOU2(i32* %0, i32 %1, i32 %2) {
+define dso_local void @H9RN(i32* %0, i32 %1, i32 %2) {
   %4 = alloca i32*
   %5 = alloca i32
   %6 = alloca i32
@@ -230,7 +230,7 @@ define dso_local void @pOU2(i32* %0, i32 %1, i32 %2) {
   %202 = load i32*, i32** %4
   %203 = load i32, i32* %5
   %204 = load i32, i32* %13
-  call void @pOU2(i32* %202, i32 %203, i32 %204)
+  call void @H9RN(i32* %202, i32 %203, i32 %204)
   br label %205
 205:
   %206 = load i32, i32* %12
@@ -241,7 +241,7 @@ define dso_local void @pOU2(i32* %0, i32 %1, i32 %2) {
   %210 = load i32*, i32** %4
   %211 = load i32, i32* %12
   %212 = load i32, i32* %6
-  call void @pOU2(i32* %210, i32 %211, i32 %212)
+  call void @H9RN(i32* %210, i32 %211, i32 %212)
   br label %213
 213:
   br label %218

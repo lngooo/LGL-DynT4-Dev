@@ -5,26 +5,24 @@
  * Implementation Logic: TernaryRecursive
  * Input Format: <arg1>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-long f(int  mn)   {
-  return   (mn <  2) ? (long)mn :   (f(mn-1)  + f(mn-2));
+long N(int DLJ9) {
+    return (DLJ9 < 2) ? (long)DLJ9 : (N(DLJ9-1) + N(DLJ9-2));
 }
 
-int   main(int argc, char   *argv[]) {
- if   (argc <  2) {
-  return   1;
- }
-  int  mn  = atoi(argv[1]);
-  if (mn   <   0) {
- printf("0\n");
-   return   0;
-  }
-   long  sqE4   =   f(mn);
- printf("%ld\n",   sqE4);
-   return   0;
+int main(int C, char *uM[]) {
+    if (C < 2) {
+        return 1;
+    }
+    int DLJ9 = atoi(uM[1]);
+    if (DLJ9 < 0) {
+        printf("0\n");
+        return 0;
+    }
+    long Gj9d = N(DLJ9);
+    printf("%ld\n", Gj9d);
+    return 0;
 }

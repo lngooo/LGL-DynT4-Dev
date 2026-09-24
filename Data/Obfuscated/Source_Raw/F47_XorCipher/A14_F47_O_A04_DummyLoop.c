@@ -5,33 +5,31 @@
  * Implementation Logic: DummyLoop
  * Input Format: <data_string> <key_string>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
 
-void vFM(char  *AvR,   char  *GgqL1)  {
-   int  v4   =  0, g = 0;
-  while(AvR[v4]) v4++;  while(GgqL1[g])   g++;
-  for(int   Ul7=0; Ul7<v4;   Ul7++)  {
-  for(int   uz=0;   uz<1;   uz++)   AvR[Ul7]  ^=   GgqL1[Ul7 %  g];
-  }
+void Xre(char *korw, char *XvYm) {
+    int KqCK = 0, k = 0;
+    while(korw[KqCK]) KqCK++; while(XvYm[k]) k++;
+    for(int sXI=0; sXI<KqCK; sXI++) {
+        for(int Voy=0; Voy<1; Voy++) korw[sXI] ^= XvYm[sXI % k];
+    }
 }
 
-int   main(int  argc,   char *argv[]) {
- if   (argc  <   3) return 0;
- char  *AvR =   argv[1];
-   char  *GgqL1  = argv[2];
-  int nBF =  0;
- while (AvR[nBF])  nBF++;
+int main(int AJ, char *r[]) {
+    if (AJ < 3) return 0;
+    char *korw = r[1];
+    char *XvYm = r[2];
+    int lmHB = 0;
+    while (korw[lmHB]) lmHB++;
 
-  vFM(AvR,  GgqL1);
+    Xre(korw, XvYm);
 
-  for (int  Ul7  =  0; Ul7  <  nBF;   Ul7++) {
- printf("%02x",  (unsigned  char)AvR[Ul7]);
-   }
- printf("\n");
-   return 0;
+    for (int sXI = 0; sXI < lmHB; sXI++) {
+        printf("%02x", (unsigned char)korw[sXI]);
+    }
+    printf("\n");
+    return 0;
 }

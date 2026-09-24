@@ -5,21 +5,19 @@
  * Implementation Logic: Using math logarithms. log2(n) must be an integer.
  * Input Format: <uint>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-int   Rh(unsigned   int  EQDP1)   {
- if   (EQDP1  == 0)  return  0;
-   double   oc   =  log2((double)EQDP1);
-  return (oc  == (int)oc);
+int Nw(unsigned int TRu) {
+    if (TRu == 0) return 0;
+    double klL = log2((double)TRu);
+    return (klL == (int)klL);
 }
 
-int main(int   argc,  char* argv[])  {
-  if  (argc < 2) return  0;
-  unsigned int   EQDP1 =   (unsigned  int)strtoul(argv[1], NULL,  10);
-  printf("%d",   Rh(EQDP1));
-   return 0;
+int main(int kR1, char* iT2[]) {
+    if (kR1 < 2) return 0;
+    unsigned int TRu = (unsigned int)strtoul(iT2[1], NULL, 10);
+    printf("%d", Nw(TRu));
+    return 0;
 }

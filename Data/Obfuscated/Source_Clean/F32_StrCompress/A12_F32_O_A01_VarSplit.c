@@ -1,12 +1,12 @@
-void T(char*   EFLD)   {
-  int Qz  =  strlen(EFLD);
-   int  XK  =   0,   f   =   0;
-  while   ((XK   + f)  <   Qz)  {
-  int  ToAj  = 1, LK6 = XK   +   f;
-   while (LK6 +  1 <   Qz  && EFLD[LK6]  == EFLD[LK6   +  1]) {   ToAj++;   LK6++;   }
-   printf("%c%d", EFLD[LK6], ToAj);
- int   onqJ2  = (LK6   +  1)   - (XK   +   f);
-  XK +=   onqJ2;
-   }
-  printf("\n");
+void g(char* cEZx) {
+    int Igqk = strlen(cEZx);
+    int fv = 0, lP = 0;
+    while ((fv + lP) < Igqk) {
+        int O = 1, E = fv + lP;
+        while (E + 1 < Igqk && cEZx[E] == cEZx[E + 1]) { O++; E++; }
+        printf("%c%d", cEZx[E], O);
+        int UT = (E + 1) - (fv + lP);
+        fv += UT;
+    }
+    printf("\n");
 }

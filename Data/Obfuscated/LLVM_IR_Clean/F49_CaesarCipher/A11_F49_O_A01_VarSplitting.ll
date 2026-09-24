@@ -1,4 +1,4 @@
-define dso_local void @qj9(i8* %0, i32 %1) {
+define dso_local void @BFp(i8* %0, i32 %1) {
   %3 = alloca i8*
   %4 = alloca i32
   %5 = alloca i32

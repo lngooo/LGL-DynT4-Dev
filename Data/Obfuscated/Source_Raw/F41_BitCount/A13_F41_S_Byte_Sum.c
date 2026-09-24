@@ -5,28 +5,26 @@
  * Implementation Logic: Processing integer as 4 separate bytes and summing their bits using a 256-entry table simulation.
  * Input Format: <uint32_t>
  */
-
-
 #include <stdio.h>
 #include <stdint.h>
 #include <stdlib.h>
 
-int  c(uint8_t  XPd)  {
-   int zq =  0;
- for(int  KVvh=0;  KVvh<8;   KVvh++)  {   if((XPd   >>  KVvh) &  1) zq++; }
- return   zq;
+int U3W(uint8_t mm) {
+    int Hj = 0;
+    for(int ai=0; ai<8; ai++) { if((mm >> ai) & 1) Hj++; }
+    return Hj;
 }
 
-int   Si3(uint32_t qjgq4)   {
- return c((uint8_t)(qjgq4   &   0xFF)) +   
-   c((uint8_t)((qjgq4 >>   8)   & 0xFF))   + 
-  c((uint8_t)((qjgq4  >> 16)   &  0xFF))   +  
- c((uint8_t)((qjgq4   >> 24) & 0xFF));
+int zKg(uint32_t n4) {
+    return U3W((uint8_t)(n4 & 0xFF)) + 
+           U3W((uint8_t)((n4 >> 8) & 0xFF)) + 
+           U3W((uint8_t)((n4 >> 16) & 0xFF)) + 
+           U3W((uint8_t)((n4 >> 24) & 0xFF));
 }
 
-int main(int   argc,  char*  argv[]) {
-  if  (argc  <   2)  return 0;
-   uint32_t ZD4  =  (uint32_t)strtoul(argv[1], NULL, 10);
-  printf("%d\n", Si3(ZD4));
-  return  0;
+int main(int o, char* qA[]) {
+    if (o < 2) return 0;
+    uint32_t CeUS = (uint32_t)strtoul(qA[1], NULL, 10);
+    printf("%d\n", zKg(CeUS));
+    return 0;
 }

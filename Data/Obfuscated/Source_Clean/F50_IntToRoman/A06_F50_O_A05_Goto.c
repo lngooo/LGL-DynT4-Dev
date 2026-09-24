@@ -1,42 +1,42 @@
-void   gZA(int  w, char*   qxHJ)  {
-   qxHJ[0] =  '\0';
-W:
-   if  (w < 1000)  goto   H;
-  strcat(qxHJ,  "M");   w   -=   1000; goto   W;
-H:
-  if  (w   < 900)   goto ZM;
-  strcat(qxHJ,   "CM");  w  -=   900;
-ZM:
-   if  (w < 500) goto   MnPi;
-   strcat(qxHJ,  "D");   w -=  500;
-MnPi:
-   if (w  < 400)  goto Shmg;
- strcat(qxHJ,  "CD");  w  -=   400;
-Shmg:
- if   (w   <   100)  goto   jk1;
-  strcat(qxHJ,   "C");  w   -=  100;   goto Shmg;
-jk1:
- if   (w  < 90) goto eLS;
-  strcat(qxHJ, "XC");   w -=   90;
-eLS:
- if  (w  < 50)  goto  D;
-   strcat(qxHJ,   "L");  w  -=  50;
-D:
- if  (w  <   40)  goto ap;
- strcat(qxHJ, "XL"); w  -=   40;
-ap:
- if (w <  10) goto   jk;
-  strcat(qxHJ,   "X");   w  -= 10; goto  ap;
-jk:
-   if   (w   <  9) goto   qlGo;
-  strcat(qxHJ,  "IX"); w -= 9;
-qlGo:
-   if  (w <   5)   goto   dN;
- strcat(qxHJ,   "V"); w  -=   5;
-dN:
-  if   (w  <  4)  goto Dsp;
-  strcat(qxHJ, "IV");   w   -=  4;
-Dsp:
-   if  (w   <   1)   return;
- strcat(qxHJ,   "I");  w -= 1; goto  Dsp;
+void QLa(int Oe0M, char* MF32) {
+    MF32[0] = '\0';
+i1rv:
+    if (Oe0M < 1000) goto Jr;
+    strcat(MF32, "M"); Oe0M -= 1000; goto i1rv;
+Jr:
+    if (Oe0M < 900) goto n;
+    strcat(MF32, "CM"); Oe0M -= 900;
+n:
+    if (Oe0M < 500) goto yNr;
+    strcat(MF32, "D"); Oe0M -= 500;
+yNr:
+    if (Oe0M < 400) goto t;
+    strcat(MF32, "CD"); Oe0M -= 400;
+t:
+    if (Oe0M < 100) goto cDn;
+    strcat(MF32, "C"); Oe0M -= 100; goto t;
+cDn:
+    if (Oe0M < 90) goto WXy;
+    strcat(MF32, "XC"); Oe0M -= 90;
+WXy:
+    if (Oe0M < 50) goto tGaK;
+    strcat(MF32, "L"); Oe0M -= 50;
+tGaK:
+    if (Oe0M < 40) goto FOO;
+    strcat(MF32, "XL"); Oe0M -= 40;
+FOO:
+    if (Oe0M < 10) goto Kq;
+    strcat(MF32, "X"); Oe0M -= 10; goto FOO;
+Kq:
+    if (Oe0M < 9) goto v;
+    strcat(MF32, "IX"); Oe0M -= 9;
+v:
+    if (Oe0M < 5) goto i;
+    strcat(MF32, "V"); Oe0M -= 5;
+i:
+    if (Oe0M < 4) goto akTN;
+    strcat(MF32, "IV"); Oe0M -= 4;
+akTN:
+    if (Oe0M < 1) return;
+    strcat(MF32, "I"); Oe0M -= 1; goto akTN;
 }

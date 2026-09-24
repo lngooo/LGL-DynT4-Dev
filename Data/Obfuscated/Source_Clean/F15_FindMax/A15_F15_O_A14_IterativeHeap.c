@@ -1,15 +1,15 @@
-int   M(int QeF[], int   RZef) {
-   int   *Mx =  (int*)malloc(RZef  *  sizeof(int));
- for(int  wqpx=0;  wqpx<RZef;  wqpx++)   Mx[wqpx] =   QeF[wqpx];
-   for  (int wqpx = 1;  wqpx <  RZef; wqpx++) {
- int   AIoy  =  wqpx;
- while  (AIoy  >  0)  {
- int ISRC9   =   (AIoy -  1)  /   2;
-   if   (Mx[AIoy]  > Mx[ISRC9])  {  int  vYE9  = Mx[AIoy]; Mx[AIoy] =  Mx[ISRC9];   Mx[ISRC9]  =  vYE9; AIoy =   ISRC9;   }
- else   break;
- }
-   }
-  int   o3 =  Mx[0];
- free(Mx);
-   return   o3;
+int WBcm(int E[], int q) {
+    int *e = (int*)malloc(q * sizeof(int));
+    for(int QaW=0; QaW<q; QaW++) e[QaW] = E[QaW];
+    for (int QaW = 1; QaW < q; QaW++) {
+        int Y = QaW;
+        while (Y > 0) {
+            int M = (Y - 1) / 2;
+            if (e[Y] > e[M]) { int L5 = e[Y]; e[Y] = e[M]; e[M] = L5; Y = M; }
+            else break;
+        }
+    }
+    int lQ = e[0];
+    free(e);
+    return lQ;
 }

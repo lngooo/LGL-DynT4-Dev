@@ -1,15 +1,15 @@
-@EomK.oH = internal global [256 x i32] zeroinitializer
-define dso_local void @EomK(i8* %0) {
+@gyj.OA = internal global [256 x i32] zeroinitializer
+define dso_local void @gyj(i8* %0) {
   %2 = alloca i8*
   %3 = alloca i32
   %4 = alloca i32
   store i8* %0, i8** %2
-  store i32 1, i32* getelementptr inbounds ([256 x i32], [256 x i32]* @EomK.oH, i64 0, i64 12)
-  store i32 1, i32* getelementptr inbounds ([256 x i32], [256 x i32]* @EomK.oH, i64 0, i64 11)
-  store i32 1, i32* getelementptr inbounds ([256 x i32], [256 x i32]* @EomK.oH, i64 0, i64 13)
-  store i32 1, i32* getelementptr inbounds ([256 x i32], [256 x i32]* @EomK.oH, i64 0, i64 10)
-  store i32 1, i32* getelementptr inbounds ([256 x i32], [256 x i32]* @EomK.oH, i64 0, i64 9)
-  store i32 1, i32* getelementptr inbounds ([256 x i32], [256 x i32]* @EomK.oH, i64 0, i64 32)
+  store i32 1, i32* getelementptr inbounds ([256 x i32], [256 x i32]* @gyj.OA, i64 0, i64 12)
+  store i32 1, i32* getelementptr inbounds ([256 x i32], [256 x i32]* @gyj.OA, i64 0, i64 11)
+  store i32 1, i32* getelementptr inbounds ([256 x i32], [256 x i32]* @gyj.OA, i64 0, i64 13)
+  store i32 1, i32* getelementptr inbounds ([256 x i32], [256 x i32]* @gyj.OA, i64 0, i64 10)
+  store i32 1, i32* getelementptr inbounds ([256 x i32], [256 x i32]* @gyj.OA, i64 0, i64 9)
+  store i32 1, i32* getelementptr inbounds ([256 x i32], [256 x i32]* @gyj.OA, i64 0, i64 32)
   store i32 0, i32* %3
   store i32 0, i32* %4
   br label %7
@@ -30,7 +30,7 @@ define dso_local void @EomK(i8* %0) {
   %20 = getelementptr inbounds i8, i8* %17, i64 %19
   %21 = load i8, i8* %20
   %22 = zext i8 %21 to i64
-  %23 = getelementptr inbounds [256 x i32], [256 x i32]* @EomK.oH, i64 0, i64 %22
+  %23 = getelementptr inbounds [256 x i32], [256 x i32]* @gyj.OA, i64 0, i64 %22
   %24 = load i32, i32* %23
   %25 = icmp ne i32 %24, 0
   br i1 %25, label %37, label %26

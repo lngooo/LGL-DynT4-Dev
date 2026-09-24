@@ -1,13 +1,13 @@
-long YDON(int  JUSz6)  {
-   if  (JUSz6  ==   0)  return  0;
- if   (JUSz6  ==  1) return   1;
- long Jl[2][2]   =  {{1,  1},   {1, 0}},   AaR1[2][2]  =  {{1,   1}, {1,  0}};
- for   (int   JQdW  =  1;   JQdW < JUSz6   - 1;  JQdW++)   {
- long  lDj  =   AaR1[0][0]*Jl[0][0]  + AaR1[0][1]*Jl[1][0];
-   long  zk =  AaR1[0][0]*Jl[0][1]  +   AaR1[0][1]*Jl[1][1];
-  long  kkm =  AaR1[1][0]*Jl[0][0]  + AaR1[1][1]*Jl[1][0];
-  long   Og7  =  AaR1[1][0]*Jl[0][1]  +  AaR1[1][1]*Jl[1][1];
-  AaR1[0][0]=lDj; AaR1[0][1]=zk;   AaR1[1][0]=kkm; AaR1[1][1]=Og7;
-   }
-   return AaR1[0][0];
+long ZB(int M) {
+    if (M == 0) return 0;
+    if (M == 1) return 1;
+    long blr[2][2] = {{1, 1}, {1, 0}}, vwa[2][2] = {{1, 1}, {1, 0}};
+    for (int jK = 1; jK < M - 1; jK++) {
+        long ejVO = vwa[0][0]*blr[0][0] + vwa[0][1]*blr[1][0];
+        long f = vwa[0][0]*blr[0][1] + vwa[0][1]*blr[1][1];
+        long yA = vwa[1][0]*blr[0][0] + vwa[1][1]*blr[1][0];
+        long vkxt = vwa[1][0]*blr[0][1] + vwa[1][1]*blr[1][1];
+        vwa[0][0]=ejVO; vwa[0][1]=f; vwa[1][0]=yA; vwa[1][1]=vkxt;
+    }
+    return vwa[0][0];
 }

@@ -144,6 +144,6 @@ def ref_info_formatter(data):
 
 
 if __name__ == "__main__":
-    CLEAN_PATH = os.path.join("..", "Data", "Source_Clean")
+    CLEAN_PATH = os.path.join("..", "Data","Natural", "Source_Clean")
     auditor = CSourceAuditor(CLEAN_PATH)
     auditor.run_audit()

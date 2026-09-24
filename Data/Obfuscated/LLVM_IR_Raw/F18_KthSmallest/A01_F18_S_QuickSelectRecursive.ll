@@ -1,5 +1,5 @@
 @.str = constant [4 x i8] c"%d\0A\00"
-define dso_local i32 @uXy3(i32* %0, i32 %1, i32 %2, i32 %3) {
+define dso_local i32 @aXt(i32* %0, i32 %1, i32 %2, i32 %3) {
   %5 = alloca i32
   %6 = alloca i32*
   %7 = alloca i32
@@ -144,7 +144,7 @@ define dso_local i32 @uXy3(i32* %0, i32 %1, i32 %2, i32 %3) {
   %124 = load i32, i32* %15
   %125 = sub nsw i32 %124, 1
   %126 = load i32, i32* %9
-  %127 = call i32 @uXy3(i32* %122, i32 %123, i32 %125, i32 %126)
+  %127 = call i32 @aXt(i32* %122, i32 %123, i32 %125, i32 %126)
   store i32 %127, i32* %5
   store i32 1, i32* %16
   br label %140
@@ -159,7 +159,7 @@ define dso_local i32 @uXy3(i32* %0, i32 %1, i32 %2, i32 %3) {
   %136 = load i32, i32* %7
   %137 = add nsw i32 %135, %136
   %138 = sub nsw i32 %137, 1
-  %139 = call i32 @uXy3(i32* %129, i32 %131, i32 %132, i32 %138)
+  %139 = call i32 @aXt(i32* %129, i32 %131, i32 %132, i32 %138)
   store i32 %139, i32* %5
   store i32 1, i32* %16
   br label %140
@@ -237,7 +237,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   %54 = load i32, i32* %7
   %55 = sub nsw i32 %54, 1
   %56 = load i32, i32* %6
-  %57 = call i32 @uXy3(i32* %53, i32 0, i32 %55, i32 %56)
+  %57 = call i32 @aXt(i32* %53, i32 0, i32 %55, i32 %56)
   store i32 %57, i32* %10
   %58 = load i32, i32* %10
   %59 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str, i64 0, i64 0), i32 %58)

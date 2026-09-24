@@ -1,4 +1,4 @@
-define dso_local void @lnJz4(i8* %0) {
+define dso_local void @WY(i8* %0) {
   %2 = alloca i8*
   %3 = alloca i32
   store i8* %0, i8** %2

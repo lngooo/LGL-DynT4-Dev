@@ -4,39 +4,37 @@
  * File: A17_F22_O_A01_WhileTrue.c
  * Implementation Logic: WhileTrue
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-void NIOf(int  tD[],   int AO6)   {
-  int zJGJ   = 1;
- while   (1)   {
-   if   (zJGJ   >= AO6)  break;
-   int   Z  =  tD[zJGJ],   JSt =   zJGJ   -   1;
- while (1)  {
- if (JSt  <  0 || tD[JSt] <= Z)  break;
-   tD[JSt+1]   =  tD[JSt];
-   JSt--;
-   }
-   tD[JSt+1]  =   Z;
-  zJGJ++;
- }
+void S(int CU[], int xfwJ) {
+    int x = 1;
+    while (1) {
+        if (x >= xfwJ) break;
+        int MoCY = CU[x], oK00 = x - 1;
+        while (1) {
+            if (oK00 < 0 || CU[oK00] <= MoCY) break;
+            CU[oK00+1] = CU[oK00];
+            oK00--;
+        }
+        CU[oK00+1] = MoCY;
+        x++;
+    }
 }
 
-int   main(int argc,  char  *argv[])   {
-  if   (argc < 2)  return 0;
-   int   AO6  =   argc   - 1;
-  int *tD  = (int   *)malloc(AO6 *   sizeof(int));
- for (int   zJGJ   =  0; zJGJ  < AO6; zJGJ++) tD[zJGJ]  =   atoi(argv[zJGJ  +  1]);
+int main(int Ip, char *RLQi[]) {
+    if (Ip < 2) return 0;
+    int xfwJ = Ip - 1;
+    int *CU = (int *)malloc(xfwJ * sizeof(int));
+    for (int x = 0; x < xfwJ; x++) CU[x] = atoi(RLQi[x + 1]);
 
-   NIOf(tD,   AO6);
+    S(CU, xfwJ);
 
- for   (int   zJGJ =   0; zJGJ   <  AO6;   zJGJ++) {
- printf("%d%s",   tD[zJGJ],   (zJGJ  ==   AO6  - 1  ?  "" :   " "));
-   }
-  printf("\n");
- free(tD);
-  return  0;
+    for (int x = 0; x < xfwJ; x++) {
+        printf("%d%s", CU[x], (x == xfwJ - 1 ? "" : " "));
+    }
+    printf("\n");
+    free(CU);
+    return 0;
 }

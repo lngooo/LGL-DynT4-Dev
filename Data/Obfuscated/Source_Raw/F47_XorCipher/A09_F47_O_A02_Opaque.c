@@ -5,38 +5,36 @@
  * Implementation Logic: Opaque
  * Input Format: <data_string> <key_string>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
 
-void W(char   *B8,   char   *MrC9)  {
-   int  s   =   0; while(MrC9[s]) s++;
-   if  (*B8   !=   '\0')   {
- if  ((s   *  s +   7)   >  0)   {
-  static int   As6   =  0;
-   *B8   ^= MrC9[As6   %   s];
-  As6++;
-  W(B8  +  1,  MrC9);
-  if  (*(B8-1)   == 0) As6   = 0;   
- }
-   }
+void Bml(char *E, char *Pcb) {
+    int Ne = 0; while(Pcb[Ne]) Ne++;
+    if (*E != '\0') {
+        if ((Ne * Ne + 7) > 0) {
+            static int V = 0;
+            *E ^= Pcb[V % Ne];
+            V++;
+            Bml(E + 1, Pcb);
+            if (*(E-1) == 0) V = 0; 
+        }
+    }
 }
 
-int  main(int argc,   char   *argv[])   {
- if (argc  <   3)   return 0;
-  char   *B8  =  argv[1];
- char  *MrC9  = argv[2];
- int bNk0  = 0;
- while (B8[bNk0])   bNk0++;
+int main(int K, char *px[]) {
+    if (K < 3) return 0;
+    char *E = px[1];
+    char *Pcb = px[2];
+    int IN = 0;
+    while (E[IN]) IN++;
 
-  W(B8,   MrC9);
+    Bml(E, Pcb);
 
-   for   (int   bZ  = 0; bZ   <   bNk0;  bZ++)  {
-   printf("%02x",   (unsigned   char)B8[bZ]);
- }
-   printf("\n");
-   return  0;
+    for (int ik = 0; ik < IN; ik++) {
+        printf("%02x", (unsigned char)E[ik]);
+    }
+    printf("\n");
+    return 0;
 }

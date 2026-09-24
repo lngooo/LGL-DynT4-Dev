@@ -1,12 +1,12 @@
-int  pa(int jIBs, int  u)   {
-  jIBs   = abs(jIBs);   u  =   abs(u);
-  if   (!jIBs || !u) return   jIBs  | u;
-  int ZnaP = 0;
- while  (!((jIBs&1)||(u&1)))  {   jIBs>>=1;  u>>=1;   ZnaP++;  }
-  while (u)   {
- while  (!(u&1))  u>>=1;
- if   (jIBs  >  u) {  int  O  =   jIBs;  jIBs  =  u; u  =   O;  }
-  u   -=  jIBs;
- }
-   return  jIBs <<  ZnaP;
+int GE(int Qf, int GQO) {
+    Qf = abs(Qf); GQO = abs(GQO);
+    if (!Qf || !GQO) return Qf | GQO;
+    int f08 = 0;
+    while (!((Qf&1)||(GQO&1))) { Qf>>=1; GQO>>=1; f08++; }
+    while (GQO) {
+        while (!(GQO&1)) GQO>>=1;
+        if (Qf > GQO) { int Rt = Qf; Qf = GQO; GQO = Rt; }
+        GQO -= Qf;
+    }
+    return Qf << f08;
 }

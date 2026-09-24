@@ -4,35 +4,33 @@
  * File: A03_F12_O_A01_Goto.c
  * Implementation Logic: Iterative bubble sort using goto labels.
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-void f(int   WZ8[],   int JGQe) {
-   int  NmpH = 0,  ijRC;
-oyM:
-  if   (NmpH   >= JGQe -  1)   goto AT;
-  ijRC   =   0;
-cJw:
-   if (ijRC  >=   JGQe -  NmpH -  1) { NmpH++;   goto   oyM;   }
- if   (WZ8[ijRC] >   WZ8[ijRC  +  1])  {
-   int  U   = WZ8[ijRC];  WZ8[ijRC]  = WZ8[ijRC+1];  WZ8[ijRC+1]  =  U;
-   }
-  ijRC++;
-  goto  cJw;
-AT:
-  return;
+void xlF(int nASW[], int x2z) {
+    int ClK = 0, KR;
+gU:
+    if (ClK >= x2z - 1) goto ZpJ;
+    KR = 0;
+ymjZ:
+    if (KR >= x2z - ClK - 1) { ClK++; goto gU; }
+    if (nASW[KR] > nASW[KR + 1]) {
+        int EZ = nASW[KR]; nASW[KR] = nASW[KR+1]; nASW[KR+1] = EZ;
+    }
+    KR++;
+    goto ymjZ;
+ZpJ:
+    return;
 }
 
-int main(int   argc, char   *argv[])  {
-   if (argc  <   2)   return 0;
-  int   JGQe   = argc -   1;
-   int   *WZ8   =   (int*)malloc(JGQe  * sizeof(int));
-   for   (int NmpH =   0;  NmpH   <   JGQe;   NmpH++)  WZ8[NmpH]   =   atoi(argv[NmpH+1]);
-  f(WZ8,   JGQe);
-   for   (int  NmpH   =   0;   NmpH <   JGQe;   NmpH++) printf("%d ",  WZ8[NmpH]);
-  printf("\n");
-  free(WZ8);
-   return   0;
+int main(int l, char *Fi52[]) {
+    if (l < 2) return 0;
+    int x2z = l - 1;
+    int *nASW = (int*)malloc(x2z * sizeof(int));
+    for (int ClK = 0; ClK < x2z; ClK++) nASW[ClK] = atoi(Fi52[ClK+1]);
+    xlF(nASW, x2z);
+    for (int ClK = 0; ClK < x2z; ClK++) printf("%d ", nASW[ClK]);
+    printf("\n");
+    free(nASW);
+    return 0;
 }

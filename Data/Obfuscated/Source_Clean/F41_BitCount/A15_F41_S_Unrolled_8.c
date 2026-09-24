@@ -1,11 +1,11 @@
-int  oQj9(uint32_t Az)   {
-   int Oky0  =   0;
-  while(Az)   {
-   Oky0  +=   (Az  &   1); Oky0   +=  ((Az  >>   1)  &  1);
-  Oky0   +=   ((Az  >>  2)   &   1);   Oky0   +=  ((Az >> 3) & 1);
-   Oky0   +=  ((Az >> 4)  & 1); Oky0  +=   ((Az   >> 5)  &   1);
- Oky0 +=   ((Az >>   6)  &   1);  Oky0  +=   ((Az  >>   7)  &  1);
-   Az  >>=   8;
-   }
-  return  Oky0;
+int ndf(uint32_t oV) {
+    int Fkp = 0;
+    while(oV) {
+        Fkp += (oV & 1); Fkp += ((oV >> 1) & 1);
+        Fkp += ((oV >> 2) & 1); Fkp += ((oV >> 3) & 1);
+        Fkp += ((oV >> 4) & 1); Fkp += ((oV >> 5) & 1);
+        Fkp += ((oV >> 6) & 1); Fkp += ((oV >> 7) & 1);
+        oV >>= 8;
+    }
+    return Fkp;
 }

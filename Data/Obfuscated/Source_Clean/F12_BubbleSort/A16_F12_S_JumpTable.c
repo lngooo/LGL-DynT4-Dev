@@ -1,12 +1,12 @@
-void  rr(int YCwP[],  int  Xn) {
-   void *jKu1[] =  {&&SSB, &&fOk};
-   for  (int   WC3   =  0;   WC3   <   Xn   -   1;  WC3++)   {
- for (int   Ujv   =  0;   Ujv   < Xn   -  WC3  -   1; Ujv++) {
-   goto *jKu1[YCwP[Ujv]   >   YCwP[Ujv  +  1]];
-  fOk:
- {  int  bm = YCwP[Ujv];  YCwP[Ujv] =  YCwP[Ujv+1]; YCwP[Ujv+1] = bm;   }
-  SSB:
- continue;
- }
- }
+void m(int F[], int gc) {
+    void *QFHN[] = {&&dxo, &&a};
+    for (int PF = 0; PF < gc - 1; PF++) {
+        for (int D = 0; D < gc - PF - 1; D++) {
+            goto *QFHN[F[D] > F[D + 1]];
+        a:
+            { int x = F[D]; F[D] = F[D+1]; F[D+1] = x; }
+        dxo:
+            continue;
+        }
+    }
 }

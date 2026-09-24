@@ -1,13 +1,13 @@
-uint32_t Uve2(uint32_t xNh3) {
-   uint32_t   sB7;
- uint8_t   *fgMT5   =  (uint8_t   *)&xNh3;
-   uint8_t  *HW1  =  (uint8_t  *)&sB7;
-  int P7   = 0;
-ZvgF:
-  if (P7  >= 4)   goto  WW;
- HW1[P7]   =   fgMT5[3   -   P7];
- P7++;
- goto  ZvgF;
-WW:
-   return   sB7;
+uint32_t y(uint32_t qe0) {
+    uint32_t ec5g;
+    uint8_t *uO5n = (uint8_t *)&qe0;
+    uint8_t *I30 = (uint8_t *)&ec5g;
+    int A1q = 0;
+c:
+    if (A1q >= 4) goto QJ;
+    I30[A1q] = uO5n[3 - A1q];
+    A1q++;
+    goto c;
+QJ:
+    return ec5g;
 }

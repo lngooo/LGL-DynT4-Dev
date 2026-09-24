@@ -1,8 +1,8 @@
-int IF(char *bz)   {
-  int  HBO =  0;
-   while   (bz[HBO])  HBO++;
-  for  (int   Shc  =   0;   Shc  <  HBO /   2;   Shc++)   {
-  if  (bz[Shc] != bz[HBO -  1 -   Shc]) return  0;
-   }
- return 1;
+int eO(char *h) {
+    int YF = 0;
+    while (h[YF]) YF++;
+    for (int l = 0; l < YF / 2; l++) {
+        if (h[l] != h[YF - 1 - l]) return 0;
+    }
+    return 1;
 }

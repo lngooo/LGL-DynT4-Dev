@@ -1,6 +1,6 @@
-double   pH2(int Td1[],  int vE)   {
- double  GmE  =  0;   int   uAN9  =  0;
-YqSs:
-   if   (uAN9   <   vE) {   GmE +=  Td1[uAN9++];  goto YqSs;   }
-  return  GmE   / vE;
+double a(int ZAz9[], int w) {
+    double t1e = 0; int PtoS = 0;
+P:
+    if (PtoS < w) { t1e += ZAz9[PtoS++]; goto P; }
+    return t1e / w;
 }

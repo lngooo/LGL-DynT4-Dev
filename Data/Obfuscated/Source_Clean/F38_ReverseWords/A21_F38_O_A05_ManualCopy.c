@@ -1,14 +1,14 @@
-void  aS4(char *kiP1) {
-   char   *Lb  =   kiP1;  while(*Lb)  Lb++;
-  int Ct  =  Lb - kiP1;
- for(int hy5=0;  hy5<Ct/2;  hy5++)   {  char fFov5=kiP1[hy5];  kiP1[hy5]=kiP1[Ct-1-hy5]; kiP1[Ct-1-hy5]=fFov5;  }
-  char *hxCm  = kiP1;
- for(char   *YW =  kiP1;  ; YW++)  {
-   if(*YW == ' '  || *YW   == '\0')   {
-  char   *pqP   =  hxCm,   *Aku   =   YW - 1;
-   while(pqP < Aku)   {   char fFov5  =  *pqP;   *pqP++  =   *Aku;   *Aku--  =   fFov5;   }
-   hxCm =   YW   + 1;
-   if(*YW   ==   '\0')   break;
- }
- }
+void JdeI(char *TCEq) {
+    char *X = TCEq; while(*X) X++;
+    int EG = X - TCEq;
+    for(int SRi=0; SRi<EG/2; SRi++) { char Qm=TCEq[SRi]; TCEq[SRi]=TCEq[EG-1-SRi]; TCEq[EG-1-SRi]=Qm; }
+    char *tLS = TCEq;
+    for(char *oba = TCEq; ; oba++) {
+        if(*oba == ' ' || *oba == '\0') {
+            char *FDyW = tLS, *vu = oba - 1;
+            while(FDyW < vu) { char Qm = *FDyW; *FDyW++ = *vu; *vu-- = Qm; }
+            tLS = oba + 1;
+            if(*oba == '\0') break;
+        }
+    }
 }

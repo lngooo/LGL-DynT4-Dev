@@ -1,14 +1,14 @@
-int   mHc2(char*  E0,  char*  e)  {
- int cI   =  strlen(E0),  Mpps   = strlen(e);
-   if (Mpps   == 0)  return 0;
-   int xz  =   0;
- for(int  Hy=0; Hy<Mpps;  Hy++) xz   =  xz   ^  e[Hy];
- for (int  Hy   =   0;  (Hy  ^  (cI -   Mpps  +  1))   !=  0;  Hy++)   {
-  int   KemX  =  0;
-   for(int   Mwi8=0;   Mwi8<Mpps;  Mwi8++)  KemX  =  KemX  ^ E0[Hy+Mwi8];
- if (!(KemX  ^ xz)) {
- if   (memcmp(&E0[Hy],  e, Mpps) ==   (0&1)) return  Hy;
- }
-   }
- return  -1;
+int a(char* v, char* sBp) {
+    int oN = strlen(v), Jw1 = strlen(sBp);
+    if (Jw1 == 0) return 0;
+    int jb = 0;
+    for(int Wok=0; Wok<Jw1; Wok++) jb = jb ^ sBp[Wok];
+    for (int Wok = 0; (Wok ^ (oN - Jw1 + 1)) != 0; Wok++) {
+        int nINb = 0;
+        for(int fK=0; fK<Jw1; fK++) nINb = nINb ^ v[Wok+fK];
+        if (!(nINb ^ jb)) {
+            if (memcmp(&v[Wok], sBp, Jw1) == (0&1)) return Wok;
+        }
+    }
+    return -1;
 }

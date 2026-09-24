@@ -6,7 +6,7 @@
 @.str.5 = constant [2 x i8] c"I\00"
 @.str.6 = constant [2 x i8] c"V\00"
 @.str.7 = constant [4 x i8] c"%s\0A\00"
-define dso_local void @MGEV(i32 %0, i32 %1, i8* %2, i8* %3, i8* %4, i8* %5) {
+define dso_local void @JnS(i32 %0, i32 %1, i8* %2, i8* %3, i8* %4, i8* %5) {
   %7 = alloca i32
   %8 = alloca i32
   %9 = alloca i8*
@@ -110,7 +110,7 @@ define dso_local void @MGEV(i32 %0, i32 %1, i8* %2, i8* %3, i8* %4, i8* %5) {
   ret void
 }
 declare i8* @strcat(i8*, i8*)
-define dso_local void @ZoAY(i32 %0, i8* %1) {
+define dso_local void @T0lh(i32 %0, i8* %1) {
   %3 = alloca i32
   %4 = alloca i8*
   %5 = alloca i32
@@ -141,13 +141,13 @@ define dso_local void @ZoAY(i32 %0, i8* %1) {
 22:
   %23 = load i32, i32* %3
   %24 = load i8*, i8** %4
-  call void @MGEV(i32 %23, i32 100, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.1, i64 0, i64 0), i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.2, i64 0, i64 0), i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str, i64 0, i64 0), i8* %24)
+  call void @JnS(i32 %23, i32 100, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.1, i64 0, i64 0), i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.2, i64 0, i64 0), i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str, i64 0, i64 0), i8* %24)
   %25 = load i32, i32* %3
   %26 = load i8*, i8** %4
-  call void @MGEV(i32 %25, i32 10, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.3, i64 0, i64 0), i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.4, i64 0, i64 0), i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.1, i64 0, i64 0), i8* %26)
+  call void @JnS(i32 %25, i32 10, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.3, i64 0, i64 0), i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.4, i64 0, i64 0), i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.1, i64 0, i64 0), i8* %26)
   %27 = load i32, i32* %3
   %28 = load i8*, i8** %4
-  call void @MGEV(i32 %27, i32 1, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.5, i64 0, i64 0), i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.6, i64 0, i64 0), i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.3, i64 0, i64 0), i8* %28)
+  call void @JnS(i32 %27, i32 1, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.5, i64 0, i64 0), i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.6, i64 0, i64 0), i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.3, i64 0, i64 0), i8* %28)
   ret void
 }
 define dso_local i32 @main(i32 %0, i8** %1) {
@@ -170,7 +170,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   %14 = load i8*, i8** %13
   %15 = call i32 @atoi(i8* %14)
   %16 = getelementptr inbounds [100 x i8], [100 x i8]* %6, i64 0, i64 0
-  call void @ZoAY(i32 %15, i8* %16)
+  call void @T0lh(i32 %15, i8* %16)
   %17 = getelementptr inbounds [100 x i8], [100 x i8]* %6, i64 0, i64 0
   %18 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.7, i64 0, i64 0), i8* %17)
   store i32 0, i32* %3

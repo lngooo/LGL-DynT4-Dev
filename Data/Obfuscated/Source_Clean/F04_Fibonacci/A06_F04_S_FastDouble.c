@@ -1,14 +1,14 @@
-long   yGx(int  sCQ)  {
- if (sCQ == 0)   return 0;
-   long  gTYk   =   0,   Yo = 1;
- for  (int OxeF = 31  -   __builtin_clz(sCQ); OxeF >=  0;   OxeF--) {
- long  TH   = gTYk *   (2  *  Yo - gTYk);
-   long  GDSd3  =   gTYk * gTYk   + Yo * Yo;
-   gTYk  =  TH;  Yo  =   GDSd3;
-  if   ((sCQ  >> OxeF)   &   1) {
-   long   qpn  =   gTYk   +   Yo;
-   gTYk  =   Yo;   Yo   =   qpn;
-  }
-  }
-  return   gTYk;
+long R(int r) {
+    if (r == 0) return 0;
+    long QBFM = 0, ArnW = 1;
+    for (int w = 31 - __builtin_clz(r); w >= 0; w--) {
+        long hsRR = QBFM * (2 * ArnW - QBFM);
+        long HQtc = QBFM * QBFM + ArnW * ArnW;
+        QBFM = hsRR; ArnW = HQtc;
+        if ((r >> w) & 1) {
+            long zM = QBFM + ArnW;
+            QBFM = ArnW; ArnW = zM;
+        }
+    }
+    return QBFM;
 }

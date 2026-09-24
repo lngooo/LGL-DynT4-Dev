@@ -1,5 +1,5 @@
 %union.anon = type { i32 }
-define dso_local i32 @pT(i32 %0) {
+define dso_local i32 @c(i32 %0) {
   %2 = alloca i32
   %3 = alloca %union.anon
   %4 = alloca %union.anon

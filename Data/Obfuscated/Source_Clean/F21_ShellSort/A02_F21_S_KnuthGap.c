@@ -1,3 +1,3 @@
-void nc(int  *KIw3, int  apzO2)   {
- int  iqV=1;while(iqV<apzO2/3)iqV=3*iqV+1;while(iqV>=1){for(int   j=iqV;j<apzO2;j++){int  vZCV=KIw3[j],z0=j;while(z0>=iqV&&KIw3[z0-iqV]>vZCV){KIw3[z0]=KIw3[z0-iqV];z0-=iqV;}KIw3[z0]=vZCV;}iqV/=3;}
+void oJe(int *sMnH, int gJ) {
+    int TM8=1;while(TM8<gJ/3)TM8=3*TM8+1;while(TM8>=1){for(int K=TM8;K<gJ;K++){int RWBu=sMnH[K],mmd=K;while(mmd>=TM8&&sMnH[mmd-TM8]>RWBu){sMnH[mmd]=sMnH[mmd-TM8];mmd-=TM8;}sMnH[mmd]=RWBu;}TM8/=3;}
 }

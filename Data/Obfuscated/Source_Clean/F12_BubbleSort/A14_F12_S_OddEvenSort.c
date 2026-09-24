@@ -1,18 +1,18 @@
-void   cjUZ(int  IUm[],   int  SmSf6) {
-   int   oRaI8  =   0;
-  while  (!oRaI8) {
-  oRaI8   =  1;
-  for (int  OHq1  =  1;   OHq1 < SmSf6   -   1; OHq1  += 2)  {
-   if  (IUm[OHq1] > IUm[OHq1   +   1])  {
-  int  Oj  = IUm[OHq1];   IUm[OHq1]   = IUm[OHq1+1];   IUm[OHq1+1]   =  Oj;
-   oRaI8 =   0;
-  }
-  }
-   for  (int  OHq1 = 0;  OHq1 < SmSf6 -  1; OHq1  += 2)   {
- if (IUm[OHq1]   >   IUm[OHq1  + 1]) {
-   int   Oj = IUm[OHq1];  IUm[OHq1] = IUm[OHq1+1];   IUm[OHq1+1] =   Oj;
-  oRaI8   =  0;
-  }
-   }
-   }
+void Z5C(int bS[], int wUiq) {
+    int F = 0;
+    while (!F) {
+        F = 1;
+        for (int JsIS = 1; JsIS < wUiq - 1; JsIS += 2) {
+            if (bS[JsIS] > bS[JsIS + 1]) {
+                int mKlI = bS[JsIS]; bS[JsIS] = bS[JsIS+1]; bS[JsIS+1] = mKlI;
+                F = 0;
+            }
+        }
+        for (int JsIS = 0; JsIS < wUiq - 1; JsIS += 2) {
+            if (bS[JsIS] > bS[JsIS + 1]) {
+                int mKlI = bS[JsIS]; bS[JsIS] = bS[JsIS+1]; bS[JsIS+1] = mKlI;
+                F = 0;
+            }
+        }
+    }
 }

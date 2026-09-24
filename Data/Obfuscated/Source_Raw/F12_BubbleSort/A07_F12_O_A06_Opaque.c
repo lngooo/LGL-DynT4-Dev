@@ -4,35 +4,33 @@
  * File: A07_F12_O_A06_Opaque.c
  * Implementation Logic: Optimized BS with opaque predicates.
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-void KlH(int  vClS[],   int   oyg)   {
-  int X;
-   for (int Yk  =  0; Yk   <  oyg  -  1;   Yk++) {
-  X =  0;
-   if ((oyg  *  oyg   +  1) >   0)  {  // Opaque   true
-   for (int   l  =  0;   l   < oyg   -  Yk -  1; l++)  {
-   if  (vClS[l]  > vClS[l   + 1])  {
-  int b  =  vClS[l];  vClS[l]   = vClS[l+1];  vClS[l+1]  =  b;
-   X  =  1;
- }
-  }
-  }
- if (X   == 0)   break;
- }
+void Akl2(int Qq[], int zg) {
+    int e;
+    for (int JdbX = 0; JdbX < zg - 1; JdbX++) {
+        e = 0;
+        if ((zg * zg + 1) > 0) { // Opaque true
+            for (int HWfg = 0; HWfg < zg - JdbX - 1; HWfg++) {
+                if (Qq[HWfg] > Qq[HWfg + 1]) {
+                    int Njf = Qq[HWfg]; Qq[HWfg] = Qq[HWfg+1]; Qq[HWfg+1] = Njf;
+                    e = 1;
+                }
+            }
+        }
+        if (e == 0) break;
+    }
 }
 
-int   main(int argc,   char  *argv[])  {
- if (argc  <   2)   return  0;
-   int oyg   =   argc - 1;
- int *vClS =  (int*)malloc(oyg   *  sizeof(int));
- for   (int   Yk = 0;  Yk  <   oyg;  Yk++)   vClS[Yk]  = atoi(argv[Yk+1]);
-   KlH(vClS,   oyg);
- for (int   Yk =  0;   Yk   <  oyg; Yk++)  printf("%d ",  vClS[Yk]);
-   printf("\n");
- free(vClS);
-   return 0;
+int main(int topV, char *COi[]) {
+    if (topV < 2) return 0;
+    int zg = topV - 1;
+    int *Qq = (int*)malloc(zg * sizeof(int));
+    for (int JdbX = 0; JdbX < zg; JdbX++) Qq[JdbX] = atoi(COi[JdbX+1]);
+    Akl2(Qq, zg);
+    for (int JdbX = 0; JdbX < zg; JdbX++) printf("%d ", Qq[JdbX]);
+    printf("\n");
+    free(Qq);
+    return 0;
 }

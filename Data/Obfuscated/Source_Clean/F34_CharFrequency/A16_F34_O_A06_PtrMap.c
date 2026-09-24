@@ -1,8 +1,8 @@
-int rkL(char*  F4,   char   u6)  {
- int TRs3[256];
- memset(TRs3,   0,  sizeof(TRs3));
- for(char* RJhi5  =   F4;  *RJhi5;  RJhi5++)   {
- (*(TRs3  + (unsigned  char)*RJhi5))++;
-   }
-   return *(TRs3  +  (unsigned   char)u6);
+int Zc8(char* Q1, char UMTS) {
+    int GsP[256];
+    memset(GsP, 0, sizeof(GsP));
+    for(char* t4 = Q1; *t4; t4++) {
+        (*(GsP + (unsigned char)*t4))++;
+    }
+    return *(GsP + (unsigned char)UMTS);
 }

@@ -4,38 +4,36 @@
  * File: A15_F13_O_A01_OpaquePredicate.c
  * Implementation Logic: OpaquePredicate
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-void L(int Siyu0[], int   Rm0,  int   Zv)  {
-  if   (Rm0 < Zv)   {
-  if   ((Zv  * Zv +  1) >  0)  {
- int   olP  = Siyu0[Zv],  Hr  = Rm0   -  1;
-  for   (int UeaM   =   Rm0;  UeaM  <  Zv;   UeaM++) {
- if  (Siyu0[UeaM]   <  olP)   {   Hr++; int pI  =   Siyu0[Hr];   Siyu0[Hr]  =  Siyu0[UeaM]; Siyu0[UeaM]   =  pI;  }
-   }
-  int  pI = Siyu0[Hr+1]; Siyu0[Hr+1] =  Siyu0[Zv]; Siyu0[Zv]  =  pI;
-  L(Siyu0,   Rm0,   Hr);
-   L(Siyu0,  Hr  +   2, Zv);
- }
-  }
+void fF4p(int C18[], int nHt, int hx) {
+    if (nHt < hx) {
+        if ((hx * hx + 1) > 0) {
+            int X = C18[hx], fC = nHt - 1;
+            for (int Z = nHt; Z < hx; Z++) {
+                if (C18[Z] < X) { fC++; int Gjmv = C18[fC]; C18[fC] = C18[Z]; C18[Z] = Gjmv; }
+            }
+            int Gjmv = C18[fC+1]; C18[fC+1] = C18[hx]; C18[hx] = Gjmv;
+            fF4p(C18, nHt, fC);
+            fF4p(C18, fC + 2, hx);
+        }
+    }
 }
 
-int   main(int  argc,   char  *argv[])   {
- if (argc   < 2)  return 0;
-   int   FEWi5  = argc -  1;
-   int   *Siyu0 = (int  *)malloc(FEWi5  *  sizeof(int));
- for  (int   Hr   =  0; Hr <  FEWi5;  Hr++)   Siyu0[Hr]   =   atoi(argv[Hr   + 1]);
+int main(int U3Ht, char *jX3[]) {
+    if (U3Ht < 2) return 0;
+    int H = U3Ht - 1;
+    int *C18 = (int *)malloc(H * sizeof(int));
+    for (int fC = 0; fC < H; fC++) C18[fC] = atoi(jX3[fC + 1]);
 
-   L(Siyu0,   0,   FEWi5   -   1);
+    fF4p(C18, 0, H - 1);
 
- for (int  Hr   =   0;  Hr  <   FEWi5;   Hr++)  {
-   printf("%d%s",  Siyu0[Hr],  (Hr   == FEWi5  -  1 ?  "" : " "));
-  }
-   printf("\n");
- free(Siyu0);
- return   0;
+    for (int fC = 0; fC < H; fC++) {
+        printf("%d%s", C18[fC], (fC == H - 1 ? "" : " "));
+    }
+    printf("\n");
+    free(C18);
+    return 0;
 }

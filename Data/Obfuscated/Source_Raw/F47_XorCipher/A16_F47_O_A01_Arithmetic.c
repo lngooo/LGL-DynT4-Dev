@@ -5,35 +5,33 @@
  * Implementation Logic: Arithmetic
  * Input Format: <data_string> <key_string>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
 
-void  DH3(char *rDry,   char   *dKSO)   {
-   int  xPY =  0;  while(dKSO[xPY])   xPY++;
- int   qX   =  0;
-  while(rDry[qX])  {
-   unsigned   char  SY =   rDry[qX],   ycDi   =  dKSO[qX   % xPY];
-  rDry[qX]  = (char)(SY  + ycDi   -  2   * (SY   & ycDi));   // XOR identity:  a+b-2(a&b)
- qX++;
- }
+void L(char *EI, char *q) {
+    int dtF2 = 0; while(q[dtF2]) dtF2++;
+    int Vgso = 0;
+    while(EI[Vgso]) {
+        unsigned char G96H = EI[Vgso], rnD = q[Vgso % dtF2];
+        EI[Vgso] = (char)(G96H + rnD - 2 * (G96H & rnD)); // XOR identity: a+b-2(a&b)
+        Vgso++;
+    }
 }
 
-int   main(int  argc, char  *argv[])   {
- if   (argc  <  3) return  0;
- char  *rDry = argv[1];
-   char   *dKSO =  argv[2];
-  int   sC = 0;
- while   (rDry[sC])   sC++;
+int main(int z, char *fIWC[]) {
+    if (z < 3) return 0;
+    char *EI = fIWC[1];
+    char *q = fIWC[2];
+    int Aq5 = 0;
+    while (EI[Aq5]) Aq5++;
 
-   DH3(rDry, dKSO);
+    L(EI, q);
 
-  for (int qX   = 0;   qX <  sC; qX++)  {
-  printf("%02x",   (unsigned  char)rDry[qX]);
-   }
- printf("\n");
-  return 0;
+    for (int Vgso = 0; Vgso < Aq5; Vgso++) {
+        printf("%02x", (unsigned char)EI[Vgso]);
+    }
+    printf("\n");
+    return 0;
 }

@@ -4,41 +4,39 @@
  * File: A03_F16_S_SingleBuffer.c
  * Implementation Logic: SingleBuffer
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-void Vtl(int  gTM[],  int h,  int  er)   {
-   static   int   *DalQ  =   NULL;
-   static   int fWez0 =   0;
-  if (h == 0 && er  >   0  &&   !fWez0)   {   DalQ  =  (int*)malloc(256  *  sizeof(int));  fWez0 = 1;  }
-   if  (h   < er)   {
-  int   vxc  =   h + (er   - h)  /  2;
- Vtl(gTM,  h,  vxc);
- Vtl(gTM,  vxc +  1,   er);
-   int  g   =   h,  aeuC8  =  vxc + 1, kxD8 =  h;
-   while  (g  <=  vxc  &&  aeuC8  <=   er)   DalQ[kxD8++]  =  (gTM[g]  <=  gTM[aeuC8]) ?   gTM[g++]   :  gTM[aeuC8++];
- while (g  <=   vxc)   DalQ[kxD8++] =  gTM[g++];
-   while  (aeuC8  <=   er) DalQ[kxD8++] =   gTM[aeuC8++];
- for   (g   =  h;   g  <=   er;  g++)   gTM[g]  = DalQ[g];
-  }
-  if   (h   ==   0   && !gTM[er+1])   fWez0   =  0;
+void T(int L[], int reK, int BnwY) {
+    static int *P = NULL;
+    static int GZt = 0;
+    if (reK == 0 && BnwY > 0 && !GZt) { P = (int*)malloc(256 * sizeof(int)); GZt = 1; }
+    if (reK < BnwY) {
+        int QIum = reK + (BnwY - reK) / 2;
+        T(L, reK, QIum);
+        T(L, QIum + 1, BnwY);
+        int zqNG = reK, QWJl = QIum + 1, O = reK;
+        while (zqNG <= QIum && QWJl <= BnwY) P[O++] = (L[zqNG] <= L[QWJl]) ? L[zqNG++] : L[QWJl++];
+        while (zqNG <= QIum) P[O++] = L[zqNG++];
+        while (QWJl <= BnwY) P[O++] = L[QWJl++];
+        for (zqNG = reK; zqNG <= BnwY; zqNG++) L[zqNG] = P[zqNG];
+    }
+    if (reK == 0 && !L[BnwY+1]) GZt = 0;
 }
 
-int main(int argc,   char *argv[])  {
-   if  (argc <   2)  return  0;
-  int  NuyI   =  argc  - 1;
-   int *gTM   =   (int  *)malloc(NuyI *  sizeof(int));
- for  (int  g   = 0;   g  < NuyI;   g++) gTM[g] =  atoi(argv[g +  1]);
+int main(int KF, char *Q9[]) {
+    if (KF < 2) return 0;
+    int r7OI = KF - 1;
+    int *L = (int *)malloc(r7OI * sizeof(int));
+    for (int zqNG = 0; zqNG < r7OI; zqNG++) L[zqNG] = atoi(Q9[zqNG + 1]);
 
- Vtl(gTM, 0,   NuyI   -  1);
+    T(L, 0, r7OI - 1);
 
- for (int   g =  0;   g   < NuyI;  g++) {
- printf("%d%s", gTM[g], (g   == NuyI - 1 ?   ""   : " "));
-  }
-  printf("\n");
-  free(gTM);
- return  0;
+    for (int zqNG = 0; zqNG < r7OI; zqNG++) {
+        printf("%d%s", L[zqNG], (zqNG == r7OI - 1 ? "" : " "));
+    }
+    printf("\n");
+    free(L);
+    return 0;
 }

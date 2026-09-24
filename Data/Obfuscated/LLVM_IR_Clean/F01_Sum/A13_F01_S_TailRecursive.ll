@@ -1,4 +1,4 @@
-define dso_local i32 @lqN(i32 %0, i32 %1) {
+define dso_local i32 @hpoe(i32 %0, i32 %1) {
   %3 = alloca i32
   %4 = alloca i32
   %5 = alloca i32
@@ -17,17 +17,17 @@ define dso_local i32 @lqN(i32 %0, i32 %1) {
   %13 = load i32, i32* %5
   %14 = load i32, i32* %4
   %15 = add nsw i32 %13, %14
-  %16 = call i32 @lqN(i32 %12, i32 %15)
+  %16 = call i32 @hpoe(i32 %12, i32 %15)
   store i32 %16, i32* %3
   br label %17
 17:
   %18 = load i32, i32* %3
   ret i32 %18
 }
-define dso_local i32 @kb2(i32 %0) {
+define dso_local i32 @e(i32 %0) {
   %2 = alloca i32
   store i32 %0, i32* %2
   %3 = load i32, i32* %2
-  %4 = call i32 @lqN(i32 %3, i32 0)
+  %4 = call i32 @hpoe(i32 %3, i32 0)
   ret i32 %4
 }

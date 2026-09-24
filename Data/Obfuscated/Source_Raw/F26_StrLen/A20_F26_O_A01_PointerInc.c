@@ -4,18 +4,16 @@
  * File: A20_F26_O_A01_PointerInc.c
  * Implementation Logic: Incrementing the base pointer.
  */
-
-
 #include <stdio.h>
 
-int Foy(const char   *wlna) {
-   int IbJ5  =  0;
-  while   (*(wlna++))   IbJ5++;
- return  IbJ5;
+int xL(const char *zTVc) {
+    int PYC = 0;
+    while (*(zTVc++)) PYC++;
+    return PYC;
 }
 
-int   main(int  argc, char   *argv[])   {
-  if  (argc <   2)   return   0;
-   printf("%d\n",  Foy(argv[1]));
-  return  0;
+int main(int K3Hc, char *ZOVX[]) {
+    if (K3Hc < 2) return 0;
+    printf("%d\n", xL(ZOVX[1]));
+    return 0;
 }

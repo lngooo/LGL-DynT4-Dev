@@ -1,11 +1,11 @@
-void  evJ(char*  s)  {
-   int   cQm   =   strlen(s);
- for   (int   fYW  = cQm -   1;  fYW   >= 0; fYW--)  {
+void BS(char* gP) {
+    int ew = strlen(gP);
+    for (int H = ew - 1; H >= 0; H--) {
 
-   }
-   for (int  fYW =  0;   fYW   <   cQm;  fYW++) {
- char  xZrb  =   (fYW  == 0)  ?   ' '   :   s[fYW-1];
-   if   (isspace(xZrb)   && !isspace(s[fYW])) s[fYW]   = toupper(s[fYW]);
-   else  if  (!isspace(s[fYW]))  s[fYW]  =  tolower(s[fYW]);
- }
+    }
+    for (int H = 0; H < ew; H++) {
+        char UaRx = (H == 0) ? ' ' : gP[H-1];
+        if (isspace(UaRx) && !isspace(gP[H])) gP[H] = toupper(gP[H]);
+        else if (!isspace(gP[H])) gP[H] = tolower(gP[H]);
+    }
 }

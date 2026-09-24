@@ -1,18 +1,18 @@
-int Y0(int ZM[],   int  glXD,   int  R1) {
-  int MJ  = 0,  khL  = 1,  qvI =  MJ   + khL;
-   while  (qvI  <  glXD)   {
- MJ  = khL;   khL  =  qvI;  qvI  = MJ  + khL;
-  }
- int IShu3 =   -1;
-  while  (qvI >   1)   {
-   int zoca =  (IShu3   +  MJ   <  glXD   - 1)  ?   IShu3   +  MJ   :  glXD - 1;
-   if (ZM[zoca] <  R1)  {
- qvI   =   khL;   khL   =   MJ; MJ   =  qvI   - khL;
- IShu3 =  zoca;
-   }   else  if   (ZM[zoca]  > R1)  {
- qvI = MJ;   khL  =   khL  -  MJ;   MJ  =   qvI -   khL;
-  }   else   return   zoca;
-   }
-  if (khL  &&  ZM[IShu3   + 1] ==  R1) return  IShu3  +  1;
- return   -1;
+int bD(int cfe[], int l, int JeK) {
+    int qA = 0, COzB = 1, byR = qA + COzB;
+    while (byR < l) {
+        qA = COzB; COzB = byR; byR = qA + COzB;
+    }
+    int I = -1;
+    while (byR > 1) {
+        int P = (I + qA < l - 1) ? I + qA : l - 1;
+        if (cfe[P] < JeK) {
+            byR = COzB; COzB = qA; qA = byR - COzB;
+            I = P;
+        } else if (cfe[P] > JeK) {
+            byR = qA; COzB = COzB - qA; qA = byR - COzB;
+        } else return P;
+    }
+    if (COzB && cfe[I + 1] == JeK) return I + 1;
+    return -1;
 }

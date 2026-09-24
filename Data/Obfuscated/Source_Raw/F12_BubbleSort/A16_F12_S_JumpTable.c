@@ -4,32 +4,30 @@
  * File: A16_F12_S_JumpTable.c
  * Implementation Logic: Bubble sort with comparison leading to computed goto (Seed 8).
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-void  rr(int YCwP[],  int  Xn) {
-   void *jKu1[] =  {&&SSB, &&fOk};
-   for  (int   WC3   =  0;   WC3   <   Xn   -   1;  WC3++)   {
- for (int   Ujv   =  0;   Ujv   < Xn   -  WC3  -   1; Ujv++) {
-   goto *jKu1[YCwP[Ujv]   >   YCwP[Ujv  +  1]];
-  fOk:
- {  int  bm = YCwP[Ujv];  YCwP[Ujv] =  YCwP[Ujv+1]; YCwP[Ujv+1] = bm;   }
-  SSB:
- continue;
- }
- }
+void m(int F[], int gc) {
+    void *QFHN[] = {&&dxo, &&a};
+    for (int PF = 0; PF < gc - 1; PF++) {
+        for (int D = 0; D < gc - PF - 1; D++) {
+            goto *QFHN[F[D] > F[D + 1]];
+        a:
+            { int x = F[D]; F[D] = F[D+1]; F[D+1] = x; }
+        dxo:
+            continue;
+        }
+    }
 }
 
-int   main(int   argc,  char  *argv[])  {
-  if (argc  <  2)   return 0;
- int Xn =   argc -   1;
- int *YCwP = (int*)malloc(Xn *  sizeof(int));
-  for   (int WC3 = 0; WC3 < Xn; WC3++) YCwP[WC3]  =  atoi(argv[WC3+1]);
-  rr(YCwP,  Xn);
- for   (int   WC3 =   0;  WC3  <  Xn; WC3++)  printf("%d ",  YCwP[WC3]);
- printf("\n");
-  free(YCwP);
-   return   0;
+int main(int xYTd, char *HcU[]) {
+    if (xYTd < 2) return 0;
+    int gc = xYTd - 1;
+    int *F = (int*)malloc(gc * sizeof(int));
+    for (int PF = 0; PF < gc; PF++) F[PF] = atoi(HcU[PF+1]);
+    m(F, gc);
+    for (int PF = 0; PF < gc; PF++) printf("%d ", F[PF]);
+    printf("\n");
+    free(F);
+    return 0;
 }

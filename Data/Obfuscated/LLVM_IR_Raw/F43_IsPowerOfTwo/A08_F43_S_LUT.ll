@@ -1,6 +1,6 @@
-@tug.aMFM = internal global [32 x i32] [i32 1, i32 2, i32 4, i32 8, i32 16, i32 32, i32 64, i32 128, i32 256, i32 512, i32 1024, i32 2048, i32 4096, i32 8192, i32 16384, i32 32768, i32 65536, i32 131072, i32 262144, i32 524288, i32 1048576, i32 2097152, i32 4194304, i32 8388608, i32 16777216, i32 33554432, i32 67108864, i32 134217728, i32 268435456, i32 536870912, i32 1073741824, i32 -2147483648]
+@mqs2.FG = internal global [32 x i32] [i32 1, i32 2, i32 4, i32 8, i32 16, i32 32, i32 64, i32 128, i32 256, i32 512, i32 1024, i32 2048, i32 4096, i32 8192, i32 16384, i32 32768, i32 65536, i32 131072, i32 262144, i32 524288, i32 1048576, i32 2097152, i32 4194304, i32 8388608, i32 16777216, i32 33554432, i32 67108864, i32 134217728, i32 268435456, i32 536870912, i32 1073741824, i32 -2147483648]
 @.str = constant [3 x i8] c"%d\00"
-define dso_local i32 @tug(i32 %0) {
+define dso_local i32 @mqs2(i32 %0) {
   %2 = alloca i32
   %3 = alloca i32
   %4 = alloca i32
@@ -26,7 +26,7 @@ define dso_local i32 @tug(i32 %0) {
   %16 = load i32, i32* %3
   %17 = load i32, i32* %4
   %18 = sext i32 %17 to i64
-  %19 = getelementptr inbounds [32 x i32], [32 x i32]* @tug.aMFM, i64 0, i64 %18
+  %19 = getelementptr inbounds [32 x i32], [32 x i32]* @mqs2.FG, i64 0, i64 %18
   %20 = load i32, i32* %19
   %21 = icmp eq i32 %16, %20
   br i1 %21, label %22, label %23
@@ -78,7 +78,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   %16 = trunc i64 %15 to i32
   store i32 %16, i32* %6
   %17 = load i32, i32* %6
-  %18 = call i32 @tug(i32 %17)
+  %18 = call i32 @mqs2(i32 %17)
   %19 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str, i64 0, i64 0), i32 %18)
   store i32 0, i32* %3
   br label %21

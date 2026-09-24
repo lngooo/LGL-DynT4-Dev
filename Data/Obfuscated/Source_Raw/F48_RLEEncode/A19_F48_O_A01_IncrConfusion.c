@@ -5,29 +5,27 @@
  * Implementation Logic: IncrConfusion
  * Input Format: <string>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
 
-void   b(const char   *AK,   char  *ky)  {
- int  eTfw  = -1, pn5 =   0;
- while   (AK[++eTfw])   {
- int  ouRG =   1;
-   while (AK[eTfw +  ouRG]  ==  AK[eTfw])  ouRG++;
- ky[pn5++]   =  AK[eTfw];
-   pn5  += sprintf(ky +  pn5,  "%d",   ouRG);
-   eTfw  += (ouRG -   1);
-  }
+void vU(const char *imd7, char *MD) {
+    int q2b = -1, W = 0;
+    while (imd7[++q2b]) {
+        int FcGU = 1;
+        while (imd7[q2b + FcGU] == imd7[q2b]) FcGU++;
+        MD[W++] = imd7[q2b];
+        W += sprintf(MD + W, "%d", FcGU);
+        q2b += (FcGU - 1);
+    }
 }
 
-int   main(int argc,  char  *argv[])   {
-  if  (argc   <  2)   return 0;
- char  *WFs   =  argv[1];
-  char  efpA[256]   =  {0};
-   b(WFs,  efpA);
- printf("%s\n", efpA);
-   return   0;
+int main(int cMkc, char *M[]) {
+    if (cMkc < 2) return 0;
+    char *I = M[1];
+    char off[256] = {0};
+    vU(I, off);
+    printf("%s\n", off);
+    return 0;
 }

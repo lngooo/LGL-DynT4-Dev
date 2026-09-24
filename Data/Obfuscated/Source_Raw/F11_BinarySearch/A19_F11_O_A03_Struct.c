@@ -4,31 +4,29 @@
  * File: A19_F11_O_A03_Struct.c
  * Implementation Logic: Binary search state stored in a struct.
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-struct   XDNx   {  int  da; int GtE;   };
+struct fr { int wQzz; int Ha; };
 
-int twi7(int   h[], int  wfCN,   int c6)  {
- if (wfCN   == 0)  return  -1;
- struct XDNx fu  =   {0, wfCN  - 1};
- while  (fu.da  <   fu.GtE)  {
-  int  z =  fu.da + (fu.GtE   - fu.da) / 2;
-   if  (h[z] <  c6)   fu.da   =   z  +  1;
-  else   fu.GtE  =   z;
-  }
-  return (h[fu.da] == c6)   ? fu.da  : -1;
+int f(int U1J[], int w90, int oM9) {
+    if (w90 == 0) return -1;
+    struct fr D7 = {0, w90 - 1};
+    while (D7.wQzz < D7.Ha) {
+        int Kaql = D7.wQzz + (D7.Ha - D7.wQzz) / 2;
+        if (U1J[Kaql] < oM9) D7.wQzz = Kaql + 1;
+        else D7.Ha = Kaql;
+    }
+    return (U1J[D7.wQzz] == oM9) ? D7.wQzz : -1;
 }
 
-int   main(int argc,   char  *argv[]) {
-  if  (argc  <  3)  return 1;
- int  c6   = atoi(argv[1]);
-   int wfCN =   argc  - 2;
- int *h  =  (int*)malloc(wfCN  *  sizeof(int));
- for(int  C=0;  C<wfCN;   C++)   h[C] = atoi(argv[C+2]);
- printf("%d\n", twi7(h,  wfCN,   c6));
-  free(h);
-   return  0;
+int main(int GgJe, char *v8h[]) {
+    if (GgJe < 3) return 1;
+    int oM9 = atoi(v8h[1]);
+    int w90 = GgJe - 2;
+    int *U1J = (int*)malloc(w90 * sizeof(int));
+    for(int I0Y=0; I0Y<w90; I0Y++) U1J[I0Y] = atoi(v8h[I0Y+2]);
+    printf("%d\n", f(U1J, w90, oM9));
+    free(U1J);
+    return 0;
 }

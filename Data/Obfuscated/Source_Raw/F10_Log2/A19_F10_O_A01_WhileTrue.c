@@ -5,28 +5,26 @@
  * Implementation Logic: WhileTrue
  * Input Format: <integer>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-int   qzG(int   tK) {
-   int   ivls4 =  0;
-   if (tK  <=   1)  return  0;
-  while (1)  {
-  tK   /=  2;
-  if (tK  ==  0)  break;
- ivls4++;
-  }
-  return  ivls4;
+int SL(int U0) {
+    int gy = 0;
+    if (U0 <= 1) return 0;
+    while (1) {
+        U0 /= 2;
+        if (U0 == 0) break;
+        gy++;
+    }
+    return gy;
 }
 
-int  main(int argc, char *argv[])   {
-   if   (argc   <   2) return 0;
-  int  tK = atoi(argv[1]);
- if   (tK <= 0)   return   0;   
- int  tT =   qzG(tK);
-  printf("%d\n",  tT);
- return  0;
+int main(int G4y, char *M6SW[]) {
+    if (G4y < 2) return 0;
+    int U0 = atoi(M6SW[1]);
+    if (U0 <= 0) return 0; 
+    int rz = SL(U0);
+    printf("%d\n", rz);
+    return 0;
 }

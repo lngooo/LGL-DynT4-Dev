@@ -1,5 +1,5 @@
-@__const.U.YI = constant [3 x i64] [i64 171, i64 171, i64 168]
-define dso_local i64 @U(i32 %0) {
+@__const.kq6.ZhD = constant [3 x i64] [i64 171, i64 171, i64 168]
+define dso_local i64 @kq6(i32 %0) {
   %2 = alloca i64
   %3 = alloca i32
   %4 = alloca [3 x i64]

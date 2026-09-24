@@ -1,7 +1,7 @@
-int   V(int lCJ[],  int  xfH)  {
-  int GVPG   =   0,   P  =  0;
-Cr:
- if  (P >= xfH) return  GVPG;
-  GVPG  += lCJ[P++];
-  goto  Cr;
+int GPhZ(int kpD[], int a) {
+    int R = 0, HE3y = 0;
+Y:
+    if (HE3y >= a) return R;
+    R += kpD[HE3y++];
+    goto Y;
 }

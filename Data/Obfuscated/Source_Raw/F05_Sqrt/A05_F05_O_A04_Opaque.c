@@ -5,28 +5,26 @@
  * Implementation Logic: Binary search with opaque predicates to confuse static analysis.
  * Input Format: <n>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int bN(int  F)  {
-  if   (F  < 0)  return  -1;
-   long   DTGy =   0, t   = F, R0   = 0;
-   while  (DTGy  <=   t)  {
-  long   qT2   =   DTGy  + (t   -   DTGy)  / 2;
- if (qT2   *  qT2  <=  F)  {
-  R0 = qT2;
- if ((qT2   * qT2) >=   0)   DTGy   =   qT2   +   1;   //   Opaque predicate
-  }  else {
- t = qT2  -  1;
-  }
-   }
-  return (int)R0;
+int BG(int tk) {
+    if (tk < 0) return -1;
+    long u7 = 0, w8 = tk, fqm = 0;
+    while (u7 <= w8) {
+        long iOt = u7 + (w8 - u7) / 2;
+        if (iOt * iOt <= tk) {
+            fqm = iOt;
+            if ((iOt * iOt) >= 0) u7 = iOt + 1; // Opaque predicate
+        } else {
+            w8 = iOt - 1;
+        }
+    }
+    return (int)fqm;
 }
 
-int  main(int   argc,   char  *argv[]) {
-   if  (argc <   2) return 1;
- printf("%d\n",   bN(atoi(argv[1])));
- return   0;
+int main(int G, char *L8[]) {
+    if (G < 2) return 1;
+    printf("%d\n", BG(atoi(L8[1])));
+    return 0;
 }

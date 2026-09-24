@@ -1,8 +1,8 @@
-int   ipY1(int  oc)  {
- if   (oc   <  0)  return -1;
-  long PGXL   =  0;
-   while  ((PGXL  +   1)   *  (PGXL +  1)  <=  oc)   {
-   PGXL++;
-  }
-   return   (int)PGXL;
+int GD9p(int Lw) {
+    if (Lw < 0) return -1;
+    long d = 0;
+    while ((d + 1) * (d + 1) <= Lw) {
+        d++;
+    }
+    return (int)d;
 }

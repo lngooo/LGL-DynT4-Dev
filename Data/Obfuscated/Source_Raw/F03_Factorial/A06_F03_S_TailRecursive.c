@@ -5,23 +5,21 @@
  * Implementation Logic: Tail-recursive implementation for stack efficiency (Seed 3).
  * Input Format: <n>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-long long  qngi(int  l,   long   long   em) {
- if  (l <= 0) return em;
- return qngi(l - 1,  em  *   l);
+long long Wdnr(int sC, long long hbOM) {
+    if (sC <= 0) return hbOM;
+    return Wdnr(sC - 1, hbOM * sC);
 }
 
-long   long   J2(int l)   {
-   if  (l < 0) return 0;
-   return  qngi(l, 1);
+long long Tk(int sC) {
+    if (sC < 0) return 0;
+    return Wdnr(sC, 1);
 }
 
-int main(int  argc, char *argv[])  {
- if (argc   <  2)   return  1;
-  printf("%lld\n", J2(atoi(argv[1])));
-  return   0;
+int main(int JaJ, char *fo16[]) {
+    if (JaJ < 2) return 1;
+    printf("%lld\n", Tk(atoi(fo16[1])));
+    return 0;
 }

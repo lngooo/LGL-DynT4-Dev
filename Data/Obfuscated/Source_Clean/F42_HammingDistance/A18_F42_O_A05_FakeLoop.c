@@ -1,7 +1,7 @@
-int  u(unsigned   int   CD,   unsigned   int ZdCh1) {
-   for(int  U6   =   0;   U6 <  1;  U6++)  {
-  if   (CD   ==  0   &&  ZdCh1   ==  0)   return  0;
-   return ((CD   & 1)  !=  (ZdCh1  &  1)) + u(CD   >>  1,   ZdCh1 >> 1);
-  }
- return  -1;
+int J(unsigned int A3p, unsigned int j) {
+    for(int Yx6a = 0; Yx6a < 1; Yx6a++) {
+        if (A3p == 0 && j == 0) return 0;
+        return ((A3p & 1) != (j & 1)) + J(A3p >> 1, j >> 1);
+    }
+    return -1;
 }

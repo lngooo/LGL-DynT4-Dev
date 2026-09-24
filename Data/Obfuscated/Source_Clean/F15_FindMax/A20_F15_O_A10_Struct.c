@@ -1,10 +1,10 @@
-struct   e  {  int   HiVh;  int df;  int  pI6;  };
+struct e { int Rbly; int jtN; int W; };
 
-int  CDBn(int  X[], int  o) {
-   struct e  VC5 =   {X[0],  0,  X[0]};
-  for(int   wm=1;  wm<o;   wm++)   {
- VC5.df  = X[wm];
- VC5.pI6   =  (VC5.df   > VC5.pI6)  ?   VC5.df  :   VC5.pI6;
-   }
- return VC5.pI6;
+int Q(int YDms[], int FGqI) {
+    struct e Z3I = {YDms[0], 0, YDms[0]};
+    for(int B=1; B<FGqI; B++) {
+        Z3I.jtN = YDms[B];
+        Z3I.W = (Z3I.jtN > Z3I.W) ? Z3I.jtN : Z3I.W;
+    }
+    return Z3I.W;
 }

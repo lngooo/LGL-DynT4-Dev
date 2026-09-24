@@ -1,15 +1,15 @@
-void  NT(char* Mir0)  {
-   int FJ =   0, Hbbx0  = 0;
-   int  qu8  =  42;
- while  (Mir0[FJ]) {
- if  ((qu8 *  2)   %  2 ==  0)  {
- if (!isspace((unsigned char)Mir0[FJ]))   {
-   Mir0[Hbbx0++]  =  Mir0[FJ];
- }
-   FJ++;
- }  else {
-  FJ--;   
-  }
-  }
-  Mir0[Hbbx0]  =   '\0';
+void Sq(char* I) {
+    int z = 0, Jjgr = 0;
+    int C = 42;
+    while (I[z]) {
+        if ((C * 2) % 2 == 0) {
+            if (!isspace((unsigned char)I[z])) {
+                I[Jjgr++] = I[z];
+            }
+            z++;
+        } else {
+            z--; 
+        }
+    }
+    I[Jjgr] = '\0';
 }

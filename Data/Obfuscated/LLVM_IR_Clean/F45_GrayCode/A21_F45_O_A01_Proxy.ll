@@ -1,4 +1,4 @@
-define dso_local i32 @KM(i32 %0, i32 %1) {
+define dso_local i32 @k(i32 %0, i32 %1) {
   %3 = alloca i32
   %4 = alloca i32
   store i32 %0, i32* %3
@@ -8,12 +8,12 @@ define dso_local i32 @KM(i32 %0, i32 %1) {
   %7 = xor i32 %5, %6
   ret i32 %7
 }
-define dso_local i32 @bU(i32 %0) {
+define dso_local i32 @p3(i32 %0) {
   %2 = alloca i32
   store i32 %0, i32* %2
   %3 = load i32, i32* %2
   %4 = load i32, i32* %2
   %5 = lshr i32 %4, 1
-  %6 = call i32 @KM(i32 %3, i32 %5)
+  %6 = call i32 @k(i32 %3, i32 %5)
   ret i32 %6
 }

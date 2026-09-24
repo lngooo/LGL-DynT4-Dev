@@ -1,5 +1,5 @@
-@__const.A.Jm = constant [5 x i32] [i32 109, i32 41, i32 19, i32 5, i32 1]
-define dso_local void @A(i32* %0, i32 %1) {
+@__const.h7J.GvdC = constant [5 x i32] [i32 109, i32 41, i32 19, i32 5, i32 1]
+define dso_local void @h7J(i32* %0, i32 %1) {
   %3 = alloca i32*
   %4 = alloca i32
   %5 = alloca [5 x i32]

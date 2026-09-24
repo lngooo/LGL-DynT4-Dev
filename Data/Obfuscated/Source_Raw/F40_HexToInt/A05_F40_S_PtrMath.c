@@ -5,26 +5,24 @@
  * Implementation Logic: Calculates power of 16 based on pointer distance from end.
  * Input Format: <hex_string>
  */
-
-
 #include <stdio.h>
 #include <string.h>
 
-int bl6(const char*  G) {
- int  hB =  (int)strlen(G);
-  int   xM   =  0;
- int WWmh3  =  1;
-   for   (int   U3   =   hB -  1;  U3   >=  0;   U3--) {
-   int Cq4   = (G[U3]   | 32);
-  Cq4  =   (Cq4   >=   'a')   ? (Cq4  -  'a' +   10)   : (Cq4 -   '0');
- xM  +=   Cq4   * WWmh3;
-  WWmh3   *= 16;
-   }
-   return  xM;
+int o5(const char* DCiK) {
+    int zRuA = (int)strlen(DCiK);
+    int mD = 0;
+    int h = 1;
+    for (int dP0 = zRuA - 1; dP0 >= 0; dP0--) {
+        int W = (DCiK[dP0] | 32);
+        W = (W >= 'a') ? (W - 'a' + 10) : (W - '0');
+        mD += W * h;
+        h *= 16;
+    }
+    return mD;
 }
 
-int main(int   argc,  char* argv[])   {
-   if (argc   <  2)  return  0;
- printf("%d",  bl6(argv[1]));
-  return 0;
+int main(int j0C, char* b[]) {
+    if (j0C < 2) return 0;
+    printf("%d", o5(b[1]));
+    return 0;
 }

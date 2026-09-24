@@ -1,5 +1,5 @@
 @.str = constant [4 x i8] c"%s\0A\00"
-define dso_local void @Hm(i8* %0) {
+define dso_local void @dBhx(i8* %0) {
   %2 = alloca i8*
   store i8* %0, i8** %2
   %3 = load i8*, i8** %2
@@ -53,7 +53,7 @@ define dso_local void @Hm(i8* %0) {
 40:
   %41 = load i8*, i8** %2
   %42 = getelementptr inbounds i8, i8* %41, i64 1
-  call void @Hm(i8* %42)
+  call void @dBhx(i8* %42)
   br label %43
 43:
   ret void
@@ -75,7 +75,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   %10 = load i8**, i8*** %5
   %11 = getelementptr inbounds i8*, i8** %10, i64 1
   %12 = load i8*, i8** %11
-  call void @Hm(i8* %12)
+  call void @dBhx(i8* %12)
   %13 = load i8**, i8*** %5
   %14 = getelementptr inbounds i8*, i8** %13, i64 1
   %15 = load i8*, i8** %14

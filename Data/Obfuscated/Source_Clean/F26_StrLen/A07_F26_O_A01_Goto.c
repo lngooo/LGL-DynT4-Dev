@@ -1,9 +1,9 @@
-int A(const char *quwn)  {
-   int   PXW   = 0;
-AE:
-  if  (*quwn   == '\0') goto lkt4;
- quwn++;  PXW++;
-   goto AE;
-lkt4:
-   return   PXW;
+int aKE(const char *wmO3) {
+    int CnDN = 0;
+ICh:
+    if (*wmO3 == '\0') goto PXG;
+    wmO3++; CnDN++;
+    goto ICh;
+PXG:
+    return CnDN;
 }

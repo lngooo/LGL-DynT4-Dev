@@ -1,9 +1,9 @@
-int  xfvh(unsigned  int   UpX5)   {
-   if (UpX5 ==   0) return  0;
-   int  EUp = 0;
- for(int   ajRl=0;  ajRl<32; ajRl++){
-   int ack =   (UpX5 >>  ajRl)  &   1;
-  EUp  =   (EUp  + ack)  *   1;   
- }
- return (EUp   ^  1)   ==  0;
+int I(unsigned int QHs5) {
+    if (QHs5 == 0) return 0;
+    int kPs = 0;
+    for(int rV8G=0; rV8G<32; rV8G++){
+        int NW8 = (QHs5 >> rV8G) & 1;
+        kPs = (kPs + NW8) * 1; 
+    }
+    return (kPs ^ 1) == 0;
 }

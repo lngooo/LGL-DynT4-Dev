@@ -1,15 +1,15 @@
-void Ya(char*  MSC)  {
- char  YLFm[4096]   = {0};
- char  *vK9  = MSC;
- char  *IxRd6 =  " \t\n\r\v\f";
-  while   (*vK9) {
- int   IJ =  strcspn(vK9,   IxRd6);
-  if (IJ  > 0) {
- strncat(YLFm, vK9,   IJ);
-   vK9  +=  IJ;
-   }  else {
-   vK9++;
- }
-   }
-   strcpy(MSC,  YLFm);
+void B(char* qz) {
+    char jWHC[4096] = {0};
+    char *N = qz;
+    char *f = " \t\n\r\v\f";
+    while (*N) {
+        int en1 = strcspn(N, f);
+        if (en1 > 0) {
+            strncat(jWHC, N, en1);
+            N += en1;
+        } else {
+            N++;
+        }
+    }
+    strcpy(qz, jWHC);
 }

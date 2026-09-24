@@ -1,8 +1,8 @@
-void  tiF(char   *tj,  int g) {
+void FC(char *Dnn8, int A) {
 
-  int   MZ =   (g %  26  +   26)  % 26;
- for(int   beBy=0;   tj[beBy]; beBy++)  {
-   if(tj[beBy] >=  'a'   &&   tj[beBy]   <=  'z') {   tj[beBy]   = (tj[beBy]-'a'+MZ)%26+'a';  continue;   }
- if(tj[beBy] >=  'A'  && tj[beBy]  <= 'Z')  {   tj[beBy]  =  (tj[beBy]-'A'+MZ)%26+'A';   }
- }
+    int z = (A % 26 + 26) % 26;
+    for(int tUEb=0; Dnn8[tUEb]; tUEb++) {
+        if(Dnn8[tUEb] >= 'a' && Dnn8[tUEb] <= 'z') { Dnn8[tUEb] = (Dnn8[tUEb]-'a'+z)%26+'a'; continue; }
+        if(Dnn8[tUEb] >= 'A' && Dnn8[tUEb] <= 'Z') { Dnn8[tUEb] = (Dnn8[tUEb]-'A'+z)%26+'A'; }
+    }
 }

@@ -5,39 +5,37 @@
  * Implementation Logic: 数据结构化：使用结构体封装单词索引模拟 A04
  * Input Format: <string>
  */
-
-
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
 #include <stdlib.h>
 
-void   Jwx(char   *E9)  {
-  struct   uwrR   { int  GpmJ;   int  Yxeu;  } rh[64];
-   int YD9  = 0, B = strlen(E9),  TM  =  0;
-   for(int rOZx5=0;   rOZx5<=B;   rOZx5++)  {
- if(E9[rOZx5]  ==   ' '  ||  E9[rOZx5]   == 0)   {
- rh[YD9].GpmJ  =  TM;
-  rh[YD9++].Yxeu  = rOZx5   -  TM;
-  TM   = rOZx5 +  1;
-  }
- }
- char   l[256]  = "";
-  for(int  BtS=YD9-1;  BtS>=0;   BtS--) {
-  strncat(l,  E9   +  rh[BtS].GpmJ,   rh[BtS].Yxeu);
- if(BtS > 0)  strcat(l,   " ");
-   }
- strcpy(E9,   l);
+void a5(char *Q) {
+    struct lC { int YY5; int dak; } WZS6[64];
+    int f = 0, hvn = strlen(Q), w9 = 0;
+    for(int CO4=0; CO4<=hvn; CO4++) {
+        if(Q[CO4] == ' ' || Q[CO4] == 0) {
+            WZS6[f].YY5 = w9;
+            WZS6[f++].dak = CO4 - w9;
+            w9 = CO4 + 1;
+        }
+    }
+    char cCs[256] = "";
+    for(int F=f-1; F>=0; F--) {
+        strncat(cCs, Q + WZS6[F].YY5, WZS6[F].dak);
+        if(F > 0) strcat(cCs, " ");
+    }
+    strcpy(Q, cCs);
 }
 
-int  main(int   argc, char  *argv[])  {
-  if   (argc  <  2)  return 0;
-   char  SD7[512]  = "";
-   for(int   rOZx5   =   1; rOZx5   <  argc;  rOZx5++)  {
- strcat(SD7,  argv[rOZx5]);
-   if(rOZx5  <  argc   - 1)  strcat(SD7,   " ");
-  }
-  Jwx(SD7);
-  printf("%s\n",   SD7);
-  return   0;
+int main(int W, char *Tm2i[]) {
+    if (W < 2) return 0;
+    char MJd7[512] = "";
+    for(int CO4 = 1; CO4 < W; CO4++) {
+        strcat(MJd7, Tm2i[CO4]);
+        if(CO4 < W - 1) strcat(MJd7, " ");
+    }
+    a5(MJd7);
+    printf("%s\n", MJd7);
+    return 0;
 }

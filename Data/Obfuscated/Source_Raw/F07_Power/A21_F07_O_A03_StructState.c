@@ -4,25 +4,23 @@
  * File: A21_F07_O_A03_StructState.c
  * Implementation Logic: Fast power using a struct to hold the state.
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-struct wB   { int E;   int  k; int s;  };
+struct Fy { int p; int OMeH; int x; };
 
-int r(int jkRA,   int   exp)  {
- struct wB  Pw  =  {jkRA,   exp,  1};
- while (Pw.k  > 0)   {
-   if (Pw.k   %   2   ==  1)  Pw.s   *= Pw.E;
-   Pw.E   *= Pw.E;
-   Pw.k  /=  2;
-   }
- return Pw.s;
+int iy3(int xIRl, int exp) {
+    struct Fy XebL = {xIRl, exp, 1};
+    while (XebL.OMeH > 0) {
+        if (XebL.OMeH % 2 == 1) XebL.x *= XebL.p;
+        XebL.p *= XebL.p;
+        XebL.OMeH /= 2;
+    }
+    return XebL.x;
 }
 
-int  main(int  argc,  char *argv[])  {
- if (argc <   3)   return  1;
-   printf("%d\n", r(atoi(argv[1]), atoi(argv[2])));
-  return 0;
+int main(int a, char *nc7[]) {
+    if (a < 3) return 1;
+    printf("%d\n", iy3(atoi(nc7[1]), atoi(nc7[2])));
+    return 0;
 }

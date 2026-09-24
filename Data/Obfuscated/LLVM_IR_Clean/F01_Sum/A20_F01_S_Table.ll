@@ -1,5 +1,5 @@
-@Pbs4.BVR7 = internal constant [11 x i32] [i32 0, i32 1, i32 3, i32 6, i32 10, i32 15, i32 21, i32 28, i32 36, i32 45, i32 55]
-define dso_local i32 @Pbs4(i32 %0) {
+@NZP.Qg8 = internal constant [11 x i32] [i32 0, i32 1, i32 3, i32 6, i32 10, i32 15, i32 21, i32 28, i32 36, i32 45, i32 55]
+define dso_local i32 @NZP(i32 %0) {
   %2 = alloca i32
   %3 = alloca i32
   store i32 %0, i32* %3
@@ -13,7 +13,7 @@ define dso_local i32 @Pbs4(i32 %0) {
 9:
   %10 = load i32, i32* %3
   %11 = sext i32 %10 to i64
-  %12 = getelementptr inbounds [11 x i32], [11 x i32]* @Pbs4.BVR7, i64 0, i64 %11
+  %12 = getelementptr inbounds [11 x i32], [11 x i32]* @NZP.Qg8, i64 0, i64 %11
   %13 = load i32, i32* %12
   store i32 %13, i32* %2
   br label %20

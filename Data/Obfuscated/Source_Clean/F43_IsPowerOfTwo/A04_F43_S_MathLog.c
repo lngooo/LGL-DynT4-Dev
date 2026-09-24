@@ -1,5 +1,5 @@
-int   Rh(unsigned   int  EQDP1)   {
- if   (EQDP1  == 0)  return  0;
-   double   oc   =  log2((double)EQDP1);
-  return (oc  == (int)oc);
+int Nw(unsigned int TRu) {
+    if (TRu == 0) return 0;
+    double klL = log2((double)TRu);
+    return (klL == (int)klL);
 }

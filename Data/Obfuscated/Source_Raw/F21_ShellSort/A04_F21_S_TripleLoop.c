@@ -5,24 +5,22 @@
  * Implementation Logic: 显式分组的三重循环逻辑 [cite: 12]
  * Input Format: <int1> <int2> ...
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 #include <string.h>
 
-void D(int *vNJ, int   dmj)  {
- for(int  AShE=dmj/2;AShE>0;AShE/=2){for(int QCHM5=0;QCHM5<AShE;QCHM5++){for(int E=QCHM5+AShE;E<dmj;E+=AShE){int  i3=vNJ[E],MwLl0=E-AShE;while(MwLl0>=QCHM5&&vNJ[MwLl0]>i3){vNJ[MwLl0+AShE]=vNJ[MwLl0];MwLl0-=AShE;}vNJ[MwLl0+AShE]=i3;}}}
+void FNd(int *tSDF, int x) {
+    for(int b=x/2;b>0;b/=2){for(int d0=0;d0<b;d0++){for(int u=d0+b;u<x;u+=b){int okfm=tSDF[u],Ia7=u-b;while(Ia7>=d0&&tSDF[Ia7]>okfm){tSDF[Ia7+b]=tSDF[Ia7];Ia7-=b;}tSDF[Ia7+b]=okfm;}}}
 }
 
-int   main(int  argc,   char *argv[])  {
-   if   (argc <  2) return 0;
- int   dmj  =  argc  - 1;
- int  *vNJ =  (int  *)malloc(dmj   *  sizeof(int));
- for   (int  E  = 0;  E  <  dmj;  E++)  vNJ[E]  = atoi(argv[E+1]);
- D(vNJ,   dmj);
- for  (int   E   =  0;   E <  dmj;  E++) printf("%d%c",  vNJ[E],   E   == dmj -   1   ?   '\n'   :  ' ');
- free(vNJ);
-   return 0;
+int main(int q, char *h[]) {
+    if (q < 2) return 0;
+    int x = q - 1;
+    int *tSDF = (int *)malloc(x * sizeof(int));
+    for (int u = 0; u < x; u++) tSDF[u] = atoi(h[u+1]);
+    FNd(tSDF, x);
+    for (int u = 0; u < x; u++) printf("%d%c", tSDF[u], u == x - 1 ? '\n' : ' ');
+    free(tSDF);
+    return 0;
 }

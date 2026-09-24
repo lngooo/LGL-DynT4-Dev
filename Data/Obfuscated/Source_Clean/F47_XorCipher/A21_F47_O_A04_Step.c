@@ -1,9 +1,9 @@
-void   H(char   *psG,  char   *m) {
- int PBs   =   0,   QioA   =   0;
-   while(psG[PBs])  PBs++;  while(m[QioA]) QioA++;
-   int  PU   =  0;
- while(PU <   PBs)  {
-   psG[PU] ^=   m[PU  %   QioA];
- PU++;
-  }
+void S(char *dqP2, char *WSWe) {
+    int RUCb = 0, znl1 = 0;
+    while(dqP2[RUCb]) RUCb++; while(WSWe[znl1]) znl1++;
+    int W = 0;
+    while(W < RUCb) {
+        dqP2[W] ^= WSWe[W % znl1];
+        W++;
+    }
 }

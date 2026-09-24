@@ -5,26 +5,24 @@
  * Implementation Logic: Odd subtraction with redundant math and temporary variables.
  * Input Format: <n>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int   Si(int  TNv1)   {
- int yvRL  = 0,   Q  =  1;
-   int s = 100;
- while   (TNv1   >=   Q) {
-   int   xbc  =  Q  +  2;
-   TNv1 =  TNv1 -   Q;
-   Q  =  xbc;
- yvRL++;
- s  =  (s %  2  ==   0) ? s /   2   :   s   * 3 +  1;
- }
-  return   yvRL;
+int Wjm(int Gccc) {
+    int Tv = 0, HDjM = 1;
+    int u7 = 100;
+    while (Gccc >= HDjM) {
+        int kzN = HDjM + 2;
+        Gccc = Gccc - HDjM;
+        HDjM = kzN;
+        Tv++;
+        u7 = (u7 % 2 == 0) ? u7 / 2 : u7 * 3 + 1;
+    }
+    return Tv;
 }
 
-int main(int argc,  char   *argv[])  {
-   if  (argc < 2)  return 1;
-   printf("%d\n", Si(atoi(argv[1])));
- return   0;
+int main(int LvG, char *TKtE[]) {
+    if (LvG < 2) return 1;
+    printf("%d\n", Wjm(atoi(TKtE[1])));
+    return 0;
 }

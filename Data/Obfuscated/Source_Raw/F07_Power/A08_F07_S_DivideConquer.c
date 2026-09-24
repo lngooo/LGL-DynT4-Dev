@@ -5,20 +5,18 @@
  * Implementation Logic: Recursive binary exponentiation.
  * Input Format: <base> <exp>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int H(int fMGC,  int   exp)  {
- if (exp  == 0)  return  1;
-  int   I   =   H(fMGC,  exp /  2);
- if   (exp  %  2   ==  0)  return  I   * I;
- return  fMGC * I * I;
+int xS(int Gy, int exp) {
+    if (exp == 0) return 1;
+    int MiKy = xS(Gy, exp / 2);
+    if (exp % 2 == 0) return MiKy * MiKy;
+    return Gy * MiKy * MiKy;
 }
 
-int  main(int   argc,   char   *argv[])  {
-  if (argc   <  3) return   1;
-  printf("%d\n", H(atoi(argv[1]),   atoi(argv[2])));
-   return  0;
+int main(int lFOI, char *Jk[]) {
+    if (lFOI < 3) return 1;
+    printf("%d\n", xS(atoi(Jk[1]), atoi(Jk[2])));
+    return 0;
 }

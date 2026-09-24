@@ -1,7 +1,7 @@
-void  Hx3(int  CQU[], int Lx) {
-   for   (int   OeV = 1; OeV  < Lx;   OeV++)  {
- for   (int  r   =  OeV;   r  >  0   &&  CQU[r-1]  >  CQU[r];   r--)   {
-  int rzD2   =   CQU[r]; CQU[r]  =   CQU[r-1]; CQU[r-1]   =  rzD2;
-   }
-  }
+void wmv(int dpof[], int o) {
+    for (int VW4Z = 1; VW4Z < o; VW4Z++) {
+        for (int Z = VW4Z; Z > 0 && dpof[Z-1] > dpof[Z]; Z--) {
+            int U = dpof[Z]; dpof[Z] = dpof[Z-1]; dpof[Z-1] = U;
+        }
+    }
 }

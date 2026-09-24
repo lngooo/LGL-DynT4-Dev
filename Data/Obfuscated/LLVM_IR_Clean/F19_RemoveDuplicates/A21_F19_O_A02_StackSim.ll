@@ -1,4 +1,4 @@
-define dso_local i32 @GCK0(i32* %0, i32 %1) {
+define dso_local i32 @jfu(i32* %0, i32 %1) {
   %3 = alloca i32
   %4 = alloca i32*
   %5 = alloca i32
@@ -19,7 +19,7 @@ define dso_local i32 @GCK0(i32* %0, i32 %1) {
   %16 = load i32*, i32** %4
   %17 = load i32, i32* %5
   %18 = sub nsw i32 %17, 1
-  %19 = call i32 @GCK0(i32* %16, i32 %18)
+  %19 = call i32 @jfu(i32* %16, i32 %18)
   store i32 %19, i32* %6
   %21 = load i32*, i32** %4
   %22 = load i32, i32* %5

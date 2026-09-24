@@ -1,13 +1,13 @@
-int   ZTtb(int  cv) {
-  int Zg  = 0,   Wv   =  31,  xusq   =  0;
- while (Zg <=  Wv)   {
- int   mL  =   (Zg  + Wv)  / 2;
-   if ((1ULL  <<   mL)   <= (unsigned  int)cv)   {
-   xusq   = mL;
-   Zg  =   mL + 1;
-  }  else  {
- Wv   = mL  -  1;
-   }
-   }
-   return   xusq;
+int KW(int FY) {
+    int i = 0, OBzB = 31, yacI = 0;
+    while (i <= OBzB) {
+        int Ux = (i + OBzB) / 2;
+        if ((1ULL << Ux) <= (unsigned int)FY) {
+            yacI = Ux;
+            i = Ux + 1;
+        } else {
+            OBzB = Ux - 1;
+        }
+    }
+    return yacI;
 }

@@ -1,9 +1,9 @@
-int   X(const   char  *t,  const   char   *vQfI3)  {
- size_t  GfW4 = strlen(t);
-  size_t   cfrh  =  strlen(vQfI3);
-  size_t   f =  (GfW4 < cfrh) ?  GfW4  : cfrh;
-   for(size_t FFU   = 0;   FFU   < f; FFU++) {
- if  (t[FFU] !=   vQfI3[FFU]) return (unsigned  char)t[FFU]  - (unsigned char)vQfI3[FFU];
-  }
-  return  (unsigned   char)t[f]   -  (unsigned char)vQfI3[f];
+int ub(const char *m, const char *GSP) {
+    size_t WJI = strlen(m);
+    size_t zN = strlen(GSP);
+    size_t f = (WJI < zN) ? WJI : zN;
+    for(size_t qjTv = 0; qjTv < f; qjTv++) {
+        if (m[qjTv] != GSP[qjTv]) return (unsigned char)m[qjTv] - (unsigned char)GSP[qjTv];
+    }
+    return (unsigned char)m[f] - (unsigned char)GSP[f];
 }

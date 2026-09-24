@@ -2,7 +2,7 @@
 @.str.1 = constant [1 x i8] zeroinitializer
 @.str.2 = constant [2 x i8] c" \00"
 @.str.3 = constant [2 x i8] c"\0A\00"
-define dso_local i32 @NOG0(i32* %0, i32 %1) {
+define dso_local i32 @ak(i32* %0, i32 %1) {
   %3 = alloca i32*
   %4 = alloca i32
   %5 = alloca i32
@@ -153,7 +153,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
 40:
   %42 = getelementptr inbounds [128 x i32], [128 x i32]* %7, i64 0, i64 0
   %43 = load i32, i32* %6
-  %44 = call i32 @NOG0(i32* %42, i32 %43)
+  %44 = call i32 @ak(i32* %42, i32 %43)
   store i32 %44, i32* %9
   store i32 0, i32* %10
   br label %46

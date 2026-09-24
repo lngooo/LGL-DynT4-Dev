@@ -1,9 +1,9 @@
-int  f(unsigned  int  sa0, unsigned int  Ecw8) {
- unsigned int  kHR5   =  sa0   ^   Ecw8;
-  int   OO1  =  0;
-   while   (kHR5 >   0)  {
-   if (kHR5   &   1)  OO1++;
-  kHR5  >>=  1;
- }
-  return OO1;
+int S(unsigned int ms, unsigned int tC4) {
+    unsigned int t = ms ^ tC4;
+    int GML7 = 0;
+    while (t > 0) {
+        if (t & 1) GML7++;
+        t >>= 1;
+    }
+    return GML7;
 }

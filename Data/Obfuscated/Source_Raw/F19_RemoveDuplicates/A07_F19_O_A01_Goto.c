@@ -5,40 +5,38 @@
  * Implementation Logic: Goto
  * Input Format: <val1> <val2> ...
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-int   ElR3(int   NnT[], int I)   {
-   int  wikn =   0,   otqW   =  0, OmQg;
-T8:
-   if   (wikn   >=  I) goto  rr;
-  OmQg   =   0;
-PXTx:
-   if   (OmQg   >= otqW) goto  qb;
-   if (NnT[wikn]  ==   NnT[OmQg]) goto IWqu6;
-   OmQg++; goto   PXTx;
-qb:
- NnT[otqW++]  =   NnT[wikn];
-IWqu6:
-   wikn++;   goto   T8;
-rr:
- return  otqW;
+int N(int Va[], int SIVw) {
+    int VQ = 0, M = 0, kR74;
+le:
+    if (VQ >= SIVw) goto iGw;
+    kR74 = 0;
+B:
+    if (kR74 >= M) goto ykxh;
+    if (Va[VQ] == Va[kR74]) goto Rp1;
+    kR74++; goto B;
+ykxh:
+    Va[M++] = Va[VQ];
+Rp1:
+    VQ++; goto le;
+iGw:
+    return M;
 }
 
-int   main(int   argc, char   *argv[]) {
-  if (argc < 2)  return   0;
- int  UOc =   argc   - 1;
-   int   NnT[128];
- for  (int  wikn   = 0;  wikn   <   UOc;   wikn++)   {
-  NnT[wikn]   =   atoi(argv[wikn +   1]);
- }
- int Y4 = ElR3(NnT,  UOc);
-   for  (int   wikn  =  0; wikn <   Y4; wikn++) {
-  printf("%d%s",  NnT[wikn],  (wikn  ==  Y4 -   1 ? ""   :   " "));
-   }
-   printf("\n");
-  return   0;
+int main(int s, char *Esq[]) {
+    if (s < 2) return 0;
+    int aV = s - 1;
+    int Va[128];
+    for (int VQ = 0; VQ < aV; VQ++) {
+        Va[VQ] = atoi(Esq[VQ + 1]);
+    }
+    int n7t7 = N(Va, aV);
+    for (int VQ = 0; VQ < n7t7; VQ++) {
+        printf("%d%s", Va[VQ], (VQ == n7t7 - 1 ? "" : " "));
+    }
+    printf("\n");
+    return 0;
 }

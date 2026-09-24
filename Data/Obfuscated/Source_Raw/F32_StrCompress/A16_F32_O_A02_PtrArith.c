@@ -4,24 +4,22 @@
 * File: A16_F32_O_A02_PtrArith.c
 * Implementation Logic: Raw pointer arithmetic and dereferencing derived from A02.
 */
-
-
 #include <stdio.h>
 #include <string.h>
 
-void  x6(char* TAYR)  {
- char *WQ  = TAYR;
-  while  (*WQ)   {
-   char  *Qh  =   WQ;
- while (*(Qh  +  1)   ==   *WQ) Qh++;
- printf("%c%d",  *WQ,   (int)(Qh  -   WQ +   1));
- WQ  = Qh  +  1;
-   }
-   printf("\n");
+void A(char* v) {
+    char *Cj = v;
+    while (*Cj) {
+        char *UP = Cj;
+        while (*(UP + 1) == *Cj) UP++;
+        printf("%c%d", *Cj, (int)(UP - Cj + 1));
+        Cj = UP + 1;
+    }
+    printf("\n");
 }
 
-int   main(int   argc, char*   argv[])  {
-   if (argc  <  2) return  0;
-   x6(argv[1]);
-   return  0;
+int main(int x, char* AyQ[]) {
+    if (x < 2) return 0;
+    A(AyQ[1]);
+    return 0;
 }

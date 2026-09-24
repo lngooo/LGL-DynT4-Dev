@@ -1,5 +1,5 @@
-void ueD(char*   pLV) {
-  if (!*pLV)  return;
-   *pLV  =   (*pLV   >=  'a'   &&   *pLV <=  'z') ?  (*pLV -  32)  : ((*pLV   >=   'A'   &&   *pLV <= 'Z') ? (*pLV +   32)   : *pLV);
-   ueD(pLV  +  1);
+void LeH(char* iS) {
+    if (!*iS) return;
+    *iS = (*iS >= 'a' && *iS <= 'z') ? (*iS - 32) : ((*iS >= 'A' && *iS <= 'Z') ? (*iS + 32) : *iS);
+    LeH(iS + 1);
 }

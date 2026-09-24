@@ -1,5 +1,5 @@
-long   t(int   n3) {
- double cIa   =  sqrt(5.0);
-   double   IVs4 = (1.0 +   cIa)  /  2.0;
-  return  (long)floor(exp(n3   * log(IVs4)) /  cIa   +  0.5);
+long gZ51(int TfG) {
+    double cp = sqrt(5.0);
+    double CHHN = (1.0 + cp) / 2.0;
+    return (long)floor(exp(TfG * log(CHHN)) / cp + 0.5);
 }

@@ -4,23 +4,21 @@
 * File: A07_F36_S_MaskAndValidation.c
 * Logic: Bitmasking to isolate the letter and applying logic XOR only on alpha range.
 */
-
-
 #include <stdio.h>
 
-void   yt(char*  vyS)   {
-  for   (int  KyFR   = 0; vyS[KyFR]; KyFR++)  {
- unsigned   char L   =  (unsigned char)vyS[KyFR];
-   unsigned   char  whWS4  = L   | 32;
- if (whWS4 >=  'a'   && whWS4  <=   'z')  {
-   vyS[KyFR]  =   (char)(L   ^ 32);
-   }
-   }
+void RO(char* o) {
+    for (int cpd = 0; o[cpd]; cpd++) {
+        unsigned char b = (unsigned char)o[cpd];
+        unsigned char z9F = b | 32;
+        if (z9F >= 'a' && z9F <= 'z') {
+            o[cpd] = (char)(b ^ 32);
+        }
+    }
 }
 
-int main(int  argc, char*  argv[]) {
-   if  (argc <   2)   return 0;
-  yt(argv[1]);
-  printf("%s\n", argv[1]);
-  return   0;
+int main(int xB5Y, char* Nex[]) {
+    if (xB5Y < 2) return 0;
+    RO(Nex[1]);
+    printf("%s\n", Nex[1]);
+    return 0;
 }

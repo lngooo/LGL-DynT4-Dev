@@ -1,12 +1,12 @@
-uint32_t   pT(uint32_t QQnl)   {
- union {
- uint32_t plmQ4;
- uint8_t   GiUD[4];
-  }   xc4,  ZWRR3;
-   xc4.plmQ4  =  QQnl;
-  ZWRR3.GiUD[0] =  xc4.GiUD[3];
-   ZWRR3.GiUD[1]  =   xc4.GiUD[2];
-   ZWRR3.GiUD[2]  =  xc4.GiUD[1];
-   ZWRR3.GiUD[3] =   xc4.GiUD[0];
-  return ZWRR3.plmQ4;
+uint32_t c(uint32_t ud4) {
+    union {
+        uint32_t tn;
+        uint8_t nze5[4];
+    } SYY, nyWz;
+    SYY.tn = ud4;
+    nyWz.nze5[0] = SYY.nze5[3];
+    nyWz.nze5[1] = SYY.nze5[2];
+    nyWz.nze5[2] = SYY.nze5[1];
+    nyWz.nze5[3] = SYY.nze5[0];
+    return nyWz.tn;
 }

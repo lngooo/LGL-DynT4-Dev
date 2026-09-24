@@ -1,6 +1,6 @@
 @.str = constant [4 x i8] c"%d \00"
 @.str.1 = constant [2 x i8] c"\0A\00"
-define dso_local void @IeM(i32* %0, i32 %1, i32 %2) {
+define dso_local void @AxZF(i32* %0, i32 %1, i32 %2) {
   %4 = alloca i32*
   %5 = alloca i32
   %6 = alloca i32
@@ -42,12 +42,12 @@ define dso_local void @IeM(i32* %0, i32 %1, i32 %2) {
   %35 = add nsw i32 %34, 1
   %36 = load i32, i32* %6
   %37 = sub nsw i32 %36, 1
-  call void @IeM(i32* %33, i32 %35, i32 %37)
+  call void @AxZF(i32* %33, i32 %35, i32 %37)
   br label %39
 39:
   ret void
 }
-define dso_local void @CDKj(i32* %0, i32 %1, i32 %2) {
+define dso_local void @ogh(i32* %0, i32 %1, i32 %2) {
   %4 = alloca i32*
   %5 = alloca i32
   %6 = alloca i32
@@ -67,16 +67,16 @@ define dso_local void @CDKj(i32* %0, i32 %1, i32 %2) {
   %14 = load i32*, i32** %4
   %15 = load i32, i32* %6
   %16 = sub nsw i32 %15, 1
-  call void @IeM(i32* %14, i32 0, i32 %16)
+  call void @AxZF(i32* %14, i32 0, i32 %16)
   %17 = load i32*, i32** %4
   %18 = load i32, i32* %6
   %19 = load i32, i32* %5
   %20 = sub nsw i32 %19, 1
-  call void @IeM(i32* %17, i32 %18, i32 %20)
+  call void @AxZF(i32* %17, i32 %18, i32 %20)
   %21 = load i32*, i32** %4
   %22 = load i32, i32* %5
   %23 = sub nsw i32 %22, 1
-  call void @IeM(i32* %21, i32 0, i32 %23)
+  call void @AxZF(i32* %21, i32 0, i32 %23)
   br label %24
 24:
   ret void
@@ -145,7 +145,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   %52 = load i32*, i32** %8
   %53 = load i32, i32* %7
   %54 = load i32, i32* %6
-  call void @CDKj(i32* %52, i32 %53, i32 %54)
+  call void @ogh(i32* %52, i32 %53, i32 %54)
   store i32 0, i32* %10
   br label %56
 56:

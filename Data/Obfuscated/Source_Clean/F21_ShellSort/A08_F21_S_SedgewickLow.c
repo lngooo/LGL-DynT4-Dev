@@ -1,3 +1,3 @@
-void  A(int  *Sav,  int VazL)   {
-   int   Jm[]={109,41,19,5,1};for(int  i=0;i<5;i++){int EjU6=Jm[i];if(EjU6>=VazL)continue;for(int xsy=EjU6;xsy<VazL;xsy++){int   GC=Sav[xsy],INOu=xsy;while(INOu>=EjU6&&Sav[INOu-EjU6]>GC){Sav[INOu]=Sav[INOu-EjU6];INOu-=EjU6;}Sav[INOu]=GC;}}
+void h7J(int *w, int njzG) {
+    int GvdC[]={109,41,19,5,1};for(int xgd=0;xgd<5;xgd++){int U7Bm=GvdC[xgd];if(U7Bm>=njzG)continue;for(int mzl=U7Bm;mzl<njzG;mzl++){int HMF=w[mzl],gRdP=mzl;while(gRdP>=U7Bm&&w[gRdP-U7Bm]>HMF){w[gRdP]=w[gRdP-U7Bm];gRdP-=U7Bm;}w[gRdP]=HMF;}}
 }

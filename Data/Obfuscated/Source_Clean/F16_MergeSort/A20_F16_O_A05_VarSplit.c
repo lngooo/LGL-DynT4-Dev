@@ -1,17 +1,17 @@
-void  hm4(int   vw[],   int vPAM,  int  fmN6)  {
-   if   (vPAM  <  fmN6)  {
-  int fr   =  (vPAM   + fmN6)  /   2;
-  hm4(vw, vPAM,  fr);
-  hm4(vw, fr  + 1, fmN6);
-  int   zbnA1  =   0,   M1  =  vPAM,  wCK   =  fr   +  1;
-  int *UdCg = (int*)malloc((fmN6-vPAM+1)*4);
- while (M1 <=   fr  &&   wCK <= fmN6)  {
- if (vw[M1]   <=  vw[wCK])   UdCg[zbnA1++]  =  vw[M1++];
-   else UdCg[zbnA1++]   = vw[wCK++];
-   }
-   while  (M1   <= fr)  UdCg[zbnA1++]   = vw[M1++];
-   while  (wCK   <= fmN6)   UdCg[zbnA1++]  =   vw[wCK++];
-   for  (int S   = 0;  S <   zbnA1;   S++)   vw[vPAM +  S]   =  UdCg[S];
- free(UdCg);
-   }
+void sGk(int TWA[], int OQp, int WW) {
+    if (OQp < WW) {
+        int YoiZ = (OQp + WW) / 2;
+        sGk(TWA, OQp, YoiZ);
+        sGk(TWA, YoiZ + 1, WW);
+        int A6A5 = 0, HYRx = OQp, C = YoiZ + 1;
+        int *Xa = (int*)malloc((WW-OQp+1)*4);
+        while (HYRx <= YoiZ && C <= WW) {
+            if (TWA[HYRx] <= TWA[C]) Xa[A6A5++] = TWA[HYRx++];
+            else Xa[A6A5++] = TWA[C++];
+        }
+        while (HYRx <= YoiZ) Xa[A6A5++] = TWA[HYRx++];
+        while (C <= WW) Xa[A6A5++] = TWA[C++];
+        for (int f = 0; f < A6A5; f++) TWA[OQp + f] = Xa[f];
+        free(Xa);
+    }
 }

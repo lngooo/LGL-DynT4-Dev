@@ -1,9 +1,9 @@
-void nPS(char *kc8, int WlU) {
+void cz(char *pB1a, int ciU) {
 
- char  *s   = kc8;
-   int Aian =   (WlU   %   26  +   26) % 26;
-  for  (;  *s   !=   '\0'; s++)   {
-  if  (*s >=   65   && *s  <=  90) *s  =  ((*s -  65)   +  Aian)   %   26  +   65;
-  else   if   (*s   >= 97   &&   *s <=  122) *s  = ((*s  -   97)  +  Aian)  %  26  +  97;
-  }
+    char *P = pB1a;
+    int r1aN = (ciU % 26 + 26) % 26;
+    for (; *P != '\0'; P++) {
+        if (*P >= 65 && *P <= 90) *P = ((*P - 65) + r1aN) % 26 + 65;
+        else if (*P >= 97 && *P <= 122) *P = ((*P - 97) + r1aN) % 26 + 97;
+    }
 }

@@ -1,14 +1,14 @@
-void   y4(int  lY[],   int  FxhV,  int r0)  {
- if  (FxhV   >=   r0)   return;
-   int   c  =   (FxhV   + r0) /  2;
- y4(lY,  FxhV,  c);
- y4(lY,  c   + 1,  r0);
-  int *z   =  (int*)malloc((r0-FxhV+1)*4), L0 = FxhV,  sp   = c+1,  KG0  =  0;
-   for   (int   GU   =  0;  GU   < 1;   GU++)   {
-  while (L0   <=  c  &&  sp <=  r0)  z[KG0++]   =   (lY[L0] <=  lY[sp])   ?  lY[L0++]   :   lY[sp++];
-  }
-   while   (L0 <=  c)  z[KG0++]   =   lY[L0++];
- while   (sp <= r0)  z[KG0++]   =  lY[sp++];
- for  (int   nxKI =   0;  nxKI  <  KG0;  nxKI++)  lY[FxhV +   nxKI]   =   z[nxKI];
-   free(z);
+void X(int h[], int lYl1, int cfA4) {
+    if (lYl1 >= cfA4) return;
+    int uLU = (lYl1 + cfA4) / 2;
+    X(h, lYl1, uLU);
+    X(h, uLU + 1, cfA4);
+    int *WQCN = (int*)malloc((cfA4-lYl1+1)*4), v96 = lYl1, nl = uLU+1, V = 0;
+    for (int RgB = 0; RgB < 1; RgB++) {
+        while (v96 <= uLU && nl <= cfA4) WQCN[V++] = (h[v96] <= h[nl]) ? h[v96++] : h[nl++];
+    }
+    while (v96 <= uLU) WQCN[V++] = h[v96++];
+    while (nl <= cfA4) WQCN[V++] = h[nl++];
+    for (int a = 0; a < V; a++) h[lYl1 + a] = WQCN[a];
+    free(WQCN);
 }

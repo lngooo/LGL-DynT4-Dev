@@ -4,28 +4,26 @@
 * File: A15_F37_O_A01_DoubleLoop.c
 * Logic: Nested loops for searching next valid character derived from A01.
 */
-
-
 #include <stdio.h>
 #include <ctype.h>
 
-void  THmT(char* ld)  {
- int ELON   =   0;
-   for  (int x2 =  0; ld[x2];   )   {
-  if (!isspace((unsigned char)ld[x2]))  {
- ld[ELON++] = ld[x2++];
-   }   else  {
- int  qGa2   =  x2;
-   while (ld[qGa2]  &&   isspace((unsigned  char)ld[qGa2]))   qGa2++;
- x2  =  qGa2;
- }
-  }
-   ld[ELON]   =  '\0';
+void omY(char* B) {
+    int p2 = 0;
+    for (int qZz = 0; B[qZz]; ) {
+        if (!isspace((unsigned char)B[qZz])) {
+            B[p2++] = B[qZz++];
+        } else {
+            int Yi2O = qZz;
+            while (B[Yi2O] && isspace((unsigned char)B[Yi2O])) Yi2O++;
+            qZz = Yi2O;
+        }
+    }
+    B[p2] = '\0';
 }
 
-int  main(int   argc,  char*   argv[])   {
-  if   (argc <  2)  return  0;
-   THmT(argv[1]);
-  printf("%s\n", argv[1]);
-   return  0;
+int main(int XA, char* Ssd[]) {
+    if (XA < 2) return 0;
+    omY(Ssd[1]);
+    printf("%s\n", Ssd[1]);
+    return 0;
 }

@@ -1,4 +1,4 @@
-define dso_local void @jfQ(i32* %0, i32 %1) {
+define dso_local void @bYjj(i32* %0, i32 %1) {
   %3 = alloca i32*
   %4 = alloca i32
   %5 = alloca i32
@@ -45,7 +45,7 @@ define dso_local void @jfQ(i32* %0, i32 %1) {
   store i32 %32, i32* %37
   ret void
 }
-define dso_local void @w1(i32* %0, i32 %1, i32 %2) {
+define dso_local void @EKtK(i32* %0, i32 %1, i32 %2) {
   %4 = alloca i32*
   %5 = alloca i32
   %6 = alloca i32
@@ -75,7 +75,7 @@ define dso_local void @w1(i32* %0, i32 %1, i32 %2) {
 22:
   %23 = load i32*, i32** %4
   %24 = load i32, i32* %5
-  call void @jfQ(i32* %23, i32 %24)
+  call void @bYjj(i32* %23, i32 %24)
   br label %25
 25:
   %26 = load i32, i32* %7

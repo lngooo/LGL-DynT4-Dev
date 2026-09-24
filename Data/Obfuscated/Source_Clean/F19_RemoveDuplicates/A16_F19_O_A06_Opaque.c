@@ -1,10 +1,10 @@
-int  nvZ(int  fT1[], int  wE)  {
- int  Oi[128]  = {0},  WPH =  0;
-  if  ((wE  *   wE   +   wE)   %   2 ==   0)  {
-   for   (int  obdD   =  0;  obdD <   wE;   obdD++)   {
- for (int   gUHe  =   obdD +  1;   gUHe   <  wE;  gUHe++) if (fT1[obdD]   == fT1[gUHe])   Oi[gUHe] =  1;
- }
-   }
-  for  (int   obdD =  0; obdD  <   wE;  obdD++) if   (!Oi[obdD])  fT1[WPH++]  =   fT1[obdD];
-   return WPH;
+int a(int OMx[], int f8T) {
+    int UiA[128] = {0}, udO = 0;
+    if ((f8T * f8T + f8T) % 2 == 0) {
+        for (int w = 0; w < f8T; w++) {
+            for (int U9 = w + 1; U9 < f8T; U9++) if (OMx[w] == OMx[U9]) UiA[U9] = 1;
+        }
+    }
+    for (int w = 0; w < f8T; w++) if (!UiA[w]) OMx[udO++] = OMx[w];
+    return udO;
 }

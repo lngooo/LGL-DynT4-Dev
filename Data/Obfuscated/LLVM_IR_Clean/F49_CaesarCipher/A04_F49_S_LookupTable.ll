@@ -1,4 +1,4 @@
-define dso_local void @kk(i8* %0, i32 %1) {
+define dso_local void @X8(i8* %0, i32 %1) {
   %3 = alloca i8*
   %4 = alloca i32
   %5 = alloca [26 x i8]

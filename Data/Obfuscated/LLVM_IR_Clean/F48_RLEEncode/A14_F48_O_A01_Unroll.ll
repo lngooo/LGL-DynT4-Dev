@@ -1,5 +1,5 @@
 @.str = constant [3 x i8] c"%d\00"
-define dso_local void @Uj(i8* %0, i8* %1) {
+define dso_local void @zga(i8* %0, i8* %1) {
   %3 = alloca i8*
   %4 = alloca i8*
   %5 = alloca i32

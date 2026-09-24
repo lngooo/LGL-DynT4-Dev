@@ -1,10 +1,10 @@
-@ZzO.se = internal global [256 x i8] zeroinitializer
-@ZzO.e = internal global i32 0
-define dso_local void @ZzO(i8* %0) {
+@Z.iXS = internal global [256 x i8] zeroinitializer
+@Z.bXgo = internal global i32 0
+define dso_local void @Z(i8* %0) {
   %2 = alloca i8*
   %3 = alloca i32
   store i8* %0, i8** %2
-  %4 = load i32, i32* @ZzO.e
+  %4 = load i32, i32* @Z.bXgo
   %5 = icmp ne i32 %4, 0
   br i1 %5, label %51, label %6
 6:
@@ -30,7 +30,7 @@ define dso_local void @ZzO(i8* %0) {
   %22 = trunc i32 %21 to i8
   %23 = load i32, i32* %3
   %24 = sext i32 %23 to i64
-  %25 = getelementptr inbounds [256 x i8], [256 x i8]* @ZzO.se, i64 0, i64 %24
+  %25 = getelementptr inbounds [256 x i8], [256 x i8]* @Z.iXS, i64 0, i64 %24
   store i8 %22, i8* %25
   br label %46
 26:
@@ -47,7 +47,7 @@ define dso_local void @ZzO(i8* %0) {
   %35 = trunc i32 %34 to i8
   %36 = load i32, i32* %3
   %37 = sext i32 %36 to i64
-  %38 = getelementptr inbounds [256 x i8], [256 x i8]* @ZzO.se, i64 0, i64 %37
+  %38 = getelementptr inbounds [256 x i8], [256 x i8]* @Z.iXS, i64 0, i64 %37
   store i8 %35, i8* %38
   br label %45
 39:
@@ -55,7 +55,7 @@ define dso_local void @ZzO(i8* %0) {
   %41 = trunc i32 %40 to i8
   %42 = load i32, i32* %3
   %43 = sext i32 %42 to i64
-  %44 = getelementptr inbounds [256 x i8], [256 x i8]* @ZzO.se, i64 0, i64 %43
+  %44 = getelementptr inbounds [256 x i8], [256 x i8]* @Z.iXS, i64 0, i64 %43
   store i8 %41, i8* %44
   br label %45
 45:
@@ -68,7 +68,7 @@ define dso_local void @ZzO(i8* %0) {
   store i32 %49, i32* %3
   br label %8
 50:
-  store i32 1, i32* @ZzO.e
+  store i32 1, i32* @Z.bXgo
   br label %51
 51:
   br label %52
@@ -81,7 +81,7 @@ define dso_local void @ZzO(i8* %0) {
   %57 = load i8*, i8** %2
   %58 = load i8, i8* %57
   %59 = zext i8 %58 to i64
-  %60 = getelementptr inbounds [256 x i8], [256 x i8]* @ZzO.se, i64 0, i64 %59
+  %60 = getelementptr inbounds [256 x i8], [256 x i8]* @Z.iXS, i64 0, i64 %59
   %61 = load i8, i8* %60
   %62 = load i8*, i8** %2
   store i8 %61, i8* %62

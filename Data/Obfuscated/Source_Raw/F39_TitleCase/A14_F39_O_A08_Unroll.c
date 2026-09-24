@@ -5,27 +5,25 @@
  * Implementation Logic: A08 with manually unrolled lowercase pass.
  * Input Format: <string>
  */
-
-
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>
 
-void  ydB(char* Q0)  {
-   int N0   =  strlen(Q0);
- for (int  rg   =  0;   rg  <   N0;   rg+=2) {
-  Q0[rg] =   tolower(Q0[rg]);
-   if (rg+1 <   N0)   Q0[rg+1]  =   tolower(Q0[rg+1]);
-   }
-   if  (N0   >  0)   Q0[0]   = toupper(Q0[0]);
-   for (int  rg  =   1; rg  <   N0; rg++)  {
- if (Q0[rg-1]   ==   ' ') Q0[rg] =   toupper(Q0[rg]);
-   }
+void q(char* VI) {
+    int eNy = strlen(VI);
+    for (int kjKf = 0; kjKf < eNy; kjKf+=2) {
+        VI[kjKf] = tolower(VI[kjKf]);
+        if (kjKf+1 < eNy) VI[kjKf+1] = tolower(VI[kjKf+1]);
+    }
+    if (eNy > 0) VI[0] = toupper(VI[0]);
+    for (int kjKf = 1; kjKf < eNy; kjKf++) {
+        if (VI[kjKf-1] == ' ') VI[kjKf] = toupper(VI[kjKf]);
+    }
 }
 
-int  main(int argc, char*  argv[])   {
- if   (argc   < 2)  return 0;
-  ydB(argv[1]);
-   printf("%s",  argv[1]);
-  return   0;
+int main(int hA, char* aGdx[]) {
+    if (hA < 2) return 0;
+    q(aGdx[1]);
+    printf("%s", aGdx[1]);
+    return 0;
 }

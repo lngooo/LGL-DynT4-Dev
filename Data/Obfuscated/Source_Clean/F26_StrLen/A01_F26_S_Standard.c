@@ -1,7 +1,7 @@
-int D(const char   *lIK)  {
- int   jr1 = 0;
- while   (lIK[jr1] != '\0') {
- jr1++;
-  }
- return jr1;
+int Ac(const char *WMUH) {
+    int kg = 0;
+    while (WMUH[kg] != '\0') {
+        kg++;
+    }
+    return kg;
 }

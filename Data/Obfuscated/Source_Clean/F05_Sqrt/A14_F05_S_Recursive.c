@@ -1,12 +1,12 @@
-int   OWRz3(long  XQ7,   long gSFZ3,   long  jPbY7)   {
-  if   (gSFZ3   >  jPbY7) return (int)jPbY7;
-   long tJ =  gSFZ3 +  (jPbY7  -   gSFZ3)   /   2;
-   if   (tJ * tJ  ==   XQ7)   return  (int)tJ;
-  if  (tJ   *  tJ <   XQ7) return   OWRz3(XQ7, tJ  + 1,   jPbY7);
-  return  OWRz3(XQ7,  gSFZ3, tJ -  1);
+int x(long RhA, long Y5U, long M) {
+    if (Y5U > M) return (int)M;
+    long q9PY = Y5U + (M - Y5U) / 2;
+    if (q9PY * q9PY == RhA) return (int)q9PY;
+    if (q9PY * q9PY < RhA) return x(RhA, q9PY + 1, M);
+    return x(RhA, Y5U, q9PY - 1);
 }
 
-int   y(int   XQ7)  {
- if  (XQ7 <  0) return -1;
-  return  OWRz3(XQ7,   0,  XQ7);
+int Ud(int RhA) {
+    if (RhA < 0) return -1;
+    return x(RhA, 0, RhA);
 }

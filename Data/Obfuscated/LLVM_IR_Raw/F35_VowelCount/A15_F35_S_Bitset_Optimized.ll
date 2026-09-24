@@ -1,7 +1,7 @@
-@__const.f.brER = constant [11 x i8] c"aeiouAEIOU\00"
+@__const.q3q.alKl = constant [11 x i8] c"aeiouAEIOU\00"
 @.str = constant [3 x i8] c"0\0A\00"
 @.str.1 = constant [4 x i8] c"%d\0A\00"
-define dso_local i32 @f(i8* %0) {
+define dso_local i32 @q3q(i8* %0) {
   %2 = alloca i8*
   %3 = alloca i64
   %4 = alloca [11 x i8]
@@ -10,7 +10,7 @@ define dso_local i32 @f(i8* %0) {
   %7 = alloca i8
   store i8* %0, i8** %2
   store i64 0, i64* %3
-  call void @llvm.memcpy.p0i8.p0i8.i64(i8* align 1 %10, i8* align 1 getelementptr inbounds ([11 x i8], [11 x i8]* @__const.f.brER, i32 0, i32 0), i64 11, i1 false)
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* align 1 %10, i8* align 1 getelementptr inbounds ([11 x i8], [11 x i8]* @__const.q3q.alKl, i32 0, i32 0), i64 11, i1 false)
   store i32 0, i32* %5
   br label %12
 12:
@@ -147,7 +147,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   %11 = load i8**, i8*** %5
   %12 = getelementptr inbounds i8*, i8** %11, i64 1
   %13 = load i8*, i8** %12
-  %14 = call i32 @f(i8* %13)
+  %14 = call i32 @q3q(i8* %13)
   %15 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.1, i64 0, i64 0), i32 %14)
   store i32 0, i32* %3
   br label %16

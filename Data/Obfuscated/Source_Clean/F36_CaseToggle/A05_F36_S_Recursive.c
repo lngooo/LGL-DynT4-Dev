@@ -1,6 +1,6 @@
-void  Hm(char*  eUe)   {
-   if   (!*eUe) return;
- if  (*eUe >= 'a'   &&   *eUe   <= 'z')  *eUe -=  32;
- else if (*eUe   >=   'A'  &&  *eUe  <=  'Z')   *eUe  +=  32;
-   Hm(eUe + 1);
+void dBhx(char* Eo) {
+    if (!*Eo) return;
+    if (*Eo >= 'a' && *Eo <= 'z') *Eo -= 32;
+    else if (*Eo >= 'A' && *Eo <= 'Z') *Eo += 32;
+    dBhx(Eo + 1);
 }

@@ -1,5 +1,5 @@
-unsigned   int yC(unsigned int   vAak7)  {
-   unsigned  int  Bxc =   vAak7  /  2;
-   unsigned   int   wsmf   = vAak7   ^   Bxc;
-   return   wsmf;
+unsigned int fFAI(unsigned int k8) {
+    unsigned int WgV = k8 / 2;
+    unsigned int DQ = k8 ^ WgV;
+    return DQ;
 }

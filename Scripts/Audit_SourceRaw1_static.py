@@ -18,7 +18,7 @@ import os
 import re
 
 # --- Configuration ---
-SOURCE_DIR = "../Data/Source_Raw"
+SOURCE_DIR = "../Data/Natural/Source_Raw"
 
 # 1. Enhanced Naming Convention Regex
 # Pattern: A{01-21}_F{01-50}_{S/O}_{Any_Description}.c

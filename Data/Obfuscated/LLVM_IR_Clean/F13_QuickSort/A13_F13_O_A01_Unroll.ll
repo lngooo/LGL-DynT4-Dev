@@ -1,4 +1,4 @@
-define dso_local void @pOez5(i32* %0, i32 %1, i32 %2) {
+define dso_local void @Yet(i32* %0, i32 %1, i32 %2) {
   %4 = alloca i32*
   %5 = alloca i32
   %6 = alloca i32
@@ -195,12 +195,12 @@ define dso_local void @pOez5(i32* %0, i32 %1, i32 %2) {
   %169 = load i32*, i32** %4
   %170 = load i32, i32* %5
   %171 = load i32, i32* %8
-  call void @pOez5(i32* %169, i32 %170, i32 %171)
+  call void @Yet(i32* %169, i32 %170, i32 %171)
   %172 = load i32*, i32** %4
   %173 = load i32, i32* %8
   %174 = add nsw i32 %173, 2
   %175 = load i32, i32* %6
-  call void @pOez5(i32* %172, i32 %174, i32 %175)
+  call void @Yet(i32* %172, i32 %174, i32 %175)
   br label %180
 180:
   ret void

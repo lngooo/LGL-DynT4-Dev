@@ -1,4 +1,4 @@
-define dso_local void @FB1(i8* %0, i32 %1) {
+define dso_local void @wVZE(i8* %0, i32 %1) {
   %3 = alloca i8*
   %4 = alloca i32
   %5 = alloca i32
@@ -91,7 +91,7 @@ define dso_local void @FB1(i8* %0, i32 %1) {
 73:
   ret void
 }
-define dso_local i32 @r(i8* %0, i8* %1) {
+define dso_local i32 @u7Y2(i8* %0, i8* %1) {
   %3 = alloca i32
   %4 = alloca i8*
   %5 = alloca i8*
@@ -127,10 +127,10 @@ define dso_local i32 @r(i8* %0, i8* %1) {
   %31 = call i8* @strcpy(i8* %29, i8* %30)
   %32 = getelementptr inbounds [256 x i8], [256 x i8]* %9, i64 0, i64 0
   %33 = load i32, i32* %6
-  call void @FB1(i8* %32, i32 %33)
+  call void @wVZE(i8* %32, i32 %33)
   %34 = getelementptr inbounds [256 x i8], [256 x i8]* %10, i64 0, i64 0
   %35 = load i32, i32* %7
-  call void @FB1(i8* %34, i32 %35)
+  call void @wVZE(i8* %34, i32 %35)
   %36 = getelementptr inbounds [256 x i8], [256 x i8]* %9, i64 0, i64 0
   %37 = getelementptr inbounds [256 x i8], [256 x i8]* %10, i64 0, i64 0
   %38 = call i32 @strcmp(i8* %36, i8* %37)

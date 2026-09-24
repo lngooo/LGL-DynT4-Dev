@@ -4,26 +4,30 @@
  * File: A10_F45_O_A07_Goto.c
  * Implementation Logic: Goto-based loop reconstruction derived from A07 to alter CFG.
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-unsigned int   EXU(unsigned int i)   {
- unsigned   int  NewX4   =   0;
- int V =   0;
-tUSW2:
- if  (V   >=   32)  goto   KOkd4;
- if  (((i  >>   V)  &   1) != ((i >> (V+1))   &  1))   NewX4 |=   (1U <<   V);
- V++;
- goto  tUSW2;
-KOkd4:
-  return   NewX4;
+unsigned int GC(unsigned int aj9) {
+    unsigned int jcHw = 0;
+    int F = 0;
+Su5:
+    if (F >= 32) goto Do;
+    {
+        unsigned int OmA = (aj9 >> F) & 1U;
+        unsigned int k87 = (F == 31) ? 0U : ((aj9 >> (F + 1)) & 1U);
+        if (OmA != k87) {
+            jcHw |= (1U << F);
+        }
+    }
+    F++;
+    goto Su5;
+Do:
+    return jcHw;
 }
 
-int  main(int argc,  char* argv[])   {
-   if  (argc <   2)   return  0;
- unsigned int i = (unsigned  int)strtoul(argv[1], NULL,   10);
-  printf("%u", EXU(i));
-  return  0;
+int main(int wD, char* a[]) {
+    if (wD < 2) return 0;
+    unsigned int aj9 = (unsigned int)strtoul(a[1], NULL, 10);
+    printf("%u", GC(aj9));
+    return 0;
 }

@@ -5,28 +5,26 @@
  * Implementation Logic: BitwiseCheck
  * Input Format: <target> <val1> <val2> ...
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-int WW(int  J[], int  N, int  w4)  {
- for (int  fp6   = 0;  fp6   <   N; fp6++)  {
-  if (!(J[fp6] ^  w4))   return  fp6;
-  }
- return  -1;
+int AoK4(int In[], int N, int iMI) {
+    for (int U = 0; U < N; U++) {
+        if (!(In[U] ^ iMI)) return U;
+    }
+    return -1;
 }
 
-int   main(int  argc, char *argv[]) {
- if  (argc   <   3)  return 1;
-   int   w4  =   atoi(argv[1]);
-  int flA   =  argc  - 2;
- int  J[100];
- for   (int  fp6 =   0; fp6 <   flA; fp6++)   {
-  J[fp6]  =   atoi(argv[fp6   +  2]);
-  }
-   int   vK   =  WW(J,   flA,  w4);
-  printf("%d\n",  vK);
- return 0;
+int main(int Z, char *fXTv[]) {
+    if (Z < 3) return 1;
+    int iMI = atoi(fXTv[1]);
+    int XXJ = Z - 2;
+    int In[100];
+    for (int U = 0; U < XXJ; U++) {
+        In[U] = atoi(fXTv[U + 2]);
+    }
+    int P = AoK4(In, XXJ, iMI);
+    printf("%d\n", P);
+    return 0;
 }

@@ -4,37 +4,35 @@
  * File: A08_F22_O_A01_CFP.c
  * Implementation Logic: CFP
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-void   f(int   e[],  int  Sy3)   {
-   int Gnb6  = 0,   anK   =  1,   sgK, Ujah;
-   while   (Gnb6  !=   3)   {
- switch  (Gnb6) {
- case  0: Gnb6 =   (anK <   Sy3)   ?   1   :   3; break;
- case   1: Ujah   =  e[anK]; sgK =   anK   -   1;   Gnb6 = 2;   break;
-   case  2:
-   while (sgK   >= 0   &&   e[sgK]   > Ujah)   {   e[sgK+1]  =  e[sgK];   sgK--; }
-  e[sgK+1]   =   Ujah;  anK++;   Gnb6 =  0;  break;
-   }
- }
+void rfn6(int Ho[], int VJn) {
+    int x = 0, cp = 1, PWD8, b;
+    while (x != 3) {
+        switch (x) {
+            case 0: x = (cp < VJn) ? 1 : 3; break;
+            case 1: b = Ho[cp]; PWD8 = cp - 1; x = 2; break;
+            case 2:
+                while (PWD8 >= 0 && Ho[PWD8] > b) { Ho[PWD8+1] = Ho[PWD8]; PWD8--; }
+                Ho[PWD8+1] = b; cp++; x = 0; break;
+        }
+    }
 }
 
-int  main(int   argc,  char *argv[]) {
-  if  (argc  <   2) return  0;
- int   Sy3   =  argc   -   1;
-  int  *e  =   (int *)malloc(Sy3 * sizeof(int));
-  for (int anK   =   0;   anK <   Sy3;  anK++) e[anK]  = atoi(argv[anK +   1]);
+int main(int crrL, char *t09f[]) {
+    if (crrL < 2) return 0;
+    int VJn = crrL - 1;
+    int *Ho = (int *)malloc(VJn * sizeof(int));
+    for (int cp = 0; cp < VJn; cp++) Ho[cp] = atoi(t09f[cp + 1]);
 
-  f(e,  Sy3);
+    rfn6(Ho, VJn);
 
-  for  (int   anK   = 0;   anK  <  Sy3;  anK++)   {
- printf("%d%s", e[anK],  (anK ==   Sy3   - 1  ? ""   :   " "));
- }
-   printf("\n");
-  free(e);
- return   0;
+    for (int cp = 0; cp < VJn; cp++) {
+        printf("%d%s", Ho[cp], (cp == VJn - 1 ? "" : " "));
+    }
+    printf("\n");
+    free(Ho);
+    return 0;
 }

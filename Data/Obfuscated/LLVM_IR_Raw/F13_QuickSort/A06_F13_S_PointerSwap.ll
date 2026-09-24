@@ -2,7 +2,7 @@
 @.str.1 = constant [1 x i8] zeroinitializer
 @.str.2 = constant [2 x i8] c" \00"
 @.str.3 = constant [2 x i8] c"\0A\00"
-define dso_local void @Krh(i32* %0, i32 %1, i32 %2) {
+define dso_local void @CV7(i32* %0, i32 %1, i32 %2) {
   %4 = alloca i32*
   %5 = alloca i32
   %6 = alloca i32
@@ -94,7 +94,7 @@ define dso_local void @Krh(i32* %0, i32 %1, i32 %2) {
   %76 = sdiv exact i64 %75, 4
   %77 = trunc i64 %76 to i32
   %78 = sub nsw i32 %77, 1
-  call void @Krh(i32* %69, i32 %70, i32 %78)
+  call void @CV7(i32* %69, i32 %70, i32 %78)
   %79 = load i32*, i32** %4
   %80 = load i32*, i32** %8
   %81 = load i32*, i32** %4
@@ -105,7 +105,7 @@ define dso_local void @Krh(i32* %0, i32 %1, i32 %2) {
   %86 = trunc i64 %85 to i32
   %87 = add nsw i32 %86, 1
   %88 = load i32, i32* %6
-  call void @Krh(i32* %79, i32 %87, i32 %88)
+  call void @CV7(i32* %79, i32 %87, i32 %88)
   br label %92
 92:
   ret void
@@ -168,7 +168,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   %46 = load i32*, i32** %7
   %47 = load i32, i32* %6
   %48 = sub nsw i32 %47, 1
-  call void @Krh(i32* %46, i32 0, i32 %48)
+  call void @CV7(i32* %46, i32 0, i32 %48)
   store i32 0, i32* %9
   br label %50
 50:

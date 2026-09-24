@@ -1,17 +1,17 @@
-int  KJ2(int  kl[],  int  gD7, int   l,  int p8) {
-   int   Vsx   =  0;
-   while (Vsx   !=  2)  {
-  switch  (Vsx) {
- case  0:  if (gD7  <=   l)   Vsx   =   1;  else   Vsx =   2;   break;
-   case  1: {
-  int  s  =   kl[l],  fXH = gD7;
- for  (int p   =   gD7;   p  <   l; p++)  if   (kl[p] <=   s)   {  int   DU=kl[fXH]; kl[fXH]=kl[p];   kl[p]=DU;   fXH++;  }
-   int  DU=kl[fXH]; kl[fXH]=kl[l]; kl[l]=DU;
-  if  (fXH ==  p8  -  1) return   kl[fXH];
- if (fXH > p8  - 1) l = fXH   -   1; else   gD7 = fXH + 1;
- Vsx =   0;  break;
-   }
- }
-  }
-  return  -1;
+int q9(int M[], int OSy, int vl, int QEe) {
+    int bM6 = 0;
+    while (bM6 != 2) {
+        switch (bM6) {
+            case 0: if (OSy <= vl) bM6 = 1; else bM6 = 2; break;
+            case 1: {
+                int yGOV = M[vl], GL = OSy;
+                for (int o = OSy; o < vl; o++) if (M[o] <= yGOV) { int N=M[GL]; M[GL]=M[o]; M[o]=N; GL++; }
+                int N=M[GL]; M[GL]=M[vl]; M[vl]=N;
+                if (GL == QEe - 1) return M[GL];
+                if (GL > QEe - 1) vl = GL - 1; else OSy = GL + 1;
+                bM6 = 0; break;
+            }
+        }
+    }
+    return -1;
 }

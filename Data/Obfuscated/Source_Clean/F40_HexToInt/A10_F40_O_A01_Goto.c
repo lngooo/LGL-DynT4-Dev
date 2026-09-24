@@ -1,13 +1,13 @@
-int   gYNX(const char*  W)  {
-  int e =  0;
-sH:
-  if   (!*W)  goto z;
- int   S6  = 0;
- if (*W >=   '0'  &&   *W <=   '9')  S6 = *W - '0';
-  else  S6  = (*W  | 32) -   'a'   +   10;
-  e   =   e   * 16  +   S6;
-  W++;
-   goto   sH;
-z:
-  return  e;
+int E(const char* f6dJ) {
+    int cGly = 0;
+Y9hW:
+    if (!*f6dJ) goto my;
+    int g = 0;
+    if (*f6dJ >= '0' && *f6dJ <= '9') g = *f6dJ - '0';
+    else g = (*f6dJ | 32) - 'a' + 10;
+    cGly = cGly * 16 + g;
+    f6dJ++;
+    goto Y9hW;
+my:
+    return cGly;
 }

@@ -1,9 +1,9 @@
-int  j3(int TNwm2[],  int   F7,   int  kSo, int   PeB) {
-   int I5   = kSo -   F7   + 1;
- for (int  anq = 0; anq < PeB;  anq++) {
-  int Wxmz7  =   anq;
- for (int   caIl7   = anq  + 1; caIl7  < I5;  caIl7++)  if (TNwm2[caIl7] <   TNwm2[Wxmz7])  Wxmz7   =   caIl7;
-  int  opcW5 =   TNwm2[anq]; TNwm2[anq]  = TNwm2[Wxmz7];   TNwm2[Wxmz7]  =  opcW5;
-   }
-  return  TNwm2[PeB-1];
+int Vz(int ak0[], int ageX, int HAPs, int klxl) {
+    int mF = HAPs - ageX + 1;
+    for (int G8 = 0; G8 < klxl; G8++) {
+        int C = G8;
+        for (int lm = G8 + 1; lm < mF; lm++) if (ak0[lm] < ak0[C]) C = lm;
+        int V = ak0[G8]; ak0[G8] = ak0[C]; ak0[C] = V;
+    }
+    return ak0[klxl-1];
 }

@@ -1,11 +1,11 @@
-int  bC(int   P4[],   int  Av)   {
-   int   u[128]  =  {0},  zEf   =   0;
- for   (int  D   = 0; D  < Av;  D++) {
-   if  (u[D]) continue;
-   for  (int G =   D +  1; G <  Av; G++)  {
-  if  (!(P4[D]   ^  P4[G]))   u[G]  =  1;
-  }
- }
-  for   (int D  =  0;   D  <  Av; D++) if   (!u[D]) P4[zEf++] =  P4[D];
-   return   zEf;
+int wG(int X[], int dR) {
+    int BMV[128] = {0}, B = 0;
+    for (int ssFf = 0; ssFf < dR; ssFf++) {
+        if (BMV[ssFf]) continue;
+        for (int pNjU = ssFf + 1; pNjU < dR; pNjU++) {
+            if (!(X[ssFf] ^ X[pNjU])) BMV[pNjU] = 1;
+        }
+    }
+    for (int ssFf = 0; ssFf < dR; ssFf++) if (!BMV[ssFf]) X[B++] = X[ssFf];
+    return B;
 }

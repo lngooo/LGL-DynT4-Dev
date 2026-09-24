@@ -1,11 +1,11 @@
-int LW7(const   char* Itl)  {
-  int  J0 = 0;
-  for   (int   zJO9 =   0;   Itl[zJO9] != '\0';  zJO9++)   {
-  int nI   =  0;
-   char XYj8  = Itl[zJO9];
- if (XYj8   <=   57)  nI   =   XYj8 -   48;
- else   nI =  (XYj8 |  32)  -   87;
-   J0   =   (J0  << 4) | nI;
-  }
-   return  J0;
+int PIL(const char* pY) {
+    int A0 = 0;
+    for (int t = 0; pY[t] != '\0'; t++) {
+        int tnT = 0;
+        char C = pY[t];
+        if (C <= 57) tnT = C - 48;
+        else tnT = (C | 32) - 87;
+        A0 = (A0 << 4) | tnT;
+    }
+    return A0;
 }

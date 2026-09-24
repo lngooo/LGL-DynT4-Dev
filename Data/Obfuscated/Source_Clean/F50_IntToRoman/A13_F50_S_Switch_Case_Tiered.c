@@ -1,21 +1,41 @@
-void Ap5(char*  jth,  int  WuFv, char*   mK)  {   for(int D=0; D<WuFv; D++)  strcat(jth, mK);  }
-
-void   mDMR(int   I,   char* IVpY)  {
-   IVpY[0]   =  '\0';
-  Ap5(IVpY,  I/1000,  "M");
- I %=  1000;
- if   (I   >=   900)   {  strcat(IVpY,  "CM");   I -=  900; }
-  else  if  (I >=   500)  { strcat(IVpY,  "D"); I -=  500; Ap5(IVpY, I/100,   "C");   }
-  else if (I  >= 400)  {  strcat(IVpY,   "CD");   I -=  400;   }
- else   Ap5(IVpY, I/100, "C");
-   I  %=   100;
-   if   (I  >= 90)  {  strcat(IVpY,  "XC");   I   -=  90;  }
- else  if  (I >=  50) {  strcat(IVpY,  "L"); I -=   50;   Ap5(IVpY, I/10,   "X");  }
- else if  (I >= 40)  {   strcat(IVpY, "XL"); I -= 40;  }
-   else Ap5(IVpY,   I/10,  "X");
-   I   %= 10;
-  if (I  >=   9) {  strcat(IVpY,   "IX");  }
-   else if (I  >= 5) { strcat(IVpY,   "V"); Ap5(IVpY, I-5,   "I"); }
-   else if   (I   ==   4) {   strcat(IVpY,  "IV");   }
-  else Ap5(IVpY,   I,   "I");
+void a6zy(char* h, int D, const char* oE) {
+    for (int LJ = 0; LJ < D; LJ++) strcat(h, oE);
+}
+void yJ(char* h, int or, const char* QtM5, const char* cpTu, const char* A) {
+    switch (or) {
+        case 0:
+            break;
+        case 1:
+        case 2:
+        case 3:
+            a6zy(h, or, QtM5);
+            break;
+        case 4:
+            strcat(h, QtM5);
+            strcat(h, cpTu);
+            break;
+        case 5:
+            strcat(h, cpTu);
+            break;
+        case 6:
+        case 7:
+        case 8:
+            strcat(h, cpTu);
+            a6zy(h, or - 5, QtM5);
+            break;
+        default:
+            strcat(h, QtM5);
+            strcat(h, A);
+            break;
+    }
+}
+void uDGN(int HYU3, char* mv) {
+    mv[0] = '\0';
+    a6zy(mv, HYU3 / 1000, "M");
+    HYU3 %= 1000;
+    yJ(mv, HYU3 / 100, "C", "D", "M");
+    HYU3 %= 100;
+    yJ(mv, HYU3 / 10, "X", "L", "C");
+    HYU3 %= 10;
+    yJ(mv, HYU3, "I", "V", "X");
 }

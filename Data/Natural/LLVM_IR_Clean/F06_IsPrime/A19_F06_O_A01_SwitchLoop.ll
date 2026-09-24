@@ -17,10 +17,10 @@ define dso_local i32 @IsPrime(i32 %0) {
   br label %12
 12:
   %13 = load i32, i32* %4
-  %14 = load i32, i32* %4
-  %15 = mul nsw i32 %13, %14
-  %16 = load i32, i32* %3
-  %17 = icmp sgt i32 %15, %16
+  %14 = load i32, i32* %3
+  %15 = load i32, i32* %4
+  %16 = sdiv i32 %14, %15
+  %17 = icmp sgt i32 %13, %16
   br i1 %17, label %18, label %19
 18:
   store i32 1, i32* %2

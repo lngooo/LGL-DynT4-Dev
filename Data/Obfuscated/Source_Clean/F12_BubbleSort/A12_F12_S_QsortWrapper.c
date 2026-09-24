@@ -1,7 +1,7 @@
-int   lXJa(const void   *z,   const  void  *Vhg)   {
- return (*(int*)z  -  *(int*)Vhg);
+int yX(const void *pVcm, const void *VXgH) {
+    return (*(int*)pVcm - *(int*)VXgH);
 }
 
-void  eWoi(int MjU[],   int  nRHJ7)  {
-   qsort(MjU,  nRHJ7,  sizeof(int), lXJa);
+void Ey(int ukO[], int V) {
+    qsort(ukO, V, sizeof(int), yX);
 }

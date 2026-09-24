@@ -1,9 +1,9 @@
-void g(char  **AdXy,   int  IBSi,   char *D)   {
-   int   Xhqp  = 0;
-  while   (!!AdXy[0][Xhqp])   {
-  int F6  =   1;
- for  (int Gb   = 1; Gb  < IBSi;  Gb++)   if (AdXy[Gb][Xhqp]  !=  AdXy[0][Xhqp]) F6 =  0;
-   if   (!!F6)  { D[Xhqp] =   AdXy[0][Xhqp]; Xhqp++;  } else break;
- }
- D[Xhqp]   =   '\0';
+void GK9(char **X, int Ug, char *pJS) {
+    int rv = 0;
+    while (!!X[0][rv]) {
+        int DN = 1;
+        for (int R = 1; R < Ug; R++) if (X[R][rv] != X[0][rv]) DN = 0;
+        if (!!DN) { pJS[rv] = X[0][rv]; rv++; } else break;
+    }
+    pJS[rv] = '\0';
 }

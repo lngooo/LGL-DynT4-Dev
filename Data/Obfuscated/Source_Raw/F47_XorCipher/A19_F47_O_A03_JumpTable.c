@@ -5,33 +5,40 @@
  * Implementation Logic: JumpTable
  * Input Format: <data_string> <key_string>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
 
-void   W4(char *xtl, char  *s)   {
-   int   aQyA  =   0;  while(s[aQyA])  aQyA++;
-  for(int   en=0;  xtl[en];   en++)  {
- int kaL2   =   1;
-   if(kaL2) xtl[en]   ^=   s[en   %  aQyA];
-  }
+void J(char *lV, char *AA) {
+    int KPrX = 0;
+    while (AA[KPrX]) KPrX++;
+    if (KPrX == 0) return;
+    for (int N = 0; lV[N]; N++) {
+        int X = N & 1;
+        switch (X) {
+            case 0:
+                lV[N] ^= AA[N % KPrX];
+                break;
+            default:
+                lV[N] ^= AA[N % KPrX];
+                break;
+        }
+    }
 }
 
-int  main(int   argc,   char   *argv[])   {
- if   (argc   <  3)   return  0;
-   char *xtl = argv[1];
-   char   *s =  argv[2];
- int   rhq  =  0;
-   while  (xtl[rhq])  rhq++;
+int main(int GPGB, char *nGW[]) {
+    if (GPGB < 3) return 0;
+    char *lV = nGW[1];
+    char *AA = nGW[2];
+    int RMZ = 0;
+    while (lV[RMZ]) RMZ++;
 
-  W4(xtl,  s);
+    J(lV, AA);
 
-  for (int   en =  0;   en   <   rhq;  en++) {
-  printf("%02x", (unsigned  char)xtl[en]);
-  }
-   printf("\n");
-  return   0;
+    for (int N = 0; N < RMZ; N++) {
+        printf("%02x", (unsigned char)lV[N]);
+    }
+    printf("\n");
+    return 0;
 }

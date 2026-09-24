@@ -1,10 +1,10 @@
-void aI(int LxD[], int  nl)  {
- int   ZMBw4   = 0;
- while  (1)  {
-  if   (ZMBw4   >= nl)  break;
- int   Wm =   ZMBw4;
- for(int  D  =  ZMBw4   +   1; D   < nl;  D++) if(LxD[D]  <  LxD[Wm]) Wm   =  D;
-   int   nQE =   LxD[ZMBw4]; LxD[ZMBw4]   = LxD[Wm];  LxD[Wm]   =  nQE;
-   ZMBw4++;
- }
+void i8Oy(int z5[], int HkB) {
+    int gT = 0;
+    while (1) {
+        if (gT >= HkB) break;
+        int Gh = gT;
+        for(int WO6q = gT + 1; WO6q < HkB; WO6q++) if(z5[WO6q] < z5[Gh]) Gh = WO6q;
+        int un = z5[gT]; z5[gT] = z5[Gh]; z5[Gh] = un;
+        gT++;
+    }
 }

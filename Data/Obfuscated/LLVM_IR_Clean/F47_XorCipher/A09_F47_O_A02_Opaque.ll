@@ -1,5 +1,5 @@
-@W.As6 = internal global i32 0
-define dso_local void @W(i8* %0, i8* %1) {
+@Bml.V = internal global i32 0
+define dso_local void @Bml(i8* %0, i8* %1) {
   %3 = alloca i8*
   %4 = alloca i8*
   %5 = alloca i32
@@ -35,7 +35,7 @@ define dso_local void @W(i8* %0, i8* %1) {
   br i1 %27, label %28, label %54
 28:
   %29 = load i8*, i8** %4
-  %30 = load i32, i32* @W.As6
+  %30 = load i32, i32* @Bml.V
   %31 = load i32, i32* %5
   %32 = srem i32 %30, %31
   %33 = sext i32 %32 to i64
@@ -48,13 +48,13 @@ define dso_local void @W(i8* %0, i8* %1) {
   %40 = xor i32 %39, %36
   %41 = trunc i32 %40 to i8
   store i8 %41, i8* %37
-  %42 = load i32, i32* @W.As6
+  %42 = load i32, i32* @Bml.V
   %43 = add nsw i32 %42, 1
-  store i32 %43, i32* @W.As6
+  store i32 %43, i32* @Bml.V
   %44 = load i8*, i8** %3
   %45 = getelementptr inbounds i8, i8* %44, i64 1
   %46 = load i8*, i8** %4
-  call void @W(i8* %45, i8* %46)
+  call void @Bml(i8* %45, i8* %46)
   %47 = load i8*, i8** %3
   %48 = getelementptr inbounds i8, i8* %47, i64 -1
   %49 = load i8, i8* %48
@@ -62,7 +62,7 @@ define dso_local void @W(i8* %0, i8* %1) {
   %51 = icmp eq i32 %50, 0
   br i1 %51, label %52, label %53
 52:
-  store i32 0, i32* @W.As6
+  store i32 0, i32* @Bml.V
   br label %53
 53:
   br label %54

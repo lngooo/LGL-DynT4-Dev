@@ -5,34 +5,32 @@
  * Implementation Logic: LogicWrap
  * Input Format: <val1> <val2> ...
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-int   L(int  NyIV[],   int   iK) {
-   int   Jq[128], T   =  0;
-  for  (int   aI  =  0; aI   <   iK;  aI++)   {
- int   Fl2 =  NyIV[aI],   BztU = -1, pXvI   =   0;
-   while   (++BztU  <  T)   if  (Jq[BztU]  ==  Fl2)  pXvI  = 1;
-   if (!pXvI)  Jq[T++]   =   Fl2;
-   }
-  for  (int aI  =   0;  aI  <  T; aI++) NyIV[aI] =  Jq[aI];
-  return  T;
+int r(int r8w[], int pu5d) {
+    int ca[128], Q = 0;
+    for (int nsE = 0; nsE < pu5d; nsE++) {
+        int MgB = r8w[nsE], q8 = -1, xvth = 0;
+        while (++q8 < Q) if (ca[q8] == MgB) xvth = 1;
+        if (!xvth) ca[Q++] = MgB;
+    }
+    for (int nsE = 0; nsE < Q; nsE++) r8w[nsE] = ca[nsE];
+    return Q;
 }
 
-int  main(int   argc,   char  *argv[]) {
- if  (argc   < 2) return   0;
-  int nosb   = argc   - 1;
-  int NyIV[128];
- for (int  aI  = 0;   aI   <  nosb; aI++)  {
-  NyIV[aI] =  atoi(argv[aI + 1]);
-   }
-  int fa  =   L(NyIV, nosb);
-  for  (int aI  = 0;   aI  <   fa;   aI++)  {
- printf("%d%s",   NyIV[aI], (aI  ==  fa   -  1  ? ""  :  " "));
- }
-   printf("\n");
-   return   0;
+int main(int R, char *vx[]) {
+    if (R < 2) return 0;
+    int VXL = R - 1;
+    int r8w[128];
+    for (int nsE = 0; nsE < VXL; nsE++) {
+        r8w[nsE] = atoi(vx[nsE + 1]);
+    }
+    int pPr = r(r8w, VXL);
+    for (int nsE = 0; nsE < pPr; nsE++) {
+        printf("%d%s", r8w[nsE], (nsE == pPr - 1 ? "" : " "));
+    }
+    printf("\n");
+    return 0;
 }

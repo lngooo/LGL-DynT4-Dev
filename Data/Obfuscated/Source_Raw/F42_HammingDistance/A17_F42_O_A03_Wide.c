@@ -5,25 +5,23 @@
  * Implementation Logic: Promoting variables to long long to change token width and instruction set derived from A03.
  * Input Format: <uint1> <uint2>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int N6(unsigned int v,   unsigned   int   O)  {
-  unsigned   long  long  h = (unsigned long  long)v ^   O;
- int NcBa2   = 0;
-   while   (h  !=   0ULL)  {
- h  &= (h  - 1ULL);
-  NcBa2++;
-   }
- return NcBa2;
+int czzs(unsigned int rI, unsigned int wHg) {
+    unsigned long long aJ = (unsigned long long)rI ^ wHg;
+    int QZ = 0;
+    while (aJ != 0ULL) {
+        aJ &= (aJ - 1ULL);
+        QZ++;
+    }
+    return QZ;
 }
 
-int   main(int   argc, char*   argv[])  {
-   if  (argc   <  3)  return  0;
-  unsigned int w =   (unsigned int)strtoul(argv[1],   NULL,   10);
- unsigned int   gD   = (unsigned int)strtoul(argv[2],  NULL,   10);
-  printf("%d", N6(w,  gD));
-  return 0;
+int main(int v, char* tQ0I[]) {
+    if (v < 3) return 0;
+    unsigned int NM = (unsigned int)strtoul(tQ0I[1], NULL, 10);
+    unsigned int q12V = (unsigned int)strtoul(tQ0I[2], NULL, 10);
+    printf("%d", czzs(NM, q12V));
+    return 0;
 }

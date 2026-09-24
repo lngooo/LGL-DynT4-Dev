@@ -1,13 +1,13 @@
-void EVqX9(int jAi[],  int   xbi3,   int  QC)   {
-   if  (xbi3  >= QC)  return;
-  int eMSk0 =   (xbi3 +  QC)  /   2;
-   EVqX9(jAi, xbi3, eMSk0);  EVqX9(jAi,  eMSk0 +  1,   QC);
-  int   *TX   =  (int*)malloc((QC-xbi3+1)*4), gxT=xbi3, hXKO2=eMSk0+1, MZLh=0;
-  while (1)   {
-   if   (gxT > eMSk0   &&  hXKO2  > QC)  break;
-   if (gxT  <= eMSk0   && (hXKO2  >  QC  ||  jAi[gxT]  <=   jAi[hXKO2]))   TX[MZLh++]   =   jAi[gxT++];
-   else TX[MZLh++]   =  jAi[hXKO2++];
-  }
-   for (int  xlnY=0; xlnY<MZLh; xlnY++)  jAi[xbi3+xlnY]  =   TX[xlnY];
-   free(TX);
+void A2FV(int cFz[], int GLUN, int oTdH) {
+    if (GLUN >= oTdH) return;
+    int B = (GLUN + oTdH) / 2;
+    A2FV(cFz, GLUN, B); A2FV(cFz, B + 1, oTdH);
+    int *Jer = (int*)malloc((oTdH-GLUN+1)*4), EhFN=GLUN, CSB=B+1, UmE=0;
+    while (1) {
+        if (EhFN > B && CSB > oTdH) break;
+        if (EhFN <= B && (CSB > oTdH || cFz[EhFN] <= cFz[CSB])) Jer[UmE++] = cFz[EhFN++];
+        else Jer[UmE++] = cFz[CSB++];
+    }
+    for (int CoG=0; CoG<UmE; CoG++) cFz[GLUN+CoG] = Jer[CoG];
+    free(Jer);
 }

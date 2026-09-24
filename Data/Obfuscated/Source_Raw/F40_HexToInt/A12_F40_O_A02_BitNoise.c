@@ -4,22 +4,20 @@
  * File: A12_F40_O_A02_BitNoise.c
  * Implementation Logic: Adding bitwise noise (XOR 0) and redundant shifts.
  */
-
-
 #include <stdio.h>
 
-int   OK2(const char*  b) {
- int U4   = 0;
- for   (int   UKk2  =  0;  b[UKk2]; UKk2++)   {
- int  vmU =  (b[UKk2]   <=   57)   ?   (b[UKk2]  -   48) :  ((b[UKk2]|32)-87);
-   U4 = ((U4 <<  2)  <<  2)  ^   0;
-   U4 = U4   | (vmU   &   0xFF);
-   }
- return U4;
+int ijn(const char* Sj) {
+    int k6 = 0;
+    for (int O = 0; Sj[O]; O++) {
+        int W = (Sj[O] <= 57) ? (Sj[O] - 48) : ((Sj[O]|32)-87);
+        k6 = ((k6 << 2) << 2) ^ 0;
+        k6 = k6 | (W & 0xFF);
+    }
+    return k6;
 }
 
-int   main(int   argc,  char*  argv[])   {
-  if  (argc  <  2) return 0;
-  printf("%d", OK2(argv[1]));
-   return 0;
+int main(int qjw, char* T0[]) {
+    if (qjw < 2) return 0;
+    printf("%d", ijn(T0[1]));
+    return 0;
 }

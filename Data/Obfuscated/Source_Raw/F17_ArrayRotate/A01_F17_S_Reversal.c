@@ -5,38 +5,36 @@
  * Logic: Reverse 0..k-1, then k..n-1, then 0..n-1.
  * Input: <k> <val1> <val2> ...
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-void  Quw(int  soOA[], int   Zoys,  int k)  {
- while  (Zoys   <  k) {
-   int Nd  =  soOA[Zoys];
-  soOA[Zoys]   =  soOA[k];
-  soOA[k] = Nd;
-  Zoys++;   k--;
-   }
+void p1X(int UBG[], int U, int x) {
+    while (U < x) {
+        int OGw = UBG[U];
+        UBG[U] = UBG[x];
+        UBG[x] = OGw;
+        U++; x--;
+    }
 }
 
-void uZ3(int  soOA[],   int   Ru,   int rXt) {
-   if  (Ru ==  0)   return;
-  rXt   = rXt % Ru;
-  if  (rXt == 0)  return;
- Quw(soOA, 0,   rXt  -   1);
-  Quw(soOA, rXt,   Ru -  1);
- Quw(soOA, 0,  Ru   - 1);
+void d(int UBG[], int C, int KVa) {
+    if (C == 0) return;
+    KVa = KVa % C;
+    if (KVa == 0) return;
+    p1X(UBG, 0, KVa - 1);
+    p1X(UBG, KVa, C - 1);
+    p1X(UBG, 0, C - 1);
 }
 
-int main(int  argc,   char *argv[]) {
- if (argc <   3)  return   0;
-   int   rXt = atoi(argv[1]);
-   int   Ru   =  argc -   2;
- int  *soOA = (int*)malloc(Ru   *  sizeof(int));
- for(int  aV=0; aV<Ru; aV++) soOA[aV] =   atoi(argv[aV+2]);
- uZ3(soOA,   Ru,   rXt);
-   for(int   aV=0; aV<Ru;   aV++)  printf("%d ",  soOA[aV]);
-  printf("\n");
-   free(soOA);
- return 0;
+int main(int vpZV, char *wt[]) {
+    if (vpZV < 3) return 0;
+    int KVa = atoi(wt[1]);
+    int C = vpZV - 2;
+    int *UBG = (int*)malloc(C * sizeof(int));
+    for(int QY0=0; QY0<C; QY0++) UBG[QY0] = atoi(wt[QY0+2]);
+    d(UBG, C, KVa);
+    for(int QY0=0; QY0<C; QY0++) printf("%d ", UBG[QY0]);
+    printf("\n");
+    free(UBG);
+    return 0;
 }

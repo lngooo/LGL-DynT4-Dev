@@ -1,6 +1,6 @@
 @.str = constant [3 x i8] c"0\0A\00"
 @.str.1 = constant [5 x i8] c"%ld\0A\00"
-define dso_local i64 @f(i32 %0) {
+define dso_local i64 @N(i32 %0) {
   %2 = alloca i32
   store i32 %0, i32* %2
   %3 = load i32, i32* %2
@@ -13,10 +13,10 @@ define dso_local i64 @f(i32 %0) {
 8:
   %9 = load i32, i32* %2
   %10 = sub nsw i32 %9, 1
-  %11 = call i64 @f(i32 %10)
+  %11 = call i64 @N(i32 %10)
   %12 = load i32, i32* %2
   %13 = sub nsw i32 %12, 2
-  %14 = call i64 @f(i32 %13)
+  %14 = call i64 @N(i32 %13)
   %15 = add nsw i64 %11, %14
   br label %16
 16:
@@ -55,7 +55,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   br label %29
 22:
   %24 = load i32, i32* %6
-  %25 = call i64 @f(i32 %24)
+  %25 = call i64 @N(i32 %24)
   store i64 %25, i64* %8
   %26 = load i64, i64* %8
   %27 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.1, i64 0, i64 0), i64 %26)

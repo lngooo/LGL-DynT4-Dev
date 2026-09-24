@@ -4,23 +4,21 @@
 * File: A17_F36_O_A01_DoubleLoop.c
 * Logic: Nested loop with a single execution inner loop derived from A01.
 */
-
-
 #include <stdio.h>
 
-void QeAf(char*  nbSm)   {
- for  (int  Rh   =   0; nbSm[Rh];   Rh++)   {
-   for  (int  jIqx6   = 0; jIqx6  <   1;   jIqx6++) {
-   char rXJ6  =  nbSm[Rh];
-  if  (rXJ6 >= 97   &&  rXJ6   <=   122)  nbSm[Rh] =   rXJ6 -   32;
- else   if  (rXJ6   >= 65 &&  rXJ6   <=  90)   nbSm[Rh] = rXJ6  +  32;
- }
-   }
+void P1M(char* zYMH) {
+    for (int OoPe = 0; zYMH[OoPe]; OoPe++) {
+        for (int DL = 0; DL < 1; DL++) {
+            char Rh0A = zYMH[OoPe];
+            if (Rh0A >= 97 && Rh0A <= 122) zYMH[OoPe] = Rh0A - 32;
+            else if (Rh0A >= 65 && Rh0A <= 90) zYMH[OoPe] = Rh0A + 32;
+        }
+    }
 }
 
-int  main(int  argc, char*   argv[]) {
-  if (argc   < 2)   return   0;
-   QeAf(argv[1]);
- printf("%s\n",  argv[1]);
- return 0;
+int main(int MJVs, char* A[]) {
+    if (MJVs < 2) return 0;
+    P1M(A[1]);
+    printf("%s\n", A[1]);
+    return 0;
 }

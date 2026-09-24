@@ -1,5 +1,5 @@
 @.str = constant [4 x i8] c"%d\0A\00"
-define dso_local i32 @ens(i32* %0, i32 %1, i32 %2, i32 %3) {
+define dso_local i32 @tDsy(i32* %0, i32 %1, i32 %2, i32 %3) {
   %5 = alloca i32
   %6 = alloca i32*
   %7 = alloca i32
@@ -223,7 +223,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   %54 = load i32, i32* %7
   %55 = sub nsw i32 %54, 1
   %56 = load i32, i32* %6
-  %57 = call i32 @ens(i32* %53, i32 0, i32 %55, i32 %56)
+  %57 = call i32 @tDsy(i32* %53, i32 0, i32 %55, i32 %56)
   store i32 %57, i32* %10
   %58 = load i32, i32* %10
   %59 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str, i64 0, i64 0), i32 %58)

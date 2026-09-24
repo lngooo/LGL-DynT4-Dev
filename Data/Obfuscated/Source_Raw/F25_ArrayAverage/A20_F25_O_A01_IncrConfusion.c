@@ -4,28 +4,26 @@
  * File: A20_F25_O_A01_IncrConfusion.c
  * Implementation Logic: IncrConfusion
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-double IZH(int k[],  int  q)  {
-   double  Iila  =  0;
-   int ztFN2 = -1;
- while (++ztFN2 < q)   Iila   +=  k[ztFN2];
-  return Iila  /   q;
+double lK(int iS[], int WcdM) {
+    double VQ = 0;
+    int xNA = -1;
+    while (++xNA < WcdM) VQ += iS[xNA];
+    return VQ / WcdM;
 }
 
-int  main(int  argc, char *argv[])   {
-  if   (argc  <   2) return 0;
-   int  q   =  argc  -   1;
-   int  *k   = (int *)malloc(q  * sizeof(int));
- for (int   ztFN2   = 0; ztFN2  <  q;   ztFN2++)   k[ztFN2]   =   atoi(argv[ztFN2 +   1]);
+int main(int Al, char *H9[]) {
+    if (Al < 2) return 0;
+    int WcdM = Al - 1;
+    int *iS = (int *)malloc(WcdM * sizeof(int));
+    for (int xNA = 0; xNA < WcdM; xNA++) iS[xNA] = atoi(H9[xNA + 1]);
 
-   double bmNy   = IZH(k, q);
-  printf("%.2f\n",   bmNy);
+    double VZ = lK(iS, WcdM);
+    printf("%.2f\n", VZ);
 
- free(k);
-  return 0;
+    free(iS);
+    return 0;
 }

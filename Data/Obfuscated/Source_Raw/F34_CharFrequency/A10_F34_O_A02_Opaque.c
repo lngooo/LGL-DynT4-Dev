@@ -4,26 +4,24 @@
 * File: A10_F34_O_A02_Opaque.c
 * Logic: Opaque predicates injected into pointer logic derived from A02.
 */
-
-
 #include <stdio.h>
 
-int   CvW(char*   WQx4,  char SiB)   {
-  int oQ0   =  0;
- int h = 7;
-   while (*WQx4)   {
-  if ((h  *   h) %   2   !=   0) {
- if   (*WQx4  == SiB) oQ0++;
-  WQx4++;
-  }   else  {
-   WQx4--;   // Dead   code
- }
-   }
- return oQ0;
+int U(char* Lu, char j) {
+    int sGc0 = 0;
+    int B = 7;
+    while (*Lu) {
+        if ((B * B) % 2 != 0) {
+            if (*Lu == j) sGc0++;
+            Lu++;
+        } else {
+            Lu--; // Dead code
+        }
+    }
+    return sGc0;
 }
 
-int  main(int   argc,  char* argv[]) {
- if   (argc   <  3)   return   0;
-  printf("%d\n", CvW(argv[1],   argv[2][0]));
- return  0;
+int main(int sdp, char* nRq1[]) {
+    if (sdp < 3) return 0;
+    printf("%d\n", U(nRq1[1], nRq1[2][0]));
+    return 0;
 }

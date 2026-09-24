@@ -1,14 +1,14 @@
-void   hkZR(char*   A) {
-   while   (*A) {
-   char  X   =   *A;
- int LjW1 = 0;
-   char   *f = A;
-   while   (*f   && *f   ==   X)   {
-   LjW1++;
-  f++;
- }
- printf("%c%d", X,   LjW1);
- A   =   f;
-  }
-   printf("\n");
+void E7(char* bv2) {
+    while (*bv2) {
+        char YWBg = *bv2;
+        int nkmN = 0;
+        char *XLVS = bv2;
+        while (*XLVS && *XLVS == YWBg) {
+            nkmN++;
+            XLVS++;
+        }
+        printf("%c%d", YWBg, nkmN);
+        bv2 = XLVS;
+    }
+    printf("\n");
 }

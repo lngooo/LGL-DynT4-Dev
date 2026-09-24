@@ -1,4 +1,4 @@
-define dso_local i32 @BWA3(i8* %0, i8 signext %1) {
+define dso_local i32 @fsO(i8* %0, i8 signext %1) {
   %3 = alloca i8*
   %4 = alloca i8
   %5 = alloca i32

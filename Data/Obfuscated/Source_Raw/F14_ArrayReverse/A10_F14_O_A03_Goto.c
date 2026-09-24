@@ -4,32 +4,30 @@
  * File: A10_F14_O_A03_Goto.c
  * Implementation Logic: Loop of A03 using goto.
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-void  S(int  bZ[], int  f4)   {
- int   O4 =   0;
-cDP0:
-   if (O4 >=  f4 / 2) goto  Xo;
-   int   Uc  =  bZ[O4];
-   bZ[O4]  = bZ[f4 - 1  - O4];
- bZ[f4  - 1   -  O4]   =   Uc;
- O4++;
-  goto   cDP0;
-Xo:
- return;
+void hS(int qs[], int Q7eO) {
+    int rXBS = 0;
+qkX:
+    if (rXBS >= Q7eO / 2) goto r;
+    int y = qs[rXBS];
+    qs[rXBS] = qs[Q7eO - 1 - rXBS];
+    qs[Q7eO - 1 - rXBS] = y;
+    rXBS++;
+    goto qkX;
+r:
+    return;
 }
 
-int main(int   argc,  char *argv[]) {
-  if  (argc <   2) return  0;
- int f4 =   argc -   1;
-   int  *bZ = (int*)malloc(f4  *  sizeof(int));
-   for(int O4=0; O4<f4;   O4++)   bZ[O4]   = atoi(argv[O4+1]);
-  S(bZ, f4);
- for(int O4=0;   O4<f4;  O4++)   printf("%d ",  bZ[O4]);
-  printf("\n");
- free(bZ);
-  return   0;
+int main(int vdq9, char *lCe[]) {
+    if (vdq9 < 2) return 0;
+    int Q7eO = vdq9 - 1;
+    int *qs = (int*)malloc(Q7eO * sizeof(int));
+    for(int rXBS=0; rXBS<Q7eO; rXBS++) qs[rXBS] = atoi(lCe[rXBS+1]);
+    hS(qs, Q7eO);
+    for(int rXBS=0; rXBS<Q7eO; rXBS++) printf("%d ", qs[rXBS]);
+    printf("\n");
+    free(qs);
+    return 0;
 }

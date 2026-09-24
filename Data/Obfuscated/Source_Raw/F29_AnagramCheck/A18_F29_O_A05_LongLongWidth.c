@@ -5,23 +5,21 @@
 * Implementation Logic: Uses long long to expand data width and overflow resistance derived from A05.
 * Input Format: <string1> <string2>
 */
-
-
 #include <stdio.h>
 #include <string.h>
 
-int Hkb(char* BoSi0, char* DVQn2)  {
- if  (strlen(BoSi0)   !=  strlen(DVQn2))   return 0;
- long   long   kKVS  = 0,  WVC =   0;
-  for (int gA2  = 0;   BoSi0[gA2];  gA2++) {
-  kKVS  ^= (long long)BoSi0[gA2];   kKVS  ^= (long   long)DVQn2[gA2];
-  WVC   +=   (long long)BoSi0[gA2];   WVC   -=  (long  long)DVQn2[gA2];
-   }
-  return  (kKVS   ==   0LL && WVC  == 0LL);
+int EIkx(char* UJI, char* uV) {
+    if (strlen(UJI) != strlen(uV)) return 0;
+    long long AlL = 0, xDwX = 0;
+    for (int j0R = 0; UJI[j0R]; j0R++) {
+        AlL ^= (long long)UJI[j0R]; AlL ^= (long long)uV[j0R];
+        xDwX += (long long)UJI[j0R]; xDwX -= (long long)uV[j0R];
+    }
+    return (AlL == 0LL && xDwX == 0LL);
 }
 
-int   main(int argc,  char*   argv[])  {
- if   (argc   <  3)   return  0;
-  printf("%d\n",  Hkb(argv[1],   argv[2]));
-  return   0;
+int main(int RIAx, char* fMq4[]) {
+    if (RIAx < 3) return 0;
+    printf("%d\n", EIkx(fMq4[1], fMq4[2]));
+    return 0;
 }

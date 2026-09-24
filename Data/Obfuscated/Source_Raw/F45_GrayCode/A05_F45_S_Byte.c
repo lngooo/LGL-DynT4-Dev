@@ -5,29 +5,27 @@
  * Implementation Logic: Decomposing the integer into bytes and performing shift-xor across memory.
  * Input Format: <uint>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-unsigned int sh(unsigned int   v)   {
-   unsigned   char nM[4];
-  unsigned   int F =  v >>  1;
-  unsigned char   Ak[4];
-  for(int N=0;  N<4;  N++) {
-  nM[N]   =   (v   >> (N*8)) & 0xFF;
-  Ak[N]  = (F >>  (N*8))  &  0xFF;
-  }
- unsigned   int   Pe8 =  0;
-  for(int   N=0;  N<4; N++)   {
- Pe8 |=  (unsigned int)(nM[N] ^   Ak[N]) <<   (N*8);
-  }
-  return Pe8;
+unsigned int ad(unsigned int b) {
+    unsigned char pYsV[4];
+    unsigned int DpLh = b >> 1;
+    unsigned char a[4];
+    for(int h=0; h<4; h++) {
+        pYsV[h] = (b >> (h*8)) & 0xFF;
+        a[h] = (DpLh >> (h*8)) & 0xFF;
+    }
+    unsigned int hzZ = 0;
+    for(int h=0; h<4; h++) {
+        hzZ |= (unsigned int)(pYsV[h] ^ a[h]) << (h*8);
+    }
+    return hzZ;
 }
 
-int   main(int   argc,   char*   argv[])   {
- if   (argc   <   2)   return  0;
- unsigned  int   v  =   (unsigned  int)strtoul(argv[1],   NULL, 10);
-   printf("%u",   sh(v));
-  return   0;
+int main(int y, char* pi[]) {
+    if (y < 2) return 0;
+    unsigned int b = (unsigned int)strtoul(pi[1], NULL, 10);
+    printf("%u", ad(b));
+    return 0;
 }

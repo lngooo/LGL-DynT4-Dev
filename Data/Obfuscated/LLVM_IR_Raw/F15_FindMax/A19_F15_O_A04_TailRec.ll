@@ -1,5 +1,5 @@
 @.str = constant [4 x i8] c"%d\0A\00"
-define dso_local i32 @QBOR(i32* %0, i32 %1, i32 %2, i32 %3) {
+define dso_local i32 @ex(i32* %0, i32 %1, i32 %2, i32 %3) {
   %5 = alloca i32
   %6 = alloca i32*
   %7 = alloca i32
@@ -42,14 +42,14 @@ define dso_local i32 @QBOR(i32* %0, i32 %1, i32 %2, i32 %3) {
   br label %35
 35:
   %36 = phi i32 [ %32, %27 ], [ %34, %33 ]
-  %37 = call i32 @QBOR(i32* %16, i32 %17, i32 %19, i32 %36)
+  %37 = call i32 @ex(i32* %16, i32 %17, i32 %19, i32 %36)
   store i32 %37, i32* %5
   br label %38
 38:
   %39 = load i32, i32* %5
   ret i32 %39
 }
-define dso_local i32 @wLJ(i32* %0, i32 %1) {
+define dso_local i32 @wEQM(i32* %0, i32 %1) {
   %3 = alloca i32*
   %4 = alloca i32
   store i32* %0, i32** %3
@@ -59,7 +59,7 @@ define dso_local i32 @wLJ(i32* %0, i32 %1) {
   %7 = load i32*, i32** %3
   %8 = getelementptr inbounds i32, i32* %7, i64 0
   %9 = load i32, i32* %8
-  %10 = call i32 @QBOR(i32* %5, i32 %6, i32 0, i32 %9)
+  %10 = call i32 @ex(i32* %5, i32 %6, i32 0, i32 %9)
   ret i32 %10
 }
 define dso_local i32 @main(i32 %0, i8** %1) {
@@ -118,7 +118,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
 44:
   %45 = load i32*, i32** %7
   %46 = load i32, i32* %6
-  %47 = call i32 @wLJ(i32* %45, i32 %46)
+  %47 = call i32 @wEQM(i32* %45, i32 %46)
   %48 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str, i64 0, i64 0), i32 %47)
   %49 = load i32*, i32** %7
   call void @free(i8* %50)

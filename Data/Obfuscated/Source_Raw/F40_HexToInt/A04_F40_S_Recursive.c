@@ -5,25 +5,23 @@
  * Implementation Logic: Converts hex recursively by processing the tail of the string.
  * Input Format: <hex_string>
  */
-
-
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
 
-int  Hn(const  char*  dmlb3,   int LIyZ)  {
- if  (LIyZ  == 0) return   0;
-   char  TLWH   =  dmlb3[LIyZ-1];
- int   v  = (TLWH  >=   'a') ? (TLWH  -  'a'  +  10)   :  ((TLWH  >=   'A') ?  (TLWH -  'A'  +   10)   : (TLWH  - '0'));
-  return  v   + 16   *   Hn(dmlb3,   LIyZ  -   1);
+int ukn(const char* QrV, int B4) {
+    if (B4 == 0) return 0;
+    char qr2R = QrV[B4-1];
+    int dhFm = (qr2R >= 'a') ? (qr2R - 'a' + 10) : ((qr2R >= 'A') ? (qr2R - 'A' + 10) : (qr2R - '0'));
+    return dhFm + 16 * ukn(QrV, B4 - 1);
 }
 
-int ne(const char* dmlb3)  {
- return   Hn(dmlb3,   (int)strlen(dmlb3));
+int P7(const char* QrV) {
+    return ukn(QrV, (int)strlen(QrV));
 }
 
-int main(int   argc, char*  argv[]) {
- if  (argc < 2)  return  0;
- printf("%d", ne(argv[1]));
- return 0;
+int main(int S, char* Yv4V[]) {
+    if (S < 2) return 0;
+    printf("%d", P7(Yv4V[1]));
+    return 0;
 }

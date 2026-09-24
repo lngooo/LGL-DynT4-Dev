@@ -4,30 +4,28 @@
  * File: A21_F24_O_A01_Arithmetic.c
  * Implementation Logic: Arithmetic
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-int nqE(int  pt6[],   int  qn6) {
-  int  I6 = 0;
-  for  (int   Fgp3  = 0;   Fgp3   < qn6; Fgp3++)  {
- int   Jsjf  =   pt6[Fgp3];
- I6 =   (I6 -  (-Jsjf));
- }
-   return  I6;
+int nqgv(int D[], int WpWq) {
+    int sSC = 0;
+    for (int YCS = 0; YCS < WpWq; YCS++) {
+        int KrM = D[YCS];
+        sSC = (sSC - (-KrM));
+    }
+    return sSC;
 }
 
-int  main(int   argc, char   *argv[])  {
-  if (argc  <   2)  return 0;
-  int   qn6   =   argc  -  1;
-   int *pt6   =  (int *)malloc(qn6  *   sizeof(int));
- for  (int Fgp3   =  0;  Fgp3   < qn6;   Fgp3++) pt6[Fgp3]   =  atoi(argv[Fgp3 +   1]);
+int main(int W, char *jH[]) {
+    if (W < 2) return 0;
+    int WpWq = W - 1;
+    int *D = (int *)malloc(WpWq * sizeof(int));
+    for (int YCS = 0; YCS < WpWq; YCS++) D[YCS] = atoi(jH[YCS + 1]);
 
-   int o  =   nqE(pt6,  qn6);
-   printf("%d\n", o);
+    int bo4 = nqgv(D, WpWq);
+    printf("%d\n", bo4);
 
-  free(pt6);
-   return 0;
+    free(D);
+    return 0;
 }

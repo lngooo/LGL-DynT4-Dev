@@ -1,7 +1,7 @@
-int  Tb(int OvI)  {
-  if   (OvI   <  0)   return   0;
-  int nO0 =  OvI *   OvI;
-  int lQxp =   nO0  +  OvI;
-   int  lI  =   lQxp   / 2;
-  return   lI;
+int j(int YR) {
+    if (YR < 0) return 0;
+    int Meyy = YR * YR;
+    int HqJ3 = Meyy + YR;
+    int R = HqJ3 / 2;
+    return R;
 }

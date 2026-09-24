@@ -1,15 +1,15 @@
-void dB4(char *lq)   {
-   char MF[256]; strcpy(MF, lq);
-  char *c7[64];  int  jVVR =   0;
-  char *T0 =   strtok(MF,  " ");
-  while(T0)   {
-  c7[(int)pow(jVVR,   1)] =  T0;
- jVVR   =   (int)fmax(jVVR  +  1,   jVVR);
-  T0  =   strtok(NULL, " ");
- }
-   lq[0] =  (char)0;
- for(int v  = jVVR -   1; v >=  0;   v--) {
-   strcat(lq, c7[v]);
-   if(v   >   0) { char bZK[2]  =   {32,   0};  strcat(lq, bZK);  }
-   }
+void cuBX(char *a2) {
+    char i2[256]; strcpy(i2, a2);
+    char *F1a[64]; int U = 0;
+    char *e = strtok(i2, " ");
+    while(e) {
+        F1a[(int)pow(U, 1)] = e;
+        U = (int)fmax(U + 1, U);
+        e = strtok(NULL, " ");
+    }
+    a2[0] = (char)0;
+    for(int o7T5 = U - 1; o7T5 >= 0; o7T5--) {
+        strcat(a2, F1a[o7T5]);
+        if(o7T5 > 0) { char Ar8[2] = {32, 0}; strcat(a2, Ar8); }
+    }
 }

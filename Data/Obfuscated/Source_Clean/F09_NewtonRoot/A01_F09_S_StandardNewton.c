@@ -1,11 +1,11 @@
-int   IM(int UiZ)   {
-  if (UiZ <  0) return  -1;
-   if (UiZ   <   2)  return UiZ;
-   long   AWu =  UiZ;
-  long   d  = (AWu  +  UiZ   /   AWu) /   2;
-  while (d < AWu) {
-   AWu = d;
-  d   =   (AWu + UiZ / AWu)   /  2;
-  }
- return   (int)AWu;
+int W(int K2) {
+    if (K2 < 0) return -1;
+    if (K2 < 2) return K2;
+    long w712 = K2;
+    long lp = (w712 + K2 / w712) / 2;
+    while (lp < w712) {
+        w712 = lp;
+        lp = (w712 + K2 / w712) / 2;
+    }
+    return (int)w712;
 }

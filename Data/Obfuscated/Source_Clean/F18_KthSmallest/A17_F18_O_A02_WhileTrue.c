@@ -1,11 +1,11 @@
-int JG(int l[],   int M, int   b6, int LLvW)  {
-   while   (1) {
-  if   (M   >  b6)  break;
-   int mvNx  = l[b6], pGd8  =  M;
- for  (int F  = M;  F  <  b6;   F++) if  (l[F]   <= mvNx)   {  int  kOL0=l[pGd8];   l[pGd8]=l[F];  l[F]=kOL0;  pGd8++; }
- int  kOL0=l[pGd8];  l[pGd8]=l[b6];   l[b6]=kOL0;
- if   (pGd8  ==   LLvW -  1)   return   l[pGd8];
-  if (pGd8 > LLvW   -  1) b6  =   pGd8  -  1; else  M =   pGd8 + 1;
- }
-   return  -1;
+int Uq(int QhQi[], int fYSv, int KX, int P) {
+    while (1) {
+        if (fYSv > KX) break;
+        int y6T = QhQi[KX], PPYJ = fYSv;
+        for (int Zooq = fYSv; Zooq < KX; Zooq++) if (QhQi[Zooq] <= y6T) { int s=QhQi[PPYJ]; QhQi[PPYJ]=QhQi[Zooq]; QhQi[Zooq]=s; PPYJ++; }
+        int s=QhQi[PPYJ]; QhQi[PPYJ]=QhQi[KX]; QhQi[KX]=s;
+        if (PPYJ == P - 1) return QhQi[PPYJ];
+        if (PPYJ > P - 1) KX = PPYJ - 1; else fYSv = PPYJ + 1;
+    }
+    return -1;
 }

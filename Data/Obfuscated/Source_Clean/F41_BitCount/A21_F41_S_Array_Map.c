@@ -1,11 +1,11 @@
-int   bM(uint32_t  H)   {
-   int  WSwJ7[32];
-   int  ZpUs  =   0;
-  for(int  JhZ=0;   JhZ<32; JhZ++) {
-   WSwJ7[JhZ] =  (H  >>   JhZ)   & 1;
- }
- for(int   k=0; k<32; k++)  {
-   ZpUs +=   WSwJ7[k];
- }
- return ZpUs;
+int j5(uint32_t yVqp) {
+    int JD[32];
+    int kb = 0;
+    for(int sjj=0; sjj<32; sjj++) {
+        JD[sjj] = (yVqp >> sjj) & 1;
+    }
+    for(int y=0; y<32; y++) {
+        kb += JD[y];
+    }
+    return kb;
 }

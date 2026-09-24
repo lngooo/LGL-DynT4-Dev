@@ -5,30 +5,28 @@
  * Implementation Logic: PointerObf derived from seed.
  * Input Format: <string>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 #include <string.h>
 
-int   tfzd3(char   *sptD)  {
- char  *BEjX  =  sptD;
-   char   *JTXg = sptD;
- while (*JTXg)   JTXg++;
-   JTXg   =   JTXg -  1;
-   while   (BEjX   <   JTXg)  {
- if  (*BEjX -  *JTXg   !=  0) return 0;
- BEjX++;
-   JTXg--;
-  }
-  return  1;
+int SrS2(char *hQ) {
+    char *Cg = hQ;
+    char *i = hQ;
+    while (*i) i++;
+    i = i - 1;
+    while (Cg < i) {
+        if (*Cg - *i != 0) return 0;
+        Cg++;
+        i--;
+    }
+    return 1;
 }
 
-int   main(int   argc,  char *argv[])  {
-   if  (argc  <  2)   return   1;
-   char   *sptD =  argv[1];
-  int i = tfzd3(sptD);
- printf("%d\n", i);
-   return 0;
+int main(int EyEk, char *L[]) {
+    if (EyEk < 2) return 1;
+    char *hQ = L[1];
+    int CLK = SrS2(hQ);
+    printf("%d\n", CLK);
+    return 0;
 }

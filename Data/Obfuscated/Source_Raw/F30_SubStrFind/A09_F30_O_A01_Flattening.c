@@ -4,31 +4,29 @@
 * File: A09_F30_O_A01_Flattening.c
 * Implementation Logic: Control flow flattening with state variable derived from A01.
 */
-
-
 #include <stdio.h>
 #include <string.h>
 
-int  RFeW2(char*  e,  char* O3)   {
-   int  svVj8  = strlen(e),  WLKX   =   strlen(O3);
- if   (WLKX == 0) return   0;
-  int  c   =   0,  PEF   =  0, jE   = 0;
-   while   (c !=  -1)  {
-   switch   (c) {
-  case 0: c = (PEF   <=  svVj8 -  WLKX)  ?  1   : 4;  break;
- case   1: jE =   0;   c =   2;  break;
- case  2:   if (jE   <  WLKX && e[PEF+jE]  == O3[jE])   {   jE++;  }  
- else {  c = (jE   ==  WLKX)  ? 3   : 5;  }  break;
-   case  3:   return PEF;
-  case  4: return  -1;
-   case 5:  PEF++;   c   =   0; break;
-   }
- }
-   return  -1;
+int AdW(char* c3uX, char* bmQU) {
+    int zCM = strlen(c3uX), V6 = strlen(bmQU);
+    if (V6 == 0) return 0;
+    int EN = 0, P3WO = 0, pM = 0;
+    while (EN != -1) {
+        switch (EN) {
+            case 0: EN = (P3WO <= zCM - V6) ? 1 : 4; break;
+            case 1: pM = 0; EN = 2; break;
+            case 2: if (pM < V6 && c3uX[P3WO+pM] == bmQU[pM]) { pM++; } 
+                    else { EN = (pM == V6) ? 3 : 5; } break;
+            case 3: return P3WO;
+            case 4: return -1;
+            case 5: P3WO++; EN = 0; break;
+        }
+    }
+    return -1;
 }
 
-int   main(int  argc,   char*   argv[])   {
-   if   (argc < 3)   return  0;
- printf("%d\n", RFeW2(argv[1],   argv[2]));
- return  0;
+int main(int FXe, char* MbAe[]) {
+    if (FXe < 3) return 0;
+    printf("%d\n", AdW(MbAe[1], MbAe[2]));
+    return 0;
 }

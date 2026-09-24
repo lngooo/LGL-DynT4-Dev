@@ -5,41 +5,39 @@
  * Implementation Logic: Unroll
  * Input Format: <string>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-void   ol(unsigned char *jd,   int   JqIn3,   char   *RxpB)   {
-   const   char *HSCy3   = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
-  int  O =  0, Budr   = 0;
- while  (O   +   5   <   JqIn3)   {
-   for(int   R=0;  R<2; R++)  {
-  RxpB[Budr] =   HSCy3[jd[O] >>  2];
-   RxpB[Budr+1] = HSCy3[((jd[O]  &   3)   <<   4)   |   (jd[O+1] >> 4)];
- RxpB[Budr+2]   = HSCy3[((jd[O+1]   &   15)  <<   2) |  (jd[O+2]  >> 6)];
-  RxpB[Budr+3]  =   HSCy3[jd[O+2] &   63];
-   O +=  3;   Budr   +=  4;
-   }
-  }
- while(O < JqIn3)   {
-  RxpB[Budr++]   = HSCy3[jd[O]   >> 2];
-   RxpB[Budr++] = HSCy3[((jd[O]   &  3) <<   4)   |  (O+1  <  JqIn3 ?  jd[O+1] >>   4   :  0)];
-   RxpB[Budr++]  = (O+1   <  JqIn3)   ?  HSCy3[((jd[O+1]  &  15)   << 2)   |  (O+2  <   JqIn3  ? jd[O+2] >>  6  :   0)]   :   '=';
- RxpB[Budr++]   =  (O+2 < JqIn3) ?  HSCy3[jd[O+2]  &  63]  :   '=';
-  O   +=  3;
-   }
-   RxpB[Budr]   =  0;
+void vn(unsigned char *EASi, int Min, char *UG1E) {
+    const char *A = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+    int Z = 0, H67 = 0;
+    while (Z + 5 < Min) {
+        for(int LRol=0; LRol<2; LRol++) {
+            UG1E[H67] = A[EASi[Z] >> 2];
+            UG1E[H67+1] = A[((EASi[Z] & 3) << 4) | (EASi[Z+1] >> 4)];
+            UG1E[H67+2] = A[((EASi[Z+1] & 15) << 2) | (EASi[Z+2] >> 6)];
+            UG1E[H67+3] = A[EASi[Z+2] & 63];
+            Z += 3; H67 += 4;
+        }
+    }
+    while(Z < Min) {
+        UG1E[H67++] = A[EASi[Z] >> 2];
+        UG1E[H67++] = A[((EASi[Z] & 3) << 4) | (Z+1 < Min ? EASi[Z+1] >> 4 : 0)];
+        UG1E[H67++] = (Z+1 < Min) ? A[((EASi[Z+1] & 15) << 2) | (Z+2 < Min ? EASi[Z+2] >> 6 : 0)] : '=';
+        UG1E[H67++] = (Z+2 < Min) ? A[EASi[Z+2] & 63] : '=';
+        Z += 3;
+    }
+    UG1E[H67] = 0;
 }
 
-int  main(int   argc,  char *argv[])  {
- if (argc < 2)  return  1;
-  unsigned   char   *jd   = (unsigned char   *)argv[1];
- int   JqIn3  = 0;
-   while (jd[JqIn3])  JqIn3++;
- char RxpB[400]  =   {0};
- ol(jd,   JqIn3,  RxpB);
-   printf("%s\n",   RxpB);
-  return   0;
+int main(int S, char *XxX[]) {
+    if (S < 2) return 1;
+    unsigned char *EASi = (unsigned char *)XxX[1];
+    int Min = 0;
+    while (EASi[Min]) Min++;
+    char UG1E[400] = {0};
+    vn(EASi, Min, UG1E);
+    printf("%s\n", UG1E);
+    return 0;
 }

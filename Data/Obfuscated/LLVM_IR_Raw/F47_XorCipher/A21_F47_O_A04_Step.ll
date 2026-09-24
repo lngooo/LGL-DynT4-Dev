@@ -1,6 +1,6 @@
 @.str = constant [5 x i8] c"%02x\00"
 @.str.1 = constant [2 x i8] c"\0A\00"
-define dso_local void @H(i8* %0, i8* %1) {
+define dso_local void @S(i8* %0, i8* %1) {
   %3 = alloca i8*
   %4 = alloca i8*
   %5 = alloca i32
@@ -116,7 +116,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
 33:
   %34 = load i8*, i8** %6
   %35 = load i8*, i8** %7
-  call void @H(i8* %34, i8* %35)
+  call void @S(i8* %34, i8* %35)
   store i32 0, i32* %9
   br label %37
 37:

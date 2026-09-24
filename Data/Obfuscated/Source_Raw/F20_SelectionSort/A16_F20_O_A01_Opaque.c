@@ -4,34 +4,32 @@
  * File: A16_F20_O_A01_Opaque.c
  * Implementation Logic: Opaque
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-void  P(int   H[],  int  Zy)  {
-  for   (int  oMv  =  0;  oMv   <  Zy;  oMv++)   {
-  if ((oMv   * oMv   +   1)  >  0)  {
- int G  = oMv;
-  for   (int  JPYL4   = oMv   + 1; JPYL4 < Zy;   JPYL4++)  if  (H[JPYL4]   < H[G]) G  =   JPYL4;
-  int   oa2 =  H[oMv]; H[oMv]  =  H[G]; H[G]  = oa2;
- }
-  }
+void a8xY(int Gs[], int Qqt) {
+    for (int Rpa5 = 0; Rpa5 < Qqt; Rpa5++) {
+        if ((Rpa5 * Rpa5 + 1) > 0) {
+            int cabj = Rpa5;
+            for (int H0V = Rpa5 + 1; H0V < Qqt; H0V++) if (Gs[H0V] < Gs[cabj]) cabj = H0V;
+            int vk9 = Gs[Rpa5]; Gs[Rpa5] = Gs[cabj]; Gs[cabj] = vk9;
+        }
+    }
 }
 
-int main(int  argc, char   *argv[])   {
- if  (argc   <   2) return   0;
-  int Zy   = argc -   1;
-   int  *H =  (int *)malloc(Zy  * sizeof(int));
- for  (int  oMv =  0;   oMv < Zy;  oMv++)  H[oMv] =  atoi(argv[oMv   + 1]);
+int main(int pJzm, char *dZ7K[]) {
+    if (pJzm < 2) return 0;
+    int Qqt = pJzm - 1;
+    int *Gs = (int *)malloc(Qqt * sizeof(int));
+    for (int Rpa5 = 0; Rpa5 < Qqt; Rpa5++) Gs[Rpa5] = atoi(dZ7K[Rpa5 + 1]);
 
-  P(H, Zy);
+    a8xY(Gs, Qqt);
 
- for  (int   oMv   =   0;   oMv  <  Zy;   oMv++)  {
-   printf("%d%s", H[oMv], (oMv   ==   Zy  -  1  ? ""   :   " "));
-  }
-   printf("\n");
- free(H);
-   return  0;
+    for (int Rpa5 = 0; Rpa5 < Qqt; Rpa5++) {
+        printf("%d%s", Gs[Rpa5], (Rpa5 == Qqt - 1 ? "" : " "));
+    }
+    printf("\n");
+    free(Gs);
+    return 0;
 }

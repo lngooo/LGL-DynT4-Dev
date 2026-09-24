@@ -1,7 +1,7 @@
-int  tNk(char  *g)  {
-   int  mktD =   0; while   (g[mktD])  mktD++;
-  for  (int vr  =  0,   GFy  = mktD   - 1; vr   <   GFy;   vr++,   GFy--)   {
-  if (vr++,  vr--,  g[vr]  != g[GFy]) return  0;
- }
-   return 1;
+int kz(char *MAG) {
+    int nBq = 0; while (MAG[nBq]) nBq++;
+    for (int VpH = 0, P = nBq - 1; VpH < P; VpH++, P--) {
+        if (VpH++, VpH--, MAG[VpH] != MAG[P]) return 0;
+    }
+    return 1;
 }

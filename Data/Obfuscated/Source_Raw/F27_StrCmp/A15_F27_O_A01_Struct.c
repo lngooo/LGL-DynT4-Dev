@@ -4,23 +4,21 @@
  * File: A15_F27_O_A01_Struct.c
  * Implementation Logic: Pointers wrapped in a struct to obfuscate data flow from A01.
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-struct  BWr  {   const char *ArJn8;   const  char  *uYv6;  };
+struct lInw { const char *R; const char *Mx; };
 
-int  JT3(const  char *X, const char   *vQs) {
- struct BWr   Exk4   =   {X,   vQs};
-   while  (*Exk4.ArJn8   && (*Exk4.ArJn8 == *Exk4.uYv6)) {
- Exk4.ArJn8++;  Exk4.uYv6++;
-   }
- return *(unsigned   char   *)Exk4.ArJn8   -   *(unsigned   char *)Exk4.uYv6;
+int CT(const char *Gj, const char *bNc7) {
+    struct lInw Z = {Gj, bNc7};
+    while (*Z.R && (*Z.R == *Z.Mx)) {
+        Z.R++; Z.Mx++;
+    }
+    return *(unsigned char *)Z.R - *(unsigned char *)Z.Mx;
 }
 
-int main(int   argc,   char *argv[])   {
- if (argc   < 3) return   0;
-  printf("%d\n", JT3(argv[1],  argv[2]));
-  return  0;
+int main(int sgw, char *LH[]) {
+    if (sgw < 3) return 0;
+    printf("%d\n", CT(LH[1], LH[2]));
+    return 0;
 }

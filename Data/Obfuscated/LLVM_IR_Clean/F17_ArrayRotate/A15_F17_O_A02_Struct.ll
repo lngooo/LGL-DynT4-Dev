@@ -1,5 +1,5 @@
-%struct.RD = type { i32, i32, i32 }
-define dso_local i32 @cuL6(i32 %0, i32 %1) {
+%struct.L = type { i32, i32, i32 }
+define dso_local i32 @tL(i32 %0, i32 %1) {
   %3 = alloca i32
   %4 = alloca i32
   store i32 %0, i32* %3
@@ -15,17 +15,17 @@ define dso_local i32 @cuL6(i32 %0, i32 %1) {
   %11 = load i32, i32* %3
   %12 = load i32, i32* %4
   %13 = srem i32 %11, %12
-  %14 = call i32 @cuL6(i32 %10, i32 %13)
+  %14 = call i32 @tL(i32 %10, i32 %13)
   br label %15
 15:
   %16 = phi i32 [ %8, %7 ], [ %14, %9 ]
   ret i32 %16
 }
-define dso_local void @cn(i32* %0, i32 %1, i32 %2) {
+define dso_local void @jE(i32* %0, i32 %1, i32 %2) {
   %4 = alloca i32*
   %5 = alloca i32
   %6 = alloca i32
-  %7 = alloca %struct.RD
+  %7 = alloca %struct.L
   %8 = alloca i32
   %9 = alloca i32
   %10 = alloca i32
@@ -40,26 +40,26 @@ define dso_local void @cn(i32* %0, i32 %1, i32 %2) {
 15:
   br label %89
 16:
-  %18 = getelementptr inbounds %struct.RD, %struct.RD* %7, i32 0, i32 0
+  %18 = getelementptr inbounds %struct.L, %struct.L* %7, i32 0, i32 0
   %19 = load i32, i32* %5
   store i32 %19, i32* %18
-  %20 = getelementptr inbounds %struct.RD, %struct.RD* %7, i32 0, i32 1
+  %20 = getelementptr inbounds %struct.L, %struct.L* %7, i32 0, i32 1
   %21 = load i32, i32* %6
   %22 = load i32, i32* %5
   %23 = srem i32 %21, %22
   store i32 %23, i32* %20
-  %24 = getelementptr inbounds %struct.RD, %struct.RD* %7, i32 0, i32 2
+  %24 = getelementptr inbounds %struct.L, %struct.L* %7, i32 0, i32 2
   %25 = load i32, i32* %6
   %26 = load i32, i32* %5
   %27 = srem i32 %25, %26
   %28 = load i32, i32* %5
-  %29 = call i32 @cuL6(i32 %27, i32 %28)
+  %29 = call i32 @tL(i32 %27, i32 %28)
   store i32 %29, i32* %24
   store i32 0, i32* %8
   br label %31
 31:
   %32 = load i32, i32* %8
-  %33 = getelementptr inbounds %struct.RD, %struct.RD* %7, i32 0, i32 2
+  %33 = getelementptr inbounds %struct.L, %struct.L* %7, i32 0, i32 2
   %34 = load i32, i32* %33
   %35 = icmp slt i32 %32, %34
   br i1 %35, label %38, label %36
@@ -80,10 +80,10 @@ define dso_local void @cn(i32* %0, i32 %1, i32 %2) {
   br label %48
 48:
   %50 = load i32, i32* %11
-  %51 = getelementptr inbounds %struct.RD, %struct.RD* %7, i32 0, i32 1
+  %51 = getelementptr inbounds %struct.L, %struct.L* %7, i32 0, i32 1
   %52 = load i32, i32* %51
   %53 = add nsw i32 %50, %52
-  %54 = getelementptr inbounds %struct.RD, %struct.RD* %7, i32 0, i32 0
+  %54 = getelementptr inbounds %struct.L, %struct.L* %7, i32 0, i32 0
   %55 = load i32, i32* %54
   %56 = srem i32 %53, %55
   store i32 %56, i32* %12

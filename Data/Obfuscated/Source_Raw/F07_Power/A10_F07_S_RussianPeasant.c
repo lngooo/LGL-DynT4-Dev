@@ -5,23 +5,37 @@
  * Implementation Logic: Power using Russian Peasant algorithm for the exponent steps.
  * Input Format: <base> <exp>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
 
-int U(int g,   int exp)   {
- int   zFC4   = 1;
- while  (exp > 0) {
-  if (exp & 1)   zFC4   *= g;
-  g  *=  g;
- exp >>=  1;
-   }
-   return   zFC4;
+static int sc(int oIs, int XD) {
+    uint32_t JGhK = (uint32_t)oIs;
+    uint32_t r = (uint32_t)XD;
+    uint32_t I0W = 0U;
+    while (r > 0U) {
+        if (r & 1U) {
+            I0W += JGhK;
+        }
+        JGhK <<= 1;
+        r >>= 1;
+    }
+    return (int)(int32_t)I0W;
 }
 
-int  main(int  argc,   char  *argv[])  {
-   if  (argc <  3) return 1;
-   printf("%d\n",   U(atoi(argv[1]),  atoi(argv[2])));
-  return 0;
+int W(int InBg, int exp) {
+    int t3 = 1;
+    if (exp < 0) {
+        return 0;
+    }
+    for (int C = 0; C < exp; C++) {
+        t3 = sc(t3, InBg);
+    }
+    return t3;
+}
+
+int main(int w30, char *X[]) {
+    if (w30 < 3) return 1;
+    printf("%d\n", W(atoi(X[1]), atoi(X[2])));
+    return 0;
 }

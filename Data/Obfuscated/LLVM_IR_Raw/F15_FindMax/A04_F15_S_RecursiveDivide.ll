@@ -1,5 +1,5 @@
 @.str = constant [4 x i8] c"%d\0A\00"
-define dso_local i32 @Amb(i32* %0, i32 %1, i32 %2) {
+define dso_local i32 @J(i32* %0, i32 %1, i32 %2) {
   %4 = alloca i32
   %5 = alloca i32*
   %6 = alloca i32
@@ -33,13 +33,13 @@ define dso_local i32 @Amb(i32* %0, i32 %1, i32 %2) {
   %29 = load i32*, i32** %5
   %30 = load i32, i32* %6
   %31 = load i32, i32* %8
-  %32 = call i32 @Amb(i32* %29, i32 %30, i32 %31)
+  %32 = call i32 @J(i32* %29, i32 %30, i32 %31)
   store i32 %32, i32* %9
   %34 = load i32*, i32** %5
   %35 = load i32, i32* %8
   %36 = add nsw i32 %35, 1
   %37 = load i32, i32* %7
-  %38 = call i32 @Amb(i32* %34, i32 %36, i32 %37)
+  %38 = call i32 @J(i32* %34, i32 %36, i32 %37)
   store i32 %38, i32* %10
   %39 = load i32, i32* %9
   %40 = load i32, i32* %10
@@ -59,7 +59,7 @@ define dso_local i32 @Amb(i32* %0, i32 %1, i32 %2) {
   %52 = load i32, i32* %4
   ret i32 %52
 }
-define dso_local i32 @uiQ3(i32* %0, i32 %1) {
+define dso_local i32 @dex(i32* %0, i32 %1) {
   %3 = alloca i32
   %4 = alloca i32*
   %5 = alloca i32
@@ -75,7 +75,7 @@ define dso_local i32 @uiQ3(i32* %0, i32 %1) {
   %10 = load i32*, i32** %4
   %11 = load i32, i32* %5
   %12 = sub nsw i32 %11, 1
-  %13 = call i32 @Amb(i32* %10, i32 0, i32 %12)
+  %13 = call i32 @J(i32* %10, i32 0, i32 %12)
   store i32 %13, i32* %3
   br label %14
 14:
@@ -138,7 +138,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
 44:
   %45 = load i32*, i32** %7
   %46 = load i32, i32* %6
-  %47 = call i32 @uiQ3(i32* %45, i32 %46)
+  %47 = call i32 @dex(i32* %45, i32 %46)
   %48 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str, i64 0, i64 0), i32 %47)
   %49 = load i32*, i32** %7
   call void @free(i8* %50)

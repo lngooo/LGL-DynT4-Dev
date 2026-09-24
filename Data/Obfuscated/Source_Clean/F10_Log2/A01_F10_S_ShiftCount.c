@@ -1,5 +1,5 @@
-int  tR2(int   Gn) {
-   int   kTM0  = 0;
-   while  (Gn >>=   1)   kTM0++;
- return kTM0;
+int Pfo(int oV3) {
+    int AY4 = 0;
+    while (oV3 >>= 1) AY4++;
+    return AY4;
 }

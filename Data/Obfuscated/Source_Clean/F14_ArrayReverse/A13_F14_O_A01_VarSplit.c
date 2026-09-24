@@ -1,13 +1,13 @@
-void bl(int J8[],  int   I9)   {
- int  nVmL   =   0, q =  0;
- int   XVO =   I9  - 1,  KbN0   =  0;
-   while   ((nVmL +   q)   <  (XVO  +  KbN0))  {
-  int  FwHJ =  nVmL +   q;
-  int   BP = XVO   + KbN0;
-  int dcrx4 =  J8[FwHJ];
-   J8[FwHJ] = J8[BP];
-  J8[BP] =  dcrx4;
-   q++;
- KbN0--;
-  }
+void gOSw(int f4OC[], int ic) {
+    int bU = 0, Fy = 0;
+    int Y = ic - 1, FI9 = 0;
+    while ((bU + Fy) < (Y + FI9)) {
+        int bcvd = bU + Fy;
+        int YUc = Y + FI9;
+        int hnZP = f4OC[bcvd];
+        f4OC[bcvd] = f4OC[YUc];
+        f4OC[YUc] = hnZP;
+        Fy++;
+        FI9--;
+    }
 }

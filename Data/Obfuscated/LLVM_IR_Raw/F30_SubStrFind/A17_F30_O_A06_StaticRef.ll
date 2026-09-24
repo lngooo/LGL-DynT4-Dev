@@ -1,15 +1,15 @@
-@WAAW = internal global i32 0
+@PS = internal global i32 0
 @.str = constant [4 x i8] c"%d\0A\00"
-define dso_local i32 @w8(i8* %0, i8* %1) {
+define dso_local i32 @C(i8* %0, i8* %1) {
   %3 = alloca i32
   %4 = alloca i8*
   %5 = alloca i8*
   %6 = alloca i8*
   store i8* %0, i8** %4
   store i8* %1, i8** %5
-  %7 = load i32, i32* @WAAW
+  %7 = load i32, i32* @PS
   %8 = add nsw i32 %7, 1
-  store i32 %8, i32* @WAAW
+  store i32 %8, i32* @PS
   %9 = load i8*, i8** %5
   %10 = call i64 @strlen(i8* %9)
   %11 = icmp eq i64 %10, 0
@@ -65,7 +65,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   %13 = load i8**, i8*** %5
   %14 = getelementptr inbounds i8*, i8** %13, i64 2
   %15 = load i8*, i8** %14
-  %16 = call i32 @w8(i8* %12, i8* %15)
+  %16 = call i32 @C(i8* %12, i8* %15)
   %17 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str, i64 0, i64 0), i32 %16)
   store i32 0, i32* %3
   br label %18

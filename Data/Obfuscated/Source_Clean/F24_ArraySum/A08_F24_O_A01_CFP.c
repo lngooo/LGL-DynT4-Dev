@@ -1,10 +1,10 @@
-int gq(int  JwjP[], int Xv)  {
- int S =  0,  wTG =   0,  lfie  =   0;
-  while   (S   !=  2)  {
-  switch  (S)   {
-   case  0:  S   =  (wTG  <   Xv)  ?   1 : 2;   break;
-  case 1:   lfie   +=   JwjP[wTG++]; S = 0;  break;
-  }
-   }
-   return  lfie;
+int BI(int Rfja[], int TLq) {
+    int G0 = 0, BdDs = 0, h = 0;
+    while (G0 != 2) {
+        switch (G0) {
+            case 0: G0 = (BdDs < TLq) ? 1 : 2; break;
+            case 1: h += Rfja[BdDs++]; G0 = 0; break;
+        }
+    }
+    return h;
 }

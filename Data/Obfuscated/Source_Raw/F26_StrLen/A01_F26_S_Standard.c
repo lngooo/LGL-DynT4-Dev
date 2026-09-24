@@ -4,20 +4,18 @@
  * File: A01_F26_S_Standard.c
  * Implementation Logic: Standard iterative counter (Seed 1).
  */
-
-
 #include <stdio.h>
 
-int D(const char   *lIK)  {
- int   jr1 = 0;
- while   (lIK[jr1] != '\0') {
- jr1++;
-  }
- return jr1;
+int Ac(const char *WMUH) {
+    int kg = 0;
+    while (WMUH[kg] != '\0') {
+        kg++;
+    }
+    return kg;
 }
 
-int   main(int argc, char   *argv[])   {
- if   (argc   <  2)  return 0;
-   printf("%d\n",   D(argv[1]));
-   return 0;
+int main(int w, char *fA[]) {
+    if (w < 2) return 0;
+    printf("%d\n", Ac(fA[1]));
+    return 0;
 }

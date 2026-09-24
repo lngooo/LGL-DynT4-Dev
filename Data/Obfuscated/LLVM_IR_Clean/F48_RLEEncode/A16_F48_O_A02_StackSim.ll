@@ -1,5 +1,5 @@
 @.str = constant [3 x i8] c"%d\00"
-define dso_local void @epd(i8* %0, i8* %1) {
+define dso_local void @fES(i8* %0, i8* %1) {
   %3 = alloca i8*
   %4 = alloca i8*
   %5 = alloca i32
@@ -58,7 +58,7 @@ define dso_local void @epd(i8* %0, i8* %1) {
   %49 = sext i32 %48 to i64
   %50 = getelementptr inbounds i8, i8* %47, i64 %49
   %51 = load i8*, i8** %4
-  call void @epd(i8* %50, i8* %51)
+  call void @fES(i8* %50, i8* %51)
   br label %54
 54:
   ret void

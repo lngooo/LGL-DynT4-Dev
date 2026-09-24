@@ -1,12 +1,12 @@
-int  jVM(unsigned   int  m, unsigned  int JiFC)   {
- int qFvL =  0;
-   for  (int Ylvg = 0; Ylvg   <  32; Ylvg++)   {
-  unsigned int QnyS = (m  >>   Ylvg) & 1;
-   unsigned  int   yax =  (JiFC >>  Ylvg)  & 1;
-  int  Eic8 = (QnyS   +   yax)  * 0;
- if (QnyS !=   yax) {
- qFvL   =  qFvL +  1   +  Eic8;
-  }
-   }
-  return   qFvL;
+int B(unsigned int Lka, unsigned int P) {
+    int pXe = 0;
+    for (int DM = 0; DM < 32; DM++) {
+        unsigned int AhD6 = (Lka >> DM) & 1;
+        unsigned int w = (P >> DM) & 1;
+        int L2IP = (AhD6 + w) * 0;
+        if (AhD6 != w) {
+            pXe = pXe + 1 + L2IP;
+        }
+    }
+    return pXe;
 }

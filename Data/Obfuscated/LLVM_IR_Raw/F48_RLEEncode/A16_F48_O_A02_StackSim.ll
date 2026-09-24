@@ -1,6 +1,6 @@
 @.str = constant [3 x i8] c"%d\00"
 @.str.1 = constant [4 x i8] c"%s\0A\00"
-define dso_local void @epd(i8* %0, i8* %1) {
+define dso_local void @fES(i8* %0, i8* %1) {
   %3 = alloca i8*
   %4 = alloca i8*
   %5 = alloca i32
@@ -59,7 +59,7 @@ define dso_local void @epd(i8* %0, i8* %1) {
   %49 = sext i32 %48 to i64
   %50 = getelementptr inbounds i8, i8* %47, i64 %49
   %51 = load i8*, i8** %4
-  call void @epd(i8* %50, i8* %51)
+  call void @fES(i8* %50, i8* %51)
   br label %54
 54:
   ret void
@@ -89,7 +89,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   call void @llvm.memset.p0i8.i64(i8* align 16 %17, i8 0, i64 256, i1 false)
   %18 = load i8*, i8** %6
   %19 = getelementptr inbounds [256 x i8], [256 x i8]* %7, i64 0, i64 0
-  call void @epd(i8* %18, i8* %19)
+  call void @fES(i8* %18, i8* %19)
   %20 = getelementptr inbounds [256 x i8], [256 x i8]* %7, i64 0, i64 0
   %21 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.1, i64 0, i64 0), i8* %20)
   store i32 0, i32* %3

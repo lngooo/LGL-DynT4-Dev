@@ -1,4 +1,4 @@
-define dso_local void @B0(i8* %0) {
+define dso_local void @n2(i8* %0) {
   %2 = alloca i8*
   store i8* %0, i8** %2
   br label %3

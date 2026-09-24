@@ -4,21 +4,19 @@
 * File: A21_F34_O_A01_ArrayBuffer.c
 * Logic: Copies target char into a buffer for comparison derived from A01.
 */
-
-
 #include <stdio.h>
 
-int cRYj(char*  LTH6,  char  q0)  {
- char   zG[1] =   {q0};
-   int  gh6  =  0;
-  for  (int   bKzR   = 0;   LTH6[bKzR];  bKzR++)  {
-  if   (LTH6[bKzR]  ==   zG[0])   gh6++;
-   }
-   return gh6;
+int v(char* kqfR, char lIW) {
+    char U7E[1] = {lIW};
+    int vy = 0;
+    for (int Kk = 0; kqfR[Kk]; Kk++) {
+        if (kqfR[Kk] == U7E[0]) vy++;
+    }
+    return vy;
 }
 
-int   main(int  argc, char*   argv[])   {
-   if (argc   <  3)   return   0;
- printf("%d\n",  cRYj(argv[1],  argv[2][0]));
- return 0;
+int main(int Lo3S, char* vH[]) {
+    if (Lo3S < 3) return 0;
+    printf("%d\n", v(vH[1], vH[2][0]));
+    return 0;
 }

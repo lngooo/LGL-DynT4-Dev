@@ -1,6 +1,6 @@
-int  pkHX0(int p1)  {
-  int   n   =  0;
-   while   (p1   >= 4)   {  p1 >>=  2;  n  += 2;  }
-   while  (p1  >=   2) {  p1   >>=   1;   n  +=   1;  }
- return  n;
+int Q3(int HHS) {
+    int B = 0;
+    while (HHS >= 4) { HHS >>= 2; B += 2; }
+    while (HHS >= 2) { HHS >>= 1; B += 1; }
+    return B;
 }

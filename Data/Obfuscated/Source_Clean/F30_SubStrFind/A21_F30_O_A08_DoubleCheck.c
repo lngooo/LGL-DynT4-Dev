@@ -1,12 +1,12 @@
-int Ou3(char*   cfTp,  char*   Tj) {
-   int   rXD =   strlen(cfTp),   eop   =  strlen(Tj);
- if (eop  ==   0)  return   0;
- for   (int   O0   = 0;   O0   <=  rXD   -   eop;   O0++)  {
-  if   (cfTp[O0]   ==   Tj[0]) {
- if (cfTp[O0+eop-1] ==   Tj[eop-1])  {
- if   (strncmp(cfTp   +  O0,   Tj,   eop) ==  0)  return  O0;
-   }
-   }
-   }
- return  -1;
+int z(char* kd, char* j2ip) {
+    int KYr = strlen(kd), pDlT = strlen(j2ip);
+    if (pDlT == 0) return 0;
+    for (int T = 0; T <= KYr - pDlT; T++) {
+        if (kd[T] == j2ip[0]) {
+            if (kd[T+pDlT-1] == j2ip[pDlT-1]) {
+                if (strncmp(kd + T, j2ip, pDlT) == 0) return T;
+            }
+        }
+    }
+    return -1;
 }

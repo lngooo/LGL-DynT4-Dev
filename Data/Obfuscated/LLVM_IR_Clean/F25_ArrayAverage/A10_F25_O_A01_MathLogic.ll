@@ -1,4 +1,4 @@
-define dso_local double @JYC9(i32* %0, i32 %1) {
+define dso_local double @s1x(i32* %0, i32 %1) {
   %3 = alloca double
   %4 = alloca i32*
   %5 = alloca i32

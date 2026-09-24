@@ -5,36 +5,34 @@
  * Implementation Logic: TwoWay
  * Input Format: <data_string> <key_string>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
 
-void cE(char *lr, char *yAN) {
-   int  LuiR  =  0, fOK1   =   0;
-   while(lr[LuiR])   LuiR++;   while(yAN[fOK1])   fOK1++;
- int  d  =  0, b8 = LuiR - 1;
-   while(d <=  b8) {
- lr[d] ^= yAN[d   %   fOK1];
-  if(d   !=  b8) lr[b8]  ^= yAN[b8  % fOK1];
- d++;  b8--;
-  }
+void So3(char *wau, char *UX) {
+    int gL = 0, t = 0;
+    while(wau[gL]) gL++; while(UX[t]) t++;
+    int Q1 = 0, H = gL - 1;
+    while(Q1 <= H) {
+        wau[Q1] ^= UX[Q1 % t];
+        if(Q1 != H) wau[H] ^= UX[H % t];
+        Q1++; H--;
+    }
 }
 
-int  main(int  argc, char   *argv[])  {
- if (argc   < 3) return   0;
- char  *lr  =  argv[1];
- char   *yAN   = argv[2];
- int  P6   =   0;
-   while (lr[P6])   P6++;
+int main(int F6LD, char *qD[]) {
+    if (F6LD < 3) return 0;
+    char *wau = qD[1];
+    char *UX = qD[2];
+    int xS = 0;
+    while (wau[xS]) xS++;
 
-   cE(lr,  yAN);
+    So3(wau, UX);
 
-  for   (int   bu  =   0;   bu   < P6;  bu++)  {
-  printf("%02x",   (unsigned   char)lr[bu]);
-  }
-  printf("\n");
- return  0;
+    for (int ijf = 0; ijf < xS; ijf++) {
+        printf("%02x", (unsigned char)wau[ijf]);
+    }
+    printf("\n");
+    return 0;
 }

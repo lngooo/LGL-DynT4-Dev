@@ -1,4 +1,4 @@
-define dso_local void @GP4(i32* %0, i32 %1, i32 %2) {
+define dso_local void @QQ(i32* %0, i32 %1, i32 %2) {
   %4 = alloca i32*
   %5 = alloca i32
   %6 = alloca i32
@@ -11,114 +11,142 @@ define dso_local void @GP4(i32* %0, i32 %1, i32 %2) {
   store i32* %0, i32** %4
   store i32 %1, i32* %5
   store i32 %2, i32* %6
-  %13 = load i32, i32* %5
-  %14 = load i32, i32* %6
-  %15 = icmp sge i32 %13, %14
-  br i1 %15, label %16, label %17
-16:
-  br label %109
-17:
-  %19 = load i32*, i32** %4
-  %20 = load i32, i32* %6
-  %21 = sext i32 %20 to i64
-  %22 = getelementptr inbounds i32, i32* %19, i64 %21
-  %23 = load i32, i32* %22
-  store i32 %23, i32* %7
-  %25 = load i32, i32* %5
-  %26 = sub nsw i32 %25, 1
-  store i32 %26, i32* %8
-  %28 = load i32, i32* %5
-  store i32 %28, i32* %9
-  br label %29
-29:
-  %30 = load i32, i32* %9
-  %31 = load i32, i32* %6
-  %32 = icmp slt i32 %30, %31
-  br i1 %32, label %35, label %33
-33:
-  br label %76
+  store i32 0, i32* %7
+  store i32 0, i32* %8
+  store i32 0, i32* %9
+  store i32 0, i32* %10
+  store i32 0, i32* %11
+  br label %18
+18:
+  br label %19
+19:
+  %20 = load i32, i32* %7
+  switch i32 %20, label %105 [
+    i32 0, label %21
+    i32 1, label %35
+    i32 2, label %51
+    i32 3, label %73
+    i32 4, label %102
+  ]
+21:
+  %22 = load i32, i32* %5
+  %23 = load i32, i32* %6
+  %24 = icmp sge i32 %22, %23
+  br i1 %24, label %25, label %26
+25:
+  store i32 1, i32* %12
+  br label %107
+26:
+  %27 = load i32*, i32** %4
+  %28 = load i32, i32* %6
+  %29 = sext i32 %28 to i64
+  %30 = getelementptr inbounds i32, i32* %27, i64 %29
+  %31 = load i32, i32* %30
+  store i32 %31, i32* %8
+  %32 = load i32, i32* %5
+  %33 = sub nsw i32 %32, 1
+  store i32 %33, i32* %9
+  %34 = load i32, i32* %5
+  store i32 %34, i32* %10
+  store i32 1, i32* %7
+  br label %106
 35:
-  %37 = load i32*, i32** %4
-  %38 = load i32, i32* %9
-  %39 = sext i32 %38 to i64
-  %40 = getelementptr inbounds i32, i32* %37, i64 %39
-  %41 = load i32, i32* %40
-  %42 = load i32, i32* %7
-  %43 = icmp slt i32 %41, %42
-  %44 = zext i1 %43 to i32
-  store i32 %44, i32* %10
-  %45 = load i32, i32* %10
-  %46 = icmp ne i32 %45, 0
-  br i1 %46, label %47, label %71
-47:
-  %48 = load i32, i32* %8
-  %49 = add nsw i32 %48, 1
-  store i32 %49, i32* %8
-  %51 = load i32*, i32** %4
-  %52 = load i32, i32* %8
-  %53 = sext i32 %52 to i64
-  %54 = getelementptr inbounds i32, i32* %51, i64 %53
-  %55 = load i32, i32* %54
-  store i32 %55, i32* %11
-  %56 = load i32*, i32** %4
-  %57 = load i32, i32* %9
-  %58 = sext i32 %57 to i64
-  %59 = getelementptr inbounds i32, i32* %56, i64 %58
-  %60 = load i32, i32* %59
-  %61 = load i32*, i32** %4
-  %62 = load i32, i32* %8
-  %63 = sext i32 %62 to i64
-  %64 = getelementptr inbounds i32, i32* %61, i64 %63
-  store i32 %60, i32* %64
-  %65 = load i32, i32* %11
-  %66 = load i32*, i32** %4
-  %67 = load i32, i32* %9
-  %68 = sext i32 %67 to i64
-  %69 = getelementptr inbounds i32, i32* %66, i64 %68
-  store i32 %65, i32* %69
-  br label %71
-71:
-  br label %73
+  %36 = load i32, i32* %10
+  %37 = load i32, i32* %6
+  %38 = icmp sge i32 %36, %37
+  br i1 %38, label %39, label %40
+39:
+  store i32 3, i32* %7
+  br label %50
+40:
+  %41 = load i32*, i32** %4
+  %42 = load i32, i32* %10
+  %43 = sext i32 %42 to i64
+  %44 = getelementptr inbounds i32, i32* %41, i64 %43
+  %45 = load i32, i32* %44
+  %46 = load i32, i32* %8
+  %47 = icmp slt i32 %45, %46
+  %48 = zext i1 %47 to i64
+  %49 = select i1 %47, i32 2, i32 4
+  store i32 %49, i32* %7
+  br label %50
+50:
+  br label %106
+51:
+  %52 = load i32, i32* %9
+  %53 = add nsw i32 %52, 1
+  store i32 %53, i32* %9
+  %54 = load i32*, i32** %4
+  %55 = load i32, i32* %9
+  %56 = sext i32 %55 to i64
+  %57 = getelementptr inbounds i32, i32* %54, i64 %56
+  %58 = load i32, i32* %57
+  store i32 %58, i32* %11
+  %59 = load i32*, i32** %4
+  %60 = load i32, i32* %10
+  %61 = sext i32 %60 to i64
+  %62 = getelementptr inbounds i32, i32* %59, i64 %61
+  %63 = load i32, i32* %62
+  %64 = load i32*, i32** %4
+  %65 = load i32, i32* %9
+  %66 = sext i32 %65 to i64
+  %67 = getelementptr inbounds i32, i32* %64, i64 %66
+  store i32 %63, i32* %67
+  %68 = load i32, i32* %11
+  %69 = load i32*, i32** %4
+  %70 = load i32, i32* %10
+  %71 = sext i32 %70 to i64
+  %72 = getelementptr inbounds i32, i32* %69, i64 %71
+  store i32 %68, i32* %72
+  store i32 4, i32* %7
+  br label %106
 73:
-  %74 = load i32, i32* %9
-  %75 = add nsw i32 %74, 1
-  store i32 %75, i32* %9
-  br label %29
-76:
-  %78 = load i32*, i32** %4
-  %79 = load i32, i32* %8
-  %80 = add nsw i32 %79, 1
-  %81 = sext i32 %80 to i64
-  %82 = getelementptr inbounds i32, i32* %78, i64 %81
-  %83 = load i32, i32* %82
-  store i32 %83, i32* %12
-  %84 = load i32*, i32** %4
-  %85 = load i32, i32* %6
-  %86 = sext i32 %85 to i64
-  %87 = getelementptr inbounds i32, i32* %84, i64 %86
-  %88 = load i32, i32* %87
-  %89 = load i32*, i32** %4
-  %90 = load i32, i32* %8
-  %91 = add nsw i32 %90, 1
-  %92 = sext i32 %91 to i64
-  %93 = getelementptr inbounds i32, i32* %89, i64 %92
-  store i32 %88, i32* %93
-  %94 = load i32, i32* %12
+  %74 = load i32*, i32** %4
+  %75 = load i32, i32* %9
+  %76 = add nsw i32 %75, 1
+  %77 = sext i32 %76 to i64
+  %78 = getelementptr inbounds i32, i32* %74, i64 %77
+  %79 = load i32, i32* %78
+  store i32 %79, i32* %11
+  %80 = load i32*, i32** %4
+  %81 = load i32, i32* %6
+  %82 = sext i32 %81 to i64
+  %83 = getelementptr inbounds i32, i32* %80, i64 %82
+  %84 = load i32, i32* %83
+  %85 = load i32*, i32** %4
+  %86 = load i32, i32* %9
+  %87 = add nsw i32 %86, 1
+  %88 = sext i32 %87 to i64
+  %89 = getelementptr inbounds i32, i32* %85, i64 %88
+  store i32 %84, i32* %89
+  %90 = load i32, i32* %11
+  %91 = load i32*, i32** %4
+  %92 = load i32, i32* %6
+  %93 = sext i32 %92 to i64
+  %94 = getelementptr inbounds i32, i32* %91, i64 %93
+  store i32 %90, i32* %94
   %95 = load i32*, i32** %4
-  %96 = load i32, i32* %6
-  %97 = sext i32 %96 to i64
-  %98 = getelementptr inbounds i32, i32* %95, i64 %97
-  store i32 %94, i32* %98
-  %99 = load i32*, i32** %4
-  %100 = load i32, i32* %5
-  %101 = load i32, i32* %8
-  call void @GP4(i32* %99, i32 %100, i32 %101)
-  %102 = load i32*, i32** %4
-  %103 = load i32, i32* %8
-  %104 = add nsw i32 %103, 2
-  %105 = load i32, i32* %6
-  call void @GP4(i32* %102, i32 %104, i32 %105)
-  br label %109
-109:
+  %96 = load i32, i32* %5
+  %97 = load i32, i32* %9
+  call void @QQ(i32* %95, i32 %96, i32 %97)
+  %98 = load i32*, i32** %4
+  %99 = load i32, i32* %9
+  %100 = add nsw i32 %99, 2
+  %101 = load i32, i32* %6
+  call void @QQ(i32* %98, i32 %100, i32 %101)
+  store i32 1, i32* %12
+  br label %107
+102:
+  %103 = load i32, i32* %10
+  %104 = add nsw i32 %103, 1
+  store i32 %104, i32* %10
+  store i32 1, i32* %7
+  br label %106
+105:
+  store i32 1, i32* %12
+  br label %107
+106:
+  br label %18
+107:
   ret void
 }

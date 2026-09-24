@@ -1,14 +1,14 @@
-void VCfF(int   yJF[],   int   pajm, int  z) {
-   if  (pajm   <  z) {
-   int  JZT6  =   (pajm +   z)   / 2;
-  if  ((JZT6 *   JZT6   + 1) > 0)  {
-   VCfF(yJF,  pajm,  JZT6);
-  VCfF(yJF,   JZT6 +  1,   z);
-   int  *x  = (int*)malloc((z-pajm+1)*4), Q=pajm,  GU=JZT6+1,  GAHx=0;
-   while(Q<=JZT6  && GU<=z)   x[GAHx++] =   (yJF[Q]<=yJF[GU]) ? yJF[Q++]  : yJF[GU++];
-   while(Q<=JZT6)  x[GAHx++]  =   yJF[Q++];  while(GU<=z)   x[GAHx++] =  yJF[GU++];
- for(int WroA=0;  WroA<GAHx; WroA++) yJF[pajm+WroA]   = x[WroA];
-  free(x);
-   }
-  }
+void SR9(int Ztfi[], int am, int b) {
+    if (am < b) {
+        int bn = (am + b) / 2;
+        if ((bn * bn + 1) > 0) {
+            SR9(Ztfi, am, bn);
+            SR9(Ztfi, bn + 1, b);
+            int *PjPp = (int*)malloc((b-am+1)*4), O2YI=am, ft=bn+1, jEBb=0;
+            while(O2YI<=bn && ft<=b) PjPp[jEBb++] = (Ztfi[O2YI]<=Ztfi[ft]) ? Ztfi[O2YI++] : Ztfi[ft++];
+            while(O2YI<=bn) PjPp[jEBb++] = Ztfi[O2YI++]; while(ft<=b) PjPp[jEBb++] = Ztfi[ft++];
+            for(int VS=0; VS<jEBb; VS++) Ztfi[am+VS] = PjPp[VS];
+            free(PjPp);
+        }
+    }
 }

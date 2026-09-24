@@ -1,6 +1,6 @@
-@__const.rc.c = constant [65 x i8] c"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/\00"
+@__const.jgTU.J0LN = constant [65 x i8] c"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/\00"
 @.str = constant [4 x i8] c"%s\0A\00"
-define dso_local void @rc(i8* %0, i32 %1, i8* %2) {
+define dso_local void @jgTU(i8* %0, i32 %1, i8* %2) {
   %4 = alloca i8*
   %5 = alloca i32
   %6 = alloca i8*
@@ -10,7 +10,7 @@ define dso_local void @rc(i8* %0, i32 %1, i8* %2) {
   store i8* %0, i8** %4
   store i32 %1, i32* %5
   store i8* %2, i8** %6
-  call void @llvm.memcpy.p0i8.p0i8.i64(i8* align 16 %11, i8* align 16 getelementptr inbounds ([65 x i8], [65 x i8]* @__const.rc.c, i32 0, i32 0), i64 65, i1 false)
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* align 16 %11, i8* align 16 getelementptr inbounds ([65 x i8], [65 x i8]* @__const.jgTU.J0LN, i32 0, i32 0), i64 65, i1 false)
   store i32 0, i32* %8
   store i32 0, i32* %9
   br label %14
@@ -212,7 +212,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   %31 = load i8*, i8** %6
   %32 = load i32, i32* %7
   %33 = getelementptr inbounds [400 x i8], [400 x i8]* %8, i64 0, i64 0
-  call void @rc(i8* %31, i32 %32, i8* %33)
+  call void @jgTU(i8* %31, i32 %32, i8* %33)
   %34 = getelementptr inbounds [400 x i8], [400 x i8]* %8, i64 0, i64 0
   %35 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str, i64 0, i64 0), i8* %34)
   store i32 0, i32* %3

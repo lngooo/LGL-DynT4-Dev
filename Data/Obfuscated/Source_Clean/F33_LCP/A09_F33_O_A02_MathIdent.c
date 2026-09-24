@@ -1,13 +1,13 @@
-void Bm(char  **YcxS,   int  ChCU,  char *LzeJ)   {
-   if (ChCU  <= 0)   return;
-   strcpy(LzeJ,  YcxS[0]);
-   for (int   QGJc = 1;   QGJc   <   ChCU;   QGJc++) {
-   int  RRv =   0;
-   while   (LzeJ[RRv]) {
- double  qCfP  =   (double)LzeJ[RRv]   -   (double)YcxS[QGJc][RRv];
- if   ((int)floor(qCfP * qCfP) !=  0) break;
-   RRv++;
- }
- LzeJ[RRv]   =  '\0';
-  }
+void UcJT(char **O, int dAnp, char *M2NJ) {
+    if (dAnp <= 0) return;
+    strcpy(M2NJ, O[0]);
+    for (int NwYb = 1; NwYb < dAnp; NwYb++) {
+        int ie = 0;
+        while (M2NJ[ie]) {
+            double r = (double)M2NJ[ie] - (double)O[NwYb][ie];
+            if ((int)floor(r * r) != 0) break;
+            ie++;
+        }
+        M2NJ[ie] = '\0';
+    }
 }

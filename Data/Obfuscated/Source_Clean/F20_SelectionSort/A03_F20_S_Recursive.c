@@ -1,7 +1,7 @@
-void   R(int   XsA0[],   int c0)  {
-  if  (c0 <=  1)  return;
-  int Lns = 0;
-   for (int   BkMB  =   1;  BkMB   < c0; BkMB++)   if (XsA0[BkMB] <   XsA0[Lns]) Lns  =  BkMB;
- int   sa   =  XsA0[0]; XsA0[0]   =   XsA0[Lns]; XsA0[Lns]  =   sa;
-  R(XsA0   + 1,  c0 - 1);
+void j(int P[], int M) {
+    if (M <= 1) return;
+    int Gk = 0;
+    for (int z = 1; z < M; z++) if (P[z] < P[Gk]) Gk = z;
+    int R84D = P[0]; P[0] = P[Gk]; P[Gk] = R84D;
+    j(P + 1, M - 1);
 }

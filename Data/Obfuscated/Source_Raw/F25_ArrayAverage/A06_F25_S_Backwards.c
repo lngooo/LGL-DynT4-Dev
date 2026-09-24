@@ -4,28 +4,26 @@
  * File: A06_F25_S_Backwards.c
  * Implementation Logic: Backwards
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-double  djP(int   qn9[], int ol)   {
- if   (ol   <=   0) return 0.0;
- double  apnB4  =  0;
- for  (int hIW   = ol   -  1; hIW >= 0;   hIW--)  apnB4   +=   qn9[hIW];
- return   apnB4  /   (double)ol;
+double MF(int KaL[], int hU4C) {
+    if (hU4C <= 0) return 0.0;
+    double LZ = 0;
+    for (int aqWA = hU4C - 1; aqWA >= 0; aqWA--) LZ += KaL[aqWA];
+    return LZ / (double)hU4C;
 }
 
-int main(int  argc, char   *argv[])  {
-   if (argc <  2)  return   0;
- int ol =  argc - 1;
-   int  *qn9 = (int  *)malloc(ol   *  sizeof(int));
- for   (int  hIW =  0;   hIW <  ol;  hIW++)  qn9[hIW]   =  atoi(argv[hIW +  1]);
+int main(int FOl, char *GEG[]) {
+    if (FOl < 2) return 0;
+    int hU4C = FOl - 1;
+    int *KaL = (int *)malloc(hU4C * sizeof(int));
+    for (int aqWA = 0; aqWA < hU4C; aqWA++) KaL[aqWA] = atoi(GEG[aqWA + 1]);
 
- double  BrGx =  djP(qn9, ol);
- printf("%.2f\n",   BrGx);
+    double Ptq = MF(KaL, hU4C);
+    printf("%.2f\n", Ptq);
 
- free(qn9);
-  return 0;
+    free(KaL);
+    return 0;
 }

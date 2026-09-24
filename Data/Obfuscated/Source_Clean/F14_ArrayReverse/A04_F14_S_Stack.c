@@ -1,7 +1,7 @@
-void  Kh(int   DVI[],  int  lp) {
-   if (lp  <=   1)   return;
-   int  *dsM   =  (int*)malloc(lp   * sizeof(int));
-   for(int  Pbyk6=0;  Pbyk6<lp;   Pbyk6++)   dsM[Pbyk6] =  DVI[Pbyk6];
- for(int  Pbyk6=0; Pbyk6<lp;  Pbyk6++) DVI[Pbyk6] = dsM[lp -   1   - Pbyk6];
-  free(dsM);
+void Aw9(int skc[], int UYK) {
+    if (UYK <= 1) return;
+    int *dOE = (int*)malloc(UYK * sizeof(int));
+    for(int Kd=0; Kd<UYK; Kd++) dOE[Kd] = skc[Kd];
+    for(int Kd=0; Kd<UYK; Kd++) skc[Kd] = dOE[UYK - 1 - Kd];
+    free(dOE);
 }

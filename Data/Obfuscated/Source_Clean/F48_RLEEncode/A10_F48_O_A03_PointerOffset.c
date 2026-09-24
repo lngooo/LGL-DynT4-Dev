@@ -1,13 +1,13 @@
-void   W(const  char  *eZRN,  char *S) {
- char *qQtJ9  =  (char*)eZRN;
-   int dcYN  =   0;
- while  (*(qQtJ9))  {
-   int  xpG   = 0;
-   char beM =   *qQtJ9;
-  while  (*(qQtJ9  +   xpG)   ==  beM)  xpG++;
- *(S   +   dcYN++) =  beM;
-   dcYN  +=   sprintf(S +   dcYN, "%d", xpG);
-   qQtJ9   +=  xpG;
-  }
-  S[dcYN]   =   0;
+void athp(const char *Hld, char *M0p) {
+    char *u = (char*)Hld;
+    int MH = 0;
+    while (*(u)) {
+        int WM = 0;
+        char za = *u;
+        while (*(u + WM) == za) WM++;
+        *(M0p + MH++) = za;
+        MH += sprintf(M0p + MH, "%d", WM);
+        u += WM;
+    }
+    M0p[MH] = 0;
 }

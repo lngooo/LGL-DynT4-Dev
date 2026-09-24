@@ -1,14 +1,14 @@
-int   Xr(int lh1,  int   I)  {
-   if  (lh1 ==   0) return  abs(I);
-  if (I  ==   0)   return  abs(lh1);
-  lh1  =  abs(lh1);   I   =  abs(I);
- int Fi9   = 0;
-  while (((lh1   |  I)  &   1) ==   0)   { lh1  >>= 1; I  >>=  1;   Fi9++; }
-  while ((lh1 &  1)  == 0)  lh1 >>=  1;
-   do  {
- while  ((I &  1) == 0)  I >>=   1;
-   if  (lh1 > I) {  int  Lc   = lh1;   lh1  =  I;   I = Lc; }
-  I = I   -   lh1;
-   }   while  (I !=  0);
- return  lh1 << Fi9;
+int GtQ(int uzSs, int mA) {
+    if (uzSs == 0) return abs(mA);
+    if (mA == 0) return abs(uzSs);
+    uzSs = abs(uzSs); mA = abs(mA);
+    int RV5l = 0;
+    while (((uzSs | mA) & 1) == 0) { uzSs >>= 1; mA >>= 1; RV5l++; }
+    while ((uzSs & 1) == 0) uzSs >>= 1;
+    do {
+        while ((mA & 1) == 0) mA >>= 1;
+        if (uzSs > mA) { int zJ1 = uzSs; uzSs = mA; mA = zJ1; }
+        mA = mA - uzSs;
+    } while (mA != 0);
+    return uzSs << RV5l;
 }

@@ -1,5 +1,5 @@
-int uHIL(const  char  *o) {
-  const   char  *aaV1  =   o;
- while (*aaV1)  aaV1++;
- return   (int)(aaV1 - o);
+int NQT(const char *E) {
+    const char *V12K = E;
+    while (*V12K) V12K++;
+    return (int)(V12K - E);
 }

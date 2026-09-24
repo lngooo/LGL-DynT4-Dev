@@ -4,30 +4,28 @@
  * File: A08_F14_S_Iterators.c
  * Implementation Logic: Using begin/end logic with size check.
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-void  L(int  mNH[],  int   oD) {
-  if  (oD  < 2)  return;
- int   jym   = 0;
-   do  {
-  int  r6 =  mNH[jym];
-  mNH[jym]  = mNH[oD -  1   -   jym];
-  mNH[oD -  1  -  jym]  =  r6;
-   jym++;
-  }   while (jym  < oD   /   2);
+void q(int DXRV[], int UR) {
+    if (UR < 2) return;
+    int Hv = 0;
+    do {
+        int uJ = DXRV[Hv];
+        DXRV[Hv] = DXRV[UR - 1 - Hv];
+        DXRV[UR - 1 - Hv] = uJ;
+        Hv++;
+    } while (Hv < UR / 2);
 }
 
-int   main(int   argc,   char  *argv[]) {
-   if   (argc   <  2)   return 0;
- int  oD =   argc  -  1;
-   int *mNH  = (int*)malloc(oD  *  sizeof(int));
- for(int jym=0;   jym<oD;  jym++)   mNH[jym]   =  atoi(argv[jym+1]);
- L(mNH,   oD);
-   for(int   jym=0; jym<oD;  jym++)  printf("%d ", mNH[jym]);
-   printf("\n");
-  free(mNH);
-  return   0;
+int main(int R, char *e[]) {
+    if (R < 2) return 0;
+    int UR = R - 1;
+    int *DXRV = (int*)malloc(UR * sizeof(int));
+    for(int Hv=0; Hv<UR; Hv++) DXRV[Hv] = atoi(e[Hv+1]);
+    q(DXRV, UR);
+    for(int Hv=0; Hv<UR; Hv++) printf("%d ", DXRV[Hv]);
+    printf("\n");
+    free(DXRV);
+    return 0;
 }

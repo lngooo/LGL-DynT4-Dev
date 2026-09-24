@@ -1,11 +1,11 @@
-int   o0(int   Aa,   int exp)   {
-  int  CRVA  =   1,   Woet  =  0, uc =  0;
-   while  (uc !=  -1) {
- switch (uc)  {
-   case  0: uc =  (Woet <   exp) ? 1 :   2; break;
-  case 1:   CRVA *=   Aa; Woet++; uc  = 0;   break;
-   case 2:   uc  = -1; break;
-  }
- }
-  return CRVA;
+int S5Z(int g, int exp) {
+    int QQ = 1, kPN = 0, K = 0;
+    while (K != -1) {
+        switch (K) {
+            case 0: K = (kPN < exp) ? 1 : 2; break;
+            case 1: QQ *= g; kPN++; K = 0; break;
+            case 2: K = -1; break;
+        }
+    }
+    return QQ;
 }

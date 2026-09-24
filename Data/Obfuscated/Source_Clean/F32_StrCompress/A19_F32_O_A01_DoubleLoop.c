@@ -1,13 +1,13 @@
-void   RNL(char*  n)  {
-   int  ZrXh   = strlen(n);
-   for (int  Qtyx   =   0;  Qtyx < ZrXh;  )  {
- int  gQwQ,   NUua6 =   0;
-  char rux6  =  n[Qtyx];
- for   (gQwQ   = Qtyx;  gQwQ   <  ZrXh  &&  n[gQwQ]   ==  rux6; gQwQ++)  {
-   NUua6++;
- }
- printf("%c%d",   rux6, NUua6);
-  Qtyx   = gQwQ;
- }
- printf("\n");
+void C5(char* bX) {
+    int PF = strlen(bX);
+    for (int o8JG = 0; o8JG < PF; ) {
+        int hr, HqS = 0;
+        char r = bX[o8JG];
+        for (hr = o8JG; hr < PF && bX[hr] == r; hr++) {
+            HqS++;
+        }
+        printf("%c%d", r, HqS);
+        o8JG = hr;
+    }
+    printf("\n");
 }

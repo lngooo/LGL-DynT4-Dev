@@ -4,28 +4,26 @@
  * File: A04_F24_S_DivideAndConquer.c
  * Implementation Logic: DivideAndConquer
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-int   pLJL(int  Tso[], int   CE)   {
-  if (CE <= 0) return 0;
-  if   (CE   ==   1)  return Tso[0];
- int  gAE  =   CE  /  2;
-  return pLJL(Tso,   gAE)   +   pLJL(Tso +   gAE,  CE  -   gAE);
+int l(int nB[], int U) {
+    if (U <= 0) return 0;
+    if (U == 1) return nB[0];
+    int jR = U / 2;
+    return l(nB, jR) + l(nB + jR, U - jR);
 }
 
-int   main(int   argc,  char  *argv[]) {
-   if  (argc   < 2) return 0;
-   int  CE =   argc - 1;
-   int   *Tso   = (int   *)malloc(CE  *   sizeof(int));
-  for (int   Hr  =   0; Hr   <  CE;  Hr++)   Tso[Hr] =  atoi(argv[Hr  +   1]);
+int main(int aEk, char *gEJ[]) {
+    if (aEk < 2) return 0;
+    int U = aEk - 1;
+    int *nB = (int *)malloc(U * sizeof(int));
+    for (int Sn6E = 0; Sn6E < U; Sn6E++) nB[Sn6E] = atoi(gEJ[Sn6E + 1]);
 
-   int jP = pLJL(Tso,  CE);
- printf("%d\n",  jP);
+    int DTpW = l(nB, U);
+    printf("%d\n", DTpW);
 
-  free(Tso);
-   return   0;
+    free(nB);
+    return 0;
 }

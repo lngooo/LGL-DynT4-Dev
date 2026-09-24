@@ -1,10 +1,10 @@
-int   f9(const  char*   QM)   {
-  static int  aEcj[256]   =  {0};
- aEcj['a'] = aEcj['e'] =   aEcj['i']  =  aEcj['o']  =  aEcj['u']  =  1;
- aEcj['A']  =   aEcj['E']  = aEcj['I']   =  aEcj['O']  = aEcj['U'] =  1;
-  int smb9   =  0;
- for  (; *QM; QM++) {
- if (aEcj[(unsigned   char)*QM]) smb9++;
-  }
-  return smb9;
+int nzt(const char* u) {
+    static int Dgu[256] = {0};
+    Dgu['a'] = Dgu['e'] = Dgu['i'] = Dgu['o'] = Dgu['u'] = 1;
+    Dgu['A'] = Dgu['E'] = Dgu['I'] = Dgu['O'] = Dgu['U'] = 1;
+    int mgn = 0;
+    for (; *u; u++) {
+        if (Dgu[(unsigned char)*u]) mgn++;
+    }
+    return mgn;
 }

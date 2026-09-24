@@ -4,35 +4,33 @@
  * File: A17_F20_O_A01_WhileTrue.c
  * Implementation Logic: WhileTrue
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-void aI(int LxD[], int  nl)  {
- int   ZMBw4   = 0;
- while  (1)  {
-  if   (ZMBw4   >= nl)  break;
- int   Wm =   ZMBw4;
- for(int  D  =  ZMBw4   +   1; D   < nl;  D++) if(LxD[D]  <  LxD[Wm]) Wm   =  D;
-   int   nQE =   LxD[ZMBw4]; LxD[ZMBw4]   = LxD[Wm];  LxD[Wm]   =  nQE;
-   ZMBw4++;
- }
+void i8Oy(int z5[], int HkB) {
+    int gT = 0;
+    while (1) {
+        if (gT >= HkB) break;
+        int Gh = gT;
+        for(int WO6q = gT + 1; WO6q < HkB; WO6q++) if(z5[WO6q] < z5[Gh]) Gh = WO6q;
+        int un = z5[gT]; z5[gT] = z5[Gh]; z5[Gh] = un;
+        gT++;
+    }
 }
 
-int  main(int   argc, char *argv[]) {
-   if   (argc <  2) return   0;
-   int nl   = argc  -   1;
- int *LxD  =  (int   *)malloc(nl *  sizeof(int));
-  for   (int  ZMBw4  =   0;  ZMBw4 <  nl;   ZMBw4++)   LxD[ZMBw4] =  atoi(argv[ZMBw4 +   1]);
+int main(int f, char *B[]) {
+    if (f < 2) return 0;
+    int HkB = f - 1;
+    int *z5 = (int *)malloc(HkB * sizeof(int));
+    for (int gT = 0; gT < HkB; gT++) z5[gT] = atoi(B[gT + 1]);
 
- aI(LxD,   nl);
+    i8Oy(z5, HkB);
 
-  for (int  ZMBw4   =   0; ZMBw4   <   nl; ZMBw4++)   {
-   printf("%d%s", LxD[ZMBw4],  (ZMBw4   ==   nl - 1   ?   ""  :   " "));
- }
-   printf("\n");
-  free(LxD);
-   return 0;
+    for (int gT = 0; gT < HkB; gT++) {
+        printf("%d%s", z5[gT], (gT == HkB - 1 ? "" : " "));
+    }
+    printf("\n");
+    free(z5);
+    return 0;
 }

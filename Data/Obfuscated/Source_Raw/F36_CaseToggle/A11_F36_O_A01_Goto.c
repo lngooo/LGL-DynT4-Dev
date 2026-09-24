@@ -4,27 +4,25 @@
 * File: A11_F36_O_A01_Goto.c
 * Logic: Goto-based loop reconstruction derived from A01.
 */
-
-
 #include <stdio.h>
 
-void fV(char*  TS7)  {
-  int   mLg =  0;
-KZkL:
- if  (TS7[mLg] ==  0)  goto  Cu;
-  if  (TS7[mLg] <   'A'   ||   TS7[mLg]   > 'z')  goto fU8;
-   if (TS7[mLg] >=  'a') { TS7[mLg] -=  32;   goto  fU8;   }
- if   (TS7[mLg]  <= 'Z') { TS7[mLg] +=   32;   goto   fU8;  }
-fU8:
- mLg++;
- goto   KZkL;
-Cu:
-   return;
+void D(char* m) {
+    int A = 0;
+gpdD:
+    if (m[A] == 0) goto vf;
+    if (m[A] < 'A' || m[A] > 'z') goto H9r;
+    if (m[A] >= 'a') { m[A] -= 32; goto H9r; }
+    if (m[A] <= 'Z') { m[A] += 32; goto H9r; }
+H9r:
+    A++;
+    goto gpdD;
+vf:
+    return;
 }
 
-int   main(int  argc, char*  argv[])  {
-  if (argc  < 2)  return  0;
-  fV(argv[1]);
- printf("%s\n", argv[1]);
-  return   0;
+int main(int tmZz, char* hT[]) {
+    if (tmZz < 2) return 0;
+    D(hT[1]);
+    printf("%s\n", hT[1]);
+    return 0;
 }

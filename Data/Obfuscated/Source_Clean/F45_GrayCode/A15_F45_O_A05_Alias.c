@@ -1,8 +1,8 @@
-unsigned   int   B(unsigned   int  qjxX)   {
-   unsigned   int Zz[3];
-   Zz[0]  = qjxX;
-   Zz[1] =   qjxX >>  1;
- Zz[2]   =   Zz[0] ^ Zz[1];
-  unsigned  int *J =  &Zz[2];
-   return  *J;
+unsigned int o2Ot(unsigned int bgNf) {
+    unsigned int pax[3];
+    pax[0] = bgNf;
+    pax[1] = bgNf >> 1;
+    pax[2] = pax[0] ^ pax[1];
+    unsigned int *UVZO = &pax[2];
+    return *UVZO;
 }

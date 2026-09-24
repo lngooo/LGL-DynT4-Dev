@@ -5,34 +5,32 @@
  * Implementation Logic: Combination of control flow flattening and opaque predicates derived from A03.
  * Input Format: <uint1> <uint2>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int  TQnz(unsigned  int   RTt,  unsigned   int FcMS)   {
-   unsigned   int sro2 =  RTt  ^ FcMS;
-   int  Th   =  0;
-  int  PX =   10;
-   while  (PX  !=  0) {
- if (PX   ==  10)  {
-  if   (sro2  != 0)   PX  =  20;  else   PX =  0;
-  }  else   if (PX   ==   20)   {
-  int   i   =  5;
-   if   ((i *   i)   >   0)  {   // Opaque
-  sro2   &=  (sro2 -   1);
-  Th++;
-  }
-   PX  =   10;
-   }
- }
-   return   Th;
+int hu(unsigned int NMB, unsigned int iu7B) {
+    unsigned int l8 = NMB ^ iu7B;
+    int hM = 0;
+    int v = 10;
+    while (v != 0) {
+        if (v == 10) {
+            if (l8 != 0) v = 20; else v = 0;
+        } else if (v == 20) {
+            int n7 = 5;
+            if ((n7 * n7) > 0) { // Opaque
+                l8 &= (l8 - 1);
+                hM++;
+            }
+            v = 10;
+        }
+    }
+    return hM;
 }
 
-int  main(int   argc, char*  argv[]) {
-   if (argc  <   3)   return 0;
-   unsigned  int vKQ   =  (unsigned  int)strtoul(argv[1],  NULL,  10);
-   unsigned   int SSP   = (unsigned   int)strtoul(argv[2],  NULL,  10);
-  printf("%d",  TQnz(vKQ, SSP));
-  return  0;
+int main(int CYb, char* FtE[]) {
+    if (CYb < 3) return 0;
+    unsigned int tIsR = (unsigned int)strtoul(FtE[1], NULL, 10);
+    unsigned int xMo = (unsigned int)strtoul(FtE[2], NULL, 10);
+    printf("%d", hu(tIsR, xMo));
+    return 0;
 }

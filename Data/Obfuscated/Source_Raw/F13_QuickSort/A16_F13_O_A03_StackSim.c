@@ -4,38 +4,36 @@
  * File: A16_F13_O_A03_StackSim.c
  * Implementation Logic: StackSim
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-void YF2(int aadp[],   int  WhGM4,  int  ST)   {
- int   l3  =   WhGM4,   qURy9  = ST,   HRti   = aadp[(WhGM4+ST)/2];
-   do  {
-  while   (aadp[l3] < HRti) l3++;
-  while   (aadp[qURy9]  > HRti)   qURy9--;
- if  (l3   <=  qURy9)  {
- int   pa  =   aadp[l3];  aadp[l3]  = aadp[qURy9];   aadp[qURy9]   =   pa;
-  l3++; qURy9--;
-  }
- }  while  (l3  <= qURy9);
-   if (WhGM4  < qURy9) YF2(aadp,   WhGM4, qURy9);
-  if   (l3   <  ST)  YF2(aadp, l3, ST);
+void nU(int D[], int T3Hh, int R) {
+    int v = T3Hh, cgHX = R, bKW = D[(T3Hh+R)/2];
+    do {
+        while (D[v] < bKW) v++;
+        while (D[cgHX] > bKW) cgHX--;
+        if (v <= cgHX) {
+            int O5n = D[v]; D[v] = D[cgHX]; D[cgHX] = O5n;
+            v++; cgHX--;
+        }
+    } while (v <= cgHX);
+    if (T3Hh < cgHX) nU(D, T3Hh, cgHX);
+    if (v < R) nU(D, v, R);
 }
 
-int main(int  argc,  char  *argv[]) {
-   if (argc <  2)  return 0;
- int  cj =   argc   - 1;
- int *aadp   =  (int   *)malloc(cj   *   sizeof(int));
-   for   (int l3   = 0;   l3  < cj; l3++)  aadp[l3] = atoi(argv[l3  +   1]);
+int main(int mms, char *IuX[]) {
+    if (mms < 2) return 0;
+    int Qhrj = mms - 1;
+    int *D = (int *)malloc(Qhrj * sizeof(int));
+    for (int v = 0; v < Qhrj; v++) D[v] = atoi(IuX[v + 1]);
 
- YF2(aadp,  0,  cj  -  1);
+    nU(D, 0, Qhrj - 1);
 
-  for   (int   l3 =  0;  l3  < cj;  l3++)   {
-   printf("%d%s",  aadp[l3], (l3 ==  cj - 1   ?  ""  :  " "));
- }
-   printf("\n");
- free(aadp);
-  return   0;
+    for (int v = 0; v < Qhrj; v++) {
+        printf("%d%s", D[v], (v == Qhrj - 1 ? "" : " "));
+    }
+    printf("\n");
+    free(D);
+    return 0;
 }

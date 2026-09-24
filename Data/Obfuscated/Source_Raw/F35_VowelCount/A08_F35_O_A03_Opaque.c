@@ -4,29 +4,27 @@
  * File: A08_F35_O_A03_Opaque.c
  * Logic: Lookup table with opaque predicates.
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int  mh(const  char* W) {
-  int  aWc[256]  =   {0};
-   int  YdPA   = 7,   JHrS9  =  14;
-  aWc['a']=aWc['e']=aWc['i']=aWc['o']=aWc['u']=aWc['A']=aWc['E']=aWc['I']=aWc['O']=aWc['U']=1;
- int U9   =  0;
-   while   (*W) {
- if  (JHrS9  ==   YdPA  *   2) {  //  Opaque  predicate
-  if   (aWc[(unsigned   char)*W])   U9++;
-   W++;
- } else   {
- W--;  //   Dead code
-  }
- }
-  return   U9;
+int JVlR(const char* s2H) {
+    int yLNT[256] = {0};
+    int jF92 = 7, BC = 14;
+    yLNT['a']=yLNT['e']=yLNT['i']=yLNT['o']=yLNT['u']=yLNT['A']=yLNT['E']=yLNT['I']=yLNT['O']=yLNT['U']=1;
+    int U8sP = 0;
+    while (*s2H) {
+        if (BC == jF92 * 2) { // Opaque predicate
+            if (yLNT[(unsigned char)*s2H]) U8sP++;
+            s2H++;
+        } else {
+            s2H--; // Dead code
+        }
+    }
+    return U8sP;
 }
 
-int main(int  argc,   char* argv[])   {
-  if  (argc < 2) { printf("0\n");   return   0; }
- printf("%d\n",  mh(argv[1]));
-  return 0;
+int main(int jVai, char* GVT[]) {
+    if (jVai < 2) { printf("0\n"); return 0; }
+    printf("%d\n", JVlR(GVT[1]));
+    return 0;
 }

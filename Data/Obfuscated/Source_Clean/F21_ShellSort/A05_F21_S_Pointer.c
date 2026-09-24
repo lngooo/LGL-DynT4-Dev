@@ -1,3 +1,3 @@
-void yMU(int   *aBcJ,   int A)   {
-   for(int oX=A/2;oX>0;oX/=2){for(int  *CO=aBcJ+oX;CO<aBcJ+A;CO++){int  kKbW=*CO,*Nw4=CO;while(Nw4>=aBcJ+oX&&*(Nw4-oX)>kKbW){*Nw4=*(Nw4-oX);Nw4-=oX;}*Nw4=kKbW;}}
+void t(int *SNY, int rSk7) {
+    for(int LD=rSk7/2;LD>0;LD/=2){for(int *jWL=SNY+LD;jWL<SNY+rSk7;jWL++){int OCQh=*jWL,*KE=jWL;while(KE>=SNY+LD&&*(KE-LD)>OCQh){*KE=*(KE-LD);KE-=LD;}*KE=OCQh;}}
 }

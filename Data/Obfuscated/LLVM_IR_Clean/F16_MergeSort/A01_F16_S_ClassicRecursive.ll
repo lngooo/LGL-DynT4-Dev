@@ -1,4 +1,4 @@
-define dso_local void @gssY(i32* %0, i32 %1, i32 %2) {
+define dso_local void @FLy(i32* %0, i32 %1, i32 %2) {
   %4 = alloca i32*
   %5 = alloca i32
   %6 = alloca i32
@@ -30,12 +30,12 @@ define dso_local void @gssY(i32* %0, i32 %1, i32 %2) {
   %28 = load i32*, i32** %4
   %29 = load i32, i32* %5
   %30 = load i32, i32* %7
-  call void @gssY(i32* %28, i32 %29, i32 %30)
+  call void @FLy(i32* %28, i32 %29, i32 %30)
   %31 = load i32*, i32** %4
   %32 = load i32, i32* %7
   %33 = add nsw i32 %32, 1
   %34 = load i32, i32* %6
-  call void @gssY(i32* %31, i32 %33, i32 %34)
+  call void @FLy(i32* %31, i32 %33, i32 %34)
   %36 = load i32, i32* %7
   %37 = load i32, i32* %5
   %38 = sub nsw i32 %36, %37

@@ -1,5 +1,5 @@
-@rLAR = internal global [256 x i32] zeroinitializer
-define dso_local i32 @XZE(i8* %0, i8* %1) {
+@X = internal global [256 x i32] zeroinitializer
+define dso_local i32 @TsU(i8* %0, i8* %1) {
   %3 = alloca i32
   %4 = alloca i8*
   %5 = alloca i8*
@@ -30,7 +30,7 @@ define dso_local i32 @XZE(i8* %0, i8* %1) {
 23:
   %24 = load i32, i32* %6
   %25 = sext i32 %24 to i64
-  %26 = getelementptr inbounds [256 x i32], [256 x i32]* @rLAR, i64 0, i64 %25
+  %26 = getelementptr inbounds [256 x i32], [256 x i32]* @X, i64 0, i64 %25
   store i32 0, i32* %26
   br label %27
 27:
@@ -57,7 +57,7 @@ define dso_local i32 @XZE(i8* %0, i8* %1) {
   %44 = load i8, i8* %43
   %45 = sext i8 %44 to i32
   %46 = sext i32 %45 to i64
-  %47 = getelementptr inbounds [256 x i32], [256 x i32]* @rLAR, i64 0, i64 %46
+  %47 = getelementptr inbounds [256 x i32], [256 x i32]* @X, i64 0, i64 %46
   %48 = load i32, i32* %47
   %49 = add nsw i32 %48, 1
   store i32 %49, i32* %47
@@ -68,7 +68,7 @@ define dso_local i32 @XZE(i8* %0, i8* %1) {
   %54 = load i8, i8* %53
   %55 = sext i8 %54 to i32
   %56 = sext i32 %55 to i64
-  %57 = getelementptr inbounds [256 x i32], [256 x i32]* @rLAR, i64 0, i64 %56
+  %57 = getelementptr inbounds [256 x i32], [256 x i32]* @X, i64 0, i64 %56
   %58 = load i32, i32* %57
   %59 = add nsw i32 %58, -1
   store i32 %59, i32* %57
@@ -89,7 +89,7 @@ define dso_local i32 @XZE(i8* %0, i8* %1) {
 70:
   %71 = load i32, i32* %9
   %72 = sext i32 %71 to i64
-  %73 = getelementptr inbounds [256 x i32], [256 x i32]* @rLAR, i64 0, i64 %72
+  %73 = getelementptr inbounds [256 x i32], [256 x i32]* @X, i64 0, i64 %72
   %74 = load i32, i32* %73
   %75 = icmp ne i32 %74, 0
   br i1 %75, label %76, label %77

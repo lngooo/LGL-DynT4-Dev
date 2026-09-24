@@ -18,7 +18,7 @@ and validates "Input Homogeneity" across all algorithmic variants.
 import os
 
 # --- Configuration ---
-TRACE_ROOT = os.path.abspath("../Data/Trace")
+TRACE_ROOT = os.path.abspath("../Data/Natural/Trace")
 
 
 def validate_trace_content(file_path):

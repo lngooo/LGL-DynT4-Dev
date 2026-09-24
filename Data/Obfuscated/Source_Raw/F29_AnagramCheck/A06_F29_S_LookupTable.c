@@ -5,24 +5,22 @@
 * Implementation Logic: Uses a pre-allocated static table to simulate character set constraints.
 * Input Format: <string1> <string2>
 */
-
-
 #include <stdio.h>
 #include <string.h>
 
-static   int  lL7[256];
-int  Zwm9(char*   naX4,  char* hmp4) {
- memset(lL7,   0, sizeof(lL7));
-   int   P   = 0;
- while(naX4[P]) {   lL7[(unsigned char)naX4[P]]++;  P++;  }
- P   = 0;
- while(hmp4[P])  {   lL7[(unsigned char)hmp4[P]]--;   P++;   }
-  for(P=0;   P<256;   P++) if(lL7[P] !=  0) return 0;
-   return   (strlen(naX4) ==  strlen(hmp4));
+static int TL[256];
+int pF(char* buG4, char* y) {
+    memset(TL, 0, sizeof(TL));
+    int Nu = 0;
+    while(buG4[Nu]) { TL[(unsigned char)buG4[Nu]]++; Nu++; }
+    Nu = 0;
+    while(y[Nu]) { TL[(unsigned char)y[Nu]]--; Nu++; }
+    for(Nu=0; Nu<256; Nu++) if(TL[Nu] != 0) return 0;
+    return (strlen(buG4) == strlen(y));
 }
 
-int main(int  argc, char*  argv[])   {
-   if  (argc < 3) return  0;
- printf("%d\n",  Zwm9(argv[1],   argv[2]));
-  return  0;
+int main(int H, char* DM55[]) {
+    if (H < 3) return 0;
+    printf("%d\n", pF(DM55[1], DM55[2]));
+    return 0;
 }

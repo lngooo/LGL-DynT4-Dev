@@ -5,24 +5,22 @@
  * Implementation Logic: Summing from both ends (1 and n) simultaneously (Seed 7).
  * Input Format: <n>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int rOna(int  Sxzr) {
- int   xqjK   =  1, Sv  = Sxzr,   KQuI  = 0;
-   while (xqjK  <   Sv) {
- KQuI  +=  (xqjK  +   Sv);
-   xqjK++;
-  Sv--;
-   }
- if  (xqjK   ==   Sv)  KQuI  +=   xqjK;
-   return  KQuI;
+int zh(int LM) {
+    int N = 1, A = LM, qnQ = 0;
+    while (N < A) {
+        qnQ += (N + A);
+        N++;
+        A--;
+    }
+    if (N == A) qnQ += N;
+    return qnQ;
 }
 
-int   main(int argc,   char *argv[]) {
-   if   (argc  < 2)   return 1;
-  printf("%d\n", rOna(atoi(argv[1])));
-   return   0;
+int main(int pqz, char *QP[]) {
+    if (pqz < 2) return 1;
+    printf("%d\n", zh(atoi(QP[1])));
+    return 0;
 }

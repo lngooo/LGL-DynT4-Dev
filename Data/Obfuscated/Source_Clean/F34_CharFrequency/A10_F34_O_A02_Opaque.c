@@ -1,13 +1,13 @@
-int   CvW(char*   WQx4,  char SiB)   {
-  int oQ0   =  0;
- int h = 7;
-   while (*WQx4)   {
-  if ((h  *   h) %   2   !=   0) {
- if   (*WQx4  == SiB) oQ0++;
-  WQx4++;
-  }   else  {
-   WQx4--;   
- }
-   }
- return oQ0;
+int U(char* Lu, char j) {
+    int sGc0 = 0;
+    int B = 7;
+    while (*Lu) {
+        if ((B * B) % 2 != 0) {
+            if (*Lu == j) sGc0++;
+            Lu++;
+        } else {
+            Lu--; 
+        }
+    }
+    return sGc0;
 }

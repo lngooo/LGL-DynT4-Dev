@@ -5,24 +5,22 @@
  * Implementation Logic: Variable splitting derived from A01, processing low and high 16 bits separately.
  * Input Format: <uint32_t>
  */
-
-
 #include <stdio.h>
 #include <stdint.h>
 #include <stdlib.h>
 
-int j(uint32_t gufK)  {
-   uint16_t lZc   =   (uint16_t)(gufK  & 0xFFFF);
-  uint16_t   YTtY8   =   (uint16_t)(gufK  >> 16);
- int   S  =  0, y2   =  0;
-  while  (lZc  >   0)  {   S  +=   (lZc   & 1);  lZc   >>=  1; }
- while  (YTtY8   >   0)  {   y2 += (YTtY8  & 1);  YTtY8 >>=   1;  }
- return  S +  y2;
+int y7e(uint32_t UN) {
+    uint16_t Kd = (uint16_t)(UN & 0xFFFF);
+    uint16_t j = (uint16_t)(UN >> 16);
+    int giX = 0, v2z3 = 0;
+    while (Kd > 0) { giX += (Kd & 1); Kd >>= 1; }
+    while (j > 0) { v2z3 += (j & 1); j >>= 1; }
+    return giX + v2z3;
 }
 
-int   main(int   argc,  char*   argv[])   {
-  if   (argc  <  2)   return  0;
-   uint32_t   CrXH = (uint32_t)strtoul(argv[1],  NULL,   10);
- printf("%d\n",   j(CrXH));
- return  0;
+int main(int HTM, char* mvLv[]) {
+    if (HTM < 2) return 0;
+    uint32_t aJ8B = (uint32_t)strtoul(mvLv[1], NULL, 10);
+    printf("%d\n", y7e(aJ8B));
+    return 0;
 }

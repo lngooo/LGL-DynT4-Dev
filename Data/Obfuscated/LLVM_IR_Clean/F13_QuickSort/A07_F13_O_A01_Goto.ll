@@ -1,4 +1,4 @@
-define dso_local void @yeid0(i32* %0, i32 %1, i32 %2) {
+define dso_local void @oVQm(i32* %0, i32 %1, i32 %2) {
   %4 = alloca i32*
   %5 = alloca i32
   %6 = alloca i32
@@ -107,12 +107,12 @@ define dso_local void @yeid0(i32* %0, i32 %1, i32 %2) {
   %90 = load i32*, i32** %4
   %91 = load i32, i32* %5
   %92 = load i32, i32* %8
-  call void @yeid0(i32* %90, i32 %91, i32 %92)
+  call void @oVQm(i32* %90, i32 %91, i32 %92)
   %93 = load i32*, i32** %4
   %94 = load i32, i32* %8
   %95 = add nsw i32 %94, 2
   %96 = load i32, i32* %6
-  call void @yeid0(i32* %93, i32 %95, i32 %96)
+  call void @oVQm(i32* %93, i32 %95, i32 %96)
   br label %97
 97:
   ret void

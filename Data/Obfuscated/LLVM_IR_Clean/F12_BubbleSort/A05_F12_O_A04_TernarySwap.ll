@@ -1,4 +1,4 @@
-define dso_local void @w(i32* %0, i32 %1) {
+define dso_local void @qxx(i32* %0, i32 %1) {
   %3 = alloca i32*
   %4 = alloca i32
   %5 = alloca i32
@@ -78,7 +78,7 @@ define dso_local void @w(i32* %0, i32 %1) {
   %65 = load i32*, i32** %3
   %66 = load i32, i32* %4
   %67 = sub nsw i32 %66, 1
-  call void @w(i32* %65, i32 %67)
+  call void @qxx(i32* %65, i32 %67)
   br label %68
 68:
   ret void

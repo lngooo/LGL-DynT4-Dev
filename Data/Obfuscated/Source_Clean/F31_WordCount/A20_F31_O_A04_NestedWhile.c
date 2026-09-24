@@ -1,15 +1,15 @@
-int  eR(char* dTa2)  {
-  int sNHg   = 0;
- while (*dTa2)   {
-   if   (isspace(*dTa2))   {
-   while   (*dTa2  &&   isspace(*dTa2))  dTa2++;
-  }   else {
-  sNHg++;
- while  (*dTa2  && !isspace(*dTa2)) {
- if   (*dTa2  ==  0)  break;
-   dTa2++;
-   }
-   }
- }
- return  sNHg;
+int vag(char* X0Gm) {
+    int jv = 0;
+    while (*X0Gm) {
+        if (isspace(*X0Gm)) {
+            while (*X0Gm && isspace(*X0Gm)) X0Gm++;
+        } else {
+            jv++;
+            while (*X0Gm && !isspace(*X0Gm)) {
+                if (*X0Gm == 0) break;
+                X0Gm++;
+            }
+        }
+    }
+    return jv;
 }

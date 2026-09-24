@@ -1,6 +1,6 @@
-long  Yaeh(int entF) {
-   static   long   FBLF[101]   = {0};
-   if (entF   <= 1)  return (long)entF;
-   if (FBLF[entF] != 0)  return  FBLF[entF];
-  return   FBLF[entF]  =  Yaeh(entF   - 1)   + Yaeh(entF   -   2);
+long Q8W(int Ud9s) {
+    static long wgK[101] = {0};
+    if (Ud9s <= 1) return (long)Ud9s;
+    if (wgK[Ud9s] != 0) return wgK[Ud9s];
+    return wgK[Ud9s] = Q8W(Ud9s - 1) + Q8W(Ud9s - 2);
 }

@@ -5,22 +5,20 @@
  * Implementation Logic: Tail-recursive implementation (Seed 5).
  * Input Format: <n>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int  lqN(int   nebC, int   ldX0) {
-  if   (nebC  <=  0) return   ldX0;
-   return   lqN(nebC   - 1, ldX0  + nebC);
+int hpoe(int bLJ, int Lo) {
+    if (bLJ <= 0) return Lo;
+    return hpoe(bLJ - 1, Lo + bLJ);
 }
 
-int   kb2(int nebC)  {
-   return   lqN(nebC,  0);
+int e(int bLJ) {
+    return hpoe(bLJ, 0);
 }
 
-int  main(int   argc, char *argv[])   {
-   if   (argc < 2)   return  1;
-   printf("%d\n",   kb2(atoi(argv[1])));
- return   0;
+int main(int o, char *c[]) {
+    if (o < 2) return 1;
+    printf("%d\n", e(atoi(c[1])));
+    return 0;
 }

@@ -1,14 +1,14 @@
-void  U7(int   om[],  int cZ,   int   R7)  {
- if  (cZ   <  R7)  {
-  int  bDt =  cZ  + (R7 -   cZ)   /   2;
- U7(om,  cZ,  bDt);
- U7(om, bDt  + 1,   R7);
-  int imsq0 =   bDt   -   cZ   +  1,   mg0  = R7  - bDt;
- int KtsB[128],  GKo4[128];  
- for (int  udE5   =   0;   udE5  <   imsq0;  udE5++)   KtsB[udE5]   =  om[cZ   +  udE5];
-  for (int  g0 =   0; g0   <  mg0; g0++)   GKo4[g0] =   om[bDt   + 1 + g0];
- KtsB[imsq0]  =  2147483647;   GKo4[mg0] = 2147483647;   
-   int udE5  =   0,   g0   =   0;
- for   (int   Odem = cZ;  Odem  <=   R7; Odem++)  om[Odem] =   (KtsB[udE5]   <= GKo4[g0])  ?   KtsB[udE5++]  :   GKo4[g0++];
-   }
+void ERp9(int Y7j[], int ETx, int bP9) {
+    if (ETx < bP9) {
+        int V = ETx + (bP9 - ETx) / 2;
+        ERp9(Y7j, ETx, V);
+        ERp9(Y7j, V + 1, bP9);
+        int S = V - ETx + 1, qJ = bP9 - V;
+        int tO9S[128], ZRh[128]; 
+        for (int Cy = 0; Cy < S; Cy++) tO9S[Cy] = Y7j[ETx + Cy];
+        for (int z = 0; z < qJ; z++) ZRh[z] = Y7j[V + 1 + z];
+        tO9S[S] = 2147483647; ZRh[qJ] = 2147483647; 
+        int Cy = 0, z = 0;
+        for (int tf7 = ETx; tf7 <= bP9; tf7++) Y7j[tf7] = (tO9S[Cy] <= ZRh[z]) ? tO9S[Cy++] : ZRh[z++];
+    }
 }

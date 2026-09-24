@@ -4,17 +4,15 @@
  * File: A08_F08_S_Ternary.c
  * Implementation Logic: Ternary operator (Seed 4).
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int xv(int   ssAV) {
-  return   (ssAV   <   0) ?   -ssAV  :  ssAV;
+int z(int D) {
+    return (D < 0) ? -D : D;
 }
 
-int  main(int  argc, char *argv[])  {
-  if   (argc <   2)  return   1;
- printf("%d\n", xv(atoi(argv[1])));
-  return 0;
+int main(int X2t, char *fJD[]) {
+    if (X2t < 2) return 1;
+    printf("%d\n", z(atoi(fJD[1])));
+    return 0;
 }

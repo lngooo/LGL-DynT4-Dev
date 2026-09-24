@@ -5,35 +5,33 @@
  * Implementation Logic: Goto
  * Input Format: <str1> <str2> ...
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
 
-void  JCjE5(char **Jm,  int  xVS,  char  *pJ) {
-  int   BLlg  =  0;
-  if  (xVS <= 0)  goto e1;
-wbKA:
- if  (!Jm[0][BLlg])   goto e1;
-  int NC3 =   1;
-pT8:
-   if  (NC3   >=   xVS) goto  Uu1;
-   if (Jm[NC3][BLlg] !=   Jm[0][BLlg])  goto e1;
-  NC3++;   goto  pT8;
-Uu1:
-   pJ[BLlg]   =  Jm[0][BLlg];  BLlg++;  goto   wbKA;
-e1:
- pJ[BLlg]   =  '\0';
+void kWV(char **f, int E8, char *C) {
+    int dYO = 0;
+    if (E8 <= 0) goto U;
+wu:
+    if (!f[0][dYO]) goto U;
+    int RhY6 = 1;
+Wsq:
+    if (RhY6 >= E8) goto fI;
+    if (f[RhY6][dYO] != f[0][dYO]) goto U;
+    RhY6++; goto Wsq;
+fI:
+    C[dYO] = f[0][dYO]; dYO++; goto wu;
+U:
+    C[dYO] = '\0';
 }
 
-int main(int argc,  char  *argv[])  {
-  if  (argc   <  2) return  0;
-  int KR  = argc  - 1;
- char  **Jm   =   &argv[1];
-  char O[128]  = {0};
-  JCjE5(Jm,  KR,  O);
-   printf("%s\n",  O);
-   return 0;
+int main(int MQ, char *sFH6[]) {
+    if (MQ < 2) return 0;
+    int Ws = MQ - 1;
+    char **f = &sFH6[1];
+    char u[128] = {0};
+    kWV(f, Ws, u);
+    printf("%s\n", u);
+    return 0;
 }

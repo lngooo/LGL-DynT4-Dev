@@ -1,7 +1,7 @@
-void s(int GJMA[],   int  nqZ) {
- for  (int   Y  = 0;  Y   <  nqZ   /   2; Y++)   {
- int   UXH   =  GJMA[Y];
-  GJMA[Y]   =  GJMA[nqZ   - 1 - Y];
-   GJMA[nqZ  -   1  -  Y]  =   UXH;
-  }
+void DHf(int p[], int OVQ9) {
+    for (int R = 0; R < OVQ9 / 2; R++) {
+        int Nd5 = p[R];
+        p[R] = p[OVQ9 - 1 - R];
+        p[OVQ9 - 1 - R] = Nd5;
+    }
 }

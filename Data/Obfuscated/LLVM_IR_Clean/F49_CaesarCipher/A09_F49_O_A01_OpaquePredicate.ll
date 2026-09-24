@@ -1,4 +1,4 @@
-define dso_local void @IMx3(i8* %0, i32 %1) {
+define dso_local void @S86(i8* %0, i32 %1) {
   %3 = alloca i8*
   %4 = alloca i32
   %5 = alloca i32

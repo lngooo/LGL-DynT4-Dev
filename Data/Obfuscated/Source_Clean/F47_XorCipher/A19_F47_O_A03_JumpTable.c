@@ -1,7 +1,16 @@
-void   W4(char *xtl, char  *s)   {
-   int   aQyA  =   0;  while(s[aQyA])  aQyA++;
-  for(int   en=0;  xtl[en];   en++)  {
- int kaL2   =   1;
-   if(kaL2) xtl[en]   ^=   s[en   %  aQyA];
-  }
+void J(char *lV, char *AA) {
+    int KPrX = 0;
+    while (AA[KPrX]) KPrX++;
+    if (KPrX == 0) return;
+    for (int N = 0; lV[N]; N++) {
+        int X = N & 1;
+        switch (X) {
+            case 0:
+                lV[N] ^= AA[N % KPrX];
+                break;
+            default:
+                lV[N] ^= AA[N % KPrX];
+                break;
+        }
+    }
 }

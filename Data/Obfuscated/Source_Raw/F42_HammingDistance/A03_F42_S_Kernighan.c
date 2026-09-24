@@ -5,25 +5,23 @@
  * Implementation Logic: Uses Brian Kernighan's algorithm (n & (n-1)) on the XOR result for efficiency.
  * Input Format: <uint1> <uint2>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int f(unsigned int   Um6, unsigned  int   j)   {
-   unsigned   int   SZuQ   =   Um6 ^  j;
-  int  W = 0;
-  while   (SZuQ) {
-   SZuQ  &=   (SZuQ - 1);
-  W++;
-   }
-   return   W;
+int bA(unsigned int z, unsigned int Ifj) {
+    unsigned int bP = z ^ Ifj;
+    int KU7 = 0;
+    while (bP) {
+        bP &= (bP - 1);
+        KU7++;
+    }
+    return KU7;
 }
 
-int   main(int argc, char* argv[])  {
- if   (argc <  3)   return   0;
-  unsigned   int RPw  =  (unsigned int)strtoul(argv[1], NULL,  10);
-  unsigned int H2 = (unsigned int)strtoul(argv[2],   NULL,  10);
-  printf("%d", f(RPw,  H2));
- return 0;
+int main(int jL, char* heu[]) {
+    if (jL < 3) return 0;
+    unsigned int ncjL = (unsigned int)strtoul(heu[1], NULL, 10);
+    unsigned int uWQ = (unsigned int)strtoul(heu[2], NULL, 10);
+    printf("%d", bA(ncjL, uWQ));
+    return 0;
 }

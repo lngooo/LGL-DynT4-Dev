@@ -1,5 +1,5 @@
 @.str = constant [6 x i8] c"%.2f\0A\00"
-define dso_local double @pH2(i32* %0, i32 %1) {
+define dso_local double @a(i32* %0, i32 %1) {
   %3 = alloca i32*
   %4 = alloca i32
   %5 = alloca double
@@ -91,7 +91,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
 45:
   %47 = load i32*, i32** %7
   %48 = load i32, i32* %6
-  %49 = call double @pH2(i32* %47, i32 %48)
+  %49 = call double @a(i32* %47, i32 %48)
   store double %49, double* %9
   %50 = load double, double* %9
   %51 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str, i64 0, i64 0), double %50)

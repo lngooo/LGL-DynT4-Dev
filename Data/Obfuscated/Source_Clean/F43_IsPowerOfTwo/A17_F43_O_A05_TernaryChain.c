@@ -1,3 +1,3 @@
-int O(unsigned  int i1)  {
-  return (i1 ==  0)  ?   0  :  (i1   ==   1) ?  1 : (i1  %   2 != 0)   ? 0 :   O(i1   >> 1);
+int Y7n(unsigned int FW3k) {
+    return (FW3k == 0) ? 0 : (FW3k == 1) ? 1 : (FW3k % 2 != 0) ? 0 : Y7n(FW3k >> 1);
 }

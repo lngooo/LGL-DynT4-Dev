@@ -1,4 +1,4 @@
-define dso_local i64 @JI0(i64 %0, i64 %1, i64 %2) {
+define dso_local i64 @o(i64 %0, i64 %1, i64 %2) {
   %4 = alloca i64
   %5 = alloca i64
   %6 = alloca i64
@@ -12,7 +12,7 @@ define dso_local i64 @JI0(i64 %0, i64 %1, i64 %2) {
   %11 = srem i64 %9, %10
   ret i64 %11
 }
-define dso_local i32 @X(i32 %0) {
+define dso_local i32 @l(i32 %0) {
   %2 = alloca i32
   %3 = alloca i32
   %4 = alloca i64 (i64, i64, i64)*
@@ -32,7 +32,7 @@ define dso_local i32 @X(i32 %0) {
   store i32 %15, i32* %2
   br label %94
 16:
-  store i64 (i64, i64, i64)* @JI0, i64 (i64, i64, i64)** %4
+  store i64 (i64, i64, i64)* @o, i64 (i64, i64, i64)** %4
   %19 = load i32, i32* %3
   %20 = sub nsw i32 %19, 1
   store i32 %20, i32* %5

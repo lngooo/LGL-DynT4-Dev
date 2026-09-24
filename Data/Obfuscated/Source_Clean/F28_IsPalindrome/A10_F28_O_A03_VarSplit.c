@@ -1,12 +1,12 @@
-int x(char   *iY6)   {
- int  Bld   =  0;  while (iY6[Bld])  Bld++;
- int   pbL  = Bld  >>   1;
-   for (int  tbR  =   0; tbR <  pbL; tbR++)  {
- int DdH   =   tbR;
-  int  BR  = (Bld   - 1)  -  DdH;
-   char   K9  = iY6[DdH];
- char  YU7  = iY6[BR];
-   if   (K9   !=   YU7)   return  0;
-  }
-  return   1;
+int DJ3(char *xPtn) {
+    int jEgI = 0; while (xPtn[jEgI]) jEgI++;
+    int t519 = jEgI >> 1;
+    for (int dmnv = 0; dmnv < t519; dmnv++) {
+        int Qy = dmnv;
+        int l8Cb = (jEgI - 1) - Qy;
+        char yK = xPtn[Qy];
+        char rV = xPtn[l8Cb];
+        if (yK != rV) return 0;
+    }
+    return 1;
 }

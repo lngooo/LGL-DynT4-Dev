@@ -1,4 +1,4 @@
-define dso_local i32 @RpC(i8* %0) {
+define dso_local i32 @XJDQ(i8* %0) {
   %2 = alloca i8*
   %3 = alloca i8*
   store i8* %0, i8** %2

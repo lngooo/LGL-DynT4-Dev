@@ -1,19 +1,19 @@
-void   etx(int   J3[],  int  J6, int   OBU) {
-  if  (J6 <   OBU)   {
-  int n  =  J6   +  (OBU   - J6)   /  2;
- etx(J3, J6,  n);
- etx(J3, n  +   1,   OBU);
-   int  bd   = n   +  1;
- if   (J3[n]  <=   J3[bd]) return;
- while (J6   <= n  &&  bd   <=  OBU)  {
-  if   (J3[J6]  <=  J3[bd])  J6++;
- else   {
-   int kq  = J3[bd];
-  int   f   = bd;
-   while   (f !=  J6)  {   J3[f] =   J3[f   -   1];  f--;   }
- J3[J6] =  kq;
- J6++;  n++;   bd++;
- }
-   }
-   }
+void bSE(int u[], int KyuK, int Z) {
+    if (KyuK < Z) {
+        int gSRn = KyuK + (Z - KyuK) / 2;
+        bSE(u, KyuK, gSRn);
+        bSE(u, gSRn + 1, Z);
+        int FGZ = gSRn + 1;
+        if (u[gSRn] <= u[FGZ]) return;
+        while (KyuK <= gSRn && FGZ <= Z) {
+            if (u[KyuK] <= u[FGZ]) KyuK++;
+            else {
+                int kNt = u[FGZ];
+                int BmF = FGZ;
+                while (BmF != KyuK) { u[BmF] = u[BmF - 1]; BmF--; }
+                u[KyuK] = kNt;
+                KyuK++; gSRn++; FGZ++;
+            }
+        }
+    }
 }

@@ -1,8 +1,8 @@
-int  Jqy(const  char  *lO,  const  char *yHf5)  {
-  int NU  =  -1;
-  do   {
-  NU++;
-  if   (lO[NU]  !=  yHf5[NU]) return   (unsigned  char)lO[NU] -  (unsigned  char)yHf5[NU];
- }  while (lO[NU]   !=   '\0');
- return 0;
+int bFgu(const char *NytF, const char *XRS) {
+    int H = -1;
+    do {
+        H++;
+        if (NytF[H] != XRS[H]) return (unsigned char)NytF[H] - (unsigned char)XRS[H];
+    } while (NytF[H] != '\0');
+    return 0;
 }

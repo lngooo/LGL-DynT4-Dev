@@ -1,4 +1,4 @@
-define dso_local void @Rf(i32* %0, i32 %1) {
+define dso_local void @YFt(i32* %0, i32 %1) {
   %3 = alloca i32*
   %4 = alloca i32
   %5 = alloca i32
@@ -72,7 +72,7 @@ define dso_local void @Rf(i32* %0, i32 %1) {
   %61 = load i32*, i32** %3
   %62 = load i32, i32* %4
   %63 = sub nsw i32 %62, 1
-  call void @Rf(i32* %61, i32 %63)
+  call void @YFt(i32* %61, i32 %63)
   br label %64
 64:
   ret void

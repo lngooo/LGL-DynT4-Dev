@@ -5,29 +5,27 @@
  * Implementation Logic: RedundantLogic derived from seed.
  * Input Format: <string>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 #include <string.h>
 
-int   kpzy(char   *T)   {
-  int   qBAx =   0;   while   (T[qBAx]) qBAx++;
-  char   pQP[100];
-  int  r =   0;
- while(r  <  qBAx) {  pQP[r]  = T[r]; r++;   }
-  r--;
-  for(int  lbmz = 0;  lbmz  <   qBAx;   lbmz++)   {
- if(pQP[r--]   !=   T[lbmz])  return   0;
-  }
- return 1;
+int vxZG(char *ATvi) {
+    int UqJ = 0; while (ATvi[UqJ]) UqJ++;
+    char Fs[100];
+    int f6C = 0;
+    while(f6C < UqJ) { Fs[f6C] = ATvi[f6C]; f6C++; }
+    f6C--;
+    for(int Z = 0; Z < UqJ; Z++) {
+        if(Fs[f6C--] != ATvi[Z]) return 0;
+    }
+    return 1;
 }
 
-int  main(int   argc,   char   *argv[]) {
- if  (argc <   2)   return  1;
- char   *T  = argv[1];
- int   ZWV =  kpzy(T);
-   printf("%d\n", ZWV);
-   return 0;
+int main(int G5h, char *ZW[]) {
+    if (G5h < 2) return 1;
+    char *ATvi = ZW[1];
+    int p = vxZG(ATvi);
+    printf("%d\n", p);
+    return 0;
 }

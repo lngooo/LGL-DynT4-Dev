@@ -1,11 +1,11 @@
-void  cUxr(char*  wZLD)   {
- char *D5  =   wZLD, *KVz =   wZLD;
- while  (*D5)   {
-  if  (*D5  !=   32  &&  *D5   !=   9  && *D5 !=  10 &&   *D5 !=   13) {
-  *KVz =  *D5;
- KVz++;
-   }
-  D5++;
- }
-  *KVz  = '\0';
+void SOs1(char* yIpU) {
+    char *NBb = yIpU, *CGt = yIpU;
+    while (*NBb) {
+        if (*NBb != 32 && *NBb != 9 && *NBb != 10 && *NBb != 13) {
+            *CGt = *NBb;
+            CGt++;
+        }
+        NBb++;
+    }
+    *CGt = '\0';
 }

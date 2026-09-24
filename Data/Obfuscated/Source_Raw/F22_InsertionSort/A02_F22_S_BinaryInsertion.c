@@ -4,38 +4,36 @@
  * File: A02_F22_S_BinaryInsertion.c
  * Implementation Logic: BinaryInsertion
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-void   NnYy6(int  TAf0[],  int   rn)  {
- for (int   Smx   = 1;   Smx < rn;   Smx++) {
-  int EH   =   TAf0[Smx];
-   int  oaQ  =   0, trM3 =   Smx - 1;
-   while   (oaQ  <=  trM3)   {
-  int  cFrf1 =  oaQ +  (trM3   -   oaQ) /   2;
-   if  (EH   < TAf0[cFrf1])  trM3 =  cFrf1 -   1;
-  else   oaQ  =  cFrf1  +   1;
- }
-   for  (int  HkHS  =   Smx   -   1;   HkHS >=   oaQ;   HkHS--)  TAf0[HkHS +  1]   =   TAf0[HkHS];
- TAf0[oaQ]   =   EH;
-   }
+void lRU(int m1nK[], int GwwN) {
+    for (int Ze = 1; Ze < GwwN; Ze++) {
+        int BOy3 = m1nK[Ze];
+        int K = 0, ghF = Ze - 1;
+        while (K <= ghF) {
+            int dM = K + (ghF - K) / 2;
+            if (BOy3 < m1nK[dM]) ghF = dM - 1;
+            else K = dM + 1;
+        }
+        for (int bo0 = Ze - 1; bo0 >= K; bo0--) m1nK[bo0 + 1] = m1nK[bo0];
+        m1nK[K] = BOy3;
+    }
 }
 
-int  main(int  argc,  char  *argv[])   {
-  if   (argc   < 2)   return  0;
- int rn   =  argc   -  1;
- int   *TAf0 =   (int  *)malloc(rn   *   sizeof(int));
- for   (int Smx  = 0;   Smx < rn;  Smx++) TAf0[Smx]  =  atoi(argv[Smx   +  1]);
+int main(int qyT, char *e33[]) {
+    if (qyT < 2) return 0;
+    int GwwN = qyT - 1;
+    int *m1nK = (int *)malloc(GwwN * sizeof(int));
+    for (int Ze = 0; Ze < GwwN; Ze++) m1nK[Ze] = atoi(e33[Ze + 1]);
 
-  NnYy6(TAf0, rn);
+    lRU(m1nK, GwwN);
 
- for   (int   Smx  =  0;   Smx  <   rn;  Smx++)  {
-   printf("%d%s",  TAf0[Smx],  (Smx   == rn   - 1  ?   "" : " "));
- }
-  printf("\n");
-   free(TAf0);
- return  0;
+    for (int Ze = 0; Ze < GwwN; Ze++) {
+        printf("%d%s", m1nK[Ze], (Ze == GwwN - 1 ? "" : " "));
+    }
+    printf("\n");
+    free(m1nK);
+    return 0;
 }

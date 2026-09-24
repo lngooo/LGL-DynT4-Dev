@@ -4,37 +4,35 @@
  * File: A19_F22_O_A01_JumpTable.c
  * Implementation Logic: JumpTable
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-void  Dd2(int H[],   int  tO) {
- for (int Lh =  1; Lh < tO; Lh++) {
- int RAf =  H[Lh],  p  =  Lh - 1;
-  ek:
- if  (p   >=  0   &&   H[p]   > RAf)  {
-  H[p+1]   =   H[p];
- p--;
-   goto ek;
-  }
-  H[p+1] =   RAf;
- }
+void S(int ei[], int Bwiz) {
+    for (int Ts = 1; Ts < Bwiz; Ts++) {
+        int v = ei[Ts], LMN = Ts - 1;
+    U:
+        if (LMN >= 0 && ei[LMN] > v) {
+            ei[LMN+1] = ei[LMN];
+            LMN--;
+            goto U;
+        }
+        ei[LMN+1] = v;
+    }
 }
 
-int  main(int argc,   char  *argv[])   {
-  if  (argc   <   2)  return   0;
-   int   tO   =  argc   - 1;
-  int  *H   =   (int  *)malloc(tO   *  sizeof(int));
- for (int Lh  = 0;  Lh   <  tO;  Lh++)   H[Lh]   =  atoi(argv[Lh  + 1]);
+int main(int e, char *C6A[]) {
+    if (e < 2) return 0;
+    int Bwiz = e - 1;
+    int *ei = (int *)malloc(Bwiz * sizeof(int));
+    for (int Ts = 0; Ts < Bwiz; Ts++) ei[Ts] = atoi(C6A[Ts + 1]);
 
-   Dd2(H,  tO);
+    S(ei, Bwiz);
 
-   for  (int Lh =   0;  Lh   < tO; Lh++)  {
- printf("%d%s", H[Lh],   (Lh  ==  tO  - 1   ?  ""   : " "));
- }
- printf("\n");
- free(H);
- return 0;
+    for (int Ts = 0; Ts < Bwiz; Ts++) {
+        printf("%d%s", ei[Ts], (Ts == Bwiz - 1 ? "" : " "));
+    }
+    printf("\n");
+    free(ei);
+    return 0;
 }

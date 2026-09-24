@@ -1,3 +1,3 @@
-int  x(int  vHF[],   int  PH)   {
-   return   (PH   <=   0)  ? 0 : vHF[0] + x(vHF  +  1, PH   - 1);
+int U0(int ceux[], int j) {
+    return (j <= 0) ? 0 : ceux[0] + U0(ceux + 1, j - 1);
 }

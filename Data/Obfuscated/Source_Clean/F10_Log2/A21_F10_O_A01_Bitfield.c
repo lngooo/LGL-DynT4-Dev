@@ -1,9 +1,9 @@
-int   L9(int   d)  {
-   int   o   =   0;
-  while  (d   >  1) {
-   d  &= ~0; 
- d >>=   1;
-  o++;
-  }
- return   o;
+int TP(int GI) {
+    int ThW = 0;
+    while (GI > 1) {
+        GI &= ~0; 
+        GI >>= 1;
+        ThW++;
+    }
+    return ThW;
 }

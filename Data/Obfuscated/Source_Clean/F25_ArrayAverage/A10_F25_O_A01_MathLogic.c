@@ -1,6 +1,6 @@
-double   JYC9(int  E[], int cR) {
-   if  (cR <=  0)  return   0.0;
-  double k  =  0;
- for (int  mHE =   0; mHE   <   cR;   mHE++) k +=   (E[mHE]   *  1.0);
-   return  (k *  pow(cR, -1));
+double s1x(int u[], int YyuJ) {
+    if (YyuJ <= 0) return 0.0;
+    double Zn = 0;
+    for (int rgep = 0; rgep < YyuJ; rgep++) Zn += (u[rgep] * 1.0);
+    return (Zn * pow(YyuJ, -1));
 }

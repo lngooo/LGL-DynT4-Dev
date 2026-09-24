@@ -4,30 +4,28 @@
  * File: A14_F11_O_A07_Pointer.c
  * Implementation Logic: Bitwise search using pointer arithmetic.
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int  X0(int  PXJ8[],  int YFJA2,   int TrM)   {
-   int   *H7  =  PXJ8;
-   int   mGC  =  0;
-   int YNbI2   =   1  <<   (31  -   __builtin_clz(YFJA2));
- while (YNbI2  >   0)   {
- int  Uu   = mGC   |   YNbI2;
-  if   (Uu   < YFJA2  &&   *(H7 +   Uu)   <= TrM)  mGC =   Uu;
-  YNbI2 >>=   1;
-  }
-  return  (*(H7   +   mGC)  ==   TrM)  ?   mGC : -1;
+int iO(int K[], int dk, int lH9) {
+    int *MKOb = K;
+    int fnC = 0;
+    int Eko1 = 1 << (31 - __builtin_clz(dk));
+    while (Eko1 > 0) {
+        int MjYL = fnC | Eko1;
+        if (MjYL < dk && *(MKOb + MjYL) <= lH9) fnC = MjYL;
+        Eko1 >>= 1;
+    }
+    return (*(MKOb + fnC) == lH9) ? fnC : -1;
 }
 
-int   main(int argc, char  *argv[])   {
- if   (argc  <  3)  return  1;
- int   TrM  =  atoi(argv[1]);
-   int  YFJA2 = argc  -   2;
-  int *PXJ8   = (int*)malloc(YFJA2   * sizeof(int));
-   for(int   CY9=0;   CY9<YFJA2;   CY9++)  PXJ8[CY9]  = atoi(argv[CY9+2]);
- printf("%d\n",   X0(PXJ8,   YFJA2, TrM));
-  free(PXJ8);
-  return 0;
+int main(int NQ, char *kUR[]) {
+    if (NQ < 3) return 1;
+    int lH9 = atoi(kUR[1]);
+    int dk = NQ - 2;
+    int *K = (int*)malloc(dk * sizeof(int));
+    for(int DML=0; DML<dk; DML++) K[DML] = atoi(kUR[DML+2]);
+    printf("%d\n", iO(K, dk, lH9));
+    free(K);
+    return 0;
 }

@@ -1,8 +1,8 @@
-long  Y(int  RN) {
-   long  mwHk[2] =  {0,  1};
-  if   (RN  ==   0)   return 0;
- for   (int   cnQ7  =  2;   cnQ7   <=  RN;  cnQ7++)  {
-  mwHk[cnQ7 %  2]   =   mwHk[0]  +  mwHk[1];
-   }
-   return mwHk[RN   %   2];
+long X(int icw) {
+    long Pl1[2] = {0, 1};
+    if (icw == 0) return 0;
+    for (int SEOl = 2; SEOl <= icw; SEOl++) {
+        Pl1[SEOl % 2] = Pl1[0] + Pl1[1];
+    }
+    return Pl1[icw % 2];
 }

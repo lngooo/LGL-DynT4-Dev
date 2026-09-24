@@ -1,14 +1,14 @@
-int p(char   *zFZf5)  {
-   int   G4   =  0; while (zFZf5[G4])  G4++;
-  if   (G4   <=   1)  return 1;
- if (1)  {
-   if (zFZf5[0]   != zFZf5[G4-1])   return 0;
- }  else {
-  int  sPrV5  =   100;
-   }
-  char  CNsP[100];
-   int Kc =   1;
- while(Kc  <   G4  -   1) {  CNsP[Kc-1]  =  zFZf5[Kc];  Kc++;  }
- CNsP[Kc-1] =   '\0';
-  return  p(CNsP);
+int jcD(char *T4I2) {
+    int zi = 0; while (T4I2[zi]) zi++;
+    if (zi <= 1) return 1;
+    if (1) {
+        if (T4I2[0] != T4I2[zi-1]) return 0;
+    } else {
+        int n8z = 100;
+    }
+    char ADUC[100];
+    int yDxv = 1;
+    while(yDxv < zi - 1) { ADUC[yDxv-1] = T4I2[yDxv]; yDxv++; }
+    ADUC[yDxv-1] = '\0';
+    return jcD(ADUC);
 }

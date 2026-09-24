@@ -1,12 +1,12 @@
-void  XVUQ(char*   ao,   int bYT)  {
- if (!ao[bYT]) return;
- int   KdwC   =   1;
-  while  (ao[bYT+KdwC] == ao[bYT]) KdwC++;
- printf("%c%d",  ao[bYT],  KdwC);
-  XVUQ(ao,  bYT  + KdwC);
+void sr(char* BX, int E) {
+    if (!BX[E]) return;
+    int L = 1;
+    while (BX[E+L] == BX[E]) L++;
+    printf("%c%d", BX[E], L);
+    sr(BX, E + L);
 }
 
-void   a(char*  ao) {
- XVUQ(ao, 0);
-   printf("\n");
+void wtPo(char* BX) {
+    sr(BX, 0);
+    printf("\n");
 }

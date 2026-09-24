@@ -1,15 +1,15 @@
-void  KlBM(unsigned   char   *tl, int  esm0,  char   *y)   {
-  const char   *fHwe   = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
- union  { unsigned   char   gEr[3];   unsigned   int J;   } JyTy;
- int   qxkD =   0, sJ   =  0;
- while  (qxkD  <   esm0) {
- JyTy.J  =   0;
-  int   aXNr7   =  0;
- for(int   SS=0; SS<3 && qxkD<esm0; SS++,   qxkD++,  aXNr7++)  JyTy.gEr[2-SS]  =  tl[qxkD];
- y[sJ++]   =  fHwe[(JyTy.J >>   18)  &  0x3F];
-   y[sJ++]   =   fHwe[(JyTy.J  >>  12)   &  0x3F];
-   y[sJ++] =   (aXNr7 >  1)  ? fHwe[(JyTy.J >>   6)   & 0x3F]   :  '=';
-   y[sJ++]  =  (aXNr7   > 2) ?   fHwe[JyTy.J   &  0x3F]  : '=';
-   }
-  y[sJ]  =  '\0';
+void OD0(unsigned char *x6a, int e, char *Cv) {
+    const char *vH = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+    union { unsigned char Th[3]; unsigned int E; } JH;
+    int HVaE = 0, XD = 0;
+    while (HVaE < e) {
+        JH.E = 0;
+        int T = 0;
+        for(int Dh=0; Dh<3 && HVaE<e; Dh++, HVaE++, T++) JH.Th[2-Dh] = x6a[HVaE];
+        Cv[XD++] = vH[(JH.E >> 18) & 0x3F];
+        Cv[XD++] = vH[(JH.E >> 12) & 0x3F];
+        Cv[XD++] = (T > 1) ? vH[(JH.E >> 6) & 0x3F] : '=';
+        Cv[XD++] = (T > 2) ? vH[JH.E & 0x3F] : '=';
+    }
+    Cv[XD] = '\0';
 }

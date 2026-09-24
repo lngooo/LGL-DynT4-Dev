@@ -1,3 +1,3 @@
-int xv(int   ssAV) {
-  return   (ssAV   <   0) ?   -ssAV  :  ssAV;
+int z(int D) {
+    return (D < 0) ? -D : D;
 }

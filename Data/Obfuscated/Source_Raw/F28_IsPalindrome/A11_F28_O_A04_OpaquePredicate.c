@@ -5,29 +5,27 @@
  * Implementation Logic: OpaquePredicate derived from seed.
  * Input Format: <string>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 #include <string.h>
 
-int  opyP7(char  *pxU) {
-  int  bcOP = 0;   while  (pxU[bcOP])  bcOP++;
- char  qP[100];
-  for   (int   NLW   = 0;   NLW <  bcOP; NLW++)  {
-   if ((NLW * NLW   +  NLW)  %  2 == 0)  qP[NLW]   =  pxU[NLW];
-   }
-  for (int  NLW   =  0;   NLW  <   bcOP; NLW++) {
- if  (pxU[NLW]  !=  qP[bcOP   -   1 -   NLW])   return 0;
-   }
- return 1;
+int W7(char *uN7W) {
+    int R = 0; while (uN7W[R]) R++;
+    char Y[100];
+    for (int f = 0; f < R; f++) {
+        if ((f * f + f) % 2 == 0) Y[f] = uN7W[f];
+    }
+    for (int f = 0; f < R; f++) {
+        if (uN7W[f] != Y[R - 1 - f]) return 0;
+    }
+    return 1;
 }
 
-int   main(int argc,  char   *argv[]) {
-   if (argc  <  2)   return  1;
-   char   *pxU =   argv[1];
-   int qYd   = opyP7(pxU);
-  printf("%d\n",  qYd);
-  return  0;
+int main(int a, char *v[]) {
+    if (a < 2) return 1;
+    char *uN7W = v[1];
+    int u = W7(uN7W);
+    printf("%d\n", u);
+    return 0;
 }

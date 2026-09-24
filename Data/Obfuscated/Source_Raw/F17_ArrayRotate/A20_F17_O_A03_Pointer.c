@@ -4,31 +4,29 @@
  * File: A20_F17_O_A03_Pointer.c
  * Logic: Auxiliary seed with direct pointer manipulation.
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-void  sR0(int S[],   int FWHl9,  int  tY)   {
- if  (FWHl9 ==  0)  return;
-  tY  %=  FWHl9;
- int *PUe7 = malloc(tY *  sizeof(int));
-   memcpy(PUe7,  S,  tY   *   sizeof(int));
-   memmove(S, S +   tY, (FWHl9   -  tY) *  sizeof(int));
- memcpy(S  + (FWHl9   -  tY), PUe7,  tY  *  sizeof(int));
- free(PUe7);
+void mC(int zn[], int B4y, int xq) {
+    if (B4y == 0) return;
+    xq %= B4y;
+    int *s = malloc(xq * sizeof(int));
+    memcpy(s, zn, xq * sizeof(int));
+    memmove(zn, zn + xq, (B4y - xq) * sizeof(int));
+    memcpy(zn + (B4y - xq), s, xq * sizeof(int));
+    free(s);
 }
 
-int   main(int  argc,  char  *argv[])   {
- if   (argc   < 3)  return 0;
- int   tY   = atoi(argv[1]);
- int  FWHl9   =  argc -  2;
- int  *S = (int*)malloc(FWHl9  *   sizeof(int));
-   for(int S5=0;   S5<FWHl9; S5++) S[S5] = atoi(argv[S5+2]);
-  sR0(S,   FWHl9, tY);
-  for(int  S5=0;  S5<FWHl9; S5++)  printf("%d ",   S[S5]);
- printf("\n");
-   free(S);
-  return  0;
+int main(int HwoL, char *D[]) {
+    if (HwoL < 3) return 0;
+    int xq = atoi(D[1]);
+    int B4y = HwoL - 2;
+    int *zn = (int*)malloc(B4y * sizeof(int));
+    for(int BCD=0; BCD<B4y; BCD++) zn[BCD] = atoi(D[BCD+2]);
+    mC(zn, B4y, xq);
+    for(int BCD=0; BCD<B4y; BCD++) printf("%d ", zn[BCD]);
+    printf("\n");
+    free(zn);
+    return 0;
 }

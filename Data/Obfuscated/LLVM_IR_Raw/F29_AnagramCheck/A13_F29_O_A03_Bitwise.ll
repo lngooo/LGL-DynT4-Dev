@@ -1,6 +1,6 @@
-@__const.uz.OGN = constant [26 x i32] [i32 2, i32 3, i32 5, i32 7, i32 11, i32 13, i32 17, i32 19, i32 23, i32 29, i32 31, i32 37, i32 41, i32 43, i32 47, i32 53, i32 59, i32 61, i32 67, i32 71, i32 73, i32 79, i32 83, i32 89, i32 97, i32 101]
+@__const.G51.rJx = constant [26 x i32] [i32 2, i32 3, i32 5, i32 7, i32 11, i32 13, i32 17, i32 19, i32 23, i32 29, i32 31, i32 37, i32 41, i32 43, i32 47, i32 53, i32 59, i32 61, i32 67, i32 71, i32 73, i32 79, i32 83, i32 89, i32 97, i32 101]
 @.str = constant [4 x i8] c"%d\0A\00"
-define dso_local i32 @uz(i8* %0, i8* %1) {
+define dso_local i32 @G51(i8* %0, i8* %1) {
   %3 = alloca i32
   %4 = alloca i8*
   %5 = alloca i8*
@@ -107,7 +107,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   %13 = load i8**, i8*** %5
   %14 = getelementptr inbounds i8*, i8** %13, i64 2
   %15 = load i8*, i8** %14
-  %16 = call i32 @uz(i8* %12, i8* %15)
+  %16 = call i32 @G51(i8* %12, i8* %15)
   %17 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str, i64 0, i64 0), i32 %16)
   store i32 0, i32* %3
   br label %18

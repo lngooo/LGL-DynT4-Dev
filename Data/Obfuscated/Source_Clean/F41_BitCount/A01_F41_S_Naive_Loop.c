@@ -1,8 +1,8 @@
-int  XP(uint32_t   PxOw)   {
- int  Bqm =  0;
-   while (PxOw >   0) {
-   Bqm  +=  (PxOw  & 1);
-   PxOw >>=  1;
- }
- return   Bqm;
+int y4(uint32_t BSc) {
+    int vcb = 0;
+    while (BSc > 0) {
+        vcb += (BSc & 1);
+        BSc >>= 1;
+    }
+    return vcb;
 }

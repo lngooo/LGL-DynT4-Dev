@@ -1,10 +1,10 @@
-int  hd(int ELw8[],  int  Wky2, int jdbS2) {
- if   (Wky2   ==  0)  return -1;
-   int h  = 0, yYOS   =  Wky2   -  1;
-   while  (h  < yYOS) {
-  int   MKI = h +  (yYOS   -   h)   /   2;
-   if  (ELw8[MKI]   <  jdbS2)   h   =   MKI   + 1;
-  else   yYOS =  MKI;
-   }
-   return   (ELw8[h]  ==   jdbS2)  ? h  :  -1;
+int B(int Jqi[], int L2, int avD) {
+    if (L2 == 0) return -1;
+    int cj = 0, MdX = L2 - 1;
+    while (cj < MdX) {
+        int FYK = cj + (MdX - cj) / 2;
+        if (Jqi[FYK] < avD) cj = FYK + 1;
+        else MdX = FYK;
+    }
+    return (Jqi[cj] == avD) ? cj : -1;
 }

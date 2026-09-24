@@ -1,5 +1,5 @@
 @.str = constant [4 x i8] c"%d\0A\00"
-define dso_local i32 @x(i8* %0, i8* %1) {
+define dso_local i32 @TEM(i8* %0, i8* %1) {
   %3 = alloca i32
   %4 = alloca i8*
   %5 = alloca i8*
@@ -63,7 +63,7 @@ define dso_local i32 @x(i8* %0, i8* %1) {
   %48 = load i8*, i8** %4
   %49 = getelementptr inbounds i8, i8* %48, i64 1
   %50 = load i8*, i8** %5
-  %51 = call i32 @x(i8* %49, i8* %50)
+  %51 = call i32 @TEM(i8* %49, i8* %50)
   store i32 %51, i32* %3
   store i32 1, i32* %7
   br label %52
@@ -75,7 +75,7 @@ define dso_local i32 @x(i8* %0, i8* %1) {
 }
 declare i64 @strlen(i8*)
 declare i8* @strchr(i8*, i32)
-define dso_local i32 @k(i8* %0, i8* %1) {
+define dso_local i32 @vO(i8* %0, i8* %1) {
   %3 = alloca i8*
   %4 = alloca i8*
   %5 = alloca [256 x i8]
@@ -86,7 +86,7 @@ define dso_local i32 @k(i8* %0, i8* %1) {
   %9 = call i8* @strcpy(i8* %7, i8* %8)
   %10 = load i8*, i8** %3
   %11 = getelementptr inbounds [256 x i8], [256 x i8]* %5, i64 0, i64 0
-  %12 = call i32 @x(i8* %10, i8* %11)
+  %12 = call i32 @TEM(i8* %10, i8* %11)
   ret i32 %12
 }
 declare i8* @strcpy(i8*, i8*)
@@ -110,7 +110,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   %13 = load i8**, i8*** %5
   %14 = getelementptr inbounds i8*, i8** %13, i64 2
   %15 = load i8*, i8** %14
-  %16 = call i32 @k(i8* %12, i8* %15)
+  %16 = call i32 @vO(i8* %12, i8* %15)
   %17 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str, i64 0, i64 0), i32 %16)
   store i32 0, i32* %3
   br label %18

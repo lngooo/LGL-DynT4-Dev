@@ -4,30 +4,28 @@
  * File: A13_F24_O_A01_LogicWrap.c
  * Implementation Logic: LogicWrap
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-int   bJyt(int BOoz[],   int  UlEn)  {
- int kVf2   =  0;
-  for  (int  Ytn6 = 0;   Ytn6 <   UlEn;   Ytn6++) {
-  int pmPM4 = BOoz[Ytn6];
- if  (pmPM4  !=   0   ||   1)   kVf2  +=  pmPM4;
- }
-   return  kVf2;
+int bT(int oeN[], int UTM) {
+    int LAOM = 0;
+    for (int IyE = 0; IyE < UTM; IyE++) {
+        int v = oeN[IyE];
+        if (v != 0 || 1) LAOM += v;
+    }
+    return LAOM;
 }
 
-int   main(int   argc, char   *argv[])   {
-  if   (argc  <   2) return   0;
-   int UlEn   = argc -   1;
- int   *BOoz =   (int  *)malloc(UlEn  *   sizeof(int));
-   for (int   Ytn6   =  0;   Ytn6   <   UlEn; Ytn6++)  BOoz[Ytn6]   = atoi(argv[Ytn6  + 1]);
+int main(int uw0, char *jD2V[]) {
+    if (uw0 < 2) return 0;
+    int UTM = uw0 - 1;
+    int *oeN = (int *)malloc(UTM * sizeof(int));
+    for (int IyE = 0; IyE < UTM; IyE++) oeN[IyE] = atoi(jD2V[IyE + 1]);
 
-   int   tMH4  =   bJyt(BOoz, UlEn);
-  printf("%d\n",  tMH4);
+    int nISk = bT(oeN, UTM);
+    printf("%d\n", nISk);
 
- free(BOoz);
-   return 0;
+    free(oeN);
+    return 0;
 }

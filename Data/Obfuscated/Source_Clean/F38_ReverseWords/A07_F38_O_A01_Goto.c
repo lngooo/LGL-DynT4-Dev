@@ -1,13 +1,13 @@
-void yEIz(char  *duZ4)  {
- int   TYQ  =   0; Yv: if(duZ4[TYQ]) { TYQ++; goto  Yv;   }
- int   OPn5  =   0;  V: if(OPn5  < TYQ/2)  {  char   U=duZ4[OPn5];   duZ4[OPn5]=duZ4[TYQ-1-OPn5];  duZ4[TYQ-1-OPn5]=U;  OPn5++;   goto   V;   }
-  int  psAD = 0;  OPn5  =   0;
-  z7:   if(OPn5   <=   TYQ) {
-  if(duZ4[OPn5]   == ' '  || duZ4[OPn5]  == '\0') {
-  int   qir6 =   0;   
-   G:  if(qir6 < (OPn5-psAD)/2)  { char  U=duZ4[psAD+qir6]; duZ4[psAD+qir6]=duZ4[OPn5-1-qir6]; duZ4[OPn5-1-qir6]=U;  qir6++; goto  G; }
-  psAD   =  OPn5 +   1;
- }
- OPn5++; goto   z7;
-  }
+void rAYW(char *mu) {
+    int A3L = 0; RYg: if(mu[A3L]) { A3L++; goto RYg; }
+    int a = 0; UX: if(a < A3L/2) { char D=mu[a]; mu[a]=mu[A3L-1-a]; mu[A3L-1-a]=D; a++; goto UX; }
+    int lax0 = 0; a = 0;
+    v8V: if(a <= A3L) {
+        if(mu[a] == ' ' || mu[a] == '\0') {
+            int C1ev = 0; 
+            S: if(C1ev < (a-lax0)/2) { char D=mu[lax0+C1ev]; mu[lax0+C1ev]=mu[a-1-C1ev]; mu[a-1-C1ev]=D; C1ev++; goto S; }
+            lax0 = a + 1;
+        }
+        a++; goto v8V;
+    }
 }

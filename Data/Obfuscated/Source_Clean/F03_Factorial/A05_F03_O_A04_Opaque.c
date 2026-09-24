@@ -1,7 +1,7 @@
-long long HKa(int   SLfB7)  {
- if (SLfB7 <=   0)  {
-   if  ((SLfB7  *   SLfB7 +   7) >   0) return   1;
-  else return   0;
-   }
- return  (long   long)SLfB7 * HKa(SLfB7  -  1);
+long long uhX(int G0aQ) {
+    if (G0aQ <= 0) {
+        if ((G0aQ * G0aQ + 7) > 0) return 1;
+        else return 0;
+    }
+    return (long long)G0aQ * uhX(G0aQ - 1);
 }

@@ -1,45 +1,60 @@
 @.str = constant [3 x i8] c"%u\00"
-define dso_local i32 @EXU(i32 %0) {
+define dso_local i32 @GC(i32 %0) {
   %2 = alloca i32
   %3 = alloca i32
   %4 = alloca i32
+  %5 = alloca i32
+  %6 = alloca i32
   store i32 %0, i32* %2
   store i32 0, i32* %3
   store i32 0, i32* %4
-  br label %7
-7:
-  %8 = load i32, i32* %4
-  %9 = icmp sge i32 %8, 32
-  br i1 %9, label %10, label %11
-10:
-  br label %30
-11:
-  %12 = load i32, i32* %2
-  %13 = load i32, i32* %4
-  %14 = lshr i32 %12, %13
-  %15 = and i32 %14, 1
-  %16 = load i32, i32* %2
-  %17 = load i32, i32* %4
-  %18 = add nsw i32 %17, 1
-  %19 = lshr i32 %16, %18
-  %20 = and i32 %19, 1
-  %21 = icmp ne i32 %15, %20
-  br i1 %21, label %22, label %27
+  br label %9
+9:
+  %10 = load i32, i32* %4
+  %11 = icmp sge i32 %10, 32
+  br i1 %11, label %12, label %13
+12:
+  br label %44
+13:
+  %15 = load i32, i32* %2
+  %16 = load i32, i32* %4
+  %17 = lshr i32 %15, %16
+  %18 = and i32 %17, 1
+  store i32 %18, i32* %5
+  %20 = load i32, i32* %4
+  %21 = icmp eq i32 %20, 31
+  br i1 %21, label %22, label %23
 22:
-  %23 = load i32, i32* %4
-  %24 = shl i32 1, %23
-  %25 = load i32, i32* %3
-  %26 = or i32 %25, %24
-  store i32 %26, i32* %3
-  br label %27
-27:
-  %28 = load i32, i32* %4
-  %29 = add nsw i32 %28, 1
-  store i32 %29, i32* %4
-  br label %7
-30:
-  %31 = load i32, i32* %3
-  ret i32 %31
+  br label %29
+23:
+  %24 = load i32, i32* %2
+  %25 = load i32, i32* %4
+  %26 = add nsw i32 %25, 1
+  %27 = lshr i32 %24, %26
+  %28 = and i32 %27, 1
+  br label %29
+29:
+  %30 = phi i32 [ 0, %22 ], [ %28, %23 ]
+  store i32 %30, i32* %6
+  %31 = load i32, i32* %5
+  %32 = load i32, i32* %6
+  %33 = icmp ne i32 %31, %32
+  br i1 %33, label %34, label %39
+34:
+  %35 = load i32, i32* %4
+  %36 = shl i32 1, %35
+  %37 = load i32, i32* %3
+  %38 = or i32 %37, %36
+  store i32 %38, i32* %3
+  br label %39
+39:
+  %42 = load i32, i32* %4
+  %43 = add nsw i32 %42, 1
+  store i32 %43, i32* %4
+  br label %9
+44:
+  %45 = load i32, i32* %3
+  ret i32 %45
 }
 define dso_local i32 @main(i32 %0, i8** %1) {
   %3 = alloca i32
@@ -63,7 +78,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   %16 = trunc i64 %15 to i32
   store i32 %16, i32* %6
   %17 = load i32, i32* %6
-  %18 = call i32 @EXU(i32 %17)
+  %18 = call i32 @GC(i32 %17)
   %19 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str, i64 0, i64 0), i32 %18)
   store i32 0, i32* %3
   br label %21

@@ -4,30 +4,28 @@
 * File: A07_F37_S_StrpbrkJump.c
 * Logic: Identifies segments of non-space characters and copies them forward.
 */
-
-
 #include <stdio.h>
 #include <string.h>
 
-void Ya(char*  MSC)  {
- char  YLFm[4096]   = {0};
- char  *vK9  = MSC;
- char  *IxRd6 =  " \t\n\r\v\f";
-  while   (*vK9) {
- int   IJ =  strcspn(vK9,   IxRd6);
-  if (IJ  > 0) {
- strncat(YLFm, vK9,   IJ);
-   vK9  +=  IJ;
-   }  else {
-   vK9++;
- }
-   }
-   strcpy(MSC,  YLFm);
+void B(char* qz) {
+    char jWHC[4096] = {0};
+    char *N = qz;
+    char *f = " \t\n\r\v\f";
+    while (*N) {
+        int en1 = strcspn(N, f);
+        if (en1 > 0) {
+            strncat(jWHC, N, en1);
+            N += en1;
+        } else {
+            N++;
+        }
+    }
+    strcpy(qz, jWHC);
 }
 
-int   main(int   argc, char* argv[])   {
-  if (argc   <   2)  return 0;
- Ya(argv[1]);
- printf("%s\n",  argv[1]);
-  return   0;
+int main(int L, char* wQ[]) {
+    if (L < 2) return 0;
+    B(wQ[1]);
+    printf("%s\n", wQ[1]);
+    return 0;
 }

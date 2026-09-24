@@ -5,24 +5,22 @@
 * Implementation Logic: Uses qsort and memcmp for a standard library approach.
 * Input Format: <string1> <string2>
 */
-
-
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
 
-int CkP(const  void* jqeQ, const void*   UUWT)   {   return  (*(char*)jqeQ   - *(char*)UUWT);   }
+int s(const void* V, const void* HZ) { return (*(char*)V - *(char*)HZ); }
 
-int Au1(char*  flRl,   char*   L)  {
- int  RQ =  strlen(flRl), LHGL3   = strlen(L);
-  if   (RQ   != LHGL3)   return   0;
-   qsort(flRl,   RQ,  1,   CkP);
- qsort(L,   LHGL3,   1,  CkP);
- return  memcmp(flRl, L, RQ) == 0;
+int pYy(char* S02a, char* qnj) {
+    int bbP = strlen(S02a), fxDX = strlen(qnj);
+    if (bbP != fxDX) return 0;
+    qsort(S02a, bbP, 1, s);
+    qsort(qnj, fxDX, 1, s);
+    return memcmp(S02a, qnj, bbP) == 0;
 }
 
-int main(int   argc, char*   argv[])   {
-  if   (argc  <  3)  return   0;
-  printf("%d\n",   Au1(argv[1], argv[2]));
- return 0;
+int main(int CO, char* JkMC[]) {
+    if (CO < 3) return 0;
+    printf("%d\n", pYy(JkMC[1], JkMC[2]));
+    return 0;
 }

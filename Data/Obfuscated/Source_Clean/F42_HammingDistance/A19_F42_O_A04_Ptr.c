@@ -1,6 +1,6 @@
-int IkoA2(unsigned int   XEsp, unsigned   int   d) {
-  unsigned   int   VU1   =  XEsp ^ d;
-  int UG3  =  __builtin_popcount(VU1);
- int   *dD9 =  &UG3;
- return *dD9;
+int ysg(unsigned int XKm, unsigned int IQ25) {
+    unsigned int BCK = XKm ^ IQ25;
+    int G = __builtin_popcount(BCK);
+    int *U6bP = &G;
+    return *U6bP;
 }

@@ -1,5 +1,5 @@
 @.str = constant [4 x i8] c"%d\0A\00"
-define dso_local i32 @tOA(i32 %0, i32 %1) {
+define dso_local i32 @JfnU(i32 %0, i32 %1) {
   %3 = alloca i32
   %4 = alloca i32
   store i32 %0, i32* %3
@@ -16,7 +16,7 @@ define dso_local i32 @tOA(i32 %0, i32 %1) {
   %14 = sub nsw i32 %5, %13
   ret i32 %14
 }
-define dso_local i32 @Fi(i32* %0, i32 %1) {
+define dso_local i32 @U5Ai(i32* %0, i32 %1) {
   %3 = alloca i32*
   %4 = alloca i32
   %5 = alloca i32
@@ -43,7 +43,7 @@ define dso_local i32 @Fi(i32* %0, i32 %1) {
   %22 = sext i32 %21 to i64
   %23 = getelementptr inbounds i32, i32* %20, i64 %22
   %24 = load i32, i32* %23
-  %25 = call i32 @tOA(i32 %19, i32 %24)
+  %25 = call i32 @JfnU(i32 %19, i32 %24)
   store i32 %25, i32* %5
   br label %26
 26:
@@ -111,7 +111,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
 44:
   %45 = load i32*, i32** %7
   %46 = load i32, i32* %6
-  %47 = call i32 @Fi(i32* %45, i32 %46)
+  %47 = call i32 @U5Ai(i32* %45, i32 %46)
   %48 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str, i64 0, i64 0), i32 %47)
   %49 = load i32*, i32** %7
   call void @free(i8* %50)

@@ -1,15 +1,15 @@
-void tM3(char*  dQl)  {
-  int  wUE4  = 1;
-  for   (int U =   0;  dQl[U]; U++)   {
-  if (dQl[U] == 32) {
-  wUE4 =  1;
- continue;
-   }
-  if (wUE4) {
-   if   (dQl[U]   >= 97)  dQl[U] &=   ~(1 <<  5);
- wUE4   = 0;
-  }  else   {
-  if  (dQl[U]  <=  90 && dQl[U]  >=   65)   dQl[U]   |=  (1 <<  5);
-   }
-   }
+void fk(char* tkzc) {
+    int pA = 1;
+    for (int Za = 0; tkzc[Za]; Za++) {
+        if (tkzc[Za] == 32) {
+            pA = 1;
+            continue;
+        }
+        if (pA) {
+            if (tkzc[Za] >= 97) tkzc[Za] &= ~(1 << 5);
+            pA = 0;
+        } else {
+            if (tkzc[Za] <= 90 && tkzc[Za] >= 65) tkzc[Za] |= (1 << 5);
+        }
+    }
 }

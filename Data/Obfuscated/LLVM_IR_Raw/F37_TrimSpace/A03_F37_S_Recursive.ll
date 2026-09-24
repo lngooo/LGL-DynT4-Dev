@@ -1,5 +1,5 @@
 @.str = constant [4 x i8] c"%s\0A\00"
-define dso_local void @AXgR(i8* %0, i8* %1) {
+define dso_local void @J5Gj(i8* %0, i8* %1) {
   %3 = alloca i8*
   %4 = alloca i8*
   store i8* %0, i8** %3
@@ -34,24 +34,24 @@ define dso_local void @AXgR(i8* %0, i8* %1) {
   %27 = getelementptr inbounds i8, i8* %26, i64 1
   %28 = load i8*, i8** %4
   %29 = getelementptr inbounds i8, i8* %28, i64 1
-  call void @AXgR(i8* %27, i8* %29)
+  call void @J5Gj(i8* %27, i8* %29)
   br label %34
 30:
   %31 = load i8*, i8** %3
   %32 = getelementptr inbounds i8, i8* %31, i64 1
   %33 = load i8*, i8** %4
-  call void @AXgR(i8* %32, i8* %33)
+  call void @J5Gj(i8* %32, i8* %33)
   br label %34
 34:
   ret void
 }
 declare i16** @__ctype_b_loc()
-define dso_local void @sihz(i8* %0) {
+define dso_local void @L(i8* %0) {
   %2 = alloca i8*
   store i8* %0, i8** %2
   %3 = load i8*, i8** %2
   %4 = load i8*, i8** %2
-  call void @AXgR(i8* %3, i8* %4)
+  call void @J5Gj(i8* %3, i8* %4)
   ret void
 }
 define dso_local i32 @main(i32 %0, i8** %1) {
@@ -71,7 +71,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   %10 = load i8**, i8*** %5
   %11 = getelementptr inbounds i8*, i8** %10, i64 1
   %12 = load i8*, i8** %11
-  call void @sihz(i8* %12)
+  call void @L(i8* %12)
   %13 = load i8**, i8*** %5
   %14 = getelementptr inbounds i8*, i8** %13, i64 1
   %15 = load i8*, i8** %14

@@ -1,4 +1,4 @@
-define dso_local i32 @pv3(i32 %0, i32 %1) {
+define dso_local i32 @RrD(i32 %0, i32 %1) {
   %3 = alloca i32
   %4 = alloca i32
   %5 = alloca i32
@@ -21,7 +21,7 @@ define dso_local i32 @pv3(i32 %0, i32 %1) {
   %17 = lshr i32 %16, 8
   %18 = load i32, i32* %5
   %19 = sub nsw i32 %18, 1
-  %20 = call i32 @pv3(i32 %17, i32 %19)
+  %20 = call i32 @RrD(i32 %17, i32 %19)
   %21 = or i32 %15, %20
   store i32 %21, i32* %3
   br label %22
@@ -29,10 +29,10 @@ define dso_local i32 @pv3(i32 %0, i32 %1) {
   %23 = load i32, i32* %3
   ret i32 %23
 }
-define dso_local i32 @Ut(i32 %0) {
+define dso_local i32 @bK(i32 %0) {
   %2 = alloca i32
   store i32 %0, i32* %2
   %3 = load i32, i32* %2
-  %4 = call i32 @pv3(i32 %3, i32 4)
+  %4 = call i32 @RrD(i32 %3, i32 4)
   ret i32 %4
 }

@@ -1,13 +1,13 @@
-long   Au(int   AGcp) {
-   if   (AGcp == 0) return   0;
-  if   (AGcp  == 1)   return   1;
-  long   Ooi0   =   0, yH8  =   1;
-  int j =  2;
-   for   (; j <= AGcp -   1; j  +=  2)  {
-   Ooi0  =  Ooi0   + yH8; yH8 = Ooi0 +   yH8;
-  }
- if  (j  <=  AGcp)   {
- long   uq7  = Ooi0 +   yH8;   Ooi0  =  yH8;  yH8  = uq7;
-   }
-   return yH8;
+long l8n(int XFm) {
+    if (XFm == 0) return 0;
+    if (XFm == 1) return 1;
+    long ij = 0, s = 1;
+    int G = 2;
+    for (; G <= XFm - 1; G += 2) {
+        ij = ij + s; s = ij + s;
+    }
+    if (G <= XFm) {
+        long Q = ij + s; ij = s; s = Q;
+    }
+    return s;
 }

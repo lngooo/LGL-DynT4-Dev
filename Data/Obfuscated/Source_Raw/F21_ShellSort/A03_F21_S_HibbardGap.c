@@ -5,24 +5,22 @@
  * Implementation Logic: 使用 Hibbard 增量序列 (2^k-1) 
  * Input Format: <int1> <int2> ...
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 #include <string.h>
 
-void  Nfm(int *qr2, int   rDBY)  {
-   int  O3=(int)(log10(rDBY+1)/log10(2));while(O3>0){int  S=(1<<O3)-1;for(int  Y=S;Y<rDBY;Y++){int   M=qr2[Y],l=Y;while(l>=S&&qr2[l-S]>M){qr2[l]=qr2[l-S];l-=S;}qr2[l]=M;}O3--;}
+void pKbs(int *P, int D) {
+    int i19=(int)(log10(D+1)/log10(2));while(i19>0){int c5I6=(1<<i19)-1;for(int v=c5I6;v<D;v++){int e=P[v],g1ZA=v;while(g1ZA>=c5I6&&P[g1ZA-c5I6]>e){P[g1ZA]=P[g1ZA-c5I6];g1ZA-=c5I6;}P[g1ZA]=e;}i19--;}
 }
 
-int main(int   argc,   char *argv[])   {
-   if (argc   < 2)  return 0;
-  int rDBY   =  argc -   1;
-  int  *qr2  =  (int  *)malloc(rDBY   *  sizeof(int));
- for  (int   Y =  0; Y   <  rDBY;  Y++)  qr2[Y] =   atoi(argv[Y+1]);
-   Nfm(qr2,  rDBY);
- for (int   Y   =  0;   Y  <  rDBY;  Y++)  printf("%d%c",   qr2[Y],  Y   ==  rDBY   - 1   ?  '\n' :   ' ');
-  free(qr2);
- return 0;
+int main(int ruW, char *zfJ[]) {
+    if (ruW < 2) return 0;
+    int D = ruW - 1;
+    int *P = (int *)malloc(D * sizeof(int));
+    for (int v = 0; v < D; v++) P[v] = atoi(zfJ[v+1]);
+    pKbs(P, D);
+    for (int v = 0; v < D; v++) printf("%d%c", P[v], v == D - 1 ? '\n' : ' ');
+    free(P);
+    return 0;
 }

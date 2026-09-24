@@ -4,29 +4,27 @@
  * File: A20_F11_O_A01_WhileTrue.c
  * Implementation Logic: Infinite loop with internal break conditions.
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int V4(int  CW9[],  int   DqI,  int OcF) {
- int  HFz  = 0, HHkE   =   DqI   -   1;
-   while   (1)  {
-   if   (HFz >   HHkE)  return -1;
- int   tCpv  = HFz  +   (HHkE - HFz) /  2;
- if   (CW9[tCpv]  ==   OcF) return tCpv;
- if  (CW9[tCpv] < OcF)   HFz   =   tCpv +   1;
-   else   HHkE  = tCpv   - 1;
- }
+int SC9(int KEXp[], int XDR, int L3bE) {
+    int q = 0, y = XDR - 1;
+    while (1) {
+        if (q > y) return -1;
+        int RS = q + (y - q) / 2;
+        if (KEXp[RS] == L3bE) return RS;
+        if (KEXp[RS] < L3bE) q = RS + 1;
+        else y = RS - 1;
+    }
 }
 
-int  main(int   argc,   char   *argv[])   {
-   if   (argc   <   3)  return 1;
- int OcF  = atoi(argv[1]);
-   int   DqI   =   argc   -  2;
-   int   *CW9 = (int*)malloc(DqI   *  sizeof(int));
-  for(int  h=0;   h<DqI; h++) CW9[h] =  atoi(argv[h+2]);
-  printf("%d\n",   V4(CW9,   DqI,   OcF));
- free(CW9);
-   return  0;
+int main(int Zu, char *wHIa[]) {
+    if (Zu < 3) return 1;
+    int L3bE = atoi(wHIa[1]);
+    int XDR = Zu - 2;
+    int *KEXp = (int*)malloc(XDR * sizeof(int));
+    for(int psf=0; psf<XDR; psf++) KEXp[psf] = atoi(wHIa[psf+2]);
+    printf("%d\n", SC9(KEXp, XDR, L3bE));
+    free(KEXp);
+    return 0;
 }

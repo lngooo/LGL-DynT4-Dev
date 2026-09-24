@@ -1,6 +1,6 @@
-int tk(char*  D,  char*   pv)   {
-   if  (strlen(pv) ==  0)  return 0;
-  char*  N   = strstr(D,   pv);
-  if   (N)   return  (int)(N - D);
- return   -1;
+int ih(char* k, char* K) {
+    if (strlen(K) == 0) return 0;
+    char* Qm = strstr(k, K);
+    if (Qm) return (int)(Qm - k);
+    return -1;
 }

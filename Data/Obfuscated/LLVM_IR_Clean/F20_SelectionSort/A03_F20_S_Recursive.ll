@@ -1,4 +1,4 @@
-define dso_local void @R(i32* %0, i32 %1) {
+define dso_local void @j(i32* %0, i32 %1) {
   %3 = alloca i32*
   %4 = alloca i32
   %5 = alloca i32
@@ -69,7 +69,7 @@ define dso_local void @R(i32* %0, i32 %1) {
   %56 = getelementptr inbounds i32, i32* %55, i64 1
   %57 = load i32, i32* %4
   %58 = sub nsw i32 %57, 1
-  call void @R(i32* %56, i32 %58)
+  call void @j(i32* %56, i32 %58)
   br label %61
 61:
   ret void

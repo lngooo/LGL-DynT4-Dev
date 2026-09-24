@@ -1,3 +1,3 @@
-unsigned   int  U(unsigned  int kLm1) {
-   return kLm1 ^ (kLm1  >>  1);
+unsigned int K(unsigned int F) {
+    return F ^ (F >> 1);
 }

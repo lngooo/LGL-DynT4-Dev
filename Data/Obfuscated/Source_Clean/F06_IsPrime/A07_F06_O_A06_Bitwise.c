@@ -1,10 +1,10 @@
-int x(int   i)  {
-   if  (i  <  2)   return 0;
-   long long  uZgv   =  1;
-  for   (int   XTgk  =  1;   XTgk <  i; XTgk++) {
-   long   long  iDqk  =  0;
-   for(int oahd=0;   oahd<XTgk;   oahd++) iDqk  =   (iDqk + uZgv) %  i;
-   uZgv   =  iDqk;
-   }
- return   (uZgv   ==   (long long)i  -  1);
+int QH(int At) {
+    if (At < 2) return 0;
+    long long dJ8 = 1;
+    for (int OR = 1; OR < At; OR++) {
+        long long JFdw = 0;
+        for(int YHuS=0; YHuS<OR; YHuS++) JFdw = (JFdw + dJ8) % At;
+        dJ8 = JFdw;
+    }
+    return (dJ8 == (long long)At - 1);
 }

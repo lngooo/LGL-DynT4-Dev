@@ -1,5 +1,5 @@
-int Foy(const char   *wlna) {
-   int IbJ5  =  0;
-  while   (*(wlna++))   IbJ5++;
- return  IbJ5;
+int xL(const char *zTVc) {
+    int PYC = 0;
+    while (*(zTVc++)) PYC++;
+    return PYC;
 }

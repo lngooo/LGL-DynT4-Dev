@@ -1,5 +1,5 @@
 @.str = constant [4 x i8] c"%d\0A\00"
-define dso_local i64 @MBu8(i64 %0, i32 %1) {
+define dso_local i64 @F(i64 %0, i32 %1) {
   %3 = alloca i64
   %4 = alloca i64
   %5 = alloca i32
@@ -34,7 +34,7 @@ define dso_local i64 @MBu8(i64 %0, i32 %1) {
 27:
   %28 = load i64, i64* %6
   %29 = load i32, i32* %5
-  %30 = call i64 @MBu8(i64 %28, i32 %29)
+  %30 = call i64 @F(i64 %28, i32 %29)
   br label %31
 31:
   %32 = phi i64 [ %26, %25 ], [ %30, %27 ]
@@ -44,7 +44,7 @@ define dso_local i64 @MBu8(i64 %0, i32 %1) {
   %35 = load i64, i64* %3
   ret i64 %35
 }
-define dso_local i32 @cqbF(i32 %0) {
+define dso_local i32 @T(i32 %0) {
   %2 = alloca i32
   store i32 %0, i32* %2
   %3 = load i32, i32* %2
@@ -56,7 +56,7 @@ define dso_local i32 @cqbF(i32 %0) {
   %7 = load i32, i32* %2
   %8 = sext i32 %7 to i64
   %9 = load i32, i32* %2
-  %10 = call i64 @MBu8(i64 %8, i32 %9)
+  %10 = call i64 @F(i64 %8, i32 %9)
   %11 = trunc i64 %10 to i32
   br label %12
 12:
@@ -81,7 +81,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   %11 = getelementptr inbounds i8*, i8** %10, i64 1
   %12 = load i8*, i8** %11
   %13 = call i32 @atoi(i8* %12)
-  %14 = call i32 @cqbF(i32 %13)
+  %14 = call i32 @T(i32 %13)
   %15 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str, i64 0, i64 0), i32 %14)
   store i32 0, i32* %3
   br label %16

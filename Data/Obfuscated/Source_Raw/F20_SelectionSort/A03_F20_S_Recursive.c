@@ -4,32 +4,30 @@
  * File: A03_F20_S_Recursive.c
  * Implementation Logic: Recursive
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-void   R(int   XsA0[],   int c0)  {
-  if  (c0 <=  1)  return;
-  int Lns = 0;
-   for (int   BkMB  =   1;  BkMB   < c0; BkMB++)   if (XsA0[BkMB] <   XsA0[Lns]) Lns  =  BkMB;
- int   sa   =  XsA0[0]; XsA0[0]   =   XsA0[Lns]; XsA0[Lns]  =   sa;
-  R(XsA0   + 1,  c0 - 1);
+void j(int P[], int M) {
+    if (M <= 1) return;
+    int Gk = 0;
+    for (int z = 1; z < M; z++) if (P[z] < P[Gk]) Gk = z;
+    int R84D = P[0]; P[0] = P[Gk]; P[Gk] = R84D;
+    j(P + 1, M - 1);
 }
 
-int  main(int argc,  char *argv[])  {
-  if (argc   <  2)   return  0;
-  int  c0   =   argc  - 1;
- int   *XsA0 =   (int *)malloc(c0 *   sizeof(int));
- for (int   BkMB  =  0;  BkMB < c0;  BkMB++)  XsA0[BkMB]  = atoi(argv[BkMB  +   1]);
+int main(int KGt, char *B7[]) {
+    if (KGt < 2) return 0;
+    int M = KGt - 1;
+    int *P = (int *)malloc(M * sizeof(int));
+    for (int z = 0; z < M; z++) P[z] = atoi(B7[z + 1]);
 
-  R(XsA0,  c0);
+    j(P, M);
 
-  for  (int   BkMB  =  0;  BkMB   <   c0;   BkMB++) {
-  printf("%d%s",   XsA0[BkMB],  (BkMB ==   c0   - 1 ?   "" : " "));
- }
-  printf("\n");
-   free(XsA0);
- return  0;
+    for (int z = 0; z < M; z++) {
+        printf("%d%s", P[z], (z == M - 1 ? "" : " "));
+    }
+    printf("\n");
+    free(P);
+    return 0;
 }

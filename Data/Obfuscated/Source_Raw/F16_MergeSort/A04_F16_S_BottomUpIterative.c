@@ -4,44 +4,42 @@
  * File: A04_F16_S_BottomUpIterative.c
  * Implementation Logic: BottomUpIterative
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-void   DYKJ9(int   Ijw[],  int  OFe,  int zR6)  {
- int nUC7 = zR6   -   OFe   + 1;
-  for (int mgE  = 1;   mgE <= nUC7   -  1;  mgE  =   2 * mgE) {
- for   (int n   =   0;   n < nUC7   -  1;  n  +=  2  * mgE)  {
-  int   VBa7  =   n +   mgE   - 1;
- int  Npgr8  =  (n +  2  *   mgE   - 1 <  nUC7 -  1)   ?   (n   +  2  *  mgE - 1) :   (nUC7  - 1);
-  if   (VBa7  >=  nUC7)   VBa7   = nUC7-1;
- // Simplified   merge  logic   for  snippet
- int CHxu   =   VBa7 -  n   +   1,   l =  Npgr8 - VBa7;
-  int  *im7  =   (int*)malloc(CHxu*4), *U5 = (int*)malloc(l*4);
-  for(int  YVXO=0; YVXO<CHxu;  YVXO++)   im7[YVXO]=Ijw[n+YVXO];
-   for(int   YVXO=0;  YVXO<l;   YVXO++)   U5[YVXO]=Ijw[VBa7+1+YVXO];
- int   DOiU=0,   n4=0,  PjQ=n;
- while(DOiU<CHxu &&  n4<l) Ijw[PjQ++]   = (im7[DOiU]<=U5[n4])   ?  im7[DOiU++]  :   U5[n4++];
-  while(DOiU<CHxu)   Ijw[PjQ++] = im7[DOiU++];   while(n4<l) Ijw[PjQ++]  = U5[n4++];
-   free(im7); free(U5);
- }
- }
+void KUOd(int xD[], int pj, int BAu) {
+    int O = BAu - pj + 1;
+    for (int Ar = 1; Ar <= O - 1; Ar = 2 * Ar) {
+        for (int Pkq = 0; Pkq < O - 1; Pkq += 2 * Ar) {
+            int zp = Pkq + Ar - 1;
+            int bp = (Pkq + 2 * Ar - 1 < O - 1) ? (Pkq + 2 * Ar - 1) : (O - 1);
+            if (zp >= O) zp = O-1;
+            // Simplified merge logic for snippet
+            int DFJ = zp - Pkq + 1, BP5c = bp - zp;
+            int *kr = (int*)malloc(DFJ*4), *bq = (int*)malloc(BP5c*4);
+            for(int QJl=0; QJl<DFJ; QJl++) kr[QJl]=xD[Pkq+QJl];
+            for(int QJl=0; QJl<BP5c; QJl++) bq[QJl]=xD[zp+1+QJl];
+            int U=0, Ybd3=0, u=Pkq;
+            while(U<DFJ && Ybd3<BP5c) xD[u++] = (kr[U]<=bq[Ybd3]) ? kr[U++] : bq[Ybd3++];
+            while(U<DFJ) xD[u++] = kr[U++]; while(Ybd3<BP5c) xD[u++] = bq[Ybd3++];
+            free(kr); free(bq);
+        }
+    }
 }
 
-int   main(int argc,   char   *argv[])   {
-  if (argc < 2)   return 0;
-   int  nUC7 =  argc   -   1;
- int  *Ijw   =  (int   *)malloc(nUC7 *   sizeof(int));
- for  (int   DOiU   =  0;  DOiU < nUC7;  DOiU++) Ijw[DOiU]   =   atoi(argv[DOiU  + 1]);
+int main(int e59, char *xQQ4[]) {
+    if (e59 < 2) return 0;
+    int O = e59 - 1;
+    int *xD = (int *)malloc(O * sizeof(int));
+    for (int U = 0; U < O; U++) xD[U] = atoi(xQQ4[U + 1]);
 
-  DYKJ9(Ijw,   0, nUC7 -  1);
+    KUOd(xD, 0, O - 1);
 
-  for  (int  DOiU   = 0;  DOiU <  nUC7;   DOiU++)  {
- printf("%d%s",   Ijw[DOiU],  (DOiU ==  nUC7 -  1   ? ""   :   " "));
- }
-   printf("\n");
- free(Ijw);
- return  0;
+    for (int U = 0; U < O; U++) {
+        printf("%d%s", xD[U], (U == O - 1 ? "" : " "));
+    }
+    printf("\n");
+    free(xD);
+    return 0;
 }

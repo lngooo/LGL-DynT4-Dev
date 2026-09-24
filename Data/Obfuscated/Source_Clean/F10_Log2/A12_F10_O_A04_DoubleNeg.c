@@ -1,9 +1,9 @@
-int LxuN(int  DoZS9) {
-  int  T = 0,   S   =   31, p  = 0;
- while (!!(T <=   S)) {
-  int   ft   =   T  +  (S -   T)   /  2;
- if   (!!((1ULL   << ft) <= (unsigned  int)DoZS9))   {  p = ft;  T  =  ft  + 1; }
-   else S   = ft  -   1;
-  }
-   return  p;
+int vw(int Nr4U) {
+    int x = 0, lhz = 31, Dr1y = 0;
+    while (!!(x <= lhz)) {
+        int ZAP4 = x + (lhz - x) / 2;
+        if (!!((1ULL << ZAP4) <= (unsigned int)Nr4U)) { Dr1y = ZAP4; x = ZAP4 + 1; }
+        else lhz = ZAP4 - 1;
+    }
+    return Dr1y;
 }

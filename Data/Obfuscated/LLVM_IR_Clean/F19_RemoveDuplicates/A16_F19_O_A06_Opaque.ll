@@ -1,4 +1,4 @@
-define dso_local i32 @nvZ(i32* %0, i32 %1) {
+define dso_local i32 @a(i32* %0, i32 %1) {
   %3 = alloca i32*
   %4 = alloca i32
   %5 = alloca [128 x i32]

@@ -4,36 +4,34 @@
  * File: A15_F22_O_A03_TailRec.c
  * Implementation Logic: TailRec
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-void  qCk(int  sZ[], int mKM) {
-   if  (mKM <=  1)  return;
-   int   Qe5   = 1;
-YFQg6:
-  if   (Qe5 < mKM) {
- int  KxO =  sZ[Qe5],  EIs  =  Qe5 -  1;
-  while   (EIs   >=   0   && sZ[EIs]  >   KxO)  { sZ[EIs+1]  =   sZ[EIs];  EIs--;   }
-  sZ[EIs+1]   =  KxO;
-   Qe5++;   goto YFQg6;
- }
+void E8s(int k[], int cs7) {
+    if (cs7 <= 1) return;
+    int Lb = 1;
+M:
+    if (Lb < cs7) {
+        int Zu = k[Lb], ny1 = Lb - 1;
+        while (ny1 >= 0 && k[ny1] > Zu) { k[ny1+1] = k[ny1]; ny1--; }
+        k[ny1+1] = Zu;
+        Lb++; goto M;
+    }
 }
 
-int   main(int  argc, char *argv[])  {
-  if (argc   < 2)   return 0;
-  int   mKM =  argc -   1;
-  int *sZ   =   (int *)malloc(mKM * sizeof(int));
-   for (int  Qe5  =  0; Qe5   <   mKM;  Qe5++) sZ[Qe5]  =   atoi(argv[Qe5   +  1]);
+int main(int Q, char *yW[]) {
+    if (Q < 2) return 0;
+    int cs7 = Q - 1;
+    int *k = (int *)malloc(cs7 * sizeof(int));
+    for (int Lb = 0; Lb < cs7; Lb++) k[Lb] = atoi(yW[Lb + 1]);
 
-   qCk(sZ, mKM);
+    E8s(k, cs7);
 
- for   (int   Qe5   = 0;   Qe5  < mKM; Qe5++) {
- printf("%d%s", sZ[Qe5], (Qe5   == mKM   -   1   ?   "" :   " "));
-   }
- printf("\n");
- free(sZ);
-  return 0;
+    for (int Lb = 0; Lb < cs7; Lb++) {
+        printf("%d%s", k[Lb], (Lb == cs7 - 1 ? "" : " "));
+    }
+    printf("\n");
+    free(k);
+    return 0;
 }

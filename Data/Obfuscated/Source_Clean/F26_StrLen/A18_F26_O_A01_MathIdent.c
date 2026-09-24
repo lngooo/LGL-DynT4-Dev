@@ -1,7 +1,7 @@
-int   A(const   char   *ng)  {
- int  z   = 0;
- while  (ng[z]) {
-   z = (z +   1);
-  }
-   return (z *   2) /  2;
+int X(const char *UUr) {
+    int OGv = 0;
+    while (UUr[OGv]) {
+        OGv = (OGv + 1);
+    }
+    return (OGv * 2) / 2;
 }

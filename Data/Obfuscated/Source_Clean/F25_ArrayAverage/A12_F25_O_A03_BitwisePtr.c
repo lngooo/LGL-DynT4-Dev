@@ -1,7 +1,7 @@
-double  s4(int   maGb[], int Wl) {
-   double  RiG  =   0;
-   for   (int   MbN = 0;  MbN  < (Wl &  0x7FFFFFFF); MbN++)   {
-  RiG +=   *(maGb + MbN);
-   }
- return RiG /  (double)Wl;
+double C(int uK[], int JH0) {
+    double Sbi = 0;
+    for (int Y = 0; Y < (JH0 & 0x7FFFFFFF); Y++) {
+        Sbi += *(uK + Y);
+    }
+    return Sbi / (double)JH0;
 }

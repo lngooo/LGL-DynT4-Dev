@@ -1,4 +1,4 @@
-define dso_local i32 @aO(i32 %0) {
+define dso_local i32 @sjmv(i32 %0) {
   %2 = alloca i32
   %3 = alloca i32
   %4 = alloca i8*

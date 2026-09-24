@@ -1,6 +1,6 @@
-@ko.igP = internal global [256 x i32] zeroinitializer
+@lU.Nv = internal global [256 x i32] zeroinitializer
 @.str = constant [3 x i8] c"%d\00"
-define dso_local i32 @ko(i8* %0) {
+define dso_local i32 @lU(i8* %0) {
   %2 = alloca i8*
   %3 = alloca i32
   %4 = alloca i32
@@ -20,7 +20,7 @@ define dso_local i32 @ko(i8* %0) {
   %15 = load i32, i32* %3
   %16 = add nsw i32 48, %15
   %17 = sext i32 %16 to i64
-  %18 = getelementptr inbounds [256 x i32], [256 x i32]* @ko.igP, i64 0, i64 %17
+  %18 = getelementptr inbounds [256 x i32], [256 x i32]* @lU.Nv, i64 0, i64 %17
   store i32 %14, i32* %18
   br label %19
 19:
@@ -43,14 +43,14 @@ define dso_local i32 @ko(i8* %0) {
   %32 = load i32, i32* %4
   %33 = add nsw i32 97, %32
   %34 = sext i32 %33 to i64
-  %35 = getelementptr inbounds [256 x i32], [256 x i32]* @ko.igP, i64 0, i64 %34
+  %35 = getelementptr inbounds [256 x i32], [256 x i32]* @lU.Nv, i64 0, i64 %34
   store i32 %31, i32* %35
   %36 = load i32, i32* %4
   %37 = add nsw i32 10, %36
   %38 = load i32, i32* %4
   %39 = add nsw i32 65, %38
   %40 = sext i32 %39 to i64
-  %41 = getelementptr inbounds [256 x i32], [256 x i32]* @ko.igP, i64 0, i64 %40
+  %41 = getelementptr inbounds [256 x i32], [256 x i32]* @lU.Nv, i64 0, i64 %40
   store i32 %37, i32* %41
   br label %42
 42:
@@ -60,7 +60,7 @@ define dso_local i32 @ko(i8* %0) {
   br label %24
 45:
   store i32 0, i32* %5
-  store i32* getelementptr inbounds ([256 x i32], [256 x i32]* @ko.igP, i64 0, i64 0), i32** %6
+  store i32* getelementptr inbounds ([256 x i32], [256 x i32]* @lU.Nv, i64 0, i64 0), i32** %6
   br label %48
 48:
   %49 = load i8*, i8** %2
@@ -104,7 +104,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   %10 = load i8**, i8*** %5
   %11 = getelementptr inbounds i8*, i8** %10, i64 1
   %12 = load i8*, i8** %11
-  %13 = call i32 @ko(i8* %12)
+  %13 = call i32 @lU(i8* %12)
   %14 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str, i64 0, i64 0), i32 %13)
   store i32 0, i32* %3
   br label %15

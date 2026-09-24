@@ -5,33 +5,31 @@
  * Implementation Logic: PtrLogic
  * Input Format: <data_string> <key_string>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
 
-void   i3(char *s7,  char  *F9)  {
-  for(char   *OPv   =   s7;   *OPv  !=   0; OPv++)   {
-   int  GBg   = (int)(OPv - s7);
- int   od3 =   0;   while(F9[od3]) od3++;
- *OPv ^=  *(F9 +  (GBg  % od3));
- }
+void Yq(char *lNc, char *BZe) {
+    for(char *u2vg = lNc; *u2vg != 0; u2vg++) {
+        int bf12 = (int)(u2vg - lNc);
+        int NNKm = 0; while(BZe[NNKm]) NNKm++;
+        *u2vg ^= *(BZe + (bf12 % NNKm));
+    }
 }
 
-int  main(int  argc,  char *argv[])   {
- if   (argc   <   3)   return  0;
- char   *s7   =   argv[1];
- char   *F9  = argv[2];
- int  sJ   =  0;
-   while   (s7[sJ]) sJ++;
+int main(int tS, char *c4[]) {
+    if (tS < 3) return 0;
+    char *lNc = c4[1];
+    char *BZe = c4[2];
+    int sJ = 0;
+    while (lNc[sJ]) sJ++;
 
-   i3(s7,  F9);
+    Yq(lNc, BZe);
 
- for (int Eeki  =   0; Eeki < sJ; Eeki++)   {
-  printf("%02x",   (unsigned   char)s7[Eeki]);
-   }
-   printf("\n");
-   return 0;
+    for (int Ct = 0; Ct < sJ; Ct++) {
+        printf("%02x", (unsigned char)lNc[Ct]);
+    }
+    printf("\n");
+    return 0;
 }

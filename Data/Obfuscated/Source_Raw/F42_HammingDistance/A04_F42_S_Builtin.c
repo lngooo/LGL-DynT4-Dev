@@ -5,19 +5,17 @@
  * Implementation Logic: Leverages compiler intrinsic __builtin_popcount on the XOR result.
  * Input Format: <uint1> <uint2>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int  c(unsigned   int  kNX, unsigned   int   Mw)  {
-  return  __builtin_popcount(kNX   ^   Mw);
+int oBpD(unsigned int PA, unsigned int NU) {
+    return __builtin_popcount(PA ^ NU);
 }
 
-int  main(int  argc,   char*  argv[]) {
-   if   (argc   < 3)   return 0;
- unsigned  int sBFg =  (unsigned   int)strtoul(argv[1], NULL,  10);
- unsigned  int Pqpe   = (unsigned int)strtoul(argv[2],  NULL, 10);
-  printf("%d", c(sBFg,  Pqpe));
-   return   0;
+int main(int QW9, char* cB[]) {
+    if (QW9 < 3) return 0;
+    unsigned int evQq = (unsigned int)strtoul(cB[1], NULL, 10);
+    unsigned int P = (unsigned int)strtoul(cB[2], NULL, 10);
+    printf("%d", oBpD(evQq, P));
+    return 0;
 }

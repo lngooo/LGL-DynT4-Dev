@@ -1,9 +1,9 @@
-void  ze1(const  char  *sB5,   char  *OjWn)   {
-  int   cE8 =  0, C   =  0,  BHJ9   =  strlen(sB5);
-   while (cE8 < BHJ9)  {
- int  ewt = 1;
-  while   (cE8  +   1 <   BHJ9  && sB5[cE8] ==   sB5[cE8+1])   { ewt++; cE8++;   }
- C  +=  sprintf(OjWn   + C,   "%c%d",  sB5[cE8], ewt);
-  cE8++;
-   }
+void X1(const char *R, char *Fh) {
+    int AS = 0, XnX = 0, Df = strlen(R);
+    while (AS < Df) {
+        int V67a = 1;
+        while (AS + 1 < Df && R[AS] == R[AS+1]) { V67a++; AS++; }
+        XnX += sprintf(Fh + XnX, "%c%d", R[AS], V67a);
+        AS++;
+    }
 }

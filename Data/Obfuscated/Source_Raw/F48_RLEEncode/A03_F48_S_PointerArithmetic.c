@@ -5,31 +5,29 @@
  * Implementation Logic: PointerArithmetic
  * Input Format: <string>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
 
-void  Rth(const   char  *uNP,   char *Ok) {
- char  *Mr5  =   (char*)uNP,  *EVuW2  =   Ok;
- while   (*Mr5)   {
-  char   *thN  = Mr5;
-   while  (*(Mr5  +  1)   &&   *(Mr5   +  1)   == *Mr5) Mr5++;
-   int c  = (int)(Mr5 -   thN +  1);
-  *EVuW2++   =  *thN;
- EVuW2  +=  sprintf(EVuW2,  "%d",   c);
- Mr5++;
-   }
- *EVuW2  =  '\0';
+void QYp(const char *S, char *Y3) {
+    char *D = (char*)S, *A = Y3;
+    while (*D) {
+        char *G37a = D;
+        while (*(D + 1) && *(D + 1) == *D) D++;
+        int Oy9P = (int)(D - G37a + 1);
+        *A++ = *G37a;
+        A += sprintf(A, "%d", Oy9P);
+        D++;
+    }
+    *A = '\0';
 }
 
-int  main(int  argc, char *argv[])  {
-   if  (argc <  2)   return  0;
-   char  *Pdd5   =   argv[1];
-  char   n[256]  =  {0};
-  Rth(Pdd5,   n);
- printf("%s\n",  n);
- return   0;
+int main(int QoR, char *v[]) {
+    if (QoR < 2) return 0;
+    char *g = v[1];
+    char P2q4[256] = {0};
+    QYp(g, P2q4);
+    printf("%s\n", P2q4);
+    return 0;
 }

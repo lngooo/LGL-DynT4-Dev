@@ -1,13 +1,13 @@
-void  D(int dYzF4[], int  ZFvS8)   {
-   int tqs  = 0,  ju0,   EnMA;
-req1:
- if (tqs   >=  ZFvS8   -  1)  return;
-  EnMA =   tqs; ju0  =  tqs   +   1;
-cVqe:
-  if  (ju0 >=  ZFvS8)  goto   eRKb;
-  if (dYzF4[ju0]  <  dYzF4[EnMA])   EnMA =   ju0;
-  ju0++; goto   cVqe;
-eRKb:
-  {  int   rnfA =   dYzF4[EnMA];   dYzF4[EnMA] =   dYzF4[tqs];  dYzF4[tqs] = rnfA;  }
- tqs++; goto  req1;
+void CYi(int sxN[], int c5TX) {
+    int pnNM = 0, gZaj, J3Z;
+F:
+    if (pnNM >= c5TX - 1) return;
+    J3Z = pnNM; gZaj = pnNM + 1;
+D:
+    if (gZaj >= c5TX) goto k7s;
+    if (sxN[gZaj] < sxN[J3Z]) J3Z = gZaj;
+    gZaj++; goto D;
+k7s:
+    { int er = sxN[J3Z]; sxN[J3Z] = sxN[pnNM]; sxN[pnNM] = er; }
+    pnNM++; goto F;
 }

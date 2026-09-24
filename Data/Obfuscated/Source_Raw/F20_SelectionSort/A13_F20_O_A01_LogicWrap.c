@@ -4,37 +4,35 @@
  * File: A13_F20_O_A01_LogicWrap.c
  * Implementation Logic: LogicWrap
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-void   SHi(int  jLr[],  int JQcO1)  {
-   int   ZtOu  = 0;
-  while (ZtOu  <  JQcO1)  {
-   int  M8 = ZtOu;
-  for (int Ndgz4   =  ZtOu   +   1;  Ndgz4 <   JQcO1;   Ndgz4++)   {
-   int  H  =  (jLr[Ndgz4]   <   jLr[M8]);
-   switch(H)  {  case   1:   M8 = Ndgz4;  break;   default: break;   }
-  }
-  int v7   =   jLr[ZtOu]; jLr[ZtOu] = jLr[M8]; jLr[M8]  =  v7;
-   ZtOu++;
- }
+void Y(int qHUa[], int iOCO) {
+    int c = 0;
+    while (c < iOCO) {
+        int Vm = c;
+        for (int SIXk = c + 1; SIXk < iOCO; SIXk++) {
+            int nwn8 = (qHUa[SIXk] < qHUa[Vm]);
+            switch(nwn8) { case 1: Vm = SIXk; break; default: break; }
+        }
+        int RK = qHUa[c]; qHUa[c] = qHUa[Vm]; qHUa[Vm] = RK;
+        c++;
+    }
 }
 
-int main(int   argc, char   *argv[]) {
-   if  (argc  <   2)  return  0;
-   int  JQcO1 = argc   - 1;
-   int   *jLr  =  (int   *)malloc(JQcO1  *   sizeof(int));
-  for  (int   VnqD   =   0;  VnqD   < JQcO1;  VnqD++)  jLr[VnqD]  = atoi(argv[VnqD  +   1]);
+int main(int x, char *bt5[]) {
+    if (x < 2) return 0;
+    int iOCO = x - 1;
+    int *qHUa = (int *)malloc(iOCO * sizeof(int));
+    for (int G03 = 0; G03 < iOCO; G03++) qHUa[G03] = atoi(bt5[G03 + 1]);
 
-   SHi(jLr,  JQcO1);
+    Y(qHUa, iOCO);
 
-   for  (int   VnqD  = 0;   VnqD   < JQcO1;   VnqD++)  {
- printf("%d%s",   jLr[VnqD], (VnqD  ==  JQcO1   -   1 ? "" :   " "));
-   }
-  printf("\n");
-   free(jLr);
-  return  0;
+    for (int G03 = 0; G03 < iOCO; G03++) {
+        printf("%d%s", qHUa[G03], (G03 == iOCO - 1 ? "" : " "));
+    }
+    printf("\n");
+    free(qHUa);
+    return 0;
 }

@@ -1,6 +1,6 @@
 @.str = constant [4 x i8] c"%d \00"
 @.str.1 = constant [2 x i8] c"\0A\00"
-define dso_local i32 @lXJa(i8* %0, i8* %1) {
+define dso_local i32 @yX(i8* %0, i8* %1) {
   %3 = alloca i8*
   %4 = alloca i8*
   store i8* %0, i8** %3
@@ -12,7 +12,7 @@ define dso_local i32 @lXJa(i8* %0, i8* %1) {
   %11 = sub nsw i32 %7, %10
   ret i32 %11
 }
-define dso_local void @eWoi(i32* %0, i32 %1) {
+define dso_local void @Ey(i32* %0, i32 %1) {
   %3 = alloca i32*
   %4 = alloca i32
   store i32* %0, i32** %3
@@ -20,7 +20,7 @@ define dso_local void @eWoi(i32* %0, i32 %1) {
   %5 = load i32*, i32** %3
   %7 = load i32, i32* %4
   %8 = sext i32 %7 to i64
-  call void @qsort(i8* %6, i64 %8, i64 4, i32 (i8*, i8*)* @lXJa)
+  call void @qsort(i8* %6, i64 %8, i64 4, i32 (i8*, i8*)* @yX)
   ret void
 }
 declare void @qsort(i8*, i64, i64, i32 (i8*, i8*)*)
@@ -81,7 +81,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
 45:
   %46 = load i32*, i32** %7
   %47 = load i32, i32* %6
-  call void @eWoi(i32* %46, i32 %47)
+  call void @Ey(i32* %46, i32 %47)
   store i32 0, i32* %9
   br label %49
 49:

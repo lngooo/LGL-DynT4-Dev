@@ -1,7 +1,7 @@
-unsigned int  KM(unsigned   int  E,   unsigned   int  lxx) {
- return  E  ^ lxx;
+unsigned int k(unsigned int tmQ, unsigned int fZU) {
+    return tmQ ^ fZU;
 }
 
-unsigned  int bU(unsigned   int   Qbs)  {
-   return   KM(Qbs,   Qbs >>   1);
+unsigned int p3(unsigned int h) {
+    return k(h, h >> 1);
 }

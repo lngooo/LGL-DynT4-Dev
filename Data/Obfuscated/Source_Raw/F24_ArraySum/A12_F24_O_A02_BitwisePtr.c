@@ -4,29 +4,27 @@
  * File: A12_F24_O_A02_BitwisePtr.c
  * Implementation Logic: BitwisePtr
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-int   mlod(int EQG[],   int   eui5)   {
- int  cwWB  =   0;
-   for  (int iOSw   =  0;   iOSw < eui5; iOSw++) {
-   cwWB  =   cwWB  + *(EQG   +  (iOSw  &  ~0));
- }
-  return   cwWB;
+int rG(int M[], int lRsr) {
+    int A = 0;
+    for (int bY = 0; bY < lRsr; bY++) {
+        A = A + *(M + (bY & ~0));
+    }
+    return A;
 }
 
-int  main(int argc, char   *argv[]) {
- if   (argc   <  2)   return   0;
- int  eui5  =  argc  -   1;
-  int   *EQG   = (int   *)malloc(eui5   *  sizeof(int));
-   for   (int   iOSw  =   0;   iOSw   <  eui5;   iOSw++)  EQG[iOSw]   =   atoi(argv[iOSw +   1]);
+int main(int Qirr, char *MYOu[]) {
+    if (Qirr < 2) return 0;
+    int lRsr = Qirr - 1;
+    int *M = (int *)malloc(lRsr * sizeof(int));
+    for (int bY = 0; bY < lRsr; bY++) M[bY] = atoi(MYOu[bY + 1]);
 
- int yJYg9 =   mlod(EQG,   eui5);
- printf("%d\n", yJYg9);
+    int o = rG(M, lRsr);
+    printf("%d\n", o);
 
-  free(EQG);
-   return  0;
+    free(M);
+    return 0;
 }

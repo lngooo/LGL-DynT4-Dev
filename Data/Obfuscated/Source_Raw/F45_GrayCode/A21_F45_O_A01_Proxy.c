@@ -4,22 +4,20 @@
  * File: A21_F45_O_A01_Proxy.c
  * Implementation Logic: Functional proxying and parameter wrapping derived from A01.
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-unsigned int  KM(unsigned   int  E,   unsigned   int  lxx) {
- return  E  ^ lxx;
+unsigned int k(unsigned int tmQ, unsigned int fZU) {
+    return tmQ ^ fZU;
 }
 
-unsigned  int bU(unsigned   int   Qbs)  {
-   return   KM(Qbs,   Qbs >>   1);
+unsigned int p3(unsigned int h) {
+    return k(h, h >> 1);
 }
 
-int  main(int  argc, char*  argv[])  {
-   if   (argc  < 2)   return   0;
-  unsigned   int   Qbs =   (unsigned   int)strtoul(argv[1], NULL,   10);
- printf("%u",  bU(Qbs));
-   return   0;
+int main(int dtNV, char* a08p[]) {
+    if (dtNV < 2) return 0;
+    unsigned int h = (unsigned int)strtoul(a08p[1], NULL, 10);
+    printf("%u", p3(h));
+    return 0;
 }

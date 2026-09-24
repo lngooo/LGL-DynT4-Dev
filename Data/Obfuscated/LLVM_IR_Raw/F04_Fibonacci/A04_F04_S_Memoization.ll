@@ -1,7 +1,7 @@
-@Yaeh.FBLF = internal global [101 x i64] zeroinitializer
+@Q8W.wgK = internal global [101 x i64] zeroinitializer
 @.str = constant [3 x i8] c"0\0A\00"
 @.str.1 = constant [5 x i8] c"%ld\0A\00"
-define dso_local i64 @Yaeh(i32 %0) {
+define dso_local i64 @Q8W(i32 %0) {
   %2 = alloca i64
   %3 = alloca i32
   store i32 %0, i32* %3
@@ -16,28 +16,28 @@ define dso_local i64 @Yaeh(i32 %0) {
 9:
   %10 = load i32, i32* %3
   %11 = sext i32 %10 to i64
-  %12 = getelementptr inbounds [101 x i64], [101 x i64]* @Yaeh.FBLF, i64 0, i64 %11
+  %12 = getelementptr inbounds [101 x i64], [101 x i64]* @Q8W.wgK, i64 0, i64 %11
   %13 = load i64, i64* %12
   %14 = icmp ne i64 %13, 0
   br i1 %14, label %15, label %20
 15:
   %16 = load i32, i32* %3
   %17 = sext i32 %16 to i64
-  %18 = getelementptr inbounds [101 x i64], [101 x i64]* @Yaeh.FBLF, i64 0, i64 %17
+  %18 = getelementptr inbounds [101 x i64], [101 x i64]* @Q8W.wgK, i64 0, i64 %17
   %19 = load i64, i64* %18
   store i64 %19, i64* %2
   br label %31
 20:
   %21 = load i32, i32* %3
   %22 = sub nsw i32 %21, 1
-  %23 = call i64 @Yaeh(i32 %22)
+  %23 = call i64 @Q8W(i32 %22)
   %24 = load i32, i32* %3
   %25 = sub nsw i32 %24, 2
-  %26 = call i64 @Yaeh(i32 %25)
+  %26 = call i64 @Q8W(i32 %25)
   %27 = add nsw i64 %23, %26
   %28 = load i32, i32* %3
   %29 = sext i32 %28 to i64
-  %30 = getelementptr inbounds [101 x i64], [101 x i64]* @Yaeh.FBLF, i64 0, i64 %29
+  %30 = getelementptr inbounds [101 x i64], [101 x i64]* @Q8W.wgK, i64 0, i64 %29
   store i64 %27, i64* %30
   store i64 %27, i64* %2
   br label %31
@@ -77,7 +77,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   br label %29
 22:
   %24 = load i32, i32* %6
-  %25 = call i64 @Yaeh(i32 %24)
+  %25 = call i64 @Q8W(i32 %24)
   store i64 %25, i64* %8
   %26 = load i64, i64* %8
   %27 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.1, i64 0, i64 0), i64 %26)

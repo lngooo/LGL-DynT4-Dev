@@ -1,7 +1,7 @@
-int FVG(unsigned  int  ytw) {
- unsigned   int  R  = ytw   & 0xFFFF0000;
-  unsigned   int rn6  =   ytw   &  0x0000FFFF;
-   unsigned int y7 = R | rn6;
-   if   (y7   ==  0)  return  0;
-   return  (y7   & (y7  - 1))   ==  0;
+int LZ(unsigned int L7et) {
+    unsigned int n0 = L7et & 0xFFFF0000;
+    unsigned int iLMK = L7et & 0x0000FFFF;
+    unsigned int yOY = n0 | iLMK;
+    if (yOY == 0) return 0;
+    return (yOY & (yOY - 1)) == 0;
 }

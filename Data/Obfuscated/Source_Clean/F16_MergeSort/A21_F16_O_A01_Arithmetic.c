@@ -1,17 +1,17 @@
-void  EmJ(int CQ[],   int   LJJc0,   int  CXgL5) {
-   if (LJJc0  <   CXgL5)   {
- int vdMc9  = LJJc0 +  (CXgL5  -  LJJc0)  /  2;
-   EmJ(CQ,   LJJc0, vdMc9);
- EmJ(CQ,   vdMc9   + 1, CXgL5);
-   int  DeV3  =  CXgL5 -   LJJc0  +  1;
- int   *LOO   =   (int*)malloc(DeV3   *   sizeof(int));
-  int   Hz = LJJc0,  LSID   =   vdMc9  +  1,   ch   =   0;
-  while  (ch < DeV3)  {
-   int   oxKe8 =   (Hz <=  vdMc9 && (LSID  > CXgL5 || CQ[Hz]   <=   CQ[LSID]));
-   if (oxKe8)   LOO[ch++] = CQ[Hz++];
-  else  LOO[ch++]   =   CQ[LSID++];
- }
-   for  (int   TL8  =  0;   TL8 < DeV3;   TL8++)  CQ[LJJc0  +   TL8] =   LOO[TL8];
- free(LOO);
-   }
+void Kd(int Az4[], int UVu, int a0r) {
+    if (UVu < a0r) {
+        int Sz = UVu + (a0r - UVu) / 2;
+        Kd(Az4, UVu, Sz);
+        Kd(Az4, Sz + 1, a0r);
+        int Pn4I = a0r - UVu + 1;
+        int *Sw4Z = (int*)malloc(Pn4I * sizeof(int));
+        int Xm4t = UVu, c = Sz + 1, yUU = 0;
+        while (yUU < Pn4I) {
+            int HI = (Xm4t <= Sz && (c > a0r || Az4[Xm4t] <= Az4[c]));
+            if (HI) Sw4Z[yUU++] = Az4[Xm4t++];
+            else Sw4Z[yUU++] = Az4[c++];
+        }
+        for (int nfG = 0; nfG < Pn4I; nfG++) Az4[UVu + nfG] = Sw4Z[nfG];
+        free(Sw4Z);
+    }
 }

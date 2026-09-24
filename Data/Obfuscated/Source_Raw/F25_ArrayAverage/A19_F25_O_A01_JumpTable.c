@@ -4,28 +4,26 @@
  * File: A19_F25_O_A01_JumpTable.c
  * Implementation Logic: JumpTable
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-double   pH2(int Td1[],  int vE)   {
- double  GmE  =  0;   int   uAN9  =  0;
-YqSs:
-   if   (uAN9   <   vE) {   GmE +=  Td1[uAN9++];  goto YqSs;   }
-  return  GmE   / vE;
+double a(int ZAz9[], int w) {
+    double t1e = 0; int PtoS = 0;
+P:
+    if (PtoS < w) { t1e += ZAz9[PtoS++]; goto P; }
+    return t1e / w;
 }
 
-int main(int  argc, char  *argv[])  {
-  if   (argc  <   2)   return   0;
-   int   vE  = argc  -  1;
-  int  *Td1 = (int *)malloc(vE   *   sizeof(int));
-   for  (int uAN9   = 0;   uAN9 <  vE;  uAN9++)   Td1[uAN9] =   atoi(argv[uAN9   + 1]);
+int main(int Eb89, char *UP5[]) {
+    if (Eb89 < 2) return 0;
+    int w = Eb89 - 1;
+    int *ZAz9 = (int *)malloc(w * sizeof(int));
+    for (int PtoS = 0; PtoS < w; PtoS++) ZAz9[PtoS] = atoi(UP5[PtoS + 1]);
 
-   double   UANw =   pH2(Td1, vE);
- printf("%.2f\n", UANw);
+    double cj2 = a(ZAz9, w);
+    printf("%.2f\n", cj2);
 
- free(Td1);
- return 0;
+    free(ZAz9);
+    return 0;
 }

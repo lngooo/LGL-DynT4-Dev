@@ -1,4 +1,4 @@
-define dso_local i32 @axmM(i8* %0) {
+define dso_local i32 @C5(i8* %0) {
   %2 = alloca i32
   %3 = alloca i8*
   %4 = alloca i32

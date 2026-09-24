@@ -5,24 +5,22 @@
  * Implementation Logic: 纯指针偏移实现，不使用数组下标 
  * Input Format: <int1> <int2> ...
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 #include <string.h>
 
-void yMU(int   *aBcJ,   int A)   {
-   for(int oX=A/2;oX>0;oX/=2){for(int  *CO=aBcJ+oX;CO<aBcJ+A;CO++){int  kKbW=*CO,*Nw4=CO;while(Nw4>=aBcJ+oX&&*(Nw4-oX)>kKbW){*Nw4=*(Nw4-oX);Nw4-=oX;}*Nw4=kKbW;}}
+void t(int *SNY, int rSk7) {
+    for(int LD=rSk7/2;LD>0;LD/=2){for(int *jWL=SNY+LD;jWL<SNY+rSk7;jWL++){int OCQh=*jWL,*KE=jWL;while(KE>=SNY+LD&&*(KE-LD)>OCQh){*KE=*(KE-LD);KE-=LD;}*KE=OCQh;}}
 }
 
-int main(int   argc, char *argv[])   {
-   if   (argc <  2)   return 0;
-   int A  =  argc  -  1;
-  int   *aBcJ =   (int  *)malloc(A *   sizeof(int));
-   for  (int   JA2 = 0; JA2   <  A;   JA2++) aBcJ[JA2]   = atoi(argv[JA2+1]);
-   yMU(aBcJ,  A);
-   for   (int JA2   = 0;  JA2  < A;   JA2++)   printf("%d%c", aBcJ[JA2],  JA2   ==   A   - 1 ? '\n' : ' ');
-  free(aBcJ);
-  return 0;
+int main(int ruXU, char *ofqX[]) {
+    if (ruXU < 2) return 0;
+    int rSk7 = ruXU - 1;
+    int *SNY = (int *)malloc(rSk7 * sizeof(int));
+    for (int Tfw = 0; Tfw < rSk7; Tfw++) SNY[Tfw] = atoi(ofqX[Tfw+1]);
+    t(SNY, rSk7);
+    for (int Tfw = 0; Tfw < rSk7; Tfw++) printf("%d%c", SNY[Tfw], Tfw == rSk7 - 1 ? '\n' : ' ');
+    free(SNY);
+    return 0;
 }

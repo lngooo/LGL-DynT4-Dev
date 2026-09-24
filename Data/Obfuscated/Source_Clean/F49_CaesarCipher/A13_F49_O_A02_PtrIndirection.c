@@ -1,11 +1,11 @@
-void   kZHc(char *Ty,  int eGqu) {
+void NmoW(char *Hr, int in9) {
 
- char   *Kdwl =   Ty;
- int MTgn4 =   (eGqu %   26  + 26) % 26;
-   while(*Kdwl   !=  0)   {
- char **a  =  &Kdwl;
-  if(**a   >= 'A' &&   **a  <= 'Z')  **a   =  (**a   - 'A' +   MTgn4) %   26  + 'A';
-   else   if(**a   >=  'a'  &&  **a <= 'z')  **a  = (**a - 'a'   +  MTgn4)  %  26 +   'a';
-   Kdwl++;
-   }
+    char *FQe = Hr;
+    int Ma = (in9 % 26 + 26) % 26;
+    while(*FQe != 0) {
+        char **v0u3 = &FQe;
+        if(**v0u3 >= 'A' && **v0u3 <= 'Z') **v0u3 = (**v0u3 - 'A' + Ma) % 26 + 'A';
+        else if(**v0u3 >= 'a' && **v0u3 <= 'z') **v0u3 = (**v0u3 - 'a' + Ma) % 26 + 'a';
+        FQe++;
+    }
 }

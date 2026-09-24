@@ -1,5 +1,5 @@
-int JWL(const char  *QxxH) {
- const char *nuM = QxxH;
-   for  (;   *nuM;  nuM++);
-   return   (int)(size_t)(nuM   - QxxH);
+int OO(const char *WT) {
+    const char *I8 = WT;
+    for (; *I8; I8++);
+    return (int)(size_t)(I8 - WT);
 }

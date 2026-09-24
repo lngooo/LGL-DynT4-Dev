@@ -1,10 +1,10 @@
-void  VZ(char* ReR)   {
-   int  En7  =   16,  hqE  = 16;
-   while (*ReR)  {
- char FTN =   *ReR;
-   if   ((FTN   >=   'a'   &&  FTN   <=   'z')   ||  (FTN   >=   'A'  && FTN   <=  'Z')) {
-  *ReR =   FTN   ^  (En7 +   hqE);
-   }
- ReR++;
-   }
+void bb(char* lwI3) {
+    int CBT = 16, MqFb = 16;
+    while (*lwI3) {
+        char hJ = *lwI3;
+        if ((hJ >= 'a' && hJ <= 'z') || (hJ >= 'A' && hJ <= 'Z')) {
+            *lwI3 = hJ ^ (CBT + MqFb);
+        }
+        lwI3++;
+    }
 }

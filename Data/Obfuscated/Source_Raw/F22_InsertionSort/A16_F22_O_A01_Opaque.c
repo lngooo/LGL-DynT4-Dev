@@ -4,34 +4,32 @@
  * File: A16_F22_O_A01_Opaque.c
  * Implementation Logic: Opaque
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-void DNLY(int bL[],  int  S)   {
-  for   (int   TBe   =   1;   TBe   < S;   TBe++) {
-   if  ((TBe   *   TBe +   1)  >   0)   {
- int   gT3 = bL[TBe],  asnj  = TBe  -   1;
-  while  (asnj   >=   0 && bL[asnj]  >   gT3)  {   bL[asnj+1]   = bL[asnj];  asnj--; }
-   bL[asnj+1] = gT3;
-  }
-   }
+void e(int KG[], int IUh2) {
+    for (int M = 1; M < IUh2; M++) {
+        if ((M * M + 1) > 0) {
+            int QHHC = KG[M], rm1 = M - 1;
+            while (rm1 >= 0 && KG[rm1] > QHHC) { KG[rm1+1] = KG[rm1]; rm1--; }
+            KG[rm1+1] = QHHC;
+        }
+    }
 }
 
-int main(int argc, char  *argv[])   {
- if   (argc  < 2)   return  0;
-  int S   =  argc  -   1;
- int   *bL  =   (int  *)malloc(S * sizeof(int));
- for (int   TBe  = 0; TBe  < S;  TBe++) bL[TBe]   = atoi(argv[TBe  + 1]);
+int main(int pvp, char *oDu[]) {
+    if (pvp < 2) return 0;
+    int IUh2 = pvp - 1;
+    int *KG = (int *)malloc(IUh2 * sizeof(int));
+    for (int M = 0; M < IUh2; M++) KG[M] = atoi(oDu[M + 1]);
 
- DNLY(bL,  S);
+    e(KG, IUh2);
 
-  for   (int TBe  =   0;   TBe   <   S;   TBe++)   {
-   printf("%d%s",   bL[TBe], (TBe  ==   S  - 1  ?  ""  :   " "));
-   }
-  printf("\n");
-  free(bL);
-  return 0;
+    for (int M = 0; M < IUh2; M++) {
+        printf("%d%s", KG[M], (M == IUh2 - 1 ? "" : " "));
+    }
+    printf("\n");
+    free(KG);
+    return 0;
 }

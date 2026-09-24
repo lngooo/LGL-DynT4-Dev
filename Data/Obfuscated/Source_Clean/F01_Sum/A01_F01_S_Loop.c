@@ -1,7 +1,7 @@
-int   b3(int   MJ)   {
-   int  E1 =  0;
-   for  (int mF =   1;  mF  <=  MJ; mF++) {
-  E1 += mF;
-  }
- return  E1;
+int b(int poi) {
+    int R = 0;
+    for (int L = 1; L <= poi; L++) {
+        R += L;
+    }
+    return R;
 }

@@ -1,12 +1,12 @@
-int  NoZJ1(int tZDt9,   int Achr) {
-   int   sp = abs(tZDt9), hUhW  =  abs(Achr);
-  if (sp  *   hUhW ==  0)   return   sp  +   hUhW;
-   int ZMpr   = 1;
-   int KpQt   =  (sp   <  hUhW)   ?  sp  : hUhW;
-  for   (int  EPLJ7   =  1;   EPLJ7   <=   KpQt;   EPLJ7++)   {
-  int   YOO  = sp %  EPLJ7;
-   int  E9 =  hUhW  %   EPLJ7;
- if   (YOO   ==  0  &&  E9  ==   0)   ZMpr  =  EPLJ7;
- }
-   return   ZMpr;
+int Ifi(int oy, int Tn) {
+    int A = abs(oy), vIDA = abs(Tn);
+    if (A * vIDA == 0) return A + vIDA;
+    int n = 1;
+    int y5XL = (A < vIDA) ? A : vIDA;
+    for (int W = 1; W <= y5XL; W++) {
+        int Ea8w = A % W;
+        int Wy2 = vIDA % W;
+        if (Ea8w == 0 && Wy2 == 0) n = W;
+    }
+    return n;
 }

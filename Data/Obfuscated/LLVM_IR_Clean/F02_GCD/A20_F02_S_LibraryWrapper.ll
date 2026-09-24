@@ -1,4 +1,4 @@
-define dso_local i32 @zh(i32 %0, i32 %1) {
+define dso_local i32 @z(i32 %0, i32 %1) {
   %3 = alloca i32
   %4 = alloca i32
   store i32 %0, i32* %3
@@ -7,10 +7,10 @@ define dso_local i32 @zh(i32 %0, i32 %1) {
   %6 = call i32 @abs(i32 %5)
   %7 = load i32, i32* %4
   %8 = call i32 @abs(i32 %7)
-  %9 = call i32 @Av6(i32 %6, i32 %8)
+  %9 = call i32 @EEC(i32 %6, i32 %8)
   ret i32 %9
 }
-define internal i32 @Av6(i32 %0, i32 %1) {
+define internal i32 @EEC(i32 %0, i32 %1) {
   %3 = alloca i32
   %4 = alloca i32
   store i32 %0, i32* %3
@@ -26,7 +26,7 @@ define internal i32 @Av6(i32 %0, i32 %1) {
   %11 = load i32, i32* %3
   %12 = load i32, i32* %4
   %13 = srem i32 %11, %12
-  %14 = call i32 @Av6(i32 %10, i32 %13)
+  %14 = call i32 @EEC(i32 %10, i32 %13)
   br label %15
 15:
   %16 = phi i32 [ %8, %7 ], [ %14, %9 ]

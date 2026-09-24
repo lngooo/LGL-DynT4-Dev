@@ -1,4 +1,4 @@
-long FDaL(int   XlF)   {
-   if  (XlF <=   1)   return  (long)XlF;
-  return   FDaL(XlF   - 1) +  FDaL(XlF  - 2);
+long gYSh(int BC) {
+    if (BC <= 1) return (long)BC;
+    return gYSh(BC - 1) + gYSh(BC - 2);
 }

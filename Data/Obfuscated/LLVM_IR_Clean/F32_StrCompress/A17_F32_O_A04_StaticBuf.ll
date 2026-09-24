@@ -1,6 +1,6 @@
-@Fxe = internal global [2048 x i8] zeroinitializer
+@CQm = internal global [2048 x i8] zeroinitializer
 @.str = constant [5 x i8] c"%c%d\00"
-define dso_local void @i(i8* %0) {
+define dso_local void @ny(i8* %0) {
   %2 = alloca i8*
   %3 = alloca i32
   %4 = alloca i32
@@ -61,7 +61,7 @@ define dso_local void @i(i8* %0) {
 48:
   %49 = load i32, i32* %5
   %50 = sext i32 %49 to i64
-  %51 = getelementptr inbounds i8, i8* getelementptr inbounds ([2048 x i8], [2048 x i8]* @Fxe, i64 0, i64 0), i64 %50
+  %51 = getelementptr inbounds i8, i8* getelementptr inbounds ([2048 x i8], [2048 x i8]* @CQm, i64 0, i64 0), i64 %50
   %52 = load i8*, i8** %2
   %53 = load i32, i32* %7
   %54 = sext i32 %53 to i64
@@ -85,9 +85,9 @@ define dso_local void @i(i8* %0) {
 66:
   %67 = load i32, i32* %5
   %68 = sext i32 %67 to i64
-  %69 = getelementptr inbounds [2048 x i8], [2048 x i8]* @Fxe, i64 0, i64 %68
+  %69 = getelementptr inbounds [2048 x i8], [2048 x i8]* @CQm, i64 0, i64 %68
   store i8 0, i8* %69
-  %70 = call i32 @puts(i8* getelementptr inbounds ([2048 x i8], [2048 x i8]* @Fxe, i64 0, i64 0))
+  %70 = call i32 @puts(i8* getelementptr inbounds ([2048 x i8], [2048 x i8]* @CQm, i64 0, i64 0))
   store i32 0, i32* %6
   br label %71
 71:

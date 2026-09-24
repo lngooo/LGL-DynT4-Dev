@@ -1,10 +1,10 @@
-long   long   iUe(int   xnm4) {
- if  (xnm4 < 0)  return 0;
-  long  long L7[21]; 
-  L7[0] =  1;
- for   (int YTzt   = 1;  YTzt   <=   xnm4  &&   YTzt <  21;   YTzt++) {
-   int  R = (YTzt *  2) / 2;
-  L7[R]   =   L7[R   -   1]   *  YTzt;
-   }
-  return  L7[xnm4 > 20 ?  20   :   xnm4];
+long long D7u3(int Sp) {
+    if (Sp < 0) return 0;
+    long long o2XA[21]; 
+    o2XA[0] = 1;
+    for (int u = 1; u <= Sp && u < 21; u++) {
+        int T6Zy = (u * 2) / 2;
+        o2XA[T6Zy] = o2XA[T6Zy - 1] * u;
+    }
+    return o2XA[Sp > 20 ? 20 : Sp];
 }

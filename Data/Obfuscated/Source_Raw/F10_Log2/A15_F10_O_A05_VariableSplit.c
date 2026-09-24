@@ -5,28 +5,26 @@
  * Implementation Logic: VariableSplit
  * Input Format: <integer>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-int   J(int W)  {
- int  yK = 0,  n8   =   0;
-  if (W   >=  65536)   { W >>= 16; yK =   16;   }
-   if (W  >=  256)  {   W  >>= 8;   n8   =   8;  }
-   int   jxSc =  0;
-  if (W  >=  16)   {   W  >>= 4; jxSc =  4;   }
-  int  fiRk  =   0;
- while(W >>= 1) fiRk++;
- return yK   + n8   + jxSc  +   fiRk;
+int G2(int F3ke) {
+    int upvr = 0, G = 0;
+    if (F3ke >= 65536) { F3ke >>= 16; upvr = 16; }
+    if (F3ke >= 256) { F3ke >>= 8; G = 8; }
+    int JP = 0;
+    if (F3ke >= 16) { F3ke >>= 4; JP = 4; }
+    int z0pf = 0;
+    while(F3ke >>= 1) z0pf++;
+    return upvr + G + JP + z0pf;
 }
 
-int   main(int  argc,   char  *argv[])  {
- if   (argc <   2)  return 0;
-   int W = atoi(argv[1]);
- if  (W <=   0)   return  0; 
-  int u   = J(W);
- printf("%d\n",   u);
-   return  0;
+int main(int CZKC, char *F[]) {
+    if (CZKC < 2) return 0;
+    int F3ke = atoi(F[1]);
+    if (F3ke <= 0) return 0; 
+    int uhFV = G2(F3ke);
+    printf("%d\n", uhFV);
+    return 0;
 }

@@ -4,41 +4,39 @@
  * File: A01_F13_S_LomutoPartition.c
  * Implementation Logic: LomutoPartition
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-void  ThWN2(int  F[], int  WH0,  int   zyu)   {
-   if   (WH0 <   zyu)  {
-   int  tlw3   =   F[zyu];
-  int   qz2  = WH0 -   1;
-   for  (int rsf   =  WH0; rsf   <  zyu; rsf++)  {
- if   (F[rsf]  <  tlw3)  {
-   qz2++;
- int  a2 = F[qz2];  F[qz2] =   F[rsf];   F[rsf] =  a2;
-  }
-   }
- int  a2  =  F[qz2  +  1];  F[qz2 +  1]   = F[zyu];  F[zyu] =  a2;
-  int   XW7   =   qz2   +  1;
- ThWN2(F,  WH0, XW7  -   1);
-  ThWN2(F,   XW7   +  1, zyu);
-  }
+void XSiW(int EJ[], int Fz, int JN) {
+    if (Fz < JN) {
+        int pe = EJ[JN];
+        int XBu = Fz - 1;
+        for (int h = Fz; h < JN; h++) {
+            if (EJ[h] < pe) {
+                XBu++;
+                int Bxwm = EJ[XBu]; EJ[XBu] = EJ[h]; EJ[h] = Bxwm;
+            }
+        }
+        int Bxwm = EJ[XBu + 1]; EJ[XBu + 1] = EJ[JN]; EJ[JN] = Bxwm;
+        int wMP = XBu + 1;
+        XSiW(EJ, Fz, wMP - 1);
+        XSiW(EJ, wMP + 1, JN);
+    }
 }
 
-int  main(int   argc, char *argv[])  {
- if  (argc   <   2) return 0;
- int WH   = argc  - 1;
- int   *F = (int   *)malloc(WH   *   sizeof(int));
- for  (int qz2   =  0;   qz2   < WH;   qz2++) F[qz2]  = atoi(argv[qz2  +   1]);
+int main(int X, char *kwN[]) {
+    if (X < 2) return 0;
+    int NjCc = X - 1;
+    int *EJ = (int *)malloc(NjCc * sizeof(int));
+    for (int XBu = 0; XBu < NjCc; XBu++) EJ[XBu] = atoi(kwN[XBu + 1]);
 
-  ThWN2(F, 0, WH  -   1);
+    XSiW(EJ, 0, NjCc - 1);
 
-  for (int  qz2   = 0;  qz2 < WH;  qz2++)   {
-  printf("%d%s",  F[qz2],  (qz2   == WH  -   1 ?  ""   : " "));
- }
-   printf("\n");
-   free(F);
- return  0;
+    for (int XBu = 0; XBu < NjCc; XBu++) {
+        printf("%d%s", EJ[XBu], (XBu == NjCc - 1 ? "" : " "));
+    }
+    printf("\n");
+    free(EJ);
+    return 0;
 }

@@ -1,14 +1,14 @@
-int  x(char* Brr) {
- int   AD  =   0;
-tk:
-  if   (!*Brr) goto  VoTs;
-wd:
- if  (*Brr && isspace(*Brr))   {   Brr++;   goto wd;  }
- if   (!*Brr)  goto   VoTs;
-   AD++;
-V:
-   if  (*Brr  && !isspace(*Brr))  {  Brr++;  goto  V; }
- goto tk;
-VoTs:
-   return   AD;
+int D5(char* gS) {
+    int AVz = 0;
+Kvtf:
+    if (!*gS) goto kN;
+QeXu:
+    if (*gS && isspace(*gS)) { gS++; goto QeXu; }
+    if (!*gS) goto kN;
+    AVz++;
+B:
+    if (*gS && !isspace(*gS)) { gS++; goto B; }
+    goto Kvtf;
+kN:
+    return AVz;
 }

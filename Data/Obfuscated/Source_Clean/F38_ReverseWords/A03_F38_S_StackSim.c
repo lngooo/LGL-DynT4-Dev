@@ -1,11 +1,11 @@
-void  lQA(char   *Ck)   {
-  char  *Qxq3[128]; int  te8 = 0;
-  char  fB5[256];  strcpy(fB5, Ck);
- char  *I  =  strtok(fB5, " ");
-  while(I)  { Qxq3[te8++] =  I;   I =   strtok(NULL,  " ");  }
-  Ck[0]   =  '\0';
- for(int   dcD=te8-1;   dcD>=0;   dcD--) {
-  strcat(Ck,  Qxq3[dcD]);
-  if(dcD   > 0)  strcat(Ck,  " ");
-  }
+void Q9x(char *qBd) {
+    char *I4[128]; int SeE = 0;
+    char CT[256]; strcpy(CT, qBd);
+    char *a = strtok(CT, " ");
+    while(a) { I4[SeE++] = a; a = strtok(NULL, " "); }
+    qBd[0] = '\0';
+    for(int pPM=SeE-1; pPM>=0; pPM--) {
+        strcat(qBd, I4[pPM]);
+        if(pPM > 0) strcat(qBd, " ");
+    }
 }

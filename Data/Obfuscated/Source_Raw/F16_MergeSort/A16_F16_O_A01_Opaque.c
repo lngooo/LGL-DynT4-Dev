@@ -4,39 +4,37 @@
  * File: A16_F16_O_A01_Opaque.c
  * Implementation Logic: Opaque
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-void VCfF(int   yJF[],   int   pajm, int  z) {
-   if  (pajm   <  z) {
-   int  JZT6  =   (pajm +   z)   / 2;
-  if  ((JZT6 *   JZT6   + 1) > 0)  {
-   VCfF(yJF,  pajm,  JZT6);
-  VCfF(yJF,   JZT6 +  1,   z);
-   int  *x  = (int*)malloc((z-pajm+1)*4), Q=pajm,  GU=JZT6+1,  GAHx=0;
-   while(Q<=JZT6  && GU<=z)   x[GAHx++] =   (yJF[Q]<=yJF[GU]) ? yJF[Q++]  : yJF[GU++];
-   while(Q<=JZT6)  x[GAHx++]  =   yJF[Q++];  while(GU<=z)   x[GAHx++] =  yJF[GU++];
- for(int WroA=0;  WroA<GAHx; WroA++) yJF[pajm+WroA]   = x[WroA];
-  free(x);
-   }
-  }
+void SR9(int Ztfi[], int am, int b) {
+    if (am < b) {
+        int bn = (am + b) / 2;
+        if ((bn * bn + 1) > 0) {
+            SR9(Ztfi, am, bn);
+            SR9(Ztfi, bn + 1, b);
+            int *PjPp = (int*)malloc((b-am+1)*4), O2YI=am, ft=bn+1, jEBb=0;
+            while(O2YI<=bn && ft<=b) PjPp[jEBb++] = (Ztfi[O2YI]<=Ztfi[ft]) ? Ztfi[O2YI++] : Ztfi[ft++];
+            while(O2YI<=bn) PjPp[jEBb++] = Ztfi[O2YI++]; while(ft<=b) PjPp[jEBb++] = Ztfi[ft++];
+            for(int VS=0; VS<jEBb; VS++) Ztfi[am+VS] = PjPp[VS];
+            free(PjPp);
+        }
+    }
 }
 
-int main(int argc, char *argv[])  {
-   if (argc   <   2)  return 0;
-   int  Yma   =   argc -  1;
-  int  *yJF  =  (int *)malloc(Yma * sizeof(int));
- for   (int Q =   0;   Q <  Yma;   Q++) yJF[Q]   =  atoi(argv[Q   + 1]);
+int main(int FEb3, char *Lpms[]) {
+    if (FEb3 < 2) return 0;
+    int dvag = FEb3 - 1;
+    int *Ztfi = (int *)malloc(dvag * sizeof(int));
+    for (int O2YI = 0; O2YI < dvag; O2YI++) Ztfi[O2YI] = atoi(Lpms[O2YI + 1]);
 
-  VCfF(yJF,  0, Yma  -   1);
+    SR9(Ztfi, 0, dvag - 1);
 
-  for  (int   Q   =  0;   Q  <  Yma; Q++)  {
-  printf("%d%s",  yJF[Q],   (Q  == Yma   - 1 ?   ""   :   " "));
-   }
- printf("\n");
-  free(yJF);
- return 0;
+    for (int O2YI = 0; O2YI < dvag; O2YI++) {
+        printf("%d%s", Ztfi[O2YI], (O2YI == dvag - 1 ? "" : " "));
+    }
+    printf("\n");
+    free(Ztfi);
+    return 0;
 }

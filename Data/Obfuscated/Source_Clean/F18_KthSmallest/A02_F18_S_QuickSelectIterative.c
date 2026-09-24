@@ -1,16 +1,16 @@
-int TzAQ(int   Z2[], int GC1,   int  dPBG,  int   sS)  {
-   while (GC1   <= dPBG) {
- int TXg   = Z2[dPBG],  MXwN =   GC1;
-  for (int   dp =  GC1; dp <   dPBG;  dp++)  {
- if  (Z2[dp]   <=   TXg)  {
-   int  mZ   =   Z2[MXwN]; Z2[MXwN] = Z2[dp];  Z2[dp]   =   mZ;
-   MXwN++;
-  }
- }
- int   mZ = Z2[MXwN];  Z2[MXwN] =   Z2[dPBG];  Z2[dPBG]   =  mZ;
-  if (MXwN   == sS  -  1) return Z2[MXwN];
- else  if  (MXwN > sS -  1)  dPBG = MXwN -   1;
-  else GC1 = MXwN +  1;
-  }
-  return   -1;
+int F(int voA[], int RWzW, int uLb, int vK) {
+    while (RWzW <= uLb) {
+        int yn8z = voA[uLb], I = RWzW;
+        for (int mEgv = RWzW; mEgv < uLb; mEgv++) {
+            if (voA[mEgv] <= yn8z) {
+                int O5tf = voA[I]; voA[I] = voA[mEgv]; voA[mEgv] = O5tf;
+                I++;
+            }
+        }
+        int O5tf = voA[I]; voA[I] = voA[uLb]; voA[uLb] = O5tf;
+        if (I == vK - 1) return voA[I];
+        else if (I > vK - 1) uLb = I - 1;
+        else RWzW = I + 1;
+    }
+    return -1;
 }

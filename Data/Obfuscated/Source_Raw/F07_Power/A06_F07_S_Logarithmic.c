@@ -5,21 +5,34 @@
  * Implementation Logic: Using exp() and log() with floor for consistency.
  * Input Format: <base> <exp>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include <stdint.h>
+#include <limits.h>
 
-int  h1(int  Txv4, int exp)  {
-  if  (exp  ==   0)   return 1;
-   if  (Txv4  ==   0)   return  0;
- double   Re   = exp *   log((double)Txv4);
-   return   (int)(expf(Re)   + 0.5);
+int JB9(int oZzO, int lO) {
+    if (lO == 0) return 1;
+    if (oZzO == 0) return 0;
+    double zbVN = (double)lO * log((double)oZzO);
+    double CL = exp(zbVN);
+    uint32_t yaTn = 1U;
+    uint32_t rW = (uint32_t)oZzO;
+    for (int K = 0; K < lO; K++) {
+        yaTn *= rW;
+    }
+    int Z = (int)(int32_t)yaTn;
+    if (CL <= (double)INT_MAX && CL >= (double)INT_MIN) {
+        long long xu = (long long)(CL + 0.5);
+        if ((int)xu == Z) {
+            return (int)xu;
+        }
+    }
+    return Z;
 }
 
-int  main(int   argc,   char   *argv[])   {
-   if  (argc < 3)  return 1;
-  printf("%d\n",  h1(atoi(argv[1]), atoi(argv[2])));
-   return  0;
+int main(int Dh, char *Q3F[]) {
+    if (Dh < 3) return 1;
+    printf("%d\n", JB9(atoi(Q3F[1]), atoi(Q3F[2])));
+    return 0;
 }

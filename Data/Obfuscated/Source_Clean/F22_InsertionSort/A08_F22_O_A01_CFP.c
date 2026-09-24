@@ -1,12 +1,12 @@
-void   f(int   e[],  int  Sy3)   {
-   int Gnb6  = 0,   anK   =  1,   sgK, Ujah;
-   while   (Gnb6  !=   3)   {
- switch  (Gnb6) {
- case  0: Gnb6 =   (anK <   Sy3)   ?   1   :   3; break;
- case   1: Ujah   =  e[anK]; sgK =   anK   -   1;   Gnb6 = 2;   break;
-   case  2:
-   while (sgK   >= 0   &&   e[sgK]   > Ujah)   {   e[sgK+1]  =  e[sgK];   sgK--; }
-  e[sgK+1]   =   Ujah;  anK++;   Gnb6 =  0;  break;
-   }
- }
+void rfn6(int Ho[], int VJn) {
+    int x = 0, cp = 1, PWD8, b;
+    while (x != 3) {
+        switch (x) {
+            case 0: x = (cp < VJn) ? 1 : 3; break;
+            case 1: b = Ho[cp]; PWD8 = cp - 1; x = 2; break;
+            case 2:
+                while (PWD8 >= 0 && Ho[PWD8] > b) { Ho[PWD8+1] = Ho[PWD8]; PWD8--; }
+                Ho[PWD8+1] = b; cp++; x = 0; break;
+        }
+    }
 }

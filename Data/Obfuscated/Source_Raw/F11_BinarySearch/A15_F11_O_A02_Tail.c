@@ -4,32 +4,30 @@
  * File: A15_F11_O_A02_Tail.c
  * Implementation Logic: Tail-recursive optimization variation of A02.
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int eJr(int  LWj[], int  iDuE,  int rF,  int  l)  {
- while  (iDuE  <= rF) {
- int   D =  iDuE   + (rF  -  iDuE)   /   2;
- if (LWj[D]  ==  l)  return D;
- if   (LWj[D]  < l)   iDuE   = D  + 1;
- else  rF =  D  -   1;
-   }
- return   -1;
+int o(int yigb[], int H3, int jMgl, int NMc4) {
+    while (H3 <= jMgl) {
+        int f = H3 + (jMgl - H3) / 2;
+        if (yigb[f] == NMc4) return f;
+        if (yigb[f] < NMc4) H3 = f + 1;
+        else jMgl = f - 1;
+    }
+    return -1;
 }
 
-int   bHA(int   aqz[],  int   lkG8, int   W7)   {
- return  eJr(aqz, 0,  lkG8  - 1, W7);
+int Qi5M(int X[], int HAx3, int S) {
+    return o(X, 0, HAx3 - 1, S);
 }
 
-int   main(int   argc,   char  *argv[])  {
- if (argc  <   3)  return  1;
- int  W7   =   atoi(argv[1]);
-  int  lkG8   =  argc  -  2;
- int *aqz  =   (int*)malloc(lkG8  *   sizeof(int));
-  for(int   ikRr0=0;   ikRr0<lkG8;  ikRr0++)   aqz[ikRr0]   =  atoi(argv[ikRr0+2]);
-   printf("%d\n",   bHA(aqz,  lkG8,  W7));
-  free(aqz);
-   return   0;
+int main(int o8ZE, char *wLZV[]) {
+    if (o8ZE < 3) return 1;
+    int S = atoi(wLZV[1]);
+    int HAx3 = o8ZE - 2;
+    int *X = (int*)malloc(HAx3 * sizeof(int));
+    for(int B=0; B<HAx3; B++) X[B] = atoi(wLZV[B+2]);
+    printf("%d\n", Qi5M(X, HAx3, S));
+    free(X);
+    return 0;
 }

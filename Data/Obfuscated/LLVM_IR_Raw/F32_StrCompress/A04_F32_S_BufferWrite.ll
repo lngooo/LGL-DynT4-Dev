@@ -1,6 +1,6 @@
 @.str = constant [5 x i8] c"%c%d\00"
 @.str.1 = constant [4 x i8] c"%s\0A\00"
-define dso_local void @IC(i8* %0) {
+define dso_local void @W(i8* %0) {
   %2 = alloca i8*
   %3 = alloca [1024 x i8]
   %4 = alloca i32
@@ -122,7 +122,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   %10 = load i8**, i8*** %5
   %11 = getelementptr inbounds i8*, i8** %10, i64 1
   %12 = load i8*, i8** %11
-  call void @IC(i8* %12)
+  call void @W(i8* %12)
   store i32 0, i32* %3
   br label %13
 13:

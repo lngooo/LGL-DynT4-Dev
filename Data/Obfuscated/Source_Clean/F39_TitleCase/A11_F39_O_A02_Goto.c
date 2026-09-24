@@ -1,12 +1,12 @@
-void   bGO(char* PHS0)  {
-   char* dl =  PHS0;
-  int ObQ   =   1;
-MRlo:
- if   (!*dl)  return;
- if (*dl  ==  ' ')  {  ObQ  = 1;   goto  P2;  }
- if (ObQ)  {   if(*dl  >=   'a')   *dl   -=  32;   ObQ   =   0;   }
-   else  {  if(*dl   <= 'Z'  &&   *dl   >=   'A')   *dl +=  32;   }
-P2:
- dl++;
-  goto   MRlo;
+void i(char* O) {
+    char* dr = O;
+    int o2 = 1;
+iT:
+    if (!*dr) return;
+    if (*dr == ' ') { o2 = 1; goto Fw27; }
+    if (o2) { if(*dr >= 'a') *dr -= 32; o2 = 0; }
+    else { if(*dr <= 'Z' && *dr >= 'A') *dr += 32; }
+Fw27:
+    dr++;
+    goto iT;
 }

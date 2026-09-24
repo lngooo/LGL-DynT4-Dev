@@ -1,12 +1,12 @@
-int  eg(int  Lir[],   int y, int  aSUi9)   {
-  int   af   = 0, QY = y -   1;
- while  (af   <=   QY) {
- int   zDrg1 =  af   /  2;
- int   pEL9   =  QY   /  2;
-   int   cSp1   =  (af %  2 ==   1 && QY   % 2   ==   1)  ?  zDrg1 +  pEL9 +   1  :   zDrg1 +  pEL9;
-   if   (Lir[cSp1]   ==   aSUi9)   return  cSp1;
-  if   (Lir[cSp1] <  aSUi9)  af   = cSp1  +  1;
- else  QY   = cSp1 -  1;
- }
-  return   -1;
+int w03w(int YE4M[], int G, int Ck) {
+    int eG = 0, njl = G - 1;
+    while (eG <= njl) {
+        int xM = eG / 2;
+        int Q = njl / 2;
+        int AZ = (eG % 2 == 1 && njl % 2 == 1) ? xM + Q + 1 : xM + Q;
+        if (YE4M[AZ] == Ck) return AZ;
+        if (YE4M[AZ] < Ck) eG = AZ + 1;
+        else njl = AZ - 1;
+    }
+    return -1;
 }

@@ -5,35 +5,33 @@
  * Implementation Logic: 跳转重构：将 A01 的循环拆解为 Goto 标签链
  * Input Format: <string>
  */
-
-
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
 #include <stdlib.h>
 
-void yEIz(char  *duZ4)  {
- int   TYQ  =   0; Yv: if(duZ4[TYQ]) { TYQ++; goto  Yv;   }
- int   OPn5  =   0;  V: if(OPn5  < TYQ/2)  {  char   U=duZ4[OPn5];   duZ4[OPn5]=duZ4[TYQ-1-OPn5];  duZ4[TYQ-1-OPn5]=U;  OPn5++;   goto   V;   }
-  int  psAD = 0;  OPn5  =   0;
-  z7:   if(OPn5   <=   TYQ) {
-  if(duZ4[OPn5]   == ' '  || duZ4[OPn5]  == '\0') {
-  int   qir6 =   0;   
-   G:  if(qir6 < (OPn5-psAD)/2)  { char  U=duZ4[psAD+qir6]; duZ4[psAD+qir6]=duZ4[OPn5-1-qir6]; duZ4[OPn5-1-qir6]=U;  qir6++; goto  G; }
-  psAD   =  OPn5 +   1;
- }
- OPn5++; goto   z7;
-  }
+void rAYW(char *mu) {
+    int A3L = 0; RYg: if(mu[A3L]) { A3L++; goto RYg; }
+    int a = 0; UX: if(a < A3L/2) { char D=mu[a]; mu[a]=mu[A3L-1-a]; mu[A3L-1-a]=D; a++; goto UX; }
+    int lax0 = 0; a = 0;
+    v8V: if(a <= A3L) {
+        if(mu[a] == ' ' || mu[a] == '\0') {
+            int C1ev = 0; 
+            S: if(C1ev < (a-lax0)/2) { char D=mu[lax0+C1ev]; mu[lax0+C1ev]=mu[a-1-C1ev]; mu[a-1-C1ev]=D; C1ev++; goto S; }
+            lax0 = a + 1;
+        }
+        a++; goto v8V;
+    }
 }
 
-int main(int   argc,   char  *argv[])   {
-   if  (argc  < 2)  return 0;
-  char   XxYX[512]  =  "";
- for(int OPn5 =   1;  OPn5 <  argc;  OPn5++)  {
-   strcat(XxYX, argv[OPn5]);
- if(OPn5   < argc - 1)  strcat(XxYX, " ");
- }
-   yEIz(XxYX);
-   printf("%s\n",   XxYX);
- return  0;
+int main(int B, char *QyBr[]) {
+    if (B < 2) return 0;
+    char e[512] = "";
+    for(int a = 1; a < B; a++) {
+        strcat(e, QyBr[a]);
+        if(a < B - 1) strcat(e, " ");
+    }
+    rAYW(e);
+    printf("%s\n", e);
+    return 0;
 }

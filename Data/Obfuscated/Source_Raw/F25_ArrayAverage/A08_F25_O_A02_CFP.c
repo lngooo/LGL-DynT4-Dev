@@ -4,33 +4,31 @@
  * File: A08_F25_O_A02_CFP.c
  * Implementation Logic: CFP
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-double   qY(int   T[],  int   auh)  {
-  double   HD0  =  0.0;
-  int   gXG6 =  0,   iWL6   =  0;
-   while (gXG6 != 2)   {
- switch(gXG6) {
- case 0:  gXG6   =   (iWL6   <   auh)   ? 1 :  2; break;
- case   1:  HD0   +=  (T[iWL6] -   HD0)   /  (iWL6 +  1);   iWL6++;  gXG6   = 0;   break;
-  }
- }
-  return   HD0;
+double uXH(int gRt7[], int KR) {
+    double uk = 0.0;
+    int Xz = 0, kN = 0;
+    while (Xz != 2) {
+        switch(Xz) {
+            case 0: Xz = (kN < KR) ? 1 : 2; break;
+            case 1: uk += (gRt7[kN] - uk) / (kN + 1); kN++; Xz = 0; break;
+        }
+    }
+    return uk;
 }
 
-int  main(int  argc,  char *argv[])  {
-   if (argc <   2)  return   0;
-  int   auh =  argc -  1;
-   int *T =   (int  *)malloc(auh   *  sizeof(int));
-   for  (int iWL6  = 0; iWL6   <  auh;  iWL6++) T[iWL6]   =  atoi(argv[iWL6   + 1]);
+int main(int u9, char *PMYA[]) {
+    if (u9 < 2) return 0;
+    int KR = u9 - 1;
+    int *gRt7 = (int *)malloc(KR * sizeof(int));
+    for (int kN = 0; kN < KR; kN++) gRt7[kN] = atoi(PMYA[kN + 1]);
 
-   double JWk =   qY(T,  auh);
-  printf("%.2f\n",   JWk);
+    double o7q = uXH(gRt7, KR);
+    printf("%.2f\n", o7q);
 
-   free(T);
- return   0;
+    free(gRt7);
+    return 0;
 }

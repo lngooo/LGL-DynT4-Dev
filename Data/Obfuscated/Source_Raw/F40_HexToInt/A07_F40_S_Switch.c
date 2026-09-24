@@ -5,31 +5,29 @@
  * Implementation Logic: Uses a large switch statement for character conversion logic.
  * Input Format: <hex_string>
  */
-
-
 #include <stdio.h>
 
-int yX5(const char* bijb) {
-   int Bj =   0;
- while(*bijb)   {
- int a9;
- switch(*bijb) {
-   case   'a':  case   'A': a9  = 10;  break;
- case  'b':   case   'B': a9  =  11;  break;
- case 'c':  case 'C':   a9  = 12;   break;
-  case   'd':  case  'D': a9   =  13; break;
-   case  'e':   case 'E':  a9   =  14; break;
- case   'f':   case 'F':  a9   =   15; break;
- default:   a9   = *bijb  - '0';   break;
-  }
-   Bj  =  Bj  *  16   +  a9;
- bijb++;
- }
-  return Bj;
+int uD(const char* hB) {
+    int M = 0;
+    while(*hB) {
+        int o9K;
+        switch(*hB) {
+            case 'a': case 'A': o9K = 10; break;
+            case 'b': case 'B': o9K = 11; break;
+            case 'c': case 'C': o9K = 12; break;
+            case 'd': case 'D': o9K = 13; break;
+            case 'e': case 'E': o9K = 14; break;
+            case 'f': case 'F': o9K = 15; break;
+            default: o9K = *hB - '0'; break;
+        }
+        M = M * 16 + o9K;
+        hB++;
+    }
+    return M;
 }
 
-int  main(int  argc,  char* argv[])  {
-  if (argc   <  2)   return  0;
- printf("%d", yX5(argv[1]));
- return   0;
+int main(int X, char* Wz[]) {
+    if (X < 2) return 0;
+    printf("%d", uD(Wz[1]));
+    return 0;
 }

@@ -1,15 +1,15 @@
-int wghn(int  L)  {
-  if   (L  <  0)  return   -1;
-  if   (L  <   2) return L;
- long   hmz5  = 1;
+int kdgv(int mA) {
+    if (mA < 0) return -1;
+    if (mA < 2) return mA;
+    long Qst = 1;
 
-   while ((hmz5   <<   2)  <=  L)   hmz5  <<=   1;
-  long x   =   (hmz5 + L   /  hmz5)  >>  1;
-   while (x < hmz5)   {
-  hmz5 =   x;
- x  =  (hmz5   +   L   /   hmz5)  >>  1;
-   }
+    while ((Qst << 2) <= mA) Qst <<= 1;
+    long gd = (Qst + mA / Qst) >> 1;
+    while (gd < Qst) {
+        Qst = gd;
+        gd = (Qst + mA / Qst) >> 1;
+    }
 
-  if   ((hmz5  +  1)  *   (hmz5 +   1)  <= L)  hmz5++;
-  return (int)hmz5;
+    if ((Qst + 1) * (Qst + 1) <= mA) Qst++;
+    return (int)Qst;
 }

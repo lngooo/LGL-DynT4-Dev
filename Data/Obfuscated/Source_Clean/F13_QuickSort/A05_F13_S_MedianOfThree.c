@@ -1,20 +1,20 @@
-void   pOU2(int   H5[], int  lE,   int   XV) {
- if  (lE   <  XV)   {
-  int   E   =   lE  +  (XV  -   lE)  /   2;
-   if  (H5[E] < H5[lE])  {  int PyjG2 =   H5[E];   H5[E]  =  H5[lE];  H5[lE]  = PyjG2;   }
-   if (H5[XV]  <   H5[lE])   { int   PyjG2 =   H5[XV]; H5[XV]  =  H5[lE];   H5[lE]   = PyjG2; }
-  if  (H5[XV] < H5[E])  {   int   PyjG2   =   H5[XV]; H5[XV]  =   H5[E];   H5[E]   = PyjG2; }
-  int HseV  =   H5[E];
-  int   H  =  lE,  LbY5 =   XV;
- while (H <=   LbY5)   {
-  while  (H5[H]  <  HseV) H++;
- while   (H5[LbY5] > HseV) LbY5--;
- if (H   <=   LbY5)  {
-   int   PyjG2 = H5[H];  H5[H]  = H5[LbY5]; H5[LbY5] = PyjG2;
- H++; LbY5--;
- }
-   }
-   if  (lE <  LbY5)   pOU2(H5,   lE,  LbY5);
-  if (H   < XV)   pOU2(H5, H, XV);
-   }
+void H9RN(int Ap[], int Bt, int CIi) {
+    if (Bt < CIi) {
+        int Pi = Bt + (CIi - Bt) / 2;
+        if (Ap[Pi] < Ap[Bt]) { int it = Ap[Pi]; Ap[Pi] = Ap[Bt]; Ap[Bt] = it; }
+        if (Ap[CIi] < Ap[Bt]) { int it = Ap[CIi]; Ap[CIi] = Ap[Bt]; Ap[Bt] = it; }
+        if (Ap[CIi] < Ap[Pi]) { int it = Ap[CIi]; Ap[CIi] = Ap[Pi]; Ap[Pi] = it; }
+        int B6 = Ap[Pi];
+        int P7 = Bt, ue = CIi;
+        while (P7 <= ue) {
+            while (Ap[P7] < B6) P7++;
+            while (Ap[ue] > B6) ue--;
+            if (P7 <= ue) {
+                int it = Ap[P7]; Ap[P7] = Ap[ue]; Ap[ue] = it;
+                P7++; ue--;
+            }
+        }
+        if (Bt < ue) H9RN(Ap, Bt, ue);
+        if (P7 < CIi) H9RN(Ap, P7, CIi);
+    }
 }

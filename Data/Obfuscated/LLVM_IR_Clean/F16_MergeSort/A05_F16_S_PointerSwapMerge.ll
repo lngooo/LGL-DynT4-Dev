@@ -1,4 +1,4 @@
-define dso_local void @iNpH5(i32* %0, i32 %1, i32 %2) {
+define dso_local void @z(i32* %0, i32 %1, i32 %2) {
   %4 = alloca i32*
   %5 = alloca i32
   %6 = alloca i32
@@ -25,12 +25,12 @@ define dso_local void @iNpH5(i32* %0, i32 %1, i32 %2) {
   %22 = load i32*, i32** %4
   %23 = load i32, i32* %5
   %24 = load i32, i32* %7
-  call void @iNpH5(i32* %22, i32 %23, i32 %24)
+  call void @z(i32* %22, i32 %23, i32 %24)
   %25 = load i32*, i32** %4
   %26 = load i32, i32* %7
   %27 = add nsw i32 %26, 1
   %28 = load i32, i32* %6
-  call void @iNpH5(i32* %25, i32 %27, i32 %28)
+  call void @z(i32* %25, i32 %27, i32 %28)
   %30 = load i32, i32* %6
   %31 = load i32, i32* %5
   %32 = sub nsw i32 %30, %31

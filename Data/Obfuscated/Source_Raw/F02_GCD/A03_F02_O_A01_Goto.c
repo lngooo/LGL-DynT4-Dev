@@ -5,25 +5,23 @@
  * Implementation Logic: Euclidean algorithm reconstructed using goto labels to disrupt CFG.
  * Input Format: <a> <b>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int  dSc1(int DDK,  int v) {
-  DDK   =  abs(DDK);   v =  abs(v);
-gB8:
-  if   (v  == 0)  goto a;
- int   PG   = v;
-   v   = DDK  %  v;
-   DDK   = PG;
- goto gB8;
-a:
- return  DDK;
+int m0(int wt0Y, int ob) {
+    wt0Y = abs(wt0Y); ob = abs(ob);
+zv:
+    if (ob == 0) goto e9X;
+    int wPG = ob;
+    ob = wt0Y % ob;
+    wt0Y = wPG;
+    goto zv;
+e9X:
+    return wt0Y;
 }
 
-int main(int argc,   char *argv[])   {
- if (argc   <  3)  return   1;
-   printf("%d\n",  dSc1(atoi(argv[1]),   atoi(argv[2])));
-   return   0;
+int main(int R1Iv, char *h[]) {
+    if (R1Iv < 3) return 1;
+    printf("%d\n", m0(atoi(h[1]), atoi(h[2])));
+    return 0;
 }

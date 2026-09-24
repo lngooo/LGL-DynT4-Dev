@@ -1,13 +1,13 @@
-void   Gqpr(int  v[], int h)  {
-   if (h <=  1) return;
- for  (int  mQ4  = 0; mQ4  < h  /  2;   mQ4++)   {
-   int Kk = v[mQ4];
-  v[mQ4]  = v[h -   1   - mQ4];
- v[h - 1  - mQ4] =  Kk;
- }
+void Dz(int tEV8[], int yR) {
+    if (yR <= 1) return;
+    for (int EqjH = 0; EqjH < yR / 2; EqjH++) {
+        int as7Z = tEV8[EqjH];
+        tEV8[EqjH] = tEV8[yR - 1 - EqjH];
+        tEV8[yR - 1 - EqjH] = as7Z;
+    }
 
 }
 
-void j8(int  v[],   int  TYJr) {
- Gqpr(v,   TYJr);
+void yRu9(int tEV8[], int g) {
+    Dz(tEV8, g);
 }

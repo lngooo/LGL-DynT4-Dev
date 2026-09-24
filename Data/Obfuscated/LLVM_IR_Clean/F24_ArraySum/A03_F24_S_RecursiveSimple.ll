@@ -1,4 +1,4 @@
-define dso_local i32 @bUQ(i32* %0, i32 %1) {
+define dso_local i32 @iQ(i32* %0, i32 %1) {
   %3 = alloca i32
   %4 = alloca i32*
   %5 = alloca i32
@@ -20,7 +20,7 @@ define dso_local i32 @bUQ(i32* %0, i32 %1) {
   %16 = load i32*, i32** %4
   %17 = load i32, i32* %5
   %18 = sub nsw i32 %17, 1
-  %19 = call i32 @bUQ(i32* %16, i32 %18)
+  %19 = call i32 @iQ(i32* %16, i32 %18)
   %20 = add nsw i32 %15, %19
   store i32 %20, i32* %3
   br label %21

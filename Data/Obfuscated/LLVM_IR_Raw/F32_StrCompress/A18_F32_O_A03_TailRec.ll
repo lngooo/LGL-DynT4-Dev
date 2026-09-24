@@ -1,6 +1,6 @@
 @.str = constant [5 x i8] c"%c%d\00"
 @.str.1 = constant [2 x i8] c"\0A\00"
-define dso_local void @XVUQ(i8* %0, i32 %1) {
+define dso_local void @sr(i8* %0, i32 %1) {
   %3 = alloca i8*
   %4 = alloca i32
   %5 = alloca i32
@@ -53,17 +53,17 @@ define dso_local void @XVUQ(i8* %0, i32 %1) {
   %44 = load i32, i32* %4
   %45 = load i32, i32* %5
   %46 = add nsw i32 %44, %45
-  call void @XVUQ(i8* %43, i32 %46)
+  call void @sr(i8* %43, i32 %46)
   br label %48
 48:
   ret void
 }
 declare i32 @printf(i8*, ...)
-define dso_local void @a(i8* %0) {
+define dso_local void @wtPo(i8* %0) {
   %2 = alloca i8*
   store i8* %0, i8** %2
   %3 = load i8*, i8** %2
-  call void @XVUQ(i8* %3, i32 0)
+  call void @sr(i8* %3, i32 0)
   %4 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.1, i64 0, i64 0))
   ret void
 }
@@ -84,7 +84,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   %10 = load i8**, i8*** %5
   %11 = getelementptr inbounds i8*, i8** %10, i64 1
   %12 = load i8*, i8** %11
-  call void @a(i8* %12)
+  call void @wtPo(i8* %12)
   store i32 0, i32* %3
   br label %13
 13:

@@ -1,22 +1,22 @@
-void   U(int   wq[],   int   Tdi)  {
-   int e3 =   0, Vs = Tdi  -  1,   wUr   = 1;
-  while   (wUr) {
- wUr   =   0;
- for (int  X  = e3; X <  Vs; ++X)   {
-   if   (wq[X]  > wq[X +   1])  {
-   int   KRyC = wq[X];   wq[X]  =   wq[X+1];   wq[X+1] =   KRyC;
-  wUr  = 1;
-  }
-   }
-   if  (!wUr) break;
- wUr  =  0;
- --Vs;
- for (int  X  =   Vs   - 1;   X >=  e3;   --X)  {
-   if (wq[X] >   wq[X  +   1])  {
-  int  KRyC =   wq[X]; wq[X]  =   wq[X+1];  wq[X+1]   =   KRyC;
- wUr   = 1;
-   }
- }
-   ++e3;
-  }
+void H1(int bc[], int u3E) {
+    int I7rJ = 0, i8SI = u3E - 1, LM = 1;
+    while (LM) {
+        LM = 0;
+        for (int OVO4 = I7rJ; OVO4 < i8SI; ++OVO4) {
+            if (bc[OVO4] > bc[OVO4 + 1]) {
+                int HOOI = bc[OVO4]; bc[OVO4] = bc[OVO4+1]; bc[OVO4+1] = HOOI;
+                LM = 1;
+            }
+        }
+        if (!LM) break;
+        LM = 0;
+        --i8SI;
+        for (int OVO4 = i8SI - 1; OVO4 >= I7rJ; --OVO4) {
+            if (bc[OVO4] > bc[OVO4 + 1]) {
+                int HOOI = bc[OVO4]; bc[OVO4] = bc[OVO4+1]; bc[OVO4+1] = HOOI;
+                LM = 1;
+            }
+        }
+        ++I7rJ;
+    }
 }

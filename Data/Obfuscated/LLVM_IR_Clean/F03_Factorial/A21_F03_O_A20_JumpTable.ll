@@ -1,5 +1,5 @@
-@__const.XsIm1.iqOL = constant [2 x i8*] [i8* blockaddress(@XsIm1, %15), i8* blockaddress(@XsIm1, %29)]
-define dso_local i64 @XsIm1(i32 %0) {
+@__const.Lu.HhVe = constant [2 x i8*] [i8* blockaddress(@Lu, %15), i8* blockaddress(@Lu, %29)]
+define dso_local i64 @Lu(i32 %0) {
   %2 = alloca i64
   %3 = alloca i32
   %4 = alloca i64

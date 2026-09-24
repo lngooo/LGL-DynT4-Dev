@@ -5,22 +5,20 @@
  * Implementation Logic: Manual inlining of tail recursion into a jump loop.
  * Input Format: <n>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int  dHa(int  fXHR)  {
-   int   jBHG  =  0;
-s:
- if (fXHR  <=  0) return  jBHG;
-   jBHG   +=   fXHR;
-  fXHR--;
-  goto s;
+int eGp(int QFn) {
+    int U7 = 0;
+pYEZ:
+    if (QFn <= 0) return U7;
+    U7 += QFn;
+    QFn--;
+    goto pYEZ;
 }
 
-int  main(int  argc, char  *argv[]) {
-  if  (argc  <  2)   return   1;
-  printf("%d\n",   dHa(atoi(argv[1])));
- return   0;
+int main(int mggQ, char *wBAD[]) {
+    if (mggQ < 2) return 1;
+    printf("%d\n", eGp(atoi(wBAD[1])));
+    return 0;
 }

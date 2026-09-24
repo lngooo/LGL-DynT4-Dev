@@ -1,4 +1,4 @@
-define dso_local i32 @qzG(i32 %0) {
+define dso_local i32 @SL(i32 %0) {
   %2 = alloca i32
   %3 = alloca i32
   %4 = alloca i32

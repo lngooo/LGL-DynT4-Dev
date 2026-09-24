@@ -5,35 +5,33 @@
  * Implementation Logic: Step
  * Input Format: <data_string> <key_string>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
 
-void   H(char   *psG,  char   *m) {
- int PBs   =   0,   QioA   =   0;
-   while(psG[PBs])  PBs++;  while(m[QioA]) QioA++;
-   int  PU   =  0;
- while(PU <   PBs)  {
-   psG[PU] ^=   m[PU  %   QioA];
- PU++;
-  }
+void S(char *dqP2, char *WSWe) {
+    int RUCb = 0, znl1 = 0;
+    while(dqP2[RUCb]) RUCb++; while(WSWe[znl1]) znl1++;
+    int W = 0;
+    while(W < RUCb) {
+        dqP2[W] ^= WSWe[W % znl1];
+        W++;
+    }
 }
 
-int   main(int   argc, char *argv[]) {
- if   (argc   <   3)  return 0;
- char *psG   =  argv[1];
-   char *m   =  argv[2];
-  int  LK   =   0;
- while   (psG[LK])  LK++;
+int main(int z, char *K7[]) {
+    if (z < 3) return 0;
+    char *dqP2 = K7[1];
+    char *WSWe = K7[2];
+    int E = 0;
+    while (dqP2[E]) E++;
 
-  H(psG,   m);
+    S(dqP2, WSWe);
 
- for (int   oMd =   0;   oMd  <   LK; oMd++)   {
-  printf("%02x",  (unsigned char)psG[oMd]);
-  }
- printf("\n");
- return 0;
+    for (int ZL = 0; ZL < E; ZL++) {
+        printf("%02x", (unsigned char)dqP2[ZL]);
+    }
+    printf("\n");
+    return 0;
 }

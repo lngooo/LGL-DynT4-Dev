@@ -1,4 +1,4 @@
-define dso_local i64 @HKa(i32 %0) {
+define dso_local i64 @uhX(i32 %0) {
   %2 = alloca i64
   %3 = alloca i32
   store i32 %0, i32* %3
@@ -23,7 +23,7 @@ define dso_local i64 @HKa(i32 %0) {
   %16 = sext i32 %15 to i64
   %17 = load i32, i32* %3
   %18 = sub nsw i32 %17, 1
-  %19 = call i64 @HKa(i32 %18)
+  %19 = call i64 @uhX(i32 %18)
   %20 = mul nsw i64 %16, %19
   store i64 %20, i64* %2
   br label %21

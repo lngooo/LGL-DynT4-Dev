@@ -5,27 +5,25 @@
  * Implementation Logic: MathIdent
  * Input Format: <integer>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-int   bLvd0(int  lz)  {
- int  E  =  0;
- while   (lz  >  1) {
-  double   uh9   =   (double)lz   /  2.0;
- lz = (int)floor(uh9);
- E++;
-  }
- return   E;
+int Ddg(int c2) {
+    int xZR = 0;
+    while (c2 > 1) {
+        double BVh = (double)c2 / 2.0;
+        c2 = (int)floor(BVh);
+        xZR++;
+    }
+    return xZR;
 }
 
-int main(int argc,   char   *argv[])   {
-  if   (argc   < 2)   return  0;
-  int  lz =   atoi(argv[1]);
-   if (lz   <=  0) return   0; 
-  int ntu = bLvd0(lz);
-  printf("%d\n", ntu);
-  return   0;
+int main(int W, char *a[]) {
+    if (W < 2) return 0;
+    int c2 = atoi(a[1]);
+    if (c2 <= 0) return 0; 
+    int QP = Ddg(c2);
+    printf("%d\n", QP);
+    return 0;
 }

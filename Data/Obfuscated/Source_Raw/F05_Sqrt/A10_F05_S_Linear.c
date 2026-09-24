@@ -5,22 +5,20 @@
  * Implementation Logic: Linear scan (brute force) starting from 0 (Seed 5).
  * Input Format: <n>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int   ipY1(int  oc)  {
- if   (oc   <  0)  return -1;
-  long PGXL   =  0;
-   while  ((PGXL  +   1)   *  (PGXL +  1)  <=  oc)   {
-   PGXL++;
-  }
-   return   (int)PGXL;
+int GD9p(int Lw) {
+    if (Lw < 0) return -1;
+    long d = 0;
+    while ((d + 1) * (d + 1) <= Lw) {
+        d++;
+    }
+    return (int)d;
 }
 
-int main(int argc,   char   *argv[])   {
- if   (argc  < 2)   return   1;
-  printf("%d\n",  ipY1(atoi(argv[1])));
-   return   0;
+int main(int FM4, char *sIa2[]) {
+    if (FM4 < 2) return 1;
+    printf("%d\n", GD9p(atoi(sIa2[1])));
+    return 0;
 }

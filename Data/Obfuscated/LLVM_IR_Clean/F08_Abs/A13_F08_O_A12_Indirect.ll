@@ -1,4 +1,4 @@
-define dso_local i32 @ht(i32 %0) {
+define dso_local i32 @S1Vu(i32 %0) {
   %2 = alloca i32
   %3 = alloca i32 (i32)*
   store i32 %0, i32* %2

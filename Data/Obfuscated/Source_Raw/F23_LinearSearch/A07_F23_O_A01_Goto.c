@@ -5,34 +5,32 @@
  * Implementation Logic: Goto
  * Input Format: <target> <val1> <val2> ...
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-int   l(int   Ry7[],   int   QGEe0,  int   uvM5)   {
- int   iNj3  =  0;
-Yqau1:
-  if (iNj3   >=  QGEe0)   goto  Hr;
-   if   (Ry7[iNj3]   == uvM5) goto  KCM;
-   iNj3++;
-   goto   Yqau1;
-KCM:
-  return iNj3;
-Hr:
-  return   -1;
+int H(int xI[], int k1, int TosZ) {
+    int xv = 0;
+nJUp:
+    if (xv >= k1) goto c;
+    if (xI[xv] == TosZ) goto W;
+    xv++;
+    goto nJUp;
+W:
+    return xv;
+c:
+    return -1;
 }
 
-int  main(int argc,  char  *argv[]) {
-   if  (argc < 3)  return 1;
-  int  uvM5 =   atoi(argv[1]);
-  int   GZ  =  argc -   2;
-  int  Ry7[100];
- for  (int   iNj3   =   0;   iNj3  <   GZ;   iNj3++) {
-   Ry7[iNj3]  =   atoi(argv[iNj3  + 2]);
- }
-   int   US5   =  l(Ry7,   GZ, uvM5);
-   printf("%d\n",  US5);
-  return   0;
+int main(int G, char *YFck[]) {
+    if (G < 3) return 1;
+    int TosZ = atoi(YFck[1]);
+    int tbo = G - 2;
+    int xI[100];
+    for (int xv = 0; xv < tbo; xv++) {
+        xI[xv] = atoi(YFck[xv + 2]);
+    }
+    int cr = H(xI, tbo, TosZ);
+    printf("%d\n", cr);
+    return 0;
 }

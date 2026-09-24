@@ -1,4 +1,4 @@
-define dso_local i64 @ip1(i32 %0, i32 %1) {
+define dso_local i64 @i(i32 %0, i32 %1) {
   %3 = alloca i64
   %4 = alloca i32
   %5 = alloca i32
@@ -32,11 +32,11 @@ define dso_local i64 @ip1(i32 %0, i32 %1) {
   store i32 %25, i32* %6
   %26 = load i32, i32* %4
   %27 = load i32, i32* %6
-  %28 = call i64 @ip1(i32 %26, i32 %27)
+  %28 = call i64 @i(i32 %26, i32 %27)
   %29 = load i32, i32* %6
   %30 = add nsw i32 %29, 1
   %31 = load i32, i32* %5
-  %32 = call i64 @ip1(i32 %30, i32 %31)
+  %32 = call i64 @i(i32 %30, i32 %31)
   %33 = mul nsw i64 %28, %32
   store i64 %33, i64* %3
   br label %35
@@ -44,7 +44,7 @@ define dso_local i64 @ip1(i32 %0, i32 %1) {
   %36 = load i64, i64* %3
   ret i64 %36
 }
-define dso_local i64 @e(i32 %0) {
+define dso_local i64 @A3(i32 %0) {
   %2 = alloca i64
   %3 = alloca i32
   store i32 %0, i32* %3
@@ -63,7 +63,7 @@ define dso_local i64 @e(i32 %0) {
   br label %14
 11:
   %12 = load i32, i32* %3
-  %13 = call i64 @ip1(i32 1, i32 %12)
+  %13 = call i64 @i(i32 1, i32 %12)
   store i64 %13, i64* %2
   br label %14
 14:

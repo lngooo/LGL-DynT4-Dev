@@ -1,11 +1,11 @@
-int  ztVj(char*   Yw, char  lPvR)   {
-   int   wv  = 0;
-  while (*Yw)  {
- int   bn3   =   (*Yw  * 2)   /  2;
-  if  (bn3  ==  (int)lPvR   &&   *Yw   ==  lPvR)   {
-  wv++;
- }
-   Yw++;
-  }
-  return  wv;
+int uK(char* DWM9, char J) {
+    int pBN = 0;
+    while (*DWM9) {
+        int YI3 = (*DWM9 * 2) / 2;
+        if (YI3 == (int)J && *DWM9 == J) {
+            pBN++;
+        }
+        DWM9++;
+    }
+    return pBN;
 }

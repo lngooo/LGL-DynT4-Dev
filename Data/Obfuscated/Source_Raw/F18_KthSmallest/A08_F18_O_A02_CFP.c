@@ -4,41 +4,39 @@
  * File: A08_F18_O_A02_CFP.c
  * Implementation Logic: CFP
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-int  KJ2(int  kl[],  int  gD7, int   l,  int p8) {
-   int   Vsx   =  0;
-   while (Vsx   !=  2)  {
-  switch  (Vsx) {
- case  0:  if (gD7  <=   l)   Vsx   =   1;  else   Vsx =   2;   break;
-   case  1: {
-  int  s  =   kl[l],  fXH = gD7;
- for  (int p   =   gD7;   p  <   l; p++)  if   (kl[p] <=   s)   {  int   DU=kl[fXH]; kl[fXH]=kl[p];   kl[p]=DU;   fXH++;  }
-   int  DU=kl[fXH]; kl[fXH]=kl[l]; kl[l]=DU;
-  if  (fXH ==  p8  -  1) return   kl[fXH];
- if (fXH > p8  - 1) l = fXH   -   1; else   gD7 = fXH + 1;
- Vsx =   0;  break;
-   }
- }
-  }
-  return  -1;
+int q9(int M[], int OSy, int vl, int QEe) {
+    int bM6 = 0;
+    while (bM6 != 2) {
+        switch (bM6) {
+            case 0: if (OSy <= vl) bM6 = 1; else bM6 = 2; break;
+            case 1: {
+                int yGOV = M[vl], GL = OSy;
+                for (int o = OSy; o < vl; o++) if (M[o] <= yGOV) { int N=M[GL]; M[GL]=M[o]; M[o]=N; GL++; }
+                int N=M[GL]; M[GL]=M[vl]; M[vl]=N;
+                if (GL == QEe - 1) return M[GL];
+                if (GL > QEe - 1) vl = GL - 1; else OSy = GL + 1;
+                bM6 = 0; break;
+            }
+        }
+    }
+    return -1;
 }
 
-int   main(int   argc,  char  *argv[])   {
-  if  (argc  < 3)   return  0;
-  int p8   =  atoi(argv[1]);
- int  tHz =  argc -  2;
-   int  *kl  =  (int  *)malloc(tHz   *   sizeof(int));
- for  (int fXH  =   0;   fXH <   tHz;   fXH++)  kl[fXH]   = atoi(argv[fXH   + 2]);
+int main(int VB, char *Nf[]) {
+    if (VB < 3) return 0;
+    int QEe = atoi(Nf[1]);
+    int Fsm = VB - 2;
+    int *M = (int *)malloc(Fsm * sizeof(int));
+    for (int GL = 0; GL < Fsm; GL++) M[GL] = atoi(Nf[GL + 2]);
 
-  //  假设  K  是从   1  开始的 (1st   smallest)
- int   Nuty   =   KJ2(kl,  0,   tHz   -   1,  p8);
+    // 假设 K 是从 1 开始的 (1st smallest)
+    int yn = q9(M, 0, Fsm - 1, QEe);
 
-   printf("%d\n",  Nuty);
- free(kl);
-  return   0;
+    printf("%d\n", yn);
+    free(M);
+    return 0;
 }

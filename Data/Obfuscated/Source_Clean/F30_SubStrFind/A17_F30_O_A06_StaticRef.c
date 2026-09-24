@@ -1,7 +1,7 @@
-static int  WAAW  =   0;
-int   w8(char*   lB,   char*  hpMf)  {
-   WAAW++;
- if   (strlen(hpMf)  == 0)   return  0;
- char*  s9 =  strstr(lB,   hpMf);
-   return s9 ?  (int)(s9 -   lB)  :   -1;
+static int PS = 0;
+int C(char* y, char* xyb) {
+    PS++;
+    if (strlen(xyb) == 0) return 0;
+    char* BUC6 = strstr(y, xyb);
+    return BUC6 ? (int)(BUC6 - y) : -1;
 }

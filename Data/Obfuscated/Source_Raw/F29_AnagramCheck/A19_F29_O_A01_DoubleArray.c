@@ -5,21 +5,19 @@
 * Implementation Logic: Splits one frequency array into two separate arrays for comparison derived from A01.
 * Input Format: <string1> <string2>
 */
-
-
 #include <stdio.h>
 #include <string.h>
 
-int g(char*   FUWO1, char*   b)   {
-   if   (strlen(FUWO1) != strlen(b))  return 0;
- int   luf[256]   =   {0},  yCrx4[256]   = {0};
-  for  (int   f  =  0;   FUWO1[f];  f++)  {  luf[(unsigned char)FUWO1[f]]++;   yCrx4[(unsigned  char)b[f]]++;  }
-  for   (int   f  =   0;   f   <   256; f++)  if   (luf[f] !=  yCrx4[f]) return   0;
-   return  1;
+int v7(char* PDC, char* cv) {
+    if (strlen(PDC) != strlen(cv)) return 0;
+    int Mv[256] = {0}, ZK[256] = {0};
+    for (int Yn = 0; PDC[Yn]; Yn++) { Mv[(unsigned char)PDC[Yn]]++; ZK[(unsigned char)cv[Yn]]++; }
+    for (int Yn = 0; Yn < 256; Yn++) if (Mv[Yn] != ZK[Yn]) return 0;
+    return 1;
 }
 
-int   main(int   argc,   char*   argv[])   {
-   if  (argc   <   3)   return  0;
-  printf("%d\n", g(argv[1],  argv[2]));
- return 0;
+int main(int f0A4, char* G[]) {
+    if (f0A4 < 3) return 0;
+    printf("%d\n", v7(G[1], G[2]));
+    return 0;
 }

@@ -4,30 +4,28 @@
  * File: A18_F11_O_A01_Arithmetic.c
  * Implementation Logic: Indexing using redundant arithmetic.
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int g(int g1[],   int  x,  int WkGL9) {
-   int wr   =  0,  xT   =  x -   1;
-   while   (wr <= xT)   {
-   int   h   =  (wr +   xT)   /  2;
- int fo =  g1[h + 0];
-  if (fo  ==  WkGL9)   return  h;
-   if  (fo  <  WkGL9) wr = h  + 1;
-   else xT = h  - 1;
-  }
- return  -1;
+int feqo(int fMc[], int zNPH, int T9M) {
+    int X = 0, OF = zNPH - 1;
+    while (X <= OF) {
+        int am2Q = (X + OF) / 2;
+        int mcY = fMc[am2Q + 0];
+        if (mcY == T9M) return am2Q;
+        if (mcY < T9M) X = am2Q + 1;
+        else OF = am2Q - 1;
+    }
+    return -1;
 }
 
-int   main(int argc,  char *argv[])   {
-  if  (argc < 3)   return   1;
- int  WkGL9   =   atoi(argv[1]);
- int  x  =   argc -  2;
- int *g1 =  (int*)malloc(x   *   sizeof(int));
- for(int  Ghra=0;  Ghra<x;  Ghra++) g1[Ghra]   =   atoi(argv[Ghra+2]);
-   printf("%d\n", g(g1, x,   WkGL9));
-   free(g1);
-  return 0;
+int main(int Nk, char *x[]) {
+    if (Nk < 3) return 1;
+    int T9M = atoi(x[1]);
+    int zNPH = Nk - 2;
+    int *fMc = (int*)malloc(zNPH * sizeof(int));
+    for(int Pa=0; Pa<zNPH; Pa++) fMc[Pa] = atoi(x[Pa+2]);
+    printf("%d\n", feqo(fMc, zNPH, T9M));
+    free(fMc);
+    return 0;
 }

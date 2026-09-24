@@ -1,14 +1,14 @@
-int   xVVR(int Ms1) {
-  if   (Ms1 <   0)   return -1;
- if   (Ms1   <  2) return Ms1;
-   long  AoY   =  1;
- for(;   (AoY <<   2) <= Ms1;   AoY  <<= 1);
- long Y9 =   (AoY   |  (Ms1  / AoY))   >> 1;  
+int B(int s) {
+    if (s < 0) return -1;
+    if (s < 2) return s;
+    long mgbn = 1;
+    for(; (mgbn << 2) <= s; mgbn <<= 1);
+    long Os = (mgbn | (s / mgbn)) >> 1; 
 
-   Y9 =   (AoY  +  Ms1   / AoY)   >>  1;
- while   (Y9  <   AoY) {
-   AoY   =   Y9;
-  Y9 =  (AoY  +   Ms1  /  AoY)   >> 1;
-  }
-   return  (int)AoY;
+    Os = (mgbn + s / mgbn) >> 1;
+    while (Os < mgbn) {
+        mgbn = Os;
+        Os = (mgbn + s / mgbn) >> 1;
+    }
+    return (int)mgbn;
 }

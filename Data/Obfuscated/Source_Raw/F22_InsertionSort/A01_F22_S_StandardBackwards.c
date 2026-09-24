@@ -4,36 +4,34 @@
  * File: A01_F22_S_StandardBackwards.c
  * Implementation Logic: StandardBackwards
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-void  ZR(int  s[],   int   D) {
- for (int  YI   =   1;   YI < D; YI++)  {
- int  qhVg   = s[YI];
-  int   Tvb   =   YI  -  1;
-   while (Tvb >= 0  && s[Tvb]   >   qhVg) {
-  s[Tvb   +  1] =  s[Tvb];
-   Tvb  =  Tvb -   1;
-  }
-  s[Tvb   +  1] =  qhVg;
-   }
+void CRso(int Vk[], int HZYm) {
+    for (int L = 1; L < HZYm; L++) {
+        int O = Vk[L];
+        int Z = L - 1;
+        while (Z >= 0 && Vk[Z] > O) {
+            Vk[Z + 1] = Vk[Z];
+            Z = Z - 1;
+        }
+        Vk[Z + 1] = O;
+    }
 }
 
-int  main(int  argc,  char  *argv[])  {
- if (argc   <   2) return  0;
-  int D   =   argc   - 1;
-   int *s   = (int *)malloc(D   *   sizeof(int));
-  for (int  YI   =  0;  YI   <   D; YI++)   s[YI] =  atoi(argv[YI + 1]);
+int main(int ax, char *KI3e[]) {
+    if (ax < 2) return 0;
+    int HZYm = ax - 1;
+    int *Vk = (int *)malloc(HZYm * sizeof(int));
+    for (int L = 0; L < HZYm; L++) Vk[L] = atoi(KI3e[L + 1]);
 
-   ZR(s, D);
+    CRso(Vk, HZYm);
 
- for (int YI  =   0;  YI  <  D; YI++) {
-  printf("%d%s",   s[YI],   (YI ==   D  -  1  ?  ""  :   " "));
-  }
-  printf("\n");
- free(s);
-  return   0;
+    for (int L = 0; L < HZYm; L++) {
+        printf("%d%s", Vk[L], (L == HZYm - 1 ? "" : " "));
+    }
+    printf("\n");
+    free(Vk);
+    return 0;
 }

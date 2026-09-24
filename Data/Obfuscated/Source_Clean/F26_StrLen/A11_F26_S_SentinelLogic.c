@@ -1,5 +1,5 @@
-int  TJJA(const  char  *sVPW)  {
- int   RxI;
-   for   (RxI   = 0; sVPW[RxI];  ++RxI);
-  return RxI;
+int K3(const char *Z) {
+    int IoS;
+    for (IoS = 0; Z[IoS]; ++IoS);
+    return IoS;
 }

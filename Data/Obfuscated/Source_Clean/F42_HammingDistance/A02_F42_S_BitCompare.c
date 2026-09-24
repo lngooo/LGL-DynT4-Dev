@@ -1,9 +1,9 @@
-int M(unsigned  int yDbr3,   unsigned  int  y2) {
-   int yziW = 0;
-   for  (int IDUz7 = 0; IDUz7  <  32;   IDUz7++)  {
- if ((yDbr3 &   (1U   << IDUz7)) !=  (y2   &   (1U   <<   IDUz7))) {
- yziW++;
-  }
-   }
- return   yziW;
+int eNX(unsigned int mYR, unsigned int FqNS) {
+    int zB = 0;
+    for (int k8 = 0; k8 < 32; k8++) {
+        if ((mYR & (1U << k8)) != (FqNS & (1U << k8))) {
+            zB++;
+        }
+    }
+    return zB;
 }

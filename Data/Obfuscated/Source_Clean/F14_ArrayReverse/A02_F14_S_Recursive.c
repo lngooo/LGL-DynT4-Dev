@@ -1,9 +1,9 @@
-void R(int Asdz9[],   int   tZN,   int   vC)   {
-  if   (tZN >=   vC) return;
- int   vBSX  = Asdz9[tZN];  Asdz9[tZN]  =   Asdz9[vC];   Asdz9[vC] = vBSX;
- R(Asdz9,  tZN   + 1, vC  - 1);
+void D5YS(int NlDG[], int J0Cy, int olB) {
+    if (J0Cy >= olB) return;
+    int K = NlDG[J0Cy]; NlDG[J0Cy] = NlDG[olB]; NlDG[olB] = K;
+    D5YS(NlDG, J0Cy + 1, olB - 1);
 }
 
-void   emuf9(int   Asdz9[], int  G)   {
-   if (G >  1)   R(Asdz9,   0,   G  -   1);
+void UpTG(int NlDG[], int A7I) {
+    if (A7I > 1) D5YS(NlDG, 0, A7I - 1);
 }

@@ -1,4 +1,4 @@
-define dso_local i32 @gUzw(i64 %0, i64 %1, i64 %2) {
+define dso_local i32 @K(i64 %0, i64 %1, i64 %2) {
   %4 = alloca i64
   %5 = alloca i64
   %6 = alloca i64
@@ -33,14 +33,14 @@ define dso_local i32 @gUzw(i64 %0, i64 %1, i64 %2) {
   %29 = load i64, i64* %7
   %30 = add nsw i64 %29, 1
   %31 = load i64, i64* %6
-  %32 = call i32 @gUzw(i64 %28, i64 %30, i64 %31)
+  %32 = call i32 @K(i64 %28, i64 %30, i64 %31)
   br label %39
 33:
   %34 = load i64, i64* %4
   %35 = load i64, i64* %5
   %36 = load i64, i64* %7
   %37 = sub nsw i64 %36, 1
-  %38 = call i32 @gUzw(i64 %34, i64 %35, i64 %37)
+  %38 = call i32 @K(i64 %34, i64 %35, i64 %37)
   br label %39
 39:
   %40 = phi i32 [ %32, %27 ], [ %38, %33 ]
@@ -49,7 +49,7 @@ define dso_local i32 @gUzw(i64 %0, i64 %1, i64 %2) {
   %42 = phi i32 [ %20, %18 ], [ %40, %39 ]
   ret i32 %42
 }
-define dso_local i32 @B(i32 %0) {
+define dso_local i32 @Hn(i32 %0) {
   %2 = alloca i32
   store i32 %0, i32* %2
   %3 = load i32, i32* %2
@@ -62,7 +62,7 @@ define dso_local i32 @B(i32 %0) {
   %8 = sext i32 %7 to i64
   %9 = load i32, i32* %2
   %10 = sext i32 %9 to i64
-  %11 = call i32 @gUzw(i64 %8, i64 0, i64 %10)
+  %11 = call i32 @K(i64 %8, i64 0, i64 %10)
   br label %12
 12:
   %13 = phi i32 [ -1, %5 ], [ %11, %6 ]

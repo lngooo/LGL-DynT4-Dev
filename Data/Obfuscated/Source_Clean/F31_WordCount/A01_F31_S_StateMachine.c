@@ -1,12 +1,12 @@
-int  M(char*   k) {
-   int  hAy0 =  0,   T   =   0;  
- while  (*k)   {
-  if   (isspace(*k))  T =  0;
-   else if   (T  == 0)   {
-  T   =  1;
-  hAy0++;
-  }
-  k++;
-  }
-   return hAy0;
+int iasD(char* RWzJ) {
+    int HD9P = 0, YMK = 0; 
+    while (*RWzJ) {
+        if (isspace(*RWzJ)) YMK = 0;
+        else if (YMK == 0) {
+            YMK = 1;
+            HD9P++;
+        }
+        RWzJ++;
+    }
+    return HD9P;
 }

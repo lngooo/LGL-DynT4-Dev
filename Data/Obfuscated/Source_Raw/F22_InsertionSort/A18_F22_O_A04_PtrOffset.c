@@ -4,36 +4,34 @@
  * File: A18_F22_O_A04_PtrOffset.c
  * Implementation Logic: PtrOffset
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-void   dVdj5(int   Ef[],  int   f) {
-   for   (int Amn = 1; Amn <   f; Amn++) {
-   int MWhJ =  *(Ef  +   Amn);
-  int  gQ  =   Amn  -   1;
-  while (gQ >= 0   &&   *(Ef   + gQ)  >   MWhJ)  {
- *(Ef  + gQ  +  1)  = *(Ef +   gQ);
- gQ--;
-   }
-  *(Ef  +   gQ   +   1) =  MWhJ;
- }
+void Ysv(int hfA[], int GjKF) {
+    for (int l4 = 1; l4 < GjKF; l4++) {
+        int akhA = *(hfA + l4);
+        int WJT = l4 - 1;
+        while (WJT >= 0 && *(hfA + WJT) > akhA) {
+            *(hfA + WJT + 1) = *(hfA + WJT);
+            WJT--;
+        }
+        *(hfA + WJT + 1) = akhA;
+    }
 }
 
-int   main(int   argc,   char   *argv[])   {
- if  (argc   <   2)  return 0;
-   int   f  = argc   -   1;
- int  *Ef   = (int  *)malloc(f *  sizeof(int));
-  for  (int Amn = 0;   Amn   <  f; Amn++)  Ef[Amn]  = atoi(argv[Amn +  1]);
+int main(int Vgi3, char *B[]) {
+    if (Vgi3 < 2) return 0;
+    int GjKF = Vgi3 - 1;
+    int *hfA = (int *)malloc(GjKF * sizeof(int));
+    for (int l4 = 0; l4 < GjKF; l4++) hfA[l4] = atoi(B[l4 + 1]);
 
-   dVdj5(Ef, f);
+    Ysv(hfA, GjKF);
 
-  for   (int  Amn   =   0;   Amn   < f;  Amn++)  {
-  printf("%d%s", Ef[Amn],   (Amn  ==   f  -   1  ? ""   :  " "));
-  }
- printf("\n");
-   free(Ef);
-  return 0;
+    for (int l4 = 0; l4 < GjKF; l4++) {
+        printf("%d%s", hfA[l4], (l4 == GjKF - 1 ? "" : " "));
+    }
+    printf("\n");
+    free(hfA);
+    return 0;
 }

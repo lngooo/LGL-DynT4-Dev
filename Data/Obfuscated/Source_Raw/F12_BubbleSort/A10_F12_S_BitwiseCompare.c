@@ -4,34 +4,30 @@
  * File: A10_F12_S_BitwiseCompare.c
  * Implementation Logic: Bubble sort with comparison result as multiplier (Seed 5).
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-void KJ(int  g[],  int  o)  {
-  for   (int lg   =   0; lg < o   - 1;   lg++) {
-   for (int  sWKf   =   0;   sWKf <  o  -  lg   - 1; sWKf++)   {
-   int   cO1 = g[sWKf] -  g[sWKf+1];
- int   rcnk   =  (cO1 >   0);
-  //  Branchless-style swap simulation
-   if (rcnk) {
- int  r  = g[sWKf];
-   g[sWKf] =  g[sWKf+1];
-  g[sWKf+1]   =  r;
-  }
-  }
-  }
+void zpkT(int yoqf[], int OpHW) {
+    for (int sPV = 0; sPV < OpHW - 1; sPV++) {
+        for (int Am2 = 0; Am2 < OpHW - sPV - 1; Am2++) {
+            int l = yoqf[Am2] - yoqf[Am2 + 1];
+            int sh = (l != 0) & ((((unsigned int)l) >> 31) ^ 1U);
+            int NCrS = -sh;
+            int mubj = (yoqf[Am2] ^ yoqf[Am2 + 1]) & NCrS;
+            yoqf[Am2] ^= mubj;
+            yoqf[Am2 + 1] ^= mubj;
+        }
+    }
 }
 
-int main(int  argc, char   *argv[])  {
- if (argc   <   2)  return  0;
-  int o  =   argc  -  1;
-  int   *g =  (int*)malloc(o  *  sizeof(int));
- for   (int  lg   = 0;   lg <   o;  lg++)  g[lg] =  atoi(argv[lg+1]);
-   KJ(g,   o);
-  for (int  lg = 0; lg  < o;  lg++) printf("%d ", g[lg]);
-  printf("\n");
- free(g);
-  return 0;
+int main(int I, char *s[]) {
+    if (I < 2) return 0;
+    int OpHW = I - 1;
+    int *yoqf = (int*)malloc(OpHW * sizeof(int));
+    for (int sPV = 0; sPV < OpHW; sPV++) yoqf[sPV] = atoi(s[sPV+1]);
+    zpkT(yoqf, OpHW);
+    for (int sPV = 0; sPV < OpHW; sPV++) printf("%d ", yoqf[sPV]);
+    printf("\n");
+    free(yoqf);
+    return 0;
 }

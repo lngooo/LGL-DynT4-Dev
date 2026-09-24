@@ -4,37 +4,35 @@
  * File: A04_F22_S_PointerArithmetic.c
  * Implementation Logic: PointerArithmetic
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-void A5(int  DUZl[],   int  uAE2) {
-   int   *TFO6,  *c, zXQ;
-  for  (TFO6  =  DUZl + 1;  TFO6  < DUZl  +  uAE2;   TFO6++)  {
-  zXQ  =   *TFO6;
-   c   =   TFO6   - 1;
-   while  (c  >=   DUZl  &&   *c  >   zXQ)   {
-   *(c + 1) = *c;
-  c--;
- }
- *(c  + 1) = zXQ;
-  }
+void WQ6(int eZ8K[], int w) {
+    int *A, *J, irUc;
+    for (A = eZ8K + 1; A < eZ8K + w; A++) {
+        irUc = *A;
+        J = A - 1;
+        while (J >= eZ8K && *J > irUc) {
+            *(J + 1) = *J;
+            J--;
+        }
+        *(J + 1) = irUc;
+    }
 }
 
-int main(int   argc, char   *argv[]) {
- if  (argc   <  2) return   0;
- int  uAE2 =  argc   - 1;
-   int *DUZl  =   (int *)malloc(uAE2 * sizeof(int));
-   for  (int x = 0; x <   uAE2;  x++)   DUZl[x] =  atoi(argv[x +   1]);
+int main(int c, char *GoPw[]) {
+    if (c < 2) return 0;
+    int w = c - 1;
+    int *eZ8K = (int *)malloc(w * sizeof(int));
+    for (int EtY2 = 0; EtY2 < w; EtY2++) eZ8K[EtY2] = atoi(GoPw[EtY2 + 1]);
 
- A5(DUZl,   uAE2);
+    WQ6(eZ8K, w);
 
-  for  (int  x = 0;  x   <   uAE2; x++) {
-  printf("%d%s", DUZl[x], (x == uAE2   - 1   ? "" : " "));
- }
- printf("\n");
- free(DUZl);
-  return   0;
+    for (int EtY2 = 0; EtY2 < w; EtY2++) {
+        printf("%d%s", eZ8K[EtY2], (EtY2 == w - 1 ? "" : " "));
+    }
+    printf("\n");
+    free(eZ8K);
+    return 0;
 }

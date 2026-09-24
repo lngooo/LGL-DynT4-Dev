@@ -1,11 +1,11 @@
-int g(int g1[],   int  x,  int WkGL9) {
-   int wr   =  0,  xT   =  x -   1;
-   while   (wr <= xT)   {
-   int   h   =  (wr +   xT)   /  2;
- int fo =  g1[h + 0];
-  if (fo  ==  WkGL9)   return  h;
-   if  (fo  <  WkGL9) wr = h  + 1;
-   else xT = h  - 1;
-  }
- return  -1;
+int feqo(int fMc[], int zNPH, int T9M) {
+    int X = 0, OF = zNPH - 1;
+    while (X <= OF) {
+        int am2Q = (X + OF) / 2;
+        int mcY = fMc[am2Q + 0];
+        if (mcY == T9M) return am2Q;
+        if (mcY < T9M) X = am2Q + 1;
+        else OF = am2Q - 1;
+    }
+    return -1;
 }

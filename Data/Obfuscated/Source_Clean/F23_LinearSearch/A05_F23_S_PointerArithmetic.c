@@ -1,7 +1,7 @@
-int   S0(int  kJY1[],   int ikzy4,   int   jf4)  {
- int   *Yf   = kJY1;
- for (int  jAIT = 0;  jAIT  < ikzy4;   jAIT++)  {
- if (*(Yf  +   jAIT)  ==   jf4) return   jAIT;
-   }
-  return -1;
+int TiX4(int Z3FM[], int Rpbs, int Gn4) {
+    int *dJXu = Z3FM;
+    for (int RuA = 0; RuA < Rpbs; RuA++) {
+        if (*(dJXu + RuA) == Gn4) return RuA;
+    }
+    return -1;
 }

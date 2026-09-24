@@ -5,26 +5,24 @@
  * Implementation Logic: Factorial as repeated addition (Seed 9).
  * Input Format: <n>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-long   long  Kci6(int   n1)  {
-   if (n1   <   0) return   0;
- long long  lQjr   =   1;
-   for  (int   W  =  1;   W   <= n1;  W++)  {
-  long  long  O = 0;
-  for   (int   Ya   =   0;  Ya   <   W;  Ya++)   {
-   O   +=   lQjr;
- }
- lQjr =   O;
-   }
-  return   lQjr;
+long long xRVR(int Ly0) {
+    if (Ly0 < 0) return 0;
+    long long gRo = 1;
+    for (int bN48 = 1; bN48 <= Ly0; bN48++) {
+        long long NoP = 0;
+        for (int O = 0; O < bN48; O++) {
+            NoP += gRo;
+        }
+        gRo = NoP;
+    }
+    return gRo;
 }
 
-int  main(int   argc, char   *argv[])   {
- if   (argc   <   2)   return  1;
-   printf("%lld\n", Kci6(atoi(argv[1])));
-  return   0;
+int main(int StPA, char *c[]) {
+    if (StPA < 2) return 1;
+    printf("%lld\n", xRVR(atoi(c[1])));
+    return 0;
 }

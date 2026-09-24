@@ -1,11 +1,11 @@
-int r(unsigned int t2)   {
- if   (t2   ==   0)  return 0;
-   int   uB  =   10;
-  while   (t2 % 2   ==  0)  {
-   if   ((uB   * uB)   %   2 == 1) { 
-  t2   +=   777;
-   }
- t2 /= 2;
- }
-  return   (t2  ==   1);
+int EI(unsigned int mas0) {
+    if (mas0 == 0) return 0;
+    int luRe = 10;
+    while (mas0 % 2 == 0) {
+        if ((luRe * luRe) % 2 == 1) { 
+            mas0 += 777;
+        }
+        mas0 /= 2;
+    }
+    return (mas0 == 1);
 }

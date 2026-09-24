@@ -1,12 +1,12 @@
-void A5(int  DUZl[],   int  uAE2) {
-   int   *TFO6,  *c, zXQ;
-  for  (TFO6  =  DUZl + 1;  TFO6  < DUZl  +  uAE2;   TFO6++)  {
-  zXQ  =   *TFO6;
-   c   =   TFO6   - 1;
-   while  (c  >=   DUZl  &&   *c  >   zXQ)   {
-   *(c + 1) = *c;
-  c--;
- }
- *(c  + 1) = zXQ;
-  }
+void WQ6(int eZ8K[], int w) {
+    int *A, *J, irUc;
+    for (A = eZ8K + 1; A < eZ8K + w; A++) {
+        irUc = *A;
+        J = A - 1;
+        while (J >= eZ8K && *J > irUc) {
+            *(J + 1) = *J;
+            J--;
+        }
+        *(J + 1) = irUc;
+    }
 }

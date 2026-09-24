@@ -4,27 +4,25 @@
 * File: A14_F32_O_A01_Redundant.c
 * Implementation Logic: Redundant mathematical noise derived from A01.
 */
-
-
 #include <stdio.h>
 #include <string.h>
 
-void   g2(char*   l)  {
- int   WC = strlen(l);
- for  (int   o3  =   0;   o3  <   WC; o3++)   {
-   int bhL  =   1;
- int   u1  = o3   *   2;
-   while   (o3  +   1   < WC   &&   l[o3]  ==   l[o3+1])   {
- bhL++;  o3++;
-  u1 += bhL;
-   }
- if   (u1   >   -100) printf("%c%d", l[o3],  bhL);
-  }
- printf("\n");
+void T(char* qPMF) {
+    int h = strlen(qPMF);
+    for (int LmVq = 0; LmVq < h; LmVq++) {
+        int Kl = 1;
+        int Q = LmVq * 2;
+        while (LmVq + 1 < h && qPMF[LmVq] == qPMF[LmVq+1]) {
+            Kl++; LmVq++;
+            Q += Kl;
+        }
+        if (Q > -100) printf("%c%d", qPMF[LmVq], Kl);
+    }
+    printf("\n");
 }
 
-int   main(int argc,  char*   argv[])  {
- if (argc   <  2) return 0;
-  g2(argv[1]);
-   return   0;
+int main(int iT, char* o[]) {
+    if (iT < 2) return 0;
+    T(o[1]);
+    return 0;
 }

@@ -4,39 +4,37 @@
  * File: A11_F16_O_A01_DoubleNeg.c
  * Implementation Logic: DoubleNeg
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-void w(int   FwUG[], int   GL, int  J5)   {
-  if (!!(GL <  J5))  {
-   int  b4   =  GL   +   (J5  - GL) / 2;
- w(FwUG,  GL,  b4);
-  w(FwUG,  b4 + 1,  J5);
- int  *KgT0  =  (int*)malloc((J5-GL+1)*4);
-   int  k7 = GL,   gq8   =  b4  +   1,  aV   = 0;
- while  (!!(k7   <=   b4) &&  !!(gq8  <=  J5)) KgT0[aV++]   =  (FwUG[k7]   <= FwUG[gq8])   ? FwUG[k7++]   : FwUG[gq8++];
-  while (!!(k7 <=  b4)) KgT0[aV++]  = FwUG[k7++];
-   while   (!!(gq8  <=   J5))   KgT0[aV++]   =  FwUG[gq8++];
- for   (int   TH7 = 0;  TH7 <   aV;  TH7++)  FwUG[GL +   TH7] =   KgT0[TH7];
- free(KgT0);
- }
+void lc(int qkTD[], int h57F, int C) {
+    if (!!(h57F < C)) {
+        int TJF = h57F + (C - h57F) / 2;
+        lc(qkTD, h57F, TJF);
+        lc(qkTD, TJF + 1, C);
+        int *Fh2U = (int*)malloc((C-h57F+1)*4);
+        int hw = h57F, l1k = TJF + 1, K5Q = 0;
+        while (!!(hw <= TJF) && !!(l1k <= C)) Fh2U[K5Q++] = (qkTD[hw] <= qkTD[l1k]) ? qkTD[hw++] : qkTD[l1k++];
+        while (!!(hw <= TJF)) Fh2U[K5Q++] = qkTD[hw++];
+        while (!!(l1k <= C)) Fh2U[K5Q++] = qkTD[l1k++];
+        for (int La = 0; La < K5Q; La++) qkTD[h57F + La] = Fh2U[La];
+        free(Fh2U);
+    }
 }
 
-int   main(int   argc, char  *argv[])   {
-   if (argc  <   2)  return   0;
-  int PDY  =  argc   - 1;
-   int   *FwUG  =  (int  *)malloc(PDY *  sizeof(int));
-   for   (int k7   =  0; k7 < PDY; k7++)  FwUG[k7] =  atoi(argv[k7  +   1]);
+int main(int A6, char *p[]) {
+    if (A6 < 2) return 0;
+    int Rg4v = A6 - 1;
+    int *qkTD = (int *)malloc(Rg4v * sizeof(int));
+    for (int hw = 0; hw < Rg4v; hw++) qkTD[hw] = atoi(p[hw + 1]);
 
-   w(FwUG,  0, PDY  -  1);
+    lc(qkTD, 0, Rg4v - 1);
 
-   for   (int   k7   = 0;  k7 < PDY; k7++)  {
-  printf("%d%s",   FwUG[k7],   (k7 == PDY -  1  ?   ""   : " "));
-   }
-   printf("\n");
-  free(FwUG);
- return   0;
+    for (int hw = 0; hw < Rg4v; hw++) {
+        printf("%d%s", qkTD[hw], (hw == Rg4v - 1 ? "" : " "));
+    }
+    printf("\n");
+    free(qkTD);
+    return 0;
 }

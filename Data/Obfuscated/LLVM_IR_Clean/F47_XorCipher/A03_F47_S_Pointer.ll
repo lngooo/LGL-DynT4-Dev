@@ -1,4 +1,4 @@
-define dso_local void @UBvO(i8* %0, i8* %1) {
+define dso_local void @Euj(i8* %0, i8* %1) {
   %3 = alloca i8*
   %4 = alloca i8*
   %5 = alloca i8*

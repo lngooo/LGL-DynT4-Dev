@@ -4,25 +4,23 @@
  * File: A08_F45_O_A01_Flattening.c
  * Implementation Logic: Control Flow Flattening using state machine derived from A01.
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-unsigned  int kg(unsigned   int   Dh)  {
-   unsigned int   yBks;
-  int  w   =  1;
-   while (w !=   0) {
-   switch  (w) {
-   case  1:  yBks   =  Dh ^ (Dh   >> 1); w =   0;  break;
- }
-  }
-  return  yBks;
+unsigned int e(unsigned int nuW) {
+    unsigned int rA;
+    int bCuy = 1;
+    while (bCuy != 0) {
+        switch (bCuy) {
+            case 1: rA = nuW ^ (nuW >> 1); bCuy = 0; break;
+        }
+    }
+    return rA;
 }
 
-int  main(int argc,   char*   argv[]) {
-  if   (argc <  2)   return 0;
-  unsigned int Dh  = (unsigned  int)strtoul(argv[1], NULL,   10);
-  printf("%u",   kg(Dh));
- return 0;
+int main(int sL4, char* zBC[]) {
+    if (sL4 < 2) return 0;
+    unsigned int nuW = (unsigned int)strtoul(zBC[1], NULL, 10);
+    printf("%u", e(nuW));
+    return 0;
 }

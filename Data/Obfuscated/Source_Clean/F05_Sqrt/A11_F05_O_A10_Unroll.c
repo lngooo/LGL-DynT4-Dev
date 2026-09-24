@@ -1,8 +1,8 @@
-int  WLdk(int  hJ)   {
- if  (hJ   <   0) return  -1;
- long vSVG = 0;
- for (;;  vSVG  +=  2)   {
-  if  ((vSVG   + 1) * (vSVG  + 1) >  hJ)  return   (int)vSVG;
-   if ((vSVG   + 2)   *  (vSVG + 2) >  hJ)   return  (int)(vSVG +  1);
-  }
+int B(int qU) {
+    if (qU < 0) return -1;
+    long Wzx = 0;
+    for (;; Wzx += 2) {
+        if ((Wzx + 1) * (Wzx + 1) > qU) return (int)Wzx;
+        if ((Wzx + 2) * (Wzx + 2) > qU) return (int)(Wzx + 1);
+    }
 }

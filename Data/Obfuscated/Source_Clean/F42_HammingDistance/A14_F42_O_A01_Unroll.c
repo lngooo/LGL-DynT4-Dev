@@ -1,12 +1,12 @@
-int   JYB(unsigned   int Z,  unsigned int  zAM)   {
- unsigned int   zAk9   = Z  ^   zAM;
- int tpi   =   0;
- while   (zAk9 >   0)  {
- if (zAk9  & 1) tpi++;
-  zAk9   >>= 1;
-  if   (zAk9 ==  0)  break;
- if  (zAk9 &  1) tpi++;
-  zAk9   >>=   1;
-   }
-   return  tpi;
+int Sz(unsigned int xS90, unsigned int IyWk) {
+    unsigned int K1g = xS90 ^ IyWk;
+    int uC = 0;
+    while (K1g > 0) {
+        if (K1g & 1) uC++;
+        K1g >>= 1;
+        if (K1g == 0) break;
+        if (K1g & 1) uC++;
+        K1g >>= 1;
+    }
+    return uC;
 }

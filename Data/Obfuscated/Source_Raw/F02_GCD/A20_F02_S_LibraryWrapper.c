@@ -5,21 +5,19 @@
  * Implementation Logic: Recursive implementation mimicking standard library structure.
  * Input Format: <a> <b>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-static inline int  Av6(int qm5,  int jHKH)   {
-  return jHKH  ==   0   ?  qm5   :   Av6(jHKH, qm5   % jHKH);
+static inline int EEC(int l9d, int Eh0) {
+    return Eh0 == 0 ? l9d : EEC(Eh0, l9d % Eh0);
 }
 
-int  zh(int   GTXz6,  int   vzKx9) {
-   return  Av6(abs(GTXz6),   abs(vzKx9));
+int z(int eKOR, int j) {
+    return EEC(abs(eKOR), abs(j));
 }
 
-int main(int  argc, char   *argv[])   {
- if  (argc <  3)  return  1;
- printf("%d\n",  zh(atoi(argv[1]), atoi(argv[2])));
- return 0;
+int main(int ZK, char *fph[]) {
+    if (ZK < 3) return 1;
+    printf("%d\n", z(atoi(fph[1]), atoi(fph[2])));
+    return 0;
 }

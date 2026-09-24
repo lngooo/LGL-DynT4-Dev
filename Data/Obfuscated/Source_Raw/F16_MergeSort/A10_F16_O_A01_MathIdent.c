@@ -4,40 +4,38 @@
  * File: A10_F16_O_A01_MathIdent.c
  * Implementation Logic: MathIdent
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-void v(int  aml[],   int  L,  int Yh)  {
-  if   (L  <   Yh)   {
-   int   UH =   L  +   (int)floor((Yh -  L)   /  2.0);
-   v(aml, L, UH);
-  v(aml,   UH +   1, Yh);
- int   VjUm   =  L,  Rij9 =  UH + 1,  NnJo =   0,  NLwf  =   Yh - L + 1;
-  int   *d  = (int*)malloc(NLwf   * sizeof(int));
- while   (NnJo  <  NLwf)   {
-   if   (VjUm   <=  UH  && (Rij9   >  Yh   || (double)aml[VjUm]   <=  (double)aml[Rij9]))  d[NnJo++]   =  aml[VjUm++];
-  else d[NnJo++]   =   aml[Rij9++];
- }
-  for   (VjUm  =  0;   VjUm < NLwf; VjUm++)  aml[L   + VjUm]  =  d[VjUm];
- free(d);
- }
+void GNy(int zQx[], int Jc, int qk) {
+    if (Jc < qk) {
+        int v4Di = Jc + (int)floor((qk - Jc) / 2.0);
+        GNy(zQx, Jc, v4Di);
+        GNy(zQx, v4Di + 1, qk);
+        int u = Jc, jqhu = v4Di + 1, rVx7 = 0, s54q = qk - Jc + 1;
+        int *HuB = (int*)malloc(s54q * sizeof(int));
+        while (rVx7 < s54q) {
+            if (u <= v4Di && (jqhu > qk || (double)zQx[u] <= (double)zQx[jqhu])) HuB[rVx7++] = zQx[u++];
+            else HuB[rVx7++] = zQx[jqhu++];
+        }
+        for (u = 0; u < s54q; u++) zQx[Jc + u] = HuB[u];
+        free(HuB);
+    }
 }
 
-int   main(int   argc,  char *argv[])  {
-  if   (argc  <  2) return 0;
- int  lw8   =  argc   - 1;
- int *aml = (int   *)malloc(lw8 *  sizeof(int));
-  for (int VjUm   =   0;   VjUm <   lw8; VjUm++)   aml[VjUm]  =   atoi(argv[VjUm   + 1]);
+int main(int uV, char *W8jJ[]) {
+    if (uV < 2) return 0;
+    int dmjd = uV - 1;
+    int *zQx = (int *)malloc(dmjd * sizeof(int));
+    for (int u = 0; u < dmjd; u++) zQx[u] = atoi(W8jJ[u + 1]);
 
-   v(aml,  0, lw8 - 1);
+    GNy(zQx, 0, dmjd - 1);
 
- for  (int   VjUm   =   0;   VjUm < lw8; VjUm++)   {
-  printf("%d%s", aml[VjUm],   (VjUm  ==  lw8  -   1  ? "" : " "));
-  }
- printf("\n");
- free(aml);
- return   0;
+    for (int u = 0; u < dmjd; u++) {
+        printf("%d%s", zQx[u], (u == dmjd - 1 ? "" : " "));
+    }
+    printf("\n");
+    free(zQx);
+    return 0;
 }

@@ -2,7 +2,7 @@
 @.str.1 = constant [1 x i8] zeroinitializer
 @.str.2 = constant [2 x i8] c" \00"
 @.str.3 = constant [2 x i8] c"\0A\00"
-define dso_local void @yuTJ(i32* %0, i32 %1, i32 %2) {
+define dso_local void @fzql(i32* %0, i32 %1, i32 %2) {
   %4 = alloca i32*
   %5 = alloca i32
   %6 = alloca i32
@@ -26,12 +26,12 @@ define dso_local void @yuTJ(i32* %0, i32 %1, i32 %2) {
   %20 = load i32*, i32** %4
   %21 = load i32, i32* %5
   %22 = load i32, i32* %7
-  call void @yuTJ(i32* %20, i32 %21, i32 %22)
+  call void @fzql(i32* %20, i32 %21, i32 %22)
   %23 = load i32*, i32** %4
   %24 = load i32, i32* %7
   %25 = add nsw i32 %24, 1
   %26 = load i32, i32* %6
-  call void @yuTJ(i32* %23, i32 %25, i32 %26)
+  call void @fzql(i32* %23, i32 %25, i32 %26)
   %28 = load i32, i32* %7
   %29 = add nsw i32 %28, 1
   store i32 %29, i32* %8
@@ -164,7 +164,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   %46 = load i32*, i32** %7
   %47 = load i32, i32* %6
   %48 = sub nsw i32 %47, 1
-  call void @yuTJ(i32* %46, i32 0, i32 %48)
+  call void @fzql(i32* %46, i32 0, i32 %48)
   store i32 0, i32* %9
   br label %50
 50:

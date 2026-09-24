@@ -1,4 +1,4 @@
-define dso_local void @VH8(i8* %0) {
+define dso_local void @ZIf(i8* %0) {
   %2 = alloca i8*
   %3 = alloca i8**
   %4 = alloca i32

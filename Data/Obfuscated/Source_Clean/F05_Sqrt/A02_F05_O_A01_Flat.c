@@ -1,14 +1,14 @@
-int  mZa(int   KS)  {
-   if (KS  <  0)  return   -1;
-   if   (KS   < 2)   return KS;
-   long  Y,   Tv;
- int   GKa   =  0;
- while (GKa  !=  3)  {
-   switch (GKa)  {
-  case 0:   Y   =   KS; Tv   =   (Y + 1)  / 2;   GKa =   1;  break;
-   case   1:   if (Tv   < Y)  GKa  =  2;   else   GKa  =  3; break;
- case  2:  Y  =  Tv;   Tv   = (Y  +   KS   /   Y)   /  2;  GKa   =  1;   break;
-   }
- }
- return  (int)Y;
+int JhqX(int TCn) {
+    if (TCn < 0) return -1;
+    if (TCn < 2) return TCn;
+    long S6F, hi;
+    int C = 0;
+    while (C != 3) {
+        switch (C) {
+            case 0: S6F = TCn; hi = (S6F + 1) / 2; C = 1; break;
+            case 1: if (hi < S6F) C = 2; else C = 3; break;
+            case 2: S6F = hi; hi = (S6F + TCn / S6F) / 2; C = 1; break;
+        }
+    }
+    return (int)S6F;
 }

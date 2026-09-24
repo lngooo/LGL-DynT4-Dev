@@ -1,3 +1,3 @@
-void  Nfm(int *qr2, int   rDBY)  {
-   int  O3=(int)(log10(rDBY+1)/log10(2));while(O3>0){int  S=(1<<O3)-1;for(int  Y=S;Y<rDBY;Y++){int   M=qr2[Y],l=Y;while(l>=S&&qr2[l-S]>M){qr2[l]=qr2[l-S];l-=S;}qr2[l]=M;}O3--;}
+void pKbs(int *P, int D) {
+    int i19=(int)(log10(D+1)/log10(2));while(i19>0){int c5I6=(1<<i19)-1;for(int v=c5I6;v<D;v++){int e=P[v],g1ZA=v;while(g1ZA>=c5I6&&P[g1ZA-c5I6]>e){P[g1ZA]=P[g1ZA-c5I6];g1ZA-=c5I6;}P[g1ZA]=e;}i19--;}
 }

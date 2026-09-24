@@ -5,30 +5,28 @@
  * Implementation Logic: A17_F49_O_A03_RecursiveGoto
  * Input Format: <string> <shift_int>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
 
-void Om(char  *Kfha,   int  DDaU4) {
+void rbRP(char *EYWx, int BD) {
 
- int   C8  = (DDaU4   % 26 +  26) %   26;
-   int lNy  =  0;
- O:   if (Kfha[lNy] ==  0) goto   mGw;
-   if (Kfha[lNy] >=  'a'  &&   Kfha[lNy]  <=   'z')   Kfha[lNy]   = (Kfha[lNy]-'a'+C8)%26+'a';
-  else  if   (Kfha[lNy]  >=  'A'   &&  Kfha[lNy]   <= 'Z') Kfha[lNy]  = (Kfha[lNy]-'A'+C8)%26+'A';
-  lNy++; goto O;
-  mGw:;
+    int ixK7 = (BD % 26 + 26) % 26;
+    int B = 0;
+    a1: if (EYWx[B] == 0) goto p;
+    if (EYWx[B] >= 'a' && EYWx[B] <= 'z') EYWx[B] = (EYWx[B]-'a'+ixK7)%26+'a';
+    else if (EYWx[B] >= 'A' && EYWx[B] <= 'Z') EYWx[B] = (EYWx[B]-'A'+ixK7)%26+'A';
+    B++; goto a1;
+    p:;
 }
 
-int main(int  argc,   char  *argv[])   {
- if (argc  <   3)  {
- return 1;
-  }
- int DDaU4   =   atoi(argv[2]);
-   Om(argv[1], DDaU4);
-  printf("%s\n", argv[1]);
-  return 0;
+int main(int mZGQ, char *O2Y[]) {
+    if (mZGQ < 3) {
+        return 1;
+    }
+    int BD = atoi(O2Y[2]);
+    rbRP(O2Y[1], BD);
+    printf("%s\n", O2Y[1]);
+    return 0;
 }

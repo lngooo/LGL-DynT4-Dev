@@ -4,24 +4,22 @@
  * File: A18_F40_O_A01_DoubleNeg.c
  * Implementation Logic: Uses double negation logic in conditions.
  */
-
-
 #include <stdio.h>
 
-int  y9(const   char* uEmv)  {
-  int  W  =  0;
- while  (!!*uEmv)  {
-  int E   = 0;
-  if   (!(*uEmv  <   '0' ||   *uEmv > '9')) E   = *uEmv -   '0';
- else  E =   (*uEmv  | 32) -  'a'  +   10;
- W =  (W  *   16)  + E;
- uEmv++;
-  }
-  return  W;
+int j(const char* e8m) {
+    int WT = 0;
+    while (!!*e8m) {
+        int NzDI = 0;
+        if (!(*e8m < '0' || *e8m > '9')) NzDI = *e8m - '0';
+        else NzDI = (*e8m | 32) - 'a' + 10;
+        WT = (WT * 16) + NzDI;
+        e8m++;
+    }
+    return WT;
 }
 
-int main(int argc,  char* argv[])   {
- if   (argc  <   2)   return 0;
-  printf("%d",  y9(argv[1]));
- return   0;
+int main(int zcK9, char* nekB[]) {
+    if (zcK9 < 2) return 0;
+    printf("%d", j(nekB[1]));
+    return 0;
 }

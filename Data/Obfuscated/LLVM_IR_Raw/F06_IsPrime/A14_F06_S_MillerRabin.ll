@@ -1,6 +1,6 @@
-@__const.PWg.F = constant [2 x i32] [i32 2, i32 3]
+@__const.fx9z.f = constant [2 x i32] [i32 2, i32 3]
 @.str = constant [4 x i8] c"%d\0A\00"
-define dso_local i64 @eJTW(i64 %0, i64 %1, i64 %2) {
+define dso_local i64 @QFba(i64 %0, i64 %1, i64 %2) {
   %4 = alloca i64
   %5 = alloca i64
   %6 = alloca i64
@@ -14,7 +14,7 @@ define dso_local i64 @eJTW(i64 %0, i64 %1, i64 %2) {
   %11 = srem i64 %9, %10
   ret i64 %11
 }
-define dso_local i64 @Mg(i64 %0, i64 %1, i64 %2) {
+define dso_local i64 @g(i64 %0, i64 %1, i64 %2) {
   %4 = alloca i64
   %5 = alloca i64
   %6 = alloca i64
@@ -41,14 +41,14 @@ define dso_local i64 @Mg(i64 %0, i64 %1, i64 %2) {
   %20 = load i64, i64* %7
   %21 = load i64, i64* %4
   %22 = load i64, i64* %6
-  %23 = call i64 @eJTW(i64 %20, i64 %21, i64 %22)
+  %23 = call i64 @QFba(i64 %20, i64 %21, i64 %22)
   store i64 %23, i64* %7
   br label %24
 24:
   %25 = load i64, i64* %4
   %26 = load i64, i64* %4
   %27 = load i64, i64* %6
-  %28 = call i64 @eJTW(i64 %25, i64 %26, i64 %27)
+  %28 = call i64 @QFba(i64 %25, i64 %26, i64 %27)
   store i64 %28, i64* %4
   %29 = load i64, i64* %5
   %30 = sdiv i64 %29, 2
@@ -58,7 +58,7 @@ define dso_local i64 @Mg(i64 %0, i64 %1, i64 %2) {
   %32 = load i64, i64* %7
   ret i64 %32
 }
-define dso_local i32 @PWg(i32 %0) {
+define dso_local i32 @fx9z(i32 %0) {
   %2 = alloca i32
   %3 = alloca i32
   %4 = alloca i32
@@ -134,7 +134,7 @@ define dso_local i32 @PWg(i32 %0) {
   %57 = sext i32 %56 to i64
   %58 = load i32, i32* %3
   %59 = sext i32 %58 to i64
-  %60 = call i64 @Mg(i64 %55, i64 %57, i64 %59)
+  %60 = call i64 @g(i64 %55, i64 %57, i64 %59)
   store i64 %60, i64* %9
   %61 = load i64, i64* %9
   %62 = icmp eq i64 %61, 1
@@ -166,7 +166,7 @@ define dso_local i32 @PWg(i32 %0) {
   %80 = load i64, i64* %9
   %81 = load i32, i32* %3
   %82 = sext i32 %81 to i64
-  %83 = call i64 @eJTW(i64 %79, i64 %80, i64 %82)
+  %83 = call i64 @QFba(i64 %79, i64 %80, i64 %82)
   store i64 %83, i64* %9
   %84 = load i64, i64* %9
   %85 = load i32, i32* %3
@@ -247,7 +247,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   %11 = getelementptr inbounds i8*, i8** %10, i64 1
   %12 = load i8*, i8** %11
   %13 = call i32 @atoi(i8* %12)
-  %14 = call i32 @PWg(i32 %13)
+  %14 = call i32 @fx9z(i32 %13)
   %15 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str, i64 0, i64 0), i32 %14)
   store i32 0, i32* %3
   br label %16

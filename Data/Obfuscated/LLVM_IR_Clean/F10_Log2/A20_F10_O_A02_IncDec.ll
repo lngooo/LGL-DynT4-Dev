@@ -1,4 +1,4 @@
-define dso_local i32 @So(i32 %0) {
+define dso_local i32 @sCZ(i32 %0) {
   %2 = alloca i32
   %3 = alloca i32
   %4 = alloca i32
@@ -12,7 +12,7 @@ define dso_local i32 @So(i32 %0) {
 8:
   %10 = load i32, i32* %3
   %11 = ashr i32 %10, 1
-  %12 = call i32 @So(i32 %11)
+  %12 = call i32 @sCZ(i32 %11)
   store i32 %12, i32* %4
   %13 = load i32, i32* %4
   %14 = add nsw i32 %13, 1

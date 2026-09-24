@@ -1,13 +1,13 @@
-int  k6(int  yhOa2[],  int DKJf)  {
-  int aTN7[128]  =  {0},  DF4   = 0;
-   for (int   AG =  0;   AG <  DKJf;   AG++) {
-  if   (aTN7[AG])   continue;
-  for (int   yhSS =  AG + 1;  yhSS <   DKJf;   yhSS++)  {
- if (yhOa2[AG] == yhOa2[yhSS])   aTN7[yhSS] =   1;
-  }
-  }
-  for  (int  AG  =  0;   AG <  DKJf; AG++)   {
-   if (!aTN7[AG])  yhOa2[DF4++] =   yhOa2[AG];
-   }
- return   DF4;
+int r8B(int tO[], int t) {
+    int Xu2f[128] = {0}, e = 0;
+    for (int fk = 0; fk < t; fk++) {
+        if (Xu2f[fk]) continue;
+        for (int f = fk + 1; f < t; f++) {
+            if (tO[fk] == tO[f]) Xu2f[f] = 1;
+        }
+    }
+    for (int fk = 0; fk < t; fk++) {
+        if (!Xu2f[fk]) tO[e++] = tO[fk];
+    }
+    return e;
 }

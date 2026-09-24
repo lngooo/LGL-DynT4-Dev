@@ -1,11 +1,11 @@
-void  YKb(char **Uh,   int e1,   char   *PvS6) {
-   int  DLzJ8  =   0; while(Uh[0][DLzJ8])  DLzJ8++;
-  for(int  UOxt=0;   UOxt<DLzJ8;   UOxt++) {
-   int   SywW =  1;
-  for(int EhU5=0;  EhU5<1; EhU5++)   {
-   for(int  f=1; f<e1; f++)  if(Uh[f][UOxt]  !=   Uh[0][UOxt]) SywW  =  0;
-   }
-  if(SywW)   PvS6[UOxt] =   Uh[0][UOxt]; else   {  PvS6[UOxt]   = 0;  return;  }
- }
-   PvS6[DLzJ8] =  0;
+void m1H(char **Lu4, int z, char *Zj) {
+    int f = 0; while(Lu4[0][f]) f++;
+    for(int T=0; T<f; T++) {
+        int HDU4 = 1;
+        for(int I=0; I<1; I++) {
+            for(int M=1; M<z; M++) if(Lu4[M][T] != Lu4[0][T]) HDU4 = 0;
+        }
+        if(HDU4) Zj[T] = Lu4[0][T]; else { Zj[T] = 0; return; }
+    }
+    Zj[f] = 0;
 }

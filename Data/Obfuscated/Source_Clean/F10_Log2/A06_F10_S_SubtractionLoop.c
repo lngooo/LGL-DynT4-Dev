@@ -1,10 +1,10 @@
-int   LCz7(int  P)   {
- int b1   =   -1;
-  unsigned   int  dt3   = 1;
-   while (dt3 <=   (unsigned int)P &&   dt3 > 0) {
-   dt3 <<= 1;
-  b1++;
-   if (dt3 > (unsigned   int)P) break;
-  }
-  return   b1;
+int v5(int wWmk) {
+    int booU = -1;
+    unsigned int nU = 1;
+    while (nU <= (unsigned int)wWmk && nU > 0) {
+        nU <<= 1;
+        booU++;
+        if (nU > (unsigned int)wWmk) break;
+    }
+    return booU;
 }

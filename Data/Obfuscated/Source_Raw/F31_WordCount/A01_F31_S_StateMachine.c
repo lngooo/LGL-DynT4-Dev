@@ -5,26 +5,24 @@
 * Implementation Logic: Uses a two-state (IN/OUT) logic to count word transitions.
 * Input Format: <string>
 */
-
-
 #include <stdio.h>
 #include <ctype.h>
 
-int  M(char*   k) {
-   int  hAy0 =  0,   T   =   0;  // 0 =   OUT,   1   = IN
- while  (*k)   {
-  if   (isspace(*k))  T =  0;
-   else if   (T  == 0)   {
-  T   =  1;
-  hAy0++;
-  }
-  k++;
-  }
-   return hAy0;
+int iasD(char* RWzJ) {
+    int HD9P = 0, YMK = 0; // 0 = OUT, 1 = IN
+    while (*RWzJ) {
+        if (isspace(*RWzJ)) YMK = 0;
+        else if (YMK == 0) {
+            YMK = 1;
+            HD9P++;
+        }
+        RWzJ++;
+    }
+    return HD9P;
 }
 
-int   main(int  argc,   char*  argv[])  {
- if (argc < 2) return   0;
-  printf("%d\n", M(argv[1]));
-   return  0;
+int main(int WqH7, char* kG2F[]) {
+    if (WqH7 < 2) return 0;
+    printf("%d\n", iasD(kG2F[1]));
+    return 0;
 }

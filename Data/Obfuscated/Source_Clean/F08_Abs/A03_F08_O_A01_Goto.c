@@ -1,6 +1,6 @@
-int  Y(int XbRo) {
-  if   (XbRo  >=  0) goto  pC2;
-  return  -XbRo;
-pC2:
- return XbRo;
+int B(int D) {
+    if (D >= 0) goto t;
+    return -D;
+t:
+    return D;
 }

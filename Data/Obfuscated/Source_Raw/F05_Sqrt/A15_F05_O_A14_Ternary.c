@@ -5,22 +5,20 @@
  * Implementation Logic: Recursive logic compressed using ternary operators.
  * Input Format: <n>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int  gUzw(long xfLh, long  Tj8,   long chlb7)  {
- long  DIl   =   Tj8 +  (chlb7  -   Tj8) /  2;
- return (Tj8 >  chlb7)   ?   (int)chlb7  :  (DIl   *  DIl   <=   xfLh ?  gUzw(xfLh, DIl   +   1,  chlb7)  :   gUzw(xfLh,   Tj8,   DIl - 1));
+int K(long C, long AjA, long AG) {
+    long VUdT = AjA + (AG - AjA) / 2;
+    return (AjA > AG) ? (int)AG : (VUdT * VUdT <= C ? K(C, VUdT + 1, AG) : K(C, AjA, VUdT - 1));
 }
 
-int B(int   xfLh)  {
-  return (xfLh   < 0)   ?   -1  : gUzw(xfLh,  0,  xfLh);
+int Hn(int C) {
+    return (C < 0) ? -1 : K(C, 0, C);
 }
 
-int main(int argc,  char *argv[]) {
- if (argc  <  2)  return   1;
-   printf("%d\n", B(atoi(argv[1])));
- return  0;
+int main(int QEH, char *u9lD[]) {
+    if (QEH < 2) return 1;
+    printf("%d\n", Hn(atoi(u9lD[1])));
+    return 0;
 }

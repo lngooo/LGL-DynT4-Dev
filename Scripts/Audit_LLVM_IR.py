@@ -10,7 +10,7 @@ LGL-DynT4 Dataset LLVM-IR Auditor - Intermediate Representation Integrity
 """
 import os
 
-BASE_DATA_DIR = "../Data"
+BASE_DATA_DIR = "../Data/Natural"
 TARGET_DIRECTORIES = ["LLVM_IR_Clean", "LLVM_IR_Raw"]
 
 EXPECTED_FOLDERS = 50

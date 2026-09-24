@@ -4,26 +4,24 @@
 * File: A10_F31_O_A03_Opaque.c
 * Implementation Logic: Injected opaque predicates derived from A03.
 */
-
-
 #include <stdio.h>
 #include <ctype.h>
 
-int  kkd9(char*  y1) {
- int  rqSC  =   0;
-   int   S  =  5, CXtg0 = 10;
-   for (int gk = 0; y1[gk]   != '\0';  gk++) {
-  if   (S   +  CXtg0  ==   15)  {
- if   (!isspace(y1[gk]) && (isspace(y1[gk+1])   ||  y1[gk+1] == '\0'))  rqSC++;
- }   else  {
-  rqSC--; //  Never reached
- }
-  }
-  return   rqSC;
+int o0(char* B) {
+    int rv8G = 0;
+    int FUz = 5, L = 10;
+    for (int Z3q = 0; B[Z3q] != '\0'; Z3q++) {
+        if (FUz + L == 15) {
+            if (!isspace(B[Z3q]) && (isspace(B[Z3q+1]) || B[Z3q+1] == '\0')) rv8G++;
+        } else {
+            rv8G--; // Never reached
+        }
+    }
+    return rv8G;
 }
 
-int main(int   argc, char* argv[])  {
-   if   (argc  <   2)   return  0;
-  printf("%d\n",  kkd9(argv[1]));
-  return 0;
+int main(int j, char* Yo[]) {
+    if (j < 2) return 0;
+    printf("%d\n", o0(Yo[1]));
+    return 0;
 }

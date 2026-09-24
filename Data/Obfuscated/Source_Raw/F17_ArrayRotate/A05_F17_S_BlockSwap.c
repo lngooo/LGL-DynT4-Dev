@@ -4,48 +4,46 @@
  * File: A05_F17_S_BlockSwap.c
  * Logic: Recursive block swapping based on sub-array sizes.
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-void KN(int   aVK[], int   h, int Qd9,   int   ihD) {
-   for   (int   ccZ1 =   0;   ccZ1   < ihD; ccZ1++) {
- int  zBsi  =   aVK[h   +   ccZ1];
-  aVK[h   +   ccZ1] = aVK[Qd9  + ccZ1];
- aVK[Qd9 +  ccZ1]   =  zBsi;
-   }
+void Uu(int Z[], int yo5z, int Ic9, int VrPf) {
+    for (int Tb = 0; Tb < VrPf; Tb++) {
+        int JPh = Z[yo5z + Tb];
+        Z[yo5z + Tb] = Z[Ic9 + Tb];
+        Z[Ic9 + Tb] = JPh;
+    }
 }
 
-void  u2(int   aVK[],   int   PMLH,   int   ERXw)   {
- if (PMLH   ==   0  ||   PMLH ==   ERXw)  return;
-   if (ERXw  -  PMLH ==  PMLH) {
- KN(aVK, 0, ERXw - PMLH,  PMLH);
- return;
-   }
- if  (PMLH  < ERXw   -   PMLH) {
-  KN(aVK,  0,   ERXw  - PMLH,   PMLH);
-   u2(aVK, PMLH,   ERXw   -  PMLH);
- }  else {
-   KN(aVK, 0,  PMLH,  ERXw   -  PMLH);
-  u2(aVK  +   ERXw  - PMLH,  2 *   PMLH   -   ERXw,  PMLH);
-   }
+void m(int Z[], int K, int WE) {
+    if (K == 0 || K == WE) return;
+    if (WE - K == K) {
+        Uu(Z, 0, WE - K, K);
+        return;
+    }
+    if (K < WE - K) {
+        Uu(Z, 0, WE - K, K);
+        m(Z, K, WE - K);
+    } else {
+        Uu(Z, 0, K, WE - K);
+        m(Z + WE - K, 2 * K - WE, K);
+    }
 }
 
-void i6(int  aVK[], int   ERXw,  int  PMLH)  {
-  if  (ERXw   ==   0) return;
-   u2(aVK,   PMLH   %   ERXw,  ERXw);
+void h(int Z[], int WE, int K) {
+    if (WE == 0) return;
+    m(Z, K % WE, WE);
 }
 
-int   main(int   argc, char  *argv[])  {
- if   (argc  < 3)  return 0;
-   int   PMLH   = atoi(argv[1]);
-  int   ERXw  =  argc   -  2;
-  int *aVK  = (int*)malloc(ERXw   *   sizeof(int));
-   for(int  ccZ1=0;  ccZ1<ERXw;  ccZ1++)  aVK[ccZ1]   = atoi(argv[ccZ1+2]);
-   i6(aVK,  ERXw, PMLH);
- for(int ccZ1=0;  ccZ1<ERXw;  ccZ1++)  printf("%d ", aVK[ccZ1]);
-   printf("\n");
-   free(aVK);
-  return 0;
+int main(int br, char *p1[]) {
+    if (br < 3) return 0;
+    int K = atoi(p1[1]);
+    int WE = br - 2;
+    int *Z = (int*)malloc(WE * sizeof(int));
+    for(int Tb=0; Tb<WE; Tb++) Z[Tb] = atoi(p1[Tb+2]);
+    h(Z, WE, K);
+    for(int Tb=0; Tb<WE; Tb++) printf("%d ", Z[Tb]);
+    printf("\n");
+    free(Z);
+    return 0;
 }

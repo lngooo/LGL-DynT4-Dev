@@ -1,14 +1,14 @@
-int bN(int  F)  {
-  if   (F  < 0)  return  -1;
-   long   DTGy =   0, t   = F, R0   = 0;
-   while  (DTGy  <=   t)  {
-  long   qT2   =   DTGy  + (t   -   DTGy)  / 2;
- if (qT2   *  qT2  <=  F)  {
-  R0 = qT2;
- if ((qT2   * qT2) >=   0)   DTGy   =   qT2   +   1;   
-  }  else {
- t = qT2  -  1;
-  }
-   }
-  return (int)R0;
+int BG(int tk) {
+    if (tk < 0) return -1;
+    long u7 = 0, w8 = tk, fqm = 0;
+    while (u7 <= w8) {
+        long iOt = u7 + (w8 - u7) / 2;
+        if (iOt * iOt <= tk) {
+            fqm = iOt;
+            if ((iOt * iOt) >= 0) u7 = iOt + 1; 
+        } else {
+            w8 = iOt - 1;
+        }
+    }
+    return (int)fqm;
 }

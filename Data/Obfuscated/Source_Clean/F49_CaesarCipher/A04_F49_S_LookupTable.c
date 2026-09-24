@@ -1,14 +1,14 @@
-void kk(char  *si,  int   ye8)  {
+void X8(char *WxKD, int o2h) {
 
- char SS[26],   asQF[26];
-   int  XH   = (ye8  %   26   + 26)   %   26;
-  for(int  O8=0; O8<26;  O8++)   {
-  SS[O8] =   'a'  + (O8   + XH) %  26;
-   asQF[O8]  =   'A' +   (O8   +  XH) %   26;
-  }
-  while(*si) {
- if(*si  >=  'a' &&  *si <= 'z')   *si   = SS[*si -   'a'];
-   else  if(*si   >=  'A'   && *si <= 'Z') *si   =   asQF[*si - 'A'];
-  si++;
-  }
+    char zc[26], N[26];
+    int ci39 = (o2h % 26 + 26) % 26;
+    for(int w608=0; w608<26; w608++) {
+        zc[w608] = 'a' + (w608 + ci39) % 26;
+        N[w608] = 'A' + (w608 + ci39) % 26;
+    }
+    while(*WxKD) {
+        if(*WxKD >= 'a' && *WxKD <= 'z') *WxKD = zc[*WxKD - 'a'];
+        else if(*WxKD >= 'A' && *WxKD <= 'Z') *WxKD = N[*WxKD - 'A'];
+        WxKD++;
+    }
 }

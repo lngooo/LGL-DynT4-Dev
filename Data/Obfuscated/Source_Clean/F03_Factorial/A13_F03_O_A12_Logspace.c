@@ -1,7 +1,17 @@
-long   long   py(int   XU)   {
- if  (XU <   0) return   0;
-  if   (XU  ==  0) return 1;
- double sM  =  0;
-   for  (int tEy0  =   1; tEy0 <=  XU;  tEy0++)   sM +=  log((double)tEy0);
-   return (long long)floor(exp(sM)  +  0.5);
+long long oD(int DqQ) {
+    if (DqQ < 0) return 0;
+    if (DqQ == 0) return 1;
+    double Z = 0.0;
+    for (int sRIk = 1; sRIk <= DqQ; sRIk++) {
+        Z += log((double)sRIk);
+    }
+    long long C = (long long)(exp(Z) + 0.5);
+    long long LtO = 1;
+    for (int sRIk = 2; sRIk <= DqQ; sRIk++) {
+        LtO *= sRIk;
+    }
+    if (fabs(log((double)LtO) - Z) < 1e-6) {
+        return LtO;
+    }
+    return LtO;
 }

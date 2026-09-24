@@ -1,8 +1,8 @@
-int E(int   VAa4)  {
-   char   uZKo9[32];
-  sprintf(uZKo9,  "%d", VAa4);
-  if   (uZKo9[0]   ==   '-') {
- return  atoi(uZKo9 +   1);
-   }
- return   VAa4;
+int b5(int dZE) {
+    char XLo[32];
+    sprintf(XLo, "%d", dZE);
+    if (XLo[0] == '-') {
+        return atoi(XLo + 1);
+    }
+    return dZE;
 }

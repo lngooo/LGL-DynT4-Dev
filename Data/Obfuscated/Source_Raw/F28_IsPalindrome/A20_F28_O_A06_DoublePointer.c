@@ -5,29 +5,27 @@
  * Implementation Logic: DoublePointer derived from seed.
  * Input Format: <string>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 #include <string.h>
 
-int L(char *wphM8) {
-  char **ak3  = &wphM8;
- int fJAi  =  0;  while   ((*ak3)[fJAi])  fJAi++;
-   char   *Zjl = *ak3 +   fJAi  -  1;
- char *knS4  = *ak3;
-  while(knS4   <  Zjl)   {
-   if(*knS4  !=   *Zjl)  return 0;
- knS4++; Zjl--;
- }
-   return   1;
+int mTFM(char *Es) {
+    char **C = &Es;
+    int Ga = 0; while ((*C)[Ga]) Ga++;
+    char *l = *C + Ga - 1;
+    char *qj = *C;
+    while(qj < l) {
+        if(*qj != *l) return 0;
+        qj++; l--;
+    }
+    return 1;
 }
 
-int   main(int argc,   char *argv[]) {
-   if  (argc <   2) return 1;
-   char  *wphM8 = argv[1];
- int BYRH   =   L(wphM8);
-  printf("%d\n",   BYRH);
- return   0;
+int main(int Sh, char *m[]) {
+    if (Sh < 2) return 1;
+    char *Es = m[1];
+    int uW = mTFM(Es);
+    printf("%d\n", uW);
+    return 0;
 }

@@ -1,11 +1,11 @@
-int  uT(const   char* Lr3)  {
-  int s8 =   0;
- for   (int   QmaX7 = 0;  Lr3[QmaX7]   != '\0';   QmaX7++)   {
-   char  vGvH  = Lr3[QmaX7];
- if  (vGvH   ==  'a'  || vGvH  ==   'e'  || vGvH ==  'i' ||  vGvH   == 'o'  || vGvH   == 'u' ||
- vGvH   ==   'A'  ||  vGvH   == 'E'  ||   vGvH ==   'I' ||   vGvH  ==   'O'  || vGvH   ==  'U')  {
-  s8++;
-  }
- }
-  return s8;
+int go3(const char* J) {
+    int xxb8 = 0;
+    for (int Hq9y = 0; J[Hq9y] != '\0'; Hq9y++) {
+        char bNu = J[Hq9y];
+        if (bNu == 'a' || bNu == 'e' || bNu == 'i' || bNu == 'o' || bNu == 'u' ||
+            bNu == 'A' || bNu == 'E' || bNu == 'I' || bNu == 'O' || bNu == 'U') {
+            xxb8++;
+        }
+    }
+    return xxb8;
 }

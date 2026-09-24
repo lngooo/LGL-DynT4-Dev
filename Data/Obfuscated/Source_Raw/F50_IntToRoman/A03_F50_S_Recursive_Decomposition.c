@@ -4,38 +4,36 @@
  * File: A03_F50_S_Recursive_Decomposition.c
  * Implementation Logic: Recursive subtraction and string concatenation.
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-void  pog1(int RxDg, char* Q)   {
-   if (RxDg  ==  0) return;
-   if (RxDg  >= 1000)   {   strcat(Q,   "M");   pog1(RxDg  - 1000, Q);  }
-  else if (RxDg >=  900)  {   strcat(Q,   "CM");  pog1(RxDg - 900, Q);  }
- else if (RxDg >=   500) { strcat(Q,  "D"); pog1(RxDg   - 500, Q); }
-   else if  (RxDg  >=  400)   { strcat(Q, "CD");   pog1(RxDg  - 400, Q); }
-  else  if   (RxDg  >= 100)   {  strcat(Q,   "C"); pog1(RxDg  - 100,  Q);  }
-   else if (RxDg  >=  90)   {  strcat(Q,  "XC");   pog1(RxDg  -   90,  Q);  }
- else if  (RxDg >=   50)  {   strcat(Q,  "L"); pog1(RxDg   -   50,  Q); }
-   else if  (RxDg  >= 40)  {  strcat(Q,   "XL"); pog1(RxDg   - 40,  Q);   }
-   else   if   (RxDg  >=  10)  {  strcat(Q,   "X");  pog1(RxDg   -  10, Q);  }
-   else  if   (RxDg >=  9)  {   strcat(Q,   "IX"); pog1(RxDg -  9,   Q);   }
-  else if   (RxDg >= 5)  {   strcat(Q, "V");   pog1(RxDg -   5,   Q);   }
-   else if  (RxDg >=   4) {   strcat(Q,   "IV");  pog1(RxDg   -  4, Q);  }
- else   { strcat(Q,   "I");  pog1(RxDg   - 1,  Q); }
+void Fwg(int qE, char* raad) {
+    if (qE == 0) return;
+    if (qE >= 1000) { strcat(raad, "M"); Fwg(qE - 1000, raad); }
+    else if (qE >= 900) { strcat(raad, "CM"); Fwg(qE - 900, raad); }
+    else if (qE >= 500) { strcat(raad, "D"); Fwg(qE - 500, raad); }
+    else if (qE >= 400) { strcat(raad, "CD"); Fwg(qE - 400, raad); }
+    else if (qE >= 100) { strcat(raad, "C"); Fwg(qE - 100, raad); }
+    else if (qE >= 90) { strcat(raad, "XC"); Fwg(qE - 90, raad); }
+    else if (qE >= 50) { strcat(raad, "L"); Fwg(qE - 50, raad); }
+    else if (qE >= 40) { strcat(raad, "XL"); Fwg(qE - 40, raad); }
+    else if (qE >= 10) { strcat(raad, "X"); Fwg(qE - 10, raad); }
+    else if (qE >= 9) { strcat(raad, "IX"); Fwg(qE - 9, raad); }
+    else if (qE >= 5) { strcat(raad, "V"); Fwg(qE - 5, raad); }
+    else if (qE >= 4) { strcat(raad, "IV"); Fwg(qE - 4, raad); }
+    else { strcat(raad, "I"); Fwg(qE - 1, raad); }
 }
 
-void d8(int RxDg, char*   Q)   {
-  Q[0] =  '\0';
-  pog1(RxDg,  Q);
+void HCvH(int qE, char* raad) {
+    raad[0] = '\0';
+    Fwg(qE, raad);
 }
 
-int main(int   argc,  char*  argv[]) {
-  if  (argc  <   2) return  0;
-   char   Hc[100];
-  d8(atoi(argv[1]), Hc);
-  printf("%s\n", Hc);
-  return   0;
+int main(int ZH2i, char* Rdw[]) {
+    if (ZH2i < 2) return 0;
+    char A[100];
+    HCvH(atoi(Rdw[1]), A);
+    printf("%s\n", A);
+    return 0;
 }

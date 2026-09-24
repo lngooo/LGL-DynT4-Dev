@@ -4,24 +4,22 @@
  * File: A08_F06_S_RecursiveTrial.c
  * Implementation Logic: Recursive trial division (Seed 4).
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int   d(int  tMSu1, int  rM)  {
- if (rM *   rM > tMSu1)  return 1;
-   if   (tMSu1  % rM ==   0) return   0;
-  return d(tMSu1,  rM  + 1);
+int p2ot(int ZD, int J) {
+    if (J * J > ZD) return 1;
+    if (ZD % J == 0) return 0;
+    return p2ot(ZD, J + 1);
 }
 
-int e(int   tMSu1) {
-   if   (tMSu1 <=  1)   return 0;
-   return   d(tMSu1,   2);
+int AJHi(int ZD) {
+    if (ZD <= 1) return 0;
+    return p2ot(ZD, 2);
 }
 
-int   main(int   argc,   char *argv[])  {
-   if  (argc  < 2)   return 1;
- printf("%d\n",  e(atoi(argv[1])));
- return 0;
+int main(int pqnv, char *C[]) {
+    if (pqnv < 2) return 1;
+    printf("%d\n", AJHi(atoi(C[1])));
+    return 0;
 }

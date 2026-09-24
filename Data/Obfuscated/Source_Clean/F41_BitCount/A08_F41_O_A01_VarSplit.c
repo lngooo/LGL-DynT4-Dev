@@ -1,8 +1,8 @@
-int j(uint32_t gufK)  {
-   uint16_t lZc   =   (uint16_t)(gufK  & 0xFFFF);
-  uint16_t   YTtY8   =   (uint16_t)(gufK  >> 16);
- int   S  =  0, y2   =  0;
-  while  (lZc  >   0)  {   S  +=   (lZc   & 1);  lZc   >>=  1; }
- while  (YTtY8   >   0)  {   y2 += (YTtY8  & 1);  YTtY8 >>=   1;  }
- return  S +  y2;
+int y7e(uint32_t UN) {
+    uint16_t Kd = (uint16_t)(UN & 0xFFFF);
+    uint16_t j = (uint16_t)(UN >> 16);
+    int giX = 0, v2z3 = 0;
+    while (Kd > 0) { giX += (Kd & 1); Kd >>= 1; }
+    while (j > 0) { v2z3 += (j & 1); j >>= 1; }
+    return giX + v2z3;
 }

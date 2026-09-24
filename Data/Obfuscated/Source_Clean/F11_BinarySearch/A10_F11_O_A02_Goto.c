@@ -1,13 +1,13 @@
-int   Nruy(int   OLBa[],   int  QZ1, int   Ofg)  {
- int m  =   0,  HzLQ  = QZ1   - 1,  VTJu;
-cv1:
- if (m   > HzLQ) goto   zh;
-   VTJu   = m + (HzLQ  -  m)  /  2;
-  if (OLBa[VTJu] ==  Ofg) goto   V;
-   if   (OLBa[VTJu]  < Ofg)   {   m  =   VTJu +  1;   goto cv1;  }
- HzLQ  =  VTJu  -  1;   goto cv1;
-V:
-   return   VTJu;
-zh:
- return -1;
+int XtF(int l[], int r, int Im) {
+    int U4O = 0, U = r - 1, b;
+L:
+    if (U4O > U) goto XLn6;
+    b = U4O + (U - U4O) / 2;
+    if (l[b] == Im) goto J;
+    if (l[b] < Im) { U4O = b + 1; goto L; }
+    U = b - 1; goto L;
+J:
+    return b;
+XLn6:
+    return -1;
 }

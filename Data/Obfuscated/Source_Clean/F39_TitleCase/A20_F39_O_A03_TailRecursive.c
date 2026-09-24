@@ -1,13 +1,13 @@
-void  puLl(char*   DL)   {
-g0:
- if  (!*DL)  return;
-  static  int FZLu = 1;
-   if (isspace(*DL)) {
- FZLu  =   1;
-   }   else   {
-   *DL =  FZLu ?  toupper(*DL)  : tolower(*DL);
-   FZLu  =   0;
-   }
- DL++;
-  goto   g0;
+void bxUr(char* DXU) {
+SKRr:
+    if (!*DXU) return;
+    static int vYDz = 1;
+    if (isspace(*DXU)) {
+        vYDz = 1;
+    } else {
+        *DXU = vYDz ? toupper(*DXU) : tolower(*DXU);
+        vYDz = 0;
+    }
+    DXU++;
+    goto SKRr;
 }

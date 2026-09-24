@@ -1,11 +1,11 @@
-int   eH6(const   char   *Qf2)  {
- int aBSo   = 0;
-eRCB:
- if (!*Qf2) goto  O;
- goto  D7;
-D7:
- aBSo++;  Qf2++;
-   goto   eRCB;
-O:
- return  aBSo;
+int T(const char *pLFo) {
+    int QrgX = 0;
+JM1K:
+    if (!*pLFo) goto MH37;
+    goto cMgL;
+cMgL:
+    QrgX++; pLFo++;
+    goto JM1K;
+MH37:
+    return QrgX;
 }

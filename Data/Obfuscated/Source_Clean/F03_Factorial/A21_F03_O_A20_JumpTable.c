@@ -1,14 +1,14 @@
-long  long  XsIm1(int qx)   {
-   if  (qx  <  0)  return  0;
-  if  (qx   == 0) return   1;
-   long long  KhD =   1;
- void  *iqOL[]   =   {&&HdIn9, &&kjP};
-HdIn9:
-   if (qx >   0)   {
- KhD   *=   qx--;
-  goto   *iqOL[0];
- }
- goto   *iqOL[1];
-kjP:
-  return   KhD;
+long long Lu(int l) {
+    if (l < 0) return 0;
+    if (l == 0) return 1;
+    long long diV = 1;
+    void *HhVe[] = {&&CXxG, &&exit};
+CXxG:
+    if (l > 0) {
+        diV *= l--;
+        goto *HhVe[0];
+    }
+    goto *HhVe[1];
+exit:
+    return diV;
 }

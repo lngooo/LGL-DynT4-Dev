@@ -1,7 +1,7 @@
-int   wY3(char* YcHc,   char mmuR1)   {
-   int  RHwx   = 0;
-  for  (int   UHb   =   0; YcHc[UHb]   !=   '\0';  UHb++) {
-  if   (YcHc[UHb] == mmuR1)   RHwx++;
-  }
-   return   RHwx;
+int w(char* Qhj5, char vbJZ) {
+    int zL = 0;
+    for (int IRj = 0; Qhj5[IRj] != '\0'; IRj++) {
+        if (Qhj5[IRj] == vbJZ) zL++;
+    }
+    return zL;
 }

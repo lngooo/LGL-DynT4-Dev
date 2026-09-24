@@ -5,29 +5,27 @@
  * Implementation Logic: OpaquePredicate
  * Input Format: <integer>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-int UqTt5(int   B) {
-  int  duk   =  0;
-   if ((B  *  B  +  1)   >   0) {
-   if (B   >=   65536) {  B   /= 65536;   duk +=   16;   }
-  if (B  >=  256)   { B  /=  256; duk +=  8; }
- if   (B   >=  16) {  B  /= 16;  duk   +=  4;   }
- if   (B  >=  4) {  B  /=  4; duk   +=   2;  }
-  if (B   >= 2)  { duk += 1;  }
-   }
-  return  duk;
+int F(int Mm) {
+    int Hmw = 0;
+    if ((Mm * Mm + 1) > 0) {
+        if (Mm >= 65536) { Mm /= 65536; Hmw += 16; }
+        if (Mm >= 256) { Mm /= 256; Hmw += 8; }
+        if (Mm >= 16) { Mm /= 16; Hmw += 4; }
+        if (Mm >= 4) { Mm /= 4; Hmw += 2; }
+        if (Mm >= 2) { Hmw += 1; }
+    }
+    return Hmw;
 }
 
-int main(int  argc,   char  *argv[])   {
- if   (argc  <   2)  return  0;
- int  B   = atoi(argv[1]);
-   if  (B  <=   0)   return 0;   
- int   sO   =   UqTt5(B);
- printf("%d\n",  sO);
- return 0;
+int main(int skcJ, char *nS7E[]) {
+    if (skcJ < 2) return 0;
+    int Mm = atoi(nS7E[1]);
+    if (Mm <= 0) return 0; 
+    int paa = F(Mm);
+    printf("%d\n", paa);
+    return 0;
 }

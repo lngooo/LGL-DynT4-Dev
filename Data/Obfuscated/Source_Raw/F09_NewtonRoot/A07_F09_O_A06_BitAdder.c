@@ -4,34 +4,32 @@
  * File: A07_F09_O_A06_BitAdder.c
  * Implementation Logic: Bitshift Newton with bitwise addition simulation.
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-long CslU5(long  I,   long ABl) {
-   while   (ABl  !=   0) {
-  long oWiT   =   I   &  ABl;
-   I   = I ^  ABl;
-  ABl   = oWiT <<  1;
-   }
- return  I;
+long kC(long Z, long s) {
+    while (s != 0) {
+        long u = Z & s;
+        Z = Z ^ s;
+        s = u << 1;
+    }
+    return Z;
 }
 
-int B(int  IJfE) {
- if (IJfE   <  0)  return -1;
-   if   (IJfE  == 0) return  0;
-   long   vHGh =   IJfE;
-  while (1) {
-  long   F = CslU5(vHGh,   IJfE /   vHGh)   >>  1;
-   if  (F  >= vHGh)  break;
-  vHGh   =   F;
- }
-   return   (int)vHGh;
+int gev(int yk) {
+    if (yk < 0) return -1;
+    if (yk == 0) return 0;
+    long J = yk;
+    while (1) {
+        long v = kC(J, yk / J) >> 1;
+        if (v >= J) break;
+        J = v;
+    }
+    return (int)J;
 }
 
-int   main(int   argc,   char *argv[])  {
-  if   (argc <  2)  return   1;
- printf("%d\n",  B(atoi(argv[1])));
-  return   0;
+int main(int TbB8, char *M4[]) {
+    if (TbB8 < 2) return 1;
+    printf("%d\n", gev(atoi(M4[1])));
+    return 0;
 }

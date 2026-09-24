@@ -5,24 +5,22 @@
  * Implementation Logic: Manual loop unrolling to compare multiple characters per iteration.
  * Input Format: <str1> <str2>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int Nv(const   char *a, const  char   *ZKIj7)   {
- for  (;;)   {
-  if (*a !=   *ZKIj7) return  *(unsigned  char   *)a   - *(unsigned char   *)ZKIj7;
-   if   (*a   ==   '\0') return 0;
-   a++;  ZKIj7++;
-  if  (*a !=  *ZKIj7) return   *(unsigned char  *)a   -  *(unsigned  char *)ZKIj7;
-  if  (*a  ==  '\0')   return 0;
- a++;  ZKIj7++;
-   }
+int OK45(const char *VqTY, const char *ZZq) {
+    for (;;) {
+        if (*VqTY != *ZZq) return *(unsigned char *)VqTY - *(unsigned char *)ZZq;
+        if (*VqTY == '\0') return 0;
+        VqTY++; ZZq++;
+        if (*VqTY != *ZZq) return *(unsigned char *)VqTY - *(unsigned char *)ZZq;
+        if (*VqTY == '\0') return 0;
+        VqTY++; ZZq++;
+    }
 }
 
-int main(int  argc,   char  *argv[])  {
-  if  (argc < 3)  return  0;
-  printf("%d\n",  Nv(argv[1],   argv[2]));
-  return  0;
+int main(int xx57, char *uI[]) {
+    if (xx57 < 3) return 0;
+    printf("%d\n", OK45(uI[1], uI[2]));
+    return 0;
 }

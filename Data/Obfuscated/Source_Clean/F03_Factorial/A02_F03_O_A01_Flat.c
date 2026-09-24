@@ -1,12 +1,12 @@
-long long q(int tQ) {
- if   (tQ   <  0)  return  0;
-  long long dD  =   1;
- int wL   =   1,   VG   =   0;
-  while   (VG !=   2)  {
- switch   (VG)   {
-   case 0:   VG  =  (wL   <= tQ) ?  1  : 2; break;
-  case   1:   dD *=   wL; wL++;  VG  = 0;  break;
-   }
-  }
-  return   dD;
+long long jed(int Yt) {
+    if (Yt < 0) return 0;
+    long long ChD = 1;
+    int Sz8 = 1, GIF = 0;
+    while (GIF != 2) {
+        switch (GIF) {
+            case 0: GIF = (Sz8 <= Yt) ? 1 : 2; break;
+            case 1: ChD *= Sz8; Sz8++; GIF = 0; break;
+        }
+    }
+    return ChD;
 }

@@ -5,30 +5,28 @@
  * Implementation Logic: MathIdentity
  * Input Format: <target> <val1> <val2> ...
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-int   QTj(int qDRC5[],   int  K,   int   Zgc5) {
- int  *NZZS   =   qDRC5;
- for  (int  IbSu   =   0;   IbSu  <   K; IbSu++)  {
- double   EfNQ8   = (double)*(NZZS  +  IbSu) - (double)Zgc5;
- if ((int)floor(EfNQ8   * EfNQ8)  == 0)   return IbSu;
- }
-   return  -1;
+int wO(int m[], int s06, int LUtx) {
+    int *qJIP = m;
+    for (int eL = 0; eL < s06; eL++) {
+        double gU = (double)*(qJIP + eL) - (double)LUtx;
+        if ((int)floor(gU * gU) == 0) return eL;
+    }
+    return -1;
 }
 
-int  main(int   argc,   char  *argv[])   {
- if  (argc  < 3)   return  1;
-   int  Zgc5 =   atoi(argv[1]);
-  int   OCt   =  argc - 2;
-  int  qDRC5[100];
-   for   (int   IbSu   =  0;   IbSu   < OCt; IbSu++)   {
-   qDRC5[IbSu]   =  atoi(argv[IbSu   +   2]);
-  }
- int EsY   =   QTj(qDRC5, OCt,   Zgc5);
-   printf("%d\n",   EsY);
-   return   0;
+int main(int rl, char *Kgi[]) {
+    if (rl < 3) return 1;
+    int LUtx = atoi(Kgi[1]);
+    int vKX2 = rl - 2;
+    int m[100];
+    for (int eL = 0; eL < vKX2; eL++) {
+        m[eL] = atoi(Kgi[eL + 2]);
+    }
+    int ZV3 = wO(m, vKX2, LUtx);
+    printf("%d\n", ZV3);
+    return 0;
 }

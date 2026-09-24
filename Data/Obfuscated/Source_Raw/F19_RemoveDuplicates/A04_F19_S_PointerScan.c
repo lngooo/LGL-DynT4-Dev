@@ -5,38 +5,36 @@
  * Implementation Logic: PointerScan
  * Input Format: <val1> <val2> ...
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-int  uL(int nhDC8[],   int   Ai) {
-   int *PJ = nhDC8;
-   int  *alm =   nhDC8;
-  for (int   auOr   =  0; auOr   <   Ai;   auOr++)  {
- int *gVv8   =   PJ;
-  int l  =   0;
- while (gVv8 <  alm)   {
-   if  (*gVv8   ==  *(PJ  +  auOr))  {   l  = 1;   break;   }
-  gVv8++;
-  }
- if  (!l)   *alm++   = *(PJ   +  auOr);
-  }
-   return (int)(alm   -  PJ);
+int I(int R[], int evOf) {
+    int *vXr = R;
+    int *Zo = R;
+    for (int agy = 0; agy < evOf; agy++) {
+        int *y8 = vXr;
+        int Y = 0;
+        while (y8 < Zo) {
+            if (*y8 == *(vXr + agy)) { Y = 1; break; }
+            y8++;
+        }
+        if (!Y) *Zo++ = *(vXr + agy);
+    }
+    return (int)(Zo - vXr);
 }
 
-int  main(int  argc,  char   *argv[])  {
-  if (argc   <  2) return 0;
-   int kydq8   =  argc -  1;
-  int nhDC8[128];
-  for   (int   auOr   = 0; auOr   <   kydq8; auOr++)  {
- nhDC8[auOr]   =   atoi(argv[auOr  +  1]);
-  }
-   int   m6  = uL(nhDC8, kydq8);
-  for   (int auOr =   0;   auOr   <   m6;  auOr++)   {
-  printf("%d%s", nhDC8[auOr],   (auOr   ==  m6   -   1 ?  ""  :   " "));
-  }
- printf("\n");
- return  0;
+int main(int l, char *L0Z[]) {
+    if (l < 2) return 0;
+    int gHwS = l - 1;
+    int R[128];
+    for (int agy = 0; agy < gHwS; agy++) {
+        R[agy] = atoi(L0Z[agy + 1]);
+    }
+    int JrM = I(R, gHwS);
+    for (int agy = 0; agy < JrM; agy++) {
+        printf("%d%s", R[agy], (agy == JrM - 1 ? "" : " "));
+    }
+    printf("\n");
+    return 0;
 }

@@ -1,8 +1,8 @@
-@__const.YDON.Jl = constant [2 x [2 x i64]] [[2 x i64] [i64 1, i64 1], [2 x i64] [i64 1, i64 0]]
-@__const.YDON.AaR1 = constant [2 x [2 x i64]] [[2 x i64] [i64 1, i64 1], [2 x i64] [i64 1, i64 0]]
+@__const.ZB.blr = constant [2 x [2 x i64]] [[2 x i64] [i64 1, i64 1], [2 x i64] [i64 1, i64 0]]
+@__const.ZB.vwa = constant [2 x [2 x i64]] [[2 x i64] [i64 1, i64 1], [2 x i64] [i64 1, i64 0]]
 @.str = constant [3 x i8] c"0\0A\00"
 @.str.1 = constant [5 x i8] c"%ld\0A\00"
-define dso_local i64 @YDON(i32 %0) {
+define dso_local i64 @ZB(i32 %0) {
   %2 = alloca i64
   %3 = alloca i32
   %4 = alloca [2 x [2 x i64]]
@@ -167,7 +167,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   br label %29
 22:
   %24 = load i32, i32* %6
-  %25 = call i64 @YDON(i32 %24)
+  %25 = call i64 @ZB(i32 %24)
   store i64 %25, i64* %8
   %26 = load i64, i64* %8
   %27 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.1, i64 0, i64 0), i64 %26)

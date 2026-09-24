@@ -1,10 +1,10 @@
-void  qib(char*  ZfW6) {
- char *Rzc7   = ZfW6,  *n   =  ZfW6;
- while  (*Rzc7)   {
-   n =   Rzc7;
-   while  (*n  ==   *Rzc7) n++;
- printf("%c%ld",   *Rzc7,   (long)(n   -   Rzc7));
- Rzc7   =  n;
- }
-   printf("\n");
+void XMQ(char* F) {
+    char *IQ = F, *Xh2 = F;
+    while (*IQ) {
+        Xh2 = IQ;
+        while (*Xh2 == *IQ) Xh2++;
+        printf("%c%ld", *IQ, (long)(Xh2 - IQ));
+        IQ = Xh2;
+    }
+    printf("\n");
 }

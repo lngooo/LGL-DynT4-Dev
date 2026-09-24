@@ -1,13 +1,13 @@
-void  x(int   I4[],  int  FOfI)  {
- int  oF;
-  for   (int wj7 =   0; wj7 <  FOfI  - 1;   wj7++)   {
- oF   = 0;
- for   (int  Adc =   0;  Adc  <  FOfI -  wj7 - 1; Adc++)  {
-  if (I4[Adc]   > I4[Adc   +   1])  {
-   int  LtV8 = I4[Adc]; I4[Adc]  =   I4[Adc   +   1]; I4[Adc +   1]  =   LtV8;
-  oF = 1;
- }
-  }
- if  (!oF)   break;
-  }
+void y(int DO9[], int kO) {
+    int AON;
+    for (int efkv = 0; efkv < kO - 1; efkv++) {
+        AON = 0;
+        for (int uu = 0; uu < kO - efkv - 1; uu++) {
+            if (DO9[uu] > DO9[uu + 1]) {
+                int TrM = DO9[uu]; DO9[uu] = DO9[uu + 1]; DO9[uu + 1] = TrM;
+                AON = 1;
+            }
+        }
+        if (!AON) break;
+    }
 }

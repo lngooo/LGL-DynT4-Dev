@@ -1,4 +1,4 @@
-define dso_local void @Quw(i32* %0, i32 %1, i32 %2) {
+define dso_local void @p1X(i32* %0, i32 %1, i32 %2) {
   %4 = alloca i32*
   %5 = alloca i32
   %6 = alloca i32
@@ -45,7 +45,7 @@ define dso_local void @Quw(i32* %0, i32 %1, i32 %2) {
 38:
   ret void
 }
-define dso_local void @uZ3(i32* %0, i32 %1, i32 %2) {
+define dso_local void @d(i32* %0, i32 %1, i32 %2) {
   %4 = alloca i32*
   %5 = alloca i32
   %6 = alloca i32
@@ -71,16 +71,16 @@ define dso_local void @uZ3(i32* %0, i32 %1, i32 %2) {
   %18 = load i32*, i32** %4
   %19 = load i32, i32* %6
   %20 = sub nsw i32 %19, 1
-  call void @Quw(i32* %18, i32 0, i32 %20)
+  call void @p1X(i32* %18, i32 0, i32 %20)
   %21 = load i32*, i32** %4
   %22 = load i32, i32* %6
   %23 = load i32, i32* %5
   %24 = sub nsw i32 %23, 1
-  call void @Quw(i32* %21, i32 %22, i32 %24)
+  call void @p1X(i32* %21, i32 %22, i32 %24)
   %25 = load i32*, i32** %4
   %26 = load i32, i32* %5
   %27 = sub nsw i32 %26, 1
-  call void @Quw(i32* %25, i32 0, i32 %27)
+  call void @p1X(i32* %25, i32 0, i32 %27)
   br label %28
 28:
   ret void

@@ -1,11 +1,11 @@
-void  ZR(int  s[],   int   D) {
- for (int  YI   =   1;   YI < D; YI++)  {
- int  qhVg   = s[YI];
-  int   Tvb   =   YI  -  1;
-   while (Tvb >= 0  && s[Tvb]   >   qhVg) {
-  s[Tvb   +  1] =  s[Tvb];
-   Tvb  =  Tvb -   1;
-  }
-  s[Tvb   +  1] =  qhVg;
-   }
+void CRso(int Vk[], int HZYm) {
+    for (int L = 1; L < HZYm; L++) {
+        int O = Vk[L];
+        int Z = L - 1;
+        while (Z >= 0 && Vk[Z] > O) {
+            Vk[Z + 1] = Vk[Z];
+            Z = Z - 1;
+        }
+        Vk[Z + 1] = O;
+    }
 }

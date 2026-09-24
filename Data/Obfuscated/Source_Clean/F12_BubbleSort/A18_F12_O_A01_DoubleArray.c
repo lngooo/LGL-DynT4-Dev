@@ -1,13 +1,13 @@
-void  fjVX(int   lx5[],   int   hfj)  {
- int  *EHS3  = (int*)malloc(hfj * sizeof(int));
-  memcpy(EHS3,   lx5,   hfj  *   sizeof(int));
-   for  (int K   =  0; K   <  hfj  -  1;   K++)   {
- for  (int  Yp   =   0; Yp <   hfj   -  K  - 1;  Yp++) {
-  if  (EHS3[Yp]  >  EHS3[Yp+1]) {
- int  p   = EHS3[Yp]; EHS3[Yp]  = EHS3[Yp+1];  EHS3[Yp+1]  =   p;
- }
- }
-   }
- memcpy(lx5, EHS3,   hfj  *   sizeof(int));
-   free(EHS3);
+void GvQk(int w5uJ[], int xAW) {
+    int *UuMp = (int*)malloc(xAW * sizeof(int));
+    memcpy(UuMp, w5uJ, xAW * sizeof(int));
+    for (int yX = 0; yX < xAW - 1; yX++) {
+        for (int x9C = 0; x9C < xAW - yX - 1; x9C++) {
+            if (UuMp[x9C] > UuMp[x9C+1]) {
+                int zaUc = UuMp[x9C]; UuMp[x9C] = UuMp[x9C+1]; UuMp[x9C+1] = zaUc;
+            }
+        }
+    }
+    memcpy(w5uJ, UuMp, xAW * sizeof(int));
+    free(UuMp);
 }

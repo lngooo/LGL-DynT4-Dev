@@ -1,7 +1,7 @@
-double LJKW(int   GsoC[],   int   I2)   {
-   double   rix   =  0;
-  if   ((I2   +   1)  > 0) {
- for   (int s   = 0;   s  < I2;  s++)  rix   += GsoC[s];
-  }
- return rix / I2;
+double Pv(int l[], int DHX) {
+    double bzKs = 0;
+    if ((DHX + 1) > 0) {
+        for (int N = 0; N < DHX; N++) bzKs += l[N];
+    }
+    return bzKs / DHX;
 }

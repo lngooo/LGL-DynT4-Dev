@@ -1,26 +1,26 @@
-long long   eJTW(long   long H, long  long   IOYw4,  long  long   p5) { return   (H  *  IOYw4)  %   p5;  }
-long  long  Mg(long  long IOYw4,   long   long  XDa8,  long   long p5)   {
-   long  long SY =  1;   IOYw4 %=   p5;
-  while(XDa8  >   0) {   if(XDa8 %  2   ==  1)  SY = eJTW(SY, IOYw4,   p5); IOYw4   =   eJTW(IOYw4, IOYw4,  p5);   XDa8   /= 2;   }
- return  SY;
+long long QFba(long long abHU, long long Isb, long long Z86l) { return (abHU * Isb) % Z86l; }
+long long g(long long Isb, long long pm, long long Z86l) {
+    long long wrY = 1; Isb %= Z86l;
+    while(pm > 0) { if(pm % 2 == 1) wrY = QFba(wrY, Isb, Z86l); Isb = QFba(Isb, Isb, Z86l); pm /= 2; }
+    return wrY;
 }
 
-int  PWg(int   fa) {
- if (fa  <  2) return 0;
- if   (fa   ==  2   ||  fa ==   3)   return  1;
- if (fa % 2  ==  0)  return   0;
-   int hXR   =   fa  -   1,   hoMS   = 0;
-  while   (hXR  %  2   ==   0)  {  hXR /= 2; hoMS++; }
- int  F[]   =   {2,   3};
- for (int   o   =   0;  o  <   2;   o++) {
-   long long  GlpY5  =   Mg(F[o],   hXR,  fa);
-  if   (GlpY5 == 1  || GlpY5   ==   fa -  1)   continue;
- int  Rk   =   1;
-   for  (int SY   =   1;   SY   <   hoMS; SY++) {
-   GlpY5 = eJTW(GlpY5,   GlpY5,   fa);
- if (GlpY5   ==  fa  - 1) { Rk   = 0;   break; }
- }
-   if  (Rk) return 0;
- }
-   return  1;
+int fx9z(int KpSo) {
+    if (KpSo < 2) return 0;
+    if (KpSo == 2 || KpSo == 3) return 1;
+    if (KpSo % 2 == 0) return 0;
+    int R02 = KpSo - 1, P = 0;
+    while (R02 % 2 == 0) { R02 /= 2; P++; }
+    int f[] = {2, 3};
+    for (int yyJE = 0; yyJE < 2; yyJE++) {
+        long long O = g(f[yyJE], R02, KpSo);
+        if (O == 1 || O == KpSo - 1) continue;
+        int S = 1;
+        for (int wrY = 1; wrY < P; wrY++) {
+            O = QFba(O, O, KpSo);
+            if (O == KpSo - 1) { S = 0; break; }
+        }
+        if (S) return 0;
+    }
+    return 1;
 }

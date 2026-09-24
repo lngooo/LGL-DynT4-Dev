@@ -5,36 +5,34 @@
  * Implementation Logic: Goto
  * Input Format: <data_string> <key_string>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
 
-void fE(char  *Vu, char   *kftK) {
-  int Ucg0 = 0, nE =   0;
-   while(kftK[nE])  nE++;
-Ga:
- if  (Vu[Ucg0]   == '\0')  goto  f3;
-  Vu[Ucg0]  =   Vu[Ucg0]   ^  kftK[Ucg0   % nE];
-  Ucg0++;
- goto Ga;
-f3:;
+void xt(char *XO, char *Vxf) {
+    int kJkl = 0, wa = 0;
+    while(Vxf[wa]) wa++;
+I:
+    if (XO[kJkl] == '\0') goto wU;
+    XO[kJkl] = XO[kJkl] ^ Vxf[kJkl % wa];
+    kJkl++;
+    goto I;
+wU:;
 }
 
-int  main(int argc,  char  *argv[])   {
-  if  (argc   <  3)  return  0;
- char  *Vu   = argv[1];
-   char   *kftK   =  argv[2];
-   int SH   =  0;
-  while (Vu[SH])   SH++;
+int main(int kW4t, char *lJAm[]) {
+    if (kW4t < 3) return 0;
+    char *XO = lJAm[1];
+    char *Vxf = lJAm[2];
+    int lPa = 0;
+    while (XO[lPa]) lPa++;
 
-   fE(Vu,   kftK);
+    xt(XO, Vxf);
 
- for   (int Ucg0  = 0; Ucg0  < SH;  Ucg0++)  {
-   printf("%02x",  (unsigned char)Vu[Ucg0]);
- }
-  printf("\n");
-   return 0;
+    for (int kJkl = 0; kJkl < lPa; kJkl++) {
+        printf("%02x", (unsigned char)XO[kJkl]);
+    }
+    printf("\n");
+    return 0;
 }

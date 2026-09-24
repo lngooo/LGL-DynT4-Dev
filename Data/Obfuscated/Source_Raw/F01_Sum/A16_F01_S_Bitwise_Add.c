@@ -5,30 +5,28 @@
  * Implementation Logic: Addition implemented using bitwise XOR and AND (Seed 6).
  * Input Format: <n>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int h(int  emD, int   Ot) {
-   while (Ot  != 0) {
- int SZp  =   emD   &   Ot;
-  emD  = emD  ^   Ot;
-  Ot   =  SZp  <<   1;
-   }
-  return  emD;
+int Z32J(int d, int f) {
+    while (f != 0) {
+        int kA = d & f;
+        d = d ^ f;
+        f = kA << 1;
+    }
+    return d;
 }
 
-int X3(int   Iij0) {
-  int   xEpm  =   0;
-  for (int dmnP =   1;   dmnP   <= Iij0;   dmnP++)  {
-   xEpm = h(xEpm,  dmnP);
-   }
-   return  xEpm;
+int En3z(int k) {
+    int ayq7 = 0;
+    for (int sBS9 = 1; sBS9 <= k; sBS9++) {
+        ayq7 = Z32J(ayq7, sBS9);
+    }
+    return ayq7;
 }
 
-int  main(int argc,   char  *argv[])   {
-  if (argc  <  2)  return  1;
-  printf("%d\n",   X3(atoi(argv[1])));
- return 0;
+int main(int jmsn, char *L[]) {
+    if (jmsn < 2) return 1;
+    printf("%d\n", En3z(atoi(L[1])));
+    return 0;
 }

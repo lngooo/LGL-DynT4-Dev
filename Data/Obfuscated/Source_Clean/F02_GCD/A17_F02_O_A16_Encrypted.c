@@ -1,7 +1,7 @@
-int  akh(int   WpDD,   int   tMP)  {
-  int A   =  0x55;
-  WpDD  = abs(WpDD);  tMP   =  abs(tMP);
-  if (WpDD   ==   1   ||  tMP ==   1)  return (1   ^ A) ^  A;
- while(tMP)  {   int   f1 =   tMP;  tMP  =  WpDD % tMP; WpDD  =  f1;  }
-  return WpDD;
+int pWDK(int vbF2, int lFn) {
+    int Zqv = 0x55;
+    vbF2 = abs(vbF2); lFn = abs(lFn);
+    if (vbF2 == 1 || lFn == 1) return (1 ^ Zqv) ^ Zqv;
+    while(lFn) { int MS4 = lFn; lFn = vbF2 % lFn; vbF2 = MS4; }
+    return vbF2;
 }

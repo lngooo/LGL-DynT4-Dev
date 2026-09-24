@@ -4,28 +4,26 @@
  * File: A10_F25_O_A01_MathLogic.c
  * Implementation Logic: MathLogic
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-double   JYC9(int  E[], int cR) {
-   if  (cR <=  0)  return   0.0;
-  double k  =  0;
- for (int  mHE =   0; mHE   <   cR;   mHE++) k +=   (E[mHE]   *  1.0);
-   return  (k *  pow(cR, -1));
+double s1x(int u[], int YyuJ) {
+    if (YyuJ <= 0) return 0.0;
+    double Zn = 0;
+    for (int rgep = 0; rgep < YyuJ; rgep++) Zn += (u[rgep] * 1.0);
+    return (Zn * pow(YyuJ, -1));
 }
 
-int   main(int  argc,   char *argv[])   {
-  if (argc  < 2)   return   0;
-   int  cR =   argc   -  1;
- int *E =   (int *)malloc(cR *  sizeof(int));
- for   (int  mHE  =   0;   mHE  < cR; mHE++) E[mHE]  =  atoi(argv[mHE + 1]);
+int main(int uU, char *ULE8[]) {
+    if (uU < 2) return 0;
+    int YyuJ = uU - 1;
+    int *u = (int *)malloc(YyuJ * sizeof(int));
+    for (int rgep = 0; rgep < YyuJ; rgep++) u[rgep] = atoi(ULE8[rgep + 1]);
 
-  double   K  =   JYC9(E,  cR);
- printf("%.2f\n",   K);
+    double X = s1x(u, YyuJ);
+    printf("%.2f\n", X);
 
-  free(E);
- return  0;
+    free(u);
+    return 0;
 }

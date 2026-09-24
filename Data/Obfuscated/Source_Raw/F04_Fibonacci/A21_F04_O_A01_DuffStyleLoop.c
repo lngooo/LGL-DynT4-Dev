@@ -5,34 +5,32 @@
  * Implementation Logic: DuffStyleLoop
  * Input Format: <arg1>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-long qY0(int rg6)   {
-   long KC   = 0,   g  =   1, Oaza1;
-   int  vPO  =  rg6;
- if   (rg6 == 0) return   0;
- if   (rg6  ==   1)   return 1;
-  vPO--;
-   do   {
- Oaza1  = KC + g; KC   =  g;  g = Oaza1;
-   } while (--vPO   >  0);
-  return g;
+long cU36(int NBr) {
+    long e = 0, xGZV = 1, bj;
+    int ciep = NBr;
+    if (NBr == 0) return 0;
+    if (NBr == 1) return 1;
+    ciep--;
+    do {
+        bj = e + xGZV; e = xGZV; xGZV = bj;
+    } while (--ciep > 0);
+    return xGZV;
 }
 
-int  main(int  argc,  char   *argv[])  {
- if (argc   < 2)   {
- return 1;
- }
-  int   rg6 = atoi(argv[1]);
- if   (rg6  <   0)   {
-  printf("0\n");
-  return 0;
-   }
-   long  ho = qY0(rg6);
-  printf("%ld\n", ho);
- return 0;
+int main(int xy8, char *M[]) {
+    if (xy8 < 2) {
+        return 1;
+    }
+    int NBr = atoi(M[1]);
+    if (NBr < 0) {
+        printf("0\n");
+        return 0;
+    }
+    long RC = cU36(NBr);
+    printf("%ld\n", RC);
+    return 0;
 }

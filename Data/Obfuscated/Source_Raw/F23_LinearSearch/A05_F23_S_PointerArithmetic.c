@@ -5,29 +5,27 @@
  * Implementation Logic: PointerArithmetic
  * Input Format: <target> <val1> <val2> ...
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-int   S0(int  kJY1[],   int ikzy4,   int   jf4)  {
- int   *Yf   = kJY1;
- for (int  jAIT = 0;  jAIT  < ikzy4;   jAIT++)  {
- if (*(Yf  +   jAIT)  ==   jf4) return   jAIT;
-   }
-  return -1;
+int TiX4(int Z3FM[], int Rpbs, int Gn4) {
+    int *dJXu = Z3FM;
+    for (int RuA = 0; RuA < Rpbs; RuA++) {
+        if (*(dJXu + RuA) == Gn4) return RuA;
+    }
+    return -1;
 }
 
-int main(int   argc,  char *argv[])   {
-   if   (argc <  3) return 1;
-  int  jf4  =   atoi(argv[1]);
- int   V3  =  argc - 2;
-   int   kJY1[100];
-   for (int  jAIT  = 0;  jAIT  <   V3;   jAIT++) {
-   kJY1[jAIT]   = atoi(argv[jAIT +  2]);
-   }
- int   x2   =   S0(kJY1,   V3,  jf4);
-  printf("%d\n",   x2);
-   return 0;
+int main(int ZCBz, char *drF[]) {
+    if (ZCBz < 3) return 1;
+    int Gn4 = atoi(drF[1]);
+    int vO = ZCBz - 2;
+    int Z3FM[100];
+    for (int RuA = 0; RuA < vO; RuA++) {
+        Z3FM[RuA] = atoi(drF[RuA + 2]);
+    }
+    int t = TiX4(Z3FM, vO, Gn4);
+    printf("%d\n", t);
+    return 0;
 }

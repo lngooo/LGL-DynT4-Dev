@@ -1,10 +1,10 @@
-int  cyQY(const char *Rz0)  {
-   int surP =   0;
- for   (;;) {
-  if (Rz0[0]   ==   0)  return  surP;
-  if  (Rz0[1]   ==   0)   return   surP   +   1;
- if  (Rz0[2]   == 0)  return surP   +  2;
-   if  (Rz0[3] ==   0)  return  surP  + 3;
- Rz0   +=   4; surP   +=   4;
- }
+int V(const char *OdYm) {
+    int aj = 0;
+    for (;;) {
+        if (OdYm[0] == 0) return aj;
+        if (OdYm[1] == 0) return aj + 1;
+        if (OdYm[2] == 0) return aj + 2;
+        if (OdYm[3] == 0) return aj + 3;
+        OdYm += 4; aj += 4;
+    }
 }

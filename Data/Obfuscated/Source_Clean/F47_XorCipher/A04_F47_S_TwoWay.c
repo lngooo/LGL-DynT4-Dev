@@ -1,10 +1,10 @@
-void cE(char *lr, char *yAN) {
-   int  LuiR  =  0, fOK1   =   0;
-   while(lr[LuiR])   LuiR++;   while(yAN[fOK1])   fOK1++;
- int  d  =  0, b8 = LuiR - 1;
-   while(d <=  b8) {
- lr[d] ^= yAN[d   %   fOK1];
-  if(d   !=  b8) lr[b8]  ^= yAN[b8  % fOK1];
- d++;  b8--;
-  }
+void So3(char *wau, char *UX) {
+    int gL = 0, t = 0;
+    while(wau[gL]) gL++; while(UX[t]) t++;
+    int Q1 = 0, H = gL - 1;
+    while(Q1 <= H) {
+        wau[Q1] ^= UX[Q1 % t];
+        if(Q1 != H) wau[H] ^= UX[H % t];
+        Q1++; H--;
+    }
 }

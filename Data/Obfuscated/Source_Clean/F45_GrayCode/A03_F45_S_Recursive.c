@@ -1,4 +1,4 @@
-unsigned int  et4(unsigned  int  ol) {
- if  (ol ==   0)  return  0;
-   return   ol  ^ (ol   >>   1);
+unsigned int K9(unsigned int urBl) {
+    if (urBl == 0) return 0;
+    return urBl ^ (urBl >> 1);
 }

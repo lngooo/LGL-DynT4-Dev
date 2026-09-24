@@ -4,50 +4,48 @@
  * File: A07_F16_O_A01_Goto.c
  * Implementation Logic: Goto
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-void Qkp(int   A[],   int  kWab, int  wNl)  {
- if  (kWab >= wNl) goto  X;
- int   zmJf =   (kWab + wNl) /   2;
- Qkp(A,  kWab, zmJf);
-  Qkp(A, zmJf   +  1,   wNl);
- {
- int  fORf7   =   kWab,  af0 =  zmJf   +   1,   XX5  =  0;
-  int  *I  = (int*)malloc((wNl-kWab+1)*4);
-   n:
-   if  (fORf7   > zmJf)  goto s;
-   if   (af0  > wNl) goto  w;
- if  (A[fORf7]  <=   A[af0])  { I[XX5++] = A[fORf7++]; goto n; }
- else {  I[XX5++] =  A[af0++];  goto   n;  }
-  w:
- if (fORf7  > zmJf)   goto  xdDN;
-   I[XX5++]   =   A[fORf7++]; goto  w;
- s:
-   if   (af0 >   wNl) goto  xdDN;
- I[XX5++]  =  A[af0++];  goto s;
-   xdDN:
-   for(int EbZ=0; EbZ<XX5; EbZ++)   A[kWab+EbZ] =  I[EbZ];
-   free(I);
-   }
-  X:;
+void Ycr3(int X[], int EVA7, int TB4) {
+    if (EVA7 >= TB4) goto exit;
+    int Gew = (EVA7 + TB4) / 2;
+    Ycr3(X, EVA7, Gew);
+    Ycr3(X, Gew + 1, TB4);
+    {
+        int MU0J = EVA7, DSb = Gew + 1, P = 0;
+        int *OC = (int*)malloc((TB4-EVA7+1)*4);
+    az:
+        if (MU0J > Gew) goto Ot;
+        if (DSb > TB4) goto Kfh;
+        if (X[MU0J] <= X[DSb]) { OC[P++] = X[MU0J++]; goto az; }
+        else { OC[P++] = X[DSb++]; goto az; }
+    Kfh:
+        if (MU0J > Gew) goto pH;
+        OC[P++] = X[MU0J++]; goto Kfh;
+    Ot:
+        if (DSb > TB4) goto pH;
+        OC[P++] = X[DSb++]; goto Ot;
+    pH:
+        for(int MR=0; MR<P; MR++) X[EVA7+MR] = OC[MR];
+        free(OC);
+    }
+    exit:;
 }
 
-int  main(int  argc,   char   *argv[]) {
-   if   (argc  < 2)  return 0;
-  int Dz  =  argc   -  1;
-   int  *A  =  (int *)malloc(Dz * sizeof(int));
- for  (int   fORf7   = 0;  fORf7   <   Dz;  fORf7++) A[fORf7]   = atoi(argv[fORf7 +  1]);
+int main(int Y8uC, char *Viql[]) {
+    if (Y8uC < 2) return 0;
+    int Zsm = Y8uC - 1;
+    int *X = (int *)malloc(Zsm * sizeof(int));
+    for (int MU0J = 0; MU0J < Zsm; MU0J++) X[MU0J] = atoi(Viql[MU0J + 1]);
 
- Qkp(A,  0, Dz  -  1);
+    Ycr3(X, 0, Zsm - 1);
 
- for (int fORf7 =   0; fORf7   < Dz;  fORf7++)   {
-  printf("%d%s",   A[fORf7],   (fORf7 ==  Dz -   1 ?   ""   :  " "));
- }
-  printf("\n");
- free(A);
- return  0;
+    for (int MU0J = 0; MU0J < Zsm; MU0J++) {
+        printf("%d%s", X[MU0J], (MU0J == Zsm - 1 ? "" : " "));
+    }
+    printf("\n");
+    free(X);
+    return 0;
 }

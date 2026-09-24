@@ -5,18 +5,16 @@
  * Implementation Logic: Minimalist pointer-based comparison similar to standard lib.
  * Input Format: <str1> <str2>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int eun(const  char  *Y4,   const  char  *K)   {
-  while(*Y4 &&   *K   &&  *Y4 == *K)  {  Y4++; K++;   }
-   return  *(unsigned   char*)Y4 -   *(unsigned   char*)K;
+int e9S(const char *u3, const char *YI) {
+    while(*u3 && *YI && *u3 == *YI) { u3++; YI++; }
+    return *(unsigned char*)u3 - *(unsigned char*)YI;
 }
 
-int main(int  argc,  char  *argv[])   {
-  if  (argc  <   3) return  0;
-   printf("%d\n",  eun(argv[1], argv[2]));
- return 0;
+int main(int g6, char *IugZ[]) {
+    if (g6 < 3) return 0;
+    printf("%d\n", e9S(IugZ[1], IugZ[2]));
+    return 0;
 }

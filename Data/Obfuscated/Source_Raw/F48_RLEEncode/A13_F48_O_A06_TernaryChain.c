@@ -5,29 +5,27 @@
  * Implementation Logic: TernaryChain
  * Input Format: <string>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
 
-void  UmW(const  char *Bnh,  char *wv) {
- int NQZ =  0, tjG   = 0;
- while (Bnh[NQZ])  {
- int   nH   = 1;
-  while (Bnh[NQZ  +  nH] ? (Bnh[NQZ+nH]  ==   Bnh[NQZ])  :   0) nH++;
-  wv[tjG++]  = Bnh[NQZ];
- tjG +=   sprintf(wv + tjG, "%d", nH);
-  NQZ +=   nH;
-   }
+void f(const char *QxpO, char *C) {
+    int Ag7H = 0, KvEj = 0;
+    while (QxpO[Ag7H]) {
+        int atp = 1;
+        while (QxpO[Ag7H + atp] ? (QxpO[Ag7H+atp] == QxpO[Ag7H]) : 0) atp++;
+        C[KvEj++] = QxpO[Ag7H];
+        KvEj += sprintf(C + KvEj, "%d", atp);
+        Ag7H += atp;
+    }
 }
 
-int main(int  argc,   char   *argv[]) {
- if   (argc  <   2) return  0;
- char *dNh2 =  argv[1];
-  char   p[256]   =  {0};
- UmW(dNh2,  p);
-   printf("%s\n",  p);
- return  0;
+int main(int Fqh, char *uo[]) {
+    if (Fqh < 2) return 0;
+    char *Q = uo[1];
+    char EQ[256] = {0};
+    f(Q, EQ);
+    printf("%s\n", EQ);
+    return 0;
 }

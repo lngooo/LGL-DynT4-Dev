@@ -1,16 +1,16 @@
-int f(const char* Zw4) {
- unsigned long long   E7   =   0;
-  char   brER[]   =   "aeiouAEIOU";
- for(int   b2=0;  brER[b2];  b2++) E7  |= (1ULL   <<  (brER[b2] %   64));
-   int  MYXi  = 0;
-  while(*Zw4) {
-  if   (E7  &   (1ULL   <<   (*Zw4   %  64)))  {
+int q3q(const char* NTUh) {
+    unsigned long long CM = 0;
+    char alKl[] = "aeiouAEIOU";
+    for(int ekdv=0; alKl[ekdv]; ekdv++) CM |= (1ULL << (alKl[ekdv] % 64));
+    int Q5 = 0;
+    while(*NTUh) {
+        if (CM & (1ULL << (*NTUh % 64))) {
 
- char  tBd =   *Zw4;
-  if (tBd=='a'||tBd=='e'||tBd=='i'||tBd=='o'||tBd=='u'||tBd=='A'||tBd=='E'||tBd=='I'||tBd=='O'||tBd=='U')
-  MYXi++;
- }
-  Zw4++;
-  }
-  return   MYXi;
+            char WH6F = *NTUh;
+            if (WH6F=='a'||WH6F=='e'||WH6F=='i'||WH6F=='o'||WH6F=='u'||WH6F=='A'||WH6F=='E'||WH6F=='I'||WH6F=='O'||WH6F=='U')
+                Q5++;
+        }
+        NTUh++;
+    }
+    return Q5;
 }

@@ -4,38 +4,36 @@
  * File: A14_F12_S_OddEvenSort.c
  * Implementation Logic: Odd-Even Brick Sort (Parallel Bubble variant) (Seed 7).
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-void   cjUZ(int  IUm[],   int  SmSf6) {
-   int   oRaI8  =   0;
-  while  (!oRaI8) {
-  oRaI8   =  1;
-  for (int  OHq1  =  1;   OHq1 < SmSf6   -   1; OHq1  += 2)  {
-   if  (IUm[OHq1] > IUm[OHq1   +   1])  {
-  int  Oj  = IUm[OHq1];   IUm[OHq1]   = IUm[OHq1+1];   IUm[OHq1+1]   =  Oj;
-   oRaI8 =   0;
-  }
-  }
-   for  (int  OHq1 = 0;  OHq1 < SmSf6 -  1; OHq1  += 2)   {
- if (IUm[OHq1]   >   IUm[OHq1  + 1]) {
-   int   Oj = IUm[OHq1];  IUm[OHq1] = IUm[OHq1+1];   IUm[OHq1+1] =   Oj;
-  oRaI8   =  0;
-  }
-   }
-   }
+void Z5C(int bS[], int wUiq) {
+    int F = 0;
+    while (!F) {
+        F = 1;
+        for (int JsIS = 1; JsIS < wUiq - 1; JsIS += 2) {
+            if (bS[JsIS] > bS[JsIS + 1]) {
+                int mKlI = bS[JsIS]; bS[JsIS] = bS[JsIS+1]; bS[JsIS+1] = mKlI;
+                F = 0;
+            }
+        }
+        for (int JsIS = 0; JsIS < wUiq - 1; JsIS += 2) {
+            if (bS[JsIS] > bS[JsIS + 1]) {
+                int mKlI = bS[JsIS]; bS[JsIS] = bS[JsIS+1]; bS[JsIS+1] = mKlI;
+                F = 0;
+            }
+        }
+    }
 }
 
-int   main(int  argc,  char *argv[])   {
-   if  (argc < 2) return  0;
-  int  SmSf6 = argc   - 1;
- int  *IUm   =  (int*)malloc(SmSf6   * sizeof(int));
-  for  (int   OHq1   =   0;   OHq1   <  SmSf6;   OHq1++)   IUm[OHq1]  =  atoi(argv[OHq1+1]);
- cjUZ(IUm,   SmSf6);
- for   (int   OHq1   =   0;   OHq1  < SmSf6; OHq1++)   printf("%d ", IUm[OHq1]);
-   printf("\n");
-  free(IUm);
-  return  0;
+int main(int uUD, char *M63[]) {
+    if (uUD < 2) return 0;
+    int wUiq = uUD - 1;
+    int *bS = (int*)malloc(wUiq * sizeof(int));
+    for (int JsIS = 0; JsIS < wUiq; JsIS++) bS[JsIS] = atoi(M63[JsIS+1]);
+    Z5C(bS, wUiq);
+    for (int JsIS = 0; JsIS < wUiq; JsIS++) printf("%d ", bS[JsIS]);
+    printf("\n");
+    free(bS);
+    return 0;
 }

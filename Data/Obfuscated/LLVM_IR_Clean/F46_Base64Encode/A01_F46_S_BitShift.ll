@@ -1,5 +1,5 @@
-@__const.rc.c = constant [65 x i8] c"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/\00"
-define dso_local void @rc(i8* %0, i32 %1, i8* %2) {
+@__const.jgTU.J0LN = constant [65 x i8] c"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/\00"
+define dso_local void @jgTU(i8* %0, i32 %1, i8* %2) {
   %4 = alloca i8*
   %5 = alloca i32
   %6 = alloca i8*
@@ -9,7 +9,7 @@ define dso_local void @rc(i8* %0, i32 %1, i8* %2) {
   store i8* %0, i8** %4
   store i32 %1, i32* %5
   store i8* %2, i8** %6
-  call void @llvm.memcpy.p0i8.p0i8.i64(i8* align 16 %11, i8* align 16 getelementptr inbounds ([65 x i8], [65 x i8]* @__const.rc.c, i32 0, i32 0), i64 65, i1 false)
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* align 16 %11, i8* align 16 getelementptr inbounds ([65 x i8], [65 x i8]* @__const.jgTU.J0LN, i32 0, i32 0), i64 65, i1 false)
   store i32 0, i32* %8
   store i32 0, i32* %9
   br label %14

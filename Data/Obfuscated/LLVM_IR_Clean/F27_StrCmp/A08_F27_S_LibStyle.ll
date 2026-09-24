@@ -1,4 +1,4 @@
-define dso_local i32 @eun(i8* %0, i8* %1) {
+define dso_local i32 @e9S(i8* %0, i8* %1) {
   %3 = alloca i8*
   %4 = alloca i8*
   store i8* %0, i8** %3

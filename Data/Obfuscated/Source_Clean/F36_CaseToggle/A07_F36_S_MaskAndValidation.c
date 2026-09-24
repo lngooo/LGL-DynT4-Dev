@@ -1,9 +1,9 @@
-void   yt(char*  vyS)   {
-  for   (int  KyFR   = 0; vyS[KyFR]; KyFR++)  {
- unsigned   char L   =  (unsigned char)vyS[KyFR];
-   unsigned   char  whWS4  = L   | 32;
- if (whWS4 >=  'a'   && whWS4  <=   'z')  {
-   vyS[KyFR]  =   (char)(L   ^ 32);
-   }
-   }
+void RO(char* o) {
+    for (int cpd = 0; o[cpd]; cpd++) {
+        unsigned char b = (unsigned char)o[cpd];
+        unsigned char z9F = b | 32;
+        if (z9F >= 'a' && z9F <= 'z') {
+            o[cpd] = (char)(b ^ 32);
+        }
+    }
 }

@@ -1,4 +1,4 @@
-define dso_local void @EmJ(i32* %0, i32 %1, i32 %2) {
+define dso_local void @Kd(i32* %0, i32 %1, i32 %2) {
   %4 = alloca i32*
   %5 = alloca i32
   %6 = alloca i32
@@ -28,12 +28,12 @@ define dso_local void @EmJ(i32* %0, i32 %1, i32 %2) {
   %26 = load i32*, i32** %4
   %27 = load i32, i32* %5
   %28 = load i32, i32* %7
-  call void @EmJ(i32* %26, i32 %27, i32 %28)
+  call void @Kd(i32* %26, i32 %27, i32 %28)
   %29 = load i32*, i32** %4
   %30 = load i32, i32* %7
   %31 = add nsw i32 %30, 1
   %32 = load i32, i32* %6
-  call void @EmJ(i32* %29, i32 %31, i32 %32)
+  call void @Kd(i32* %29, i32 %31, i32 %32)
   %34 = load i32, i32* %6
   %35 = load i32, i32* %5
   %36 = sub nsw i32 %34, %35

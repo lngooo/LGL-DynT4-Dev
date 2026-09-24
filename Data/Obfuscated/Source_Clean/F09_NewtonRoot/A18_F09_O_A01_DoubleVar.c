@@ -1,11 +1,11 @@
-int  oO(int   NiD) {
-  if (NiD  <   0)  return  -1;
-  long  MNO7  = NiD, r  = NiD;
- long qp   =  (MNO7   +   1)   /   2;
-  while   (qp   < r)  {
-   r   = qp;
- long H =   NiD   /   r;
-  qp  = (r   +  H)   /  2;
-  }
- return  (int)r;
+int V1S(int s) {
+    if (s < 0) return -1;
+    long y = s, k = s;
+    long oP = (y + 1) / 2;
+    while (oP < k) {
+        k = oP;
+        long Rn = s / k;
+        oP = (k + Rn) / 2;
+    }
+    return (int)k;
 }

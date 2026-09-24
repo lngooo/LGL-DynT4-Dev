@@ -5,19 +5,17 @@
  * Implementation Logic: Deeply recursive implementation of string character comparison.
  * Input Format: <str1> <str2>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int   grJI1(const   char  *qD,   const   char  *nl9)   {
-  if (*qD  ==  '\0'   || *qD   !=   *nl9)
-   return  *(unsigned   char   *)qD   -  *(unsigned  char *)nl9;
-   return  grJI1(qD  +   1,   nl9  + 1);
+int uNFO(const char *Wy, const char *q2) {
+    if (*Wy == '\0' || *Wy != *q2)
+        return *(unsigned char *)Wy - *(unsigned char *)q2;
+    return uNFO(Wy + 1, q2 + 1);
 }
 
-int main(int  argc, char   *argv[]) {
-   if   (argc   <   3) return 0;
-  printf("%d\n", grJI1(argv[1], argv[2]));
-  return 0;
+int main(int wvZC, char *Wk9[]) {
+    if (wvZC < 3) return 0;
+    printf("%d\n", uNFO(Wk9[1], Wk9[2]));
+    return 0;
 }

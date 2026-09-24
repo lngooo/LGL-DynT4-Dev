@@ -2,7 +2,7 @@
 @.str.1 = constant [1 x i8] zeroinitializer
 @.str.2 = constant [2 x i8] c" \00"
 @.str.3 = constant [2 x i8] c"\0A\00"
-define dso_local void @Qkp(i32* %0, i32 %1, i32 %2) {
+define dso_local void @Ycr3(i32* %0, i32 %1, i32 %2) {
   %4 = alloca i32*
   %5 = alloca i32
   %6 = alloca i32
@@ -30,12 +30,12 @@ define dso_local void @Qkp(i32* %0, i32 %1, i32 %2) {
   %22 = load i32*, i32** %4
   %23 = load i32, i32* %5
   %24 = load i32, i32* %7
-  call void @Qkp(i32* %22, i32 %23, i32 %24)
+  call void @Ycr3(i32* %22, i32 %23, i32 %24)
   %25 = load i32*, i32** %4
   %26 = load i32, i32* %7
   %27 = add nsw i32 %26, 1
   %28 = load i32, i32* %6
-  call void @Qkp(i32* %25, i32 %27, i32 %28)
+  call void @Ycr3(i32* %25, i32 %27, i32 %28)
   %30 = load i32, i32* %5
   store i32 %30, i32* %8
   %32 = load i32, i32* %7
@@ -252,7 +252,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   %46 = load i32*, i32** %7
   %47 = load i32, i32* %6
   %48 = sub nsw i32 %47, 1
-  call void @Qkp(i32* %46, i32 0, i32 %48)
+  call void @Ycr3(i32* %46, i32 0, i32 %48)
   store i32 0, i32* %9
   br label %50
 50:

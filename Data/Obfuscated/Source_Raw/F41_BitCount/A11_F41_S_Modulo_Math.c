@@ -5,24 +5,22 @@
  * Implementation Logic: Mathematical simulation of bit extraction using modulo 2.
  * Input Format: <uint32_t>
  */
-
-
 #include <stdio.h>
 #include <stdint.h>
 #include <stdlib.h>
 
-int  Wi(uint32_t   tr)   {
- int   LFF =   0;
-   for  (int hbV  =   0;  hbV   <  32; hbV++)   {
-  if   (tr  % 2   !=   0) LFF++;
-   tr   /= 2;
-   }
-  return   LFF;
+int GVSR(uint32_t Y0I1) {
+    int c = 0;
+    for (int TT5 = 0; TT5 < 32; TT5++) {
+        if (Y0I1 % 2 != 0) c++;
+        Y0I1 /= 2;
+    }
+    return c;
 }
 
-int main(int  argc,  char*  argv[]) {
-  if  (argc  <   2)   return   0;
- uint32_t   Uh   =  (uint32_t)strtoul(argv[1], NULL,   10);
-  printf("%d\n", Wi(Uh));
- return 0;
+int main(int K3, char* yWL[]) {
+    if (K3 < 2) return 0;
+    uint32_t j = (uint32_t)strtoul(yWL[1], NULL, 10);
+    printf("%d\n", GVSR(j));
+    return 0;
 }

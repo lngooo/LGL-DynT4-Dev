@@ -4,30 +4,28 @@
  * File: A05_F24_S_UnrolledFour.c
  * Implementation Logic: UnrolledFour
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-int   PgZM7(int gmk[], int  hpDj)  {
-   int wql  =  0, dWmX   =  0;
- for   (;  dWmX  <= hpDj   - 4; dWmX  += 4) {
- wql   +=   (gmk[dWmX]   + gmk[dWmX+1]   +  gmk[dWmX+2]   +   gmk[dWmX+3]);
-   }
-   for   (;  dWmX   <  hpDj; dWmX++)   wql   +=  gmk[dWmX];
-  return  wql;
+int y(int uW[], int zX) {
+    int s0R = 0, MzIe = 0;
+    for (; MzIe <= zX - 4; MzIe += 4) {
+        s0R += (uW[MzIe] + uW[MzIe+1] + uW[MzIe+2] + uW[MzIe+3]);
+    }
+    for (; MzIe < zX; MzIe++) s0R += uW[MzIe];
+    return s0R;
 }
 
-int main(int  argc, char  *argv[])   {
-  if (argc <   2)   return  0;
-   int  hpDj =  argc  -   1;
-   int *gmk   =   (int *)malloc(hpDj   *   sizeof(int));
-  for   (int  dWmX   =  0;   dWmX  <  hpDj; dWmX++)  gmk[dWmX]  =   atoi(argv[dWmX + 1]);
+int main(int FQV, char *o[]) {
+    if (FQV < 2) return 0;
+    int zX = FQV - 1;
+    int *uW = (int *)malloc(zX * sizeof(int));
+    for (int MzIe = 0; MzIe < zX; MzIe++) uW[MzIe] = atoi(o[MzIe + 1]);
 
- int sK =  PgZM7(gmk,  hpDj);
-   printf("%d\n",   sK);
+    int Xp = y(uW, zX);
+    printf("%d\n", Xp);
 
-   free(gmk);
-  return  0;
+    free(uW);
+    return 0;
 }

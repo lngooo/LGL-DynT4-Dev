@@ -1,4 +1,4 @@
-define dso_local i32 @Nod(i32 %0) {
+define dso_local i32 @y3N(i32 %0) {
   %2 = alloca i32
   %3 = alloca i32
   %4 = alloca double

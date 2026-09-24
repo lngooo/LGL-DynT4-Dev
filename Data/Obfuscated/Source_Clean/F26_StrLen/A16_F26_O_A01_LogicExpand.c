@@ -1,8 +1,8 @@
-int   axp2(const  char   *SaZ5)  {
-   int   ux  =  0;
-   while   (1) {
- if  (SaZ5[ux] ==  (char)0)  break;
- ux++;
-  }
-  return   ux;
+int oQCt(const char *I) {
+    int je4W = 0;
+    while (1) {
+        if (I[je4W] == (char)0) break;
+        je4W++;
+    }
+    return je4W;
 }

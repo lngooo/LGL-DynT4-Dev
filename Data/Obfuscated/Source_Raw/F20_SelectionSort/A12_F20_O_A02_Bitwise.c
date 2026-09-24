@@ -4,36 +4,34 @@
  * File: A12_F20_O_A02_Bitwise.c
  * Implementation Logic: Bitwise
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-void  xL9(int  vhBQ[],  int BLuU)   {
- for   (int   wpY9 =  0; wpY9 <   BLuU;  wpY9++)  {
-   int  *AqwG =  vhBQ   + wpY9;
- for  (int  Ipn = wpY9   + 1;  Ipn   < BLuU;   Ipn++)  {
-   if   (*(vhBQ   + Ipn) <   *AqwG) AqwG =   vhBQ   +   Ipn;
-   }
-  if (AqwG !=  (vhBQ   +  wpY9))  {
-   *AqwG   ^=   vhBQ[wpY9];  vhBQ[wpY9] ^=   *AqwG;  *AqwG  ^= vhBQ[wpY9];
- }
- }
+void EEIS(int SB[], int SKy) {
+    for (int J = 0; J < SKy; J++) {
+        int *eU = SB + J;
+        for (int uQ = J + 1; uQ < SKy; uQ++) {
+            if (*(SB + uQ) < *eU) eU = SB + uQ;
+        }
+        if (eU != (SB + J)) {
+            *eU ^= SB[J]; SB[J] ^= *eU; *eU ^= SB[J];
+        }
+    }
 }
 
-int  main(int  argc,  char  *argv[])  {
-   if   (argc <   2)  return 0;
-  int   BLuU =   argc  -   1;
- int  *vhBQ =  (int *)malloc(BLuU   *  sizeof(int));
- for   (int  wpY9 = 0;   wpY9 < BLuU;  wpY9++)  vhBQ[wpY9]  =  atoi(argv[wpY9   + 1]);
+int main(int aj5, char *jF3u[]) {
+    if (aj5 < 2) return 0;
+    int SKy = aj5 - 1;
+    int *SB = (int *)malloc(SKy * sizeof(int));
+    for (int J = 0; J < SKy; J++) SB[J] = atoi(jF3u[J + 1]);
 
-   xL9(vhBQ,  BLuU);
+    EEIS(SB, SKy);
 
- for  (int   wpY9 =   0; wpY9 < BLuU;   wpY9++) {
-  printf("%d%s",  vhBQ[wpY9],  (wpY9   ==   BLuU  -  1  ?  ""   : " "));
- }
- printf("\n");
- free(vhBQ);
-  return   0;
+    for (int J = 0; J < SKy; J++) {
+        printf("%d%s", SB[J], (J == SKy - 1 ? "" : " "));
+    }
+    printf("\n");
+    free(SB);
+    return 0;
 }

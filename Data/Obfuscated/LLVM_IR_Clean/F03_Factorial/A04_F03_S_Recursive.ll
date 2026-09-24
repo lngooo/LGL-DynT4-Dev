@@ -1,4 +1,4 @@
-define dso_local i64 @VjXb(i32 %0) {
+define dso_local i64 @vA(i32 %0) {
   %2 = alloca i64
   %3 = alloca i32
   store i32 %0, i32* %3
@@ -13,7 +13,7 @@ define dso_local i64 @VjXb(i32 %0) {
   %9 = sext i32 %8 to i64
   %10 = load i32, i32* %3
   %11 = sub nsw i32 %10, 1
-  %12 = call i64 @VjXb(i32 %11)
+  %12 = call i64 @vA(i32 %11)
   %13 = mul nsw i64 %9, %12
   store i64 %13, i64* %2
   br label %14

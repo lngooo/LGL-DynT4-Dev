@@ -1,5 +1,5 @@
-int   HjL(int  HS6[],  int  NUD)   {
-  int  CC   =   0, *hm   = HS6;
- while   (NUD--)   CC   += *hm++;
- return CC;
+int qU(int MvE[], int tc74) {
+    int W7 = 0, *A = MvE;
+    while (tc74--) W7 += *A++;
+    return W7;
 }

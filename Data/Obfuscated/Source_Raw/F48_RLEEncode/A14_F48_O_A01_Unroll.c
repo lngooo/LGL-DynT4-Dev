@@ -5,32 +5,30 @@
  * Implementation Logic: Unroll
  * Input Format: <string>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
 
-void   Uj(const  char *eo, char *ZV) {
- int n8 = 0,  I   = 0;
-   while (eo[n8]) {
-  int  J6 =  1;
-   if (eo[n8+1] ==   eo[n8]) {
-  J6  = 2;
-   while  (eo[n8+J6]   ==  eo[n8]) J6++;
-   }
-  ZV[I++]   =   eo[n8];
-  I   += sprintf(ZV  + I, "%d",   J6);
-   n8  += J6;
- }
+void zga(const char *F, char *FmPk) {
+    int doA = 0, W = 0;
+    while (F[doA]) {
+        int cj = 1;
+        if (F[doA+1] == F[doA]) {
+            cj = 2;
+            while (F[doA+cj] == F[doA]) cj++;
+        }
+        FmPk[W++] = F[doA];
+        W += sprintf(FmPk + W, "%d", cj);
+        doA += cj;
+    }
 }
 
-int  main(int  argc,   char   *argv[])  {
-  if (argc  < 2)   return  0;
-   char   *Gln  =   argv[1];
-  char  Juq[256]   =   {0};
-  Uj(Gln, Juq);
-  printf("%s\n",   Juq);
- return 0;
+int main(int NV1, char *L[]) {
+    if (NV1 < 2) return 0;
+    char *HE = L[1];
+    char nD[256] = {0};
+    zga(HE, nD);
+    printf("%s\n", nD);
+    return 0;
 }

@@ -1,5 +1,5 @@
-@__const.jM.a = constant [4 x i32] [i32 15, i32 14, i32 14, i32 14]
-define dso_local i32 @jM(i32 %0) {
+@__const.z0w9.Tfw = constant [4 x i32] [i32 15, i32 14, i32 14, i32 14]
+define dso_local i32 @z0w9(i32 %0) {
   %2 = alloca i32
   %3 = alloca i32
   %4 = alloca [4 x i32]

@@ -4,28 +4,26 @@
  * File: A20_F43_O_A03_StepSplit.c
  * Implementation Logic: Loop unrolling and variable accumulation split derived from A03.
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int   YyHF5(unsigned int   yxLA)  {
-   if   (yxLA ==  0)  return 0;
- int   ygK   = 0, xNmp =  0;
-   while  (yxLA  > 0) {
-   ygK   +=   (yxLA  &  1);
-  yxLA  >>= 1;
-  if   (yxLA   > 0)   {
-   xNmp  +=   (yxLA  &   1);
-  yxLA   >>=  1;
- }
-   }
- return  (ygK  +   xNmp)   ==  1;
+int Kdxu(unsigned int J3) {
+    if (J3 == 0) return 0;
+    int BLno = 0, fO1 = 0;
+    while (J3 > 0) {
+        BLno += (J3 & 1);
+        J3 >>= 1;
+        if (J3 > 0) {
+            fO1 += (J3 & 1);
+            J3 >>= 1;
+        }
+    }
+    return (BLno + fO1) == 1;
 }
 
-int main(int   argc,  char*   argv[])  {
-  if (argc < 2) return  0;
-   unsigned   int  yxLA = (unsigned  int)strtoul(argv[1], NULL,   10);
- printf("%d",  YyHF5(yxLA));
-   return 0;
+int main(int VGI, char* W[]) {
+    if (VGI < 2) return 0;
+    unsigned int J3 = (unsigned int)strtoul(W[1], NULL, 10);
+    printf("%d", Kdxu(J3));
+    return 0;
 }

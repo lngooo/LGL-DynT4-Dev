@@ -5,25 +5,23 @@
  * Implementation Logic: Uses long long type for indexing to change token width.
  * Input Format: <string>
  */
-
-
 #include <stdio.h>
 
-void   xRt(char*   J)   {
-  for   (long long  lRr  =   0;  J[lRr];   lRr++)   {
-   long  long   ND = lRr  - 1;
- int vi   =   (lRr   ==  0  || J[ND] == ' ');
-   if   (vi)  {
-  if (J[lRr] >= 'a'   &&  J[lRr]  <=   'z')   J[lRr]   -=  32;
- }  else   {
-   if   (J[lRr] >=   'A'   &&   J[lRr]  <=  'Z')   J[lRr] +=   32;
-  }
- }
+void hfs9(char* qn) {
+    for (long long Qi61 = 0; qn[Qi61]; Qi61++) {
+        long long PJS = Qi61 - 1;
+        int rRj = (Qi61 == 0 || qn[PJS] == ' ');
+        if (rRj) {
+            if (qn[Qi61] >= 'a' && qn[Qi61] <= 'z') qn[Qi61] -= 32;
+        } else {
+            if (qn[Qi61] >= 'A' && qn[Qi61] <= 'Z') qn[Qi61] += 32;
+        }
+    }
 }
 
-int main(int  argc,   char*  argv[])   {
-   if (argc   < 2)   return   0;
-  xRt(argv[1]);
-  printf("%s", argv[1]);
-   return  0;
+int main(int R, char* I[]) {
+    if (R < 2) return 0;
+    hfs9(I[1]);
+    printf("%s", I[1]);
+    return 0;
 }

@@ -1,5 +1,5 @@
-@__const.knIy1.tZ = constant [2 x i8*] [i8* blockaddress(@knIy1, %15), i8* blockaddress(@knIy1, %12)]
-define dso_local i32 @knIy1(i32 %0) {
+@__const.JVJp.Z = constant [2 x i8*] [i8* blockaddress(@JVJp, %15), i8* blockaddress(@JVJp, %12)]
+define dso_local i32 @JVJp(i32 %0) {
   %2 = alloca i32
   %3 = alloca i32
   %4 = alloca [2 x i8*]

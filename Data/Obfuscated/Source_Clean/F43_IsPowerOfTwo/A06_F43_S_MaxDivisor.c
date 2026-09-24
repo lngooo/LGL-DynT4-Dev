@@ -1,4 +1,4 @@
-int   Bpj(unsigned  int  U)   {
- unsigned  int qmpZ = 2147483648U;
-   return   (U  >   0   &&  qmpZ  %  U   ==  0);
+int dH2(unsigned int x) {
+    unsigned int Mfq = 2147483648U;
+    return (x > 0 && Mfq % x == 0);
 }

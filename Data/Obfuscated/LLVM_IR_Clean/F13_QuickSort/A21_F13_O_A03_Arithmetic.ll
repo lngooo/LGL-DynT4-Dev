@@ -1,4 +1,4 @@
-define dso_local void @D1(i32* %0, i32 %1, i32 %2) {
+define dso_local void @IsyN(i32* %0, i32 %1, i32 %2) {
   %4 = alloca i32*
   %5 = alloca i32
   %6 = alloca i32
@@ -108,11 +108,11 @@ define dso_local void @D1(i32* %0, i32 %1, i32 %2) {
   %90 = load i32*, i32** %4
   %91 = load i32, i32* %5
   %92 = load i32, i32* %8
-  call void @D1(i32* %90, i32 %91, i32 %92)
+  call void @IsyN(i32* %90, i32 %91, i32 %92)
   %93 = load i32*, i32** %4
   %94 = load i32, i32* %7
   %95 = load i32, i32* %6
-  call void @D1(i32* %93, i32 %94, i32 %95)
+  call void @IsyN(i32* %93, i32 %94, i32 %95)
   br label %99
 99:
   ret void

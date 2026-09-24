@@ -1,8 +1,8 @@
-void bhZW7(char* TY8)   {
- while  (*TY8)  {
-   int F  =   (*TY8  >=   'a'  &&   *TY8 <= 'z');
-   int   KOHF  = (*TY8 >= 'A' && *TY8 <=   'Z');
- *TY8  = *TY8 - (F  * 32) +  (KOHF  *   32);
-   TY8++;
-   }
+void LRXw(char* sB1) {
+    while (*sB1) {
+        int pq = (*sB1 >= 'a' && *sB1 <= 'z');
+        int gi1Z = (*sB1 >= 'A' && *sB1 <= 'Z');
+        *sB1 = *sB1 - (pq * 32) + (gi1Z * 32);
+        sB1++;
+    }
 }

@@ -4,27 +4,25 @@
  * File: A10_F15_S_BitwiseCompare.c
  * Implementation Logic: Max using bit-manipulation based max(a,b) (Seed 5).
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int  tOA(int UQmF,   int   h)  {
-  return  UQmF - ((UQmF   -   h)  &  ((UQmF - h)  >>  31));
+int JfnU(int VAZC, int kZU) {
+    return VAZC - ((VAZC - kZU) & ((VAZC - kZU) >> 31));
 }
 
-int Fi(int fQd[],   int qT4) {
-  int   TUVf  =   fQd[0];
-   for(int   Kv8=1;  Kv8<qT4;   Kv8++) TUVf   =   tOA(TUVf,  fQd[Kv8]);
-   return   TUVf;
+int U5Ai(int j[], int tE) {
+    int e79 = j[0];
+    for(int faAO=1; faAO<tE; faAO++) e79 = JfnU(e79, j[faAO]);
+    return e79;
 }
 
-int  main(int  argc,   char   *argv[])  {
- if   (argc  <   2) return   0;
-   int   qT4   = argc   - 1;
-  int  *fQd   = (int*)malloc(qT4  *   sizeof(int));
- for  (int  Kv8   = 0; Kv8 < qT4;   Kv8++)  fQd[Kv8] =  atoi(argv[Kv8+1]);
-  printf("%d\n", Fi(fQd,  qT4));
-   free(fQd);
- return 0;
+int main(int AlJ, char *TKW6[]) {
+    if (AlJ < 2) return 0;
+    int tE = AlJ - 1;
+    int *j = (int*)malloc(tE * sizeof(int));
+    for (int faAO = 0; faAO < tE; faAO++) j[faAO] = atoi(TKW6[faAO+1]);
+    printf("%d\n", U5Ai(j, tE));
+    free(j);
+    return 0;
 }

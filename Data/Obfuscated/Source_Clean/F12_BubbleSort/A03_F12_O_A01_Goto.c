@@ -1,15 +1,15 @@
-void f(int   WZ8[],   int JGQe) {
-   int  NmpH = 0,  ijRC;
-oyM:
-  if   (NmpH   >= JGQe -  1)   goto AT;
-  ijRC   =   0;
-cJw:
-   if (ijRC  >=   JGQe -  NmpH -  1) { NmpH++;   goto   oyM;   }
- if   (WZ8[ijRC] >   WZ8[ijRC  +  1])  {
-   int  U   = WZ8[ijRC];  WZ8[ijRC]  = WZ8[ijRC+1];  WZ8[ijRC+1]  =  U;
-   }
-  ijRC++;
-  goto  cJw;
-AT:
-  return;
+void xlF(int nASW[], int x2z) {
+    int ClK = 0, KR;
+gU:
+    if (ClK >= x2z - 1) goto ZpJ;
+    KR = 0;
+ymjZ:
+    if (KR >= x2z - ClK - 1) { ClK++; goto gU; }
+    if (nASW[KR] > nASW[KR + 1]) {
+        int EZ = nASW[KR]; nASW[KR] = nASW[KR+1]; nASW[KR+1] = EZ;
+    }
+    KR++;
+    goto ymjZ;
+ZpJ:
+    return;
 }

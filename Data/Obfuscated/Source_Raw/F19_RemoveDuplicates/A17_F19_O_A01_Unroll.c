@@ -5,37 +5,35 @@
  * Implementation Logic: Unroll
  * Input Format: <val1> <val2> ...
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-int  zW(int   hy[],   int iv)   {
-  int wwFV  =   0;
-  for  (int   E   = 0; E < iv; E++)  {
- int   BxKN   = 0;
- int  Yp  =   0;
- for  (; Yp  <= wwFV -   2;   Yp   += 2) {
- if (hy[E]   ==  hy[Yp]   ||   hy[E] ==   hy[Yp+1]) { BxKN  =  1;  break;   }
- }
- for (;  Yp <   wwFV; Yp++) if   (hy[E] ==   hy[Yp])   BxKN   =   1;
-   if   (!BxKN)  hy[wwFV++] = hy[E];
- }
-  return  wwFV;
+int rnL(int jCoU[], int xj5E) {
+    int F = 0;
+    for (int Dl = 0; Dl < xj5E; Dl++) {
+        int mK = 0;
+        int UlPs = 0;
+        for (; UlPs <= F - 2; UlPs += 2) {
+            if (jCoU[Dl] == jCoU[UlPs] || jCoU[Dl] == jCoU[UlPs+1]) { mK = 1; break; }
+        }
+        for (; UlPs < F; UlPs++) if (jCoU[Dl] == jCoU[UlPs]) mK = 1;
+        if (!mK) jCoU[F++] = jCoU[Dl];
+    }
+    return F;
 }
 
-int   main(int argc,   char  *argv[])   {
- if  (argc  < 2)  return 0;
-  int   Ok = argc   -  1;
-  int hy[128];
-   for  (int E =   0;  E  < Ok;  E++)  {
- hy[E] =  atoi(argv[E   + 1]);
- }
-  int  iTLT   =   zW(hy,   Ok);
- for (int  E =   0;   E   < iTLT;  E++)   {
- printf("%d%s", hy[E],  (E ==  iTLT - 1 ?   ""  : " "));
- }
-  printf("\n");
-  return   0;
+int main(int t, char *l0[]) {
+    if (t < 2) return 0;
+    int RMme = t - 1;
+    int jCoU[128];
+    for (int Dl = 0; Dl < RMme; Dl++) {
+        jCoU[Dl] = atoi(l0[Dl + 1]);
+    }
+    int eB = rnL(jCoU, RMme);
+    for (int Dl = 0; Dl < eB; Dl++) {
+        printf("%d%s", jCoU[Dl], (Dl == eB - 1 ? "" : " "));
+    }
+    printf("\n");
+    return 0;
 }

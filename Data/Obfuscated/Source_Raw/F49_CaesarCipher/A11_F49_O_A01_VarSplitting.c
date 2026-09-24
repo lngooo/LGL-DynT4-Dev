@@ -5,30 +5,28 @@
  * Implementation Logic: A11_F49_O_A01_VarSplitting
  * Input Format: <string> <shift_int>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
 
-void  qj9(char  *tV,  int   HVg6)   {
+void BFp(char *m2, int ST) {
 
-  int  k   = HVg6  %   26;
- int   i  = 52;
- int   lHyI4   = (k   +   i)  % 26;
- for(int Rc4=0;  tV[Rc4]; Rc4++) {
-  if(tV[Rc4]  >=  97   &&  tV[Rc4] <=  122) tV[Rc4] =   (tV[Rc4]-97+lHyI4)%26+97;
-  else  if(tV[Rc4]  >= 65   &&   tV[Rc4]  <=  90)  tV[Rc4]  =  (tV[Rc4]-65+lHyI4)%26+65;
-  }
+    int nYRi = ST % 26;
+    int K3 = 52;
+    int sqcl = (nYRi + K3) % 26;
+    for(int up=0; m2[up]; up++) {
+        if(m2[up] >= 97 && m2[up] <= 122) m2[up] = (m2[up]-97+sqcl)%26+97;
+        else if(m2[up] >= 65 && m2[up] <= 90) m2[up] = (m2[up]-65+sqcl)%26+65;
+    }
 }
 
-int main(int  argc,  char   *argv[])   {
- if  (argc <   3) {
- return 1;
-   }
- int  HVg6 = atoi(argv[2]);
-   qj9(argv[1],   HVg6);
- printf("%s\n", argv[1]);
-  return   0;
+int main(int z7, char *yN3L[]) {
+    if (z7 < 3) {
+        return 1;
+    }
+    int ST = atoi(yN3L[2]);
+    BFp(yN3L[1], ST);
+    printf("%s\n", yN3L[1]);
+    return 0;
 }

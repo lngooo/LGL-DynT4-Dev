@@ -1,4 +1,4 @@
-define dso_local i32 @bb(i32 %0) {
+define dso_local i32 @NF(i32 %0) {
   %2 = alloca i32
   %3 = alloca i32
   %4 = alloca double
@@ -21,7 +21,7 @@ define dso_local i32 @bb(i32 %0) {
   %17 = call double @llvm.round.f64(double %16)
   %18 = fsub double %15, %17
   %19 = call double @llvm.fabs.f64(double %18)
-  %20 = fcmp olt double %19, 1.000000e-09
+  %20 = fcmp olt double %19, 0x3D719799812DEA11
   %21 = zext i1 %20 to i32
   store i32 %21, i32* %2
   br label %23

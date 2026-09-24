@@ -1,7 +1,7 @@
-int  E(const char *ib,   const  char   *jfH)  {
-  while   (*ib && (*ib ==   *jfH)) {
-  ib++;
-   jfH++;
- }
-   return   *(unsigned char *)ib  - *(unsigned char *)jfH;
+int w9p(const char *CYd, const char *DSO) {
+    while (*CYd && (*CYd == *DSO)) {
+        CYd++;
+        DSO++;
+    }
+    return *(unsigned char *)CYd - *(unsigned char *)DSO;
 }

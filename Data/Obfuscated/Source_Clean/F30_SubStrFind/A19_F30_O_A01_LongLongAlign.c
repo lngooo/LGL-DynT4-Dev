@@ -1,9 +1,9 @@
-int   Cpfg(char*   jzM,   char*   nUGe)   {
-   long long   cMo =  (long long)strlen(jzM);
-   long   long   k =  (long   long)strlen(nUGe);
-  if (k  ==  0LL)   return  0;
- for   (long  long dvYN = 0; dvYN   <=   cMo  - k; dvYN++)   {
- if   (memcmp(jzM  + dvYN,   nUGe,   (size_t)k)  ==   0) return  (int)dvYN;
- }
-  return   -1;
+int oA(char* kHe, char* fN) {
+    long long K = (long long)strlen(kHe);
+    long long sJ = (long long)strlen(fN);
+    if (sJ == 0LL) return 0;
+    for (long long B5kp = 0; B5kp <= K - sJ; B5kp++) {
+        if (memcmp(kHe + B5kp, fN, (size_t)sJ) == 0) return (int)B5kp;
+    }
+    return -1;
 }

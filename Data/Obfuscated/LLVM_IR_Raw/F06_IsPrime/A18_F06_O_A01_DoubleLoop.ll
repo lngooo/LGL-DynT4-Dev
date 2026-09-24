@@ -1,72 +1,85 @@
 @.str = constant [4 x i8] c"%d\0A\00"
-define dso_local i32 @ktU9(i32 %0) {
+define dso_local i32 @yas(i32 %0) {
   %2 = alloca i32
   %3 = alloca i32
   %4 = alloca i32
   %5 = alloca i32
   %6 = alloca i32
+  %7 = alloca i32
   store i32 %0, i32* %3
-  %7 = load i32, i32* %3
-  %8 = icmp slt i32 %7, 2
-  br i1 %8, label %9, label %10
-9:
-  store i32 0, i32* %2
-  br label %43
+  %8 = load i32, i32* %3
+  %9 = icmp slt i32 %8, 2
+  br i1 %9, label %10, label %11
 10:
-  store i32 0, i32* %4
-  store i32 1, i32* %5
-  br label %13
-13:
-  %14 = load i32, i32* %5
-  %15 = load i32, i32* %3
-  %16 = icmp sle i32 %14, %15
-  br i1 %16, label %18, label %17
-17:
-  store i32 2, i32* %6
-  br label %34
-18:
-  %19 = load i32, i32* %3
-  %20 = load i32, i32* %5
-  %21 = srem i32 %19, %20
-  %22 = icmp eq i32 %21, 0
-  br i1 %22, label %23, label %26
-23:
-  %24 = load i32, i32* %4
-  %25 = add nsw i32 %24, 1
-  store i32 %25, i32* %4
-  br label %26
-26:
-  %27 = load i32, i32* %4
-  %28 = icmp sgt i32 %27, 2
-  br i1 %28, label %29, label %30
-29:
   store i32 0, i32* %2
-  store i32 1, i32* %6
+  br label %52
+11:
+  store i32 1, i32* %4
+  store i32 2, i32* %5
+  br label %14
+14:
+  %15 = load i32, i32* %5
+  %16 = load i32, i32* %3
+  %17 = load i32, i32* %5
+  %18 = sdiv i32 %16, %17
+  %19 = icmp sle i32 %15, %18
+  br i1 %19, label %21, label %20
+20:
+  store i32 2, i32* %6
+  br label %47
+21:
+  store i32 0, i32* %7
+  br label %23
+23:
+  %24 = load i32, i32* %7
+  %25 = icmp slt i32 %24, 1
+  br i1 %25, label %27, label %26
+26:
+  store i32 5, i32* %6
+  br label %37
+27:
+  %28 = load i32, i32* %3
+  %29 = load i32, i32* %5
+  %30 = srem i32 %28, %29
+  %31 = icmp eq i32 %30, 0
+  br i1 %31, label %32, label %33
+32:
+  store i32 0, i32* %4
+  store i32 5, i32* %6
+  br label %37
+33:
   br label %34
-30:
-  br label %31
-31:
-  %32 = load i32, i32* %5
-  %33 = add nsw i32 %32, 1
-  store i32 %33, i32* %5
-  br label %13
 34:
-  %36 = load i32, i32* %6
-  switch i32 %36, label %41 [
-    i32 2, label %37
-  ]
+  %35 = load i32, i32* %7
+  %36 = add nsw i32 %35, 1
+  store i32 %36, i32* %7
+  br label %23
 37:
-  %38 = load i32, i32* %4
-  %39 = icmp eq i32 %38, 2
-  %40 = zext i1 %39 to i32
-  store i32 %40, i32* %2
-  store i32 1, i32* %6
-  br label %41
-41:
-  br label %43
+  br label %39
+39:
+  %40 = load i32, i32* %4
+  %41 = icmp ne i32 %40, 0
+  br i1 %41, label %43, label %42
+42:
+  store i32 2, i32* %6
+  br label %47
 43:
-  %44 = load i32, i32* %2
-  ret i32 %44
+  br label %44
+44:
+  %45 = load i32, i32* %5
+  %46 = add nsw i32 %45, 1
+  store i32 %46, i32* %5
+  br label %14
+47:
+  br label %49
+49:
+  %50 = load i32, i32* %4
+  store i32 %50, i32* %2
+  store i32 1, i32* %6
+  br label %52
+52:
+  %53 = load i32, i32* %2
+  ret i32 %53
 }
 define dso_local i32 @main(i32 %0, i8** %1) {
   %3 = alloca i32
@@ -86,7 +99,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   %11 = getelementptr inbounds i8*, i8** %10, i64 1
   %12 = load i8*, i8** %11
   %13 = call i32 @atoi(i8* %12)
-  %14 = call i32 @ktU9(i32 %13)
+  %14 = call i32 @yas(i32 %13)
   %15 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str, i64 0, i64 0), i32 %14)
   store i32 0, i32* %3
   br label %16

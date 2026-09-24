@@ -1,11 +1,11 @@
-void UOL(char   *w) {
- char *KV = strchr(w,  ' ');
- if   (KV)   {
- char WlaJ9[256];
-   strcpy(WlaJ9, KV   +   1);
- UOL(WlaJ9);
-  int   ugRk =   KV  -   w;
-   char Lei[256];  strncpy(Lei, w, ugRk);   Lei[ugRk] =  '\0';
-   sprintf(w, "%s %s",  WlaJ9,   Lei);
-  }
+void ON6(char *o) {
+    char *NN5 = strchr(o, ' ');
+    if (NN5) {
+        char Iw[256];
+        strcpy(Iw, NN5 + 1);
+        ON6(Iw);
+        int WWp = NN5 - o;
+        char RKv[256]; strncpy(RKv, o, WWp); RKv[WWp] = '\0';
+        sprintf(o, "%s %s", Iw, RKv);
+    }
 }

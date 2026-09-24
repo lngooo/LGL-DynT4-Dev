@@ -1,17 +1,17 @@
-void gWrf(char   *a4)  {
-   int  sB =  0;  while(a4[sB]) sB++;
- for(int   a=0;  a < sB/2; a+=1)  {
-   char   bWxw4  =  a4[a];  a4[a]   =   a4[sB-1-a];  a4[sB-1-a] =   bWxw4;
-   }
-   int   lbQ  = 0;
- while(lbQ  < sB)  {
-   int   os  =   lbQ;
- while(a4[os]   != ' ' &&   a4[os] !=  0) os++;
-  for(int  MZ=0;  MZ < (os-lbQ)/2; MZ++)  {
- char   kd  =   a4[lbQ+MZ];
- a4[lbQ+MZ] = a4[os-1-MZ];
- a4[os-1-MZ]  = kd;
-  }
-  lbQ =  os +   1;
-  }
+void TVL(char *Pb6) {
+    int QW = 0; while(Pb6[QW]) QW++;
+    for(int d=0; d < QW/2; d+=1) {
+        char z = Pb6[d]; Pb6[d] = Pb6[QW-1-d]; Pb6[QW-1-d] = z;
+    }
+    int RNn = 0;
+    while(RNn < QW) {
+        int XUa = RNn;
+        while(Pb6[XUa] != ' ' && Pb6[XUa] != 0) XUa++;
+        for(int S5=0; S5 < (XUa-RNn)/2; S5++) {
+            char a = Pb6[RNn+S5];
+            Pb6[RNn+S5] = Pb6[XUa-1-S5];
+            Pb6[XUa-1-S5] = a;
+        }
+        RNn = XUa + 1;
+    }
 }

@@ -1,4 +1,4 @@
-define dso_local double @zxe9(i32* %0, i32 %1) {
+define dso_local double @vmR(i32* %0, i32 %1) {
   %3 = alloca i32*
   %4 = alloca i32
   %5 = alloca double

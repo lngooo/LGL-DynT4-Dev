@@ -1,13 +1,13 @@
-void   IN4(int   Ki[], int  j2)  {
-  if (j2   <= 1) return;
-  for (int   t1   =  0;  t1   <   j2  - 1;  t1++)   {
-  if   (Ki[t1]  >   Ki[t1+1])  {
-  int  BTC   =  Ki[t1];   Ki[t1] =   Ki[t1+1];  Ki[t1+1]   = BTC;
- }
-  }
-   IN4(Ki, j2 -   1);
+void on2(int bX0[], int JGJ) {
+    if (JGJ <= 1) return;
+    for (int gc = 0; gc < JGJ - 1; gc++) {
+        if (bX0[gc] > bX0[gc+1]) {
+            int wjiq = bX0[gc]; bX0[gc] = bX0[gc+1]; bX0[gc+1] = wjiq;
+        }
+    }
+    on2(bX0, JGJ - 1);
 }
 
-void paNf(int   Ki[],  int j2) {
- IN4(Ki, j2);
+void Lpo(int bX0[], int JGJ) {
+    on2(bX0, JGJ);
 }

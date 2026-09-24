@@ -1,4 +1,4 @@
-define dso_local i32 @J(i32* %0, i32 %1, i32 %2) {
+define dso_local i32 @MODF(i32* %0, i32 %1, i32 %2) {
   %4 = alloca i32
   %5 = alloca i32*
   %6 = alloca i32

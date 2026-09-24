@@ -2,7 +2,7 @@
 @.str.1 = constant [1 x i8] zeroinitializer
 @.str.2 = constant [2 x i8] c" \00"
 @.str.3 = constant [2 x i8] c"\0A\00"
-define dso_local void @v(i32* %0, i32 %1, i32 %2) {
+define dso_local void @GNy(i32* %0, i32 %1, i32 %2) {
   %4 = alloca i32*
   %5 = alloca i32
   %6 = alloca i32
@@ -33,12 +33,12 @@ define dso_local void @v(i32* %0, i32 %1, i32 %2) {
   %27 = load i32*, i32** %4
   %28 = load i32, i32* %5
   %29 = load i32, i32* %7
-  call void @v(i32* %27, i32 %28, i32 %29)
+  call void @GNy(i32* %27, i32 %28, i32 %29)
   %30 = load i32*, i32** %4
   %31 = load i32, i32* %7
   %32 = add nsw i32 %31, 1
   %33 = load i32, i32* %6
-  call void @v(i32* %30, i32 %32, i32 %33)
+  call void @GNy(i32* %30, i32 %32, i32 %33)
   %35 = load i32, i32* %5
   store i32 %35, i32* %8
   %37 = load i32, i32* %7
@@ -215,7 +215,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   %46 = load i32*, i32** %7
   %47 = load i32, i32* %6
   %48 = sub nsw i32 %47, 1
-  call void @v(i32* %46, i32 0, i32 %48)
+  call void @GNy(i32* %46, i32 0, i32 %48)
   store i32 0, i32* %9
   br label %50
 50:

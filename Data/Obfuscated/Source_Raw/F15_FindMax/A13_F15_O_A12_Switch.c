@@ -4,28 +4,26 @@
  * File: A13_F15_O_A12_Switch.c
  * Implementation Logic: Max using switch-based logic.
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int  T(int Eenw0[],   int Pn)  {
-  int   fuRv  =  Eenw0[0];
-   for(int   H8=1;   H8<Pn; H8++) {
-  switch(Eenw0[H8]   > fuRv)  {
-   case   1:  fuRv   =   Eenw0[H8];  break;
- default:  break;
-  }
- }
-   return  fuRv;
+int Iu(int RZt[], int RSS) {
+    int gIL = RZt[0];
+    for(int jai=1; jai<RSS; jai++) {
+        switch(RZt[jai] > gIL) {
+            case 1: gIL = RZt[jai]; break;
+            default: break;
+        }
+    }
+    return gIL;
 }
 
-int  main(int  argc,   char   *argv[]) {
-  if  (argc  < 2) return   0;
-   int  Pn =   argc  - 1;
-  int   *Eenw0   =   (int*)malloc(Pn *  sizeof(int));
-  for (int  H8 = 0;  H8 <   Pn; H8++)   Eenw0[H8]  =   atoi(argv[H8+1]);
-  printf("%d\n",  T(Eenw0,   Pn));
- free(Eenw0);
-  return  0;
+int main(int xXF, char *v66k[]) {
+    if (xXF < 2) return 0;
+    int RSS = xXF - 1;
+    int *RZt = (int*)malloc(RSS * sizeof(int));
+    for (int jai = 0; jai < RSS; jai++) RZt[jai] = atoi(v66k[jai+1]);
+    printf("%d\n", Iu(RZt, RSS));
+    free(RZt);
+    return 0;
 }

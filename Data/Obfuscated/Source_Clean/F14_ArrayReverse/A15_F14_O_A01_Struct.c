@@ -1,11 +1,11 @@
-struct PrP3 {   int Y;  };
+struct MZNo { int Z; };
 
-void  yONo(int   MRxO4[],   int   kFV)  {
- struct  PrP3   Ywvw2  =   {0},  HNdb =  {kFV - 1};
- while (Ywvw2.Y   <  HNdb.Y) {
-   int  Q   = MRxO4[Ywvw2.Y];
- MRxO4[Ywvw2.Y] =  MRxO4[HNdb.Y];
-   MRxO4[HNdb.Y]   =   Q;
-  Ywvw2.Y++;   HNdb.Y--;
-   }
+void Bv(int uhRK[], int u1) {
+    struct MZNo Wc = {0}, ve = {u1 - 1};
+    while (Wc.Z < ve.Z) {
+        int r = uhRK[Wc.Z];
+        uhRK[Wc.Z] = uhRK[ve.Z];
+        uhRK[ve.Z] = r;
+        Wc.Z++; ve.Z--;
+    }
 }

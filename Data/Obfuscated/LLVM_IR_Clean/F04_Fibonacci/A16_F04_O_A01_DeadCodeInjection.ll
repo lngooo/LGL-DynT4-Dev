@@ -1,4 +1,4 @@
-define dso_local i64 @P(i32 %0) {
+define dso_local i64 @CNa5(i32 %0) {
   %2 = alloca i64
   %3 = alloca i32
   %4 = alloca i64

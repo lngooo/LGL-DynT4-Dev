@@ -1,5 +1,5 @@
 @.str = constant [5 x i8] c" \09\0A\0D\00"
-define dso_local i32 @FO(i8* %0) {
+define dso_local i32 @Zc(i8* %0) {
   %2 = alloca i32
   %3 = alloca i8*
   %4 = alloca [1024 x i8]

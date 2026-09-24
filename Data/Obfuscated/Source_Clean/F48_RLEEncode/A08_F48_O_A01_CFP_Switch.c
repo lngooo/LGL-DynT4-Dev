@@ -1,18 +1,18 @@
-void  wpwj5(const  char *r,  char  *q)   {
- int   s  = 0, assb   =  0, YK0 =  0;
- while   (s !=   3)   {
- switch  (s) {
-  case  0: s =  (r[assb]  == 0)  ? 3   :   1;  break;
-  case  1: {
-  int   D   = 0;
-   char  ih  =   r[assb];
- while (r[assb+D] == ih)  D++;
- q[YK0++]  = ih;
-  YK0  +=   sprintf(q  + YK0,   "%d",   D);
-  assb   +=  D;
-   s  =   0; break;
-   }
-   }
- }
-   q[YK0]  =   0;
+void Rbp(const char *Sr14, char *hw) {
+    int FpHx = 0, TzA = 0, m9 = 0;
+    while (FpHx != 3) {
+        switch (FpHx) {
+            case 0: FpHx = (Sr14[TzA] == 0) ? 3 : 1; break;
+            case 1: {
+                int oB = 0;
+                char y = Sr14[TzA];
+                while (Sr14[TzA+oB] == y) oB++;
+                hw[m9++] = y;
+                m9 += sprintf(hw + m9, "%d", oB);
+                TzA += oB;
+                FpHx = 0; break;
+            }
+        }
+    }
+    hw[m9] = 0;
 }

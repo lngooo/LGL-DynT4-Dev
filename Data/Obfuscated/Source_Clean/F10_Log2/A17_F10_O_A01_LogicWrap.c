@@ -1,9 +1,9 @@
-int   VSy(int ye)   {
- int   BGd  = 0;
-   for   (;  ye   >   1;   ye  >>= 1)  {
-   int   TEl = 0;
-   for(int   VDs=0;  VDs<1;   VDs++) TEl++;
- BGd   +=   TEl;
-  }
- return   BGd;
+int hgWQ(int av) {
+    int O9Z = 0;
+    for (; av > 1; av >>= 1) {
+        int JHx = 0;
+        for(int c=0; c<1; c++) JHx++;
+        O9Z += JHx;
+    }
+    return O9Z;
 }

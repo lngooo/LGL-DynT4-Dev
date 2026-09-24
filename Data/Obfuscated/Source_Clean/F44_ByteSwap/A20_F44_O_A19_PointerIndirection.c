@@ -1,12 +1,12 @@
-uint32_t  kYRR(uint32_t L)   {
- uint32_t   qm;
- uint8_t  *r = (uint8_t   *)&L;
-   uint8_t  *TW = (uint8_t   *)&qm;
- uint8_t  **kvPa =   &r;
- uint8_t **XKe  =   &TW;
-  (*XKe)[0] =  (*kvPa)[3];
-   (*XKe)[1]   =  (*kvPa)[2];
-   (*XKe)[2]   =  (*kvPa)[1];
-  (*XKe)[3]  =  (*kvPa)[0];
-  return   qm;
+uint32_t P(uint32_t M0tU) {
+    uint32_t R;
+    uint8_t *r8 = (uint8_t *)&M0tU;
+    uint8_t *SwL = (uint8_t *)&R;
+    uint8_t **hyc = &r8;
+    uint8_t **gg = &SwL;
+    (*gg)[0] = (*hyc)[3];
+    (*gg)[1] = (*hyc)[2];
+    (*gg)[2] = (*hyc)[1];
+    (*gg)[3] = (*hyc)[0];
+    return R;
 }

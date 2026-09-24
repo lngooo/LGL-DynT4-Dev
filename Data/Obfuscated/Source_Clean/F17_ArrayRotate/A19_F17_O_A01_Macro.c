@@ -1,10 +1,10 @@
-#define OXn(x, y) {int _t=x; x=y; y=_t;}
-#define j9(a, s, e) {int _s=s, _e=e; while(_s<_e){OXn(a[_s],a[_e]); _s++; _e--;}}
+#define SWP(x,y) {int _t=x; x=y; y=_t;}
+#define REV_RANGE(a,s,e) {int _s=s, _e=e; while(_s<_e){SWP(a[_s],a[_e]); _s++; _e--;}}
 
-void   pt(int  Ph7[], int  ArWP,   int  JQw) {
-  if (ArWP   ==   0) return;
- int   q  =  JQw  % ArWP;
-   j9(Ph7, 0,  q-1);
- j9(Ph7, q,   ArWP-1);
-  j9(Ph7,   0, ArWP-1);
+void i2G(int nUfY[], int YQNe, int Gy) {
+    if (YQNe == 0) return;
+    int FHD = Gy % YQNe;
+    REV_RANGE(nUfY, 0, FHD-1);
+    REV_RANGE(nUfY, FHD, YQNe-1);
+    REV_RANGE(nUfY, 0, YQNe-1);
 }

@@ -4,49 +4,47 @@
  * File: A08_F17_S_BinarySplit.c
  * Logic: Swap ranges [0..n-k-1] and [n-k..n-1] iteratively.
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-void  N(int  lpF[],   int QLG,  int R)  {
-  if (QLG   == 0)  return;
-   R   =   R %  QLG;
-   if  (R  ==  0)  return;
-   int  cKWT9  = R,  zn = QLG  -  R;
-  while  (cKWT9  != zn) {
-   if  (cKWT9  <   zn) {
- for   (int Az0 = 0;   Az0   <   cKWT9; Az0++) {
-   int li9   =  lpF[R   - cKWT9  +   Az0];
-  lpF[R  - cKWT9  +  Az0]   = lpF[R   + zn - cKWT9  +   Az0];
-  lpF[R   +   zn  -   cKWT9 +   Az0] =  li9;
-  }
-   zn  -= cKWT9;
-  }   else  {
- for (int Az0 =  0;   Az0  < zn;  Az0++)   {
-   int  li9   =   lpF[R - cKWT9   +   Az0];
-  lpF[R  -  cKWT9 + Az0]  = lpF[R + Az0];
-  lpF[R   + Az0]  =   li9;
-   }
- cKWT9  -=   zn;
- }
-  }
-   for   (int   Az0 =  0;  Az0   <   cKWT9; Az0++) {
-   int  li9   =  lpF[R   -  cKWT9  +   Az0];
-   lpF[R   -   cKWT9  +   Az0]  = lpF[R +   Az0];
- lpF[R  +   Az0] = li9;
- }
+void tK(int Cf2O[], int Y9, int xI) {
+    if (Y9 == 0) return;
+    xI = xI % Y9;
+    if (xI == 0) return;
+    int Yp = xI, JCca = Y9 - xI;
+    while (Yp != JCca) {
+        if (Yp < JCca) {
+            for (int NsPk = 0; NsPk < Yp; NsPk++) {
+                int d = Cf2O[xI - Yp + NsPk];
+                Cf2O[xI - Yp + NsPk] = Cf2O[xI + JCca - Yp + NsPk];
+                Cf2O[xI + JCca - Yp + NsPk] = d;
+            }
+            JCca -= Yp;
+        } else {
+            for (int NsPk = 0; NsPk < JCca; NsPk++) {
+                int d = Cf2O[xI - Yp + NsPk];
+                Cf2O[xI - Yp + NsPk] = Cf2O[xI + NsPk];
+                Cf2O[xI + NsPk] = d;
+            }
+            Yp -= JCca;
+        }
+    }
+    for (int NsPk = 0; NsPk < Yp; NsPk++) {
+        int d = Cf2O[xI - Yp + NsPk];
+        Cf2O[xI - Yp + NsPk] = Cf2O[xI + NsPk];
+        Cf2O[xI + NsPk] = d;
+    }
 }
 
-int  main(int argc,   char  *argv[])  {
-   if  (argc <  3)  return  0;
-  int   R  =  atoi(argv[1]);
-  int  QLG   = argc  -   2;
-  int *lpF =  (int*)malloc(QLG *  sizeof(int));
-  for(int   cKWT9=0; cKWT9<QLG;   cKWT9++)  lpF[cKWT9] =   atoi(argv[cKWT9+2]);
- N(lpF,   QLG,   R);
-   for(int  cKWT9=0; cKWT9<QLG;  cKWT9++)  printf("%d ", lpF[cKWT9]);
- printf("\n");
- free(lpF);
-   return   0;
+int main(int rMq1, char *w1On[]) {
+    if (rMq1 < 3) return 0;
+    int xI = atoi(w1On[1]);
+    int Y9 = rMq1 - 2;
+    int *Cf2O = (int*)malloc(Y9 * sizeof(int));
+    for(int Yp=0; Yp<Y9; Yp++) Cf2O[Yp] = atoi(w1On[Yp+2]);
+    tK(Cf2O, Y9, xI);
+    for(int Yp=0; Yp<Y9; Yp++) printf("%d ", Cf2O[Yp]);
+    printf("\n");
+    free(Cf2O);
+    return 0;
 }

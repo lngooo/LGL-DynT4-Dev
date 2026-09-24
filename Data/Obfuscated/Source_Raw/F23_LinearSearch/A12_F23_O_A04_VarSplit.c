@@ -5,33 +5,31 @@
  * Implementation Logic: VarSplit
  * Input Format: <target> <val1> <val2> ...
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-int  lKQj(int   fhy2[],   int  H5,   int   fN)   {
-   int   j   = 0,  nQY   =  H5 -  1;
-   while   (j   <=   nQY)  {
- int Ut   =   fhy2[j];
-  int   U7   =  fhy2[nQY];
- if (Ut ==   fN)   return j;
- if   (U7 ==  fN)   return  nQY;
-   j  += 1; nQY -= 1;
-  }
-   return  -1;
+int KPk(int sH[], int ZN, int HMq) {
+    int Dn7v = 0, kH = ZN - 1;
+    while (Dn7v <= kH) {
+        int auAl = sH[Dn7v];
+        int Ee = sH[kH];
+        if (auAl == HMq) return Dn7v;
+        if (Ee == HMq) return kH;
+        Dn7v += 1; kH -= 1;
+    }
+    return -1;
 }
 
-int main(int argc,  char *argv[])   {
-   if   (argc   < 3) return  1;
-   int fN  =   atoi(argv[1]);
-  int   Eye  =   argc -   2;
-   int  fhy2[100];
-   for  (int IX8 =   0;  IX8   <  Eye;  IX8++)   {
- fhy2[IX8]  =   atoi(argv[IX8  +  2]);
-   }
-   int  LC3 = lKQj(fhy2, Eye,   fN);
-  printf("%d\n", LC3);
- return   0;
+int main(int t, char *mS[]) {
+    if (t < 3) return 1;
+    int HMq = atoi(mS[1]);
+    int I = t - 2;
+    int sH[100];
+    for (int vgdN = 0; vgdN < I; vgdN++) {
+        sH[vgdN] = atoi(mS[vgdN + 2]);
+    }
+    int Mkew = KPk(sH, I, HMq);
+    printf("%d\n", Mkew);
+    return 0;
 }

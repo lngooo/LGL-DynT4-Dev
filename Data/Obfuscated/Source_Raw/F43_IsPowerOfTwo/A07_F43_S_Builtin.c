@@ -5,18 +5,16 @@
  * Implementation Logic: Using __builtin_popcount intrinsic to verify only one set bit.
  * Input Format: <uint>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int   qG(unsigned int  f)   {
-   return  (f > 0   && __builtin_popcount(f)  ==  1);
+int wX(unsigned int tC) {
+    return (tC > 0 && __builtin_popcount(tC) == 1);
 }
 
-int   main(int  argc,  char*   argv[]) {
-   if   (argc < 2) return   0;
- unsigned int f  =   (unsigned   int)strtoul(argv[1], NULL,   10);
- printf("%d",   qG(f));
- return   0;
+int main(int h1Y, char* hwLt[]) {
+    if (h1Y < 2) return 0;
+    unsigned int tC = (unsigned int)strtoul(hwLt[1], NULL, 10);
+    printf("%d", wX(tC));
+    return 0;
 }

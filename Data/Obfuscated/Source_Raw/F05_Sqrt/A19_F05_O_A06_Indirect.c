@@ -5,31 +5,29 @@
  * Implementation Logic: Bit-by-bit method using function pointers for core steps.
  * Input Format: <n>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef  unsigned   int (*D)(unsigned int);
-unsigned   int  OOO(unsigned  int ST) { return  ST  >> 1; }
+typedef unsigned int (*EPmW)(unsigned int);
+unsigned int usP(unsigned int X) { return X >> 1; }
 
-int  K(int  PYNY)  {
-   if (PYNY <  0)  return   -1;
-  unsigned  int   Q1   = 0, GT   =  1 << 30;
-  D  LK  =  OOO;
-   while   (GT  > (unsigned  int)PYNY) GT >>=   2;
-   while (GT) {
-  if  ((unsigned  int)PYNY >=  Q1 +  GT) {
-   PYNY   -= (Q1   + GT);
-   Q1   =   LK(Q1)   +  GT;
-  }  else   Q1   =   LK(Q1);
-  GT   >>=   2;
-  }
-  return (int)Q1;
+int P(int IV) {
+    if (IV < 0) return -1;
+    unsigned int l = 0, l76c = 1 << 30;
+    EPmW YFl7 = usP;
+    while (l76c > (unsigned int)IV) l76c >>= 2;
+    while (l76c) {
+        if ((unsigned int)IV >= l + l76c) {
+            IV -= (l + l76c);
+            l = YFl7(l) + l76c;
+        } else l = YFl7(l);
+        l76c >>= 2;
+    }
+    return (int)l;
 }
 
-int  main(int   argc,   char *argv[])   {
-  if  (argc   < 2)   return   1;
-   printf("%d\n",   K(atoi(argv[1])));
-  return   0;
+int main(int cat, char *DPI[]) {
+    if (cat < 2) return 1;
+    printf("%d\n", P(atoi(DPI[1])));
+    return 0;
 }

@@ -1,5 +1,5 @@
 @.str = constant [4 x i8] c"%d\0A\00"
-define dso_local i32 @CkP(i8* %0, i8* %1) {
+define dso_local i32 @s(i8* %0, i8* %1) {
   %3 = alloca i8*
   %4 = alloca i8*
   store i8* %0, i8** %3
@@ -13,7 +13,7 @@ define dso_local i32 @CkP(i8* %0, i8* %1) {
   %11 = sub nsw i32 %7, %10
   ret i32 %11
 }
-define dso_local i32 @Au1(i8* %0, i8* %1) {
+define dso_local i32 @pYy(i8* %0, i8* %1) {
   %3 = alloca i32
   %4 = alloca i8*
   %5 = alloca i8*
@@ -42,11 +42,11 @@ define dso_local i32 @Au1(i8* %0, i8* %1) {
   %22 = load i8*, i8** %4
   %23 = load i32, i32* %6
   %24 = sext i32 %23 to i64
-  call void @qsort(i8* %22, i64 %24, i64 1, i32 (i8*, i8*)* @CkP)
+  call void @qsort(i8* %22, i64 %24, i64 1, i32 (i8*, i8*)* @s)
   %25 = load i8*, i8** %5
   %26 = load i32, i32* %7
   %27 = sext i32 %26 to i64
-  call void @qsort(i8* %25, i64 %27, i64 1, i32 (i8*, i8*)* @CkP)
+  call void @qsort(i8* %25, i64 %27, i64 1, i32 (i8*, i8*)* @s)
   %28 = load i8*, i8** %4
   %29 = load i8*, i8** %5
   %30 = load i32, i32* %6
@@ -84,7 +84,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   %13 = load i8**, i8*** %5
   %14 = getelementptr inbounds i8*, i8** %13, i64 2
   %15 = load i8*, i8** %14
-  %16 = call i32 @Au1(i8* %12, i8* %15)
+  %16 = call i32 @pYy(i8* %12, i8* %15)
   %17 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str, i64 0, i64 0), i32 %16)
   store i32 0, i32* %3
   br label %18

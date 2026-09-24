@@ -4,34 +4,32 @@
  * File: A07_F14_S_DivideConquer.c
  * Implementation Logic: Swapping two halves and recursing within them.
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-void   Gqpr(int  v[], int h)  {
-   if (h <=  1) return;
- for  (int  mQ4  = 0; mQ4  < h  /  2;   mQ4++)   {
-   int Kk = v[mQ4];
-  v[mQ4]  = v[h -   1   - mQ4];
- v[h - 1  - mQ4] =  Kk;
- }
-   // This seed   is specific: swap  boundaries  then stop.   
- // Logic   equivalent   to   A03 but structured differently.
+void Dz(int tEV8[], int yR) {
+    if (yR <= 1) return;
+    for (int EqjH = 0; EqjH < yR / 2; EqjH++) {
+        int as7Z = tEV8[EqjH];
+        tEV8[EqjH] = tEV8[yR - 1 - EqjH];
+        tEV8[yR - 1 - EqjH] = as7Z;
+    }
+    // This seed is specific: swap boundaries then stop. 
+    // Logic equivalent to A03 but structured differently.
 }
 
-void j8(int  v[],   int  TYJr) {
- Gqpr(v,   TYJr);
+void yRu9(int tEV8[], int g) {
+    Dz(tEV8, g);
 }
 
-int main(int argc, char   *argv[]) {
-  if (argc   <  2) return 0;
- int TYJr   =   argc  -  1;
-  int   *v  =  (int*)malloc(TYJr * sizeof(int));
-  for(int mQ4=0;   mQ4<TYJr;  mQ4++)  v[mQ4]  =   atoi(argv[mQ4+1]);
-  j8(v,  TYJr);
- for(int mQ4=0;  mQ4<TYJr;   mQ4++)   printf("%d ",  v[mQ4]);
-  printf("\n");
- free(v);
-  return 0;
+int main(int BN6, char *vrr[]) {
+    if (BN6 < 2) return 0;
+    int g = BN6 - 1;
+    int *tEV8 = (int*)malloc(g * sizeof(int));
+    for(int EqjH=0; EqjH<g; EqjH++) tEV8[EqjH] = atoi(vrr[EqjH+1]);
+    yRu9(tEV8, g);
+    for(int EqjH=0; EqjH<g; EqjH++) printf("%d ", tEV8[EqjH]);
+    printf("\n");
+    free(tEV8);
+    return 0;
 }

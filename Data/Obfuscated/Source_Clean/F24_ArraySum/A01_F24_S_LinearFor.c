@@ -1,5 +1,5 @@
-int   m(int   xROy[],  int   jM)  {
-   int   VFcR6 =   0;
- for  (int   bE  = 0;  bE  <   jM;  bE++)  VFcR6  +=   xROy[bE];
-   return  VFcR6;
+int SgO(int akA[], int vvP5) {
+    int l = 0;
+    for (int tkD = 0; tkD < vvP5; tkD++) l += akA[tkD];
+    return l;
 }

@@ -1,4 +1,4 @@
-define dso_local i32 @nsF6(i8* %0, i8* %1) {
+define dso_local i32 @ujaV(i8* %0, i8* %1) {
   %3 = alloca i8*
   %4 = alloca i8*
   store i8* %0, i8** %3
@@ -10,7 +10,7 @@ define dso_local i32 @nsF6(i8* %0, i8* %1) {
   %11 = sub nsw i32 %7, %10
   ret i32 %11
 }
-define dso_local i32 @NSms6(i32* %0, i32 %1) {
+define dso_local i32 @ZK(i32* %0, i32 %1) {
   %3 = alloca i32
   %4 = alloca i32*
   %5 = alloca i32
@@ -61,7 +61,7 @@ define dso_local i32 @NSms6(i32* %0, i32 %1) {
   %40 = load i32*, i32** %6
   %42 = load i32, i32* %5
   %43 = sext i32 %42 to i64
-  call void @qsort(i8* %41, i64 %43, i64 4, i32 (i8*, i8*)* @nsF6)
+  call void @qsort(i8* %41, i64 %43, i64 4, i32 (i8*, i8*)* @ujaV)
   %45 = load i32*, i32** %6
   %46 = load i32, i32* %5
   %47 = sub nsw i32 %46, 1

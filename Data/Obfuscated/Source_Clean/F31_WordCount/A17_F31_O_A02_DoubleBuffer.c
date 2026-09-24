@@ -1,10 +1,10 @@
-int PcQ(char*   J) {
- char   V[512],   SNty[512];
-  memset(V, 0,   512);
-   strncpy(V, J,   511);
-  strcpy(SNty,   V);
-  int t0  =   0;
- char*  Ldv1 =   strtok(SNty,   " ");
- while(Ldv1)  { t0++; Ldv1  = strtok(NULL,   " "); }
-  return  t0;
+int TE(char* Ah7P) {
+    char Tn5[512], Pcxk[512];
+    memset(Tn5, 0, 512);
+    strncpy(Tn5, Ah7P, 511);
+    strcpy(Pcxk, Tn5);
+    int mwed = 0;
+    char* Z = strtok(Pcxk, " ");
+    while(Z) { mwed++; Z = strtok(NULL, " "); }
+    return mwed;
 }

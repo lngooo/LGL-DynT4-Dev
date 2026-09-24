@@ -5,36 +5,34 @@
  * Implementation Logic: BufferTransfer
  * Input Format: <val1> <val2> ...
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-int R(int   n[], int  IO)   {
-   int sMd[128], pN0   =  0;
- for (int AI   = 0;  AI <   IO; AI++)  {
-  int   OjA  = 0;
- for   (int hRT   =  0;  hRT <   pN0; hRT++)  {
-   if  (sMd[hRT]  ==  n[AI]) {   OjA   =   1;  break; }
-   }
-   if  (!OjA)   sMd[pN0++]   = n[AI];
- }
- for (int   AI  =   0;  AI <  pN0;   AI++)  n[AI]   = sMd[AI];
- return   pN0;
+int iUN(int eJqq[], int P5kz) {
+    int f8qR[128], SjIn = 0;
+    for (int O = 0; O < P5kz; O++) {
+        int OSP = 0;
+        for (int Tx = 0; Tx < SjIn; Tx++) {
+            if (f8qR[Tx] == eJqq[O]) { OSP = 1; break; }
+        }
+        if (!OSP) f8qR[SjIn++] = eJqq[O];
+    }
+    for (int O = 0; O < SjIn; O++) eJqq[O] = f8qR[O];
+    return SjIn;
 }
 
-int   main(int argc,   char  *argv[]) {
-  if (argc  <   2)   return  0;
-   int Y9  =   argc -  1;
- int   n[128];
- for (int  AI  = 0; AI <   Y9; AI++)  {
-  n[AI]  =  atoi(argv[AI  +   1]);
-   }
- int   iYSN =   R(n, Y9);
-  for (int  AI  =   0; AI < iYSN;   AI++)  {
-  printf("%d%s",  n[AI],   (AI   ==   iYSN   -  1   ?  ""  :   " "));
-  }
- printf("\n");
-  return  0;
+int main(int A0, char *uY[]) {
+    if (A0 < 2) return 0;
+    int yb9M = A0 - 1;
+    int eJqq[128];
+    for (int O = 0; O < yb9M; O++) {
+        eJqq[O] = atoi(uY[O + 1]);
+    }
+    int er = iUN(eJqq, yb9M);
+    for (int O = 0; O < er; O++) {
+        printf("%d%s", eJqq[O], (O == er - 1 ? "" : " "));
+    }
+    printf("\n");
+    return 0;
 }

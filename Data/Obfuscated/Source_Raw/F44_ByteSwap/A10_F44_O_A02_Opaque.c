@@ -5,30 +5,28 @@
  * Implementation Logic: Injected opaque predicates (guaranteed true) to obscure the union-based logic of A02.
  * Input Format: <uint32_t>
  */
-
-
 #include <stdio.h>
 #include <stdint.h>
 #include <stdlib.h>
 
-uint32_t bKM(uint32_t qI)  {
- int   Hi =   7;
-   uint32_t   OG;
-  if ((Hi  *   Hi)  >  40)  {
-   union  {   uint32_t   x; uint8_t  LQ[4]; }  M;
-   M.x   =  qI;
-  uint8_t  Siz  =  M.LQ[0];  M.LQ[0] = M.LQ[3]; M.LQ[3]   =   Siz;
-  Siz   =   M.LQ[1];  M.LQ[1]  =  M.LQ[2];  M.LQ[2]  =  Siz;
-  OG = M.x;
- } else  {
-   OG =  qI;   //   Dead code
- }
-   return   OG;
+uint32_t G(uint32_t nJEC) {
+    int GoU = 7;
+    uint32_t nz;
+    if ((GoU * GoU) > 40) {
+        union { uint32_t WEC; uint8_t q[4]; } o;
+        o.WEC = nJEC;
+        uint8_t M = o.q[0]; o.q[0] = o.q[3]; o.q[3] = M;
+        M = o.q[1]; o.q[1] = o.q[2]; o.q[2] = M;
+        nz = o.WEC;
+    } else {
+        nz = nJEC; // Dead code
+    }
+    return nz;
 }
 
-int  main(int  argc, char*   argv[])  {
-   if  (argc <  2) return  0;
- uint32_t s   =  (uint32_t)strtoul(argv[1], NULL,  10);
- printf("%u\n", bKM(s));
- return   0;
+int main(int N, char* w[]) {
+    if (N < 2) return 0;
+    uint32_t G0 = (uint32_t)strtoul(w[1], NULL, 10);
+    printf("%u\n", G(G0));
+    return 0;
 }

@@ -1,8 +1,8 @@
-int  axmM(char  *XdX0) {
-  int o =  0;  while  (XdX0[o]) o++;
-   int   seUB =   -1, psW   =   o;
-  while   (++seUB <  --psW) {
-  if  (XdX0[seUB]   !=   XdX0[psW])   return  0;
- }
-   return 1;
+int C5(char *F) {
+    int vf4 = 0; while (F[vf4]) vf4++;
+    int eli = -1, Rz6 = vf4;
+    while (++eli < --Rz6) {
+        if (F[eli] != F[Rz6]) return 0;
+    }
+    return 1;
 }

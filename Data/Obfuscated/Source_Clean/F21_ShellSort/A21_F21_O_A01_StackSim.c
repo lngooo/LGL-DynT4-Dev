@@ -1,3 +1,3 @@
-void  x(int *xg, int   SWI)   {
- int   BSp6[32],DO=-1,HoqF2=SWI/2;while(HoqF2>0){BSp6[++DO]=HoqF2;HoqF2/=2;}while(DO>=0){int  Ws=BSp6[DO--];for(int xYU=Ws;xYU<SWI;xYU++){int  ulA=xg[xYU],eFsX=xYU;while(eFsX>=Ws&&xg[eFsX-Ws]>ulA){xg[eFsX]=xg[eFsX-Ws];eFsX-=Ws;}xg[eFsX]=ulA;}}
+void uWoX(int *g5, int U5) {
+    int WA7e[32],N=-1,hc2=U5/2;while(hc2>0){WA7e[++N]=hc2;hc2/=2;}while(N>=0){int C=WA7e[N--];for(int MO1=C;MO1<U5;MO1++){int l=g5[MO1],gSC=MO1;while(gSC>=C&&g5[gSC-C]>l){g5[gSC]=g5[gSC-C];gSC-=C;}g5[gSC]=l;}}
 }

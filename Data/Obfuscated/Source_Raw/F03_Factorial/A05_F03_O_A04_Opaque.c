@@ -5,22 +5,20 @@
  * Implementation Logic: Recursive with opaque predicates (n*n >= 0) to confuse analysis.
  * Input Format: <n>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-long long HKa(int   SLfB7)  {
- if (SLfB7 <=   0)  {
-   if  ((SLfB7  *   SLfB7 +   7) >   0) return   1;
-  else return   0;
-   }
- return  (long   long)SLfB7 * HKa(SLfB7  -  1);
+long long uhX(int G0aQ) {
+    if (G0aQ <= 0) {
+        if ((G0aQ * G0aQ + 7) > 0) return 1;
+        else return 0;
+    }
+    return (long long)G0aQ * uhX(G0aQ - 1);
 }
 
-int  main(int  argc,   char   *argv[])  {
-  if  (argc  < 2) return 1;
- int   SLfB7 = atoi(argv[1]);
- printf("%lld\n", SLfB7  <  0  ?  0 :   HKa(SLfB7));
-  return 0;
+int main(int AdmH, char *NWF[]) {
+    if (AdmH < 2) return 1;
+    int G0aQ = atoi(NWF[1]);
+    printf("%lld\n", G0aQ < 0 ? 0 : uhX(G0aQ));
+    return 0;
 }

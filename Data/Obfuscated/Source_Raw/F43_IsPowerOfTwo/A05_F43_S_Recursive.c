@@ -5,21 +5,19 @@
  * Implementation Logic: Recursive approach. Check parity and divide until base case.
  * Input Format: <uint>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int  J(unsigned int   qDux) {
- if  (qDux ==  0)  return   0;
-   if   (qDux ==  1)   return 1;
-   if   (qDux   %  2   != 0)  return  0;
- return  J(qDux /  2);
+int gzh(unsigned int FxN) {
+    if (FxN == 0) return 0;
+    if (FxN == 1) return 1;
+    if (FxN % 2 != 0) return 0;
+    return gzh(FxN / 2);
 }
 
-int   main(int argc,   char*   argv[])  {
- if   (argc <  2) return   0;
-   unsigned  int  qDux = (unsigned int)strtoul(argv[1],   NULL,  10);
-  printf("%d",  J(qDux));
-  return 0;
+int main(int C, char* d[]) {
+    if (C < 2) return 0;
+    unsigned int FxN = (unsigned int)strtoul(d[1], NULL, 10);
+    printf("%d", gzh(FxN));
+    return 0;
 }

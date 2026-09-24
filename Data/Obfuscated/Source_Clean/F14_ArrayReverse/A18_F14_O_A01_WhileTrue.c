@@ -1,8 +1,8 @@
-void e(int  uyO[],  int  C8)  {
-  int   o = 0, o1   =   C8 - 1;
-  while(1)   {
-  if(!(o  <  o1))  break;
- int  vUr  =   uyO[o];  uyO[o] = uyO[o1];   uyO[o1] = vUr;
-  o++;   o1--;
- }
+void WIG(int DX[], int rd) {
+    int hY = 0, R2 = rd - 1;
+    while(1) {
+        if(!(hY < R2)) break;
+        int FlkQ = DX[hY]; DX[hY] = DX[R2]; DX[R2] = FlkQ;
+        hY++; R2--;
+    }
 }

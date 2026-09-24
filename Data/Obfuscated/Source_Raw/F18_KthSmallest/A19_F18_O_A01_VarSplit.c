@@ -4,35 +4,33 @@
  * File: A19_F18_O_A01_VarSplit.c
  * Implementation Logic: VarSplit
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-int  v3(int  v[],   int kMzt, int   iFq4,  int  R)  {
-  int Si3  =   kMzt,   qB   =  iFq4;
-  if (Si3   > qB)   return -1;
- int  SZk  =   v[qB],   Jl  =  Si3;
- for (int eCJh   =  Si3;   eCJh <   qB; eCJh++)   {
-   if   (v[eCJh]  <= SZk) {  int  J =  v[Jl];   v[Jl]   = v[eCJh];   v[eCJh]   = J;   Jl++; }
- }
-   int  J   =  v[Jl]; v[Jl]   =  v[qB];   v[qB]  =  J;
-  if (Jl   ==   R  - 1)   return v[Jl];
- return  (Jl  >   R  -   1) ?  v3(v, Si3, Jl   -  1,  R) :  v3(v,   Jl  +   1,   qB, R);
+int j0T(int U7[], int SV, int X, int FU) {
+    int t0Q6 = SV, bJ = X;
+    if (t0Q6 > bJ) return -1;
+    int vBRE = U7[bJ], Wzz = t0Q6;
+    for (int H = t0Q6; H < bJ; H++) {
+        if (U7[H] <= vBRE) { int sS7 = U7[Wzz]; U7[Wzz] = U7[H]; U7[H] = sS7; Wzz++; }
+    }
+    int sS7 = U7[Wzz]; U7[Wzz] = U7[bJ]; U7[bJ] = sS7;
+    if (Wzz == FU - 1) return U7[Wzz];
+    return (Wzz > FU - 1) ? j0T(U7, t0Q6, Wzz - 1, FU) : j0T(U7, Wzz + 1, bJ, FU);
 }
 
-int   main(int  argc, char   *argv[])   {
-   if (argc   <   3) return 0;
-   int R  = atoi(argv[1]);
-  int   AZY  =  argc  -  2;
-  int   *v = (int  *)malloc(AZY   * sizeof(int));
-  for  (int  kHI1  =  0; kHI1   < AZY; kHI1++)   v[kHI1]  = atoi(argv[kHI1   +   2]);
+int main(int S2, char *giuW[]) {
+    if (S2 < 3) return 0;
+    int FU = atoi(giuW[1]);
+    int T = S2 - 2;
+    int *U7 = (int *)malloc(T * sizeof(int));
+    for (int DPk = 0; DPk < T; DPk++) U7[DPk] = atoi(giuW[DPk + 2]);
 
-  //   假设  K   是从   1   开始的 (1st smallest)
-   int  I1   =  v3(v,   0,  AZY -   1,   R);
+    // 假设 K 是从 1 开始的 (1st smallest)
+    int CS = j0T(U7, 0, T - 1, FU);
 
-  printf("%d\n",   I1);
-  free(v);
-  return  0;
+    printf("%d\n", CS);
+    free(U7);
+    return 0;
 }

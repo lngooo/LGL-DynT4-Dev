@@ -1,9 +1,9 @@
-void   t1(int Aw[],   int YcVN9)  {
-   for (int a   = 0;   a  <   YcVN9;   a++)  {
- int  DDsS  =   a;
-   for   (int  lJs  =   a +   1;  lJs <   YcVN9;   lJs++) {
- for(int   H=0; H<1; H++)   if (Aw[lJs] < Aw[DDsS])  DDsS  =   lJs;
- }
- int   oV7   = Aw[a];  Aw[a]  =  Aw[DDsS];  Aw[DDsS]   =   oV7;
-   }
+void S(int PDAA[], int w1I) {
+    for (int HWvh = 0; HWvh < w1I; HWvh++) {
+        int DB = HWvh;
+        for (int lJM = HWvh + 1; lJM < w1I; lJM++) {
+            for(int IB=0; IB<1; IB++) if (PDAA[lJM] < PDAA[DB]) DB = lJM;
+        }
+        int s2QS = PDAA[HWvh]; PDAA[HWvh] = PDAA[DB]; PDAA[DB] = s2QS;
+    }
 }

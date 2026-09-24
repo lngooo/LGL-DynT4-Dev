@@ -1,7 +1,7 @@
-int  jeO(int   oja[],  int   lHF,  int   RbPm)   {
-  static int   UZH  =   0;
-   if  (lHF  <= 0)  { UZH =   0; return  -1;   }
- if   (oja[0]  ==  RbPm)   {   int   nnDt  =  UZH; UZH =   0; return   nnDt; }
-  UZH++;
-  return  jeO(oja +   1,   lHF   -   1,   RbPm);
+int K(int fh6f[], int Uf, int uL) {
+    static int X = 0;
+    if (Uf <= 0) { X = 0; return -1; }
+    if (fh6f[0] == uL) { int Ya = X; X = 0; return Ya; }
+    X++;
+    return K(fh6f + 1, Uf - 1, uL);
 }

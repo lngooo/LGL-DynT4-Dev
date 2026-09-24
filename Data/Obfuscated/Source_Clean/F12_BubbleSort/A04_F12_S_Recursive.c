@@ -1,11 +1,11 @@
-void  Rf(int nm[],  int Kjgk)   {
- if (Kjgk   ==   1) return;
-   for   (int   Ei9 = 0; Ei9 < Kjgk - 1; Ei9++) {
- if (nm[Ei9] > nm[Ei9   +   1])  {
-  int  h8  = nm[Ei9];
- nm[Ei9] =   nm[Ei9   +   1];
-   nm[Ei9   +   1]  =   h8;
-  }
- }
- Rf(nm,   Kjgk -  1);
+void YFt(int J2K[], int z) {
+    if (z == 1) return;
+    for (int S = 0; S < z - 1; S++) {
+        if (J2K[S] > J2K[S + 1]) {
+            int dn = J2K[S];
+            J2K[S] = J2K[S + 1];
+            J2K[S + 1] = dn;
+        }
+    }
+    YFt(J2K, z - 1);
 }

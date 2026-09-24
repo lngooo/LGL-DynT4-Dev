@@ -1,20 +1,20 @@
-long long p(long  long   G,  long   long   exp,  long  long   x)   {
- long long  TGrW  =   1;
-  G  %=  x;
- while   (exp   >   0)   {
- if (exp %   2   == 1)  TGrW  = (TGrW *   G) % x;
-  G =   (G  *   G)   %  x;
-   exp   /=  2;
-   }
-   return  TGrW;
+long long e(long long csAl, long long exp, long long XP) {
+    long long x5yC = 1;
+    csAl %= XP;
+    while (exp > 0) {
+        if (exp % 2 == 1) x5yC = (x5yC * csAl) % XP;
+        csAl = (csAl * csAl) % XP;
+        exp /= 2;
+    }
+    return x5yC;
 }
 
-int   AEfa(int  Vg)  {
-  if (Vg <=  1) return  0;
- if (Vg   <= 3)   return 1;
+int yfR9(int P3) {
+    if (P3 <= 1) return 0;
+    if (P3 <= 3) return 1;
 
- if  (p(2, Vg -  1, Vg) !=  1) return   0;
+    if (e(2, P3 - 1, P3) != 1) return 0;
 
-  for (int vLx0 = 2;  vLx0 * vLx0  <=   Vg; vLx0++)  if   (Vg % vLx0 == 0) return  0;
- return 1;
+    for (int hlI = 2; hlI * hlI <= P3; hlI++) if (P3 % hlI == 0) return 0;
+    return 1;
 }

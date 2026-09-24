@@ -4,37 +4,35 @@
  * File: A18_F16_O_A03_StackSim.c
  * Implementation Logic: StackSim
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-void Sm(int   m[],   int   eNhl, int  q) {
-  if   (eNhl  >=  q) return;
-   int b   =  eNhl +   (q  - eNhl)   /   2;
-  Sm(m, eNhl, b);
-  Sm(m,   b   +   1,   q);
- int t7[256],  Rku7   =  eNhl, iNdq =   b   +   1, ItKE =  eNhl;
-  while  (Rku7  <=   b  ||  iNdq <= q) {
- if   (Rku7 <=  b   &&  (iNdq   >  q  || m[Rku7] <=   m[iNdq]))   t7[ItKE++]   = m[Rku7++];
-  else t7[ItKE++] =   m[iNdq++];
-  }
-   for (int Xrr   = eNhl; Xrr   <=  q;  Xrr++) m[Xrr]   =   t7[Xrr];
+void A18R(int YEZ[], int Nn, int SVf) {
+    if (Nn >= SVf) return;
+    int ilmk = Nn + (SVf - Nn) / 2;
+    A18R(YEZ, Nn, ilmk);
+    A18R(YEZ, ilmk + 1, SVf);
+    int gYA8[256], tpnJ = Nn, b = ilmk + 1, qwR = Nn;
+    while (tpnJ <= ilmk || b <= SVf) {
+        if (tpnJ <= ilmk && (b > SVf || YEZ[tpnJ] <= YEZ[b])) gYA8[qwR++] = YEZ[tpnJ++];
+        else gYA8[qwR++] = YEZ[b++];
+    }
+    for (int l0 = Nn; l0 <= SVf; l0++) YEZ[l0] = gYA8[l0];
 }
 
-int main(int   argc, char  *argv[]) {
-  if   (argc <   2)  return 0;
- int   brU6 =   argc -  1;
-   int   *m =  (int  *)malloc(brU6   *  sizeof(int));
-   for   (int Rku7   = 0;  Rku7  <   brU6;  Rku7++) m[Rku7] =   atoi(argv[Rku7 + 1]);
+int main(int Z, char *v[]) {
+    if (Z < 2) return 0;
+    int hNoh = Z - 1;
+    int *YEZ = (int *)malloc(hNoh * sizeof(int));
+    for (int tpnJ = 0; tpnJ < hNoh; tpnJ++) YEZ[tpnJ] = atoi(v[tpnJ + 1]);
 
-  Sm(m,  0,  brU6 - 1);
+    A18R(YEZ, 0, hNoh - 1);
 
-   for   (int Rku7 = 0;  Rku7   <   brU6; Rku7++)  {
-   printf("%d%s",   m[Rku7],  (Rku7  == brU6 - 1   ?   ""   :  " "));
-   }
- printf("\n");
-  free(m);
-  return   0;
+    for (int tpnJ = 0; tpnJ < hNoh; tpnJ++) {
+        printf("%d%s", YEZ[tpnJ], (tpnJ == hNoh - 1 ? "" : " "));
+    }
+    printf("\n");
+    free(YEZ);
+    return 0;
 }

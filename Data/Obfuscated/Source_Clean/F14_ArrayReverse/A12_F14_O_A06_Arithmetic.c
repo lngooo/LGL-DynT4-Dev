@@ -1,8 +1,8 @@
-void a(int   vFIZ[], int  z)   {
-   int   *y8  = vFIZ;
- for(int  g = 0;   g   <  (z  >>   1); g++) {
-  int *hh2   = y8 +  g;
-   int *oB  = y8  +  (z - 1   -   g);
-   *hh2 ^= *oB;  *oB  ^= *hh2;   *hh2   ^=   *oB;
-  }
+void ay(int hKI7[], int vRt) {
+    int *dO9P = hKI7;
+    for(int x = 0; x < (vRt >> 1); x++) {
+        int *f1D = dO9P + x;
+        int *Pml = dO9P + (vRt - 1 - x);
+        *f1D ^= *Pml; *Pml ^= *f1D; *f1D ^= *Pml;
+    }
 }

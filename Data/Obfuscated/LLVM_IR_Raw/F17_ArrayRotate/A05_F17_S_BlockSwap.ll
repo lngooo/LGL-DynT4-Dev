@@ -1,6 +1,6 @@
 @.str = constant [4 x i8] c"%d \00"
 @.str.1 = constant [2 x i8] c"\0A\00"
-define dso_local void @KN(i32* %0, i32 %1, i32 %2, i32 %3) {
+define dso_local void @Uu(i32* %0, i32 %1, i32 %2, i32 %3) {
   %5 = alloca i32*
   %6 = alloca i32
   %7 = alloca i32
@@ -60,7 +60,7 @@ define dso_local void @KN(i32* %0, i32 %1, i32 %2, i32 %3) {
 51:
   ret void
 }
-define dso_local void @u2(i32* %0, i32 %1, i32 %2) {
+define dso_local void @m(i32* %0, i32 %1, i32 %2) {
   %4 = alloca i32*
   %5 = alloca i32
   %6 = alloca i32
@@ -90,7 +90,7 @@ define dso_local void @u2(i32* %0, i32 %1, i32 %2) {
   %23 = load i32, i32* %5
   %24 = sub nsw i32 %22, %23
   %25 = load i32, i32* %5
-  call void @KN(i32* %21, i32 0, i32 %24, i32 %25)
+  call void @Uu(i32* %21, i32 0, i32 %24, i32 %25)
   br label %62
 26:
   %27 = load i32, i32* %5
@@ -105,13 +105,13 @@ define dso_local void @u2(i32* %0, i32 %1, i32 %2) {
   %35 = load i32, i32* %5
   %36 = sub nsw i32 %34, %35
   %37 = load i32, i32* %5
-  call void @KN(i32* %33, i32 0, i32 %36, i32 %37)
+  call void @Uu(i32* %33, i32 0, i32 %36, i32 %37)
   %38 = load i32*, i32** %4
   %39 = load i32, i32* %5
   %40 = load i32, i32* %6
   %41 = load i32, i32* %5
   %42 = sub nsw i32 %40, %41
-  call void @u2(i32* %38, i32 %39, i32 %42)
+  call void @m(i32* %38, i32 %39, i32 %42)
   br label %62
 43:
   %44 = load i32*, i32** %4
@@ -119,7 +119,7 @@ define dso_local void @u2(i32* %0, i32 %1, i32 %2) {
   %46 = load i32, i32* %6
   %47 = load i32, i32* %5
   %48 = sub nsw i32 %46, %47
-  call void @KN(i32* %44, i32 0, i32 %45, i32 %48)
+  call void @Uu(i32* %44, i32 0, i32 %45, i32 %48)
   %49 = load i32*, i32** %4
   %50 = load i32, i32* %6
   %51 = sext i32 %50 to i64
@@ -133,12 +133,12 @@ define dso_local void @u2(i32* %0, i32 %1, i32 %2) {
   %59 = load i32, i32* %6
   %60 = sub nsw i32 %58, %59
   %61 = load i32, i32* %5
-  call void @u2(i32* %56, i32 %60, i32 %61)
+  call void @m(i32* %56, i32 %60, i32 %61)
   br label %62
 62:
   ret void
 }
-define dso_local void @i6(i32* %0, i32 %1, i32 %2) {
+define dso_local void @h(i32* %0, i32 %1, i32 %2) {
   %4 = alloca i32*
   %5 = alloca i32
   %6 = alloca i32
@@ -156,7 +156,7 @@ define dso_local void @i6(i32* %0, i32 %1, i32 %2) {
   %13 = load i32, i32* %5
   %14 = srem i32 %12, %13
   %15 = load i32, i32* %5
-  call void @u2(i32* %11, i32 %14, i32 %15)
+  call void @m(i32* %11, i32 %14, i32 %15)
   br label %16
 16:
   ret void
@@ -225,7 +225,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   %52 = load i32*, i32** %8
   %53 = load i32, i32* %7
   %54 = load i32, i32* %6
-  call void @i6(i32* %52, i32 %53, i32 %54)
+  call void @h(i32* %52, i32 %53, i32 %54)
   store i32 0, i32* %10
   br label %56
 56:

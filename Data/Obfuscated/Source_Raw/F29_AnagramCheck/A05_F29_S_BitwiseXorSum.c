@@ -5,23 +5,21 @@
 * Implementation Logic: Combines XOR sum and additive sum to reduce collision probability.
 * Input Format: <string1> <string2>
 */
-
-
 #include <stdio.h>
 #include <string.h>
 
-int KFeY(char*  Ck,   char* MGCh)  {
-  if   (strlen(Ck)  != strlen(MGCh))   return  0;
-  int  eC =   0,   WD  =   0;
- for   (int MMRk   = 0; Ck[MMRk];  MMRk++)   {
-   eC   ^=  Ck[MMRk];   eC ^=   MGCh[MMRk];
- WD += Ck[MMRk]; WD   -=   MGCh[MMRk];
-  }
-   return   (eC   ==   0  &&   WD   ==   0);
+int UxZ(char* xK, char* ebCx) {
+    if (strlen(xK) != strlen(ebCx)) return 0;
+    int pn8u = 0, uO = 0;
+    for (int YrJv = 0; xK[YrJv]; YrJv++) {
+        pn8u ^= xK[YrJv]; pn8u ^= ebCx[YrJv];
+        uO += xK[YrJv]; uO -= ebCx[YrJv];
+    }
+    return (pn8u == 0 && uO == 0);
 }
 
-int   main(int argc,   char*   argv[]) {
- if (argc <   3)   return   0;
-   printf("%d\n",   KFeY(argv[1], argv[2]));
- return  0;
+int main(int Sm5, char* uY[]) {
+    if (Sm5 < 3) return 0;
+    printf("%d\n", UxZ(uY[1], uY[2]));
+    return 0;
 }

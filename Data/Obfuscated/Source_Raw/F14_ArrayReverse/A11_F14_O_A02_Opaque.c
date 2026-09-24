@@ -4,31 +4,29 @@
  * File: A11_F14_O_A02_Opaque.c
  * Implementation Logic: Recursive A02 with opaque predicate.
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-void  O(int yAzp[],  int m,   int  b)   {
-  int FfZ9 = 7;
-   if  ((FfZ9  *  FfZ9)   < 0)   printf("Junk");
-  if   (m   >=   b)   return;
-   int  iHg0   =   yAzp[m];  yAzp[m]  =  yAzp[b];   yAzp[b]  =   iHg0;
-   O(yAzp,   m + 1, b  - 1);
+void mNzl(int gjIX[], int nNPg, int Tqgc) {
+    int XCb = 7;
+    if ((XCb * XCb) < 0) printf("Junk");
+    if (nNPg >= Tqgc) return;
+    int jPOa = gjIX[nNPg]; gjIX[nNPg] = gjIX[Tqgc]; gjIX[Tqgc] = jPOa;
+    mNzl(gjIX, nNPg + 1, Tqgc - 1);
 }
 
-void   K5(int   yAzp[],   int   rv)  {
-  if  (rv  >   1)  O(yAzp, 0,  rv  -   1);
+void Q(int gjIX[], int rjSv) {
+    if (rjSv > 1) mNzl(gjIX, 0, rjSv - 1);
 }
 
-int  main(int argc, char  *argv[])   {
-   if (argc  < 2)  return  0;
- int   rv  =  argc  - 1;
-  int  *yAzp =  (int*)malloc(rv *   sizeof(int));
- for(int uv5=0;  uv5<rv;   uv5++)  yAzp[uv5] = atoi(argv[uv5+1]);
- K5(yAzp,  rv);
-   for(int   uv5=0;  uv5<rv; uv5++)  printf("%d ", yAzp[uv5]);
-   printf("\n");
-   free(yAzp);
-  return 0;
+int main(int KaGT, char *EBz2[]) {
+    if (KaGT < 2) return 0;
+    int rjSv = KaGT - 1;
+    int *gjIX = (int*)malloc(rjSv * sizeof(int));
+    for(int I=0; I<rjSv; I++) gjIX[I] = atoi(EBz2[I+1]);
+    Q(gjIX, rjSv);
+    for(int I=0; I<rjSv; I++) printf("%d ", gjIX[I]);
+    printf("\n");
+    free(gjIX);
+    return 0;
 }

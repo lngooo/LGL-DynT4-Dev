@@ -5,29 +5,27 @@
  * Implementation Logic: DoubleNegation
  * Input Format: <str1> <str2> ...
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
 
-void g(char  **AdXy,   int  IBSi,   char *D)   {
-   int   Xhqp  = 0;
-  while   (!!AdXy[0][Xhqp])   {
-  int F6  =   1;
- for  (int Gb   = 1; Gb  < IBSi;  Gb++)   if (AdXy[Gb][Xhqp]  !=  AdXy[0][Xhqp]) F6 =  0;
-   if   (!!F6)  { D[Xhqp] =   AdXy[0][Xhqp]; Xhqp++;  } else break;
- }
- D[Xhqp]   =   '\0';
+void GK9(char **X, int Ug, char *pJS) {
+    int rv = 0;
+    while (!!X[0][rv]) {
+        int DN = 1;
+        for (int R = 1; R < Ug; R++) if (X[R][rv] != X[0][rv]) DN = 0;
+        if (!!DN) { pJS[rv] = X[0][rv]; rv++; } else break;
+    }
+    pJS[rv] = '\0';
 }
 
-int main(int  argc, char   *argv[])  {
-  if  (argc <  2)   return  0;
-   int  vtu = argc - 1;
- char  **AdXy   =  &argv[1];
-   char  v[128]  = {0};
-  g(AdXy,  vtu,  v);
- printf("%s\n", v);
-  return 0;
+int main(int csR, char *s[]) {
+    if (csR < 2) return 0;
+    int n6 = csR - 1;
+    char **X = &s[1];
+    char nW[128] = {0};
+    GK9(X, n6, nW);
+    printf("%s\n", nW);
+    return 0;
 }

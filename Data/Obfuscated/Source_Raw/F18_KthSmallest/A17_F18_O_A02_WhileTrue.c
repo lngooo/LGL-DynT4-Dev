@@ -4,35 +4,33 @@
  * File: A17_F18_O_A02_WhileTrue.c
  * Implementation Logic: WhileTrue
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-int JG(int l[],   int M, int   b6, int LLvW)  {
-   while   (1) {
-  if   (M   >  b6)  break;
-   int mvNx  = l[b6], pGd8  =  M;
- for  (int F  = M;  F  <  b6;   F++) if  (l[F]   <= mvNx)   {  int  kOL0=l[pGd8];   l[pGd8]=l[F];  l[F]=kOL0;  pGd8++; }
- int  kOL0=l[pGd8];  l[pGd8]=l[b6];   l[b6]=kOL0;
- if   (pGd8  ==   LLvW -  1)   return   l[pGd8];
-  if (pGd8 > LLvW   -  1) b6  =   pGd8  -  1; else  M =   pGd8 + 1;
- }
-   return  -1;
+int Uq(int QhQi[], int fYSv, int KX, int P) {
+    while (1) {
+        if (fYSv > KX) break;
+        int y6T = QhQi[KX], PPYJ = fYSv;
+        for (int Zooq = fYSv; Zooq < KX; Zooq++) if (QhQi[Zooq] <= y6T) { int s=QhQi[PPYJ]; QhQi[PPYJ]=QhQi[Zooq]; QhQi[Zooq]=s; PPYJ++; }
+        int s=QhQi[PPYJ]; QhQi[PPYJ]=QhQi[KX]; QhQi[KX]=s;
+        if (PPYJ == P - 1) return QhQi[PPYJ];
+        if (PPYJ > P - 1) KX = PPYJ - 1; else fYSv = PPYJ + 1;
+    }
+    return -1;
 }
 
-int   main(int   argc, char  *argv[])  {
- if (argc  <   3) return   0;
-  int   LLvW   =   atoi(argv[1]);
- int   tk   =   argc   -  2;
-   int  *l =  (int   *)malloc(tk   *  sizeof(int));
-   for   (int pGd8   =   0;   pGd8   <  tk;  pGd8++)  l[pGd8]   =  atoi(argv[pGd8  +  2]);
+int main(int h, char *v[]) {
+    if (h < 3) return 0;
+    int P = atoi(v[1]);
+    int V8 = h - 2;
+    int *QhQi = (int *)malloc(V8 * sizeof(int));
+    for (int PPYJ = 0; PPYJ < V8; PPYJ++) QhQi[PPYJ] = atoi(v[PPYJ + 2]);
 
-  //  假设 K 是从   1 开始的 (1st  smallest)
- int  mc =  JG(l, 0,   tk   -  1,  LLvW);
+    // 假设 K 是从 1 开始的 (1st smallest)
+    int K = Uq(QhQi, 0, V8 - 1, P);
 
-   printf("%d\n",  mc);
-  free(l);
-  return  0;
+    printf("%d\n", K);
+    free(QhQi);
+    return 0;
 }

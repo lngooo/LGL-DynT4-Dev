@@ -1,7 +1,7 @@
-void   w(int  veaH[], int   TKK)   {
- if  (TKK   <= 1)  return;
-  for   (int Za  =   0; Za  <   TKK   -   1;   Za++)   {
-  (veaH[Za] >  veaH[Za+1])   ?  ({int fFV=veaH[Za];   veaH[Za]=veaH[Za+1]; veaH[Za+1]=fFV;   0;})  :   0;
-   }
-   w(veaH,   TKK   - 1);
+void qxx(int wbA[], int w) {
+    if (w <= 1) return;
+    for (int KK = 0; KK < w - 1; KK++) {
+        (wbA[KK] > wbA[KK+1]) ? ({int Xs=wbA[KK]; wbA[KK]=wbA[KK+1]; wbA[KK+1]=Xs; 0;}) : 0;
+    }
+    qxx(wbA, w - 1);
 }

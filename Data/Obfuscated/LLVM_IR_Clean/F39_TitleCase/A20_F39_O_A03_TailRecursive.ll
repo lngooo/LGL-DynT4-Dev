@@ -1,5 +1,5 @@
-@puLl.FZLu = internal global i32 1
-define dso_local void @puLl(i8* %0) {
+@bxUr.vYDz = internal global i32 1
+define dso_local void @bxUr(i8* %0) {
   %2 = alloca i8*
   store i8* %0, i8** %2
   br label %3
@@ -18,10 +18,10 @@ define dso_local void @puLl(i8* %0) {
   %13 = icmp ne i32 %12, 0
   br i1 %13, label %14, label %15
 14:
-  store i32 1, i32* @puLl.FZLu
+  store i32 1, i32* @bxUr.vYDz
   br label %32
 15:
-  %16 = load i32, i32* @puLl.FZLu
+  %16 = load i32, i32* @bxUr.vYDz
   %17 = icmp ne i32 %16, 0
   br i1 %17, label %18, label %23
 18:
@@ -41,7 +41,7 @@ define dso_local void @puLl(i8* %0) {
   %30 = trunc i32 %29 to i8
   %31 = load i8*, i8** %2
   store i8 %30, i8* %31
-  store i32 0, i32* @puLl.FZLu
+  store i32 0, i32* @bxUr.vYDz
   br label %32
 32:
   %33 = load i8*, i8** %2

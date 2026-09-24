@@ -1,4 +1,4 @@
-define dso_local i32 @yBQf1(i32 %0, i32 %1) {
+define dso_local i32 @b(i32 %0, i32 %1) {
   %3 = alloca i32
   %4 = alloca i32
   %5 = alloca i32
@@ -15,7 +15,7 @@ define dso_local i32 @yBQf1(i32 %0, i32 %1) {
   %11 = load i32, i32* %4
   %12 = load i32, i32* %5
   %13 = sub nsw i32 %12, 1
-  %14 = call i32 @yBQf1(i32 %11, i32 %13)
+  %14 = call i32 @b(i32 %11, i32 %13)
   %15 = mul nsw i32 %10, %14
   store i32 %15, i32* %3
   br label %16

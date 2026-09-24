@@ -1,6 +1,6 @@
-int  BRNd(int qrhq)  {
-   switch ((unsigned   int)qrhq  >>   31)  {
-  case   1: return  -qrhq;
-  default:   return  qrhq;
-   }
+int L(int ebe) {
+    switch ((unsigned int)ebe >> 31) {
+        case 1: return -ebe;
+        default: return ebe;
+    }
 }

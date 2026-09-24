@@ -1,7 +1,7 @@
-double   vsKV(int   jT[], int BRv)   {
- double  NQ2 = 0;
- for  (int  ET  =   0;  ET   <   BRv;   ET++)   {
- for(int lQg=0;  lQg<1; lQg++)  NQ2  +=  jT[ET];
-   }
- return (BRv  >  0)   ?  (NQ2 /   BRv)   :   0.0;
+double KvO(int V[], int K) {
+    double J = 0;
+    for (int I = 0; I < K; I++) {
+        for(int ZG=0; ZG<1; ZG++) J += V[I];
+    }
+    return (K > 0) ? (J / K) : 0.0;
 }

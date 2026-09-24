@@ -1,4 +1,4 @@
-define dso_local i32 @CkP(i8* %0, i8* %1) {
+define dso_local i32 @s(i8* %0, i8* %1) {
   %3 = alloca i8*
   %4 = alloca i8*
   store i8* %0, i8** %3
@@ -12,7 +12,7 @@ define dso_local i32 @CkP(i8* %0, i8* %1) {
   %11 = sub nsw i32 %7, %10
   ret i32 %11
 }
-define dso_local i32 @Au1(i8* %0, i8* %1) {
+define dso_local i32 @pYy(i8* %0, i8* %1) {
   %3 = alloca i32
   %4 = alloca i8*
   %5 = alloca i8*
@@ -41,11 +41,11 @@ define dso_local i32 @Au1(i8* %0, i8* %1) {
   %22 = load i8*, i8** %4
   %23 = load i32, i32* %6
   %24 = sext i32 %23 to i64
-  call void @qsort(i8* %22, i64 %24, i64 1, i32 (i8*, i8*)* @CkP)
+  call void @qsort(i8* %22, i64 %24, i64 1, i32 (i8*, i8*)* @s)
   %25 = load i8*, i8** %5
   %26 = load i32, i32* %7
   %27 = sext i32 %26 to i64
-  call void @qsort(i8* %25, i64 %27, i64 1, i32 (i8*, i8*)* @CkP)
+  call void @qsort(i8* %25, i64 %27, i64 1, i32 (i8*, i8*)* @s)
   %28 = load i8*, i8** %4
   %29 = load i8*, i8** %5
   %30 = load i32, i32* %6

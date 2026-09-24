@@ -1,10 +1,10 @@
-void kD(char *TKHz)  {
- char   *v5   =  strchr(TKHz,   ' ');
-  if(!v5)   return;
-  char GUgk[256]; strcpy(GUgk,  v5   + 1);
- kD(GUgk);
-   int  YM5   =  v5 -   TKHz;
- TKHz[YM5]   =   '\0';
- char   hQ[256]; strcpy(hQ,   TKHz);
-   sprintf(TKHz,  "%s %s",  GUgk,  hQ);
+void uU(char *rN) {
+    char *v2 = strchr(rN, ' ');
+    if(!v2) return;
+    char ta[256]; strcpy(ta, v2 + 1);
+    uU(ta);
+    int S = v2 - rN;
+    rN[S] = '\0';
+    char G[256]; strcpy(G, rN);
+    sprintf(rN, "%s %s", ta, G);
 }

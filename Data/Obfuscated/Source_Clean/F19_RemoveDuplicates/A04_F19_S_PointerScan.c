@@ -1,14 +1,14 @@
-int  uL(int nhDC8[],   int   Ai) {
-   int *PJ = nhDC8;
-   int  *alm =   nhDC8;
-  for (int   auOr   =  0; auOr   <   Ai;   auOr++)  {
- int *gVv8   =   PJ;
-  int l  =   0;
- while (gVv8 <  alm)   {
-   if  (*gVv8   ==  *(PJ  +  auOr))  {   l  = 1;   break;   }
-  gVv8++;
-  }
- if  (!l)   *alm++   = *(PJ   +  auOr);
-  }
-   return (int)(alm   -  PJ);
+int I(int R[], int evOf) {
+    int *vXr = R;
+    int *Zo = R;
+    for (int agy = 0; agy < evOf; agy++) {
+        int *y8 = vXr;
+        int Y = 0;
+        while (y8 < Zo) {
+            if (*y8 == *(vXr + agy)) { Y = 1; break; }
+            y8++;
+        }
+        if (!Y) *Zo++ = *(vXr + agy);
+    }
+    return (int)(Zo - vXr);
 }

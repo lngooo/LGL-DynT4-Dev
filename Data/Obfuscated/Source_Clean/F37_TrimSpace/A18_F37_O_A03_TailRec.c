@@ -1,16 +1,16 @@
-void ykB(char*  Vnua,  int  a,   int  UB2) {
-  if   (!Vnua[a]) {
-  Vnua[UB2]   = 0;
-   return;
-  }
- if   (!isspace((unsigned char)Vnua[a]))   {
-   Vnua[UB2]   =  Vnua[a];
- ykB(Vnua, a  +   1,  UB2  +  1);
-  }  else  {
-   ykB(Vnua,  a   +   1,  UB2);
- }
+void g(char* LHzE, int Jim3, int l) {
+    if (!LHzE[Jim3]) {
+        LHzE[l] = 0;
+        return;
+    }
+    if (!isspace((unsigned char)LHzE[Jim3])) {
+        LHzE[l] = LHzE[Jim3];
+        g(LHzE, Jim3 + 1, l + 1);
+    } else {
+        g(LHzE, Jim3 + 1, l);
+    }
 }
 
-void CK5(char* Vnua)   {
-   ykB(Vnua,  0,   0);
+void C7Y(char* LHzE) {
+    g(LHzE, 0, 0);
 }

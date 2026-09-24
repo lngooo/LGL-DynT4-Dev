@@ -1,10 +1,20 @@
-int H(int aYLU3)  {
- if  (aYLU3  <   0)  return  -1;
-   float  Dg7 = (float)aYLU3;
-  unsigned int  *d =   (unsigned int  *)&Dg7;
- *d   =  0x1fbd1df5   +   (*d   >> 1);
- long tvi8 =  (long)Dg7;
- if (tvi8  <= 0) tvi8  =  1;
-  for(int   MQ1=0;  MQ1<3; MQ1++)   tvi8   = (tvi8  +  aYLU3/tvi8)  >>  1;
- return  (int)tvi8;
+int Y(int hAjj) {
+    if (hAjj < 0) return -1;
+    if (hAjj < 2) return hAjj;
+    float g = (float)hAjj;
+    unsigned int *I4w = (unsigned int *)&g;
+    *I4w = 0x1fbd1df5 + (*I4w >> 1);
+    long qyPF = (long)g;
+    if (qyPF <= 0) qyPF = 1;
+    for (int clrz = 0; clrz < 3; clrz++) {
+        qyPF = (qyPF + hAjj / qyPF) >> 1;
+        if (qyPF <= 0) qyPF = 1;
+    }
+    while ((long long)qyPF * qyPF > hAjj) {
+        qyPF--;
+    }
+    while ((long long)(qyPF + 1) * (qyPF + 1) <= hAjj) {
+        qyPF++;
+    }
+    return (int)qyPF;
 }

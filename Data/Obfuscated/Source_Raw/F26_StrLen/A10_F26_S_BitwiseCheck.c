@@ -4,20 +4,18 @@
  * File: A10_F26_S_BitwiseCheck.c
  * Implementation Logic: Logic using bitwise NOT to check null (Seed 7).
  */
-
-
 #include <stdio.h>
 
-int   ku(const   char   *qTWG) {
-   int AMJ =   0;
- while   (qTWG[AMJ])  {
-  AMJ  = -~AMJ;   //  Bitwise   increment
-   }
-   return  AMJ;
+int z0(const char *j1) {
+    int Xb = 0;
+    while (j1[Xb]) {
+        Xb = -~Xb; // Bitwise increment
+    }
+    return Xb;
 }
 
-int   main(int argc, char  *argv[])  {
-  if   (argc   <   2) return  0;
-   printf("%d\n",   ku(argv[1]));
-   return 0;
+int main(int UV, char *HMX[]) {
+    if (UV < 2) return 0;
+    printf("%d\n", z0(HMX[1]));
+    return 0;
 }

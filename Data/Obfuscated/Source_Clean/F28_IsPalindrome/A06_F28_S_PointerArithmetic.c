@@ -1,10 +1,10 @@
-int M(char *B8)   {
-  char *jlg  =   B8;
-   while (*jlg) jlg++;
- jlg--;
- while   (B8  < jlg)  {
- if   (*B8  !=  *jlg) return   0;
- B8++;  jlg--;
-  }
-  return  1;
+int o(char *Om) {
+    char *QUC = Om;
+    while (*QUC) QUC++;
+    QUC--;
+    while (Om < QUC) {
+        if (*Om != *QUC) return 0;
+        Om++; QUC--;
+    }
+    return 1;
 }

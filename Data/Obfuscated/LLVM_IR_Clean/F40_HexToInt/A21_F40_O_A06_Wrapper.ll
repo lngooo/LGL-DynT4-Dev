@@ -1,5 +1,5 @@
 @.str = constant [3 x i8] c"%x\00"
-define dso_local i32 @tcjB(i8* %0) {
+define dso_local i32 @a(i8* %0) {
   %2 = alloca i8*
   %3 = alloca i32
   %4 = alloca i32 (i8*, i8*, ...)*

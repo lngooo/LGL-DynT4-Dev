@@ -5,30 +5,28 @@
 * Implementation Logic: A simplified Rabin-Karp approach using additive rolling hash.
 * Input Format: <text> <pattern>
 */
-
-
 #include <stdio.h>
 #include <string.h>
 
-int   SodW(char*   GGNO,  char*  Udjr2)   {
- int L  =  strlen(GGNO), yzf  =   strlen(Udjr2);
- if (yzf   == 0)  return  0;
-   int   ZVUh6  = 0,   zb   =  0;
-   for  (int Jd  = 0;  Jd < yzf;  Jd++)  {
- ZVUh6   += Udjr2[Jd];
-   zb  +=   GGNO[Jd];
-  }
-  for (int  Jd   =   0; Jd   <=  L   - yzf;   Jd++)  {
- if   (ZVUh6   ==   zb)   {
- if  (strncmp(&GGNO[Jd],   Udjr2,   yzf)   == 0) return Jd;
-  }
-  if (Jd < L -  yzf)   zb   =  zb  -   GGNO[Jd] + GGNO[Jd   +   yzf];
-   }
-   return -1;
+int D(char* VvpM, char* cutJ) {
+    int nNAg = strlen(VvpM), R = strlen(cutJ);
+    if (R == 0) return 0;
+    int L3 = 0, G = 0;
+    for (int eGlD = 0; eGlD < R; eGlD++) {
+        L3 += cutJ[eGlD];
+        G += VvpM[eGlD];
+    }
+    for (int eGlD = 0; eGlD <= nNAg - R; eGlD++) {
+        if (L3 == G) {
+            if (strncmp(&VvpM[eGlD], cutJ, R) == 0) return eGlD;
+        }
+        if (eGlD < nNAg - R) G = G - VvpM[eGlD] + VvpM[eGlD + R];
+    }
+    return -1;
 }
 
-int   main(int argc,  char*   argv[])   {
-   if  (argc  <  3)   return   0;
-   printf("%d\n", SodW(argv[1],   argv[2]));
-  return   0;
+int main(int SKy, char* q[]) {
+    if (SKy < 3) return 0;
+    printf("%d\n", D(q[1], q[2]));
+    return 0;
 }

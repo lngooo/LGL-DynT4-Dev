@@ -1,5 +1,5 @@
 @.str = constant [2 x i8] c" \00"
-define dso_local void @QPJt(i8* %0) {
+define dso_local void @f(i8* %0) {
   %2 = alloca i8*
   %3 = alloca [256 x i8]
   %4 = alloca [100 x i8*]

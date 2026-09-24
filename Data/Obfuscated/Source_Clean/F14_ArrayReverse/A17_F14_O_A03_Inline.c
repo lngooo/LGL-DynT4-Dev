@@ -1,7 +1,7 @@
-void  x9(int  ex[], int   Ok)  {
-  for  (int   KW  = 0;  KW <  (Ok   >> 1);   KW++) {
-   ex[KW]  += ex[Ok - 1 - KW];
- ex[Ok - 1   -   KW]   =  ex[KW]   -  ex[Ok -  1  -   KW];
- ex[KW] = ex[KW]  -  ex[Ok   -   1  - KW];
-   }
+void M(int TF[], int O) {
+    for (int wAa = 0; wAa < (O >> 1); wAa++) {
+        TF[wAa] += TF[O - 1 - wAa];
+        TF[O - 1 - wAa] = TF[wAa] - TF[O - 1 - wAa];
+        TF[wAa] = TF[wAa] - TF[O - 1 - wAa];
+    }
 }

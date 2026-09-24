@@ -1,10 +1,10 @@
-int  hq(uint32_t  LMG) {
-  int K =   0;
-nNUu:
-   if   (LMG ==  0)  goto J;
- LMG  &=   (LMG   -   1);
- K++;
- goto  nNUu;
-J:
- return   K;
+int GAi(uint32_t U7nK) {
+    int gpk = 0;
+a:
+    if (U7nK == 0) goto idSl;
+    U7nK &= (U7nK - 1);
+    gpk++;
+    goto a;
+idSl:
+    return gpk;
 }

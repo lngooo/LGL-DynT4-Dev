@@ -1,6 +1,6 @@
 @.str = constant [4 x i8] c"%d \00"
 @.str.1 = constant [2 x i8] c"\0A\00"
-define dso_local i32 @bA(i32 %0, i32 %1) {
+define dso_local i32 @eH(i32 %0, i32 %1) {
   %3 = alloca i32
   %4 = alloca i32
   %5 = alloca i32
@@ -28,7 +28,7 @@ define dso_local i32 @bA(i32 %0, i32 %1) {
   %21 = load i32, i32* %3
   ret i32 %21
 }
-define dso_local void @a(i32* %0, i32 %1) {
+define dso_local void @Ul4b(i32* %0, i32 %1) {
   %3 = alloca i32*
   %4 = alloca i32
   %5 = alloca i32
@@ -52,7 +52,7 @@ define dso_local void @a(i32* %0, i32 %1) {
 17:
   %18 = load i32, i32* %6
   %19 = load i32, i32* %4
-  %20 = call i32 @bA(i32 %19, i32 -1)
+  %20 = call i32 @eH(i32 %19, i32 -1)
   %21 = icmp slt i32 %18, %20
   br i1 %21, label %24, label %22
 22:
@@ -65,7 +65,7 @@ define dso_local void @a(i32* %0, i32 %1) {
   %29 = load i32, i32* %28
   %30 = load i32*, i32** %3
   %31 = load i32, i32* %6
-  %32 = call i32 @bA(i32 %31, i32 1)
+  %32 = call i32 @eH(i32 %31, i32 1)
   %33 = sext i32 %32 to i64
   %34 = getelementptr inbounds i32, i32* %30, i64 %33
   %35 = load i32, i32* %34
@@ -80,7 +80,7 @@ define dso_local void @a(i32* %0, i32 %1) {
   store i32 %43, i32* %7
   %44 = load i32*, i32** %3
   %45 = load i32, i32* %6
-  %46 = call i32 @bA(i32 %45, i32 1)
+  %46 = call i32 @eH(i32 %45, i32 1)
   %47 = sext i32 %46 to i64
   %48 = getelementptr inbounds i32, i32* %44, i64 %47
   %49 = load i32, i32* %48
@@ -92,7 +92,7 @@ define dso_local void @a(i32* %0, i32 %1) {
   %54 = load i32, i32* %7
   %55 = load i32*, i32** %3
   %56 = load i32, i32* %6
-  %57 = call i32 @bA(i32 %56, i32 1)
+  %57 = call i32 @eH(i32 %56, i32 1)
   %58 = sext i32 %57 to i64
   %59 = getelementptr inbounds i32, i32* %55, i64 %58
   store i32 %54, i32* %59
@@ -102,7 +102,7 @@ define dso_local void @a(i32* %0, i32 %1) {
   br label %62
 62:
   %63 = load i32, i32* %6
-  %64 = call i32 @bA(i32 %63, i32 2)
+  %64 = call i32 @eH(i32 %63, i32 2)
   store i32 %64, i32* %6
   br label %17
 65:
@@ -111,7 +111,7 @@ define dso_local void @a(i32* %0, i32 %1) {
 67:
   %68 = load i32, i32* %8
   %69 = load i32, i32* %4
-  %70 = call i32 @bA(i32 %69, i32 -1)
+  %70 = call i32 @eH(i32 %69, i32 -1)
   %71 = icmp slt i32 %68, %70
   br i1 %71, label %74, label %72
 72:
@@ -124,7 +124,7 @@ define dso_local void @a(i32* %0, i32 %1) {
   %79 = load i32, i32* %78
   %80 = load i32*, i32** %3
   %81 = load i32, i32* %8
-  %82 = call i32 @bA(i32 %81, i32 1)
+  %82 = call i32 @eH(i32 %81, i32 1)
   %83 = sext i32 %82 to i64
   %84 = getelementptr inbounds i32, i32* %80, i64 %83
   %85 = load i32, i32* %84
@@ -139,7 +139,7 @@ define dso_local void @a(i32* %0, i32 %1) {
   store i32 %93, i32* %9
   %94 = load i32*, i32** %3
   %95 = load i32, i32* %8
-  %96 = call i32 @bA(i32 %95, i32 1)
+  %96 = call i32 @eH(i32 %95, i32 1)
   %97 = sext i32 %96 to i64
   %98 = getelementptr inbounds i32, i32* %94, i64 %97
   %99 = load i32, i32* %98
@@ -151,7 +151,7 @@ define dso_local void @a(i32* %0, i32 %1) {
   %104 = load i32, i32* %9
   %105 = load i32*, i32** %3
   %106 = load i32, i32* %8
-  %107 = call i32 @bA(i32 %106, i32 1)
+  %107 = call i32 @eH(i32 %106, i32 1)
   %108 = sext i32 %107 to i64
   %109 = getelementptr inbounds i32, i32* %105, i64 %108
   store i32 %104, i32* %109
@@ -161,7 +161,7 @@ define dso_local void @a(i32* %0, i32 %1) {
   br label %112
 112:
   %113 = load i32, i32* %8
-  %114 = call i32 @bA(i32 %113, i32 2)
+  %114 = call i32 @eH(i32 %113, i32 2)
   store i32 %114, i32* %8
   br label %67
 115:
@@ -226,7 +226,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
 45:
   %46 = load i32*, i32** %7
   %47 = load i32, i32* %6
-  call void @a(i32* %46, i32 %47)
+  call void @Ul4b(i32* %46, i32 %47)
   store i32 0, i32* %9
   br label %49
 49:

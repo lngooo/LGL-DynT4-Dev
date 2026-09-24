@@ -5,36 +5,34 @@
  * Implementation Logic: Goto
  * Input Format: <string>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-void Fk(unsigned char  *P8,   int TKMF,  char *FVRr) {
-  const   char  *cUOR  =   "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
- int JOg9  =  0,   D  =  0;
-huMy:
-   if  (JOg9   >= TKMF)  goto   zc;
-  FVRr[D++]  =  cUOR[P8[JOg9]  >>   2];
- FVRr[D++]  =   cUOR[((P8[JOg9] &   3)  << 4) |  (JOg9+1  < TKMF   ?  P8[JOg9+1] >>  4  :  0)];
-  if (JOg9 + 1 >=   TKMF)  {   FVRr[D++] =  '='; FVRr[D++]   = '='; goto   zc;   }
-  FVRr[D++]  = cUOR[((P8[JOg9+1]  &   15) <<   2)  |   (JOg9+2 <  TKMF   ?   P8[JOg9+2]  >>  6   :   0)];
- if   (JOg9   +   2  >= TKMF) {  FVRr[D++]   =  '=';  goto   zc;   }
-   FVRr[D++]  =  cUOR[P8[JOg9+2]  &  63];
-  JOg9 += 3;
-  goto  huMy;
-zc:
- FVRr[D] = '\0';
+void oQ(unsigned char *otJ, int f, char *u) {
+    const char *h = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+    int FAq = 0, FG = 0;
+huEp:
+    if (FAq >= f) goto uVW;
+    u[FG++] = h[otJ[FAq] >> 2];
+    u[FG++] = h[((otJ[FAq] & 3) << 4) | (FAq+1 < f ? otJ[FAq+1] >> 4 : 0)];
+    if (FAq + 1 >= f) { u[FG++] = '='; u[FG++] = '='; goto uVW; }
+    u[FG++] = h[((otJ[FAq+1] & 15) << 2) | (FAq+2 < f ? otJ[FAq+2] >> 6 : 0)];
+    if (FAq + 2 >= f) { u[FG++] = '='; goto uVW; }
+    u[FG++] = h[otJ[FAq+2] & 63];
+    FAq += 3;
+    goto huEp;
+uVW:
+    u[FG] = '\0';
 }
 
-int  main(int argc, char *argv[])  {
-   if  (argc   <   2) return 1;
-  unsigned char *P8  =   (unsigned   char  *)argv[1];
-   int  TKMF  = 0;
-   while  (P8[TKMF])   TKMF++;
- char  FVRr[400]  =   {0};
-   Fk(P8, TKMF,   FVRr);
-  printf("%s\n",   FVRr);
- return  0;
+int main(int C, char *vZgi[]) {
+    if (C < 2) return 1;
+    unsigned char *otJ = (unsigned char *)vZgi[1];
+    int f = 0;
+    while (otJ[f]) f++;
+    char u[400] = {0};
+    oQ(otJ, f, u);
+    printf("%s\n", u);
+    return 0;
 }

@@ -5,21 +5,19 @@
  * Implementation Logic: Table lookup with XOR key obfuscation on results.
  * Input Format: <a> <b>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int  akh(int   WpDD,   int   tMP)  {
-  int A   =  0x55;
-  WpDD  = abs(WpDD);  tMP   =  abs(tMP);
-  if (WpDD   ==   1   ||  tMP ==   1)  return (1   ^ A) ^  A;
- while(tMP)  {   int   f1 =   tMP;  tMP  =  WpDD % tMP; WpDD  =  f1;  }
-  return WpDD;
+int pWDK(int vbF2, int lFn) {
+    int Zqv = 0x55;
+    vbF2 = abs(vbF2); lFn = abs(lFn);
+    if (vbF2 == 1 || lFn == 1) return (1 ^ Zqv) ^ Zqv;
+    while(lFn) { int MS4 = lFn; lFn = vbF2 % lFn; vbF2 = MS4; }
+    return vbF2;
 }
 
-int main(int argc, char  *argv[])  {
-   if   (argc   <  3) return 1;
- printf("%d\n",  akh(atoi(argv[1]),   atoi(argv[2])));
- return   0;
+int main(int JaH, char *fp[]) {
+    if (JaH < 3) return 1;
+    printf("%d\n", pWDK(atoi(fp[1]), atoi(fp[2])));
+    return 0;
 }

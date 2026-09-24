@@ -1,9 +1,9 @@
-int  cs(int rAW[],   int   H,  int  oC, int  z) {
+int D(int x[], int Azk, int EVey, int i3) {
 
-   for(int  OLcG=0;   OLcG<oC; OLcG++)  {
- for(int  TPA=OLcG+1;   TPA<=oC;   TPA++)  {
- if(rAW[OLcG] >   rAW[TPA])  {  int   N=rAW[OLcG];   rAW[OLcG]=rAW[TPA];  rAW[TPA]=N;   }
-  }
- }
-   return  rAW[z-1];
+    for(int tB=0; tB<EVey; tB++) {
+        for(int kMK8=tB+1; kMK8<=EVey; kMK8++) {
+            if(x[tB] > x[kMK8]) { int LmG=x[tB]; x[tB]=x[kMK8]; x[kMK8]=LmG; }
+        }
+    }
+    return x[i3-1];
 }

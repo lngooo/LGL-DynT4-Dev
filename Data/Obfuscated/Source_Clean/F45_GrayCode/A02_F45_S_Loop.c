@@ -1,10 +1,10 @@
-unsigned   int   i(unsigned int   oGw)   {
-  unsigned   int  RGG  =  0;
-   for  (int rUqO  =   0;  rUqO <   31; rUqO++) {
-   if  (((oGw >>  rUqO)   & 1)   ^   ((oGw >> (rUqO   +   1))   &  1))  {
- RGG   |=  (1U  << rUqO);
-   }
-   }
-   RGG   |=   (oGw   & 0x80000000); 
-  return  RGG;
+unsigned int cdz(unsigned int zM) {
+    unsigned int mY = 0;
+    for (int orI = 0; orI < 31; orI++) {
+        if (((zM >> orI) & 1) ^ ((zM >> (orI + 1)) & 1)) {
+            mY |= (1U << orI);
+        }
+    }
+    mY |= (zM & 0x80000000); 
+    return mY;
 }

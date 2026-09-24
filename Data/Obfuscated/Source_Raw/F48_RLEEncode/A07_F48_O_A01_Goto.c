@@ -5,33 +5,31 @@
  * Implementation Logic: Goto
  * Input Format: <string>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
 
-void br(const   char *Pz, char   *to)   {
-  int  CF =   0,  TOeS   = 0;
-jdA:
- if (!Pz[CF])  goto  meM6;
-  int   a =   1;
-nnor7:
-  if  (Pz[CF+a]   &&  Pz[CF+a] == Pz[CF])   {  a++;   goto  nnor7;   }
-  to[TOeS++]   =  Pz[CF];
-   TOeS   +=   sprintf(to  +   TOeS,   "%d",   a);
-  CF   +=  a;
- goto   jdA;
-meM6:
-  to[TOeS] =   0;
+void L(const char *Dx, char *al) {
+    int KCz = 0, p = 0;
+PWCa:
+    if (!Dx[KCz]) goto Ws;
+    int yu = 1;
+W5:
+    if (Dx[KCz+yu] && Dx[KCz+yu] == Dx[KCz]) { yu++; goto W5; }
+    al[p++] = Dx[KCz];
+    p += sprintf(al + p, "%d", yu);
+    KCz += yu;
+    goto PWCa;
+Ws:
+    al[p] = 0;
 }
 
-int   main(int   argc,   char *argv[])  {
-  if   (argc <  2)  return 0;
-   char *fS =  argv[1];
-   char  mRS2[256] =  {0};
-  br(fS, mRS2);
- printf("%s\n",   mRS2);
- return   0;
+int main(int cww, char *SW[]) {
+    if (cww < 2) return 0;
+    char *qGWf = SW[1];
+    char YxX8[256] = {0};
+    L(qGWf, YxX8);
+    printf("%s\n", YxX8);
+    return 0;
 }

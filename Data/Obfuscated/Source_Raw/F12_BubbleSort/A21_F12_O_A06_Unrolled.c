@@ -4,32 +4,30 @@
  * File: A21_F12_O_A06_Unrolled.c
  * Implementation Logic: Partially unrolled inner loop for bubble sort.
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-void  N(int  zDCE[],   int   nsGD) {
-  for  (int  X9 =   0; X9   <   nsGD;   X9++)  {
- int  fyp = 0;
- for (;  fyp <  nsGD -  X9  -  2;   fyp   += 2) {
-   if (zDCE[fyp]  >   zDCE[fyp  +  1])   { int kMB =   zDCE[fyp];   zDCE[fyp]   =   zDCE[fyp+1]; zDCE[fyp+1]   = kMB;  }
-  if  (zDCE[fyp+1]   >   zDCE[fyp   + 2])   {   int   kMB  =  zDCE[fyp+1];   zDCE[fyp+1] =   zDCE[fyp+2];  zDCE[fyp+2]  = kMB; }
- }
-  for  (; fyp < nsGD - X9   -  1;   fyp++)  {
-   if  (zDCE[fyp] >   zDCE[fyp+1])   {  int   kMB = zDCE[fyp];  zDCE[fyp]  =  zDCE[fyp+1]; zDCE[fyp+1]   =  kMB;   }
- }
-  }
+void GSo(int dR[], int CWMK) {
+    for (int o = 0; o < CWMK; o++) {
+        int sYzj = 0;
+        for (; sYzj < CWMK - o - 2; sYzj += 2) {
+            if (dR[sYzj] > dR[sYzj + 1]) { int vf = dR[sYzj]; dR[sYzj] = dR[sYzj+1]; dR[sYzj+1] = vf; }
+            if (dR[sYzj+1] > dR[sYzj + 2]) { int vf = dR[sYzj+1]; dR[sYzj+1] = dR[sYzj+2]; dR[sYzj+2] = vf; }
+        }
+        for (; sYzj < CWMK - o - 1; sYzj++) {
+            if (dR[sYzj] > dR[sYzj+1]) { int vf = dR[sYzj]; dR[sYzj] = dR[sYzj+1]; dR[sYzj+1] = vf; }
+        }
+    }
 }
 
-int   main(int   argc,  char  *argv[])  {
-   if (argc   <  2)   return 0;
-   int nsGD   =  argc -  1;
-   int *zDCE = (int*)malloc(nsGD   * sizeof(int));
-  for  (int   X9 = 0; X9  <  nsGD;  X9++)  zDCE[X9] =   atoi(argv[X9+1]);
-   N(zDCE, nsGD);
-  for  (int  X9   =  0;  X9   <  nsGD;  X9++) printf("%d ",  zDCE[X9]);
- printf("\n");
-  free(zDCE);
- return 0;
+int main(int KVdJ, char *qfzG[]) {
+    if (KVdJ < 2) return 0;
+    int CWMK = KVdJ - 1;
+    int *dR = (int*)malloc(CWMK * sizeof(int));
+    for (int o = 0; o < CWMK; o++) dR[o] = atoi(qfzG[o+1]);
+    GSo(dR, CWMK);
+    for (int o = 0; o < CWMK; o++) printf("%d ", dR[o]);
+    printf("\n");
+    free(dR);
+    return 0;
 }

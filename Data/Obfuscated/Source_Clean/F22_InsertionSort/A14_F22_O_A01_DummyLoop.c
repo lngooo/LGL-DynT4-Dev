@@ -1,9 +1,9 @@
-void KUGX(int   C[],   int   UR)  {
- for (int  zp =   1;   zp < UR;   zp++)   {
- int  f  =  C[zp],   kOBr =  zp -  1;
-   for   (int   iMlW  =   0;   iMlW   <   1;   iMlW++)   {
-   while   (kOBr  >=  0  && C[kOBr]   > f)   { C[kOBr+1] =  C[kOBr];  kOBr--;   }
-   }
-   C[kOBr+1] = f;
-  }
+void qbR(int ITc[], int wg) {
+    for (int G = 1; G < wg; G++) {
+        int hGep = ITc[G], uK = G - 1;
+        for (int RAe = 0; RAe < 1; RAe++) {
+            while (uK >= 0 && ITc[uK] > hGep) { ITc[uK+1] = ITc[uK]; uK--; }
+        }
+        ITc[uK+1] = hGep;
+    }
 }

@@ -1,6 +1,6 @@
-@pczk.heAL4 = internal constant [21 x i64] [i64 1, i64 1, i64 2, i64 6, i64 24, i64 120, i64 720, i64 5040, i64 40320, i64 362880, i64 3628800, i64 39916800, i64 479001600, i64 6227020800, i64 87178291200, i64 1307674368000, i64 20922789888000, i64 355687428096000, i64 6402373705728000, i64 121645100408832000, i64 2432902008176640000]
+@cLxU.uVA = internal constant [21 x i64] [i64 1, i64 1, i64 2, i64 6, i64 24, i64 120, i64 720, i64 5040, i64 40320, i64 362880, i64 3628800, i64 39916800, i64 479001600, i64 6227020800, i64 87178291200, i64 1307674368000, i64 20922789888000, i64 355687428096000, i64 6402373705728000, i64 121645100408832000, i64 2432902008176640000]
 @.str = constant [6 x i8] c"%lld\0A\00"
-define dso_local i64 @pczk(i32 %0) {
+define dso_local i64 @cLxU(i32 %0) {
   %2 = alloca i64
   %3 = alloca i32
   store i32 %0, i32* %3
@@ -20,7 +20,7 @@ define dso_local i64 @pczk(i32 %0) {
 11:
   %12 = load i32, i32* %3
   %13 = sext i32 %12 to i64
-  %14 = getelementptr inbounds [21 x i64], [21 x i64]* @pczk.heAL4, i64 0, i64 %13
+  %14 = getelementptr inbounds [21 x i64], [21 x i64]* @cLxU.uVA, i64 0, i64 %13
   %15 = load i64, i64* %14
   store i64 %15, i64* %2
   br label %16
@@ -46,7 +46,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   %11 = getelementptr inbounds i8*, i8** %10, i64 1
   %12 = load i8*, i8** %11
   %13 = call i32 @atoi(i8* %12)
-  %14 = call i64 @pczk(i32 %13)
+  %14 = call i64 @cLxU(i32 %13)
   %15 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str, i64 0, i64 0), i64 %14)
   store i32 0, i32* %3
   br label %16

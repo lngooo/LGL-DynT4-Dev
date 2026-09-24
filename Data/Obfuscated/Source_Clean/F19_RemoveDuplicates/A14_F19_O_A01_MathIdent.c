@@ -1,12 +1,12 @@
-int   J7(int  KJ5[],  int   xi3)   {
-  int r  =   0;
- for   (int  M =  0;   M   < xi3;  M++) {
- int d  =   0;
-  for  (int ER = 0;   ER <  r;  ER++)   {
- double   iPqe  = (double)KJ5[M] -  (double)KJ5[ER];
-   if  ((int)floor(iPqe *  iPqe)   ==   0) d =  1;
-   }
-   if (!d)  KJ5[r++] = KJ5[M];
-  }
- return  r;
+int xCO(int B[], int E) {
+    int H78G = 0;
+    for (int k = 0; k < E; k++) {
+        int S9i = 0;
+        for (int c9K = 0; c9K < H78G; c9K++) {
+            double Y = (double)B[k] - (double)B[c9K];
+            if ((int)floor(Y * Y) == 0) S9i = 1;
+        }
+        if (!S9i) B[H78G++] = B[k];
+    }
+    return H78G;
 }

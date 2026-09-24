@@ -4,34 +4,32 @@
  * File: A05_F22_S_ForLoopShift.c
  * Implementation Logic: ForLoopShift
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-void  dEz3(int liq[], int  ZjoM) {
- for  (int MPoU =   1;  MPoU  <  ZjoM;   MPoU++) {
-  int xWld8  =   liq[MPoU], ay;
-  for (ay   = MPoU  -  1;   ay   >=   0   &&  liq[ay]   >  xWld8;  ay--) {
-   liq[ay+1]   =   liq[ay];
- }
-   liq[ay+1]  = xWld8;
-   }
+void b7(int b[], int IM) {
+    for (int RRVb = 1; RRVb < IM; RRVb++) {
+        int dyXy = b[RRVb], BS;
+        for (BS = RRVb - 1; BS >= 0 && b[BS] > dyXy; BS--) {
+            b[BS+1] = b[BS];
+        }
+        b[BS+1] = dyXy;
+    }
 }
 
-int main(int argc,  char  *argv[]) {
-   if (argc < 2) return   0;
- int ZjoM   =   argc - 1;
-   int  *liq =   (int *)malloc(ZjoM *  sizeof(int));
-   for (int  MPoU =  0;   MPoU <   ZjoM;   MPoU++)  liq[MPoU] =   atoi(argv[MPoU   + 1]);
+int main(int JihC, char *N[]) {
+    if (JihC < 2) return 0;
+    int IM = JihC - 1;
+    int *b = (int *)malloc(IM * sizeof(int));
+    for (int RRVb = 0; RRVb < IM; RRVb++) b[RRVb] = atoi(N[RRVb + 1]);
 
-  dEz3(liq,  ZjoM);
+    b7(b, IM);
 
- for (int  MPoU  = 0; MPoU   < ZjoM;  MPoU++)  {
-  printf("%d%s",  liq[MPoU],   (MPoU ==   ZjoM   -   1   ? ""   :   " "));
- }
-   printf("\n");
-   free(liq);
-  return 0;
+    for (int RRVb = 0; RRVb < IM; RRVb++) {
+        printf("%d%s", b[RRVb], (RRVb == IM - 1 ? "" : " "));
+    }
+    printf("\n");
+    free(b);
+    return 0;
 }

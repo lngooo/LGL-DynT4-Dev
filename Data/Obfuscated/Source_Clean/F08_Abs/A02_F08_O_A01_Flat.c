@@ -1,12 +1,12 @@
-int   u(int ww7) {
-  int   U   =   0;
- int srV1   = 0;
- while (U != 3)  {
- switch  (U) {
-  case  0:   U   = (ww7  < 0)   ?  1  :   2; break;
-   case 1: srV1  =   -ww7; U  =   3;   break;
-  case 2:  srV1   =  ww7;  U   =  3;   break;
- }
-   }
-  return  srV1;
+int fG6(int Zj) {
+    int zLO = 0;
+    int t = 0;
+    while (zLO != 3) {
+        switch (zLO) {
+            case 0: zLO = (Zj < 0) ? 1 : 2; break;
+            case 1: t = -Zj; zLO = 3; break;
+            case 2: t = Zj; zLO = 3; break;
+        }
+    }
+    return t;
 }

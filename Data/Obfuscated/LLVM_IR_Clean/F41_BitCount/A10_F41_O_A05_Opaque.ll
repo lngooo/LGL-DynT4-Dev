@@ -1,5 +1,5 @@
-@Ho7 = internal constant [16 x i32] [i32 0, i32 1, i32 1, i32 2, i32 1, i32 2, i32 2, i32 3, i32 1, i32 2, i32 2, i32 3, i32 2, i32 3, i32 3, i32 4]
-define dso_local i32 @m8(i32 %0) {
+@d4n = internal constant [16 x i32] [i32 0, i32 1, i32 1, i32 2, i32 1, i32 2, i32 2, i32 3, i32 1, i32 2, i32 2, i32 3, i32 2, i32 3, i32 3, i32 4]
+define dso_local i32 @lm1(i32 %0) {
   %2 = alloca i32
   %3 = alloca i32
   %4 = alloca i32
@@ -25,7 +25,7 @@ define dso_local i32 @m8(i32 %0) {
   %20 = load i32, i32* %2
   %21 = and i32 %20, 15
   %22 = zext i32 %21 to i64
-  %23 = getelementptr inbounds [16 x i32], [16 x i32]* @Ho7, i64 0, i64 %22
+  %23 = getelementptr inbounds [16 x i32], [16 x i32]* @d4n, i64 0, i64 %22
   %24 = load i32, i32* %23
   %25 = load i32, i32* %3
   %26 = add nsw i32 %25, %24

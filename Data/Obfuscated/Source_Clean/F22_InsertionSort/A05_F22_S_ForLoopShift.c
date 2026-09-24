@@ -1,9 +1,9 @@
-void  dEz3(int liq[], int  ZjoM) {
- for  (int MPoU =   1;  MPoU  <  ZjoM;   MPoU++) {
-  int xWld8  =   liq[MPoU], ay;
-  for (ay   = MPoU  -  1;   ay   >=   0   &&  liq[ay]   >  xWld8;  ay--) {
-   liq[ay+1]   =   liq[ay];
- }
-   liq[ay+1]  = xWld8;
-   }
+void b7(int b[], int IM) {
+    for (int RRVb = 1; RRVb < IM; RRVb++) {
+        int dyXy = b[RRVb], BS;
+        for (BS = RRVb - 1; BS >= 0 && b[BS] > dyXy; BS--) {
+            b[BS+1] = b[BS];
+        }
+        b[BS+1] = dyXy;
+    }
 }

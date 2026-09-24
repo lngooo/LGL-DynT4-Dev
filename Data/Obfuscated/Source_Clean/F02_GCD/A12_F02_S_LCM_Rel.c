@@ -1,9 +1,9 @@
-int hGE8(int   kC,   int   Hc) {
- kC  = abs(kC); Hc  =  abs(Hc);
- if   (kC  == 0 ||  Hc   ==   0) return  kC  |  Hc;
-   long   long   fOaC  = (long   long)kC  *  Hc;
- int HTyH  = (kC   >  Hc)   ?  kC   : Hc;
- long   long  qHV9  =   HTyH;
-   while (qHV9 %   kC   !=  0  ||   qHV9  % Hc  !=   0) qHV9 += HTyH;
-  return  (int)(fOaC / qHV9);
+int BFb(int vQRZ, int Uk1D) {
+    vQRZ = abs(vQRZ); Uk1D = abs(Uk1D);
+    if (vQRZ == 0 || Uk1D == 0) return vQRZ | Uk1D;
+    long long NI = (long long)vQRZ * Uk1D;
+    int z = (vQRZ > Uk1D) ? vQRZ : Uk1D;
+    long long f = z;
+    while (f % vQRZ != 0 || f % Uk1D != 0) f += z;
+    return (int)(NI / f);
 }

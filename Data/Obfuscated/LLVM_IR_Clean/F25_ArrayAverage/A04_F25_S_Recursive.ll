@@ -1,4 +1,4 @@
-define dso_local double @kj(i32* %0, i32 %1) {
+define dso_local double @v(i32* %0, i32 %1) {
   %3 = alloca double
   %4 = alloca i32*
   %5 = alloca i32
@@ -26,7 +26,7 @@ define dso_local double @kj(i32* %0, i32 %1) {
   %20 = load i32*, i32** %4
   %21 = load i32, i32* %5
   %22 = sub nsw i32 %21, 1
-  %23 = call double @kj(i32* %20, i32 %22)
+  %23 = call double @v(i32* %20, i32 %22)
   store double %23, double* %6
   %24 = load double, double* %6
   %25 = load i32, i32* %5

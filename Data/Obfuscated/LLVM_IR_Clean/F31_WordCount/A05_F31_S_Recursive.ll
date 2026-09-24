@@ -1,4 +1,4 @@
-define dso_local i32 @QOH(i8* %0, i32 %1) {
+define dso_local i32 @w0G(i8* %0, i32 %1) {
   %3 = alloca i32
   %4 = alloca i8*
   %5 = alloca i32
@@ -21,7 +21,7 @@ define dso_local i32 @QOH(i8* %0, i32 %1) {
 16:
   %17 = load i8*, i8** %4
   %18 = getelementptr inbounds i8, i8* %17, i64 1
-  %19 = call i32 @QOH(i8* %18, i32 0)
+  %19 = call i32 @w0G(i8* %18, i32 0)
   store i32 %19, i32* %3
   br label %32
 20:
@@ -31,14 +31,14 @@ define dso_local i32 @QOH(i8* %0, i32 %1) {
 23:
   %24 = load i8*, i8** %4
   %25 = getelementptr inbounds i8, i8* %24, i64 1
-  %26 = call i32 @QOH(i8* %25, i32 1)
+  %26 = call i32 @w0G(i8* %25, i32 1)
   %27 = add nsw i32 1, %26
   store i32 %27, i32* %3
   br label %32
 28:
   %29 = load i8*, i8** %4
   %30 = getelementptr inbounds i8, i8* %29, i64 1
-  %31 = call i32 @QOH(i8* %30, i32 1)
+  %31 = call i32 @w0G(i8* %30, i32 1)
   store i32 %31, i32* %3
   br label %32
 32:
@@ -46,10 +46,10 @@ define dso_local i32 @QOH(i8* %0, i32 %1) {
   ret i32 %33
 }
 declare i32 @isspace(i32)
-define dso_local i32 @AZfX8(i8* %0) {
+define dso_local i32 @Gka(i8* %0) {
   %2 = alloca i8*
   store i8* %0, i8** %2
   %3 = load i8*, i8** %2
-  %4 = call i32 @QOH(i8* %3, i32 0)
+  %4 = call i32 @w0G(i8* %3, i32 0)
   ret i32 %4
 }

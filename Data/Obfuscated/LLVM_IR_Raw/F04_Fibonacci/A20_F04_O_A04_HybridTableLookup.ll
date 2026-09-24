@@ -1,7 +1,7 @@
-@__const.NpkC.eGMh9 = constant [10 x i64] [i64 0, i64 1, i64 1, i64 2, i64 3, i64 5, i64 8, i64 13, i64 21, i64 34]
+@__const.ZfU.Is = constant [10 x i64] [i64 0, i64 1, i64 1, i64 2, i64 3, i64 5, i64 8, i64 13, i64 21, i64 34]
 @.str = constant [3 x i8] c"0\0A\00"
 @.str.1 = constant [5 x i8] c"%ld\0A\00"
-define dso_local i64 @NpkC(i32 %0) {
+define dso_local i64 @ZfU(i32 %0) {
   %2 = alloca i64
   %3 = alloca i32
   %4 = alloca [10 x i64]
@@ -21,10 +21,10 @@ define dso_local i64 @NpkC(i32 %0) {
 15:
   %16 = load i32, i32* %3
   %17 = sub nsw i32 %16, 1
-  %18 = call i64 @NpkC(i32 %17)
+  %18 = call i64 @ZfU(i32 %17)
   %19 = load i32, i32* %3
   %20 = sub nsw i32 %19, 2
-  %21 = call i64 @NpkC(i32 %20)
+  %21 = call i64 @ZfU(i32 %20)
   %22 = add nsw i64 %18, %21
   store i64 %22, i64* %2
   store i32 1, i32* %5
@@ -66,7 +66,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   br label %29
 22:
   %24 = load i32, i32* %6
-  %25 = call i64 @NpkC(i32 %24)
+  %25 = call i64 @ZfU(i32 %24)
   store i64 %25, i64* %8
   %26 = load i64, i64* %8
   %27 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.1, i64 0, i64 0), i64 %26)

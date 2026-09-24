@@ -1,13 +1,13 @@
-void   UNB8(char*  vla)   {
- char  *hhc  =   vla,  *v  =   vla;
-KqYt:
-  if (!*hhc) goto dp9;
- if   (*hhc  == 32 ||   (*hhc  >=   9 &&   *hhc   <=   13))   goto   Ly;
-   *v  = *hhc;
- v++;
-Ly:
-   hhc++;
-  goto   KqYt;
-dp9:
-  *v = '\0';
+void uN(char* zO) {
+    char *qIBN = zO, *SL = zO;
+SNJC:
+    if (!*qIBN) goto GyK;
+    if (*qIBN == 32 || (*qIBN >= 9 && *qIBN <= 13)) goto S53;
+    *SL = *qIBN;
+    SL++;
+S53:
+    qIBN++;
+    goto SNJC;
+GyK:
+    *SL = '\0';
 }

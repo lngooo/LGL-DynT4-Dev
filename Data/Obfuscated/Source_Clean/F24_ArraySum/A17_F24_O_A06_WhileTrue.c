@@ -1,8 +1,8 @@
-int   x0(int EFRh2[], int   UPEN)  {
- int  hDWa   =   0,   chA6  =   UPEN   -   1;
-  while  (1)  {
-   if   (chA6 <   0)  break;
-  hDWa +=   EFRh2[chA6--];
- }
-   return  hDWa;
+int y(int AAmO[], int N) {
+    int iN = 0, M = N - 1;
+    while (1) {
+        if (M < 0) break;
+        iN += AAmO[M--];
+    }
+    return iN;
 }

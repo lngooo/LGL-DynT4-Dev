@@ -22,7 +22,7 @@ define dso_local i32 @IsPowerOfTwo(i32 %0) {
   %17 = call double @llvm.round.f64(double %16)
   %18 = fsub double %15, %17
   %19 = call double @llvm.fabs.f64(double %18)
-  %20 = fcmp olt double %19, 1.000000e-09
+  %20 = fcmp olt double %19, 0x3D719799812DEA11
   %21 = zext i1 %20 to i32
   store i32 %21, i32* %2
   br label %23

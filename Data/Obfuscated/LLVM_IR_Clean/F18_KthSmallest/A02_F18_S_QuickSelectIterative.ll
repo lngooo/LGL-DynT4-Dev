@@ -1,4 +1,4 @@
-define dso_local i32 @TzAQ(i32* %0, i32 %1, i32 %2, i32 %3) {
+define dso_local i32 @F(i32* %0, i32 %1, i32 %2, i32 %3) {
   %5 = alloca i32
   %6 = alloca i32*
   %7 = alloca i32

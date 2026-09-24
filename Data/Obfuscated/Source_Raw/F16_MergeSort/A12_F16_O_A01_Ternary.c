@@ -4,36 +4,34 @@
  * File: A12_F16_O_A01_Ternary.c
  * Implementation Logic: Ternary
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-void   tK(int   IsT5[],   int   xxFZ3,   int   ZPlK) {
- if   (xxFZ3  >=  ZPlK)  return;
- int   vhTq =   xxFZ3 +   (ZPlK   -   xxFZ3)   /  2;
-   tK(IsT5,   xxFZ3, vhTq);
-  tK(IsT5, vhTq   +  1,   ZPlK);
-  int *e = (int*)malloc((ZPlK-xxFZ3+1)*4),   YDV1   =  xxFZ3,   IYj   =   vhTq   +  1, tB   =  0;
-   while   (YDV1   <=   vhTq   ||  IYj   <=   ZPlK) 
-   e[tB++]  = (YDV1   <=  vhTq  &&   (IYj > ZPlK   ||   IsT5[YDV1] <=   IsT5[IYj])) ?  IsT5[YDV1++] :  IsT5[IYj++];
-   for  (int   a   =   0;   a   <  tB;  a++)  IsT5[xxFZ3  +   a]   =   e[a];
-  free(e);
+void s(int z[], int L78, int u) {
+    if (L78 >= u) return;
+    int bf = L78 + (u - L78) / 2;
+    s(z, L78, bf);
+    s(z, bf + 1, u);
+    int *TQED = (int*)malloc((u-L78+1)*4), MQa = L78, cPN = bf + 1, u8UU = 0;
+    while (MQa <= bf || cPN <= u) 
+        TQED[u8UU++] = (MQa <= bf && (cPN > u || z[MQa] <= z[cPN])) ? z[MQa++] : z[cPN++];
+    for (int n3 = 0; n3 < u8UU; n3++) z[L78 + n3] = TQED[n3];
+    free(TQED);
 }
 
-int  main(int  argc, char *argv[])  {
-  if   (argc <   2)  return 0;
-  int   xJd  =  argc   - 1;
-  int  *IsT5  =   (int *)malloc(xJd   *  sizeof(int));
- for   (int  YDV1 =  0;   YDV1   <   xJd; YDV1++)   IsT5[YDV1]   =  atoi(argv[YDV1   +   1]);
+int main(int Z, char *uZd[]) {
+    if (Z < 2) return 0;
+    int J = Z - 1;
+    int *z = (int *)malloc(J * sizeof(int));
+    for (int MQa = 0; MQa < J; MQa++) z[MQa] = atoi(uZd[MQa + 1]);
 
-   tK(IsT5,   0,   xJd -  1);
+    s(z, 0, J - 1);
 
-   for   (int   YDV1  =  0;   YDV1  <  xJd;   YDV1++) {
-   printf("%d%s",  IsT5[YDV1],  (YDV1  ==   xJd   - 1  ?  ""   :  " "));
- }
-  printf("\n");
-   free(IsT5);
- return  0;
+    for (int MQa = 0; MQa < J; MQa++) {
+        printf("%d%s", z[MQa], (MQa == J - 1 ? "" : " "));
+    }
+    printf("\n");
+    free(z);
+    return 0;
 }

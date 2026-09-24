@@ -1,10 +1,10 @@
-void  zw(int   Qpc8[],  int  ajP)   {
- int *RO4  = Qpc8;
- int  *Tuh   =   Qpc8  +   ajP   -  1;
-   while  (RO4 < Tuh) {
-   int Dp  = *RO4;
-   *RO4  =  *Tuh;
- *Tuh  =  Dp;
-   RO4++;  Tuh--;
-  }
+void Zlq(int Fl[], int v) {
+    int *j = Fl;
+    int *FW = Fl + v - 1;
+    while (j < FW) {
+        int XypQ = *j;
+        *j = *FW;
+        *FW = XypQ;
+        j++; FW--;
+    }
 }

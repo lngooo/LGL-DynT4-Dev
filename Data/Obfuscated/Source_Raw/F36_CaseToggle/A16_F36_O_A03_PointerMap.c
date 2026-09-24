@@ -4,26 +4,24 @@
 * File: A16_F36_O_A03_PointerMap.c
 * Logic: Pointer-based table access derived from A03.
 */
-
-
 #include <stdio.h>
 
-void vbhy(char*  Rde)  {
-  char   jzvh6[256];
-  for(int  w=0;   w<256;   w++)   jzvh6[w]   =  (char)w;
-  for(int w='a'; w<='z';   w++)  jzvh6[w]   =   (char)(w -   32);
- for(int   w='A'; w<='Z';  w++) jzvh6[w]   =   (char)(w  + 32);
+void LpI(char* T) {
+    char Kau[256];
+    for(int QT=0; QT<256; QT++) Kau[QT] = (char)QT;
+    for(int QT='a'; QT<='z'; QT++) Kau[QT] = (char)(QT - 32);
+    for(int QT='A'; QT<='Z'; QT++) Kau[QT] = (char)(QT + 32);
 
- char  *WyX  =  Rde;
- while(*WyX)  {
-   *WyX   =   *(jzvh6   +   (unsigned  char)*WyX);
-  WyX++;
-   }
+    char *u = T;
+    while(*u) {
+        *u = *(Kau + (unsigned char)*u);
+        u++;
+    }
 }
 
-int main(int   argc,  char*   argv[])  {
-  if   (argc  <   2)   return  0;
- vbhy(argv[1]);
-  printf("%s\n", argv[1]);
-   return  0;
+int main(int cq, char* Z[]) {
+    if (cq < 2) return 0;
+    LpI(Z[1]);
+    printf("%s\n", Z[1]);
+    return 0;
 }

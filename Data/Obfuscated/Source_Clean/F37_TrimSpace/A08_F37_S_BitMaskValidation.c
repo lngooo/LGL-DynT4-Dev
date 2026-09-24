@@ -1,12 +1,12 @@
-void   Tkk(char*  jO)  {
-  int   kar = 0;
-   for   (int   ma   = 0; jO[ma]; ma++)   {
-  unsigned   char   m7   = jO[ma];
+void nT(char* gonE) {
+    int avlp = 0;
+    for (int q = 0; gonE[q]; q++) {
+        unsigned char JGg = gonE[q];
 
- int  ManH   =   (m7 ==   32) ||  (m7   >=  9   &&  m7 <=  13);
- if (!ManH)   {
- jO[kar++]   =   jO[ma];
- }
- }
- jO[kar]   =  '\0';
+        int vX1S = (JGg == 32) || (JGg >= 9 && JGg <= 13);
+        if (!vX1S) {
+            gonE[avlp++] = gonE[q];
+        }
+    }
+    gonE[avlp] = '\0';
 }

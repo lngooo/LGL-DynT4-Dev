@@ -1,4 +1,4 @@
-define dso_local void @Epi4(i32* %0, i32 %1) {
+define dso_local void @se(i32* %0, i32 %1) {
   %3 = alloca i32*
   %4 = alloca i32
   %5 = alloca i32
@@ -14,7 +14,7 @@ define dso_local void @Epi4(i32* %0, i32 %1) {
   %11 = load i32*, i32** %3
   %12 = load i32, i32* %4
   %13 = sub nsw i32 %12, 1
-  call void @Epi4(i32* %11, i32 %13)
+  call void @se(i32* %11, i32 %13)
   %15 = load i32*, i32** %3
   %16 = load i32, i32* %4
   %17 = sub nsw i32 %16, 1

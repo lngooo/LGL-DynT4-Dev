@@ -5,32 +5,30 @@
  * Implementation Logic: WhileTrue
  * Input Format: <str1> <str2> ...
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
 
-void Za(char **eLyM, int  lbzy5,  char  *tnmk0)  {
-  int  Q  = 0;
-   while  (1) {
-   char   a =  eLyM[0][Q];
- if  (!a)  break;
- int  CgZk = 0;
- for   (int  Bho =   1;   Bho   <   lbzy5; Bho++)   if   (eLyM[Bho][Q] != a)   { CgZk  =   1;  break;  }
-  if  (CgZk)   break;
- tnmk0[Q++] =  a;
-   }
-   tnmk0[Q]   =  0;
+void sKl(char **T, int qLZk, char *WMTK) {
+    int XNKZ = 0;
+    while (1) {
+        char XQs1 = T[0][XNKZ];
+        if (!XQs1) break;
+        int f4Hs = 0;
+        for (int IY = 1; IY < qLZk; IY++) if (T[IY][XNKZ] != XQs1) { f4Hs = 1; break; }
+        if (f4Hs) break;
+        WMTK[XNKZ++] = XQs1;
+    }
+    WMTK[XNKZ] = 0;
 }
 
-int  main(int   argc,   char  *argv[]) {
-   if   (argc <  2)  return   0;
-   int   lp  = argc -  1;
-  char   **eLyM  =   &argv[1];
-   char  vd4[128]   =   {0};
-  Za(eLyM,  lp,  vd4);
-  printf("%s\n",  vd4);
-   return 0;
+int main(int LyO, char *jv[]) {
+    if (LyO < 2) return 0;
+    int s = LyO - 1;
+    char **T = &jv[1];
+    char X[128] = {0};
+    sKl(T, s, X);
+    printf("%s\n", X);
+    return 0;
 }

@@ -5,35 +5,33 @@
  * Implementation Logic: JumpChain
  * Input Format: <target> <val1> <val2> ...
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-int   J(int ltlp8[], int NinA,   int  V2)  {
-   int   V7  = 0,  WZcp8  =  NinA - 1;
-   while (V7 <=  WZcp8)  {
-  if (ltlp8[V7] !=  V2)  goto  T;
- return V7;
-   T:
- if (ltlp8[WZcp8] !=  V2) goto  hOR;
-  return  WZcp8;
- hOR:
- V7++; WZcp8--;
- }
- return  -1;
+int MODF(int EV[], int c, int bN5) {
+    int TV = 0, hdCO = c - 1;
+    while (TV <= hdCO) {
+        if (EV[TV] != bN5) goto u;
+        return TV;
+    u:
+        if (EV[hdCO] != bN5) goto I;
+        return hdCO;
+    I:
+        TV++; hdCO--;
+    }
+    return -1;
 }
 
-int  main(int   argc,  char  *argv[])  {
- if   (argc  <   3) return   1;
-  int  V2   = atoi(argv[1]);
-   int   yi9   =  argc  -   2;
- int  ltlp8[100];
- for (int jbt = 0;   jbt <   yi9; jbt++) {
-  ltlp8[jbt] =  atoi(argv[jbt +  2]);
- }
- int s   =   J(ltlp8,   yi9, V2);
-   printf("%d\n", s);
-   return 0;
+int main(int mPN, char *v[]) {
+    if (mPN < 3) return 1;
+    int bN5 = atoi(v[1]);
+    int Tk5 = mPN - 2;
+    int EV[100];
+    for (int Ha8 = 0; Ha8 < Tk5; Ha8++) {
+        EV[Ha8] = atoi(v[Ha8 + 2]);
+    }
+    int A1QQ = MODF(EV, Tk5, bN5);
+    printf("%d\n", A1QQ);
+    return 0;
 }

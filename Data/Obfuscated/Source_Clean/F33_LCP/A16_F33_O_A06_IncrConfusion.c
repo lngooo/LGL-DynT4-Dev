@@ -1,9 +1,9 @@
-void  mdNu(char   **W,   int D2,  char  *uu)   {
- if  (D2 <= 0)  return;
-  if (D2 ==   1)  { strcpy(uu, W[0]);   return;  }
-   char ooA[128]   =   {0};
- mdNu(W,   D2 -   1, ooA);
- int N   =   -1;
- while   (ooA[++N] !=   '\0'   &&  W[D2-1][N]  ==   ooA[N]) uu[N] =  ooA[N];
-  uu[N] = '\0';
+void WA(char **k0, int nM, char *ep) {
+    if (nM <= 0) return;
+    if (nM == 1) { strcpy(ep, k0[0]); return; }
+    char rvvA[128] = {0};
+    WA(k0, nM - 1, rvvA);
+    int f = -1;
+    while (rvvA[++f] != '\0' && k0[nM-1][f] == rvvA[f]) ep[f] = rvvA[f];
+    ep[f] = '\0';
 }

@@ -1,5 +1,5 @@
-@__const.JAjv4.Qjm = constant [2 x i8*] [i8* blockaddress(@JAjv4, %34), i8* blockaddress(@JAjv4, %28)]
-define dso_local i32 @JAjv4(i32* %0, i32 %1) {
+@__const.q.r = constant [2 x i8*] [i8* blockaddress(@q, %34), i8* blockaddress(@q, %28)]
+define dso_local i32 @q(i32* %0, i32 %1) {
   %3 = alloca i32*
   %4 = alloca i32
   %5 = alloca i32

@@ -5,28 +5,26 @@
 * Implementation Logic: Changes loop step and introduces logic noise derived from A06.
 * Input Format: <string1> <string2>
 */
-
-
 #include <stdio.h>
 #include <string.h>
 
-static  int  rLAR[256];
-int   XZE(char*  l, char*   MOkX0)   {
- if(strlen(l) !=  strlen(MOkX0))   return  0;
-   for(int VnX6=0;   VnX6<256; VnX6++)  rLAR[VnX6] = 0;
- int  Hga2  =   0;
-  while(l[Hga2])  {
-  rLAR[(int)l[Hga2]]++;
-  rLAR[(int)MOkX0[Hga2]]--;
-  Hga2 += 1;
-   }
-  int QW8   =   1;
-  for(int VnX6=0;  VnX6<256;  VnX6++) if(rLAR[VnX6]  != 0) QW8 =  0;
- return QW8;
+static int X[256];
+int TsU(char* mZrb, char* mpS) {
+    if(strlen(mZrb) != strlen(mpS)) return 0;
+    for(int ZaPc=0; ZaPc<256; ZaPc++) X[ZaPc] = 0;
+    int J8SF = 0;
+    while(mZrb[J8SF]) {
+        X[(int)mZrb[J8SF]]++;
+        X[(int)mpS[J8SF]]--;
+        J8SF += 1;
+    }
+    int T2 = 1;
+    for(int ZaPc=0; ZaPc<256; ZaPc++) if(X[ZaPc] != 0) T2 = 0;
+    return T2;
 }
 
-int main(int   argc,   char*  argv[])   {
- if  (argc  <   3)   return  0;
- printf("%d\n",  XZE(argv[1],  argv[2]));
- return 0;
+int main(int s, char* fMx[]) {
+    if (s < 3) return 0;
+    printf("%d\n", TsU(fMx[1], fMx[2]));
+    return 0;
 }

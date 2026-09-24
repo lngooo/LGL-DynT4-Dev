@@ -5,24 +5,22 @@
  * Implementation Logic: Sideways addition logic using a series of specific bitwise constants.
  * Input Format: <uint32_t>
  */
-
-
 #include <stdio.h>
 #include <stdint.h>
 #include <stdlib.h>
 
-int   xiA5(uint32_t   q4)   {
- q4 =  (q4 & 0x55555555) +  ((q4 >>  1) &  0x55555555);
- q4   =  (q4  &   0x33333333)   +   ((q4   >>  2)   &   0x33333333);
- q4   =   (q4  &  0x0F0F0F0F)   +   ((q4  >>   4)  &  0x0F0F0F0F);
-  q4 =  (q4 &   0x00FF00FF)  +  ((q4  >>   8)   &  0x00FF00FF);
-  q4   = (q4   &   0x0000FFFF) +   ((q4   >> 16)   &   0x0000FFFF);
-   return   (int)q4;
+int qd(uint32_t xOIo) {
+    xOIo = (xOIo & 0x55555555) + ((xOIo >> 1) & 0x55555555);
+    xOIo = (xOIo & 0x33333333) + ((xOIo >> 2) & 0x33333333);
+    xOIo = (xOIo & 0x0F0F0F0F) + ((xOIo >> 4) & 0x0F0F0F0F);
+    xOIo = (xOIo & 0x00FF00FF) + ((xOIo >> 8) & 0x00FF00FF);
+    xOIo = (xOIo & 0x0000FFFF) + ((xOIo >> 16) & 0x0000FFFF);
+    return (int)xOIo;
 }
 
-int   main(int argc,   char*  argv[]) {
-  if  (argc   <  2)  return   0;
-  uint32_t Mh   = (uint32_t)strtoul(argv[1],   NULL,   10);
-   printf("%d\n", xiA5(Mh));
-  return   0;
+int main(int jYRE, char* vG[]) {
+    if (jYRE < 2) return 0;
+    uint32_t l = (uint32_t)strtoul(vG[1], NULL, 10);
+    printf("%d\n", qd(l));
+    return 0;
 }

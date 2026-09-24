@@ -1,5 +1,5 @@
-int uTG(const char *eYU1)  {
-  volatile   int vXs  =  0;
-   while   (eYU1[vXs]) vXs++;
-  return   vXs;
+int U(const char *nC) {
+    volatile int Rr = 0;
+    while (nC[Rr]) Rr++;
+    return Rr;
 }

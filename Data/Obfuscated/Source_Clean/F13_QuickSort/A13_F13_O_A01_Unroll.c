@@ -1,15 +1,15 @@
-void pOez5(int   OPAu9[], int  i,   int MtN)  {
-   if  (i <  MtN)  {
-   int   o  =   OPAu9[MtN], AM0  = i  -   1,   E5  =  i;
- for  (; E5  <   MtN  - 1;   E5  +=   2)  {
-  if  (OPAu9[E5]  <  o) {   AM0++;  int zXj  =   OPAu9[AM0]; OPAu9[AM0]  =   OPAu9[E5];  OPAu9[E5]   = zXj;   }
-  if   (OPAu9[E5+1]   <   o)   { AM0++; int zXj  =  OPAu9[AM0];   OPAu9[AM0] =   OPAu9[E5+1]; OPAu9[E5+1] =   zXj;  }
-  }
- for   (;  E5   <   MtN;  E5++) {
-  if (OPAu9[E5]  <  o)  { AM0++;  int zXj =   OPAu9[AM0]; OPAu9[AM0]  =  OPAu9[E5];  OPAu9[E5]   =   zXj; }
- }
- int  zXj  =   OPAu9[AM0+1];  OPAu9[AM0+1]   = OPAu9[MtN]; OPAu9[MtN]  =  zXj;
-   pOez5(OPAu9, i,   AM0);
- pOez5(OPAu9, AM0   + 2,  MtN);
-  }
+void Yet(int GJu[], int h, int vzU) {
+    if (h < vzU) {
+        int l = GJu[vzU], v1 = h - 1, RE6 = h;
+        for (; RE6 < vzU - 1; RE6 += 2) {
+            if (GJu[RE6] < l) { v1++; int ZcPi = GJu[v1]; GJu[v1] = GJu[RE6]; GJu[RE6] = ZcPi; }
+            if (GJu[RE6+1] < l) { v1++; int ZcPi = GJu[v1]; GJu[v1] = GJu[RE6+1]; GJu[RE6+1] = ZcPi; }
+        }
+        for (; RE6 < vzU; RE6++) {
+            if (GJu[RE6] < l) { v1++; int ZcPi = GJu[v1]; GJu[v1] = GJu[RE6]; GJu[RE6] = ZcPi; }
+        }
+        int ZcPi = GJu[v1+1]; GJu[v1+1] = GJu[vzU]; GJu[vzU] = ZcPi;
+        Yet(GJu, h, v1);
+        Yet(GJu, v1 + 2, vzU);
+    }
 }

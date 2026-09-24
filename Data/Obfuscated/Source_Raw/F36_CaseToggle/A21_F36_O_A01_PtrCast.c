@@ -4,22 +4,20 @@
 * File: A21_F36_O_A01_PtrCast.c
 * Logic: Pointer casting to unsigned char to avoid sign issues derived from A01.
 */
-
-
 #include <stdio.h>
 
-void   JjIn9(char* QXH) {
- unsigned char   *Jgr = (unsigned  char*)QXH;
-   while   (*Jgr != 0x00)   {
-   if   (*Jgr   >=   0x61 &&   *Jgr  <= 0x7A) *Jgr  =   *Jgr - 0x20;
- else   if   (*Jgr  >=   0x41 &&  *Jgr   <=   0x5A)   *Jgr  = *Jgr +   0x20;
-   Jgr++;
- }
+void bU1I(char* QGb) {
+    unsigned char *I = (unsigned char*)QGb;
+    while (*I != 0x00) {
+        if (*I >= 0x61 && *I <= 0x7A) *I = *I - 0x20;
+        else if (*I >= 0x41 && *I <= 0x5A) *I = *I + 0x20;
+        I++;
+    }
 }
 
-int  main(int  argc,  char* argv[])  {
- if   (argc < 2)  return   0;
-  JjIn9(argv[1]);
-   printf("%s\n",  argv[1]);
-  return  0;
+int main(int qtIi, char* Wh[]) {
+    if (qtIi < 2) return 0;
+    bU1I(Wh[1]);
+    printf("%s\n", Wh[1]);
+    return 0;
 }

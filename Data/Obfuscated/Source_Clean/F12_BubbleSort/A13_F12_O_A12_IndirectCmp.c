@@ -1,10 +1,10 @@
-typedef int   (*ZVkk)(const  void*, const  void*);
+typedef int (*hp)(const void*, const void*);
 
-int  KAu(const void *F7,   const  void *rL)   {
- return  (*(int*)F7   >  *(int*)rL) -   (*(int*)F7 < *(int*)rL);
+int uakY(const void *Lhz, const void *ac) {
+    return (*(int*)Lhz > *(int*)ac) - (*(int*)Lhz < *(int*)ac);
 }
 
-void  RSJ(int iH[], int lGUF4)  {
- ZVkk SJR  = KAu;
-  qsort(iH,   lGUF4,   sizeof(int), SJR);
+void SMjx(int p[], int Ff) {
+    hp WOd = uakY;
+    qsort(p, Ff, sizeof(int), WOd);
 }

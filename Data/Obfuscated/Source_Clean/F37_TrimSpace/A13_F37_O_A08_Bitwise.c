@@ -1,14 +1,14 @@
-void  o(char* uWr1)  {
-   int  oL   =   0;
-   for  (int  ZdNe   =   0;  uWr1[ZdNe]; ZdNe++) {
-   unsigned   char  Og   = uWr1[ZdNe];
-  int   QJD   = !(Og   ^   32);
-  int lU  = !(Og ^  9);
-   int   qLvt8  =  !(Og  ^ 10);
-   if  (!(QJD  |   lU | qLvt8))  {
-   uWr1[oL]   = uWr1[ZdNe];
- oL  = -~oL;  
-   }
-   }
- uWr1[oL]  =  0;
+void B(char* o) {
+    int nAup = 0;
+    for (int TPig = 0; o[TPig]; TPig++) {
+        unsigned char uxM = o[TPig];
+        int y = !(uxM ^ 32);
+        int adbM = !(uxM ^ 9);
+        int Zit = !(uxM ^ 10);
+        if (!(y | adbM | Zit)) {
+            o[nAup] = o[TPig];
+            nAup = -~nAup; 
+        }
+    }
+    o[nAup] = 0;
 }

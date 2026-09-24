@@ -5,24 +5,22 @@
  * Implementation Logic: Unroll
  * Input Format: <integer>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-int  pkHX0(int p1)  {
-  int   n   =  0;
-   while   (p1   >= 4)   {  p1 >>=  2;  n  += 2;  }
-   while  (p1  >=   2) {  p1   >>=   1;   n  +=   1;  }
- return  n;
+int Q3(int HHS) {
+    int B = 0;
+    while (HHS >= 4) { HHS >>= 2; B += 2; }
+    while (HHS >= 2) { HHS >>= 1; B += 1; }
+    return B;
 }
 
-int main(int  argc, char  *argv[])  {
-   if (argc < 2)   return   0;
-   int p1  =  atoi(argv[1]);
-   if  (p1 <=   0)  return 0;  
-  int   XIaF   =  pkHX0(p1);
- printf("%d\n",   XIaF);
-  return 0;
+int main(int Ew, char *j10J[]) {
+    if (Ew < 2) return 0;
+    int HHS = atoi(j10J[1]);
+    if (HHS <= 0) return 0; 
+    int a = Q3(HHS);
+    printf("%d\n", a);
+    return 0;
 }

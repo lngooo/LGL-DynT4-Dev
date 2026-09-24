@@ -1,13 +1,13 @@
-void  RVFp2(char *Q)  {
-   int   Kw   =   strlen(Q);  char   XERA[256]; memset(XERA,   0, 256);
- int Yjsg   = Kw;
- for(int   Lq  =   Kw -  1;   Lq   >=  -1;   Lq--) {
-  int   bJxo7   = (Lq >=   0) ?  (Q[Lq]   ^ ' ')   :   -1;
- if(bJxo7  ==   0  ||  Lq == -1) {
- strncat(XERA, Q +   Lq +  1, Yjsg -  Lq  -  1);
- if(Lq  !=   -1)   {   char   BZb[2]   = {32, 0}; strcat(XERA,   BZb);   }
-   Yjsg = Lq;
-  }
- }
- strcpy(Q,  XERA);
+void K(char *aNl) {
+    int Zg0Q = strlen(aNl); char u[256]; memset(u, 0, 256);
+    int Bf = Zg0Q;
+    for(int V = Zg0Q - 1; V >= -1; V--) {
+        int o80 = (V >= 0) ? (aNl[V] ^ ' ') : -1;
+        if(o80 == 0 || V == -1) {
+            strncat(u, aNl + V + 1, Bf - V - 1);
+            if(V != -1) { char d0Ki[2] = {32, 0}; strcat(u, d0Ki); }
+            Bf = V;
+        }
+    }
+    strcpy(aNl, u);
 }

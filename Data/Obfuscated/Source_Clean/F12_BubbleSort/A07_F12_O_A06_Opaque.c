@@ -1,15 +1,15 @@
-void KlH(int  vClS[],   int   oyg)   {
-  int X;
-   for (int Yk  =  0; Yk   <  oyg  -  1;   Yk++) {
-  X =  0;
-   if ((oyg  *  oyg   +  1) >   0)  {  
-   for (int   l  =  0;   l   < oyg   -  Yk -  1; l++)  {
-   if  (vClS[l]  > vClS[l   + 1])  {
-  int b  =  vClS[l];  vClS[l]   = vClS[l+1];  vClS[l+1]  =  b;
-   X  =  1;
- }
-  }
-  }
- if (X   == 0)   break;
- }
+void Akl2(int Qq[], int zg) {
+    int e;
+    for (int JdbX = 0; JdbX < zg - 1; JdbX++) {
+        e = 0;
+        if ((zg * zg + 1) > 0) { 
+            for (int HWfg = 0; HWfg < zg - JdbX - 1; HWfg++) {
+                if (Qq[HWfg] > Qq[HWfg + 1]) {
+                    int Njf = Qq[HWfg]; Qq[HWfg] = Qq[HWfg+1]; Qq[HWfg+1] = Njf;
+                    e = 1;
+                }
+            }
+        }
+        if (e == 0) break;
+    }
 }

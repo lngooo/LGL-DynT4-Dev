@@ -1,10 +1,10 @@
-int  qCh2(int  dv) {
-  if  (dv  <=  0)   return   0;
-   int   dRuO   = 0;
-  int S  =  1;
-  do {
-  dRuO  +=   S;
-   S++;
-  }   while (S  <= dv);
-   return   dRuO;
+int eWIX(int iQ) {
+    if (iQ <= 0) return 0;
+    int JkqH = 0;
+    int n7IW = 1;
+    do {
+        JkqH += n7IW;
+        n7IW++;
+    } while (n7IW <= iQ);
+    return JkqH;
 }

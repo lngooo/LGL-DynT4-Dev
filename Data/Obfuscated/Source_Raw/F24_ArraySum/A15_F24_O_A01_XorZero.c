@@ -4,29 +4,27 @@
  * File: A15_F24_O_A01_XorZero.c
  * Implementation Logic: XorZero
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-int  Yjy(int   yhu[],  int   byC) {
-  int RAL  =   0;
- for  (int   b  =   0; b  <   byC;   b++)  {
-  RAL  += (yhu[b]  ^  0);
- }
-  return  RAL;
+int y6(int yM[], int g) {
+    int nnhK = 0;
+    for (int l3k = 0; l3k < g; l3k++) {
+        nnhK += (yM[l3k] ^ 0);
+    }
+    return nnhK;
 }
 
-int   main(int   argc,  char *argv[])   {
- if  (argc  <   2)   return   0;
-   int  byC  = argc - 1;
- int   *yhu  =  (int  *)malloc(byC   *   sizeof(int));
- for  (int b = 0; b <  byC; b++) yhu[b]  =  atoi(argv[b   + 1]);
+int main(int JAwW, char *A5[]) {
+    if (JAwW < 2) return 0;
+    int g = JAwW - 1;
+    int *yM = (int *)malloc(g * sizeof(int));
+    for (int l3k = 0; l3k < g; l3k++) yM[l3k] = atoi(A5[l3k + 1]);
 
-  int  wJKi   =  Yjy(yhu,   byC);
-  printf("%d\n",   wJKi);
+    int uXx = y6(yM, g);
+    printf("%d\n", uXx);
 
-   free(yhu);
- return   0;
+    free(yM);
+    return 0;
 }

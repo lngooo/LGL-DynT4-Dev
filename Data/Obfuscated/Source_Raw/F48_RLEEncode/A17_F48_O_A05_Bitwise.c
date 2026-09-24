@@ -5,29 +5,27 @@
  * Implementation Logic: Bitwise
  * Input Format: <string>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
 
-void   ilSV1(const  char  *uoai,   char  *HOn)   {
- int  dfiP =  0,  n   = 0;
- while   (uoai[dfiP] !=   0) {
-  int MV9  =  1;
- while (uoai[dfiP +  MV9]  !=  0   &&   !(uoai[dfiP+MV9]  ^ uoai[dfiP])) MV9++;
-   HOn[n++]  =  uoai[dfiP];
- n  += sprintf(HOn  + n, "%d",   MV9);
-   dfiP  +=   MV9;
- }
+void QxpM(const char *z, char *P) {
+    int Eads = 0, L = 0;
+    while (z[Eads] != 0) {
+        int Za = 1;
+        while (z[Eads + Za] != 0 && !(z[Eads+Za] ^ z[Eads])) Za++;
+        P[L++] = z[Eads];
+        L += sprintf(P + L, "%d", Za);
+        Eads += Za;
+    }
 }
 
-int main(int  argc,   char   *argv[])  {
-  if   (argc   <  2) return  0;
- char   *nb2  =  argv[1];
-   char   i[256]   = {0};
-   ilSV1(nb2, i);
-   printf("%s\n",   i);
-  return  0;
+int main(int u5t, char *I[]) {
+    if (u5t < 2) return 0;
+    char *bWp = I[1];
+    char lf[256] = {0};
+    QxpM(bWp, lf);
+    printf("%s\n", lf);
+    return 0;
 }

@@ -1,4 +1,4 @@
-define dso_local i32 @J(i32 %0) {
+define dso_local i32 @gzh(i32 %0) {
   %2 = alloca i32
   %3 = alloca i32
   store i32 %0, i32* %3
@@ -26,7 +26,7 @@ define dso_local i32 @J(i32 %0) {
 16:
   %17 = load i32, i32* %3
   %18 = udiv i32 %17, 2
-  %19 = call i32 @J(i32 %18)
+  %19 = call i32 @gzh(i32 %18)
   store i32 %19, i32* %2
   br label %20
 20:

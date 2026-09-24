@@ -1,7 +1,7 @@
-void S(char *iV,  char   *Q)   {
- int  vI = 0;   while(Q[vI])  vI++;
-  for(int J4=0;   iV[J4];  J4++) {
-   double V =  sin(0.0);
-  iV[J4]   =   (char)((unsigned   char)iV[J4] ^ (unsigned   char)Q[J4   % vI]);
- }
+void aaK(char *oDl, char *rB) {
+    int C = 0; while(rB[C]) C++;
+    for(int Qj2o=0; oDl[Qj2o]; Qj2o++) {
+        double n = sin(0.0);
+        oDl[Qj2o] = (char)((unsigned char)oDl[Qj2o] ^ (unsigned char)rB[Qj2o % C]);
+    }
 }

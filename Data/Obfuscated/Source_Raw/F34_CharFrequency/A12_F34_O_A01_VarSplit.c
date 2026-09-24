@@ -4,22 +4,20 @@
 * File: A12_F34_O_A01_VarSplit.c
 * Logic: Splitting count variable into c1 and c2 derived from A01.
 */
-
-
 #include <stdio.h>
 
-int  YL(char*   K, char  S)   {
- int  JIYb8  =   0, N7 =  0;
-   for (int  fWWV  =   0; K[fWWV];  fWWV++)   {
-   if (K[fWWV]  == S) {
- if (fWWV  % 2  == 0) JIYb8++; else N7++;
-  }
- }
-   return   JIYb8 +   N7;
+int oWB3(char* Ip, char G) {
+    int IR = 0, Abv = 0;
+    for (int KW = 0; Ip[KW]; KW++) {
+        if (Ip[KW] == G) {
+            if (KW % 2 == 0) IR++; else Abv++;
+        }
+    }
+    return IR + Abv;
 }
 
-int   main(int   argc,   char*  argv[])   {
-   if (argc < 3) return 0;
-  printf("%d\n", YL(argv[1],  argv[2][0]));
-  return 0;
+int main(int VbFY, char* zR7h[]) {
+    if (VbFY < 3) return 0;
+    printf("%d\n", oWB3(zR7h[1], zR7h[2][0]));
+    return 0;
 }

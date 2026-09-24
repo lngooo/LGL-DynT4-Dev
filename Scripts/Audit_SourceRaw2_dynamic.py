@@ -19,7 +19,7 @@ import platform
 import time
 
 # --- Configuration ---
-SOURCE_DIR = os.path.abspath("../Data/Source_Raw")
+SOURCE_DIR = os.path.abspath("../Data/Obfuscated/Source_Raw")
 TEMP_BIN_DIR = os.path.abspath("./audit_temp_bin")
 GCC_PATH = r"D:\programFiles\msys64\mingw64\bin\gcc.exe"
 

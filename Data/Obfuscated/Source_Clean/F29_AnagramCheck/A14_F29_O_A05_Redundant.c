@@ -1,11 +1,11 @@
-int wrIW(char*   lpUB,  char*   b9)  {
- if   (strlen(lpUB)  !=   strlen(b9))   return  0;
-  int  xIT3 =   0,  OWHu  = 0;
-  for (int  VK =  0; lpUB[VK]; VK++)  {
-  int  C =  (xIT3 +   5)   *  2;
- xIT3   ^= lpUB[VK];   xIT3 ^=   b9[VK];
-   OWHu += lpUB[VK]; OWHu  -=  b9[VK];
- if(C   <   0) xIT3++; 
-   }
-  return   (xIT3 ==  0  &&   OWHu   ==   0);
+int ZgV7(char* mW, char* SRn) {
+    if (strlen(mW) != strlen(SRn)) return 0;
+    int xDd = 0, K4 = 0;
+    for (int nGb = 0; mW[nGb]; nGb++) {
+        int an1 = (xDd + 5) * 2;
+        xDd ^= mW[nGb]; xDd ^= SRn[nGb];
+        K4 += mW[nGb]; K4 -= SRn[nGb];
+        if(an1 < 0) xDd++; 
+    }
+    return (xDd == 0 && K4 == 0);
 }

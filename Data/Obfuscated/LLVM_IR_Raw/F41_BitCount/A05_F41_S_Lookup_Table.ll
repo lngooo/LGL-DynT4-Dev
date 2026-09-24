@@ -1,6 +1,6 @@
-@v4 = internal constant [16 x i32] [i32 0, i32 1, i32 1, i32 2, i32 1, i32 2, i32 2, i32 3, i32 1, i32 2, i32 2, i32 3, i32 2, i32 3, i32 3, i32 4]
+@Nhz = internal constant [16 x i32] [i32 0, i32 1, i32 1, i32 2, i32 1, i32 2, i32 2, i32 3, i32 1, i32 2, i32 2, i32 3, i32 2, i32 3, i32 3, i32 4]
 @.str = constant [4 x i8] c"%d\0A\00"
-define dso_local i32 @Pf(i32 %0) {
+define dso_local i32 @WM(i32 %0) {
   %2 = alloca i32
   %3 = alloca i32
   %4 = alloca i32
@@ -18,7 +18,7 @@ define dso_local i32 @Pf(i32 %0) {
   %13 = load i32, i32* %2
   %14 = and i32 %13, 15
   %15 = zext i32 %14 to i64
-  %16 = getelementptr inbounds [16 x i32], [16 x i32]* @v4, i64 0, i64 %15
+  %16 = getelementptr inbounds [16 x i32], [16 x i32]* @Nhz, i64 0, i64 %15
   %17 = load i32, i32* %16
   %18 = load i32, i32* %3
   %19 = add nsw i32 %18, %17
@@ -58,7 +58,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   %16 = trunc i64 %15 to i32
   store i32 %16, i32* %6
   %17 = load i32, i32* %6
-  %18 = call i32 @Pf(i32 %17)
+  %18 = call i32 @WM(i32 %17)
   %19 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str, i64 0, i64 0), i32 %18)
   store i32 0, i32* %3
   br label %21

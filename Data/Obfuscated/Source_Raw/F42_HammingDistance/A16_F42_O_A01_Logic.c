@@ -5,27 +5,25 @@
  * Implementation Logic: Using double negation and De Morgan's related logic in condition checks derived from A01.
  * Input Format: <uint1> <uint2>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int  NQH9(unsigned int  cD,   unsigned  int  Pk)  {
- unsigned   int   Us =  cD   ^  Pk;
- int   AT = 0;
- while   (!(Us   ==  0))  {
-   if (!!(Us  & 1)) {
- AT++;
-  }
-  Us   >>= 1;
- }
-   return AT;
+int H8Ov(unsigned int zU, unsigned int XLI) {
+    unsigned int q = zU ^ XLI;
+    int uaY = 0;
+    while (!(q == 0)) {
+        if (!!(q & 1)) {
+            uaY++;
+        }
+        q >>= 1;
+    }
+    return uaY;
 }
 
-int   main(int   argc, char*   argv[])   {
- if   (argc   <  3)  return 0;
-  unsigned   int mO6 =  (unsigned   int)strtoul(argv[1],  NULL,   10);
- unsigned  int Z =   (unsigned   int)strtoul(argv[2],   NULL,  10);
-  printf("%d",  NQH9(mO6, Z));
-   return  0;
+int main(int QO, char* au9k[]) {
+    if (QO < 3) return 0;
+    unsigned int c = (unsigned int)strtoul(au9k[1], NULL, 10);
+    unsigned int zi = (unsigned int)strtoul(au9k[2], NULL, 10);
+    printf("%d", H8Ov(c, zi));
+    return 0;
 }

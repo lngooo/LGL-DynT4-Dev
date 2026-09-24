@@ -4,21 +4,19 @@
  * File: A08_F26_S_StrchrBased.c
  * Implementation Logic: Using pointer search logic (Seed 6).
  */
-
-
 #include <stdio.h>
 
-int  RpC(const   char *U)  {
- const  char   *wZ   =   U;
- while (*wZ)   {
- if   (*wZ ==  0)   break;
-  wZ++;
- }
-  return  (int)(wZ   - U);
+int XJDQ(const char *Q) {
+    const char *WHq = Q;
+    while (*WHq) {
+        if (*WHq == 0) break;
+        WHq++;
+    }
+    return (int)(WHq - Q);
 }
 
-int main(int argc, char  *argv[]) {
- if (argc  < 2)  return 0;
-  printf("%d\n",  RpC(argv[1]));
-  return  0;
+int main(int Y, char *BPb[]) {
+    if (Y < 2) return 0;
+    printf("%d\n", XJDQ(BPb[1]));
+    return 0;
 }

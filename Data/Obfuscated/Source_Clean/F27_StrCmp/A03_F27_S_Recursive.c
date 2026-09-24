@@ -1,5 +1,5 @@
-int   grJI1(const   char  *qD,   const   char  *nl9)   {
-  if (*qD  ==  '\0'   || *qD   !=   *nl9)
-   return  *(unsigned   char   *)qD   -  *(unsigned  char *)nl9;
-   return  grJI1(qD  +   1,   nl9  + 1);
+int uNFO(const char *Wy, const char *q2) {
+    if (*Wy == '\0' || *Wy != *q2)
+        return *(unsigned char *)Wy - *(unsigned char *)q2;
+    return uNFO(Wy + 1, q2 + 1);
 }

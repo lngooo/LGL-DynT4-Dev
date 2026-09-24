@@ -2,7 +2,7 @@
 @.str.1 = constant [1 x i8] zeroinitializer
 @.str.2 = constant [2 x i8] c" \00"
 @.str.3 = constant [2 x i8] c"\0A\00"
-define dso_local void @R(i32* %0, i32 %1) {
+define dso_local void @j(i32* %0, i32 %1) {
   %3 = alloca i32*
   %4 = alloca i32
   %5 = alloca i32
@@ -73,7 +73,7 @@ define dso_local void @R(i32* %0, i32 %1) {
   %56 = getelementptr inbounds i32, i32* %55, i64 1
   %57 = load i32, i32* %4
   %58 = sub nsw i32 %57, 1
-  call void @R(i32* %56, i32 %58)
+  call void @j(i32* %56, i32 %58)
   br label %61
 61:
   ret void
@@ -135,7 +135,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
 45:
   %46 = load i32*, i32** %7
   %47 = load i32, i32* %6
-  call void @R(i32* %46, i32 %47)
+  call void @j(i32* %46, i32 %47)
   store i32 0, i32* %9
   br label %49
 49:

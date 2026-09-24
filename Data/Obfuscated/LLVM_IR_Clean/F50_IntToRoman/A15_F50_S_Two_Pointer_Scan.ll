@@ -1,6 +1,6 @@
-@__const.w.wZ = constant [13 x i32] [i32 1000, i32 900, i32 500, i32 400, i32 100, i32 90, i32 50, i32 40, i32 10, i32 9, i32 5, i32 4, i32 1]
-@__const.w.ndcE0 = constant [33 x i8] c"M\00CM\00D\00CD\00C\00XC\00L\00XL\00X\00IX\00V\00IV\00I\00\00"
-define dso_local void @w(i32 %0, i8* %1) {
+@__const.GIn.dP6S = constant [13 x i32] [i32 1000, i32 900, i32 500, i32 400, i32 100, i32 90, i32 50, i32 40, i32 10, i32 9, i32 5, i32 4, i32 1]
+@__const.GIn.W = constant [33 x i8] c"M\00CM\00D\00CD\00C\00XC\00L\00XL\00X\00IX\00V\00IV\00I\00\00"
+define dso_local void @GIn(i32 %0, i8* %1) {
   %3 = alloca i32
   %4 = alloca i8*
   %5 = alloca [13 x i32]
@@ -9,7 +9,7 @@ define dso_local void @w(i32 %0, i8* %1) {
   %8 = alloca i32
   store i32 %0, i32* %3
   store i8* %1, i8** %4
-  call void @llvm.memcpy.p0i8.p0i8.i64(i8* align 16 %12, i8* align 16 getelementptr inbounds ([33 x i8], [33 x i8]* @__const.w.ndcE0, i32 0, i32 0), i64 33, i1 false)
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* align 16 %12, i8* align 16 getelementptr inbounds ([33 x i8], [33 x i8]* @__const.GIn.W, i32 0, i32 0), i64 33, i1 false)
   %13 = load i8*, i8** %4
   %14 = getelementptr inbounds i8, i8* %13, i64 0
   store i8 0, i8* %14

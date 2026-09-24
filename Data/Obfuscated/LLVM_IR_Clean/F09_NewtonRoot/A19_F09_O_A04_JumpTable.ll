@@ -1,5 +1,5 @@
-@__const.hp.qs = constant [2 x i8*] [i8* blockaddress(@hp, %20), i8* blockaddress(@hp, %39)]
-define dso_local i32 @hp(i32 %0) {
+@__const.E.T9T = constant [2 x i8*] [i8* blockaddress(@E, %20), i8* blockaddress(@E, %39)]
+define dso_local i32 @E(i32 %0) {
   %2 = alloca i32
   %3 = alloca i32
   %4 = alloca i64

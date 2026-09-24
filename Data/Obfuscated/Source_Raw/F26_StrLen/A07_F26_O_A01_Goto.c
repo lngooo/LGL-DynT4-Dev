@@ -4,22 +4,20 @@
  * File: A07_F26_O_A01_Goto.c
  * Implementation Logic: StrLen with labels and goto.
  */
-
-
 #include <stdio.h>
 
-int A(const char *quwn)  {
-   int   PXW   = 0;
-AE:
-  if  (*quwn   == '\0') goto lkt4;
- quwn++;  PXW++;
-   goto AE;
-lkt4:
-   return   PXW;
+int aKE(const char *wmO3) {
+    int CnDN = 0;
+ICh:
+    if (*wmO3 == '\0') goto PXG;
+    wmO3++; CnDN++;
+    goto ICh;
+PXG:
+    return CnDN;
 }
 
-int   main(int   argc,  char  *argv[])  {
-   if (argc  <   2)  return   0;
- printf("%d\n",   A(argv[1]));
- return   0;
+int main(int v5l, char *vZ3[]) {
+    if (v5l < 2) return 0;
+    printf("%d\n", aKE(vZ3[1]));
+    return 0;
 }

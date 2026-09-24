@@ -1,5 +1,5 @@
-@__const.RVFp2.BZb = constant [2 x i8] c" \00"
-define dso_local void @RVFp2(i8* %0) {
+@__const.K.d0Ki = constant [2 x i8] c" \00"
+define dso_local void @K(i8* %0) {
   %2 = alloca i8*
   %3 = alloca i32
   %4 = alloca [256 x i8]
@@ -68,7 +68,7 @@ define dso_local void @RVFp2(i8* %0) {
   %59 = icmp ne i32 %58, -1
   br i1 %59, label %60, label %67
 60:
-  call void @llvm.memcpy.p0i8.p0i8.i64(i8* align 1 %62, i8* align 1 getelementptr inbounds ([2 x i8], [2 x i8]* @__const.RVFp2.BZb, i32 0, i32 0), i64 2, i1 false)
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* align 1 %62, i8* align 1 getelementptr inbounds ([2 x i8], [2 x i8]* @__const.K.d0Ki, i32 0, i32 0), i64 2, i1 false)
   %63 = getelementptr inbounds [256 x i8], [256 x i8]* %4, i64 0, i64 0
   %64 = getelementptr inbounds [2 x i8], [2 x i8]* %8, i64 0, i64 0
   %65 = call i8* @strcat(i8* %63, i8* %64)

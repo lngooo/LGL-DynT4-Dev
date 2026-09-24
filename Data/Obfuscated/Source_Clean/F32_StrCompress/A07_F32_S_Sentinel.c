@@ -1,9 +1,9 @@
-void   Zm(char*  s)   {
-   int   zXEA   =   0,  Djon3  =   0;
-  while (s[zXEA])   {
-   for   (Djon3 =   zXEA;  s[Djon3] == s[zXEA];   Djon3++);
- printf("%c%d",  s[zXEA],  Djon3  - zXEA);
- zXEA   =  Djon3;
-   }
-   printf("\n");
+void JXDy(char* Pxm) {
+    int c = 0, maKw = 0;
+    while (Pxm[c]) {
+        for (maKw = c; Pxm[maKw] == Pxm[c]; maKw++);
+        printf("%c%d", Pxm[c], maKw - c);
+        c = maKw;
+    }
+    printf("\n");
 }

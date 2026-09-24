@@ -1,4 +1,4 @@
-uint32_t tUhw(uint32_t  QIV) {
- uint32_t   wVN   = ((QIV   <<   8)   & 0xFF00FF00)   |   ((QIV >> 8)   &  0x00FF00FF);
- return  (wVN   << 16)   | (wVN   >> 16);
+uint32_t K(uint32_t mA9) {
+    uint32_t a = ((mA9 << 8) & 0xFF00FF00) | ((mA9 >> 8) & 0x00FF00FF);
+    return (a << 16) | (a >> 16);
 }

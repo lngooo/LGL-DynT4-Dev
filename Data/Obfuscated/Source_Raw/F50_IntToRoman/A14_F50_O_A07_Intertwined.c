@@ -4,34 +4,32 @@
  * File: A14_F50_O_A07_Intertwined.c
  * Implementation Logic: Intertwined pointer movements based on bitwise flags.
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-void WP(int   M,  char*  P) {
-  char   *EwYS  = P;
-   int   oMW   =  1;
-   while(M >=  1000) {   *EwYS = 'M';   EwYS++; M  -=   1000;  }
-   if((M/100) == 9)  {   *EwYS++   =   'C';  *EwYS++  =  'M';  M  -=  900;  }
-  if(M >= 500) {   *EwYS++   = 'D'; M  -=  500; }
-  if((M/100) == 4)  {  *EwYS++  =   'C';   *EwYS++  =  'D'; M   -=   400;   }
-  while(M   >=  100)  {  *EwYS++ =   'C';  M -=  100;   }
-   if((M/10) == 9)  {   *EwYS++ =   'X'; *EwYS++ =   'C';  M   -=  90;  }
-  if(M  >=   50)  {  *EwYS++ =  'L';  M   -=   50;   }
-  if((M/10) ==   4) { *EwYS++ = 'X'; *EwYS++   =   'L';   M   -=  40;   }
-  while(M  >= 10)  {   *EwYS++  =   'X';  M  -= 10;   }
-  if(M ==  9)  {   *EwYS++  =   'I'; *EwYS++ =   'X';  M  =  0;   }
-   if(M   >=  5)   { *EwYS++   =   'V'; M   -= 5;  }
- if(M   ==   4) { *EwYS++ =   'I';   *EwYS++   =  'V';  M =  0; }
-   while(M  >= 1)  {   *EwYS++  = 'I';  M   -= 1;  }
-  *EwYS   = '\0';
+void gu(int vOc, char* CR5) {
+    char *w = CR5;
+    int Pf = 1;
+    while(vOc >= 1000) { *w = 'M'; w++; vOc -= 1000; }
+    if((vOc/100) == 9) { *w++ = 'C'; *w++ = 'M'; vOc -= 900; }
+    if(vOc >= 500) { *w++ = 'D'; vOc -= 500; }
+    if((vOc/100) == 4) { *w++ = 'C'; *w++ = 'D'; vOc -= 400; }
+    while(vOc >= 100) { *w++ = 'C'; vOc -= 100; }
+    if((vOc/10) == 9) { *w++ = 'X'; *w++ = 'C'; vOc -= 90; }
+    if(vOc >= 50) { *w++ = 'L'; vOc -= 50; }
+    if((vOc/10) == 4) { *w++ = 'X'; *w++ = 'L'; vOc -= 40; }
+    while(vOc >= 10) { *w++ = 'X'; vOc -= 10; }
+    if(vOc == 9) { *w++ = 'I'; *w++ = 'X'; vOc = 0; }
+    if(vOc >= 5) { *w++ = 'V'; vOc -= 5; }
+    if(vOc == 4) { *w++ = 'I'; *w++ = 'V'; vOc = 0; }
+    while(vOc >= 1) { *w++ = 'I'; vOc -= 1; }
+    *w = '\0';
 }
 
-int  main(int argc,  char*  argv[]) {
-   if   (argc <  2) return   0;
-   char c[100];
-  WP(atoi(argv[1]), c);
- printf("%s\n",  c);
-  return 0;
+int main(int NMR4, char* Hr[]) {
+    if (NMR4 < 2) return 0;
+    char qct[100];
+    gu(atoi(Hr[1]), qct);
+    printf("%s\n", qct);
+    return 0;
 }

@@ -1,16 +1,16 @@
-void  J3(char*   QP) {
- int  XlM  =  strlen(QP);
-   if  (XlM   == 0) return;
- int XMWV   =   1;
-  char   C  =  QP[0];
- for   (int hyY  =  1;  hyY   <=   XlM;  hyY++) {
- if   (QP[hyY]  == C)  {
- XMWV++;
- }  else   {
- printf("%c%d", C,  XMWV);
-  C   =  QP[hyY];
- XMWV = 1;
-   }
- }
-   printf("\n");
+void Yfw(char* w) {
+    int yZ = strlen(w);
+    if (yZ == 0) return;
+    int I8 = 1;
+    char Ub6 = w[0];
+    for (int e = 1; e <= yZ; e++) {
+        if (w[e] == Ub6) {
+            I8++;
+        } else {
+            printf("%c%d", Ub6, I8);
+            Ub6 = w[e];
+            I8 = 1;
+        }
+    }
+    printf("\n");
 }

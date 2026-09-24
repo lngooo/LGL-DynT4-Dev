@@ -1,12 +1,12 @@
-int  Amb(int  yBaA[],   int  iT,   int   IH)   {
- if (iT   == IH) return  yBaA[iT];
- int  ZJTb4   =  iT +  (IH -   iT) /   2;
-   int   SR6 =  Amb(yBaA,  iT, ZJTb4);
-   int PsL   = Amb(yBaA,  ZJTb4 +  1, IH);
- return (SR6  >   PsL)  ?   SR6   :   PsL;
+int J(int iv[], int Ih, int V8WL) {
+    if (Ih == V8WL) return iv[Ih];
+    int WV = Ih + (V8WL - Ih) / 2;
+    int uw = J(iv, Ih, WV);
+    int GRB = J(iv, WV + 1, V8WL);
+    return (uw > GRB) ? uw : GRB;
 }
 
-int   uiQ3(int yBaA[], int  iZF0)   {
-  if (iZF0 <=   0)   return 0;
- return Amb(yBaA, 0,   iZF0  -   1);
+int dex(int iv[], int CFG) {
+    if (CFG <= 0) return 0;
+    return J(iv, 0, CFG - 1);
 }

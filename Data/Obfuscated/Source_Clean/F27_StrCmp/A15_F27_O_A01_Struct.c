@@ -1,9 +1,9 @@
-struct  BWr  {   const char *ArJn8;   const  char  *uYv6;  };
+struct lInw { const char *R; const char *Mx; };
 
-int  JT3(const  char *X, const char   *vQs) {
- struct BWr   Exk4   =   {X,   vQs};
-   while  (*Exk4.ArJn8   && (*Exk4.ArJn8 == *Exk4.uYv6)) {
- Exk4.ArJn8++;  Exk4.uYv6++;
-   }
- return *(unsigned   char   *)Exk4.ArJn8   -   *(unsigned   char *)Exk4.uYv6;
+int CT(const char *Gj, const char *bNc7) {
+    struct lInw Z = {Gj, bNc7};
+    while (*Z.R && (*Z.R == *Z.Mx)) {
+        Z.R++; Z.Mx++;
+    }
+    return *(unsigned char *)Z.R - *(unsigned char *)Z.Mx;
 }

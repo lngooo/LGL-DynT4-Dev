@@ -4,22 +4,20 @@
  * File: A05_F35_S_Recursive.c
  * Logic: Pure recursive implementation.
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int ZEM(char l7)   {
- return (l7=='a'||l7=='e'||l7=='i'||l7=='o'||l7=='u'||l7=='A'||l7=='E'||l7=='I'||l7=='O'||l7=='U');
+int r(char ip2) {
+    return (ip2=='a'||ip2=='e'||ip2=='i'||ip2=='o'||ip2=='u'||ip2=='A'||ip2=='E'||ip2=='I'||ip2=='O'||ip2=='U');
 }
 
-int   oGs(const char* lFO1) {
-  if (*lFO1   ==  '\0')  return 0;
-  return ZEM(*lFO1)   +  oGs(lFO1 +   1);
+int zk4(const char* vJ) {
+    if (*vJ == '\0') return 0;
+    return r(*vJ) + zk4(vJ + 1);
 }
 
-int main(int   argc, char* argv[])   {
-   if   (argc   <   2) { printf("0\n"); return 0;  }
-  printf("%d\n", oGs(argv[1]));
-   return   0;
+int main(int Ad9u, char* YWCI[]) {
+    if (Ad9u < 2) { printf("0\n"); return 0; }
+    printf("%d\n", zk4(YWCI[1]));
+    return 0;
 }

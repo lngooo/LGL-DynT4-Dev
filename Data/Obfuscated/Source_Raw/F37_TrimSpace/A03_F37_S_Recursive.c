@@ -4,31 +4,29 @@
 * File: A03_F37_S_Recursive.c
 * Logic: Recursive character shifting.
 */
-
-
 #include <stdio.h>
 #include <ctype.h>
 
-void   AXgR(char* Ww,   char* Y) {
-  if  (!*Ww) {
-   *Y  =  '\0';
- return;
-   }
-  if  (!isspace((unsigned   char)*Ww))  {
- *Y   =  *Ww;
-  AXgR(Ww +   1, Y  +  1);
- }  else   {
-   AXgR(Ww   +   1, Y);
- }
+void J5Gj(char* UWzL, char* QOdr) {
+    if (!*UWzL) {
+        *QOdr = '\0';
+        return;
+    }
+    if (!isspace((unsigned char)*UWzL)) {
+        *QOdr = *UWzL;
+        J5Gj(UWzL + 1, QOdr + 1);
+    } else {
+        J5Gj(UWzL + 1, QOdr);
+    }
 }
 
-void   sihz(char*   JLS) {
-  AXgR(JLS, JLS);
+void L(char* oTh) {
+    J5Gj(oTh, oTh);
 }
 
-int main(int argc,   char* argv[])   {
-   if (argc   <  2)   return   0;
- sihz(argv[1]);
- printf("%s\n", argv[1]);
-  return  0;
+int main(int YfY, char* hwBc[]) {
+    if (YfY < 2) return 0;
+    L(hwBc[1]);
+    printf("%s\n", hwBc[1]);
+    return 0;
 }

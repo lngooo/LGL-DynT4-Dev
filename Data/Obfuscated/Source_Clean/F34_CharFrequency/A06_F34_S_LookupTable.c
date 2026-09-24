@@ -1,8 +1,8 @@
-int   eS(char*   t3, char   TqN8)  {
-   int   sHW[256]   =  {0};
- while (*t3) {
-  sHW[(unsigned  char)*t3]++;
-   t3++;
- }
-  return   sHW[(unsigned  char)TqN8];
+int U(char* oOr, char b5F) {
+    int CMsz[256] = {0};
+    while (*oOr) {
+        CMsz[(unsigned char)*oOr]++;
+        oOr++;
+    }
+    return CMsz[(unsigned char)b5F];
 }

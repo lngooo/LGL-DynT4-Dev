@@ -1,11 +1,11 @@
-int   Ymwk(int  BPA[],  int  UTx9)  {
-   int   *XnP   = BPA;
- for   (int dwRq   = 0;   dwRq < UTx9;  dwRq++)   {
- int  yzm  =  1;
-   for (int  h =  0;  h   <  (int)(XnP  - BPA);  h++)   {
-   if (*(BPA   + h)  ==  *(BPA +  dwRq))  yzm =   0;
-   }
-  if (yzm) { *XnP   = *(BPA + dwRq);  XnP++;  }
- }
- return  (int)(XnP -   BPA);
+int Ly(int g[], int OV) {
+    int *c = g;
+    for (int mT = 0; mT < OV; mT++) {
+        int ge8I = 1;
+        for (int tUE = 0; tUE < (int)(c - g); tUE++) {
+            if (*(g + tUE) == *(g + mT)) ge8I = 0;
+        }
+        if (ge8I) { *c = *(g + mT); c++; }
+    }
+    return (int)(c - g);
 }

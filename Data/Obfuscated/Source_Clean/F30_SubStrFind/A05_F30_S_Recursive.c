@@ -1,11 +1,11 @@
-int   I(char*  fpy,   char*  XQL, int   Cd,  int  EEyg6)   {
-  if   (*fpy   ==  '\0')  return   -1;
-  if  (strncmp(fpy,  XQL, EEyg6)   == 0)   return  Cd;
-  return I(fpy  + 1,   XQL,  Cd +   1,   EEyg6);
+int oTCZ(char* g, char* ii, int C, int xYSB) {
+    if (*g == '\0') return -1;
+    if (strncmp(g, ii, xYSB) == 0) return C;
+    return oTCZ(g + 1, ii, C + 1, xYSB);
 }
 
-int   j3(char*   OT,  char*   u)  {
- int EEyg6  =  strlen(u);
-  if (EEyg6  ==  0) return  0;
- return I(OT, u, 0,   EEyg6);
+int T(char* OIg, char* EcrB) {
+    int xYSB = strlen(EcrB);
+    if (xYSB == 0) return 0;
+    return oTCZ(OIg, EcrB, 0, xYSB);
 }

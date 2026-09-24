@@ -1,4 +1,4 @@
-define dso_local i32 @SGh7(i32 %0, i32 %1) {
+define dso_local i32 @lL9(i32 %0, i32 %1) {
   %3 = alloca i32
   %4 = alloca i32
   %5 = alloca i32
@@ -22,7 +22,7 @@ define dso_local i32 @SGh7(i32 %0, i32 %1) {
   %16 = load i32, i32* %4
   %17 = load i32, i32* %5
   %18 = srem i32 %16, %17
-  %19 = call i32 @SGh7(i32 %15, i32 %18)
+  %19 = call i32 @lL9(i32 %15, i32 %18)
   store i32 %19, i32* %3
   br label %20
 20:

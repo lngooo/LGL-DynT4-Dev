@@ -5,32 +5,30 @@
  * Implementation Logic: DeadCodeInjection
  * Input Format: <arg1>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-long   P(int Emmi) {
-   long r  =   0,  OwOC1  =   1,   fEqf;
-  if (Emmi ==   0)  return  0;
-   for   (int  Xdf  =   2;  Xdf <=   Emmi; Xdf++)   {
-   fEqf  = r  + OwOC1;  r   = OwOC1; OwOC1   =   fEqf;
-  if (0)  { printf("never"); Emmi++;  }
-   }
-   return  (Emmi   ==  1)   ?  1  :  OwOC1;
+long CNa5(int n1j) {
+    long hXsp = 0, hdp = 1, OYND;
+    if (n1j == 0) return 0;
+    for (int h = 2; h <= n1j; h++) {
+        OYND = hXsp + hdp; hXsp = hdp; hdp = OYND;
+        if (0) { printf("never"); n1j++; }
+    }
+    return (n1j == 1) ? 1 : hdp;
 }
 
-int  main(int   argc, char   *argv[]) {
-  if (argc <   2)  {
-  return  1;
- }
-  int   Emmi = atoi(argv[1]);
- if (Emmi   < 0) {
-   printf("0\n");
-  return   0;
-  }
- long rHdl9 =   P(Emmi);
-  printf("%ld\n",  rHdl9);
-   return   0;
+int main(int MIbO, char *Tj[]) {
+    if (MIbO < 2) {
+        return 1;
+    }
+    int n1j = atoi(Tj[1]);
+    if (n1j < 0) {
+        printf("0\n");
+        return 0;
+    }
+    long BaN = CNa5(n1j);
+    printf("%ld\n", BaN);
+    return 0;
 }

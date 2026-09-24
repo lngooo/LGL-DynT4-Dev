@@ -1,6 +1,6 @@
 @.str = constant [4 x i8] c"%d \00"
 @.str.1 = constant [2 x i8] c"\0A\00"
-define dso_local void @IVMW(i32* %0, i32* %1) {
+define dso_local void @iTC(i32* %0, i32* %1) {
   %3 = alloca i32*
   %4 = alloca i32*
   %5 = alloca i32
@@ -18,7 +18,7 @@ define dso_local void @IVMW(i32* %0, i32* %1) {
   store i32 %12, i32* %13
   ret void
 }
-define dso_local void @HL(i32* %0, i32 %1) {
+define dso_local void @YZF(i32* %0, i32 %1) {
   %3 = alloca i32*
   %4 = alloca i32
   %5 = alloca i32
@@ -65,7 +65,7 @@ define dso_local void @HL(i32* %0, i32 %1) {
   %37 = load i32*, i32** %7
   %38 = load i32*, i32** %7
   %39 = getelementptr inbounds i32, i32* %38, i64 1
-  call void @IVMW(i32* %37, i32* %39)
+  call void @iTC(i32* %37, i32* %39)
   br label %40
 40:
   %41 = load i32*, i32** %7
@@ -144,7 +144,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
 45:
   %46 = load i32*, i32** %7
   %47 = load i32, i32* %6
-  call void @HL(i32* %46, i32 %47)
+  call void @YZF(i32* %46, i32 %47)
   store i32 0, i32* %9
   br label %49
 49:

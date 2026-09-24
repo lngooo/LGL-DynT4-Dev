@@ -5,35 +5,33 @@
 * Implementation Logic: Sorts both strings using bubble sort and compares the results.
 * Input Format: <string1> <string2>
 */
-
-
 #include <stdio.h>
 #include <string.h>
 
-void FB1(char*   JAxn,  int BwBx7)   {
- for (int   B =  0;  B   <  BwBx7-1; B++) {
-   for   (int GnfC9 = 0;  GnfC9   <   BwBx7-B-1; GnfC9++)  {
-  if (JAxn[GnfC9] > JAxn[GnfC9+1])   {
-   char  WIAN  =   JAxn[GnfC9];
-   JAxn[GnfC9]   =   JAxn[GnfC9+1];
-   JAxn[GnfC9+1]   =  WIAN;
- }
-  }
- }
+void wVZE(char* FtW, int uIVm) {
+    for (int Lk = 0; Lk < uIVm-1; Lk++) {
+        for (int S = 0; S < uIVm-Lk-1; S++) {
+            if (FtW[S] > FtW[S+1]) {
+                char AD4 = FtW[S];
+                FtW[S] = FtW[S+1];
+                FtW[S+1] = AD4;
+            }
+        }
+    }
 }
 
-int r(char*   nQso,  char* LKB)   {
- int S   =  strlen(nQso);
-  int  ieg =  strlen(LKB);
-   if (S   !=   ieg)  return   0;
-  char   bsZ[256], SSA[256];
- strcpy(bsZ,  nQso);  strcpy(SSA,   LKB);
- FB1(bsZ,  S);  FB1(SSA, ieg);
-   return   strcmp(bsZ,   SSA) == 0;
+int u7Y2(char* D35D, char* jjVW) {
+    int A8b3 = strlen(D35D);
+    int Yu = strlen(jjVW);
+    if (A8b3 != Yu) return 0;
+    char Ojzx[256], B[256];
+    strcpy(Ojzx, D35D); strcpy(B, jjVW);
+    wVZE(Ojzx, A8b3); wVZE(B, Yu);
+    return strcmp(Ojzx, B) == 0;
 }
 
-int  main(int   argc,   char*  argv[])   {
-   if  (argc  <   3)   return 0;
-   printf("%d\n",   r(argv[1],  argv[2]));
-  return   0;
+int main(int jL, char* ng[]) {
+    if (jL < 3) return 0;
+    printf("%d\n", u7Y2(ng[1], ng[2]));
+    return 0;
 }

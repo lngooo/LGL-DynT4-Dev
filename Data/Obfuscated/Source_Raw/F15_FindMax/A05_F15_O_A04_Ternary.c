@@ -4,26 +4,24 @@
  * File: A05_F15_O_A04_Ternary.c
  * Implementation Logic: Recursive max hidden in ternary nested logic.
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int rsN7(int   W[],  int   jRvk,   int   eRRI)   {
- if (jRvk   ==   eRRI)   return  W[jRvk];
-  int YLN   = jRvk + (eRRI-jRvk)/2;
-  int qe   =   rsN7(W,   jRvk, YLN),  nfNb1   =  rsN7(W, YLN+1,   eRRI);
-  return   (qe > nfNb1) ?  qe   : nfNb1;
+int ffz5(int s9[], int g, int rh) {
+    if (g == rh) return s9[g];
+    int Fj = g + (rh-g)/2;
+    int H8 = ffz5(s9, g, Fj), s = ffz5(s9, Fj+1, rh);
+    return (H8 > s) ? H8 : s;
 }
 
-int  uaGd(int  F[],  int P9)   { return   (P9 >   0) ? rsN7(F, 0,  P9-1) :  0;  }
+int RI7i(int wACV[], int eb) { return (eb > 0) ? ffz5(wACV, 0, eb-1) : 0; }
 
-int  main(int  argc,  char  *argv[]) {
-   if   (argc < 2)   return  0;
-  int   P9 =   argc  -   1;
-  int *F =   (int*)malloc(P9   * sizeof(int));
-   for  (int Xwz5  =   0;  Xwz5 < P9; Xwz5++)   F[Xwz5]   = atoi(argv[Xwz5+1]);
-   printf("%d\n",   uaGd(F,  P9));
-  free(F);
- return   0;
+int main(int HP, char *ALv[]) {
+    if (HP < 2) return 0;
+    int eb = HP - 1;
+    int *wACV = (int*)malloc(eb * sizeof(int));
+    for (int FLQ = 0; FLQ < eb; FLQ++) wACV[FLQ] = atoi(ALv[FLQ+1]);
+    printf("%d\n", RI7i(wACV, eb));
+    free(wACV);
+    return 0;
 }

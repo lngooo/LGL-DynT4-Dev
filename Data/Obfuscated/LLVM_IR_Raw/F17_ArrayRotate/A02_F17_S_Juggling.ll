@@ -1,6 +1,6 @@
 @.str = constant [4 x i8] c"%d \00"
 @.str.1 = constant [2 x i8] c"\0A\00"
-define dso_local i32 @wE(i32 %0, i32 %1) {
+define dso_local i32 @Ty(i32 %0, i32 %1) {
   %3 = alloca i32
   %4 = alloca i32
   store i32 %0, i32* %3
@@ -16,13 +16,13 @@ define dso_local i32 @wE(i32 %0, i32 %1) {
   %11 = load i32, i32* %3
   %12 = load i32, i32* %4
   %13 = srem i32 %11, %12
-  %14 = call i32 @wE(i32 %10, i32 %13)
+  %14 = call i32 @Ty(i32 %10, i32 %13)
   br label %15
 15:
   %16 = phi i32 [ %8, %7 ], [ %14, %9 ]
   ret i32 %16
 }
-define dso_local void @CUHu(i32* %0, i32 %1, i32 %2) {
+define dso_local void @gjTB(i32* %0, i32 %1, i32 %2) {
   %4 = alloca i32*
   %5 = alloca i32
   %6 = alloca i32
@@ -47,7 +47,7 @@ define dso_local void @CUHu(i32* %0, i32 %1, i32 %2) {
   store i32 %19, i32* %6
   %21 = load i32, i32* %6
   %22 = load i32, i32* %5
-  %23 = call i32 @wE(i32 %21, i32 %22)
+  %23 = call i32 @Ty(i32 %21, i32 %22)
   store i32 %23, i32* %7
   store i32 0, i32* %8
   br label %25
@@ -192,7 +192,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   %52 = load i32*, i32** %8
   %53 = load i32, i32* %7
   %54 = load i32, i32* %6
-  call void @CUHu(i32* %52, i32 %53, i32 %54)
+  call void @gjTB(i32* %52, i32 %53, i32 %54)
   store i32 0, i32* %10
   br label %56
 56:

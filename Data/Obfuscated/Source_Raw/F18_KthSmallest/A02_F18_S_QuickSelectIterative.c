@@ -4,40 +4,38 @@
  * File: A02_F18_S_QuickSelectIterative.c
  * Implementation Logic: QuickSelectIterative
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-int TzAQ(int   Z2[], int GC1,   int  dPBG,  int   sS)  {
-   while (GC1   <= dPBG) {
- int TXg   = Z2[dPBG],  MXwN =   GC1;
-  for (int   dp =  GC1; dp <   dPBG;  dp++)  {
- if  (Z2[dp]   <=   TXg)  {
-   int  mZ   =   Z2[MXwN]; Z2[MXwN] = Z2[dp];  Z2[dp]   =   mZ;
-   MXwN++;
-  }
- }
- int   mZ = Z2[MXwN];  Z2[MXwN] =   Z2[dPBG];  Z2[dPBG]   =  mZ;
-  if (MXwN   == sS  -  1) return Z2[MXwN];
- else  if  (MXwN > sS -  1)  dPBG = MXwN -   1;
-  else GC1 = MXwN +  1;
-  }
-  return   -1;
+int F(int voA[], int RWzW, int uLb, int vK) {
+    while (RWzW <= uLb) {
+        int yn8z = voA[uLb], I = RWzW;
+        for (int mEgv = RWzW; mEgv < uLb; mEgv++) {
+            if (voA[mEgv] <= yn8z) {
+                int O5tf = voA[I]; voA[I] = voA[mEgv]; voA[mEgv] = O5tf;
+                I++;
+            }
+        }
+        int O5tf = voA[I]; voA[I] = voA[uLb]; voA[uLb] = O5tf;
+        if (I == vK - 1) return voA[I];
+        else if (I > vK - 1) uLb = I - 1;
+        else RWzW = I + 1;
+    }
+    return -1;
 }
 
-int  main(int   argc,  char *argv[]) {
-   if  (argc <   3)   return 0;
-   int sS   =  atoi(argv[1]);
-  int   imQM  = argc   - 2;
-  int  *Z2 =   (int   *)malloc(imQM   *   sizeof(int));
-   for   (int  MXwN   =   0;  MXwN  <  imQM;  MXwN++)   Z2[MXwN]  =  atoi(argv[MXwN + 2]);
+int main(int gR, char *c0[]) {
+    if (gR < 3) return 0;
+    int vK = atoi(c0[1]);
+    int blme = gR - 2;
+    int *voA = (int *)malloc(blme * sizeof(int));
+    for (int I = 0; I < blme; I++) voA[I] = atoi(c0[I + 2]);
 
-   //  假设  K   是从 1 开始的 (1st   smallest)
-   int Jbm   =   TzAQ(Z2, 0,   imQM  -   1,   sS);
+    // 假设 K 是从 1 开始的 (1st smallest)
+    int snos = F(voA, 0, blme - 1, vK);
 
- printf("%d\n", Jbm);
-  free(Z2);
-   return  0;
+    printf("%d\n", snos);
+    free(voA);
+    return 0;
 }

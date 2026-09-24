@@ -1,14 +1,14 @@
-void  Jk1(int   *TG,  int *D)   {
-   while(TG   < D)  {
-   *TG  ^=   *D;   *D  ^= *TG;   *TG ^=  *D;
- TG++;   D--;
- }
+void a8BP(int *u, int *ArhR) {
+    while(u < ArhR) {
+        *u ^= *ArhR; *ArhR ^= *u; *u ^= *ArhR;
+        u++; ArhR--;
+    }
 }
 
-void  b1(int KN[],   int WgVp,   int V)  {
-  if (WgVp   ==  0) return;
-   V  %= WgVp;
-  Jk1(KN,  KN   +  V   -  1);
-   Jk1(KN   +   V,   KN +  WgVp  -   1);
- Jk1(KN, KN +   WgVp -   1);
+void FxHW(int U[], int dr, int ICua) {
+    if (dr == 0) return;
+    ICua %= dr;
+    a8BP(U, U + ICua - 1);
+    a8BP(U + ICua, U + dr - 1);
+    a8BP(U, U + dr - 1);
 }

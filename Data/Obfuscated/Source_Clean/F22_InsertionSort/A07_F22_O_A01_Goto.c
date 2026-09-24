@@ -1,11 +1,11 @@
-void   jgF(int   BHbV[], int  LX)   {
- int   is =   1, oxwy,   pivW7;
-yr:
- if (is >=  LX)  return;
-   pivW7 =  BHbV[is];  oxwy   =   is  - 1;
-hv3:
- if (oxwy   <   0  ||  BHbV[oxwy]   <=   pivW7)   goto bq;
- BHbV[oxwy  +  1]   = BHbV[oxwy]; oxwy--;   goto   hv3;
-bq:
- BHbV[oxwy  + 1]   = pivW7;   is++; goto   yr;
+void MP4(int si[], int EQhQ) {
+    int e = 1, InF, oCT;
+xXJ:
+    if (e >= EQhQ) return;
+    oCT = si[e]; InF = e - 1;
+PpH:
+    if (InF < 0 || si[InF] <= oCT) goto uSI;
+    si[InF + 1] = si[InF]; InF--; goto PpH;
+uSI:
+    si[InF + 1] = oCT; e++; goto xXJ;
 }

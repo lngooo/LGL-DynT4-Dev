@@ -1,6 +1,6 @@
-typedef   int (*X)(int);
+typedef int (*q2u)(int);
 
-int ht(int  nh) {
-  X   okTX   = abs;
-   return okTX(nh);
+int S1Vu(int Cro) {
+    q2u m = abs;
+    return m(Cro);
 }

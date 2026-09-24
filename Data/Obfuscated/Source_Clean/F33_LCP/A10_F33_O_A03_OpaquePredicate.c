@@ -1,10 +1,10 @@
-void  H(char **U,  int   Vy, char   *W2)  {
-   if (Vy <=   0) return;
-  if ((Vy   *   Vy  + 1) > 0)   {
-  if (Vy == 1) {   strcpy(W2,  U[0]);  return; }
-   char en6[128]={0},  XXe7[128]={0};
-  H(U, Vy/2, en6);   H(U+Vy/2, Vy-Vy/2,   XXe7);
-  int rVc=0;   while(en6[rVc] &&  XXe7[rVc]   &&   en6[rVc]==XXe7[rVc]) {  W2[rVc]=en6[rVc];   rVc++; }
-  W2[rVc]='\0';
- }
+void F47p(char **yT, int HP, char *z) {
+    if (HP <= 0) return;
+    if ((HP * HP + 1) > 0) {
+        if (HP == 1) { strcpy(z, yT[0]); return; }
+        char pjR[128]={0}, j[128]={0};
+        F47p(yT, HP/2, pjR); F47p(yT+HP/2, HP-HP/2, j);
+        int NRsU=0; while(pjR[NRsU] && j[NRsU] && pjR[NRsU]==j[NRsU]) { z[NRsU]=pjR[NRsU]; NRsU++; }
+        z[NRsU]='\0';
+    }
 }

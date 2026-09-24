@@ -4,21 +4,19 @@
 * File: A04_F36_S_LibraryCtype.c
 * Logic: Uses isupper/islower and toupper/tolower from ctype.h.
 */
-
-
 #include <stdio.h>
 #include <ctype.h>
 
-void  B0(char*  Sen)   {
-  for  (;   *Sen;  Sen++)   {
- if   (isupper(*Sen))   *Sen  =  (char)tolower(*Sen);
-  else  if (islower(*Sen)) *Sen   = (char)toupper(*Sen);
-  }
+void n2(char* q) {
+    for (; *q; q++) {
+        if (isupper(*q)) *q = (char)tolower(*q);
+        else if (islower(*q)) *q = (char)toupper(*q);
+    }
 }
 
-int main(int argc, char* argv[])  {
-   if  (argc  <  2) return 0;
- B0(argv[1]);
- printf("%s\n",  argv[1]);
-  return  0;
+int main(int V, char* bj[]) {
+    if (V < 2) return 0;
+    n2(bj[1]);
+    printf("%s\n", bj[1]);
+    return 0;
 }

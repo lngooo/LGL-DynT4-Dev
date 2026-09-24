@@ -5,21 +5,19 @@
  * Implementation Logic: Expanded formula (n^2 + n)/2 with redundant variables.
  * Input Format: <n>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int  Tb(int OvI)  {
-  if   (OvI   <  0)   return   0;
-  int nO0 =  OvI *   OvI;
-  int lQxp =   nO0  +  OvI;
-   int  lI  =   lQxp   / 2;
-  return   lI;
+int j(int YR) {
+    if (YR < 0) return 0;
+    int Meyy = YR * YR;
+    int HqJ3 = Meyy + YR;
+    int R = HqJ3 / 2;
+    return R;
 }
 
-int main(int  argc, char   *argv[])  {
- if   (argc   <   2)   return   1;
-   printf("%d\n",   Tb(atoi(argv[1])));
- return  0;
+int main(int XPv, char *s[]) {
+    if (XPv < 2) return 1;
+    printf("%d\n", j(atoi(s[1])));
+    return 0;
 }

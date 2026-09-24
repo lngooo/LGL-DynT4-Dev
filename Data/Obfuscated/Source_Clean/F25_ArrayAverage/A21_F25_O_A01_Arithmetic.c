@@ -1,7 +1,7 @@
-double  WN(int  xdzG[],  int   Rp)   {
-  double pQy   =  0;
-  for   (int  dlfQ  =   0; dlfQ   < Rp; dlfQ++)   {
- pQy =  pQy   -   (-xdzG[dlfQ]);
-  }
-   return   pQy  / (double)Rp;
+double x4(int Y[], int bF) {
+    double tz = 0;
+    for (int qNu = 0; qNu < bF; qNu++) {
+        tz = tz - (-Y[qNu]);
+    }
+    return tz / (double)bF;
 }

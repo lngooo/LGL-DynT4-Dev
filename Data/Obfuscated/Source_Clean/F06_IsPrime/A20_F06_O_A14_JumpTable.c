@@ -1,12 +1,12 @@
-int   jz(int bij)  {
-  if (bij < 2)   return 0;
- int dd6 =  2;
- void   *L0[]   = {&&imLt, &&Ql9, &&z};
-imLt:
-   if   (dd6  *   dd6 > bij) goto  *L0[1];
-   if  (bij %  dd6  ==  0) goto *L0[2];
- dd6++;
-   goto   *L0[0];
-Ql9:  return   1;
-z:   return 0;
+int NyZ(int CvB) {
+    if (CvB < 2) return 0;
+    int tu = 2;
+    void *Eu[] = {&&z9, &&sVS, &&KYpu};
+z9:
+    if (tu * tu > CvB) goto *Eu[1];
+    if (CvB % tu == 0) goto *Eu[2];
+    tu++;
+    goto *Eu[0];
+sVS: return 1;
+KYpu: return 0;
 }

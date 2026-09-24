@@ -5,25 +5,23 @@
  * Implementation Logic: Instruction substitution on A17 using subtractions and bitwise inverses to obscure summing.
  * Input Format: <uint32_t>
  */
-
-
 #include <stdio.h>
 #include <stdint.h>
 #include <stdlib.h>
 
-int   s(uint32_t x) {
-  uint32_t   Ja =   0x55555555;
-  x   =  x -   ((x  >>  1) &   Ja);
-   x  =   (x   &  0x33333333)   +  ((x >>  2) & 0x33333333);
- x   =  (x + (x >>  4))   &  0x0F0F0F0F;
-   x =  x  +   (x   >> 8);
-  x  =   x   + (x >>   16);
-  return x &   0x3F;
+int uM(uint32_t Z) {
+    uint32_t yzW = 0x55555555;
+    Z = Z - ((Z >> 1) & yzW);
+    Z = (Z & 0x33333333) + ((Z >> 2) & 0x33333333);
+    Z = (Z + (Z >> 4)) & 0x0F0F0F0F;
+    Z = Z + (Z >> 8);
+    Z = Z + (Z >> 16);
+    return Z & 0x3F;
 }
 
-int   main(int argc, char* argv[]) {
-   if (argc <  2) return 0;
-  uint32_t   uh2   =  (uint32_t)strtoul(argv[1],   NULL, 10);
-  printf("%d\n",   s(uh2));
-   return  0;
+int main(int Tq6, char* pF[]) {
+    if (Tq6 < 2) return 0;
+    uint32_t Om = (uint32_t)strtoul(pF[1], NULL, 10);
+    printf("%d\n", uM(Om));
+    return 0;
 }

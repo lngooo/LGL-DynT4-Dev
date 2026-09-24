@@ -5,38 +5,36 @@
  * Implementation Logic: JumpTable
  * Input Format: <val1> <val2> ...
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-int NOG0(int of[],   int  t) {
-  int   Egt   =   t;
- for   (int  w  =   0;  w   < Egt;  w++)  {
-   int  e   =   w   +   1;
- b:
-   if (e   >=  Egt) continue;
-   if (of[w]  ==  of[e])  {
- for (int  YeHa5  =  e;   YeHa5   < Egt  - 1;   YeHa5++)   of[YeHa5] = of[YeHa5  + 1];
-  Egt--;   goto   b;
- }
-  e++;  goto   b;
-   }
-   return   Egt;
+int ak(int LS[], int Y) {
+    int GTUH = Y;
+    for (int t2o = 0; t2o < GTUH; t2o++) {
+        int TrJ = t2o + 1;
+    cI:
+        if (TrJ >= GTUH) continue;
+        if (LS[t2o] == LS[TrJ]) {
+            for (int sc = TrJ; sc < GTUH - 1; sc++) LS[sc] = LS[sc + 1];
+            GTUH--; goto cI;
+        }
+        TrJ++; goto cI;
+    }
+    return GTUH;
 }
 
-int   main(int  argc,  char   *argv[]) {
-   if   (argc < 2)   return 0;
-  int  c =   argc   -   1;
- int  of[128];
-   for   (int   w   =   0;  w  <   c; w++)  {
- of[w]  = atoi(argv[w   +   1]);
-  }
- int   rpX  = NOG0(of,   c);
-   for   (int  w = 0;  w <   rpX;   w++) {
-  printf("%d%s",  of[w],   (w   == rpX - 1 ?   ""   :  " "));
-  }
-   printf("\n");
- return   0;
+int main(int r7, char *r3[]) {
+    if (r7 < 2) return 0;
+    int P = r7 - 1;
+    int LS[128];
+    for (int t2o = 0; t2o < P; t2o++) {
+        LS[t2o] = atoi(r3[t2o + 1]);
+    }
+    int nI = ak(LS, P);
+    for (int t2o = 0; t2o < nI; t2o++) {
+        printf("%d%s", LS[t2o], (t2o == nI - 1 ? "" : " "));
+    }
+    printf("\n");
+    return 0;
 }

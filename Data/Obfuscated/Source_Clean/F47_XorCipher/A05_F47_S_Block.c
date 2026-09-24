@@ -1,9 +1,9 @@
-void  sj5(char  *q8,   char   *luw)  {
-  int   LNu =  0,  nlh = 0;
-   while(q8[LNu]) LNu++; while(luw[nlh])  nlh++;
-   for(int  e=0; e  <  LNu;   e +=   nlh)   {
-  for(int rwG=0;   rwG   < nlh   &&  (e+rwG)   <  LNu;   rwG++)   {
-  q8[e+rwG]  ^=  luw[rwG];
-  }
- }
+void T0(char *OZR, char *S7I) {
+    int L = 0, V7 = 0;
+    while(OZR[L]) L++; while(S7I[V7]) V7++;
+    for(int t=0; t < L; t += V7) {
+        for(int FcBF=0; FcBF < V7 && (t+FcBF) < L; FcBF++) {
+            OZR[t+FcBF] ^= S7I[FcBF];
+        }
+    }
 }

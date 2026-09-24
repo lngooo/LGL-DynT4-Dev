@@ -1,10 +1,10 @@
-struct  GL4  {   int  S;   int   Iw; };
+struct yT { int Vy; int xgf; };
 
-int K(int  jS)  {
-  struct GL4   lg3  =   {jS, 1};
-  if (lg3.S  <  2)  return  0;
-   for  (int wG0  = 2; wG0 * wG0 <=   lg3.S;   wG0++)  {
- if  (lg3.S  %  wG0   == 0)  { lg3.Iw  =  0;  break;  }
-  }
- return lg3.Iw;
+int t(int xWrg) {
+    struct yT fl = {xWrg, 1};
+    if (fl.Vy < 2) return 0;
+    for (int CJJG = 2; CJJG * CJJG <= fl.Vy; CJJG++) {
+        if (fl.Vy % CJJG == 0) { fl.xgf = 0; break; }
+    }
+    return fl.xgf;
 }

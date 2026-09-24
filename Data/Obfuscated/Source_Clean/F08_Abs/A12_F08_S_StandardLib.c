@@ -1,3 +1,3 @@
-int  Y(int  Lr)   {
-   return   abs(Lr);
+int G(int O0) {
+    return abs(O0);
 }

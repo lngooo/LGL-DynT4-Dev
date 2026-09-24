@@ -4,36 +4,34 @@
  * File: A01_F20_S_StandardIndex.c
  * Implementation Logic: StandardIndex
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-void   f(int  tN4[],   int  YoBO1)   {
- for  (int   kQ3 = 0; kQ3 <  YoBO1   -   1; kQ3++) {
-  int   VD =   kQ3;
- for   (int   USy =  kQ3 +  1; USy   < YoBO1; USy++)  {
-   if  (tN4[USy]  <   tN4[VD])   VD   =   USy;
- }
-   int kRf =  tN4[VD];
-   tN4[VD]  =   tN4[kQ3];
-  tN4[kQ3]   = kRf;
-   }
+void i6hd(int x22[], int sD) {
+    for (int J7 = 0; J7 < sD - 1; J7++) {
+        int pn0o = J7;
+        for (int V = J7 + 1; V < sD; V++) {
+            if (x22[V] < x22[pn0o]) pn0o = V;
+        }
+        int h9 = x22[pn0o];
+        x22[pn0o] = x22[J7];
+        x22[J7] = h9;
+    }
 }
 
-int main(int argc, char *argv[])  {
- if   (argc  <   2)  return  0;
- int  YoBO1  =  argc  - 1;
-  int  *tN4 = (int  *)malloc(YoBO1 *  sizeof(int));
-  for   (int   kQ3   = 0; kQ3  <   YoBO1;   kQ3++) tN4[kQ3]   = atoi(argv[kQ3   + 1]);
+int main(int yU, char *S[]) {
+    if (yU < 2) return 0;
+    int sD = yU - 1;
+    int *x22 = (int *)malloc(sD * sizeof(int));
+    for (int J7 = 0; J7 < sD; J7++) x22[J7] = atoi(S[J7 + 1]);
 
-   f(tN4,   YoBO1);
+    i6hd(x22, sD);
 
- for   (int   kQ3   = 0;   kQ3  < YoBO1; kQ3++)   {
-   printf("%d%s",  tN4[kQ3],  (kQ3  ==   YoBO1   - 1  ?   ""  :   " "));
-  }
- printf("\n");
-  free(tN4);
- return  0;
+    for (int J7 = 0; J7 < sD; J7++) {
+        printf("%d%s", x22[J7], (J7 == sD - 1 ? "" : " "));
+    }
+    printf("\n");
+    free(x22);
+    return 0;
 }

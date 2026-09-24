@@ -1,15 +1,15 @@
-int  mh(const  char* W) {
-  int  aWc[256]  =   {0};
-   int  YdPA   = 7,   JHrS9  =  14;
-  aWc['a']=aWc['e']=aWc['i']=aWc['o']=aWc['u']=aWc['A']=aWc['E']=aWc['I']=aWc['O']=aWc['U']=1;
- int U9   =  0;
-   while   (*W) {
- if  (JHrS9  ==   YdPA  *   2) {  
-  if   (aWc[(unsigned   char)*W])   U9++;
-   W++;
- } else   {
- W--;  
-  }
- }
-  return   U9;
+int JVlR(const char* s2H) {
+    int yLNT[256] = {0};
+    int jF92 = 7, BC = 14;
+    yLNT['a']=yLNT['e']=yLNT['i']=yLNT['o']=yLNT['u']=yLNT['A']=yLNT['E']=yLNT['I']=yLNT['O']=yLNT['U']=1;
+    int U8sP = 0;
+    while (*s2H) {
+        if (BC == jF92 * 2) { 
+            if (yLNT[(unsigned char)*s2H]) U8sP++;
+            s2H++;
+        } else {
+            s2H--; 
+        }
+    }
+    return U8sP;
 }

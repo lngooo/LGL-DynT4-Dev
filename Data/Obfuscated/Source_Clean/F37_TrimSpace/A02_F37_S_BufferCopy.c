@@ -1,11 +1,11 @@
-void   yIH(char* jDb) {
-   char   oW[4096];
-   int ItK   =  0;
-   for (int  tjp = 0;  jDb[tjp];   tjp++)  {
-   if   (jDb[tjp] !=  ' ' &&   jDb[tjp]  !=   '\t' && jDb[tjp]   !=  '\n'  && jDb[tjp]  !=   '\r')   {
-  oW[ItK++]  = jDb[tjp];
- }
- }
-  oW[ItK]   = '\0';
-  strcpy(jDb,  oW);
+void uEQf(char* my) {
+    char t[4096];
+    int fWPQ = 0;
+    for (int k = 0; my[k]; k++) {
+        if (my[k] != ' ' && my[k] != '\t' && my[k] != '\n' && my[k] != '\r') {
+            t[fWPQ++] = my[k];
+        }
+    }
+    t[fWPQ] = '\0';
+    strcpy(my, t);
 }

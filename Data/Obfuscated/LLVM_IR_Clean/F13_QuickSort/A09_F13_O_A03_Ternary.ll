@@ -1,4 +1,4 @@
-define dso_local void @NyZ(i32* %0, i32 %1, i32 %2) {
+define dso_local void @UYGN(i32* %0, i32 %1, i32 %2) {
   %4 = alloca i32*
   %5 = alloca i32
   %6 = alloca i32
@@ -119,7 +119,7 @@ define dso_local void @NyZ(i32* %0, i32 %1, i32 %2) {
   %97 = load i32*, i32** %4
   %98 = load i32, i32* %5
   %99 = load i32, i32* %8
-  call void @NyZ(i32* %97, i32 %98, i32 %99)
+  call void @UYGN(i32* %97, i32 %98, i32 %99)
   br label %101
 100:
   br label %101
@@ -133,7 +133,7 @@ define dso_local void @NyZ(i32* %0, i32 %1, i32 %2) {
   %107 = load i32*, i32** %4
   %108 = load i32, i32* %7
   %109 = load i32, i32* %6
-  call void @NyZ(i32* %107, i32 %108, i32 %109)
+  call void @UYGN(i32* %107, i32 %108, i32 %109)
   br label %111
 110:
   br label %111

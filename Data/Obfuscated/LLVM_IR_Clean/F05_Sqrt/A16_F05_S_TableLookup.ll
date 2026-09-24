@@ -1,5 +1,5 @@
-@PMVU.yDvN = internal constant [16 x i32] [i32 0, i32 1, i32 1, i32 1, i32 2, i32 2, i32 2, i32 2, i32 2, i32 3, i32 3, i32 3, i32 3, i32 3, i32 3, i32 3]
-define dso_local i32 @PMVU(i32 %0) {
+@IwR.rJ = internal constant [16 x i32] [i32 0, i32 1, i32 1, i32 1, i32 2, i32 2, i32 2, i32 2, i32 2, i32 3, i32 3, i32 3, i32 3, i32 3, i32 3, i32 3]
+define dso_local i32 @IwR(i32 %0) {
   %2 = alloca i32
   %3 = alloca i32
   %4 = alloca i64
@@ -18,7 +18,7 @@ define dso_local i32 @PMVU(i32 %0) {
 12:
   %13 = load i32, i32* %3
   %14 = sext i32 %13 to i64
-  %15 = getelementptr inbounds [16 x i32], [16 x i32]* @PMVU.yDvN, i64 0, i64 %14
+  %15 = getelementptr inbounds [16 x i32], [16 x i32]* @IwR.rJ, i64 0, i64 %14
   %16 = load i32, i32* %15
   store i32 %16, i32* %2
   br label %44

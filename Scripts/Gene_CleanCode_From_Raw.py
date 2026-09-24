@@ -10,8 +10,8 @@ import os
 import re
 
 # Path Configuration: Relative to the Scripts/ folder
-RAW_DIR = os.path.join("..", "Data", "Source_Raw")
-CLEAN_DIR = os.path.join("..", "Data", "Source_Clean")
+RAW_DIR = os.path.join("..", "Data", "Obfuscated", "Source_Raw")
+CLEAN_DIR = os.path.join("..", "Data","Obfuscated", "Source_Clean")
 
 
 def clean_code(code):

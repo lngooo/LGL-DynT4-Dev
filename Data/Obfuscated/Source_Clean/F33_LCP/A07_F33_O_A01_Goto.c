@@ -1,15 +1,15 @@
-void  JCjE5(char **Jm,  int  xVS,  char  *pJ) {
-  int   BLlg  =  0;
-  if  (xVS <= 0)  goto e1;
-wbKA:
- if  (!Jm[0][BLlg])   goto e1;
-  int NC3 =   1;
-pT8:
-   if  (NC3   >=   xVS) goto  Uu1;
-   if (Jm[NC3][BLlg] !=   Jm[0][BLlg])  goto e1;
-  NC3++;   goto  pT8;
-Uu1:
-   pJ[BLlg]   =  Jm[0][BLlg];  BLlg++;  goto   wbKA;
-e1:
- pJ[BLlg]   =  '\0';
+void kWV(char **f, int E8, char *C) {
+    int dYO = 0;
+    if (E8 <= 0) goto U;
+wu:
+    if (!f[0][dYO]) goto U;
+    int RhY6 = 1;
+Wsq:
+    if (RhY6 >= E8) goto fI;
+    if (f[RhY6][dYO] != f[0][dYO]) goto U;
+    RhY6++; goto Wsq;
+fI:
+    C[dYO] = f[0][dYO]; dYO++; goto wu;
+U:
+    C[dYO] = '\0';
 }

@@ -4,34 +4,32 @@
  * File: A06_F20_S_InvertedLoop.c
  * Implementation Logic: InvertedLoop
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-void  NzUM(int Sei[],  int xAyz)   {
- for  (int c6   = xAyz -   1;  c6 >   0; c6--)  {
- int FT  =  c6;
-  for   (int qRoM  =   0;  qRoM <  c6;  qRoM++) {
- if   (Sei[qRoM] >  Sei[FT]) FT =   qRoM;
- }
- int I0   =  Sei[c6];   Sei[c6]  =  Sei[FT];  Sei[FT]  = I0;
- }
+void VGgG(int bL[], int EL32) {
+    for (int s = EL32 - 1; s > 0; s--) {
+        int jR = s;
+        for (int f4Of = 0; f4Of < s; f4Of++) {
+            if (bL[f4Of] > bL[jR]) jR = f4Of;
+        }
+        int nZ = bL[s]; bL[s] = bL[jR]; bL[jR] = nZ;
+    }
 }
 
-int main(int  argc, char   *argv[]) {
-   if   (argc   < 2)   return   0;
-  int  xAyz   = argc -  1;
-  int  *Sei =  (int *)malloc(xAyz * sizeof(int));
- for   (int   c6  = 0;  c6 < xAyz;   c6++)  Sei[c6]   =   atoi(argv[c6 + 1]);
+int main(int XT, char *GH[]) {
+    if (XT < 2) return 0;
+    int EL32 = XT - 1;
+    int *bL = (int *)malloc(EL32 * sizeof(int));
+    for (int s = 0; s < EL32; s++) bL[s] = atoi(GH[s + 1]);
 
- NzUM(Sei, xAyz);
+    VGgG(bL, EL32);
 
-   for  (int   c6 =  0; c6 <   xAyz;   c6++) {
- printf("%d%s",   Sei[c6],   (c6  == xAyz -  1 ? ""   :  " "));
-  }
-  printf("\n");
-   free(Sei);
-   return  0;
+    for (int s = 0; s < EL32; s++) {
+        printf("%d%s", bL[s], (s == EL32 - 1 ? "" : " "));
+    }
+    printf("\n");
+    free(bL);
+    return 0;
 }

@@ -1,7 +1,7 @@
-int  Vka0(int  QJd,   int   P) {
-   return (P   *  P  > QJd) ? 1 :  (QJd  % P ==  0   ?  0 :  Vka0(QJd, P  + 1));
+int fIU(int dr, int RMMc) {
+    return (RMMc * RMMc > dr) ? 1 : (dr % RMMc == 0 ? 0 : fIU(dr, RMMc + 1));
 }
 
-int Lc(int   QJd)  {
-   return   (QJd  < 2) ? 0  :  Vka0(QJd,   2);
+int m(int dr) {
+    return (dr < 2) ? 0 : fIU(dr, 2);
 }

@@ -1,14 +1,14 @@
-void aKzt(int N3[], int s)  {
-   int   VqbE  =  0,  h =   s - 1;
-   while   (VqbE <   h)   {
- int  J =   VqbE,  NBeU   = VqbE;
- for   (int  EjX   =  VqbE;  EjX  <=   h;   EjX++)  {
- if (N3[EjX]   < N3[J])   J = EjX;
-   if   (N3[EjX]  >  N3[NBeU])  NBeU =   EjX;
- }
-   int   m = N3[VqbE]; N3[VqbE] =  N3[J];  N3[J]   =   m;
-  if  (NBeU  == VqbE) NBeU = J;
-   int A = N3[h]; N3[h]  =   N3[NBeU]; N3[NBeU]  = A;
-  VqbE++; h--;
-   }
+void l(int h[], int wEN) {
+    int hmM = 0, I = wEN - 1;
+    while (hmM < I) {
+        int H = hmM, n3 = hmM;
+        for (int h5n = hmM; h5n <= I; h5n++) {
+            if (h[h5n] < h[H]) H = h5n;
+            if (h[h5n] > h[n3]) n3 = h5n;
+        }
+        int u = h[hmM]; h[hmM] = h[H]; h[H] = u;
+        if (n3 == hmM) n3 = H;
+        int of = h[I]; h[I] = h[n3]; h[n3] = of;
+        hmM++; I--;
+    }
 }

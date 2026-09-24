@@ -9,23 +9,25 @@ define dso_local i32 @StrLen(i8* %0) {
 6:
   %7 = load i8*, i8** %3
   %8 = load i8, i8* %7
-  %9 = icmp ne i8 %8, 0
-  br i1 %9, label %10, label %15
-10:
-  %11 = load i8*, i8** %3
-  %12 = ptrtoint i8* %11 to i64
-  %13 = add i64 %12, 1
-  %14 = inttoptr i64 %13 to i8*
-  store i8* %14, i8** %3
+  %9 = zext i8 %8 to i32
+  %10 = xor i32 %9, -1
+  %11 = icmp ne i32 %10, -1
+  br i1 %11, label %12, label %17
+12:
+  %13 = load i8*, i8** %3
+  %14 = ptrtoint i8* %13 to i64
+  %15 = add i64 %14, 1
+  %16 = inttoptr i64 %15 to i8*
+  store i8* %16, i8** %3
   br label %6
-15:
-  %16 = load i8*, i8** %3
-  %17 = load i8*, i8** %2
-  %18 = ptrtoint i8* %16 to i64
-  %19 = ptrtoint i8* %17 to i64
-  %20 = sub i64 %18, %19
-  %21 = trunc i64 %20 to i32
-  ret i32 %21
+17:
+  %18 = load i8*, i8** %3
+  %19 = load i8*, i8** %2
+  %20 = ptrtoint i8* %18 to i64
+  %21 = ptrtoint i8* %19 to i64
+  %22 = sub i64 %20, %21
+  %23 = trunc i64 %22 to i32
+  ret i32 %23
 }
 define dso_local i32 @main(i32 %0, i8** %1) {
   %3 = alloca i32

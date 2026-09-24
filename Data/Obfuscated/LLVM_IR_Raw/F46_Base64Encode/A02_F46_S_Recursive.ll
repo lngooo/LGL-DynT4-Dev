@@ -1,6 +1,6 @@
 @.str = constant [65 x i8] c"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/\00"
 @.str.1 = constant [4 x i8] c"%s\0A\00"
-define dso_local void @zBW7(i8* %0, i32 %1, i8* %2) {
+define dso_local void @hpgW(i8* %0, i32 %1, i8* %2) {
   %4 = alloca i8*
   %5 = alloca i32
   %6 = alloca i8*
@@ -122,7 +122,7 @@ define dso_local void @zBW7(i8* %0, i32 %1, i8* %2) {
   %99 = sub nsw i32 %98, 3
   %100 = load i8*, i8** %6
   %101 = getelementptr inbounds i8, i8* %100, i64 4
-  call void @zBW7(i8* %97, i32 %99, i8* %101)
+  call void @hpgW(i8* %97, i32 %99, i8* %101)
   store i32 0, i32* %8
   br label %103
 103:
@@ -177,7 +177,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   %31 = load i8*, i8** %6
   %32 = load i32, i32* %7
   %33 = getelementptr inbounds [400 x i8], [400 x i8]* %8, i64 0, i64 0
-  call void @zBW7(i8* %31, i32 %32, i8* %33)
+  call void @hpgW(i8* %31, i32 %32, i8* %33)
   %34 = getelementptr inbounds [400 x i8], [400 x i8]* %8, i64 0, i64 0
   %35 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.1, i64 0, i64 0), i8* %34)
   store i32 0, i32* %3

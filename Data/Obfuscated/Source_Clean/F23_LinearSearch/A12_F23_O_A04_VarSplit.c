@@ -1,11 +1,11 @@
-int  lKQj(int   fhy2[],   int  H5,   int   fN)   {
-   int   j   = 0,  nQY   =  H5 -  1;
-   while   (j   <=   nQY)  {
- int Ut   =   fhy2[j];
-  int   U7   =  fhy2[nQY];
- if (Ut ==   fN)   return j;
- if   (U7 ==  fN)   return  nQY;
-   j  += 1; nQY -= 1;
-  }
-   return  -1;
+int KPk(int sH[], int ZN, int HMq) {
+    int Dn7v = 0, kH = ZN - 1;
+    while (Dn7v <= kH) {
+        int auAl = sH[Dn7v];
+        int Ee = sH[kH];
+        if (auAl == HMq) return Dn7v;
+        if (Ee == HMq) return kH;
+        Dn7v += 1; kH -= 1;
+    }
+    return -1;
 }

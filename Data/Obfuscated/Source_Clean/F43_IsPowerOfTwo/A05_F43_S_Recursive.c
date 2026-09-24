@@ -1,6 +1,6 @@
-int  J(unsigned int   qDux) {
- if  (qDux ==  0)  return   0;
-   if   (qDux ==  1)   return 1;
-   if   (qDux   %  2   != 0)  return  0;
- return  J(qDux /  2);
+int gzh(unsigned int FxN) {
+    if (FxN == 0) return 0;
+    if (FxN == 1) return 1;
+    if (FxN % 2 != 0) return 0;
+    return gzh(FxN / 2);
 }

@@ -1,10 +1,10 @@
-int   bVqu7(char* WMy) {
-  int   I  =  0;
-   int oh   = 1;
-  for (; *WMy;   WMy++) {
-   int  heo =  (*WMy ==   ' ' ||   *WMy  == '\t'  ||  *WMy ==  '\n');
-   if  (oh   &&   !heo)   I++;
- oh = heo;
-  }
-   return  I;
+int j(char* vQTC) {
+    int jjW = 0;
+    int fN = 1;
+    for (; *vQTC; vQTC++) {
+        int rzoc = (*vQTC == ' ' || *vQTC == '\t' || *vQTC == '\n');
+        if (fN && !rzoc) jjW++;
+        fN = rzoc;
+    }
+    return jjW;
 }

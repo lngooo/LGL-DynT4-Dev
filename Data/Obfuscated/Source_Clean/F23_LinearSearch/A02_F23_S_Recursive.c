@@ -1,5 +1,6 @@
-int  kE(int  gT[], int  M, int q)  {
-  if (M <=  0) return  -1;
-  if   (gT[M-1]  ==  q)  return M-1;
-  return   kE(gT,  M-1, q);
+int w(int V[], int Ue, int kGv) {
+    if (Ue <= 0) return -1;
+    int DOV = w(V, Ue - 1, kGv);
+    if (DOV != -1) return DOV;
+    return (V[Ue - 1] == kGv) ? (Ue - 1) : -1;
 }

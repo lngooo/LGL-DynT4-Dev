@@ -1,21 +1,21 @@
-void  J(int   fTbd1[],   int  qYq3, int  Yzid)  {
-   int  e =   0;
-   while  (e  !=   -1)  {
-   switch(e) {
- case  0:  e = (qYq3 <   Yzid)  ?  1   :   -1; break;
-  case   1:  { int   fWOV7 =   fTbd1[qYq3];  fTbd1[qYq3] =   fTbd1[Yzid];  fTbd1[Yzid]   =  fWOV7;  qYq3++;   Yzid--;   e   =   0;   break;   }
-   }
-  }
+void ckV(int z[], int BnN, int R8v) {
+    int WTC = 0;
+    while (WTC != -1) {
+        switch(WTC) {
+            case 0: WTC = (BnN < R8v) ? 1 : -1; break;
+            case 1: { int pQu = z[BnN]; z[BnN] = z[R8v]; z[R8v] = pQu; BnN++; R8v--; WTC = 0; break; }
+        }
+    }
 }
 
-void q(int r[],   int  BV,   int   ymxY)  {
- if  (BV   ==  0)  return;
-   ymxY  %= BV;
-   int gPNx  =  1;
-  while(gPNx  <= 3) {
-  if(gPNx == 1)  J(r,  0,  ymxY-1);
-   else  if(gPNx  ==   2)  J(r,  ymxY,   BV-1);
-  else   J(r,  0,   BV-1);
-   gPNx++;
-  }
+void nD9(int b6S[], int P7, int M) {
+    if (P7 == 0) return;
+    M %= P7;
+    int a5aR = 1;
+    while(a5aR <= 3) {
+        if(a5aR == 1) ckV(b6S, 0, M-1);
+        else if(a5aR == 2) ckV(b6S, M, P7-1);
+        else ckV(b6S, 0, P7-1);
+        a5aR++;
+    }
 }

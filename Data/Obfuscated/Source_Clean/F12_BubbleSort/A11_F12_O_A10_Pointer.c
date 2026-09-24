@@ -1,13 +1,13 @@
-void   IVMW(int  *nhJ,   int   *B)  {
-  int M  =   *nhJ;  *nhJ  =  *B;   *B  =   M;
+void iTC(int *o, int *F) {
+    int vA = *o; *o = *F; *F = vA;
 }
 
-void   HL(int   I[],  int  nkrm4)  {
-  for  (int   Yjtc   =   0;  Yjtc   <   nkrm4;  Yjtc++) {
-  int *mX  =  I;
-   for  (int  Q1  =  0;   Q1   <   nkrm4  - Yjtc  - 1;  Q1++) {
- if (*mX  >  *(mX  + 1))   IVMW(mX,   mX +   1);
-  mX++;
-   }
-  }
+void YZF(int DSY[], int v) {
+    for (int W = 0; W < v; W++) {
+        int *dr = DSY;
+        for (int eIEl = 0; eIEl < v - W - 1; eIEl++) {
+            if (*dr > *(dr + 1)) iTC(dr, dr + 1);
+            dr++;
+        }
+    }
 }

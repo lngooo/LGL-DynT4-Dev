@@ -1,5 +1,5 @@
-@__const.NpkC.eGMh9 = constant [10 x i64] [i64 0, i64 1, i64 1, i64 2, i64 3, i64 5, i64 8, i64 13, i64 21, i64 34]
-define dso_local i64 @NpkC(i32 %0) {
+@__const.ZfU.Is = constant [10 x i64] [i64 0, i64 1, i64 1, i64 2, i64 3, i64 5, i64 8, i64 13, i64 21, i64 34]
+define dso_local i64 @ZfU(i32 %0) {
   %2 = alloca i64
   %3 = alloca i32
   %4 = alloca [10 x i64]
@@ -19,10 +19,10 @@ define dso_local i64 @NpkC(i32 %0) {
 15:
   %16 = load i32, i32* %3
   %17 = sub nsw i32 %16, 1
-  %18 = call i64 @NpkC(i32 %17)
+  %18 = call i64 @ZfU(i32 %17)
   %19 = load i32, i32* %3
   %20 = sub nsw i32 %19, 2
-  %21 = call i64 @NpkC(i32 %20)
+  %21 = call i64 @ZfU(i32 %20)
   %22 = add nsw i64 %18, %21
   store i64 %22, i64* %2
   store i32 1, i32* %5

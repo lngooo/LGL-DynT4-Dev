@@ -5,29 +5,27 @@
  * Implementation Logic: RecursiveFlatten
  * Input Format: <target> <val1> <val2> ...
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-int  jeO(int   oja[],  int   lHF,  int   RbPm)   {
-  static int   UZH  =   0;
-   if  (lHF  <= 0)  { UZH =   0; return  -1;   }
- if   (oja[0]  ==  RbPm)   {   int   nnDt  =  UZH; UZH =   0; return   nnDt; }
-  UZH++;
-  return  jeO(oja +   1,   lHF   -   1,   RbPm);
+int K(int fh6f[], int Uf, int uL) {
+    static int X = 0;
+    if (Uf <= 0) { X = 0; return -1; }
+    if (fh6f[0] == uL) { int Ya = X; X = 0; return Ya; }
+    X++;
+    return K(fh6f + 1, Uf - 1, uL);
 }
 
-int   main(int argc,  char  *argv[]) {
- if  (argc < 3) return   1;
- int   RbPm   =  atoi(argv[1]);
-   int   nspi  = argc  - 2;
-   int  oja[100];
-  for  (int M  = 0; M <   nspi;   M++) {
-  oja[M] = atoi(argv[M   +   2]);
- }
- int  ti  =  jeO(oja,  nspi, RbPm);
-   printf("%d\n",  ti);
- return   0;
+int main(int Ox, char *f4U8[]) {
+    if (Ox < 3) return 1;
+    int uL = atoi(f4U8[1]);
+    int t1 = Ox - 2;
+    int fh6f[100];
+    for (int VW = 0; VW < t1; VW++) {
+        fh6f[VW] = atoi(f4U8[VW + 2]);
+    }
+    int td = K(fh6f, t1, uL);
+    printf("%d\n", td);
+    return 0;
 }

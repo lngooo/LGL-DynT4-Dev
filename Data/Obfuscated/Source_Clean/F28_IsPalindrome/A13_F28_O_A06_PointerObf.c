@@ -1,12 +1,12 @@
-int   tfzd3(char   *sptD)  {
- char  *BEjX  =  sptD;
-   char   *JTXg = sptD;
- while (*JTXg)   JTXg++;
-   JTXg   =   JTXg -  1;
-   while   (BEjX   <   JTXg)  {
- if  (*BEjX -  *JTXg   !=  0) return 0;
- BEjX++;
-   JTXg--;
-  }
-  return  1;
+int SrS2(char *hQ) {
+    char *Cg = hQ;
+    char *i = hQ;
+    while (*i) i++;
+    i = i - 1;
+    while (Cg < i) {
+        if (*Cg - *i != 0) return 0;
+        Cg++;
+        i--;
+    }
+    return 1;
 }

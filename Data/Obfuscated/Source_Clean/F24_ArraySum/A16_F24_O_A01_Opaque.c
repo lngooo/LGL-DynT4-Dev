@@ -1,7 +1,7 @@
-int   U5(int   Tt[], int  g)  {
-   int  i   = 0;
-   for   (int z =  0;  z  <  g;  z++)  {
- if ((z * z +  1)   >   0)   i  +=  Tt[z];
- }
- return   i;
+int Q(int GII[], int o2zF) {
+    int s07C = 0;
+    for (int lz = 0; lz < o2zF; lz++) {
+        if ((lz * lz + 1) > 0) s07C += GII[lz];
+    }
+    return s07C;
 }

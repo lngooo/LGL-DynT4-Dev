@@ -1,14 +1,14 @@
-int   Y(int aUAz6)   {
-   if (aUAz6  < 0) return  -1;
- if (aUAz6   ==   0) return  0;
-   double  eSr   =   (double)aUAz6;
-  double   kf4  = 0.5  *  (eSr  +  (double)aUAz6 /  eSr);
-  while   (fabs(eSr  -   kf4)  >=  1.0)  {
-  eSr   =  kf4;
-  kf4 =  0.5 *  (eSr  +   (double)aUAz6 /  eSr);
-  }
+int EF5Q(int fPI) {
+    if (fPI < 0) return -1;
+    if (fPI == 0) return 0;
+    double lx4y = (double)fPI;
+    double lCc = 0.5 * (lx4y + (double)fPI / lx4y);
+    while (fabs(lx4y - lCc) >= 1.0) {
+        lx4y = lCc;
+        lCc = 0.5 * (lx4y + (double)fPI / lx4y);
+    }
 
-   int   qBf  =  (int)kf4;
-  if ((long)(qBf  +  1)  *  (qBf   +   1)   <= aUAz6) qBf++;
-   return   qBf;
+    int CDq = (int)lCc;
+    if ((long)(CDq + 1) * (CDq + 1) <= fPI) CDq++;
+    return CDq;
 }

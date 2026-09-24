@@ -5,19 +5,17 @@
  * Implementation Logic: Utilizing GCC built-in popcount function for hardware-optimized counting.
  * Input Format: <uint32_t>
  */
-
-
 #include <stdio.h>
 #include <stdint.h>
 #include <stdlib.h>
 
-int   k(uint32_t   T) {
- return   __builtin_popcount(T);
+int xvEZ(uint32_t Xi) {
+    return __builtin_popcount(Xi);
 }
 
-int main(int   argc, char* argv[]) {
-  if (argc   <   2)   return  0;
-  uint32_t   zO  =  (uint32_t)strtoul(argv[1], NULL,   10);
- printf("%d\n", k(zO));
-  return 0;
+int main(int p, char* c[]) {
+    if (p < 2) return 0;
+    uint32_t rKB = (uint32_t)strtoul(c[1], NULL, 10);
+    printf("%d\n", xvEZ(rKB));
+    return 0;
 }

@@ -5,23 +5,21 @@
 * Implementation Logic: Bitwise flag toggle to track transitions between space and non-space ASCII ranges.
 * Input Format: <string>
 */
-
-
 #include <stdio.h>
 
-int   bVqu7(char* WMy) {
-  int   I  =  0;
-   int oh   = 1;
-  for (; *WMy;   WMy++) {
-   int  heo =  (*WMy ==   ' ' ||   *WMy  == '\t'  ||  *WMy ==  '\n');
-   if  (oh   &&   !heo)   I++;
- oh = heo;
-  }
-   return  I;
+int j(char* vQTC) {
+    int jjW = 0;
+    int fN = 1;
+    for (; *vQTC; vQTC++) {
+        int rzoc = (*vQTC == ' ' || *vQTC == '\t' || *vQTC == '\n');
+        if (fN && !rzoc) jjW++;
+        fN = rzoc;
+    }
+    return jjW;
 }
 
-int main(int  argc,   char*  argv[]) {
- if  (argc   <   2)   return  0;
- printf("%d\n",  bVqu7(argv[1]));
- return  0;
+int main(int t, char* i[]) {
+    if (t < 2) return 0;
+    printf("%d\n", j(i[1]));
+    return 0;
 }

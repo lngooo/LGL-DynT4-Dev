@@ -1,6 +1,6 @@
-int i7(int  s[],   int  JCWJ2, int qS)  {
- for  (int  XNI  =  0;  XNI   < JCWJ2; XNI++)  {
-   if  (~s[XNI]  == ~qS)  return  XNI;
-   }
-  return   -1;
+int e(int WG[], int Ur, int l) {
+    for (int crMm = 0; crMm < Ur; crMm++) {
+        if (~WG[crMm] == ~l) return crMm;
+    }
+    return -1;
 }

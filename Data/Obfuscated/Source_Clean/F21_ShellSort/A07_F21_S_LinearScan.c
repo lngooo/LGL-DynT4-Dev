@@ -1,3 +1,3 @@
-void   KylP(int *YbvN,   int   HKv)  {
-  for(int   w=HKv/2;w>0;w/=2){for(int dvC=w;dvC<HKv;dvC++){int  vKJy=YbvN[dvC],veS3=dvC;while(veS3>=w&&YbvN[veS3-w]>vKJy)veS3-=w;for(int zzz=dvC;zzz>veS3;zzz-=w)YbvN[zzz]=YbvN[zzz-w];YbvN[veS3]=vKJy;}}
+void Pj2G(int *xy, int NGmX) {
+    for(int merB=NGmX/2;merB>0;merB/=2){for(int Rt=merB;Rt<NGmX;Rt++){int j=xy[Rt],gVhp=Rt;while(gVhp>=merB&&xy[gVhp-merB]>j)gVhp-=merB;for(int D=Rt;D>gVhp;D-=merB)xy[D]=xy[D-merB];xy[gVhp]=j;}}
 }

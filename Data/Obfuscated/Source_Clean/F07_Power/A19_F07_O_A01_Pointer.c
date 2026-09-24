@@ -1,6 +1,6 @@
-int   Gkdh(int   m0,   int exp)  {
-  int  uWpz3  =   1;
- int   *QJS  =  &uWpz3;
-   for  (int  hbhM8  =   0; hbhM8  <  exp;  hbhM8++) *QJS *=  m0;
-  return uWpz3;
+int eH(int N, int exp) {
+    int Cw = 1;
+    int *OV = &Cw;
+    for (int AN = 0; AN < exp; AN++) *OV *= N;
+    return Cw;
 }

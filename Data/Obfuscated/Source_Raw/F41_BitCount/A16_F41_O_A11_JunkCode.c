@@ -5,27 +5,25 @@
  * Implementation Logic: Data flow obfuscation derived from A11 by injecting redundant arithmetic junk.
  * Input Format: <uint32_t>
  */
-
-
 #include <stdio.h>
 #include <stdint.h>
 #include <stdlib.h>
 
-int  MpBr(uint32_t ZpN4)   {
-   int   wJ  =   0;
-   uint32_t   lWt  =  0xABCDE;
-   for (int opr  =   0;  opr  < 32;   opr++)   {
-   lWt =  (lWt   * 3)   +  opr;
-  if   (ZpN4   % 2  !=  0)  wJ++;
-   ZpN4 /= 2;
-  }
-   if   (lWt   ==  0)   printf("%u", lWt);   
-   return wJ;
+int f(uint32_t Tk9k) {
+    int sd = 0;
+    uint32_t dC0 = 0xABCDE;
+    for (int qQ4I = 0; qQ4I < 32; qQ4I++) {
+        dC0 = (dC0 * 3) + qQ4I;
+        if (Tk9k % 2 != 0) sd++;
+        Tk9k /= 2;
+    }
+    if (dC0 == 0) printf("%u", dC0); 
+    return sd;
 }
 
-int   main(int argc,  char*  argv[])   {
-   if (argc <  2)   return 0;
-   uint32_t   Fra9 =  (uint32_t)strtoul(argv[1], NULL,  10);
-  printf("%d\n",   MpBr(Fra9));
-  return   0;
+int main(int UX9g, char* POSF[]) {
+    if (UX9g < 2) return 0;
+    uint32_t qAg = (uint32_t)strtoul(POSF[1], NULL, 10);
+    printf("%d\n", f(qAg));
+    return 0;
 }

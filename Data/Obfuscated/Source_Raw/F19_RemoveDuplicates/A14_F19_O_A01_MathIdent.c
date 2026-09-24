@@ -5,36 +5,34 @@
  * Implementation Logic: MathIdent
  * Input Format: <val1> <val2> ...
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-int   J7(int  KJ5[],  int   xi3)   {
-  int r  =   0;
- for   (int  M =  0;   M   < xi3;  M++) {
- int d  =   0;
-  for  (int ER = 0;   ER <  r;  ER++)   {
- double   iPqe  = (double)KJ5[M] -  (double)KJ5[ER];
-   if  ((int)floor(iPqe *  iPqe)   ==   0) d =  1;
-   }
-   if (!d)  KJ5[r++] = KJ5[M];
-  }
- return  r;
+int xCO(int B[], int E) {
+    int H78G = 0;
+    for (int k = 0; k < E; k++) {
+        int S9i = 0;
+        for (int c9K = 0; c9K < H78G; c9K++) {
+            double Y = (double)B[k] - (double)B[c9K];
+            if ((int)floor(Y * Y) == 0) S9i = 1;
+        }
+        if (!S9i) B[H78G++] = B[k];
+    }
+    return H78G;
 }
 
-int main(int argc,  char   *argv[]) {
-   if (argc   <  2)   return 0;
- int  IZIp   =  argc   -   1;
- int  KJ5[128];
-   for (int  M  = 0; M   <  IZIp;  M++)  {
-   KJ5[M]  = atoi(argv[M  +  1]);
-  }
-  int  NJP   =  J7(KJ5,  IZIp);
- for   (int  M  = 0; M  <   NJP;   M++)   {
-  printf("%d%s",  KJ5[M],   (M ==  NJP -  1 ? ""  :   " "));
-   }
-   printf("\n");
-   return   0;
+int main(int V0, char *FRI3[]) {
+    if (V0 < 2) return 0;
+    int WGyJ = V0 - 1;
+    int B[128];
+    for (int k = 0; k < WGyJ; k++) {
+        B[k] = atoi(FRI3[k + 1]);
+    }
+    int zMrn = xCO(B, WGyJ);
+    for (int k = 0; k < zMrn; k++) {
+        printf("%d%s", B[k], (k == zMrn - 1 ? "" : " "));
+    }
+    printf("\n");
+    return 0;
 }

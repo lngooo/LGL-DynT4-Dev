@@ -1,16 +1,16 @@
-void yeid0(int  v[], int  Azp3,   int   SQp)  {
-   if   (Azp3 >=   SQp) goto   ZXG;
-   int  TNCX5   =  v[SQp],   RFNi2 =  Azp3  -  1, Y  = Azp3;
-A:
- if (Y >= SQp) goto  SwSo;
-  if (v[Y]   >=   TNCX5)  goto WWOX;
-   RFNi2++;
- { int PHe9 =   v[RFNi2];  v[RFNi2] =  v[Y];   v[Y]   =   PHe9;  }
-WWOX:
- Y++; goto  A;
-SwSo:
- { int   PHe9   =   v[RFNi2+1];   v[RFNi2+1]  = v[SQp]; v[SQp] = PHe9; }
-   yeid0(v, Azp3, RFNi2);
-   yeid0(v,  RFNi2   +   2,   SQp);
-ZXG:;
+void oVQm(int el[], int NFSu, int pBzX) {
+    if (NFSu >= pBzX) goto M;
+    int UuzN = el[pBzX], H = NFSu - 1, C = NFSu;
+c4pH:
+    if (C >= pBzX) goto VcJy;
+    if (el[C] >= UuzN) goto m;
+    H++;
+    { int Cz4 = el[H]; el[H] = el[C]; el[C] = Cz4; }
+m:
+    C++; goto c4pH;
+VcJy:
+    { int Cz4 = el[H+1]; el[H+1] = el[pBzX]; el[pBzX] = Cz4; }
+    oVQm(el, NFSu, H);
+    oVQm(el, H + 2, pBzX);
+M:;
 }

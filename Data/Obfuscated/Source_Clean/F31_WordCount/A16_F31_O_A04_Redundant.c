@@ -1,13 +1,13 @@
-int  Te(char*  Px)   {
-  int eeE   =  0;
-   while (*Px)   {
- int   naYb  = (eeE  *  2) / 1;
-  while  (*Px   &&  isspace(*Px)) {  Px++;   naYb++; }
- if  (*Px)   {
-   eeE++;
-   while (*Px && !isspace(*Px))  Px++;
-   }
- if (naYb < 0)   eeE--;   
- }
-   return  eeE;
+int cf(char* L) {
+    int j = 0;
+    while (*L) {
+        int C = (j * 2) / 1;
+        while (*L && isspace(*L)) { L++; C++; }
+        if (*L) {
+            j++;
+            while (*L && !isspace(*L)) L++;
+        }
+        if (C < 0) j--; 
+    }
+    return j;
 }

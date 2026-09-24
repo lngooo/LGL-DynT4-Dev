@@ -1,14 +1,14 @@
-static  char KvM3[4096];
-void  oF(char* mQ1)   {
- int  iQB = 0;
-   char   *XrO  =   mQ1;
-   while   (*XrO) {
- if  (*XrO != ' ' &&  *XrO   != '\t'  &&   *XrO  !=   '\n')   {
- *(KvM3   +   iQB) =  *XrO;
-   iQB++;
-  }
- XrO++;
-   }
- *(KvM3  + iQB)  = '\0';
-  strcpy(mQ1, KvM3);
+static char BFAd[4096];
+void YBq(char* a0) {
+    int uB3 = 0;
+    char *FWC = a0;
+    while (*FWC) {
+        if (*FWC != ' ' && *FWC != '\t' && *FWC != '\n') {
+            *(BFAd + uB3) = *FWC;
+            uB3++;
+        }
+        FWC++;
+    }
+    *(BFAd + uB3) = '\0';
+    strcpy(a0, BFAd);
 }

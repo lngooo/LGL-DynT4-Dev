@@ -1,4 +1,4 @@
-define dso_local void @cXl3(i8* %0, i32 %1) {
+define dso_local void @k(i8* %0, i32 %1) {
   %3 = alloca i8*
   %4 = alloca i32
   %5 = alloca i32
@@ -72,7 +72,7 @@ define dso_local void @cXl3(i8* %0, i32 %1) {
   %60 = load i8*, i8** %3
   %61 = getelementptr inbounds i8, i8* %60, i64 1
   %62 = load i32, i32* %4
-  call void @cXl3(i8* %61, i32 %62)
+  call void @k(i8* %61, i32 %62)
   br label %64
 64:
   ret void

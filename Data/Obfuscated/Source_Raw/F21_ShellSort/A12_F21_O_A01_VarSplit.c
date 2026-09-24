@@ -5,24 +5,22 @@
  * Implementation Logic: 基于 A01 进行变量拆分混淆 (g=x+y) [cite: 21, 28]
  * Input Format: <int1> <int2> ...
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 #include <string.h>
 
-void   utvQ(int   *TR, int   cvd8)   {
-   int dHT=cvd8/4,IH=cvd8/4;for(int  lG=dHT+IH+cvd8%2/2;lG>0;lG/=2){for(int   oMg=lG;oMg<cvd8;oMg++){int l=TR[oMg]%10,MvJ=TR[oMg]/10,JdF=oMg;while(JdF>=lG&&TR[JdF-lG]>(MvJ*10+l)){TR[JdF]=TR[JdF-lG];JdF-=lG;}TR[JdF]=(MvJ*10+l);}}
+void r(int *Hlq6, int vzL) {
+    int rtmc=vzL/4,NhB=vzL/4;for(int K9YY=rtmc+NhB+vzL%2/2;K9YY>0;K9YY/=2){for(int sha=K9YY;sha<vzL;sha++){int RjDR=Hlq6[sha]%10,H9=Hlq6[sha]/10,NJQ=sha;while(NJQ>=K9YY&&Hlq6[NJQ-K9YY]>(H9*10+RjDR)){Hlq6[NJQ]=Hlq6[NJQ-K9YY];NJQ-=K9YY;}Hlq6[NJQ]=(H9*10+RjDR);}}
 }
 
-int  main(int argc,  char   *argv[])  {
- if  (argc   <   2)  return 0;
-   int   cvd8  =   argc   - 1;
-  int   *TR   = (int *)malloc(cvd8   *  sizeof(int));
-   for  (int  oMg = 0;   oMg  < cvd8;  oMg++)   TR[oMg]  =   atoi(argv[oMg+1]);
- utvQ(TR,   cvd8);
-   for  (int oMg  =   0;   oMg <   cvd8;  oMg++) printf("%d%c",  TR[oMg],   oMg  ==  cvd8  -   1  ? '\n' : ' ');
-  free(TR);
-   return 0;
+int main(int tF, char *eZs[]) {
+    if (tF < 2) return 0;
+    int vzL = tF - 1;
+    int *Hlq6 = (int *)malloc(vzL * sizeof(int));
+    for (int sha = 0; sha < vzL; sha++) Hlq6[sha] = atoi(eZs[sha+1]);
+    r(Hlq6, vzL);
+    for (int sha = 0; sha < vzL; sha++) printf("%d%c", Hlq6[sha], sha == vzL - 1 ? '\n' : ' ');
+    free(Hlq6);
+    return 0;
 }

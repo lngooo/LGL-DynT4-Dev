@@ -1,16 +1,16 @@
-int   ElR3(int   NnT[], int I)   {
-   int  wikn =   0,   otqW   =  0, OmQg;
-T8:
-   if   (wikn   >=  I) goto  rr;
-  OmQg   =   0;
-PXTx:
-   if   (OmQg   >= otqW) goto  qb;
-   if (NnT[wikn]  ==   NnT[OmQg]) goto IWqu6;
-   OmQg++; goto   PXTx;
-qb:
- NnT[otqW++]  =   NnT[wikn];
-IWqu6:
-   wikn++;   goto   T8;
-rr:
- return  otqW;
+int N(int Va[], int SIVw) {
+    int VQ = 0, M = 0, kR74;
+le:
+    if (VQ >= SIVw) goto iGw;
+    kR74 = 0;
+B:
+    if (kR74 >= M) goto ykxh;
+    if (Va[VQ] == Va[kR74]) goto Rp1;
+    kR74++; goto B;
+ykxh:
+    Va[M++] = Va[VQ];
+Rp1:
+    VQ++; goto le;
+iGw:
+    return M;
 }

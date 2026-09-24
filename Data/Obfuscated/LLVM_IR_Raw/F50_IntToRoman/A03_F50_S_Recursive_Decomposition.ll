@@ -12,7 +12,7 @@
 @.str.11 = constant [3 x i8] c"IV\00"
 @.str.12 = constant [2 x i8] c"I\00"
 @.str.13 = constant [4 x i8] c"%s\0A\00"
-define dso_local void @pog1(i32 %0, i8* %1) {
+define dso_local void @Fwg(i32 %0, i8* %1) {
   %3 = alloca i32
   %4 = alloca i8*
   store i32 %0, i32* %3
@@ -32,7 +32,7 @@ define dso_local void @pog1(i32 %0, i8* %1) {
   %14 = load i32, i32* %3
   %15 = sub nsw i32 %14, 1000
   %16 = load i8*, i8** %4
-  call void @pog1(i32 %15, i8* %16)
+  call void @Fwg(i32 %15, i8* %16)
   br label %133
 17:
   %18 = load i32, i32* %3
@@ -44,7 +44,7 @@ define dso_local void @pog1(i32 %0, i8* %1) {
   %23 = load i32, i32* %3
   %24 = sub nsw i32 %23, 900
   %25 = load i8*, i8** %4
-  call void @pog1(i32 %24, i8* %25)
+  call void @Fwg(i32 %24, i8* %25)
   br label %132
 26:
   %27 = load i32, i32* %3
@@ -56,7 +56,7 @@ define dso_local void @pog1(i32 %0, i8* %1) {
   %32 = load i32, i32* %3
   %33 = sub nsw i32 %32, 500
   %34 = load i8*, i8** %4
-  call void @pog1(i32 %33, i8* %34)
+  call void @Fwg(i32 %33, i8* %34)
   br label %131
 35:
   %36 = load i32, i32* %3
@@ -68,7 +68,7 @@ define dso_local void @pog1(i32 %0, i8* %1) {
   %41 = load i32, i32* %3
   %42 = sub nsw i32 %41, 400
   %43 = load i8*, i8** %4
-  call void @pog1(i32 %42, i8* %43)
+  call void @Fwg(i32 %42, i8* %43)
   br label %130
 44:
   %45 = load i32, i32* %3
@@ -80,7 +80,7 @@ define dso_local void @pog1(i32 %0, i8* %1) {
   %50 = load i32, i32* %3
   %51 = sub nsw i32 %50, 100
   %52 = load i8*, i8** %4
-  call void @pog1(i32 %51, i8* %52)
+  call void @Fwg(i32 %51, i8* %52)
   br label %129
 53:
   %54 = load i32, i32* %3
@@ -92,7 +92,7 @@ define dso_local void @pog1(i32 %0, i8* %1) {
   %59 = load i32, i32* %3
   %60 = sub nsw i32 %59, 90
   %61 = load i8*, i8** %4
-  call void @pog1(i32 %60, i8* %61)
+  call void @Fwg(i32 %60, i8* %61)
   br label %128
 62:
   %63 = load i32, i32* %3
@@ -104,7 +104,7 @@ define dso_local void @pog1(i32 %0, i8* %1) {
   %68 = load i32, i32* %3
   %69 = sub nsw i32 %68, 50
   %70 = load i8*, i8** %4
-  call void @pog1(i32 %69, i8* %70)
+  call void @Fwg(i32 %69, i8* %70)
   br label %127
 71:
   %72 = load i32, i32* %3
@@ -116,7 +116,7 @@ define dso_local void @pog1(i32 %0, i8* %1) {
   %77 = load i32, i32* %3
   %78 = sub nsw i32 %77, 40
   %79 = load i8*, i8** %4
-  call void @pog1(i32 %78, i8* %79)
+  call void @Fwg(i32 %78, i8* %79)
   br label %126
 80:
   %81 = load i32, i32* %3
@@ -128,7 +128,7 @@ define dso_local void @pog1(i32 %0, i8* %1) {
   %86 = load i32, i32* %3
   %87 = sub nsw i32 %86, 10
   %88 = load i8*, i8** %4
-  call void @pog1(i32 %87, i8* %88)
+  call void @Fwg(i32 %87, i8* %88)
   br label %125
 89:
   %90 = load i32, i32* %3
@@ -140,7 +140,7 @@ define dso_local void @pog1(i32 %0, i8* %1) {
   %95 = load i32, i32* %3
   %96 = sub nsw i32 %95, 9
   %97 = load i8*, i8** %4
-  call void @pog1(i32 %96, i8* %97)
+  call void @Fwg(i32 %96, i8* %97)
   br label %124
 98:
   %99 = load i32, i32* %3
@@ -152,7 +152,7 @@ define dso_local void @pog1(i32 %0, i8* %1) {
   %104 = load i32, i32* %3
   %105 = sub nsw i32 %104, 5
   %106 = load i8*, i8** %4
-  call void @pog1(i32 %105, i8* %106)
+  call void @Fwg(i32 %105, i8* %106)
   br label %123
 107:
   %108 = load i32, i32* %3
@@ -164,7 +164,7 @@ define dso_local void @pog1(i32 %0, i8* %1) {
   %113 = load i32, i32* %3
   %114 = sub nsw i32 %113, 4
   %115 = load i8*, i8** %4
-  call void @pog1(i32 %114, i8* %115)
+  call void @Fwg(i32 %114, i8* %115)
   br label %122
 116:
   %117 = load i8*, i8** %4
@@ -172,7 +172,7 @@ define dso_local void @pog1(i32 %0, i8* %1) {
   %119 = load i32, i32* %3
   %120 = sub nsw i32 %119, 1
   %121 = load i8*, i8** %4
-  call void @pog1(i32 %120, i8* %121)
+  call void @Fwg(i32 %120, i8* %121)
   br label %122
 122:
   br label %123
@@ -200,7 +200,7 @@ define dso_local void @pog1(i32 %0, i8* %1) {
   ret void
 }
 declare i8* @strcat(i8*, i8*)
-define dso_local void @d8(i32 %0, i8* %1) {
+define dso_local void @HCvH(i32 %0, i8* %1) {
   %3 = alloca i32
   %4 = alloca i8*
   store i32 %0, i32* %3
@@ -210,7 +210,7 @@ define dso_local void @d8(i32 %0, i8* %1) {
   store i8 0, i8* %6
   %7 = load i32, i32* %3
   %8 = load i8*, i8** %4
-  call void @pog1(i32 %7, i8* %8)
+  call void @Fwg(i32 %7, i8* %8)
   ret void
 }
 define dso_local i32 @main(i32 %0, i8** %1) {
@@ -233,7 +233,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   %14 = load i8*, i8** %13
   %15 = call i32 @atoi(i8* %14)
   %16 = getelementptr inbounds [100 x i8], [100 x i8]* %6, i64 0, i64 0
-  call void @d8(i32 %15, i8* %16)
+  call void @HCvH(i32 %15, i8* %16)
   %17 = getelementptr inbounds [100 x i8], [100 x i8]* %6, i64 0, i64 0
   %18 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.13, i64 0, i64 0), i8* %17)
   store i32 0, i32* %3

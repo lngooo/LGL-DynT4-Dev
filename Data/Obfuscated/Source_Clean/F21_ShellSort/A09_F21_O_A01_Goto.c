@@ -1,3 +1,3 @@
-void  TF(int  *IU0,  int   pXd3) {
-  int   ZLr=pXd3/2;EtcK:if(ZLr<=0)goto A;int   V=ZLr;nfPu:if(V>=pXd3){ZLr/=2;goto   EtcK;}int  uOS=IU0[V],Wc=V;o0:if(Wc>=ZLr&&IU0[Wc-ZLr]>uOS){IU0[Wc]=IU0[Wc-ZLr];Wc-=ZLr;goto o0;}IU0[Wc]=uOS;V++;goto nfPu;A:;
+void K(int *peI, int r) {
+    int NS=r/2;zzgo:if(NS<=0)goto Fnk;int wO=NS;TMs:if(wO>=r){NS/=2;goto zzgo;}int G6=peI[wO],Vt26=wO;ku:if(Vt26>=NS&&peI[Vt26-NS]>G6){peI[Vt26]=peI[Vt26-NS];Vt26-=NS;goto ku;}peI[Vt26]=G6;wO++;goto TMs;Fnk:;
 }

@@ -1,14 +1,14 @@
-void   d(char   *J2) {
-  int   wX  =  strlen(J2);
- char  *COs8 =   (char*)malloc(wX  +   1);
-  int   KWig   = 0;
-   for(int  YX = wX-1;  YX   >=   0;  YX--) {
-   if(J2[YX]  ==  ' ')  {
- for(int   Gs4=YX+1;  J2[Gs4]!=' '   &&  J2[Gs4]!='\0';   Gs4++)  COs8[KWig++] =   J2[Gs4];
- COs8[KWig++]  = ' ';
-  }
-   }
-   for(int  Gs4=0;   J2[Gs4]!=' '   &&  J2[Gs4]!='\0';   Gs4++) COs8[KWig++]  =   J2[Gs4];
-   COs8[KWig]  = '\0';
-   strcpy(J2,   COs8); free(COs8);
+void b(char *S) {
+    int DByh = strlen(S);
+    char *Tyha = (char*)malloc(DByh + 1);
+    int xy = 0;
+    for(int U = DByh-1; U >= 0; U--) {
+        if(S[U] == ' ') {
+            for(int Js=U+1; S[Js]!=' ' && S[Js]!='\0'; Js++) Tyha[xy++] = S[Js];
+            Tyha[xy++] = ' ';
+        }
+    }
+    for(int Js=0; S[Js]!=' ' && S[Js]!='\0'; Js++) Tyha[xy++] = S[Js];
+    Tyha[xy] = '\0';
+    strcpy(S, Tyha); free(Tyha);
 }

@@ -4,22 +4,20 @@
  * File: A12_F43_O_A01_VarSplit.c
  * Implementation Logic: Variable splitting on input 'n' into two components derived from A01.
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int FVG(unsigned  int  ytw) {
- unsigned   int  R  = ytw   & 0xFFFF0000;
-  unsigned   int rn6  =   ytw   &  0x0000FFFF;
-   unsigned int y7 = R | rn6;
-   if   (y7   ==  0)  return  0;
-   return  (y7   & (y7  - 1))   ==  0;
+int LZ(unsigned int L7et) {
+    unsigned int n0 = L7et & 0xFFFF0000;
+    unsigned int iLMK = L7et & 0x0000FFFF;
+    unsigned int yOY = n0 | iLMK;
+    if (yOY == 0) return 0;
+    return (yOY & (yOY - 1)) == 0;
 }
 
-int main(int argc,   char* argv[])  {
-  if   (argc < 2)   return 0;
-  unsigned int ytw   = (unsigned int)strtoul(argv[1],   NULL, 10);
-  printf("%d",   FVG(ytw));
-  return   0;
+int main(int q5vd, char* S[]) {
+    if (q5vd < 2) return 0;
+    unsigned int L7et = (unsigned int)strtoul(S[1], NULL, 10);
+    printf("%d", LZ(L7et));
+    return 0;
 }

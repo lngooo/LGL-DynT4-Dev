@@ -1,9 +1,9 @@
-long long  qngi(int  l,   long   long   em) {
- if  (l <= 0) return em;
- return qngi(l - 1,  em  *   l);
+long long Wdnr(int sC, long long hbOM) {
+    if (sC <= 0) return hbOM;
+    return Wdnr(sC - 1, hbOM * sC);
 }
 
-long   long   J2(int l)   {
-   if  (l < 0) return 0;
-   return  qngi(l, 1);
+long long Tk(int sC) {
+    if (sC < 0) return 0;
+    return Wdnr(sC, 1);
 }

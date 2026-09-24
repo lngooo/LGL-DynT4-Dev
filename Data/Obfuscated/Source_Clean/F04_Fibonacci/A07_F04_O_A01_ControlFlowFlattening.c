@@ -1,13 +1,13 @@
-long  mLHR1(int  GAPF)  {
-  int   oMQ =  0;
- long j7 =  0,  oGjb8 =   1,  j4;
- int LL2  =  2;
- while (oMQ   != 3)  {
-  switch (oMQ)   {
- case 0:  if   (GAPF ==   0)   return 0;  oMQ  =   1;  break;
-  case 1:   oMQ   = (LL2   <=   GAPF)   ? 2  :  3;   break;
-  case 2:  j4 =   j7 + oGjb8; j7   =  oGjb8;  oGjb8 = j4;  LL2++;   oMQ =  1; break;
- }
- }
-   return   (GAPF  ==   1)   ? 1  : oGjb8;
+long F(int liyI) {
+    int GJ = 0;
+    long ez3 = 0, B = 1, D;
+    int u = 2;
+    while (GJ != 3) {
+        switch (GJ) {
+            case 0: if (liyI == 0) return 0; GJ = 1; break;
+            case 1: GJ = (u <= liyI) ? 2 : 3; break;
+            case 2: D = ez3 + B; ez3 = B; B = D; u++; GJ = 1; break;
+        }
+    }
+    return (liyI == 1) ? 1 : B;
 }

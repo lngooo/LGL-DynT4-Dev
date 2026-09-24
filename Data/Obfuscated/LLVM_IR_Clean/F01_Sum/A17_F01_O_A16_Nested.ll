@@ -1,4 +1,4 @@
-define dso_local i32 @vzI(i32 %0, i32 %1) {
+define dso_local i32 @V(i32 %0, i32 %1) {
   %3 = alloca i32
   %4 = alloca i32
   %5 = alloca i32
@@ -19,14 +19,14 @@ define dso_local i32 @vzI(i32 %0, i32 %1) {
   %15 = load i32, i32* %5
   %16 = and i32 %14, %15
   %17 = shl i32 %16, 1
-  %18 = call i32 @vzI(i32 %13, i32 %17)
+  %18 = call i32 @V(i32 %13, i32 %17)
   store i32 %18, i32* %3
   br label %19
 19:
   %20 = load i32, i32* %3
   ret i32 %20
 }
-define dso_local i32 @I(i32 %0) {
+define dso_local i32 @d9(i32 %0) {
   %2 = alloca i32
   %3 = alloca i32
   store i32 %0, i32* %3
@@ -40,8 +40,8 @@ define dso_local i32 @I(i32 %0) {
   %8 = load i32, i32* %3
   %9 = load i32, i32* %3
   %10 = sub nsw i32 %9, 1
-  %11 = call i32 @I(i32 %10)
-  %12 = call i32 @vzI(i32 %8, i32 %11)
+  %11 = call i32 @d9(i32 %10)
+  %12 = call i32 @V(i32 %8, i32 %11)
   store i32 %12, i32* %2
   br label %13
 13:

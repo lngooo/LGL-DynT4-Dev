@@ -5,35 +5,33 @@
  * Implementation Logic: Unroll
  * Input Format: <data_string> <key_string>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
 
-void ubi(char *Q4,  char *F) {
-   int YA3 = 0,   Szr  = 0;   while(F[YA3])   YA3++;
- while(Q4[Szr] && Q4[Szr+1]) {
- Q4[Szr]  ^=   F[Szr %  YA3];
-  Q4[Szr+1]  ^= F[(Szr+1)   %   YA3];
-  Szr   +=   2;
- }
- if(Q4[Szr])   Q4[Szr]   ^=   F[Szr   % YA3];
+void ti8m(char *y, char *r50) {
+    int h6V = 0, Dl = 0; while(r50[h6V]) h6V++;
+    while(y[Dl] && y[Dl+1]) {
+        y[Dl] ^= r50[Dl % h6V];
+        y[Dl+1] ^= r50[(Dl+1) % h6V];
+        Dl += 2;
+    }
+    if(y[Dl]) y[Dl] ^= r50[Dl % h6V];
 }
 
-int   main(int  argc,  char  *argv[]) {
-   if (argc  < 3)  return 0;
-   char *Q4 =   argv[1];
-   char   *F  =  argv[2];
-  int  CRP =   0;
-   while (Q4[CRP])   CRP++;
+int main(int EQ5y, char *E8A[]) {
+    if (EQ5y < 3) return 0;
+    char *y = E8A[1];
+    char *r50 = E8A[2];
+    int B = 0;
+    while (y[B]) B++;
 
-   ubi(Q4,  F);
+    ti8m(y, r50);
 
-   for   (int Szr  =   0;   Szr  < CRP;  Szr++)   {
- printf("%02x",  (unsigned  char)Q4[Szr]);
-  }
- printf("\n");
- return  0;
+    for (int Dl = 0; Dl < B; Dl++) {
+        printf("%02x", (unsigned char)y[Dl]);
+    }
+    printf("\n");
+    return 0;
 }

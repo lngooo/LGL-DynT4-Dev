@@ -2,7 +2,7 @@
 @.str.1 = constant [1 x i8] zeroinitializer
 @.str.2 = constant [2 x i8] c" \00"
 @.str.3 = constant [2 x i8] c"\0A\00"
-define dso_local void @yeid0(i32* %0, i32 %1, i32 %2) {
+define dso_local void @oVQm(i32* %0, i32 %1, i32 %2) {
   %4 = alloca i32*
   %5 = alloca i32
   %6 = alloca i32
@@ -111,12 +111,12 @@ define dso_local void @yeid0(i32* %0, i32 %1, i32 %2) {
   %90 = load i32*, i32** %4
   %91 = load i32, i32* %5
   %92 = load i32, i32* %8
-  call void @yeid0(i32* %90, i32 %91, i32 %92)
+  call void @oVQm(i32* %90, i32 %91, i32 %92)
   %93 = load i32*, i32** %4
   %94 = load i32, i32* %8
   %95 = add nsw i32 %94, 2
   %96 = load i32, i32* %6
-  call void @yeid0(i32* %93, i32 %95, i32 %96)
+  call void @oVQm(i32* %93, i32 %95, i32 %96)
   br label %97
 97:
   ret void
@@ -179,7 +179,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   %46 = load i32*, i32** %7
   %47 = load i32, i32* %6
   %48 = sub nsw i32 %47, 1
-  call void @yeid0(i32* %46, i32 0, i32 %48)
+  call void @oVQm(i32* %46, i32 0, i32 %48)
   store i32 0, i32* %9
   br label %50
 50:

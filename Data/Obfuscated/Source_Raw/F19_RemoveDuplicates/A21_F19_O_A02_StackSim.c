@@ -5,36 +5,34 @@
  * Implementation Logic: StackSim
  * Input Format: <val1> <val2> ...
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-int  GCK0(int   ibL[],  int   bsV1) {
-   if (bsV1 <= 0) return 0;
- int  xhu3  =  GCK0(ibL,  bsV1 -  1);
- int   ow   = ibL[bsV1   -  1],  F =  0;
- int   Q  =   0;
- while  (Q < xhu3)  {
- if  (ibL[Q]   ==   ow)  { F = 1;  break;   }
-  Q++;
- }
-   if  (!F)  { ibL[xhu3] =   ow;  return   xhu3 + 1;   }
-  return xhu3;
+int jfu(int lX[], int wuFB) {
+    if (wuFB <= 0) return 0;
+    int SAMY = jfu(lX, wuFB - 1);
+    int iZ8 = lX[wuFB - 1], yA = 0;
+    int IIFI = 0;
+    while (IIFI < SAMY) {
+        if (lX[IIFI] == iZ8) { yA = 1; break; }
+        IIFI++;
+    }
+    if (!yA) { lX[SAMY] = iZ8; return SAMY + 1; }
+    return SAMY;
 }
 
-int main(int  argc,   char *argv[])  {
-  if (argc  <   2)   return  0;
- int   jzHU8   =   argc  - 1;
-  int ibL[128];
-   for  (int   u =   0;  u <   jzHU8; u++)   {
-  ibL[u]  =   atoi(argv[u   +   1]);
-   }
-  int  N1   =   GCK0(ibL,   jzHU8);
- for  (int  u   = 0;  u <  N1;   u++)  {
-  printf("%d%s", ibL[u], (u   ==   N1   - 1  ?   "" : " "));
-   }
- printf("\n");
- return 0;
+int main(int yf, char *HKXS[]) {
+    if (yf < 2) return 0;
+    int Sf = yf - 1;
+    int lX[128];
+    for (int xa = 0; xa < Sf; xa++) {
+        lX[xa] = atoi(HKXS[xa + 1]);
+    }
+    int bx = jfu(lX, Sf);
+    for (int xa = 0; xa < bx; xa++) {
+        printf("%d%s", lX[xa], (xa == bx - 1 ? "" : " "));
+    }
+    printf("\n");
+    return 0;
 }

@@ -1,4 +1,4 @@
-define dso_local void @IVMW(i32* %0, i32* %1) {
+define dso_local void @iTC(i32* %0, i32* %1) {
   %3 = alloca i32*
   %4 = alloca i32*
   %5 = alloca i32
@@ -16,7 +16,7 @@ define dso_local void @IVMW(i32* %0, i32* %1) {
   store i32 %12, i32* %13
   ret void
 }
-define dso_local void @HL(i32* %0, i32 %1) {
+define dso_local void @YZF(i32* %0, i32 %1) {
   %3 = alloca i32*
   %4 = alloca i32
   %5 = alloca i32
@@ -63,7 +63,7 @@ define dso_local void @HL(i32* %0, i32 %1) {
   %37 = load i32*, i32** %7
   %38 = load i32*, i32** %7
   %39 = getelementptr inbounds i32, i32* %38, i64 1
-  call void @IVMW(i32* %37, i32* %39)
+  call void @iTC(i32* %37, i32* %39)
   br label %40
 40:
   %41 = load i32*, i32** %7

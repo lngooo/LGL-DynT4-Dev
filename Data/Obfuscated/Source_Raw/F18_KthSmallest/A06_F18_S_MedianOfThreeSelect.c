@@ -4,40 +4,38 @@
  * File: A06_F18_S_MedianOfThreeSelect.c
  * Implementation Logic: MedianOfThreeSelect
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-int   YoV(int  fit[],   int   Y,  int   KP,   int  bO5)  {
- int  iXB =  Y  +  (KP - Y) /  2;
- if (fit[iXB]   <   fit[Y])   { int xW=fit[iXB];   fit[iXB]=fit[Y];  fit[Y]=xW; }
- if   (fit[KP]   <  fit[Y]) {  int   xW=fit[KP]; fit[KP]=fit[Y]; fit[Y]=xW;  }
-  if (fit[KP] < fit[iXB])   {  int xW=fit[KP];  fit[KP]=fit[iXB]; fit[iXB]=xW;   }
-  int   PjGq3  = fit[iXB];
- int   kOLB6   =  Y,   eX0  =   KP;
-   while   (kOLB6 <=   eX0) {
-  while   (fit[kOLB6]   < PjGq3) kOLB6++;
-   while (fit[eX0]  > PjGq3) eX0--;
- if   (kOLB6   <=   eX0)  { int xW=fit[kOLB6]; fit[kOLB6]=fit[eX0];   fit[eX0]=xW;   kOLB6++;  eX0--;  }
- }
- if   (bO5   -   1  <=   eX0  - Y) return YoV(fit, Y, eX0,  bO5);
-   if   (bO5   -   1  >=  kOLB6 -  Y)  return  YoV(fit,   kOLB6, KP, bO5 - (kOLB6 -   Y));
-   return   fit[eX0+1];
+int M(int hIV[], int keQW, int R, int jCw) {
+    int nT = keQW + (R - keQW) / 2;
+    if (hIV[nT] < hIV[keQW]) { int CS=hIV[nT]; hIV[nT]=hIV[keQW]; hIV[keQW]=CS; }
+    if (hIV[R] < hIV[keQW]) { int CS=hIV[R]; hIV[R]=hIV[keQW]; hIV[keQW]=CS; }
+    if (hIV[R] < hIV[nT]) { int CS=hIV[R]; hIV[R]=hIV[nT]; hIV[nT]=CS; }
+    int O = hIV[nT];
+    int y = keQW, CdM = R;
+    while (y <= CdM) {
+        while (hIV[y] < O) y++;
+        while (hIV[CdM] > O) CdM--;
+        if (y <= CdM) { int CS=hIV[y]; hIV[y]=hIV[CdM]; hIV[CdM]=CS; y++; CdM--; }
+    }
+    if (jCw - 1 <= CdM - keQW) return M(hIV, keQW, CdM, jCw);
+    if (jCw - 1 >= y - keQW) return M(hIV, y, R, jCw - (y - keQW));
+    return hIV[CdM+1];
 }
 
-int main(int  argc, char   *argv[])  {
- if  (argc  < 3) return   0;
-  int bO5 = atoi(argv[1]);
- int  tz   =   argc   -  2;
-  int   *fit  =   (int   *)malloc(tz  *  sizeof(int));
-  for   (int   kOLB6  = 0;   kOLB6  <   tz; kOLB6++)  fit[kOLB6]  = atoi(argv[kOLB6  +   2]);
+int main(int d, char *Xm7p[]) {
+    if (d < 3) return 0;
+    int jCw = atoi(Xm7p[1]);
+    int pmf = d - 2;
+    int *hIV = (int *)malloc(pmf * sizeof(int));
+    for (int y = 0; y < pmf; y++) hIV[y] = atoi(Xm7p[y + 2]);
 
-  // 假设 K  是从  1   开始的  (1st   smallest)
-  int n  = YoV(fit,   0,  tz  - 1,   bO5);
+    // 假设 K 是从 1 开始的 (1st smallest)
+    int A = M(hIV, 0, pmf - 1, jCw);
 
- printf("%d\n",  n);
-   free(fit);
- return 0;
+    printf("%d\n", A);
+    free(hIV);
+    return 0;
 }

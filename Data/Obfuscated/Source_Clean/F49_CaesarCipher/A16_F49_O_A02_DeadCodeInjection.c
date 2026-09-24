@@ -1,11 +1,11 @@
-void  U9(char *jF, int  FAcj8)  {
+void ZcvN(char *kNG, int iOs) {
 
- char  *HYQ9 = jF;
-  int   Hlr   =  (FAcj8   %   26  +  26)  % 26;
-   while(*HYQ9)  {
-  if(0)   {  Hlr   =   Hlr  + 1;   }
-   if(*HYQ9  >= 'A' &&   *HYQ9 <= 'Z')   *HYQ9   =   (*HYQ9 -   'A'  +  Hlr)   % 26   +   'A';
-  else if(*HYQ9 >=   'a'  && *HYQ9  <=   'z')  *HYQ9 =  (*HYQ9 - 'a'   + Hlr)  % 26   +  'a';
- HYQ9++;
-   }
+    char *U = kNG;
+    int O = (iOs % 26 + 26) % 26;
+    while(*U) {
+        if(0) { O = O + 1; }
+        if(*U >= 'A' && *U <= 'Z') *U = (*U - 'A' + O) % 26 + 'A';
+        else if(*U >= 'a' && *U <= 'z') *U = (*U - 'a' + O) % 26 + 'a';
+        U++;
+    }
 }

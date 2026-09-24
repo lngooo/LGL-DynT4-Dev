@@ -11,7 +11,7 @@
 @.str.10 = constant [2 x i8] c"V\00"
 @.str.11 = constant [3 x i8] c"IV\00"
 @.str.12 = constant [2 x i8] c"I\00"
-define dso_local void @IV(i32 %0, i8* %1) {
+define dso_local void @CNCI(i32 %0, i8* %1) {
   %3 = alloca i32
   %4 = alloca i8*
   store i32 %0, i32* %3
@@ -164,7 +164,7 @@ define dso_local void @IV(i32 %0, i8* %1) {
   br label %5
 }
 declare i8* @strcat(i8*, i8*)
-define dso_local void @V(i32 %0, i8* %1) {
+define dso_local void @qAE(i32 %0, i8* %1) {
   %3 = alloca i32
   %4 = alloca i8*
   store i32 %0, i32* %3
@@ -174,6 +174,6 @@ define dso_local void @V(i32 %0, i8* %1) {
   store i8 0, i8* %6
   %7 = load i32, i32* %3
   %8 = load i8*, i8** %4
-  call void @IV(i32 %7, i8* %8)
+  call void @CNCI(i32 %7, i8* %8)
   ret void
 }

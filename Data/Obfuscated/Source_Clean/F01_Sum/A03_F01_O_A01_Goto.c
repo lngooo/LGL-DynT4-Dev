@@ -1,10 +1,10 @@
-int hN(int   F) {
- int   W  =   0, mmD7  =   1;
-YNA4:
-   if  (mmD7 >   F)   goto   fwx;
- W   +=  mmD7;
-  mmD7++;
-   goto   YNA4;
-fwx:
-  return  W;
+int w(int MqZ) {
+    int U = 0, Ih7y = 1;
+J:
+    if (Ih7y > MqZ) goto ON4;
+    U += Ih7y;
+    Ih7y++;
+    goto J;
+ON4:
+    return U;
 }

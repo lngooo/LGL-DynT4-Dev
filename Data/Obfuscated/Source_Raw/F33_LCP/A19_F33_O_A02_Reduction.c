@@ -5,32 +5,30 @@
  * Implementation Logic: Reduction
  * Input Format: <str1> <str2> ...
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
 
-void c4(char **ajvM, int   SIV4,   char *mTQY8) {
- if  (SIV4 <= 0)  return;
- int   fi   =  0;
-   while  (ajvM[0][fi])   {  mTQY8[fi]   = ajvM[0][fi];  fi++;   }
-   mTQY8[fi] =   '\0';
- for   (int  TMi   =  1;   TMi  <  SIV4;   TMi++) {
- int mv =   0;
-  while  (mTQY8[mv] && ajvM[TMi][mv]   &&   mTQY8[mv]   ==   ajvM[TMi][mv])  mv++;
- mTQY8[mv] = '\0';
-  if  (!mTQY8[0])   break;
- }
+void Xmvt(char **E3, int Ac, char *oP) {
+    if (Ac <= 0) return;
+    int NUh = 0;
+    while (E3[0][NUh]) { oP[NUh] = E3[0][NUh]; NUh++; }
+    oP[NUh] = '\0';
+    for (int g = 1; g < Ac; g++) {
+        int CSS = 0;
+        while (oP[CSS] && E3[g][CSS] && oP[CSS] == E3[g][CSS]) CSS++;
+        oP[CSS] = '\0';
+        if (!oP[0]) break;
+    }
 }
 
-int main(int  argc, char  *argv[])  {
-   if (argc   <   2)  return 0;
-  int  b = argc - 1;
-  char  **ajvM =   &argv[1];
-   char  hZDG8[128]  =  {0};
-   c4(ajvM, b, hZDG8);
-  printf("%s\n",   hZDG8);
-  return   0;
+int main(int M, char *G[]) {
+    if (M < 2) return 0;
+    int KLT = M - 1;
+    char **E3 = &G[1];
+    char Z[128] = {0};
+    Xmvt(E3, KLT, Z);
+    printf("%s\n", Z);
+    return 0;
 }

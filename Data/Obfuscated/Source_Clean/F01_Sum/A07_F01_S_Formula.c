@@ -1,4 +1,4 @@
-int a(int  d4) {
- if  (d4  < 0)  return   0;
-   return  (int)((d4   *   (d4   + 1))   /   2);
+int Z(int zre) {
+    if (zre < 0) return 0;
+    return (int)((zre * (zre + 1)) / 2);
 }

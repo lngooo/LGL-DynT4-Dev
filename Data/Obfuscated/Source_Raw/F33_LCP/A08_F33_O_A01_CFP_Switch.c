@@ -5,36 +5,34 @@
  * Implementation Logic: Switch
  * Input Format: <str1> <str2> ...
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
 
-void Vt(char **p, int  vi,  char   *E)   {
-  int  LAm   = 0,  g =  0;
-  while   (LAm !=  3)  {
- switch (LAm)  {
-   case   0:   LAm   =   (vi > 0   && p[0][g])  ?   1  :  3;   break;
-  case 1:  {
- int   A   =  1;
- while  (A   <  vi   && p[A][g]  == p[0][g]) A++;
-  if  (A   == vi)  { E[g]  = p[0][g]; g++;   LAm  = 0; }
-   else LAm  = 3;
-   break;
-   }
-  }
- }
-  E[g] =   '\0';
+void EcGB(char **bcMd, int Q, char *pyw) {
+    int fxU = 0, Hjz = 0;
+    while (fxU != 3) {
+        switch (fxU) {
+            case 0: fxU = (Q > 0 && bcMd[0][Hjz]) ? 1 : 3; break;
+            case 1: {
+                int KhpA = 1;
+                while (KhpA < Q && bcMd[KhpA][Hjz] == bcMd[0][Hjz]) KhpA++;
+                if (KhpA == Q) { pyw[Hjz] = bcMd[0][Hjz]; Hjz++; fxU = 0; }
+                else fxU = 3;
+                break;
+            }
+        }
+    }
+    pyw[Hjz] = '\0';
 }
 
-int main(int  argc,  char   *argv[])  {
- if   (argc   <   2)   return  0;
-  int   AO  =  argc   - 1;
- char   **p   = &argv[1];
-  char   W[128]  =  {0};
-   Vt(p, AO,  W);
-  printf("%s\n", W);
-   return 0;
+int main(int Zr, char *ux[]) {
+    if (Zr < 2) return 0;
+    int x = Zr - 1;
+    char **bcMd = &ux[1];
+    char kYK[128] = {0};
+    EcGB(bcMd, x, kYK);
+    printf("%s\n", kYK);
+    return 0;
 }

@@ -1,17 +1,17 @@
-void y(char*  we6)   {
- char* r9 = we6;
- int  uTa   =  1;
- while   (*r9) {
- if   (*r9  ==  ' '   || *r9 == '\t'  ||  *r9   ==   '\n') {
- uTa  =   1;
-   }  else   {
- if (uTa)  {
-   if  (*r9   >=   'a'   &&   *r9  <= 'z')  *r9   -= 32;
-   uTa =  0;
- }   else  {
-   if   (*r9 >=  'A'   && *r9  <=   'Z') *r9   +=  32;
- }
- }
- r9++;
- }
+void e(char* V) {
+    char* K = V;
+    int P = 1;
+    while (*K) {
+        if (*K == ' ' || *K == '\t' || *K == '\n') {
+            P = 1;
+        } else {
+            if (P) {
+                if (*K >= 'a' && *K <= 'z') *K -= 32;
+                P = 0;
+            } else {
+                if (*K >= 'A' && *K <= 'Z') *K += 32;
+            }
+        }
+        K++;
+    }
 }

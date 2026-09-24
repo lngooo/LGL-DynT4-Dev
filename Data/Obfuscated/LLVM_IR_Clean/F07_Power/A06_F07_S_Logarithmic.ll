@@ -1,42 +1,110 @@
-define dso_local i32 @h1(i32 %0, i32 %1) {
+define dso_local i32 @JB9(i32 %0, i32 %1) {
   %3 = alloca i32
   %4 = alloca i32
   %5 = alloca i32
   %6 = alloca double
+  %7 = alloca double
+  %8 = alloca i32
+  %9 = alloca i32
+  %10 = alloca i32
+  %11 = alloca i32
+  %12 = alloca i64
+  %13 = alloca i32
   store i32 %0, i32* %4
   store i32 %1, i32* %5
-  %7 = load i32, i32* %5
-  %8 = icmp eq i32 %7, 0
-  br i1 %8, label %9, label %10
-9:
+  %14 = load i32, i32* %5
+  %15 = icmp eq i32 %14, 0
+  br i1 %15, label %16, label %17
+16:
   store i32 1, i32* %3
-  br label %29
-10:
-  %11 = load i32, i32* %4
-  %12 = icmp eq i32 %11, 0
-  br i1 %12, label %13, label %14
-13:
-  store i32 0, i32* %3
-  br label %29
-14:
-  %16 = load i32, i32* %5
-  %17 = sitofp i32 %16 to double
+  br label %82
+17:
   %18 = load i32, i32* %4
-  %19 = sitofp i32 %18 to double
-  %20 = call double @log(double %19)
-  %21 = fmul double %17, %20
-  store double %21, double* %6
-  %22 = load double, double* %6
-  %23 = fptrunc double %22 to float
-  %24 = call float @expf(float %23)
-  %25 = fpext float %24 to double
-  %26 = fadd double %25, 5.000000e-01
-  %27 = fptosi double %26 to i32
-  store i32 %27, i32* %3
-  br label %29
-29:
-  %30 = load i32, i32* %3
-  ret i32 %30
+  %19 = icmp eq i32 %18, 0
+  br i1 %19, label %20, label %21
+20:
+  store i32 0, i32* %3
+  br label %82
+21:
+  %23 = load i32, i32* %5
+  %24 = sitofp i32 %23 to double
+  %25 = load i32, i32* %4
+  %26 = sitofp i32 %25 to double
+  %27 = call double @log(double %26)
+  %28 = fmul double %24, %27
+  store double %28, double* %6
+  %30 = load double, double* %6
+  %31 = call double @exp(double %30)
+  store double %31, double* %7
+  store i32 1, i32* %8
+  %34 = load i32, i32* %4
+  store i32 %34, i32* %9
+  store i32 0, i32* %10
+  br label %36
+36:
+  %37 = load i32, i32* %10
+  %38 = load i32, i32* %5
+  %39 = icmp slt i32 %37, %38
+  br i1 %39, label %42, label %40
+40:
+  br label %49
+42:
+  %43 = load i32, i32* %9
+  %44 = load i32, i32* %8
+  %45 = mul i32 %44, %43
+  store i32 %45, i32* %8
+  br label %46
+46:
+  %47 = load i32, i32* %10
+  %48 = add nsw i32 %47, 1
+  store i32 %48, i32* %10
+  br label %36
+49:
+  %51 = load i32, i32* %8
+  store i32 %51, i32* %11
+  %52 = load double, double* %7
+  %53 = fcmp ole double %52, 0x41DFFFFFFFC00000
+  br i1 %53, label %54, label %74
+54:
+  %55 = load double, double* %7
+  %56 = fcmp oge double %55, 0xC1E0000000000000
+  br i1 %56, label %57, label %74
+57:
+  %59 = load double, double* %7
+  %60 = fadd double %59, 5.000000e-01
+  %61 = fptosi double %60 to i64
+  store i64 %61, i64* %12
+  %62 = load i64, i64* %12
+  %63 = trunc i64 %62 to i32
+  %64 = load i32, i32* %11
+  %65 = icmp eq i32 %63, %64
+  br i1 %65, label %66, label %69
+66:
+  %67 = load i64, i64* %12
+  %68 = trunc i64 %67 to i32
+  store i32 %68, i32* %3
+  store i32 1, i32* %13
+  br label %70
+69:
+  store i32 0, i32* %13
+  br label %70
+70:
+  %72 = load i32, i32* %13
+  switch i32 %72, label %76 [
+    i32 0, label %73
+  ]
+73:
+  br label %74
+74:
+  %75 = load i32, i32* %11
+  store i32 %75, i32* %3
+  store i32 1, i32* %13
+  br label %76
+76:
+  br label %82
+82:
+  %83 = load i32, i32* %3
+  ret i32 %83
 }
 declare double @log(double)
-declare float @expf(float)
+declare double @exp(double)

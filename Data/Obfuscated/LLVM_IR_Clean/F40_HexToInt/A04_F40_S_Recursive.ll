@@ -1,4 +1,4 @@
-define dso_local i32 @Hn(i8* %0, i32 %1) {
+define dso_local i32 @ukn(i8* %0, i32 %1) {
   %3 = alloca i32
   %4 = alloca i8*
   %5 = alloca i32
@@ -56,7 +56,7 @@ define dso_local i32 @Hn(i8* %0, i32 %1) {
   %45 = load i8*, i8** %4
   %46 = load i32, i32* %5
   %47 = sub nsw i32 %46, 1
-  %48 = call i32 @Hn(i8* %45, i32 %47)
+  %48 = call i32 @ukn(i8* %45, i32 %47)
   %49 = mul nsw i32 16, %48
   %50 = add nsw i32 %44, %49
   store i32 %50, i32* %3
@@ -65,14 +65,14 @@ define dso_local i32 @Hn(i8* %0, i32 %1) {
   %53 = load i32, i32* %3
   ret i32 %53
 }
-define dso_local i32 @ne(i8* %0) {
+define dso_local i32 @P7(i8* %0) {
   %2 = alloca i8*
   store i8* %0, i8** %2
   %3 = load i8*, i8** %2
   %4 = load i8*, i8** %2
   %5 = call i64 @strlen(i8* %4)
   %6 = trunc i64 %5 to i32
-  %7 = call i32 @Hn(i8* %3, i32 %6)
+  %7 = call i32 @ukn(i8* %3, i32 %6)
   ret i32 %7
 }
 declare i64 @strlen(i8*)

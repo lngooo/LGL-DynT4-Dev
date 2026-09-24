@@ -1,5 +1,5 @@
 @.str = constant [4 x i8] c"%s\0A\00"
-define dso_local void @vbhy(i8* %0) {
+define dso_local void @LpI(i8* %0) {
   %2 = alloca i8*
   %3 = alloca [256 x i8]
   %4 = alloca i32
@@ -117,7 +117,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   %10 = load i8**, i8*** %5
   %11 = getelementptr inbounds i8*, i8** %10, i64 1
   %12 = load i8*, i8** %11
-  call void @vbhy(i8* %12)
+  call void @LpI(i8* %12)
   %13 = load i8**, i8*** %5
   %14 = getelementptr inbounds i8*, i8** %13, i64 1
   %15 = load i8*, i8** %14

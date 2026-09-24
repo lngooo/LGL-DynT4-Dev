@@ -1,4 +1,4 @@
-define dso_local i32 @KAu(i8* %0, i8* %1) {
+define dso_local i32 @uakY(i8* %0, i8* %1) {
   %3 = alloca i8*
   %4 = alloca i8*
   store i8* %0, i8** %3
@@ -18,13 +18,13 @@ define dso_local i32 @KAu(i8* %0, i8* %1) {
   %21 = sub nsw i32 %12, %20
   ret i32 %21
 }
-define dso_local void @RSJ(i32* %0, i32 %1) {
+define dso_local void @SMjx(i32* %0, i32 %1) {
   %3 = alloca i32*
   %4 = alloca i32
   %5 = alloca i32 (i8*, i8*)*
   store i32* %0, i32** %3
   store i32 %1, i32* %4
-  store i32 (i8*, i8*)* @KAu, i32 (i8*, i8*)** %5
+  store i32 (i8*, i8*)* @uakY, i32 (i8*, i8*)** %5
   %7 = load i32*, i32** %3
   %9 = load i32, i32* %4
   %10 = sext i32 %9 to i64

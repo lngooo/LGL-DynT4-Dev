@@ -1,4 +1,4 @@
-define dso_local i32 @gpQX4(i32* %0, i32 %1, i32 %2, i32 %3) {
+define dso_local i32 @s(i32* %0, i32 %1, i32 %2, i32 %3) {
   %5 = alloca i32*
   %6 = alloca i32
   %7 = alloca i32

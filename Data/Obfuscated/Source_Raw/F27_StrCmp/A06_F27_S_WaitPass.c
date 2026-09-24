@@ -5,19 +5,17 @@
  * Implementation Logic: Scans until divergence, then performs final subtraction.
  * Input Format: <str1> <str2>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int  r(const  char *I, const  char   *A7) {
- int   c9  =  0;
- while(I[c9]   ==  A7[c9]  &&   I[c9]  !=  '\0')   c9++;
-  return   (unsigned   char)I[c9] -   (unsigned char)A7[c9];
+int So(const char *oC, const char *ja) {
+    int p9b = 0;
+    while(oC[p9b] == ja[p9b] && oC[p9b] != '\0') p9b++;
+    return (unsigned char)oC[p9b] - (unsigned char)ja[p9b];
 }
 
-int main(int   argc,  char   *argv[])  {
-  if   (argc   <  3)  return   0;
- printf("%d\n",  r(argv[1],  argv[2]));
-   return 0;
+int main(int CAJJ, char *Al[]) {
+    if (CAJJ < 3) return 0;
+    printf("%d\n", So(Al[1], Al[2]));
+    return 0;
 }

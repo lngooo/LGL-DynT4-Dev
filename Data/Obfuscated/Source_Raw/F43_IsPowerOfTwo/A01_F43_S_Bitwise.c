@@ -6,19 +6,17 @@
  * A power of two has only one bit set.
  * Input Format: <uint>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int  dH1(unsigned  int Fi1) {
-  if (Fi1  ==  0)  return 0;
- return   (Fi1 & (Fi1  - 1)) ==  0;
+int ukg2(unsigned int Io) {
+    if (Io == 0) return 0;
+    return (Io & (Io - 1)) == 0;
 }
 
-int  main(int argc,  char* argv[])  {
- if (argc  <  2)   return  0;
-   unsigned   int Fi1  =   (unsigned   int)strtoul(argv[1], NULL,   10);
- printf("%d", dH1(Fi1));
- return 0;
+int main(int aF1, char* i[]) {
+    if (aF1 < 2) return 0;
+    unsigned int Io = (unsigned int)strtoul(i[1], NULL, 10);
+    printf("%d", ukg2(Io));
+    return 0;
 }

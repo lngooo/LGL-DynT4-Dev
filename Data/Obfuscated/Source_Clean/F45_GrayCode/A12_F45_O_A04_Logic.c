@@ -1,6 +1,6 @@
-unsigned  int   P4(unsigned  int wWZ)  {
- unsigned int   tw =  wWZ;
- unsigned   int  r0 =   wWZ   >> 1;
+unsigned int h4cd(unsigned int Mlod) {
+    unsigned int BAb = Mlod;
+    unsigned int f = Mlod >> 1;
 
- return   (tw | r0)  &   ~(tw &   r0);
+    return (BAb | f) & ~(BAb & f);
 }

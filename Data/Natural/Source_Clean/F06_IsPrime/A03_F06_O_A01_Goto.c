@@ -1,13 +1,17 @@
 int IsPrime(int n) {
+    int i = 2;
+
     if (n < 2) goto false_label;
-    if (n < 4) goto true_label;
-    if (n % 2 == 0) goto false_label;
-    int i = 3;
-loop:
-    if (i * i > n) goto true_label;
+
+loop_check:
+    if (i > n / i) goto true_label;
     if (n % i == 0) goto false_label;
-    i += 2;
-    goto loop;
-true_label: return 1;
-false_label: return 0;
+    i++;
+    goto loop_check;
+
+true_label:
+    return 1;
+
+false_label:
+    return 0;
 }

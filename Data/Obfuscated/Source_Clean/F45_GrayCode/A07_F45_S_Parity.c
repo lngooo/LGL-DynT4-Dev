@@ -1,10 +1,10 @@
-unsigned   int   CDH(unsigned  int  J)   {
- unsigned int   Qn4   = 0;
-   unsigned int Zcdz,   g;
-   for  (int   CO6  =   0;   CO6 <   32;  CO6++) {
-  Zcdz   =  (J   >> CO6)  &  1;
-  g   = (J  >> (CO6   +  1))  & 1;
-  if   (Zcdz   !=   g) Qn4 |=   (1U  << CO6);
- }
-   return  Qn4;
+unsigned int Cf(unsigned int H) {
+    unsigned int u = 0;
+    unsigned int Q, Sqv;
+    for (int WK = 0; WK < 32; WK++) {
+        Q = (H >> WK) & 1U;
+        Sqv = (WK == 31) ? 0U : ((H >> (WK + 1)) & 1U);
+        if (Q != Sqv) u |= (1U << WK);
+    }
+    return u;
 }

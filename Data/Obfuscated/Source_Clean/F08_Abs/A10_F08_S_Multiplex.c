@@ -1,5 +1,5 @@
-int   LE(int   h9)   {
-   int   Jxq9[2]  =  {h9,  -h9};
-  int  Xfp = (h9 <   0);
-   return Jxq9[Xfp];
+int U5(int ja) {
+    int boIw[2] = {ja, -ja};
+    int v = (ja < 0);
+    return boIw[v];
 }

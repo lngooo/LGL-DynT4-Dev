@@ -1,8 +1,8 @@
-int  kT6(int   iPzM)  {
-   return  -iPzM;
+int hc8(int dk7K) {
+    return -dk7K;
 }
 
-int   agZL(int   iPzM) {
- if  (iPzM   <   0) return   kT6(iPzM);
-   return  iPzM;
+int UzFb(int dk7K) {
+    if (dk7K < 0) return hc8(dk7K);
+    return dk7K;
 }

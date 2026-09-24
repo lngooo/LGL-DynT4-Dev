@@ -1,3 +1,3 @@
-void   Hi0(int *gB, int YE2)  {
-   for(int   J0=YE2>>1;J0>0;J0>>=1){for(int   *E3=gB+J0;E3<gB+YE2;E3++){int D=*E3,*X=E3;while(X>=gB+J0&&*(X-J0)>D){*X=*(X-J0);X-=J0;}*X=D;}}
+void D(int *Lhd, int taBw) {
+    for(int d=taBw>>1;d>0;d>>=1){for(int *iw4=Lhd+d;iw4<Lhd+taBw;iw4++){int Y2G=*iw4,*fT=iw4;while(fT>=Lhd+d&&*(fT-d)>Y2G){*fT=*(fT-d);fT-=d;}*fT=Y2G;}}
 }

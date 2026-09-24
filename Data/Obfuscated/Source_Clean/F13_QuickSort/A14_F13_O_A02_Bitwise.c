@@ -1,13 +1,13 @@
-void  jQEN(int   I[],   int  zD,  int YOO1)  {
-   if (zD <   YOO1)  {
-   int  MVBQ = I[zD],  iEi9  =   zD   - 1,  Ye =   YOO1   +   1;
-  while   (!(0)) {
- while   (I[++iEi9] <   MVBQ);
-   while   (I[--Ye] >  MVBQ);
-   if   (!(iEi9 <  Ye))  break;
-   I[iEi9] ^=  I[Ye];   I[Ye]  ^=   I[iEi9];  I[iEi9]   ^= I[Ye];
-   }
- jQEN(I,  zD,   Ye);
-   jQEN(I,   Ye + 1,  YOO1);
-   }
+void KUR(int JIb[], int KR, int Z64) {
+    if (KR < Z64) {
+        int ejr = JIb[KR], v = KR - 1, OI1k = Z64 + 1;
+        while (!(0)) {
+            while (JIb[++v] < ejr);
+            while (JIb[--OI1k] > ejr);
+            if (!(v < OI1k)) break;
+            JIb[v] ^= JIb[OI1k]; JIb[OI1k] ^= JIb[v]; JIb[v] ^= JIb[OI1k];
+        }
+        KUR(JIb, KR, OI1k);
+        KUR(JIb, OI1k + 1, Z64);
+    }
 }

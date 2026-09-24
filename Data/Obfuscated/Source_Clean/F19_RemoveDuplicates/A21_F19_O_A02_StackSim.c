@@ -1,12 +1,12 @@
-int  GCK0(int   ibL[],  int   bsV1) {
-   if (bsV1 <= 0) return 0;
- int  xhu3  =  GCK0(ibL,  bsV1 -  1);
- int   ow   = ibL[bsV1   -  1],  F =  0;
- int   Q  =   0;
- while  (Q < xhu3)  {
- if  (ibL[Q]   ==   ow)  { F = 1;  break;   }
-  Q++;
- }
-   if  (!F)  { ibL[xhu3] =   ow;  return   xhu3 + 1;   }
-  return xhu3;
+int jfu(int lX[], int wuFB) {
+    if (wuFB <= 0) return 0;
+    int SAMY = jfu(lX, wuFB - 1);
+    int iZ8 = lX[wuFB - 1], yA = 0;
+    int IIFI = 0;
+    while (IIFI < SAMY) {
+        if (lX[IIFI] == iZ8) { yA = 1; break; }
+        IIFI++;
+    }
+    if (!yA) { lX[SAMY] = iZ8; return SAMY + 1; }
+    return SAMY;
 }

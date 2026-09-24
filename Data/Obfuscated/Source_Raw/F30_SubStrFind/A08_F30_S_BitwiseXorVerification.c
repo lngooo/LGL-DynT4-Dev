@@ -5,28 +5,26 @@
 * Implementation Logic: Verification of substring using XOR sum of characters.
 * Input Format: <text> <pattern>
 */
-
-
 #include <stdio.h>
 #include <string.h>
 
-int   url(char*  FCM,  char* v)   {
-   int R  =   strlen(FCM),  KiXX  = strlen(v);
-   if  (KiXX   ==   0)  return 0;
-  int  C  = 0;
-   for(int  h0=0;  h0<KiXX;  h0++)  C  ^= v[h0];
-   for  (int h0 = 0; h0 <=   R -   KiXX;  h0++) {
- int   bDt9   =  0;
-  for(int zkp=0; zkp<KiXX; zkp++) bDt9 ^=  FCM[h0+zkp];
-  if   (bDt9   == C)   {
-  if (memcmp(&FCM[h0],  v,   KiXX)  ==   0) return   h0;
-  }
-   }
- return   -1;
+int LHa(char* Ziu, char* EZ) {
+    int mQ = strlen(Ziu), EEng = strlen(EZ);
+    if (EEng == 0) return 0;
+    int yJ = 0;
+    for(int Gj=0; Gj<EEng; Gj++) yJ ^= EZ[Gj];
+    for (int Gj = 0; Gj <= mQ - EEng; Gj++) {
+        int E = 0;
+        for(int K=0; K<EEng; K++) E ^= Ziu[Gj+K];
+        if (E == yJ) {
+            if (memcmp(&Ziu[Gj], EZ, EEng) == 0) return Gj;
+        }
+    }
+    return -1;
 }
 
-int main(int   argc, char*   argv[])   {
- if   (argc <   3) return  0;
-  printf("%d\n",   url(argv[1],   argv[2]));
- return  0;
+int main(int pO, char* Ox8o[]) {
+    if (pO < 3) return 0;
+    printf("%d\n", LHa(Ox8o[1], Ox8o[2]));
+    return 0;
 }

@@ -4,37 +4,35 @@
  * File: A06_F11_S_Fibonacci.c
  * Implementation Logic: Fibonacci search algorithm using Fibonacci numbers to split the array.
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int Y0(int ZM[],   int  glXD,   int  R1) {
-  int MJ  = 0,  khL  = 1,  qvI =  MJ   + khL;
-   while  (qvI  <  glXD)   {
- MJ  = khL;   khL  =  qvI;  qvI  = MJ  + khL;
-  }
- int IShu3 =   -1;
-  while  (qvI >   1)   {
-   int zoca =  (IShu3   +  MJ   <  glXD   - 1)  ?   IShu3   +  MJ   :  glXD - 1;
-   if (ZM[zoca] <  R1)  {
- qvI   =   khL;   khL   =   MJ; MJ   =  qvI   - khL;
- IShu3 =  zoca;
-   }   else  if   (ZM[zoca]  > R1)  {
- qvI = MJ;   khL  =   khL  -  MJ;   MJ  =   qvI -   khL;
-  }   else   return   zoca;
-   }
-  if (khL  &&  ZM[IShu3   + 1] ==  R1) return  IShu3  +  1;
- return   -1;
+int bD(int cfe[], int l, int JeK) {
+    int qA = 0, COzB = 1, byR = qA + COzB;
+    while (byR < l) {
+        qA = COzB; COzB = byR; byR = qA + COzB;
+    }
+    int I = -1;
+    while (byR > 1) {
+        int P = (I + qA < l - 1) ? I + qA : l - 1;
+        if (cfe[P] < JeK) {
+            byR = COzB; COzB = qA; qA = byR - COzB;
+            I = P;
+        } else if (cfe[P] > JeK) {
+            byR = qA; COzB = COzB - qA; qA = byR - COzB;
+        } else return P;
+    }
+    if (COzB && cfe[I + 1] == JeK) return I + 1;
+    return -1;
 }
 
-int  main(int  argc, char  *argv[])   {
- if   (argc < 3)   return 1;
- int  R1 = atoi(argv[1]);
-  int  glXD   =   argc - 2;
-   int   *ZM  =   (int*)malloc(glXD * sizeof(int));
-   for(int zoca=0; zoca<glXD;  zoca++) ZM[zoca] =  atoi(argv[zoca+2]);
- printf("%d\n",   Y0(ZM,  glXD, R1));
-  free(ZM);
-   return   0;
+int main(int W, char *S[]) {
+    if (W < 3) return 1;
+    int JeK = atoi(S[1]);
+    int l = W - 2;
+    int *cfe = (int*)malloc(l * sizeof(int));
+    for(int P=0; P<l; P++) cfe[P] = atoi(S[P+2]);
+    printf("%d\n", bD(cfe, l, JeK));
+    free(cfe);
+    return 0;
 }

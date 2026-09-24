@@ -1,5 +1,5 @@
 @.str = constant [4 x i8] c"%s\0A\00"
-define dso_local void @e3(i8** %0, i32 %1, i8* %2) {
+define dso_local void @u(i8** %0, i32 %1, i8* %2) {
   %4 = alloca i8**
   %5 = alloca i32
   %6 = alloca i8*
@@ -32,7 +32,7 @@ define dso_local void @e3(i8** %0, i32 %1, i8* %2) {
   %28 = load i32, i32* %5
   %29 = sdiv i32 %28, 2
   %30 = getelementptr inbounds [128 x i8], [128 x i8]* %7, i64 0, i64 0
-  call void @e3(i8** %27, i32 %29, i8* %30)
+  call void @u(i8** %27, i32 %29, i8* %30)
   %31 = load i8**, i8*** %4
   %32 = load i32, i32* %5
   %33 = sdiv i32 %32, 2
@@ -43,7 +43,7 @@ define dso_local void @e3(i8** %0, i32 %1, i8* %2) {
   %38 = sdiv i32 %37, 2
   %39 = sub nsw i32 %36, %38
   %40 = getelementptr inbounds [128 x i8], [128 x i8]* %8, i64 0, i64 0
-  call void @e3(i8** %35, i32 %39, i8* %40)
+  call void @u(i8** %35, i32 %39, i8* %40)
   store i32 0, i32* %9
   br label %42
 42:
@@ -120,7 +120,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   %21 = load i8**, i8*** %7
   %22 = load i32, i32* %6
   %23 = getelementptr inbounds [128 x i8], [128 x i8]* %8, i64 0, i64 0
-  call void @e3(i8** %21, i32 %22, i8* %23)
+  call void @u(i8** %21, i32 %22, i8* %23)
   %24 = getelementptr inbounds [128 x i8], [128 x i8]* %8, i64 0, i64 0
   %25 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str, i64 0, i64 0), i8* %24)
   store i32 0, i32* %3

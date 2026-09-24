@@ -1,11 +1,11 @@
-void fL7(char *vkI,  int   pE)  {
+void s4(char *Wvz, int k3kM) {
 
-  int  Z   = (pE  %  26 + 26)   % 26;
-  for(int   tavb=0; vkI[tavb]; tavb++) {
- char   Bp   =   vkI[tavb] & 32;
-   char w  = vkI[tavb] & ~32;
- if(w >=   'A'   && w   <=   'Z')  {
- vkI[tavb]   =   ((w   -   'A'  +   Z)  % 26   + 'A') | Bp;
-   }
- }
+    int jhF = (k3kM % 26 + 26) % 26;
+    for(int duSA=0; Wvz[duSA]; duSA++) {
+        char apZA = Wvz[duSA] & 32;
+        char Z = Wvz[duSA] & ~32;
+        if(Z >= 'A' && Z <= 'Z') {
+            Wvz[duSA] = ((Z - 'A' + jhF) % 26 + 'A') | apZA;
+        }
+    }
 }

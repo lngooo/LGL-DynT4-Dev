@@ -1,11 +1,11 @@
-int   iOqE(unsigned   int  HR3)  {
- if   (HR3 ==  0) return   0;
-  int   fXpq  = 0;
-eSv:
-   if (HR3 <= 0)  goto WlI;
-  if (HR3  &  1) fXpq++;
-   HR3 >>=   1;
-  goto eSv;
-WlI:
-   return  (fXpq == 1);
+int uU(unsigned int EZ) {
+    if (EZ == 0) return 0;
+    int g = 0;
+w:
+    if (EZ <= 0) goto REms;
+    if (EZ & 1) g++;
+    EZ >>= 1;
+    goto w;
+REms:
+    return (g == 1);
 }

@@ -6,19 +6,17 @@
  * Any power of two must divide it evenly.
  * Input Format: <uint>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int   Bpj(unsigned  int  U)   {
- unsigned  int qmpZ = 2147483648U;
-   return   (U  >   0   &&  qmpZ  %  U   ==  0);
+int dH2(unsigned int x) {
+    unsigned int Mfq = 2147483648U;
+    return (x > 0 && Mfq % x == 0);
 }
 
-int   main(int argc,   char*   argv[])   {
-   if  (argc   < 2) return   0;
- unsigned  int   U  =  (unsigned   int)strtoul(argv[1], NULL, 10);
- printf("%d",  Bpj(U));
- return   0;
+int main(int DtrE, char* Wx[]) {
+    if (DtrE < 2) return 0;
+    unsigned int x = (unsigned int)strtoul(Wx[1], NULL, 10);
+    printf("%d", dH2(x));
+    return 0;
 }

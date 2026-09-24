@@ -1,15 +1,15 @@
-void v(int  aml[],   int  L,  int Yh)  {
-  if   (L  <   Yh)   {
-   int   UH =   L  +   (int)floor((Yh -  L)   /  2.0);
-   v(aml, L, UH);
-  v(aml,   UH +   1, Yh);
- int   VjUm   =  L,  Rij9 =  UH + 1,  NnJo =   0,  NLwf  =   Yh - L + 1;
-  int   *d  = (int*)malloc(NLwf   * sizeof(int));
- while   (NnJo  <  NLwf)   {
-   if   (VjUm   <=  UH  && (Rij9   >  Yh   || (double)aml[VjUm]   <=  (double)aml[Rij9]))  d[NnJo++]   =  aml[VjUm++];
-  else d[NnJo++]   =   aml[Rij9++];
- }
-  for   (VjUm  =  0;   VjUm < NLwf; VjUm++)  aml[L   + VjUm]  =  d[VjUm];
- free(d);
- }
+void GNy(int zQx[], int Jc, int qk) {
+    if (Jc < qk) {
+        int v4Di = Jc + (int)floor((qk - Jc) / 2.0);
+        GNy(zQx, Jc, v4Di);
+        GNy(zQx, v4Di + 1, qk);
+        int u = Jc, jqhu = v4Di + 1, rVx7 = 0, s54q = qk - Jc + 1;
+        int *HuB = (int*)malloc(s54q * sizeof(int));
+        while (rVx7 < s54q) {
+            if (u <= v4Di && (jqhu > qk || (double)zQx[u] <= (double)zQx[jqhu])) HuB[rVx7++] = zQx[u++];
+            else HuB[rVx7++] = zQx[jqhu++];
+        }
+        for (u = 0; u < s54q; u++) zQx[Jc + u] = HuB[u];
+        free(HuB);
+    }
 }

@@ -1,4 +1,4 @@
-define dso_local i32 @grJI1(i8* %0, i8* %1) {
+define dso_local i32 @uNFO(i8* %0, i8* %1) {
   %3 = alloca i32
   %4 = alloca i8*
   %5 = alloca i8*
@@ -33,7 +33,7 @@ define dso_local i32 @grJI1(i8* %0, i8* %1) {
   %28 = getelementptr inbounds i8, i8* %27, i64 1
   %29 = load i8*, i8** %5
   %30 = getelementptr inbounds i8, i8* %29, i64 1
-  %31 = call i32 @grJI1(i8* %28, i8* %30)
+  %31 = call i32 @uNFO(i8* %28, i8* %30)
   store i32 %31, i32* %3
   br label %32
 32:

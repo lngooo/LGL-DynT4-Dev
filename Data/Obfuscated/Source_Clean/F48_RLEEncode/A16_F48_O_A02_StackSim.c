@@ -1,9 +1,9 @@
-void  epd(const   char  *sqv,  char   *dP)  {
-  if (!*sqv)   return;
- int PSt1   = 0;
-   while (sqv[PSt1]   ==   sqv[0])   PSt1++;
- int  yU1 =   strlen(dP);
-   dP[yU1]  =  sqv[0];
-  sprintf(dP  +  yU1 +  1,   "%d",  PSt1);
- epd(sqv   + PSt1,  dP);
+void fES(const char *Qk, char *frw) {
+    if (!*Qk) return;
+    int mqcM = 0;
+    while (Qk[mqcM] == Qk[0]) mqcM++;
+    int J = strlen(frw);
+    frw[J] = Qk[0];
+    sprintf(frw + J + 1, "%d", mqcM);
+    fES(Qk + mqcM, frw);
 }

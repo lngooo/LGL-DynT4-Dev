@@ -5,17 +5,15 @@
  * Implementation Logic: Recursive logic compressed into ternary operators.
  * Input Format: <n>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int cA(int  E) {
-   return (E   <=   0) ?   0 :  (E   +   cA(E   -   1));
+int kD(int r7OS) {
+    return (r7OS <= 0) ? 0 : (r7OS + kD(r7OS - 1));
 }
 
-int  main(int  argc, char   *argv[])   {
-  if (argc  <  2) return   1;
-   printf("%d\n",  cA(atoi(argv[1])));
-  return  0;
+int main(int Ru, char *o[]) {
+    if (Ru < 2) return 1;
+    printf("%d\n", kD(atoi(o[1])));
+    return 0;
 }

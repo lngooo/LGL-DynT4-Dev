@@ -4,43 +4,41 @@
  * File: A20_F12_O_A08_Struct.c
  * Implementation Logic: Cocktail shaker BS with range encapsulated in struct.
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-struct Kd   {  int   MC6; int   Ta;   int  QoU; };
+struct U { int YEl; int SSK0; int M; };
 
-void  W(int  WR[], int d)  {
-   struct  Kd ixwm8 = {0, d -   1,   1};
- while (ixwm8.QoU) {
-   ixwm8.QoU   = 0;
- for   (int   TA   =   ixwm8.MC6; TA  < ixwm8.Ta;  TA++)   {
-   if   (WR[TA] >   WR[TA+1])  {
-  int   lz   =   WR[TA]; WR[TA]  =  WR[TA+1];  WR[TA+1]  = lz;
-   ixwm8.QoU =  1;
-   }
-   }
-  if   (!ixwm8.QoU) break;
- ixwm8.QoU   =   0;   ixwm8.Ta--;
- for   (int  TA = ixwm8.Ta   - 1;  TA   >=  ixwm8.MC6;  TA--) {
-  if   (WR[TA]   > WR[TA+1])  {
-   int  lz   =   WR[TA];   WR[TA] =   WR[TA+1];   WR[TA+1]  =  lz;
-   ixwm8.QoU  = 1;
-   }
-   }
- ixwm8.MC6++;
-   }
+void cUZ(int fXd6[], int w40) {
+    struct U A73h = {0, w40 - 1, 1};
+    while (A73h.M) {
+        A73h.M = 0;
+        for (int VP = A73h.YEl; VP < A73h.SSK0; VP++) {
+            if (fXd6[VP] > fXd6[VP+1]) {
+                int O = fXd6[VP]; fXd6[VP] = fXd6[VP+1]; fXd6[VP+1] = O;
+                A73h.M = 1;
+            }
+        }
+        if (!A73h.M) break;
+        A73h.M = 0; A73h.SSK0--;
+        for (int VP = A73h.SSK0 - 1; VP >= A73h.YEl; VP--) {
+            if (fXd6[VP] > fXd6[VP+1]) {
+                int O = fXd6[VP]; fXd6[VP] = fXd6[VP+1]; fXd6[VP+1] = O;
+                A73h.M = 1;
+            }
+        }
+        A73h.YEl++;
+    }
 }
 
-int   main(int argc,   char  *argv[])  {
-  if   (argc  <   2)  return 0;
-   int  d   = argc -  1;
-  int *WR  =   (int*)malloc(d   *   sizeof(int));
-   for (int  TA  = 0;   TA  <   d;  TA++)   WR[TA]   = atoi(argv[TA+1]);
-  W(WR,   d);
-  for (int   TA   = 0;  TA  <   d;  TA++) printf("%d ",   WR[TA]);
-  printf("\n");
-  free(WR);
-   return  0;
+int main(int dtHc, char *IKj[]) {
+    if (dtHc < 2) return 0;
+    int w40 = dtHc - 1;
+    int *fXd6 = (int*)malloc(w40 * sizeof(int));
+    for (int VP = 0; VP < w40; VP++) fXd6[VP] = atoi(IKj[VP+1]);
+    cUZ(fXd6, w40);
+    for (int VP = 0; VP < w40; VP++) printf("%d ", fXd6[VP]);
+    printf("\n");
+    free(fXd6);
+    return 0;
 }

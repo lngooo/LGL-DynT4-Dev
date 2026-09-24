@@ -5,33 +5,31 @@
  * Implementation Logic: Iterative
  * Input Format: <arg1>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-long  samY(int   Nh9)  {
-   long   Mz   = 0,  Nm3   =  1,  I;
-   if   (Nh9 ==   0)  return  0;
- for   (int  uVT5  =  2;  uVT5  <=   Nh9; uVT5++)   {
- I  = Mz + Nm3;
-   Mz   =  Nm3;
- Nm3 = I;
- }
-  return   Nm3;
+long DP9(int d) {
+    long zBRg = 0, T6Ce = 1, u;
+    if (d == 0) return 0;
+    for (int ei = 2; ei <= d; ei++) {
+        u = zBRg + T6Ce;
+        zBRg = T6Ce;
+        T6Ce = u;
+    }
+    return T6Ce;
 }
 
-int   main(int argc,   char *argv[])  {
-  if   (argc <  2)   {
-  return  1;
- }
-   int Nh9   =  atoi(argv[1]);
- if (Nh9 < 0)   {
-   printf("0\n");
- return 0;
-   }
-   long K   = samY(Nh9);
- printf("%ld\n", K);
-  return 0;
+int main(int NOL, char *yMH[]) {
+    if (NOL < 2) {
+        return 1;
+    }
+    int d = atoi(yMH[1]);
+    if (d < 0) {
+        printf("0\n");
+        return 0;
+    }
+    long DGM = DP9(d);
+    printf("%ld\n", DGM);
+    return 0;
 }

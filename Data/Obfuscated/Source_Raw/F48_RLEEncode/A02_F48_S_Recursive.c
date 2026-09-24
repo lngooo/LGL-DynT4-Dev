@@ -5,28 +5,26 @@
  * Implementation Logic: Recursive
  * Input Format: <string>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
 
-void  Xcvp(const char *tcR,   char *z) {
-   if   (*tcR   == '\0')   return;
- int r = 1;
-  while   (tcR[r] !=   '\0' && tcR[r]   == tcR[0])  r++;
-   char   BhO[16];
- sprintf(BhO,  "%c%d",  tcR[0], r);
-  strcat(z,  BhO);
-   Xcvp(tcR  + r,   z);
+void ut(const char *h, char *wXK) {
+    if (*h == '\0') return;
+    int CbyM = 1;
+    while (h[CbyM] != '\0' && h[CbyM] == h[0]) CbyM++;
+    char eN[16];
+    sprintf(eN, "%c%d", h[0], CbyM);
+    strcat(wXK, eN);
+    ut(h + CbyM, wXK);
 }
 
-int  main(int   argc,   char  *argv[])  {
-  if   (argc < 2)   return   0;
- char  *X   = argv[1];
-   char   BQba1[256]  = {0};
- Xcvp(X,   BQba1);
-  printf("%s\n",  BQba1);
- return   0;
+int main(int ICm, char *x[]) {
+    if (ICm < 2) return 0;
+    char *MHk = x[1];
+    char oJ6[256] = {0};
+    ut(MHk, oJ6);
+    printf("%s\n", oJ6);
+    return 0;
 }

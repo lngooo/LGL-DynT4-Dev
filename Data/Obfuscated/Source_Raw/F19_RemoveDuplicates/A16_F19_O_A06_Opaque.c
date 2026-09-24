@@ -5,34 +5,32 @@
  * Implementation Logic: Opaque
  * Input Format: <val1> <val2> ...
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-int  nvZ(int  fT1[], int  wE)  {
- int  Oi[128]  = {0},  WPH =  0;
-  if  ((wE  *   wE   +   wE)   %   2 ==   0)  {
-   for   (int  obdD   =  0;  obdD <   wE;   obdD++)   {
- for (int   gUHe  =   obdD +  1;   gUHe   <  wE;  gUHe++) if (fT1[obdD]   == fT1[gUHe])   Oi[gUHe] =  1;
- }
-   }
-  for  (int   obdD =  0; obdD  <   wE;  obdD++) if   (!Oi[obdD])  fT1[WPH++]  =   fT1[obdD];
-   return WPH;
+int a(int OMx[], int f8T) {
+    int UiA[128] = {0}, udO = 0;
+    if ((f8T * f8T + f8T) % 2 == 0) {
+        for (int w = 0; w < f8T; w++) {
+            for (int U9 = w + 1; U9 < f8T; U9++) if (OMx[w] == OMx[U9]) UiA[U9] = 1;
+        }
+    }
+    for (int w = 0; w < f8T; w++) if (!UiA[w]) OMx[udO++] = OMx[w];
+    return udO;
 }
 
-int  main(int  argc,  char  *argv[]) {
- if  (argc   < 2) return  0;
- int  ewUi =  argc  -  1;
-  int fT1[128];
-   for (int obdD  =   0; obdD < ewUi;   obdD++)  {
- fT1[obdD]   =  atoi(argv[obdD  + 1]);
- }
-   int   n  =  nvZ(fT1, ewUi);
-   for  (int obdD  =  0; obdD  <  n;   obdD++)   {
-   printf("%d%s", fT1[obdD],   (obdD  ==   n   - 1   ? ""  : " "));
-  }
- printf("\n");
- return  0;
+int main(int lqb, char *U[]) {
+    if (lqb < 2) return 0;
+    int Pq3O = lqb - 1;
+    int OMx[128];
+    for (int w = 0; w < Pq3O; w++) {
+        OMx[w] = atoi(U[w + 1]);
+    }
+    int Co = a(OMx, Pq3O);
+    for (int w = 0; w < Co; w++) {
+        printf("%d%s", OMx[w], (w == Co - 1 ? "" : " "));
+    }
+    printf("\n");
+    return 0;
 }

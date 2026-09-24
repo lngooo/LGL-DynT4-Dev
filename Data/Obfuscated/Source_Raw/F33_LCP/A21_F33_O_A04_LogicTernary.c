@@ -5,32 +5,30 @@
  * Implementation Logic: LogicTernary
  * Input Format: <str1> <str2> ...
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
 
-void  FNZC(char **Pym7, int cf,   char   *AsUi)  {
- int   m4   =  128;
-  for(int  Tc5=0; Tc5<cf;  Tc5++) {  int tJHc   = strlen(Pym7[Tc5]); m4  = (tJHc <   m4)   ?  tJHc  :  m4;   }
-   int Xq7  =  0;
-  for(int   Y=0;  Y<m4;  Y++)   {
-  char gPxC   =   Pym7[0][Y];
-   int yW   =   1;
-  for(int  h=1; h<cf;  h++)  yW = (Pym7[h][Y]  ==  gPxC)  ?  yW :  0;
- if(yW)  { AsUi[Y]   = gPxC;  Xq7++; }  else break;
- }
-   AsUi[Xq7]  =  '\0';
+void KNY(char **l4, int gl, char *sX) {
+    int XB = 128;
+    for(int KJ98=0; KJ98<gl; KJ98++) { int A = strlen(l4[KJ98]); XB = (A < XB) ? A : XB; }
+    int J = 0;
+    for(int jzOh=0; jzOh<XB; jzOh++) {
+        char WA5b = l4[0][jzOh];
+        int lVnt = 1;
+        for(int HM=1; HM<gl; HM++) lVnt = (l4[HM][jzOh] == WA5b) ? lVnt : 0;
+        if(lVnt) { sX[jzOh] = WA5b; J++; } else break;
+    }
+    sX[J] = '\0';
 }
 
-int   main(int  argc, char *argv[]) {
-   if   (argc  <  2)  return 0;
-  int   cj7   = argc  -   1;
-  char  **Pym7 =   &argv[1];
- char   Dabe[128]   = {0};
- FNZC(Pym7, cj7,  Dabe);
-  printf("%s\n",   Dabe);
- return   0;
+int main(int uQ, char *Pp5[]) {
+    if (uQ < 2) return 0;
+    int Q5 = uQ - 1;
+    char **l4 = &Pp5[1];
+    char s[128] = {0};
+    KNY(l4, Q5, s);
+    printf("%s\n", s);
+    return 0;
 }

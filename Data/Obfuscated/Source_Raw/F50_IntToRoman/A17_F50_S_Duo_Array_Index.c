@@ -4,30 +4,28 @@
  * File: A17_F50_S_Duo_Array_Index.c
  * Implementation Logic: Using index mapping to retrieve symbols based on quotient.
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-void  uZvR6(int j4, char*  m)   {
-   char* DGJ[4][10]  =  {
- {"",   "I",  "II",   "III",  "IV", "V",   "VI",   "VII",  "VIII",   "IX"},
-  {"",   "X", "XX", "XXX",  "XL",   "L",  "LX", "LXX", "LXXX", "XC"},
-  {"",  "C",  "CC",  "CCC",  "CD", "D", "DC",  "DCC",   "DCCC", "CM"},
- {"",   "M", "MM",  "MMM", "", "", "",  "",  "",   ""}
- };
-   m[0]  = '\0';
-  strcat(m,  DGJ[3][j4/1000]);
-   strcat(m, DGJ[2][(j4%1000)/100]);
-   strcat(m, DGJ[1][(j4%100)/10]);
-   strcat(m,   DGJ[0][j4%10]);
+void n8iN(int EnW, char* GQn3) {
+    char* w[4][10] = {
+        {"", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"},
+        {"", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"},
+        {"", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"},
+        {"", "M", "MM", "MMM", "", "", "", "", "", ""}
+    };
+    GQn3[0] = '\0';
+    strcat(GQn3, w[3][EnW/1000]);
+    strcat(GQn3, w[2][(EnW%1000)/100]);
+    strcat(GQn3, w[1][(EnW%100)/10]);
+    strcat(GQn3, w[0][EnW%10]);
 }
 
-int  main(int  argc,   char*   argv[])  {
-  if (argc   < 2)   return   0;
- char   c[100];
-  uZvR6(atoi(argv[1]),  c);
-   printf("%s\n",  c);
-   return   0;
+int main(int xCT6, char* M6[]) {
+    if (xCT6 < 2) return 0;
+    char QC[100];
+    n8iN(atoi(M6[1]), QC);
+    printf("%s\n", QC);
+    return 0;
 }

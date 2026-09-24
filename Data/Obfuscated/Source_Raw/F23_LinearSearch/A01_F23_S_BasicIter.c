@@ -5,28 +5,26 @@
  * Implementation Logic: BasicIter
  * Input Format: <target> <val1> <val2> ...
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-int  K(int gtE9[],   int   bBse3,  int Ujz4) {
-  for  (int   eJ   =  0;   eJ   <  bBse3; eJ++)   {
-   if (gtE9[eJ] == Ujz4) return eJ;
- }
-   return  -1;
+int I(int aF[], int x, int s8) {
+    for (int UCHi = 0; UCHi < x; UCHi++) {
+        if (aF[UCHi] == s8) return UCHi;
+    }
+    return -1;
 }
 
-int main(int   argc,   char *argv[]) {
-   if (argc  < 3) return 1;
-  int  Ujz4  = atoi(argv[1]);
-  int  ihyG   = argc  -   2;
- int   gtE9[100];
- for  (int  eJ   =   0;   eJ  <   ihyG;  eJ++)  {
- gtE9[eJ]  = atoi(argv[eJ   + 2]);
-  }
- int  VDM   =   K(gtE9,  ihyG,  Ujz4);
-   printf("%d\n",  VDM);
- return  0;
+int main(int s6hT, char *C[]) {
+    if (s6hT < 3) return 1;
+    int s8 = atoi(C[1]);
+    int Fqf3 = s6hT - 2;
+    int aF[100];
+    for (int UCHi = 0; UCHi < Fqf3; UCHi++) {
+        aF[UCHi] = atoi(C[UCHi + 2]);
+    }
+    int rU = I(aF, Fqf3, s8);
+    printf("%d\n", rU);
+    return 0;
 }

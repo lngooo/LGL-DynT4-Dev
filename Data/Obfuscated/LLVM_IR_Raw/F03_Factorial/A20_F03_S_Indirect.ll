@@ -1,5 +1,5 @@
 @.str = constant [6 x i8] c"%lld\0A\00"
-define dso_local i64 @AXi(i32 %0, i64 %1) {
+define dso_local i64 @piY(i32 %0, i64 %1) {
   %3 = alloca i32
   %4 = alloca i64
   store i32 %0, i32* %3
@@ -10,7 +10,7 @@ define dso_local i64 @AXi(i32 %0, i64 %1) {
   %8 = mul nsw i64 %6, %7
   ret i64 %8
 }
-define dso_local i64 @HWMh(i32 %0) {
+define dso_local i64 @vX(i32 %0) {
   %2 = alloca i64
   %3 = alloca i32
   %4 = alloca i64 (i32, i64)*
@@ -24,7 +24,7 @@ define dso_local i64 @HWMh(i32 %0) {
   store i64 0, i64* %2
   br label %32
 10:
-  store i64 (i32, i64)* @AXi, i64 (i32, i64)** %4
+  store i64 (i32, i64)* @piY, i64 (i32, i64)** %4
   store i64 1, i64* %5
   store i32 1, i32* %6
   br label %14
@@ -73,7 +73,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   %11 = getelementptr inbounds i8*, i8** %10, i64 1
   %12 = load i8*, i8** %11
   %13 = call i32 @atoi(i8* %12)
-  %14 = call i64 @HWMh(i32 %13)
+  %14 = call i64 @vX(i32 %13)
   %15 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str, i64 0, i64 0), i64 %14)
   store i32 0, i32* %3
   br label %16

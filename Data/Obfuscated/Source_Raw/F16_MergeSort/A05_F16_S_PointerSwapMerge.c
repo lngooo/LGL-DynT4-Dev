@@ -4,39 +4,37 @@
  * File: A05_F16_S_PointerSwapMerge.c
  * Implementation Logic: PointerSwapMerge
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-void   iNpH5(int Gyz[], int  sfVN,  int   UT) {
- if (UT  <=   sfVN) return;
- int   FD =   (sfVN  +   UT) >> 1;
-   iNpH5(Gyz,  sfVN, FD);
-  iNpH5(Gyz, FD +   1, UT);
-  int *oB4 =  (int*)malloc((UT  - sfVN  +  1)  *  sizeof(int));
-   int pE =   sfVN, G   =  FD +   1, adK =  0;
-   while   (pE   <=  FD  ||  G <= UT)   {
-   if   (pE <=   FD  &&   (G  >   UT  ||   Gyz[pE]  <=  Gyz[G])) oB4[adK++]  = Gyz[pE++];
-   else oB4[adK++] = Gyz[G++];
-  }
- for   (pE  =  0;   pE <  adK;  pE++) Gyz[sfVN +   pE] = oB4[pE];
-   free(oB4);
+void z(int ph[], int H, int F4f) {
+    if (F4f <= H) return;
+    int Mh = (H + F4f) >> 1;
+    z(ph, H, Mh);
+    z(ph, Mh + 1, F4f);
+    int *v1L = (int*)malloc((F4f - H + 1) * sizeof(int));
+    int ZVVp = H, njgl = Mh + 1, rC = 0;
+    while (ZVVp <= Mh || njgl <= F4f) {
+        if (ZVVp <= Mh && (njgl > F4f || ph[ZVVp] <= ph[njgl])) v1L[rC++] = ph[ZVVp++];
+        else v1L[rC++] = ph[njgl++];
+    }
+    for (ZVVp = 0; ZVVp < rC; ZVVp++) ph[H + ZVVp] = v1L[ZVVp];
+    free(v1L);
 }
 
-int   main(int argc,   char *argv[])   {
-   if (argc  <  2)  return  0;
- int   voit  =  argc -  1;
-   int  *Gyz =   (int   *)malloc(voit  *  sizeof(int));
-  for   (int pE   =  0; pE   < voit; pE++)  Gyz[pE]   =  atoi(argv[pE   + 1]);
+int main(int q3Ld, char *IxS8[]) {
+    if (q3Ld < 2) return 0;
+    int u = q3Ld - 1;
+    int *ph = (int *)malloc(u * sizeof(int));
+    for (int ZVVp = 0; ZVVp < u; ZVVp++) ph[ZVVp] = atoi(IxS8[ZVVp + 1]);
 
-   iNpH5(Gyz,   0,   voit -   1);
+    z(ph, 0, u - 1);
 
-  for  (int  pE  =   0; pE   < voit;  pE++) {
-   printf("%d%s",   Gyz[pE],  (pE   == voit  -  1 ?   ""   :   " "));
- }
-   printf("\n");
-  free(Gyz);
- return   0;
+    for (int ZVVp = 0; ZVVp < u; ZVVp++) {
+        printf("%d%s", ph[ZVVp], (ZVVp == u - 1 ? "" : " "));
+    }
+    printf("\n");
+    free(ph);
+    return 0;
 }

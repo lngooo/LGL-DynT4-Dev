@@ -4,37 +4,35 @@
  * File: A11_F20_O_A01_DoubleNeg.c
  * Implementation Logic: DoubleNeg
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-void  RuBZ1(int   CDat[],  int SAVd) {
- int EqTt   = 0;
-   while (!!(EqTt  <   SAVd   - 1))   {
-   int  tAb   =  EqTt,  J   =  EqTt   +   1;
- while  (!!(J   < SAVd)) {
-  if  (!!(CDat[J]  <   CDat[tAb]))  tAb   =  J;
-   J++;
-   }
- int  Gf = CDat[tAb]; CDat[tAb] = CDat[EqTt];   CDat[EqTt]   =   Gf;
- EqTt++;
-  }
+void W(int rqOl[], int r) {
+    int ft3T = 0;
+    while (!!(ft3T < r - 1)) {
+        int AHnQ = ft3T, l1d = ft3T + 1;
+        while (!!(l1d < r)) {
+            if (!!(rqOl[l1d] < rqOl[AHnQ])) AHnQ = l1d;
+            l1d++;
+        }
+        int B = rqOl[AHnQ]; rqOl[AHnQ] = rqOl[ft3T]; rqOl[ft3T] = B;
+        ft3T++;
+    }
 }
 
-int   main(int  argc,   char   *argv[])  {
-  if (argc  <   2)   return   0;
-  int   SAVd   =  argc -   1;
- int   *CDat  =   (int   *)malloc(SAVd *   sizeof(int));
- for  (int   EqTt =   0;  EqTt   < SAVd;  EqTt++) CDat[EqTt] =  atoi(argv[EqTt   +   1]);
+int main(int Wtk, char *w8[]) {
+    if (Wtk < 2) return 0;
+    int r = Wtk - 1;
+    int *rqOl = (int *)malloc(r * sizeof(int));
+    for (int ft3T = 0; ft3T < r; ft3T++) rqOl[ft3T] = atoi(w8[ft3T + 1]);
 
-   RuBZ1(CDat,  SAVd);
+    W(rqOl, r);
 
- for  (int EqTt  =  0;  EqTt   <   SAVd; EqTt++) {
-   printf("%d%s",   CDat[EqTt],  (EqTt ==   SAVd -  1 ? ""  :   " "));
-  }
-  printf("\n");
- free(CDat);
-  return  0;
+    for (int ft3T = 0; ft3T < r; ft3T++) {
+        printf("%d%s", rqOl[ft3T], (ft3T == r - 1 ? "" : " "));
+    }
+    printf("\n");
+    free(rqOl);
+    return 0;
 }

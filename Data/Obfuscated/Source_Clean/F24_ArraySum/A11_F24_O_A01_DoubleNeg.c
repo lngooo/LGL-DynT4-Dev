@@ -1,8 +1,8 @@
-int uhNx(int fH[],   int  pqN)   {
- int  Zg = 0, Jp  = 0;
-   while  (!!(Jp < pqN))  {
-   Zg  += fH[Jp];
- Jp++;
-  }
-   return Zg;
+int B(int Y[], int Kq) {
+    int NGI = 0, SZ = 0;
+    while (!!(SZ < Kq)) {
+        NGI += Y[SZ];
+        SZ++;
+    }
+    return NGI;
 }

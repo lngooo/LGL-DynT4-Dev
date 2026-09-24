@@ -5,22 +5,20 @@
 * Implementation Logic: Uses sscanf with %n to advance the pointer through words.
 * Input Format: <string>
 */
-
-
 #include <stdio.h>
 
-int R6(char*  x1) {
- int   E =  0,  vj;
- char yMi[256];
-   while  (sscanf(x1,   "%255s%n",  yMi, &vj)   ==  1)  {
-   E++;
-   x1  +=  vj;
- }
-   return  E;
+int OH(char* bCz) {
+    int ZND = 0, Nus;
+    char dZH[256];
+    while (sscanf(bCz, "%255s%n", dZH, &Nus) == 1) {
+        ZND++;
+        bCz += Nus;
+    }
+    return ZND;
 }
 
-int   main(int argc,   char*  argv[]) {
-  if  (argc <  2)   return 0;
- printf("%d\n",   R6(argv[1]));
-   return   0;
+int main(int C, char* BWGc[]) {
+    if (C < 2) return 0;
+    printf("%d\n", OH(BWGc[1]));
+    return 0;
 }

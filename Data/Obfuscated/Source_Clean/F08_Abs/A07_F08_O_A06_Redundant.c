@@ -1,5 +1,5 @@
-int   F(int  WtE)   {
-   float tZ1   = (float)WtE;
-   double  DZ   =   pow((double)tZ1,   2.0);
-  return  (int)pow(DZ,  0.5);
+int cJ(int oupA) {
+    float r0e = (float)oupA;
+    double hGR = pow((double)r0e, 2.0);
+    return (int)pow(hGR, 0.5);
 }

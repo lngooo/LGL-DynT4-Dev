@@ -4,31 +4,29 @@
  * File: A06_F24_S_BackwardsWhile.c
  * Implementation Logic: BackwardsWhile
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-int   i(int   fc[],  int   L)  {
-   int  mmtg  =  0;
- int hI =  L   -  1;
-  while   (hI  >=   0)  {
-  mmtg  += fc[hI];
-   hI--;
-  }
-  return   mmtg;
+int xvG(int N[], int ePoi) {
+    int mcnt = 0;
+    int fvyP = ePoi - 1;
+    while (fvyP >= 0) {
+        mcnt += N[fvyP];
+        fvyP--;
+    }
+    return mcnt;
 }
 
-int  main(int argc,   char *argv[]) {
-  if (argc < 2)  return 0;
- int   L  = argc -  1;
-  int   *fc  =  (int   *)malloc(L   *  sizeof(int));
-  for (int  ukU = 0;  ukU <  L;   ukU++)  fc[ukU]  =  atoi(argv[ukU +  1]);
+int main(int Bj, char *tyR[]) {
+    if (Bj < 2) return 0;
+    int ePoi = Bj - 1;
+    int *N = (int *)malloc(ePoi * sizeof(int));
+    for (int cq99 = 0; cq99 < ePoi; cq99++) N[cq99] = atoi(tyR[cq99 + 1]);
 
-   int   PA   =  i(fc, L);
-   printf("%d\n",  PA);
+    int lkzR = xvG(N, ePoi);
+    printf("%d\n", lkzR);
 
-   free(fc);
- return  0;
+    free(N);
+    return 0;
 }

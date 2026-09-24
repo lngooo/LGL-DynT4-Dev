@@ -1,12 +1,12 @@
-int   D(int  jXB[],   int   cBv6) {
-  int  fc[128], ZcJx =  0;
-   for(int   Ek2=0;   Ek2<cBv6; Ek2++){
-   int   V  =  0;
-  for(int  jPzG=0; jPzG<1;   jPzG++) {
-   for(int   zAq=0;  zAq<ZcJx;  zAq++)  if(fc[zAq]   ==  jXB[Ek2])  V   = 1;
- }
-  if(!V)   fc[ZcJx++]   = jXB[Ek2];
-   }
-  for(int  Ek2=0; Ek2<ZcJx;  Ek2++)  jXB[Ek2]   =   fc[Ek2];
- return  ZcJx;
+int D6(int gUHi[], int M) {
+    int y[128], bh0a = 0;
+    for(int Xf=0; Xf<M; Xf++){
+        int j8O = 0;
+        for(int Y=0; Y<1; Y++) {
+            for(int I=0; I<bh0a; I++) if(y[I] == gUHi[Xf]) j8O = 1;
+        }
+        if(!j8O) y[bh0a++] = gUHi[Xf];
+    }
+    for(int Xf=0; Xf<bh0a; Xf++) gUHi[Xf] = y[Xf];
+    return bh0a;
 }

@@ -5,29 +5,27 @@
  * Implementation Logic: Memoization
  * Input Format: <arg1>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-long  Yaeh(int entF) {
-   static   long   FBLF[101]   = {0};
-   if (entF   <= 1)  return (long)entF;
-   if (FBLF[entF] != 0)  return  FBLF[entF];
-  return   FBLF[entF]  =  Yaeh(entF   - 1)   + Yaeh(entF   -   2);
+long Q8W(int Ud9s) {
+    static long wgK[101] = {0};
+    if (Ud9s <= 1) return (long)Ud9s;
+    if (wgK[Ud9s] != 0) return wgK[Ud9s];
+    return wgK[Ud9s] = Q8W(Ud9s - 1) + Q8W(Ud9s - 2);
 }
 
-int main(int argc,   char  *argv[])   {
-   if   (argc  <  2)  {
- return   1;
- }
-  int  entF   = atoi(argv[1]);
-  if (entF  <   0) {
-   printf("0\n");
- return   0;
-  }
-  long Hw8   =  Yaeh(entF);
-   printf("%ld\n",   Hw8);
-  return   0;
+int main(int jQ, char *o2gw[]) {
+    if (jQ < 2) {
+        return 1;
+    }
+    int Ud9s = atoi(o2gw[1]);
+    if (Ud9s < 0) {
+        printf("0\n");
+        return 0;
+    }
+    long hWr = Q8W(Ud9s);
+    printf("%ld\n", hWr);
+    return 0;
 }

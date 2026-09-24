@@ -1,4 +1,4 @@
-define dso_local void @J(i32* %0, i32 %1, i32 %2) {
+define dso_local void @ckV(i32* %0, i32 %1, i32 %2) {
   %4 = alloca i32*
   %5 = alloca i32
   %6 = alloca i32
@@ -63,7 +63,7 @@ define dso_local void @J(i32* %0, i32 %1, i32 %2) {
 48:
   ret void
 }
-define dso_local void @q(i32* %0, i32 %1, i32 %2) {
+define dso_local void @nD9(i32* %0, i32 %1, i32 %2) {
   %4 = alloca i32*
   %5 = alloca i32
   %6 = alloca i32
@@ -95,7 +95,7 @@ define dso_local void @q(i32* %0, i32 %1, i32 %2) {
   %23 = load i32*, i32** %4
   %24 = load i32, i32* %6
   %25 = sub nsw i32 %24, 1
-  call void @J(i32* %23, i32 0, i32 %25)
+  call void @ckV(i32* %23, i32 0, i32 %25)
   br label %39
 26:
   %27 = load i32, i32* %7
@@ -106,13 +106,13 @@ define dso_local void @q(i32* %0, i32 %1, i32 %2) {
   %31 = load i32, i32* %6
   %32 = load i32, i32* %5
   %33 = sub nsw i32 %32, 1
-  call void @J(i32* %30, i32 %31, i32 %33)
+  call void @ckV(i32* %30, i32 %31, i32 %33)
   br label %38
 34:
   %35 = load i32*, i32** %4
   %36 = load i32, i32* %5
   %37 = sub nsw i32 %36, 1
-  call void @J(i32* %35, i32 0, i32 %37)
+  call void @ckV(i32* %35, i32 0, i32 %37)
   br label %38
 38:
   br label %39

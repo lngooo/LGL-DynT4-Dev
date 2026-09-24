@@ -1,4 +1,4 @@
-define dso_local void @Zc9(i8** %0, i32 %1, i8* %2) {
+define dso_local void @bV(i8** %0, i32 %1, i8* %2) {
   %4 = alloca i8**
   %5 = alloca i32
   %6 = alloca i8*
@@ -34,7 +34,7 @@ define dso_local void @Zc9(i8** %0, i32 %1, i8* %2) {
   %31 = load i8**, i8*** %4
   %32 = load i32, i32* %9
   %33 = getelementptr inbounds [128 x i8], [128 x i8]* %7, i64 0, i64 0
-  call void @Zc9(i8** %31, i32 %32, i8* %33)
+  call void @bV(i8** %31, i32 %32, i8* %33)
   %34 = load i8**, i8*** %4
   %35 = load i32, i32* %9
   %36 = sext i32 %35 to i64
@@ -43,7 +43,7 @@ define dso_local void @Zc9(i8** %0, i32 %1, i8* %2) {
   %39 = load i32, i32* %9
   %40 = sub nsw i32 %38, %39
   %41 = getelementptr inbounds [128 x i8], [128 x i8]* %8, i64 0, i64 0
-  call void @Zc9(i8** %37, i32 %40, i8* %41)
+  call void @bV(i8** %37, i32 %40, i8* %41)
   store i32 0, i32* %10
   br label %43
 43:

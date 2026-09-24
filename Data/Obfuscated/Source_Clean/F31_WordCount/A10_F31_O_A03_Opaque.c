@@ -1,12 +1,12 @@
-int  kkd9(char*  y1) {
- int  rqSC  =   0;
-   int   S  =  5, CXtg0 = 10;
-   for (int gk = 0; y1[gk]   != '\0';  gk++) {
-  if   (S   +  CXtg0  ==   15)  {
- if   (!isspace(y1[gk]) && (isspace(y1[gk+1])   ||  y1[gk+1] == '\0'))  rqSC++;
- }   else  {
-  rqSC--; 
- }
-  }
-  return   rqSC;
+int o0(char* B) {
+    int rv8G = 0;
+    int FUz = 5, L = 10;
+    for (int Z3q = 0; B[Z3q] != '\0'; Z3q++) {
+        if (FUz + L == 15) {
+            if (!isspace(B[Z3q]) && (isspace(B[Z3q+1]) || B[Z3q+1] == '\0')) rv8G++;
+        } else {
+            rv8G--; 
+        }
+    }
+    return rv8G;
 }

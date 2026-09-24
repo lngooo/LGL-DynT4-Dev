@@ -1,9 +1,9 @@
-int   i(int   fc[],  int   L)  {
-   int  mmtg  =  0;
- int hI =  L   -  1;
-  while   (hI  >=   0)  {
-  mmtg  += fc[hI];
-   hI--;
-  }
-  return   mmtg;
+int xvG(int N[], int ePoi) {
+    int mcnt = 0;
+    int fvyP = ePoi - 1;
+    while (fvyP >= 0) {
+        mcnt += N[fvyP];
+        fvyP--;
+    }
+    return mcnt;
 }

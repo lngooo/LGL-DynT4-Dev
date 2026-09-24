@@ -1,8 +1,8 @@
-uint32_t   GgZm7(uint32_t  Tq) {
- uint32_t   iqDj6, oPu,  O2, t;
- iqDj6  =  (Tq  >> 0)   & 0xFF;
- oPu =  (Tq  >>   8)  & 0xFF;
-   O2 =   (Tq   >>   16) & 0xFF;
-   t   = (Tq  >> 24)  &  0xFF;
-   return  (iqDj6  <<  24) |   (oPu <<   16)   | (O2  <<  8)  | t;
+uint32_t Z(uint32_t u37) {
+    uint32_t VAY, F, K, JZ;
+    VAY = (u37 >> 0) & 0xFF;
+    F = (u37 >> 8) & 0xFF;
+    K = (u37 >> 16) & 0xFF;
+    JZ = (u37 >> 24) & 0xFF;
+    return (VAY << 24) | (F << 16) | (K << 8) | JZ;
 }

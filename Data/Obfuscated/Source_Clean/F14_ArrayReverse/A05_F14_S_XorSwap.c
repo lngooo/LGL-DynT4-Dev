@@ -1,7 +1,7 @@
-void D(int   KjDj[],   int gMZv)  {
-   for   (int   h = 0, VoQV2   =  gMZv  -   1; h  <  VoQV2;  h++,   VoQV2--)   {
- KjDj[h] ^=  KjDj[VoQV2];
-  KjDj[VoQV2]   ^= KjDj[h];
-  KjDj[h] ^=   KjDj[VoQV2];
-  }
+void fiGe(int qiN[], int r2q) {
+    for (int V = 0, M = r2q - 1; V < M; V++, M--) {
+        qiN[V] ^= qiN[M];
+        qiN[M] ^= qiN[V];
+        qiN[V] ^= qiN[M];
+    }
 }

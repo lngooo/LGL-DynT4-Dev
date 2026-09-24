@@ -4,39 +4,37 @@
  * File: A15_F16_O_A05_DummyLoop.c
  * Implementation Logic: DummyLoop
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-void   y4(int  lY[],   int  FxhV,  int r0)  {
- if  (FxhV   >=   r0)   return;
-   int   c  =   (FxhV   + r0) /  2;
- y4(lY,  FxhV,  c);
- y4(lY,  c   + 1,  r0);
-  int *z   =  (int*)malloc((r0-FxhV+1)*4), L0 = FxhV,  sp   = c+1,  KG0  =  0;
-   for   (int   GU   =  0;  GU   < 1;   GU++)   {
-  while (L0   <=  c  &&  sp <=  r0)  z[KG0++]   =   (lY[L0] <=  lY[sp])   ?  lY[L0++]   :   lY[sp++];
-  }
-   while   (L0 <=  c)  z[KG0++]   =   lY[L0++];
- while   (sp <= r0)  z[KG0++]   =  lY[sp++];
- for  (int   nxKI =   0;  nxKI  <  KG0;  nxKI++)  lY[FxhV +   nxKI]   =   z[nxKI];
-   free(z);
+void X(int h[], int lYl1, int cfA4) {
+    if (lYl1 >= cfA4) return;
+    int uLU = (lYl1 + cfA4) / 2;
+    X(h, lYl1, uLU);
+    X(h, uLU + 1, cfA4);
+    int *WQCN = (int*)malloc((cfA4-lYl1+1)*4), v96 = lYl1, nl = uLU+1, V = 0;
+    for (int RgB = 0; RgB < 1; RgB++) {
+        while (v96 <= uLU && nl <= cfA4) WQCN[V++] = (h[v96] <= h[nl]) ? h[v96++] : h[nl++];
+    }
+    while (v96 <= uLU) WQCN[V++] = h[v96++];
+    while (nl <= cfA4) WQCN[V++] = h[nl++];
+    for (int a = 0; a < V; a++) h[lYl1 + a] = WQCN[a];
+    free(WQCN);
 }
 
-int  main(int argc, char  *argv[])  {
- if  (argc <  2)   return   0;
- int Tv = argc   - 1;
-   int   *lY  =   (int *)malloc(Tv   *  sizeof(int));
-  for   (int  L0   =   0;   L0   <   Tv;  L0++)   lY[L0] = atoi(argv[L0 + 1]);
+int main(int hakP, char *DSz3[]) {
+    if (hakP < 2) return 0;
+    int tN0N = hakP - 1;
+    int *h = (int *)malloc(tN0N * sizeof(int));
+    for (int v96 = 0; v96 < tN0N; v96++) h[v96] = atoi(DSz3[v96 + 1]);
 
-  y4(lY,   0,  Tv -   1);
+    X(h, 0, tN0N - 1);
 
-   for (int L0   =  0;   L0   < Tv;   L0++)  {
-   printf("%d%s",   lY[L0], (L0 == Tv -   1  ?  "" :  " "));
-   }
-  printf("\n");
-   free(lY);
- return 0;
+    for (int v96 = 0; v96 < tN0N; v96++) {
+        printf("%d%s", h[v96], (v96 == tN0N - 1 ? "" : " "));
+    }
+    printf("\n");
+    free(h);
+    return 0;
 }

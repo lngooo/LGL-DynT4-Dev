@@ -9,7 +9,7 @@ define dso_local i32 @GrayCode(i32 %0) {
   br label %7
 7:
   %8 = load i32, i32* %4
-  %9 = icmp slt i32 %8, 31
+  %9 = icmp slt i32 %8, 30
   br i1 %9, label %12, label %10
 10:
   br label %52
@@ -64,12 +64,33 @@ define dso_local i32 @GrayCode(i32 %0) {
   br label %7
 52:
   %53 = load i32, i32* %2
-  %54 = and i32 %53, -2147483648
-  %55 = load i32, i32* %3
-  %56 = or i32 %55, %54
-  store i32 %56, i32* %3
-  %57 = load i32, i32* %3
-  ret i32 %57
+  %54 = lshr i32 %53, 30
+  %55 = and i32 %54, 1
+  %56 = load i32, i32* %2
+  %57 = lshr i32 %56, 31
+  %58 = and i32 %57, 1
+  %59 = xor i32 %55, %58
+  %60 = icmp ne i32 %59, 0
+  br i1 %60, label %61, label %64
+61:
+  %62 = load i32, i32* %3
+  %63 = or i32 %62, 1073741824
+  store i32 %63, i32* %3
+  br label %64
+64:
+  %65 = load i32, i32* %2
+  %66 = lshr i32 %65, 31
+  %67 = and i32 %66, 1
+  %68 = icmp ne i32 %67, 0
+  br i1 %68, label %69, label %72
+69:
+  %70 = load i32, i32* %3
+  %71 = or i32 %70, -2147483648
+  store i32 %71, i32* %3
+  br label %72
+72:
+  %73 = load i32, i32* %3
+  ret i32 %73
 }
 define dso_local i32 @main(i32 %0, i8** %1) {
   %3 = alloca i32

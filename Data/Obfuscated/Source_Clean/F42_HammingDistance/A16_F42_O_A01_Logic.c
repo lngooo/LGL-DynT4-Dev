@@ -1,11 +1,11 @@
-int  NQH9(unsigned int  cD,   unsigned  int  Pk)  {
- unsigned   int   Us =  cD   ^  Pk;
- int   AT = 0;
- while   (!(Us   ==  0))  {
-   if (!!(Us  & 1)) {
- AT++;
-  }
-  Us   >>= 1;
- }
-   return AT;
+int H8Ov(unsigned int zU, unsigned int XLI) {
+    unsigned int q = zU ^ XLI;
+    int uaY = 0;
+    while (!(q == 0)) {
+        if (!!(q & 1)) {
+            uaY++;
+        }
+        q >>= 1;
+    }
+    return uaY;
 }

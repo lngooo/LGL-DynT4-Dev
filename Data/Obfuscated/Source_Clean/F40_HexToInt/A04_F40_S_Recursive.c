@@ -1,10 +1,10 @@
-int  Hn(const  char*  dmlb3,   int LIyZ)  {
- if  (LIyZ  == 0) return   0;
-   char  TLWH   =  dmlb3[LIyZ-1];
- int   v  = (TLWH  >=   'a') ? (TLWH  -  'a'  +  10)   :  ((TLWH  >=   'A') ?  (TLWH -  'A'  +   10)   : (TLWH  - '0'));
-  return  v   + 16   *   Hn(dmlb3,   LIyZ  -   1);
+int ukn(const char* QrV, int B4) {
+    if (B4 == 0) return 0;
+    char qr2R = QrV[B4-1];
+    int dhFm = (qr2R >= 'a') ? (qr2R - 'a' + 10) : ((qr2R >= 'A') ? (qr2R - 'A' + 10) : (qr2R - '0'));
+    return dhFm + 16 * ukn(QrV, B4 - 1);
 }
 
-int ne(const char* dmlb3)  {
- return   Hn(dmlb3,   (int)strlen(dmlb3));
+int P7(const char* QrV) {
+    return ukn(QrV, (int)strlen(QrV));
 }

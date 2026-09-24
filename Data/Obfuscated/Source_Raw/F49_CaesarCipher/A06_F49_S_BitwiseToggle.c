@@ -5,31 +5,29 @@
  * Implementation Logic: A06_F49_S_BitwiseToggle
  * Input Format: <string> <shift_int>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
 
-void fL7(char *vkI,  int   pE)  {
+void s4(char *Wvz, int k3kM) {
 
-  int  Z   = (pE  %  26 + 26)   % 26;
-  for(int   tavb=0; vkI[tavb]; tavb++) {
- char   Bp   =   vkI[tavb] & 32;
-   char w  = vkI[tavb] & ~32;
- if(w >=   'A'   && w   <=   'Z')  {
- vkI[tavb]   =   ((w   -   'A'  +   Z)  % 26   + 'A') | Bp;
-   }
- }
+    int jhF = (k3kM % 26 + 26) % 26;
+    for(int duSA=0; Wvz[duSA]; duSA++) {
+        char apZA = Wvz[duSA] & 32;
+        char Z = Wvz[duSA] & ~32;
+        if(Z >= 'A' && Z <= 'Z') {
+            Wvz[duSA] = ((Z - 'A' + jhF) % 26 + 'A') | apZA;
+        }
+    }
 }
 
-int   main(int argc, char  *argv[])  {
-  if  (argc  <  3) {
-   return 1;
-  }
-   int pE   =  atoi(argv[2]);
-  fL7(argv[1],   pE);
-   printf("%s\n",   argv[1]);
-   return   0;
+int main(int itIB, char *C[]) {
+    if (itIB < 3) {
+        return 1;
+    }
+    int k3kM = atoi(C[2]);
+    s4(C[1], k3kM);
+    printf("%s\n", C[1]);
+    return 0;
 }

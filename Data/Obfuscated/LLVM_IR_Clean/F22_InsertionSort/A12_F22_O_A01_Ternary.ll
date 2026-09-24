@@ -1,4 +1,4 @@
-define dso_local void @r(i32* %0, i32 %1) {
+define dso_local void @KQu(i32* %0, i32 %1) {
   %3 = alloca i32*
   %4 = alloca i32
   %5 = alloca i32

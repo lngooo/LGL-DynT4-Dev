@@ -1,8 +1,8 @@
-int   Pqls(const   char  *Cf,   const  char   *i)   {
- const   char **rmx = &Cf;
- const   char   **X  =   &i;
-  while   (**rmx   &&  (**rmx  ==  **X))   {
-  (*rmx)++;   (*X)++;
-  }
-   return  (unsigned   char)**rmx  -   (unsigned   char)**X;
+int t(const char *lTB, const char *Ffl) {
+    const char **zmo = &lTB;
+    const char **POf = &Ffl;
+    while (**zmo && (**zmo == **POf)) {
+        (*zmo)++; (*POf)++;
+    }
+    return (unsigned char)**zmo - (unsigned char)**POf;
 }

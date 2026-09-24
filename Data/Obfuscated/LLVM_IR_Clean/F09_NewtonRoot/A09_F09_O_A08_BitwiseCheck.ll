@@ -1,4 +1,4 @@
-define dso_local i32 @xVVR(i32 %0) {
+define dso_local i32 @B(i32 %0) {
   %2 = alloca i32
   %3 = alloca i32
   %4 = alloca i64

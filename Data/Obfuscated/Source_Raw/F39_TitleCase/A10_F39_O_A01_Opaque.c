@@ -5,26 +5,24 @@
  * Implementation Logic: A01 with opaque predicate if(x*x >= 0).
  * Input Format: <string>
  */
-
-
 #include <stdio.h>
 #include <ctype.h>
 
-void  LqA(char* pb) {
-   int FMCn7  =   15;
- if  ((FMCn7   * FMCn7)  >=   0) {
-   int   x =  1;
-   for  (int  Sj1  =   0;  pb[Sj1];  Sj1++) {
-  if  (isspace(pb[Sj1]))  x = 1;
-  else if   (x) {   pb[Sj1] = toupper(pb[Sj1]); x =   0;   }
- else  pb[Sj1] =   tolower(pb[Sj1]);
-  }
- }
+void r(char* FrP) {
+    int Ui = 15;
+    if ((Ui * Ui) >= 0) {
+        int e = 1;
+        for (int xKMT = 0; FrP[xKMT]; xKMT++) {
+            if (isspace(FrP[xKMT])) e = 1;
+            else if (e) { FrP[xKMT] = toupper(FrP[xKMT]); e = 0; }
+            else FrP[xKMT] = tolower(FrP[xKMT]);
+        }
+    }
 }
 
-int main(int argc, char*   argv[])   {
- if  (argc   <   2)  return 0;
-   LqA(argv[1]);
-   printf("%s",   argv[1]);
- return   0;
+int main(int Sa, char* VO[]) {
+    if (Sa < 2) return 0;
+    r(VO[1]);
+    printf("%s", VO[1]);
+    return 0;
 }

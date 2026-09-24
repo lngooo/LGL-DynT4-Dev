@@ -1,3 +1,3 @@
-int gn(int Mgbw)   {
-   return  (Mgbw  ==  0) ?  0   :   ((Mgbw <   0)  ? (0  -  Mgbw)   :   (Mgbw   + 0));
+int x(int sK) {
+    return (sK == 0) ? 0 : ((sK < 0) ? (0 - sK) : (sK + 0));
 }

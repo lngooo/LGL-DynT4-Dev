@@ -1,7 +1,7 @@
-int g(char*   FUWO1, char*   b)   {
-   if   (strlen(FUWO1) != strlen(b))  return 0;
- int   luf[256]   =   {0},  yCrx4[256]   = {0};
-  for  (int   f  =  0;   FUWO1[f];  f++)  {  luf[(unsigned char)FUWO1[f]]++;   yCrx4[(unsigned  char)b[f]]++;  }
-  for   (int   f  =   0;   f   <   256; f++)  if   (luf[f] !=  yCrx4[f]) return   0;
-   return  1;
+int v7(char* PDC, char* cv) {
+    if (strlen(PDC) != strlen(cv)) return 0;
+    int Mv[256] = {0}, ZK[256] = {0};
+    for (int Yn = 0; PDC[Yn]; Yn++) { Mv[(unsigned char)PDC[Yn]]++; ZK[(unsigned char)cv[Yn]]++; }
+    for (int Yn = 0; Yn < 256; Yn++) if (Mv[Yn] != ZK[Yn]) return 0;
+    return 1;
 }

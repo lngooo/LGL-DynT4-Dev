@@ -1,4 +1,4 @@
-define dso_local i32 @j(i8* %0) {
+define dso_local i32 @y5QJ(i8* %0) {
   %2 = alloca i32
   %3 = alloca i8*
   %4 = alloca double
@@ -94,7 +94,7 @@ define dso_local i32 @j(i8* %0) {
   %71 = load i32, i32* %6
   %72 = load i8*, i8** %3
   %73 = getelementptr inbounds i8, i8* %72, i64 1
-  %74 = call i32 @j(i8* %73)
+  %74 = call i32 @y5QJ(i8* %73)
   %75 = add nsw i32 %71, %74
   store i32 %75, i32* %2
   br label %78

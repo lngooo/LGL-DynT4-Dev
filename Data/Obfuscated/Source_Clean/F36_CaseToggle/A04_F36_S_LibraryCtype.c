@@ -1,6 +1,6 @@
-void  B0(char*  Sen)   {
-  for  (;   *Sen;  Sen++)   {
- if   (isupper(*Sen))   *Sen  =  (char)tolower(*Sen);
-  else  if (islower(*Sen)) *Sen   = (char)toupper(*Sen);
-  }
+void n2(char* q) {
+    for (; *q; q++) {
+        if (isupper(*q)) *q = (char)tolower(*q);
+        else if (islower(*q)) *q = (char)toupper(*q);
+    }
 }

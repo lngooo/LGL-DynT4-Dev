@@ -1,6 +1,6 @@
 @.str = constant [3 x i8] c"0\0A\00"
 @.str.1 = constant [4 x i8] c"%d\0A\00"
-define dso_local i32 @H(i8* %0) {
+define dso_local i32 @L8(i8* %0) {
   %2 = alloca i8*
   %3 = alloca i32
   %4 = alloca i32
@@ -119,7 +119,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   %11 = load i8**, i8*** %5
   %12 = getelementptr inbounds i8*, i8** %11, i64 1
   %13 = load i8*, i8** %12
-  %14 = call i32 @H(i8* %13)
+  %14 = call i32 @L8(i8* %13)
   %15 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.1, i64 0, i64 0), i32 %14)
   store i32 0, i32* %3
   br label %16

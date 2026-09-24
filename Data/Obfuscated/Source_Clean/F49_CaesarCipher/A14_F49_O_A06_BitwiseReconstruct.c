@@ -1,10 +1,10 @@
-void   sEUj9(char   *o, int Zy)  {
+void d67C(char *BKS, int m) {
 
-   int   umlS =   (Zy %   26  +   26)  %  26;
-   for(int E=0;   o[E]; E++) {
-   if(((o[E]   >=  'a')   &   (o[E] <=   'z'))  | ((o[E]   >= 'A') & (o[E]  <= 'Z')))   {
- char  kPCh7   = (o[E] &  0x20)  ? 0x61  :   0x41;
-   o[E]   =   (char)((((o[E]  -   kPCh7)   +  umlS)   % 26) + kPCh7);
- }
-  }
+    int hb = (m % 26 + 26) % 26;
+    for(int T=0; BKS[T]; T++) {
+        if(((BKS[T] >= 'a') & (BKS[T] <= 'z')) | ((BKS[T] >= 'A') & (BKS[T] <= 'Z'))) {
+            char Yspn = (BKS[T] & 0x20) ? 0x61 : 0x41;
+            BKS[T] = (char)((((BKS[T] - Yspn) + hb) % 26) + Yspn);
+        }
+    }
 }

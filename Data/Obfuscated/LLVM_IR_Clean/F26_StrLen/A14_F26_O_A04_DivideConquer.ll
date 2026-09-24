@@ -1,4 +1,4 @@
-define dso_local i32 @aFi(i8* %0) {
+define dso_local i32 @PA(i8* %0) {
   %2 = alloca i32
   %3 = alloca i8*
   store i8* %0, i8** %3
@@ -21,7 +21,7 @@ define dso_local i32 @aFi(i8* %0) {
 14:
   %15 = load i8*, i8** %3
   %16 = getelementptr inbounds i8, i8* %15, i64 1
-  %17 = call i32 @aFi(i8* %16)
+  %17 = call i32 @PA(i8* %16)
   %18 = add nsw i32 1, %17
   store i32 %18, i32* %2
   br label %19

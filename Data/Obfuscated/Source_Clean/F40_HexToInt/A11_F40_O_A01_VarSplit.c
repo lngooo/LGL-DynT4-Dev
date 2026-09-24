@@ -1,10 +1,10 @@
-int   yq0(const char* t)   {
- int kGT  = 0,   ONt0  =   0;
-   while   (*t)   {
-   int   aq   = (*t <= '9')  ?   (*t  - '0')   :   ((*t|32)  -  'a'  +   10);
-  kGT  =  (kGT *   16) + ((ONt0   * 16  + aq)  / 1000000);
- ONt0   = (ONt0  *   16   +  aq) %  1000000;
-   t++;
- }
- return kGT * 1000000   + ONt0;
+int gwP2(const char* JR) {
+    int Tf = 0, QY1O = 0;
+    while (*JR) {
+        int TWqI = (*JR <= '9') ? (*JR - '0') : ((*JR|32) - 'a' + 10);
+        Tf = (Tf * 16) + ((QY1O * 16 + TWqI) / 1000000);
+        QY1O = (QY1O * 16 + TWqI) % 1000000;
+        JR++;
+    }
+    return Tf * 1000000 + QY1O;
 }

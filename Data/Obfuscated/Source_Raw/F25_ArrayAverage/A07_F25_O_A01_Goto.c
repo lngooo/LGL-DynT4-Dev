@@ -4,32 +4,30 @@
  * File: A07_F25_O_A01_Goto.c
  * Implementation Logic: Goto
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-double   oNVd(int df6[], int FZ)  {
-  if   (FZ  <= 0)   return  0.0;
-  double  ivw4 = 0.0;  int  aT  =   0;
-rt:
- if  (aT >=   FZ)  goto  la;
- ivw4 +=   df6[aT++];
-   goto rt;
-la:
- return ivw4  /   FZ;
+double vr(int OCh[], int Fa) {
+    if (Fa <= 0) return 0.0;
+    double GEF = 0.0; int le = 0;
+Rtg7:
+    if (le >= Fa) goto vORI;
+    GEF += OCh[le++];
+    goto Rtg7;
+vORI:
+    return GEF / Fa;
 }
 
-int main(int  argc,   char   *argv[])  {
-   if (argc   <   2)  return   0;
-   int FZ   =  argc   -  1;
-  int  *df6  =  (int   *)malloc(FZ *   sizeof(int));
- for  (int aT =   0;   aT  < FZ;   aT++)  df6[aT]  = atoi(argv[aT  +  1]);
+int main(int mX, char *W[]) {
+    if (mX < 2) return 0;
+    int Fa = mX - 1;
+    int *OCh = (int *)malloc(Fa * sizeof(int));
+    for (int le = 0; le < Fa; le++) OCh[le] = atoi(W[le + 1]);
 
- double HH =   oNVd(df6,   FZ);
-   printf("%.2f\n", HH);
+    double nt = vr(OCh, Fa);
+    printf("%.2f\n", nt);
 
-  free(df6);
-  return 0;
+    free(OCh);
+    return 0;
 }

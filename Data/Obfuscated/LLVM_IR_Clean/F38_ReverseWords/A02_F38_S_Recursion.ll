@@ -1,5 +1,5 @@
 @.str = constant [6 x i8] c"%s %s\00"
-define dso_local void @kD(i8* %0) {
+define dso_local void @uU(i8* %0) {
   %2 = alloca i8*
   %3 = alloca i8*
   %4 = alloca i32
@@ -22,7 +22,7 @@ define dso_local void @kD(i8* %0) {
   %18 = getelementptr inbounds i8, i8* %17, i64 1
   %19 = call i8* @strcpy(i8* %16, i8* %18)
   %20 = getelementptr inbounds [256 x i8], [256 x i8]* %5, i64 0, i64 0
-  call void @kD(i8* %20)
+  call void @uU(i8* %20)
   %22 = load i8*, i8** %3
   %23 = load i8*, i8** %2
   %24 = ptrtoint i8* %22 to i64

@@ -1,6 +1,6 @@
 %union.anon = type { i32 }
 @.str = constant [4 x i8] c"%u\0A\00"
-define dso_local i32 @bKM(i32 %0) {
+define dso_local i32 @G(i32 %0) {
   %2 = alloca i32
   %3 = alloca i32
   %4 = alloca i32
@@ -69,7 +69,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   %16 = trunc i64 %15 to i32
   store i32 %16, i32* %6
   %17 = load i32, i32* %6
-  %18 = call i32 @bKM(i32 %17)
+  %18 = call i32 @G(i32 %17)
   %19 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str, i64 0, i64 0), i32 %18)
   store i32 0, i32* %3
   br label %21

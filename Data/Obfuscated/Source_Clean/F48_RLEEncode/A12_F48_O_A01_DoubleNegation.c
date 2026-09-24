@@ -1,10 +1,10 @@
-void   E(const   char  *IDvF,   char   *Tk0) {
-  int   gmp =   0,  yj =  0;
-   while (!!IDvF[gmp])   {
-  int  cR  =  1;
- while (!!IDvF[gmp+cR] &&   IDvF[gmp+cR]  == IDvF[gmp])   cR++;
-   Tk0[yj++]   =  IDvF[gmp];
- yj  +=   sprintf(Tk0+yj,  "%d",   cR);
-   gmp += cR;
-  }
+void v(const char *dH, char *ov) {
+    int bK = 0, BBM8 = 0;
+    while (!!dH[bK]) {
+        int N = 1;
+        while (!!dH[bK+N] && dH[bK+N] == dH[bK]) N++;
+        ov[BBM8++] = dH[bK];
+        BBM8 += sprintf(ov+BBM8, "%d", N);
+        bK += N;
+    }
 }

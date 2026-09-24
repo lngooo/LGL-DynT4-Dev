@@ -5,26 +5,24 @@
 * Implementation Logic: Deconstruction of loops into goto-labels derived from A05.
 * Input Format: <string1> <string2>
 */
-
-
 #include <stdio.h>
 #include <string.h>
 
-int   hpQ(char*   NG, char* jkTk2) {
-   if (strlen(NG)   !=  strlen(jkTk2))   return  0;
-   int   zq2   = 0,  Ypis   =   0, nD3  = 0;
-p5:
-   if   (!NG[nD3])   goto   PQ;
- zq2  ^= NG[nD3];  zq2   ^=  jkTk2[nD3];
-   Ypis +=   NG[nD3];   Ypis  -=   jkTk2[nD3];
-  nD3++;
-  goto p5;
-PQ:
-   return   (zq2 ==   0 && Ypis  == 0);
+int vWeF(char* IdHA, char* SjJ0) {
+    if (strlen(IdHA) != strlen(SjJ0)) return 0;
+    int n = 0, khW6 = 0, opd = 0;
+d:
+    if (!IdHA[opd]) goto Ec;
+    n ^= IdHA[opd]; n ^= SjJ0[opd];
+    khW6 += IdHA[opd]; khW6 -= SjJ0[opd];
+    opd++;
+    goto d;
+Ec:
+    return (n == 0 && khW6 == 0);
 }
 
-int  main(int argc, char*   argv[])  {
-  if (argc < 3)  return  0;
-  printf("%d\n", hpQ(argv[1],   argv[2]));
- return  0;
+int main(int o, char* j9[]) {
+    if (o < 3) return 0;
+    printf("%d\n", vWeF(j9[1], j9[2]));
+    return 0;
 }

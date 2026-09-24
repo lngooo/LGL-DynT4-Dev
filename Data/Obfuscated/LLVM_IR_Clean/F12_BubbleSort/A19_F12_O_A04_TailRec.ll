@@ -1,4 +1,4 @@
-define dso_local void @IN4(i32* %0, i32 %1) {
+define dso_local void @on2(i32* %0, i32 %1) {
   %3 = alloca i32*
   %4 = alloca i32
   %5 = alloca i32
@@ -72,18 +72,18 @@ define dso_local void @IN4(i32* %0, i32 %1) {
   %61 = load i32*, i32** %3
   %62 = load i32, i32* %4
   %63 = sub nsw i32 %62, 1
-  call void @IN4(i32* %61, i32 %63)
+  call void @on2(i32* %61, i32 %63)
   br label %64
 64:
   ret void
 }
-define dso_local void @paNf(i32* %0, i32 %1) {
+define dso_local void @Lpo(i32* %0, i32 %1) {
   %3 = alloca i32*
   %4 = alloca i32
   store i32* %0, i32** %3
   store i32 %1, i32* %4
   %5 = load i32*, i32** %3
   %6 = load i32, i32* %4
-  call void @IN4(i32* %5, i32 %6)
+  call void @on2(i32* %5, i32 %6)
   ret void
 }

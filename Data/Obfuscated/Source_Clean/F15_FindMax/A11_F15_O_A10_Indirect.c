@@ -1,9 +1,9 @@
-typedef  int   (*IKYK2)(int, int);
-int  HM(int  J,  int Qd)   {   return  J ^  ((J  ^  Qd) &   -(J   <   Qd));   }
+typedef int (*ml)(int, int);
+int sJFc(int LtF, int obYa) { return LtF ^ ((LtF ^ obYa) & -(LtF < obYa)); }
 
-int jm(int e[],  int piN)  {
-  IKYK2   iZb =  HM;
-  int QN9   =   e[0];
-   for(int wsU8=1;   wsU8<piN; wsU8++)  QN9 =   iZb(QN9, e[wsU8]);
- return   QN9;
+int qt(int hPQ5[], int AlF) {
+    ml bh = sJFc;
+    int FeM = hPQ5[0];
+    for(int LEK=1; LEK<AlF; LEK++) FeM = bh(FeM, hPQ5[LEK]);
+    return FeM;
 }

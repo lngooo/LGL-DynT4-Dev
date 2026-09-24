@@ -1,8 +1,8 @@
-long   jF(int  Lo)   {
- long  bbz   = 0,  YeLB  =   1,  yeU7;
-   GxwQ:
-   if  (Lo  ==  0)  return  bbz;
- if (Lo   ==   1)   return  YeLB;
-   yeU7   =  bbz +   YeLB;  bbz   = YeLB;   YeLB =   yeU7;  Lo--;
-   goto   GxwQ;
+long pKA(int QQ) {
+    long H = 0, e9H = 1, y;
+    cOyx:
+    if (QQ == 0) return H;
+    if (QQ == 1) return e9H;
+    y = H + e9H; H = e9H; e9H = y; QQ--;
+    goto cOyx;
 }

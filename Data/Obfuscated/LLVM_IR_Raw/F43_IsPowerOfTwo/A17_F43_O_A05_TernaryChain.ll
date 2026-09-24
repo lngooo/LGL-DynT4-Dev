@@ -1,5 +1,5 @@
 @.str = constant [3 x i8] c"%d\00"
-define dso_local i32 @O(i32 %0) {
+define dso_local i32 @Y7n(i32 %0) {
   %2 = alloca i32
   store i32 %0, i32* %2
   %3 = load i32, i32* %2
@@ -23,7 +23,7 @@ define dso_local i32 @O(i32 %0) {
 15:
   %16 = load i32, i32* %2
   %17 = lshr i32 %16, 1
-  %18 = call i32 @O(i32 %17)
+  %18 = call i32 @Y7n(i32 %17)
   br label %19
 19:
   %20 = phi i32 [ 0, %14 ], [ %18, %15 ]
@@ -57,7 +57,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   %16 = trunc i64 %15 to i32
   store i32 %16, i32* %6
   %17 = load i32, i32* %6
-  %18 = call i32 @O(i32 %17)
+  %18 = call i32 @Y7n(i32 %17)
   %19 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str, i64 0, i64 0), i32 %18)
   store i32 0, i32* %3
   br label %21

@@ -5,21 +5,19 @@
  * Implementation Logic: Comparison using explicit array indexing and a for-loop.
  * Input Format: <str1> <str2>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int WiP2(const  char   *caH,  const char  *a)  {
- int   z   =   0;
-   for  (z   = 0;   caH[z] !=   '\0';  z++) {
-  if (caH[z] != a[z])   return   (unsigned  char)caH[z]  - (unsigned char)a[z];
-   }
-   return   (unsigned   char)caH[z]  -   (unsigned  char)a[z];
+int VzW(const char *X0l, const char *fvwN) {
+    int u1 = 0;
+    for (u1 = 0; X0l[u1] != '\0'; u1++) {
+        if (X0l[u1] != fvwN[u1]) return (unsigned char)X0l[u1] - (unsigned char)fvwN[u1];
+    }
+    return (unsigned char)X0l[u1] - (unsigned char)fvwN[u1];
 }
 
-int   main(int  argc, char *argv[])  {
- if  (argc   < 3) return  0;
-  printf("%d\n",   WiP2(argv[1],   argv[2]));
-  return 0;
+int main(int g6U, char *O[]) {
+    if (g6U < 3) return 0;
+    printf("%d\n", VzW(O[1], O[2]));
+    return 0;
 }

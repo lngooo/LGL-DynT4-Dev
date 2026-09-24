@@ -1,14 +1,14 @@
-void   JDN9(int  ElCU[],  int  TI,   int Hbe)  {
-  if  (TI  == 0)   return;
-  Hbe %=   TI;
- int   Fe[3][2] =  {{0,   Hbe-1},   {Hbe, TI-1}, {0,  TI-1}};
- for(int   ji0=0;  ji0<3;  ji0++)  {
-  int  JM =   Fe[ji0][0],  mEja  =  Fe[ji0][1];
- while(JM  <  mEja)   {
-   for(int CH=0;   CH<1; CH++)  {
-   int  D  = ElCU[JM];  ElCU[JM]   =   ElCU[mEja];  ElCU[mEja]   = D;
-   }
-   JM++;   mEja--;
-  }
-  }
+void c(int u42S[], int Y, int d6) {
+    if (Y == 0) return;
+    d6 %= Y;
+    int dtNO[3][2] = {{0, d6-1}, {d6, Y-1}, {0, Y-1}};
+    for(int egRd=0; egRd<3; egRd++) {
+        int zgNW = dtNO[egRd][0], o3MY = dtNO[egRd][1];
+        while(zgNW < o3MY) {
+            for(int D=0; D<1; D++) {
+                int DYB4 = u42S[zgNW]; u42S[zgNW] = u42S[o3MY]; u42S[o3MY] = DYB4;
+            }
+            zgNW++; o3MY--;
+        }
+    }
 }

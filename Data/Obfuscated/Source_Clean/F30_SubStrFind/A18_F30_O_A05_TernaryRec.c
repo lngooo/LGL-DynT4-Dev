@@ -1,8 +1,8 @@
-int  qss(char*   Q, char* SWWe6,  int   IXSd3,   int  pl)  {
-   return   (*Q  ==  '\0')  ? -1  : (strncmp(Q,  SWWe6,  pl)   == 0 ?  IXSd3  :   qss(Q + 1,  SWWe6, IXSd3  + 1,  pl));
+int Ekk(char* LP, char* cy, int dWo, int T) {
+    return (*LP == '\0') ? -1 : (strncmp(LP, cy, T) == 0 ? dWo : Ekk(LP + 1, cy, dWo + 1, T));
 }
 
-int  R(char*  e,  char* G6) {
-  int pl  = strlen(G6);
-  return   (pl   ==   0) ?   0 : qss(e, G6, 0, pl);
+int fN(char* q, char* H) {
+    int T = strlen(H);
+    return (T == 0) ? 0 : Ekk(q, H, 0, T);
 }

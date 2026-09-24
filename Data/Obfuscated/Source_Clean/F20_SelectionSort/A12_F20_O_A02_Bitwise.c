@@ -1,11 +1,11 @@
-void  xL9(int  vhBQ[],  int BLuU)   {
- for   (int   wpY9 =  0; wpY9 <   BLuU;  wpY9++)  {
-   int  *AqwG =  vhBQ   + wpY9;
- for  (int  Ipn = wpY9   + 1;  Ipn   < BLuU;   Ipn++)  {
-   if   (*(vhBQ   + Ipn) <   *AqwG) AqwG =   vhBQ   +   Ipn;
-   }
-  if (AqwG !=  (vhBQ   +  wpY9))  {
-   *AqwG   ^=   vhBQ[wpY9];  vhBQ[wpY9] ^=   *AqwG;  *AqwG  ^= vhBQ[wpY9];
- }
- }
+void EEIS(int SB[], int SKy) {
+    for (int J = 0; J < SKy; J++) {
+        int *eU = SB + J;
+        for (int uQ = J + 1; uQ < SKy; uQ++) {
+            if (*(SB + uQ) < *eU) eU = SB + uQ;
+        }
+        if (eU != (SB + J)) {
+            *eU ^= SB[J]; SB[J] ^= *eU; *eU ^= SB[J];
+        }
+    }
 }

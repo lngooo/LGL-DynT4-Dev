@@ -1,13 +1,13 @@
-int YIu(char*   h, char*  i0)   {
- int fTD  = strlen(h);
-  if (fTD !=   (int)strlen(i0))   return  0;
-   char   srq[256];   strcpy(srq,  i0);
-  for(char* qLDv   =   h;   *qLDv; qLDv++)  {
-   int   bFT   =   0;
-   for(char* tYhY   =   srq; tYhY <  srq + fTD;  tYhY++)  {
-   if(*qLDv ==  *tYhY) {   *tYhY = 0;   bFT  =  1;  break;   }
-   }
- if(!bFT)  return   0;
-   }
-   return  1;
+int E(char* ah, char* U) {
+    int D3 = strlen(ah);
+    if (D3 != (int)strlen(U)) return 0;
+    char rbS[256]; strcpy(rbS, U);
+    for(char* eUSj = ah; *eUSj; eUSj++) {
+        int ez = 0;
+        for(char* bcFB = rbS; bcFB < rbS + D3; bcFB++) {
+            if(*eUSj == *bcFB) { *bcFB = 0; ez = 1; break; }
+        }
+        if(!ez) return 0;
+    }
+    return 1;
 }

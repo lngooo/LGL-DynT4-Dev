@@ -1,7 +1,7 @@
-int   ku(const   char   *qTWG) {
-   int AMJ =   0;
- while   (qTWG[AMJ])  {
-  AMJ  = -~AMJ;   
-   }
-   return  AMJ;
+int z0(const char *j1) {
+    int Xb = 0;
+    while (j1[Xb]) {
+        Xb = -~Xb; 
+    }
+    return Xb;
 }

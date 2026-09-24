@@ -1,6 +1,6 @@
 @.str = constant [4 x i8] c"%d \00"
 @.str.1 = constant [2 x i8] c"\0A\00"
-define dso_local void @Jk1(i32* %0, i32* %1) {
+define dso_local void @a8BP(i32* %0, i32* %1) {
   %3 = alloca i32*
   %4 = alloca i32*
   store i32* %0, i32** %3
@@ -40,7 +40,7 @@ define dso_local void @Jk1(i32* %0, i32* %1) {
 29:
   ret void
 }
-define dso_local void @b1(i32* %0, i32 %1, i32 %2) {
+define dso_local void @FxHW(i32* %0, i32 %1, i32 %2) {
   %4 = alloca i32*
   %5 = alloca i32
   %6 = alloca i32
@@ -63,7 +63,7 @@ define dso_local void @b1(i32* %0, i32 %1, i32 %2) {
   %17 = sext i32 %16 to i64
   %18 = getelementptr inbounds i32, i32* %15, i64 %17
   %19 = getelementptr inbounds i32, i32* %18, i64 -1
-  call void @Jk1(i32* %14, i32* %19)
+  call void @a8BP(i32* %14, i32* %19)
   %20 = load i32*, i32** %4
   %21 = load i32, i32* %6
   %22 = sext i32 %21 to i64
@@ -73,14 +73,14 @@ define dso_local void @b1(i32* %0, i32 %1, i32 %2) {
   %26 = sext i32 %25 to i64
   %27 = getelementptr inbounds i32, i32* %24, i64 %26
   %28 = getelementptr inbounds i32, i32* %27, i64 -1
-  call void @Jk1(i32* %23, i32* %28)
+  call void @a8BP(i32* %23, i32* %28)
   %29 = load i32*, i32** %4
   %30 = load i32*, i32** %4
   %31 = load i32, i32* %5
   %32 = sext i32 %31 to i64
   %33 = getelementptr inbounds i32, i32* %30, i64 %32
   %34 = getelementptr inbounds i32, i32* %33, i64 -1
-  call void @Jk1(i32* %29, i32* %34)
+  call void @a8BP(i32* %29, i32* %34)
   br label %35
 35:
   ret void
@@ -149,7 +149,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   %52 = load i32*, i32** %8
   %53 = load i32, i32* %7
   %54 = load i32, i32* %6
-  call void @b1(i32* %52, i32 %53, i32 %54)
+  call void @FxHW(i32* %52, i32 %53, i32 %54)
   store i32 0, i32* %10
   br label %56
 56:

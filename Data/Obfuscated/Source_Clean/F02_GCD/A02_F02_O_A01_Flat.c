@@ -1,12 +1,12 @@
-int   FsE7(int  Ss, int N)  {
-   int  RYQF,  F  = 0;
- Ss =   abs(Ss);   N  = abs(N);
- while   (F   != 3) {
-   switch   (F) {
-  case  0:  F  = (N  !=  0)   ?  1   :   3; break;
- case 1: RYQF   = N;   N =  Ss  %   N;  F  =   2;  break;
-  case  2: Ss   = RYQF;  F  = 0;  break;
-   }
-   }
-   return  Ss;
+int kZ(int Ab, int V7) {
+    int Y7A, rk = 0;
+    Ab = abs(Ab); V7 = abs(V7);
+    while (rk != 3) {
+        switch (rk) {
+            case 0: rk = (V7 != 0) ? 1 : 3; break;
+            case 1: Y7A = V7; V7 = Ab % V7; rk = 2; break;
+            case 2: Ab = Y7A; rk = 0; break;
+        }
+    }
+    return Ab;
 }

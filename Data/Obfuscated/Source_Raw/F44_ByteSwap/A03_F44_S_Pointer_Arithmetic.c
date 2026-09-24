@@ -5,25 +5,23 @@
  * Implementation Logic: Accesses individual bytes via uint8_t pointer casting and swaps them in a loop.
  * Input Format: <uint32_t>
  */
-
-
 #include <stdio.h>
 #include <stdint.h>
 #include <stdlib.h>
 
-uint32_t KB(uint32_t   TRk6) {
-  uint32_t   Rsq;
-  uint8_t   *xG =   (uint8_t  *)&TRk6;
-  uint8_t *v9 =  (uint8_t   *)&Rsq;
-  for  (int RfAN =   0;  RfAN <  4;   RfAN++)   {
-   v9[RfAN]   =   xG[3  -   RfAN];
-   }
- return Rsq;
+uint32_t Kpnw(uint32_t ZN) {
+    uint32_t T;
+    uint8_t *O = (uint8_t *)&ZN;
+    uint8_t *Iu3 = (uint8_t *)&T;
+    for (int fxO9 = 0; fxO9 < 4; fxO9++) {
+        Iu3[fxO9] = O[3 - fxO9];
+    }
+    return T;
 }
 
-int main(int   argc,  char* argv[]) {
- if   (argc <  2) return   0;
-  uint32_t   Lw   = (uint32_t)strtoul(argv[1],   NULL,   10);
-  printf("%u\n", KB(Lw));
- return 0;
+int main(int CQp, char* P[]) {
+    if (CQp < 2) return 0;
+    uint32_t y0y = (uint32_t)strtoul(P[1], NULL, 10);
+    printf("%u\n", Kpnw(y0y));
+    return 0;
 }

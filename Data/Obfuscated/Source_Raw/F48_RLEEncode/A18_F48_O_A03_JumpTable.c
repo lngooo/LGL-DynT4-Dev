@@ -5,32 +5,30 @@
  * Implementation Logic: JumpTable
  * Input Format: <string>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
 
-void  kj(const char *j,   char  *d)   {
- char *E  =  (char*)j;
-   int   W =  0;
-J1:
- if   (!*E) return;
-  char   NqX = *E;
-   int   DrtD =   1;
-   while  (*(E +   DrtD)   ==  NqX) DrtD++;
-  d[W++]  =  NqX;
- W   += sprintf(d   +  W, "%d", DrtD);
- E +=   DrtD;
-  goto   J1;
+void R(const char *Ly, char *XkX8) {
+    char *p = (char*)Ly;
+    int IJz = 0;
+OSV:
+    if (!*p) return;
+    char Q = *p;
+    int IIaj = 1;
+    while (*(p + IIaj) == Q) IIaj++;
+    XkX8[IJz++] = Q;
+    IJz += sprintf(XkX8 + IJz, "%d", IIaj);
+    p += IIaj;
+    goto OSV;
 }
 
-int   main(int argc, char   *argv[]) {
-  if   (argc  < 2)  return  0;
-  char  *YVv  =  argv[1];
- char   E8[256] =  {0};
- kj(YVv, E8);
-  printf("%s\n",   E8);
- return  0;
+int main(int ukMS, char *f5y[]) {
+    if (ukMS < 2) return 0;
+    char *SBT = f5y[1];
+    char nU[256] = {0};
+    R(SBT, nU);
+    printf("%s\n", nU);
+    return 0;
 }

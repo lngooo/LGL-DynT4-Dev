@@ -1,12 +1,12 @@
-void x(char* yAC)   {
-   int t0  =   strlen(yAC);
-  if   (t0  ==   0)  return;
- for   (int e   =   0; e  < t0;   e++)  {
-   int yu = 1;
-   if  ((t0   * t0   +   1)   > 0)  {
-  while   (e +  1 <   t0  &&  yAC[e] ==  yAC[e+1])  {   yu++; e++;   }
-   printf("%c%d",   yAC[e],  yu);
-   }
-   }
- printf("\n");
+void ulT(char* x) {
+    int g = strlen(x);
+    if (g == 0) return;
+    for (int Xvu = 0; Xvu < g; Xvu++) {
+        int l = 1;
+        if ((g * g + 1) > 0) {
+            while (Xvu + 1 < g && x[Xvu] == x[Xvu+1]) { l++; Xvu++; }
+            printf("%c%d", x[Xvu], l);
+        }
+    }
+    printf("\n");
 }

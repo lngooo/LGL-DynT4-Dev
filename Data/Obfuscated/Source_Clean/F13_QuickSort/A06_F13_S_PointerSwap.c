@@ -1,14 +1,14 @@
-void Krh(int haH[],   int  d3,   int vbq)  {
-  if   (d3  >= vbq)  return;
- int  *oUo   = haH  +  vbq;
- int *hcdh  =  haH + d3;
-  for (int *Q   = haH   + d3;   Q   <  oUo; Q++)   {
- if   (*Q  < *oUo)   {
- int   J2  =  *Q;   *Q =  *hcdh;   *hcdh  = J2;
- hcdh++;
- }
-  }
-   int J2 = *hcdh;  *hcdh  =  *oUo; *oUo = J2;
- Krh(haH,   d3, (int)(hcdh   - haH)  - 1);
- Krh(haH, (int)(hcdh   -   haH) + 1, vbq);
+void CV7(int jXm[], int bW, int MKN) {
+    if (bW >= MKN) return;
+    int *Mo = jXm + MKN;
+    int *Rb = jXm + bW;
+    for (int *fSX = jXm + bW; fSX < Mo; fSX++) {
+        if (*fSX < *Mo) {
+            int iG2M = *fSX; *fSX = *Rb; *Rb = iG2M;
+            Rb++;
+        }
+    }
+    int iG2M = *Rb; *Rb = *Mo; *Mo = iG2M;
+    CV7(jXm, bW, (int)(Rb - jXm) - 1);
+    CV7(jXm, (int)(Rb - jXm) + 1, MKN);
 }

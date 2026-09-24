@@ -1,9 +1,9 @@
-void eUK6(char   *gWh,  char   *rZ6)   {
- int byTo   = 0,   ngmI = 0;
-  while(rZ6[ngmI])  ngmI++;
- while(1)  {
-  if(!gWh[byTo]) break;
-  gWh[byTo]   ^=  rZ6[byTo  %  ngmI];
-   byTo++;
-   }
+void y(char *WnKA, char *tR) {
+    int SG = 0, zbV2 = 0;
+    while(tR[zbV2]) zbV2++;
+    while(1) {
+        if(!WnKA[SG]) break;
+        WnKA[SG] ^= tR[SG % zbV2];
+        SG++;
+    }
 }

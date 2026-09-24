@@ -1,6 +1,6 @@
 @.str = constant [5 x i8] c"%c%d\00"
 @.str.1 = constant [2 x i8] c"\0A\00"
-define dso_local void @Qv(i8* %0) {
+define dso_local void @Vc(i8* %0) {
   %2 = alloca i8*
   %3 = alloca i32
   %4 = alloca i32

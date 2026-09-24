@@ -5,29 +5,27 @@
  * Implementation Logic: A21_F49_O_A06_UnsignedLogic
  * Input Format: <string> <shift_int>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
 
-void VCIy6(char   *ZLlk,   int tYj5) {
+void Ftl(char *vz, int VGSF) {
 
-   int Y2 =   (tYj5  %  26   + 26)  % 26;
-   for(int  I=0;   ZLlk[I]; I++) {
-  unsigned char  BvJ = (unsigned char)ZLlk[I];
-   if(BvJ  >= 97   &&   BvJ  <=  122)  ZLlk[I]  =   (char)('a' +   (BvJ -   97  +  Y2) % 26);
- else  if(BvJ  >= 65 &&  BvJ <=  90) ZLlk[I] =   (char)('A'   +   (BvJ -   65 +  Y2)  %   26);
- }
+    int G = (VGSF % 26 + 26) % 26;
+    for(int in=0; vz[in]; in++) {
+        unsigned char HPIP = (unsigned char)vz[in];
+        if(HPIP >= 97 && HPIP <= 122) vz[in] = (char)('a' + (HPIP - 97 + G) % 26);
+        else if(HPIP >= 65 && HPIP <= 90) vz[in] = (char)('A' + (HPIP - 65 + G) % 26);
+    }
 }
 
-int  main(int  argc,  char *argv[])   {
- if  (argc < 3) {
- return  1;
- }
-   int   tYj5 =  atoi(argv[2]);
-  VCIy6(argv[1], tYj5);
-   printf("%s\n", argv[1]);
- return 0;
+int main(int dvQI, char *eyH[]) {
+    if (dvQI < 3) {
+        return 1;
+    }
+    int VGSF = atoi(eyH[2]);
+    Ftl(eyH[1], VGSF);
+    printf("%s\n", eyH[1]);
+    return 0;
 }

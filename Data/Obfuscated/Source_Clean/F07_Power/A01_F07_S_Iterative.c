@@ -1,7 +1,7 @@
-int   Za(int Vd,  int   exp) {
-   int  ph  = 1;
-   for (int   mRch   = 0;  mRch   < exp; mRch++) {
-  ph *= Vd;
- }
- return ph;
+int RFiO(int pqQ, int exp) {
+    int TB = 1;
+    for (int eCME = 0; eCME < exp; eCME++) {
+        TB *= pqQ;
+    }
+    return TB;
 }

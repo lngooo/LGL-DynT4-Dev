@@ -1,10 +1,10 @@
-int Ph(int L9)   {
- if (L9 <  0)  return -1;
-   if  (L9  ==  0) return   0;
-   long  m4  = (long)L9  <<   16;
-  long   KyE  = 1   <<  16;
-   for   (int  Ngv  = 0;  Ngv  <  20;   Ngv++)  {
-   KyE =   (KyE  +   (m4  / KyE))  >>  1;
-   }
- return   (int)(KyE >> 8); 
+int Spd(int r5xb) {
+    if (r5xb < 0) return -1;
+    if (r5xb == 0) return 0;
+    long Ytt = (long)r5xb << 16;
+    long F2S = 1 << 16;
+    for (int o = 0; o < 20; o++) {
+        F2S = (F2S + (Ytt / F2S)) >> 1;
+    }
+    return (int)(F2S >> 8); 
 }

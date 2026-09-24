@@ -1,12 +1,12 @@
-@__const.laG7.jYvP = constant [10 x i8] c"aeiouAEIOU"
-define dso_local i32 @laG7(i8* %0) {
+@__const.lj.gU = constant [10 x i8] c"aeiouAEIOU"
+define dso_local i32 @lj(i8* %0) {
   %2 = alloca i8*
   %3 = alloca [10 x i8]
   %4 = alloca i32
   %5 = alloca i32
   %6 = alloca i32
   store i8* %0, i8** %2
-  call void @llvm.memcpy.p0i8.p0i8.i64(i8* align 1 %8, i8* align 1 getelementptr inbounds ([10 x i8], [10 x i8]* @__const.laG7.jYvP, i32 0, i32 0), i64 10, i1 false)
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* align 1 %8, i8* align 1 getelementptr inbounds ([10 x i8], [10 x i8]* @__const.lj.gU, i32 0, i32 0), i64 10, i1 false)
   store i32 0, i32* %4
   br label %10
 10:

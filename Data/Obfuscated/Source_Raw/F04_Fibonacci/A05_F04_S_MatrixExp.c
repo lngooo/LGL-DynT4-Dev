@@ -5,36 +5,34 @@
  * Implementation Logic: MatrixExp
  * Input Format: <arg1>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-long YDON(int  JUSz6)  {
-   if  (JUSz6  ==   0)  return  0;
- if   (JUSz6  ==  1) return   1;
- long Jl[2][2]   =  {{1,  1},   {1, 0}},   AaR1[2][2]  =  {{1,   1}, {1,  0}};
- for   (int   JQdW  =  1;   JQdW < JUSz6   - 1;  JQdW++)   {
- long  lDj  =   AaR1[0][0]*Jl[0][0]  + AaR1[0][1]*Jl[1][0];
-   long  zk =  AaR1[0][0]*Jl[0][1]  +   AaR1[0][1]*Jl[1][1];
-  long  kkm =  AaR1[1][0]*Jl[0][0]  + AaR1[1][1]*Jl[1][0];
-  long   Og7  =  AaR1[1][0]*Jl[0][1]  +  AaR1[1][1]*Jl[1][1];
-  AaR1[0][0]=lDj; AaR1[0][1]=zk;   AaR1[1][0]=kkm; AaR1[1][1]=Og7;
-   }
-   return AaR1[0][0];
+long ZB(int M) {
+    if (M == 0) return 0;
+    if (M == 1) return 1;
+    long blr[2][2] = {{1, 1}, {1, 0}}, vwa[2][2] = {{1, 1}, {1, 0}};
+    for (int jK = 1; jK < M - 1; jK++) {
+        long ejVO = vwa[0][0]*blr[0][0] + vwa[0][1]*blr[1][0];
+        long f = vwa[0][0]*blr[0][1] + vwa[0][1]*blr[1][1];
+        long yA = vwa[1][0]*blr[0][0] + vwa[1][1]*blr[1][0];
+        long vkxt = vwa[1][0]*blr[0][1] + vwa[1][1]*blr[1][1];
+        vwa[0][0]=ejVO; vwa[0][1]=f; vwa[1][0]=yA; vwa[1][1]=vkxt;
+    }
+    return vwa[0][0];
 }
 
-int main(int   argc,  char *argv[])   {
-  if  (argc < 2)   {
- return  1;
- }
- int  JUSz6  = atoi(argv[1]);
-   if   (JUSz6   <   0)  {
-  printf("0\n");
-  return  0;
-   }
-   long N  = YDON(JUSz6);
-   printf("%ld\n", N);
- return 0;
+int main(int X8K, char *d[]) {
+    if (X8K < 2) {
+        return 1;
+    }
+    int M = atoi(d[1]);
+    if (M < 0) {
+        printf("0\n");
+        return 0;
+    }
+    long kW = ZB(M);
+    printf("%ld\n", kW);
+    return 0;
 }

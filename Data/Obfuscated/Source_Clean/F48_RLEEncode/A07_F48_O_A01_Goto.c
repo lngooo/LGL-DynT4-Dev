@@ -1,14 +1,14 @@
-void br(const   char *Pz, char   *to)   {
-  int  CF =   0,  TOeS   = 0;
-jdA:
- if (!Pz[CF])  goto  meM6;
-  int   a =   1;
-nnor7:
-  if  (Pz[CF+a]   &&  Pz[CF+a] == Pz[CF])   {  a++;   goto  nnor7;   }
-  to[TOeS++]   =  Pz[CF];
-   TOeS   +=   sprintf(to  +   TOeS,   "%d",   a);
-  CF   +=  a;
- goto   jdA;
-meM6:
-  to[TOeS] =   0;
+void L(const char *Dx, char *al) {
+    int KCz = 0, p = 0;
+PWCa:
+    if (!Dx[KCz]) goto Ws;
+    int yu = 1;
+W5:
+    if (Dx[KCz+yu] && Dx[KCz+yu] == Dx[KCz]) { yu++; goto W5; }
+    al[p++] = Dx[KCz];
+    p += sprintf(al + p, "%d", yu);
+    KCz += yu;
+    goto PWCa;
+Ws:
+    al[p] = 0;
 }

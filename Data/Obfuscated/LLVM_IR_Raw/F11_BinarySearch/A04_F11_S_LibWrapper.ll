@@ -1,5 +1,5 @@
 @.str = constant [4 x i8] c"%d\0A\00"
-define dso_local i32 @A(i8* %0, i8* %1) {
+define dso_local i32 @AI(i8* %0, i8* %1) {
   %3 = alloca i8*
   %4 = alloca i8*
   store i8* %0, i8** %3
@@ -11,7 +11,7 @@ define dso_local i32 @A(i8* %0, i8* %1) {
   %11 = sub nsw i32 %7, %10
   ret i32 %11
 }
-define dso_local i32 @jIa(i32* %0, i32 %1, i32 %2) {
+define dso_local i32 @xsn(i32* %0, i32 %1, i32 %2) {
   %4 = alloca i32
   %5 = alloca i32*
   %6 = alloca i32
@@ -24,7 +24,7 @@ define dso_local i32 @jIa(i32* %0, i32 %1, i32 %2) {
   %12 = load i32*, i32** %5
   %14 = load i32, i32* %6
   %15 = sext i32 %14 to i64
-  %16 = call i8* @bsearch(i8* %11, i8* %13, i64 %15, i64 4, i32 (i8*, i8*)* @A)
+  %16 = call i8* @bsearch(i8* %11, i8* %13, i64 %15, i64 4, i32 (i8*, i8*)* @AI)
   store i32* %17, i32** %8
   %18 = load i32*, i32** %8
   %19 = icmp eq i32* %18, null
@@ -188,7 +188,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   %51 = load i32*, i32** %8
   %52 = load i32, i32* %7
   %53 = load i32, i32* %6
-  %54 = call i32 @jIa(i32* %51, i32 %52, i32 %53)
+  %54 = call i32 @xsn(i32* %51, i32 %52, i32 %53)
   %55 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str, i64 0, i64 0), i32 %54)
   %56 = load i32*, i32** %8
   call void @free(i8* %57)

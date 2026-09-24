@@ -5,24 +5,22 @@
  * Implementation Logic: 基于 A01 的 Goto 标签链重构 [cite: 20, 28]
  * Input Format: <int1> <int2> ...
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 #include <string.h>
 
-void  TF(int  *IU0,  int   pXd3) {
-  int   ZLr=pXd3/2;EtcK:if(ZLr<=0)goto A;int   V=ZLr;nfPu:if(V>=pXd3){ZLr/=2;goto   EtcK;}int  uOS=IU0[V],Wc=V;o0:if(Wc>=ZLr&&IU0[Wc-ZLr]>uOS){IU0[Wc]=IU0[Wc-ZLr];Wc-=ZLr;goto o0;}IU0[Wc]=uOS;V++;goto nfPu;A:;
+void K(int *peI, int r) {
+    int NS=r/2;zzgo:if(NS<=0)goto Fnk;int wO=NS;TMs:if(wO>=r){NS/=2;goto zzgo;}int G6=peI[wO],Vt26=wO;ku:if(Vt26>=NS&&peI[Vt26-NS]>G6){peI[Vt26]=peI[Vt26-NS];Vt26-=NS;goto ku;}peI[Vt26]=G6;wO++;goto TMs;Fnk:;
 }
 
-int  main(int argc, char  *argv[])  {
-  if  (argc  <  2)   return  0;
-   int   pXd3   =   argc -   1;
- int   *IU0 =  (int   *)malloc(pXd3  *  sizeof(int));
- for  (int V   =  0;  V  <  pXd3;  V++)   IU0[V] = atoi(argv[V+1]);
- TF(IU0,   pXd3);
-  for  (int  V   = 0; V   <   pXd3;   V++)   printf("%d%c",  IU0[V],  V ==   pXd3   -   1 ?  '\n'   :  ' ');
-  free(IU0);
-   return  0;
+int main(int k, char *v5[]) {
+    if (k < 2) return 0;
+    int r = k - 1;
+    int *peI = (int *)malloc(r * sizeof(int));
+    for (int wO = 0; wO < r; wO++) peI[wO] = atoi(v5[wO+1]);
+    K(peI, r);
+    for (int wO = 0; wO < r; wO++) printf("%d%c", peI[wO], wO == r - 1 ? '\n' : ' ');
+    free(peI);
+    return 0;
 }

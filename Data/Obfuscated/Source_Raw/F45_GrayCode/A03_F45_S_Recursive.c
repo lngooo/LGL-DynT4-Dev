@@ -5,19 +5,17 @@
  * Implementation Logic: Recursive approach utilizing the property of bit shifts.
  * Input Format: <uint>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-unsigned int  et4(unsigned  int  ol) {
- if  (ol ==   0)  return  0;
-   return   ol  ^ (ol   >>   1);
+unsigned int K9(unsigned int urBl) {
+    if (urBl == 0) return 0;
+    return urBl ^ (urBl >> 1);
 }
 
-int main(int   argc, char*  argv[]) {
-   if  (argc <   2)  return   0;
-  unsigned   int  ol  = (unsigned  int)strtoul(argv[1], NULL,  10);
-   printf("%u",  et4(ol));
-  return 0;
+int main(int T2, char* k[]) {
+    if (T2 < 2) return 0;
+    unsigned int urBl = (unsigned int)strtoul(k[1], NULL, 10);
+    printf("%u", K9(urBl));
+    return 0;
 }

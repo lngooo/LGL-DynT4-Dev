@@ -5,25 +5,23 @@
  * Implementation Logic: Variable splitting obfuscation derived from A01, separating logic into multiple registers.
  * Input Format: <uint32_t>
  */
-
-
 #include <stdio.h>
 #include <stdint.h>
 #include <stdlib.h>
 
-uint32_t ogvb(uint32_t  OT)   {
-   uint32_t  ly   =  0;
-  uint32_t   wp  =   0;
-  ly   |=   (OT &  0x000000FF)  <<   24;
-   ly  |=  (OT &   0x0000FF00)  <<   8;
-   wp   |=  (OT &  0x00FF0000)  >>  8;
-  wp |=   (OT  &   0xFF000000) >> 24;
- return   (ly   |  wp);
+uint32_t lG(uint32_t NGD) {
+    uint32_t uW9 = 0;
+    uint32_t h2T = 0;
+    uW9  |= (NGD & 0x000000FF) << 24;
+    uW9  |= (NGD & 0x0000FF00) << 8;
+    h2T |= (NGD & 0x00FF0000) >> 8;
+    h2T |= (NGD & 0xFF000000) >> 24;
+    return (uW9 | h2T);
 }
 
-int main(int argc,   char* argv[])  {
-   if  (argc   < 2)   return  0;
-   uint32_t  kK8  =   (uint32_t)strtoul(argv[1],  NULL, 10);
- printf("%u\n",  ogvb(kK8));
-  return   0;
+int main(int Xv, char* i2Fh[]) {
+    if (Xv < 2) return 0;
+    uint32_t r4mb = (uint32_t)strtoul(i2Fh[1], NULL, 10);
+    printf("%u\n", lG(r4mb));
+    return 0;
 }

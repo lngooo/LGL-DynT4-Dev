@@ -4,18 +4,16 @@
  * File: A15_F26_O_A01_Volatile.c
  * Implementation Logic: StrLen with volatile qualifier.
  */
-
-
 #include <stdio.h>
 
-int uTG(const char *eYU1)  {
-  volatile   int vXs  =  0;
-   while   (eYU1[vXs]) vXs++;
-  return   vXs;
+int U(const char *nC) {
+    volatile int Rr = 0;
+    while (nC[Rr]) Rr++;
+    return Rr;
 }
 
-int  main(int  argc, char *argv[])   {
- if  (argc < 2)   return  0;
-   printf("%d\n",  uTG(argv[1]));
-   return  0;
+int main(int aOh, char *HgX[]) {
+    if (aOh < 2) return 0;
+    printf("%d\n", U(HgX[1]));
+    return 0;
 }

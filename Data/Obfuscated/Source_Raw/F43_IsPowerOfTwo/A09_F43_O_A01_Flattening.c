@@ -4,34 +4,32 @@
  * File: A09_F43_O_A01_Flattening.c
  * Implementation Logic: Control Flow Flattening derived from A01 using a dispatcher switch.
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int z4(unsigned   int g)  {
-   int  OCC  = 1;
-   int rDe6 = 0;
-   while  (OCC   != 0)  {
- switch   (OCC) {
-   case  1:
- OCC = (g  == 0)  ?  2  :  3;
- break;
- case 2:
-   rDe6   = 0;  OCC =  0;
- break;
- case 3:
-  rDe6 = ((g  &  (g - 1))  ==  0);
-   OCC  =  0;
-   break;
-   }
-   }
-  return   rDe6;
+int S(unsigned int p0) {
+    int B7 = 1;
+    int G = 0;
+    while (B7 != 0) {
+        switch (B7) {
+            case 1:
+                B7 = (p0 == 0) ? 2 : 3;
+                break;
+            case 2:
+                G = 0; B7 = 0;
+                break;
+            case 3:
+                G = ((p0 & (p0 - 1)) == 0);
+                B7 = 0;
+                break;
+        }
+    }
+    return G;
 }
 
-int main(int  argc, char*  argv[])  {
- if  (argc <  2)  return 0;
-  unsigned   int   g   =  (unsigned   int)strtoul(argv[1],   NULL,   10);
-  printf("%d",   z4(g));
-  return 0;
+int main(int GI4l, char* w[]) {
+    if (GI4l < 2) return 0;
+    unsigned int p0 = (unsigned int)strtoul(w[1], NULL, 10);
+    printf("%d", S(p0));
+    return 0;
 }

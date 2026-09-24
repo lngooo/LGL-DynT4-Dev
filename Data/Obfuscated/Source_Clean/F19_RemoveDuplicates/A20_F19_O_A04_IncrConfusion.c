@@ -1,11 +1,11 @@
-int  ytX(int b[],   int   pgu7)  {
-   int *Sd =  b,   *kNi  =  b;
-  int R7 =  -1;
-  while  (++R7  <  pgu7) {
- int *TIX8  =  b,   gX6  = 0;
-  while (TIX8  <   kNi)  { if (*TIX8   == *Sd)  gX6   = 1; TIX8++;   }
-   if  (!gX6)   *kNi++  =   *Sd;
- Sd++;
-   }
- return   (int)(kNi -  b);
+int x(int lB[], int MlR) {
+    int *j5QR = lB, *N0s = lB;
+    int gr6 = -1;
+    while (++gr6 < MlR) {
+        int *Qx7q = lB, Y = 0;
+        while (Qx7q < N0s) { if (*Qx7q == *j5QR) Y = 1; Qx7q++; }
+        if (!Y) *N0s++ = *j5QR;
+        j5QR++;
+    }
+    return (int)(N0s - lB);
 }

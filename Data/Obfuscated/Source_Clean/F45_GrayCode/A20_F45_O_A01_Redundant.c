@@ -1,7 +1,7 @@
-unsigned   int BWP(unsigned int   S)   {
-   unsigned  int  GRR  = S;
- unsigned   int   WNFc   =   S >>  1;
-   unsigned  int  X9   =  (GRR &   0) |  (WNFc   & 0);
-  unsigned int   iYrW0 =   (GRR   ^   WNFc)   | X9;
-   return   iYrW0  &   0xFFFFFFFF;
+unsigned int otov(unsigned int G33) {
+    unsigned int Ue = G33;
+    unsigned int LZA = G33 >> 1;
+    unsigned int z = (Ue & 0) | (LZA & 0);
+    unsigned int q3Xb = (Ue ^ LZA) | z;
+    return q3Xb & 0xFFFFFFFF;
 }

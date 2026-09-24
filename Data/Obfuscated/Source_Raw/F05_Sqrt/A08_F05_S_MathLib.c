@@ -5,20 +5,18 @@
  * Implementation Logic: Using math.h sqrt() and flooring to integer (Seed 4).
  * Input Format: <n>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-int  CQC0(int   TgxS) {
-  if  (TgxS <  0)   return  -1;
-  double b   =   sqrt((double)TgxS);
-  return   (int)floor(b);
+int iWxG(int u) {
+    if (u < 0) return -1;
+    double Dh = sqrt((double)u);
+    return (int)floor(Dh);
 }
 
-int   main(int   argc,   char   *argv[])  {
-  if   (argc <   2) return  1;
-  printf("%d\n",  CQC0(atoi(argv[1])));
-   return  0;
+int main(int Cpj, char *d[]) {
+    if (Cpj < 2) return 1;
+    printf("%d\n", iWxG(atoi(d[1])));
+    return 0;
 }

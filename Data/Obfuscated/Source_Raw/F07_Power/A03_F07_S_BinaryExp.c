@@ -5,23 +5,21 @@
  * Implementation Logic: Exponentiation by squaring (Iterative).
  * Input Format: <base> <exp>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int A(int   E, int   exp) {
- int   p7   = 1;
-   while (exp   >   0)   {
-   if   (exp   %  2  == 1)  p7  *=  E;
-   E  *= E;
-   exp   /=  2;
- }
- return   p7;
+int GV(int Cx, int exp) {
+    int DXRL = 1;
+    while (exp > 0) {
+        if (exp % 2 == 1) DXRL *= Cx;
+        Cx *= Cx;
+        exp /= 2;
+    }
+    return DXRL;
 }
 
-int   main(int argc, char   *argv[])   {
-  if (argc < 3)  return   1;
- printf("%d\n",  A(atoi(argv[1]), atoi(argv[2])));
-  return  0;
+int main(int wb, char *gsA6[]) {
+    if (wb < 3) return 1;
+    printf("%d\n", GV(atoi(gsA6[1]), atoi(gsA6[2])));
+    return 0;
 }

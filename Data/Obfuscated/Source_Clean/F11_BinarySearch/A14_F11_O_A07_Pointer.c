@@ -1,11 +1,11 @@
-int  X0(int  PXJ8[],  int YFJA2,   int TrM)   {
-   int   *H7  =  PXJ8;
-   int   mGC  =  0;
-   int YNbI2   =   1  <<   (31  -   __builtin_clz(YFJA2));
- while (YNbI2  >   0)   {
- int  Uu   = mGC   |   YNbI2;
-  if   (Uu   < YFJA2  &&   *(H7 +   Uu)   <= TrM)  mGC =   Uu;
-  YNbI2 >>=   1;
-  }
-  return  (*(H7   +   mGC)  ==   TrM)  ?   mGC : -1;
+int iO(int K[], int dk, int lH9) {
+    int *MKOb = K;
+    int fnC = 0;
+    int Eko1 = 1 << (31 - __builtin_clz(dk));
+    while (Eko1 > 0) {
+        int MjYL = fnC | Eko1;
+        if (MjYL < dk && *(MKOb + MjYL) <= lH9) fnC = MjYL;
+        Eko1 >>= 1;
+    }
+    return (*(MKOb + fnC) == lH9) ? fnC : -1;
 }

@@ -4,30 +4,28 @@
  * File: A21_F14_O_A02_TailRec.c
  * Implementation Logic: Tail-recursive optimization variation.
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-void   b6(int DLI[],  int  FSV5,   int  ALs)  {
-   while(FSV5 <   ALs)  {
-   int fD  = DLI[FSV5]; DLI[FSV5] =   DLI[ALs];   DLI[ALs]   =   fD;
- FSV5++; ALs--;
-   }
+void r(int h2[], int DAkW, int o4s) {
+    while(DAkW < o4s) {
+        int YY = h2[DAkW]; h2[DAkW] = h2[o4s]; h2[o4s] = YY;
+        DAkW++; o4s--;
+    }
 }
 
-void  Q(int   ZuoR[], int T7)  {
-   if(T7   >  1) b6(ZuoR,  0, T7   - 1);
+void KJ(int fA[], int nLE1) {
+    if(nLE1 > 1) r(fA, 0, nLE1 - 1);
 }
 
-int   main(int  argc,  char *argv[]) {
-  if (argc  <   2) return   0;
- int   T7   =   argc - 1;
-  int  *ZuoR   = (int*)malloc(T7  *   sizeof(int));
-   for(int Qv=0; Qv<T7; Qv++) ZuoR[Qv] =   atoi(argv[Qv+1]);
- Q(ZuoR,   T7);
- for(int   Qv=0;   Qv<T7;   Qv++) printf("%d ", ZuoR[Qv]);
-   printf("\n");
-  free(ZuoR);
-   return 0;
+int main(int raUB, char *pu[]) {
+    if (raUB < 2) return 0;
+    int nLE1 = raUB - 1;
+    int *fA = (int*)malloc(nLE1 * sizeof(int));
+    for(int Lo57=0; Lo57<nLE1; Lo57++) fA[Lo57] = atoi(pu[Lo57+1]);
+    KJ(fA, nLE1);
+    for(int Lo57=0; Lo57<nLE1; Lo57++) printf("%d ", fA[Lo57]);
+    printf("\n");
+    free(fA);
+    return 0;
 }

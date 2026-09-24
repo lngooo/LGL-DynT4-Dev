@@ -1,15 +1,15 @@
-int   mc(int m[],   int  Ben,  int cz)   {
-  int  cj = sqrt(Ben);
- int Pl   =   0;
- while   (m[(cj < Ben  ? cj   :   Ben)   - 1] <   cz) {
-  Pl =  cj;
-   cj   +=  sqrt(Ben);
- if   (Pl   >=   Ben) return   -1;
- }
-  while  (m[Pl]  <   cz) {
-   Pl++;
-   if  (Pl  ==  (cj < Ben   ? cj   :   Ben))   return   -1;
-  }
-  if  (m[Pl]   == cz) return Pl;
-  return   -1;
+int K(int IJ8f[], int nVV, int nA5) {
+    int kl = sqrt(nVV);
+    int N1 = 0;
+    while (IJ8f[(kl < nVV ? kl : nVV) - 1] < nA5) {
+        N1 = kl;
+        kl += sqrt(nVV);
+        if (N1 >= nVV) return -1;
+    }
+    while (IJ8f[N1] < nA5) {
+        N1++;
+        if (N1 == (kl < nVV ? kl : nVV)) return -1;
+    }
+    if (IJ8f[N1] == nA5) return N1;
+    return -1;
 }

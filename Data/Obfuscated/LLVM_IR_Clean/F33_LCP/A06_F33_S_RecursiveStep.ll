@@ -1,4 +1,4 @@
-define dso_local void @ZO(i8** %0, i32 %1, i8* %2) {
+define dso_local void @SO(i8** %0, i32 %1, i8* %2) {
   %4 = alloca i8**
   %5 = alloca i32
   %6 = alloca i8*
@@ -23,7 +23,7 @@ define dso_local void @ZO(i8** %0, i32 %1, i8* %2) {
   %21 = load i32, i32* %5
   %22 = sub nsw i32 %21, 1
   %23 = getelementptr inbounds [128 x i8], [128 x i8]* %7, i64 0, i64 0
-  call void @ZO(i8** %20, i32 %22, i8* %23)
+  call void @SO(i8** %20, i32 %22, i8* %23)
   store i32 0, i32* %8
   br label %25
 25:

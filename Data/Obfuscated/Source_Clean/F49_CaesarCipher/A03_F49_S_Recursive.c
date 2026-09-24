@@ -1,8 +1,8 @@
-void  cXl3(char  *IToC,   int   OQ7) {
+void k(char *Z, int Ob) {
 
-   if (*IToC  ==  '\0')  return;
-  int wur  =   (OQ7   % 26  + 26)  %  26;
-  if   (*IToC  >= 'A'  && *IToC  <=   'Z')  *IToC   =  (*IToC -   'A'  +  wur) %  26  +  'A';
- else if   (*IToC >=   'a'   &&  *IToC  <=  'z') *IToC  =   (*IToC  - 'a'   +   wur)  %  26 + 'a';
-   cXl3(IToC   + 1,  OQ7);
+    if (*Z == '\0') return;
+    int xi = (Ob % 26 + 26) % 26;
+    if (*Z >= 'A' && *Z <= 'Z') *Z = (*Z - 'A' + xi) % 26 + 'A';
+    else if (*Z >= 'a' && *Z <= 'z') *Z = (*Z - 'a' + xi) % 26 + 'a';
+    k(Z + 1, Ob);
 }

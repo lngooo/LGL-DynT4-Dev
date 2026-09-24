@@ -1,6 +1,6 @@
 %struct.anon = type { i24 }
 @.str = constant [65 x i8] c"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/\00"
-define dso_local void @q(i8* %0, i32 %1, i8* %2) {
+define dso_local void @E(i8* %0, i32 %1, i8* %2) {
   %4 = alloca i8*
   %5 = alloca i32
   %6 = alloca i8*

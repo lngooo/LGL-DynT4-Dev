@@ -1,8 +1,8 @@
-int  RpC(const   char *U)  {
- const  char   *wZ   =   U;
- while (*wZ)   {
- if   (*wZ ==  0)   break;
-  wZ++;
- }
-  return  (int)(wZ   - U);
+int XJDQ(const char *Q) {
+    const char *WHq = Q;
+    while (*WHq) {
+        if (*WHq == 0) break;
+        WHq++;
+    }
+    return (int)(WHq - Q);
 }

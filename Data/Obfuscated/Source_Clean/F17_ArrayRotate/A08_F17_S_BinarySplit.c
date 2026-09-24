@@ -1,28 +1,28 @@
-void  N(int  lpF[],   int QLG,  int R)  {
-  if (QLG   == 0)  return;
-   R   =   R %  QLG;
-   if  (R  ==  0)  return;
-   int  cKWT9  = R,  zn = QLG  -  R;
-  while  (cKWT9  != zn) {
-   if  (cKWT9  <   zn) {
- for   (int Az0 = 0;   Az0   <   cKWT9; Az0++) {
-   int li9   =  lpF[R   - cKWT9  +   Az0];
-  lpF[R  - cKWT9  +  Az0]   = lpF[R   + zn - cKWT9  +   Az0];
-  lpF[R   +   zn  -   cKWT9 +   Az0] =  li9;
-  }
-   zn  -= cKWT9;
-  }   else  {
- for (int Az0 =  0;   Az0  < zn;  Az0++)   {
-   int  li9   =   lpF[R - cKWT9   +   Az0];
-  lpF[R  -  cKWT9 + Az0]  = lpF[R + Az0];
-  lpF[R   + Az0]  =   li9;
-   }
- cKWT9  -=   zn;
- }
-  }
-   for   (int   Az0 =  0;  Az0   <   cKWT9; Az0++) {
-   int  li9   =  lpF[R   -  cKWT9  +   Az0];
-   lpF[R   -   cKWT9  +   Az0]  = lpF[R +   Az0];
- lpF[R  +   Az0] = li9;
- }
+void tK(int Cf2O[], int Y9, int xI) {
+    if (Y9 == 0) return;
+    xI = xI % Y9;
+    if (xI == 0) return;
+    int Yp = xI, JCca = Y9 - xI;
+    while (Yp != JCca) {
+        if (Yp < JCca) {
+            for (int NsPk = 0; NsPk < Yp; NsPk++) {
+                int d = Cf2O[xI - Yp + NsPk];
+                Cf2O[xI - Yp + NsPk] = Cf2O[xI + JCca - Yp + NsPk];
+                Cf2O[xI + JCca - Yp + NsPk] = d;
+            }
+            JCca -= Yp;
+        } else {
+            for (int NsPk = 0; NsPk < JCca; NsPk++) {
+                int d = Cf2O[xI - Yp + NsPk];
+                Cf2O[xI - Yp + NsPk] = Cf2O[xI + NsPk];
+                Cf2O[xI + NsPk] = d;
+            }
+            Yp -= JCca;
+        }
+    }
+    for (int NsPk = 0; NsPk < Yp; NsPk++) {
+        int d = Cf2O[xI - Yp + NsPk];
+        Cf2O[xI - Yp + NsPk] = Cf2O[xI + NsPk];
+        Cf2O[xI + NsPk] = d;
+    }
 }

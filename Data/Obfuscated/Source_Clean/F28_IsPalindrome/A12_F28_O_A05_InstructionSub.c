@@ -1,11 +1,11 @@
-int  nF(char *b2)  {
- int a2 = 0;   while (b2[a2])  a2++;
- int  uSya =  0,  PqGK   = a2  - 1;
-   while  (uSya  <   PqGK)  {
- int  Yhzz =  b2[uSya] -   b2[PqGK];
- if (Yhzz   != 0) return   0;
- uSya  =   uSya + 1;
-  PqGK  =  PqGK  -  1;
- }
-   return 1;
+int mVj(char *t1) {
+    int x = 0; while (t1[x]) x++;
+    int L51 = 0, EvTl = x - 1;
+    while (L51 < EvTl) {
+        int tgZ = t1[L51] - t1[EvTl];
+        if (tgZ != 0) return 0;
+        L51 = L51 + 1;
+        EvTl = EvTl - 1;
+    }
+    return 1;
 }

@@ -1,10 +1,10 @@
-%struct.EVdG5 = type { i32, [3 x i8] }
-@__const.fhgb.msbX = constant [13 x %struct.EVdG5] [%struct.EVdG5 { i32 1000, [3 x i8] c"M\00\00" }, %struct.EVdG5 { i32 900, [3 x i8] c"CM\00" }, %struct.EVdG5 { i32 500, [3 x i8] c"D\00\00" }, %struct.EVdG5 { i32 400, [3 x i8] c"CD\00" }, %struct.EVdG5 { i32 100, [3 x i8] c"C\00\00" }, %struct.EVdG5 { i32 90, [3 x i8] c"XC\00" }, %struct.EVdG5 { i32 50, [3 x i8] c"L\00\00" }, %struct.EVdG5 { i32 40, [3 x i8] c"XL\00" }, %struct.EVdG5 { i32 10, [3 x i8] c"X\00\00" }, %struct.EVdG5 { i32 9, [3 x i8] c"IX\00" }, %struct.EVdG5 { i32 5, [3 x i8] c"V\00\00" }, %struct.EVdG5 { i32 4, [3 x i8] c"IV\00" }, %struct.EVdG5 { i32 1, [3 x i8] c"I\00\00" }]
+%struct.C = type { i32, [3 x i8] }
+@__const.Sa.x = constant [13 x %struct.C] [%struct.C { i32 1000, [3 x i8] c"M\00\00" }, %struct.C { i32 900, [3 x i8] c"CM\00" }, %struct.C { i32 500, [3 x i8] c"D\00\00" }, %struct.C { i32 400, [3 x i8] c"CD\00" }, %struct.C { i32 100, [3 x i8] c"C\00\00" }, %struct.C { i32 90, [3 x i8] c"XC\00" }, %struct.C { i32 50, [3 x i8] c"L\00\00" }, %struct.C { i32 40, [3 x i8] c"XL\00" }, %struct.C { i32 10, [3 x i8] c"X\00\00" }, %struct.C { i32 9, [3 x i8] c"IX\00" }, %struct.C { i32 5, [3 x i8] c"V\00\00" }, %struct.C { i32 4, [3 x i8] c"IV\00" }, %struct.C { i32 1, [3 x i8] c"I\00\00" }]
 @.str = constant [4 x i8] c"%s\0A\00"
-define dso_local void @fhgb(i32 %0, i8* %1) {
+define dso_local void @Sa(i32 %0, i8* %1) {
   %3 = alloca i32
   %4 = alloca i8*
-  %5 = alloca [13 x %struct.EVdG5]
+  %5 = alloca [13 x %struct.C]
   %6 = alloca i32
   %7 = alloca i32
   %8 = alloca i32
@@ -27,8 +27,8 @@ define dso_local void @fhgb(i32 %0, i8* %1) {
   %22 = load i32, i32* %3
   %23 = load i32, i32* %6
   %24 = sext i32 %23 to i64
-  %25 = getelementptr inbounds [13 x %struct.EVdG5], [13 x %struct.EVdG5]* %5, i64 0, i64 %24
-  %26 = getelementptr inbounds %struct.EVdG5, %struct.EVdG5* %25, i32 0, i32 0
+  %25 = getelementptr inbounds [13 x %struct.C], [13 x %struct.C]* %5, i64 0, i64 %24
+  %26 = getelementptr inbounds %struct.C, %struct.C* %25, i32 0, i32 0
   %27 = load i32, i32* %26
   %28 = sdiv i32 %22, %27
   store i32 %28, i32* %8
@@ -46,8 +46,8 @@ define dso_local void @fhgb(i32 %0, i8* %1) {
   %37 = load i8*, i8** %4
   %38 = load i32, i32* %6
   %39 = sext i32 %38 to i64
-  %40 = getelementptr inbounds [13 x %struct.EVdG5], [13 x %struct.EVdG5]* %5, i64 0, i64 %39
-  %41 = getelementptr inbounds %struct.EVdG5, %struct.EVdG5* %40, i32 0, i32 1
+  %40 = getelementptr inbounds [13 x %struct.C], [13 x %struct.C]* %5, i64 0, i64 %39
+  %41 = getelementptr inbounds %struct.C, %struct.C* %40, i32 0, i32 1
   %42 = getelementptr inbounds [3 x i8], [3 x i8]* %41, i64 0, i64 0
   %43 = call i8* @strcat(i8* %37, i8* %42)
   br label %44
@@ -59,8 +59,8 @@ define dso_local void @fhgb(i32 %0, i8* %1) {
 47:
   %48 = load i32, i32* %6
   %49 = sext i32 %48 to i64
-  %50 = getelementptr inbounds [13 x %struct.EVdG5], [13 x %struct.EVdG5]* %5, i64 0, i64 %49
-  %51 = getelementptr inbounds %struct.EVdG5, %struct.EVdG5* %50, i32 0, i32 0
+  %50 = getelementptr inbounds [13 x %struct.C], [13 x %struct.C]* %5, i64 0, i64 %49
+  %51 = getelementptr inbounds %struct.C, %struct.C* %50, i32 0, i32 0
   %52 = load i32, i32* %51
   %53 = load i32, i32* %3
   %54 = srem i32 %53, %52
@@ -96,7 +96,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   %14 = load i8*, i8** %13
   %15 = call i32 @atoi(i8* %14)
   %16 = getelementptr inbounds [100 x i8], [100 x i8]* %6, i64 0, i64 0
-  call void @fhgb(i32 %15, i8* %16)
+  call void @Sa(i32 %15, i8* %16)
   %17 = getelementptr inbounds [100 x i8], [100 x i8]* %6, i64 0, i64 0
   %18 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str, i64 0, i64 0), i8* %17)
   store i32 0, i32* %3

@@ -5,25 +5,23 @@
  * Implementation Logic: Constructing Gray code bit-by-bit by checking adjacent binary bits.
  * Input Format: <uint>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-unsigned   int   i(unsigned int   oGw)   {
-  unsigned   int  RGG  =  0;
-   for  (int rUqO  =   0;  rUqO <   31; rUqO++) {
-   if  (((oGw >>  rUqO)   & 1)   ^   ((oGw >> (rUqO   +   1))   &  1))  {
- RGG   |=  (1U  << rUqO);
-   }
-   }
-   RGG   |=   (oGw   & 0x80000000); //  Preserve MSB
-  return  RGG;
+unsigned int cdz(unsigned int zM) {
+    unsigned int mY = 0;
+    for (int orI = 0; orI < 31; orI++) {
+        if (((zM >> orI) & 1) ^ ((zM >> (orI + 1)) & 1)) {
+            mY |= (1U << orI);
+        }
+    }
+    mY |= (zM & 0x80000000); // Preserve MSB
+    return mY;
 }
 
-int main(int  argc, char*   argv[])   {
-  if (argc  < 2)  return   0;
- unsigned  int   oGw =  (unsigned   int)strtoul(argv[1],  NULL, 10);
-   printf("%u",   i(oGw));
-  return   0;
+int main(int GBr, char* cGkh[]) {
+    if (GBr < 2) return 0;
+    unsigned int zM = (unsigned int)strtoul(cGkh[1], NULL, 10);
+    printf("%u", cdz(zM));
+    return 0;
 }

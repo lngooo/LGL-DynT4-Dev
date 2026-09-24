@@ -1,10 +1,10 @@
-int vO(unsigned  int   Z)  {
-  static  unsigned int  oqt[32];
- for(int   aiCw8=0;   aiCw8<32;  aiCw8++) oqt[aiCw8]  =  1U  <<  aiCw8;
- unsigned int  *yYWz  =  oqt;
- if  (Z ==  0)   return   0;
-   for  (int  aiCw8  = 0;   aiCw8   <   32; aiCw8++) {
- if  (*(yYWz   +  aiCw8)   ==  Z)  return  1;
-   }
-  return   0;
+int eC(unsigned int UIMQ) {
+    static unsigned int HIm[32];
+    for(int fDa7=0; fDa7<32; fDa7++) HIm[fDa7] = 1U << fDa7;
+    unsigned int *WLH = HIm;
+    if (UIMQ == 0) return 0;
+    for (int fDa7 = 0; fDa7 < 32; fDa7++) {
+        if (*(WLH + fDa7) == UIMQ) return 1;
+    }
+    return 0;
 }

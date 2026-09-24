@@ -4,28 +4,26 @@
  * File: A20_F15_O_A10_Struct.c
  * Implementation Logic: Max using temporary comparison struct.
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-struct   e  {  int   HiVh;  int df;  int  pI6;  };
+struct e { int Rbly; int jtN; int W; };
 
-int  CDBn(int  X[], int  o) {
-   struct e  VC5 =   {X[0],  0,  X[0]};
-  for(int   wm=1;  wm<o;   wm++)   {
- VC5.df  = X[wm];
- VC5.pI6   =  (VC5.df   > VC5.pI6)  ?   VC5.df  :   VC5.pI6;
-   }
- return VC5.pI6;
+int Q(int YDms[], int FGqI) {
+    struct e Z3I = {YDms[0], 0, YDms[0]};
+    for(int B=1; B<FGqI; B++) {
+        Z3I.jtN = YDms[B];
+        Z3I.W = (Z3I.jtN > Z3I.W) ? Z3I.jtN : Z3I.W;
+    }
+    return Z3I.W;
 }
 
-int   main(int   argc, char   *argv[])   {
-  if  (argc  <   2)   return   0;
- int   o  =   argc - 1;
- int  *X  =   (int*)malloc(o   *   sizeof(int));
- for   (int wm =   0;  wm  <  o;  wm++)   X[wm] = atoi(argv[wm+1]);
- printf("%d\n",  CDBn(X, o));
-  free(X);
-  return 0;
+int main(int y, char *u2yC[]) {
+    if (y < 2) return 0;
+    int FGqI = y - 1;
+    int *YDms = (int*)malloc(FGqI * sizeof(int));
+    for (int B = 0; B < FGqI; B++) YDms[B] = atoi(u2yC[B+1]);
+    printf("%d\n", Q(YDms, FGqI));
+    free(YDms);
+    return 0;
 }

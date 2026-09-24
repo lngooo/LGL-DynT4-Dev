@@ -1,21 +1,21 @@
-void H(int s8[],   int AmhU6)  {
-  int  lhWo   = 0, rTDP  =  AmhU6  - 1,   SSe   = 1;
- while  (SSe) {
- SSe  = 0;
- for   (int   qumR = lhWo; qumR  <   rTDP; qumR++) {
-   if   (s8[qumR]   >   s8[qumR+1]) {
- s8[qumR]  ^=   s8[qumR+1]; s8[qumR+1]   ^=   s8[qumR];  s8[qumR]   ^= s8[qumR+1];
-   SSe  =   1;
- }
-  }
- if (!SSe)   break;
-  SSe =   0;  rTDP--;
-  for   (int   qumR =   rTDP   -  1;   qumR   >=  lhWo;   qumR--)  {
- if   (s8[qumR]   > s8[qumR+1])  {
-   s8[qumR]   ^= s8[qumR+1];   s8[qumR+1] ^=  s8[qumR]; s8[qumR]  ^=   s8[qumR+1];
-   SSe   = 1;
- }
-   }
-  lhWo++;
-   }
+void txAq(int ta[], int H) {
+    int ws = 0, IaS7 = H - 1, WEta = 1;
+    while (WEta) {
+        WEta = 0;
+        for (int ZsMo = ws; ZsMo < IaS7; ZsMo++) {
+            if (ta[ZsMo] > ta[ZsMo+1]) {
+                ta[ZsMo] ^= ta[ZsMo+1]; ta[ZsMo+1] ^= ta[ZsMo]; ta[ZsMo] ^= ta[ZsMo+1];
+                WEta = 1;
+            }
+        }
+        if (!WEta) break;
+        WEta = 0; IaS7--;
+        for (int ZsMo = IaS7 - 1; ZsMo >= ws; ZsMo--) {
+            if (ta[ZsMo] > ta[ZsMo+1]) {
+                ta[ZsMo] ^= ta[ZsMo+1]; ta[ZsMo+1] ^= ta[ZsMo]; ta[ZsMo] ^= ta[ZsMo+1];
+                WEta = 1;
+            }
+        }
+        ws++;
+    }
 }

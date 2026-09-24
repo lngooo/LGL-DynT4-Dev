@@ -1,11 +1,11 @@
-void  Epi4(int Eij[], int  Y5)   {
- if (Y5 <= 1)  return;
-  Epi4(Eij,   Y5 - 1);
-   int   Ref = Eij[Y5  - 1];
-   int  Qy  = Y5  -  2;
- while (Qy  >=   0  && Eij[Qy] >   Ref)   {
-  Eij[Qy + 1]   =  Eij[Qy];
-  Qy--;
-  }
- Eij[Qy   +  1]   = Ref;
+void se(int H7[], int zNd) {
+    if (zNd <= 1) return;
+    se(H7, zNd - 1);
+    int L = H7[zNd - 1];
+    int qPbc = zNd - 2;
+    while (qPbc >= 0 && H7[qPbc] > L) {
+        H7[qPbc + 1] = H7[qPbc];
+        qPbc--;
+    }
+    H7[qPbc + 1] = L;
 }

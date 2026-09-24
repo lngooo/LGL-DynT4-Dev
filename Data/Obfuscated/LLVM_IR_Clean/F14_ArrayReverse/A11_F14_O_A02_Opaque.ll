@@ -1,5 +1,5 @@
 @.str = constant [5 x i8] c"Junk\00"
-define dso_local void @O(i32* %0, i32 %1, i32 %2) {
+define dso_local void @mNzl(i32* %0, i32 %1, i32 %2) {
   %4 = alloca i32*
   %5 = alloca i32
   %6 = alloca i32
@@ -54,7 +54,7 @@ define dso_local void @O(i32* %0, i32 %1, i32 %2) {
   %45 = add nsw i32 %44, 1
   %46 = load i32, i32* %6
   %47 = sub nsw i32 %46, 1
-  call void @O(i32* %43, i32 %45, i32 %47)
+  call void @mNzl(i32* %43, i32 %45, i32 %47)
   store i32 0, i32* %8
   br label %49
 49:
@@ -69,7 +69,7 @@ define dso_local void @O(i32* %0, i32 %1, i32 %2) {
   unreachable
 }
 declare i32 @printf(i8*, ...)
-define dso_local void @K5(i32* %0, i32 %1) {
+define dso_local void @Q(i32* %0, i32 %1) {
   %3 = alloca i32*
   %4 = alloca i32
   store i32* %0, i32** %3
@@ -81,7 +81,7 @@ define dso_local void @K5(i32* %0, i32 %1) {
   %8 = load i32*, i32** %3
   %9 = load i32, i32* %4
   %10 = sub nsw i32 %9, 1
-  call void @O(i32* %8, i32 0, i32 %10)
+  call void @mNzl(i32* %8, i32 0, i32 %10)
   br label %11
 11:
   ret void

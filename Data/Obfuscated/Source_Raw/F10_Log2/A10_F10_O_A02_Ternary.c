@@ -5,21 +5,19 @@
  * Implementation Logic: Ternary
  * Input Format: <integer>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-int  hB(int  es)   {
- return   (es  <=   1)  ?   0 :   1 + hB(es  >> 1);
+int h(int j8fX) {
+    return (j8fX <= 1) ? 0 : 1 + h(j8fX >> 1);
 }
 
-int main(int  argc, char *argv[]) {
-   if   (argc   < 2) return   0;
-   int es  = atoi(argv[1]);
- if (es <= 0) return   0;  
-  int  v   =   hB(es);
-  printf("%d\n", v);
-   return  0;
+int main(int U, char *q[]) {
+    if (U < 2) return 0;
+    int j8fX = atoi(q[1]);
+    if (j8fX <= 0) return 0; 
+    int Ds = h(j8fX);
+    printf("%d\n", Ds);
+    return 0;
 }

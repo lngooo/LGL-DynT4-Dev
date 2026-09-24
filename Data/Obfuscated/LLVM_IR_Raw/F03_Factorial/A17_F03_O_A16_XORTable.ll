@@ -1,6 +1,6 @@
-@__const.U.YI = constant [3 x i64] [i64 171, i64 171, i64 168]
+@__const.kq6.ZhD = constant [3 x i64] [i64 171, i64 171, i64 168]
 @.str = constant [6 x i8] c"%lld\0A\00"
-define dso_local i64 @U(i32 %0) {
+define dso_local i64 @kq6(i32 %0) {
   %2 = alloca i64
   %3 = alloca i32
   %4 = alloca [3 x i64]
@@ -82,7 +82,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   br label %45
 41:
   %42 = load i32, i32* %6
-  %43 = call i64 @U(i32 %42)
+  %43 = call i64 @kq6(i32 %42)
   %44 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str, i64 0, i64 0), i64 %43)
   br label %45
 45:

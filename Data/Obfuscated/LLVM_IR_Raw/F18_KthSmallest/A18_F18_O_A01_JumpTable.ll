@@ -1,5 +1,5 @@
 @.str = constant [4 x i8] c"%d\0A\00"
-define dso_local i32 @tWM(i32* %0, i32 %1, i32 %2, i32 %3) {
+define dso_local i32 @i2u(i32* %0, i32 %1, i32 %2, i32 %3) {
   %5 = alloca i32
   %6 = alloca i32*
   %7 = alloca i32
@@ -125,8 +125,8 @@ define dso_local i32 @tWM(i32* %0, i32 %1, i32 %2, i32 %3) {
   %99 = load i32, i32* %15
   %100 = icmp sgt i32 %99, 0
   %101 = zext i1 %100 to i64
-  %102 = select i1 %100, i64 0, i64 sub (i64 ptrtoint (i8* blockaddress(@tWM, %111) to i64), i64 ptrtoint (i8* blockaddress(@tWM, %104) to i64))
-  %103 = getelementptr i8, i8* blockaddress(@tWM, %104), i64 %102
+  %102 = select i1 %100, i64 0, i64 sub (i64 ptrtoint (i8* blockaddress(@i2u, %111) to i64), i64 ptrtoint (i8* blockaddress(@i2u, %104) to i64))
+  %103 = getelementptr i8, i8* blockaddress(@i2u, %104), i64 %102
   br label %120
 104:
   %105 = load i32*, i32** %6
@@ -134,7 +134,7 @@ define dso_local i32 @tWM(i32* %0, i32 %1, i32 %2, i32 %3) {
   %107 = load i32, i32* %11
   %108 = sub nsw i32 %107, 1
   %109 = load i32, i32* %9
-  %110 = call i32 @tWM(i32* %105, i32 %106, i32 %108, i32 %109)
+  %110 = call i32 @i2u(i32* %105, i32 %106, i32 %108, i32 %109)
   store i32 %110, i32* %5
   br label %118
 111:
@@ -143,7 +143,7 @@ define dso_local i32 @tWM(i32* %0, i32 %1, i32 %2, i32 %3) {
   %114 = add nsw i32 %113, 1
   %115 = load i32, i32* %8
   %116 = load i32, i32* %9
-  %117 = call i32 @tWM(i32* %112, i32 %114, i32 %115, i32 %116)
+  %117 = call i32 @i2u(i32* %112, i32 %114, i32 %115, i32 %116)
   store i32 %117, i32* %5
   br label %118
 118:
@@ -218,7 +218,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   %54 = load i32, i32* %7
   %55 = sub nsw i32 %54, 1
   %56 = load i32, i32* %6
-  %57 = call i32 @tWM(i32* %53, i32 0, i32 %55, i32 %56)
+  %57 = call i32 @i2u(i32* %53, i32 0, i32 %55, i32 %56)
   store i32 %57, i32* %10
   %58 = load i32, i32* %10
   %59 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str, i64 0, i64 0), i32 %58)

@@ -1,13 +1,13 @@
-void YF2(int aadp[],   int  WhGM4,  int  ST)   {
- int   l3  =   WhGM4,   qURy9  = ST,   HRti   = aadp[(WhGM4+ST)/2];
-   do  {
-  while   (aadp[l3] < HRti) l3++;
-  while   (aadp[qURy9]  > HRti)   qURy9--;
- if  (l3   <=  qURy9)  {
- int   pa  =   aadp[l3];  aadp[l3]  = aadp[qURy9];   aadp[qURy9]   =   pa;
-  l3++; qURy9--;
-  }
- }  while  (l3  <= qURy9);
-   if (WhGM4  < qURy9) YF2(aadp,   WhGM4, qURy9);
-  if   (l3   <  ST)  YF2(aadp, l3, ST);
+void nU(int D[], int T3Hh, int R) {
+    int v = T3Hh, cgHX = R, bKW = D[(T3Hh+R)/2];
+    do {
+        while (D[v] < bKW) v++;
+        while (D[cgHX] > bKW) cgHX--;
+        if (v <= cgHX) {
+            int O5n = D[v]; D[v] = D[cgHX]; D[cgHX] = O5n;
+            v++; cgHX--;
+        }
+    } while (v <= cgHX);
+    if (T3Hh < cgHX) nU(D, T3Hh, cgHX);
+    if (v < R) nU(D, v, R);
 }

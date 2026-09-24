@@ -1,5 +1,5 @@
-@__const.Y.mwHk = constant [2 x i64] [i64 0, i64 1]
-define dso_local i64 @Y(i32 %0) {
+@__const.X.Pl1 = constant [2 x i64] [i64 0, i64 1]
+define dso_local i64 @X(i32 %0) {
   %2 = alloca i64
   %3 = alloca i32
   %4 = alloca [2 x i64]

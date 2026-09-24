@@ -1,5 +1,5 @@
 @.str = constant [6 x i8] c"%s %s\00"
-define dso_local void @aKU(i8* %0) {
+define dso_local void @U4Y(i8* %0) {
   %2 = alloca i8*
   %3 = alloca i8*
   %4 = alloca i32
@@ -34,7 +34,7 @@ define dso_local void @aKU(i8* %0) {
   %29 = load i8*, i8** %3
   store i8 0, i8* %29
   %30 = load i8*, i8** %2
-  call void @aKU(i8* %30)
+  call void @U4Y(i8* %30)
   %32 = load i8*, i8** %2
   %33 = call i64 @strlen(i8* %32)
   %34 = add i64 %33, 1

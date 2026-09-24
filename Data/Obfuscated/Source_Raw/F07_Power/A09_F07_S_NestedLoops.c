@@ -5,26 +5,24 @@
  * Implementation Logic: Exponentiation by simulating multiplication via addition loops.
  * Input Format: <base> <exp>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int P(int   Wu,  int exp)   {
-   if (exp  ==   0)   return  1;
- int VAwf   = Wu;
-  for (int   G =   1;  G  <   exp; G++)  {
- int Riq0   = 0;
-   for   (int aOhG =  0;   aOhG < Wu; aOhG++)  {
-  Riq0 += VAwf;
- }
-  VAwf  = Riq0;
-  }
- return  VAwf;
+int silu(int Nd3w, int exp) {
+    if (exp == 0) return 1;
+    int F = Nd3w;
+    for (int m0 = 1; m0 < exp; m0++) {
+        int JGPF = 0;
+        for (int RFAT = 0; RFAT < Nd3w; RFAT++) {
+            JGPF += F;
+        }
+        F = JGPF;
+    }
+    return F;
 }
 
-int main(int  argc, char  *argv[])   {
- if (argc   <  3)  return  1;
-   printf("%d\n",  P(atoi(argv[1]), atoi(argv[2])));
- return  0;
+int main(int FkfK, char *Y[]) {
+    if (FkfK < 3) return 1;
+    printf("%d\n", silu(atoi(Y[1]), atoi(Y[2])));
+    return 0;
 }

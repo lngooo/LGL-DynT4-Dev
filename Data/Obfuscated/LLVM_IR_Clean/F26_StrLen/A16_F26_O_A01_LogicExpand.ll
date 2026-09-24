@@ -1,4 +1,4 @@
-define dso_local i32 @axp2(i8* %0) {
+define dso_local i32 @oQCt(i8* %0) {
   %2 = alloca i8*
   %3 = alloca i32
   store i8* %0, i8** %2

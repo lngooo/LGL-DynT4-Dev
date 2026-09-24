@@ -1,19 +1,19 @@
-void  Q(int   MS[],  int UL,  int   pY1)  {
- int eNA8 =  0;
-  while  (eNA8   !=   2)   {
-   switch   (eNA8)  {
- case   0: if (UL   < pY1)   eNA8 =  1;   else   eNA8  = 2; break;
-   case  1:  {
- int q  = UL + (pY1  -  UL)  / 2;
- Q(MS,   UL,   q);
-   Q(MS, q  +  1,  pY1);
- int *VKm   = (int*)malloc((pY1-UL+1)*4);
- int x=UL,   vDo6=q+1,   fIAB3=0;
-  while(x<=q   &&  vDo6<=pY1)  VKm[fIAB3++]  = (MS[x]<=MS[vDo6]) ?  MS[x++] :  MS[vDo6++];
- while(x<=q)  VKm[fIAB3++]  = MS[x++]; while(vDo6<=pY1)  VKm[fIAB3++]  =  MS[vDo6++];
-   for(int  n=0;  n<fIAB3;   n++)  MS[UL+n]   =  VKm[n];
-   free(VKm);   eNA8   =   2;   break;
-  }
-   }
-  }
+void A(int lz4[], int Kob8, int J) {
+    int fD = 0;
+    while (fD != 2) {
+        switch (fD) {
+            case 0: if (Kob8 < J) fD = 1; else fD = 2; break;
+            case 1: {
+                int qS = Kob8 + (J - Kob8) / 2;
+                A(lz4, Kob8, qS);
+                A(lz4, qS + 1, J);
+                int *dz = (int*)malloc((J-Kob8+1)*4);
+                int Mqjf=Kob8, k8K=qS+1, a=0;
+                while(Mqjf<=qS && k8K<=J) dz[a++] = (lz4[Mqjf]<=lz4[k8K]) ? lz4[Mqjf++] : lz4[k8K++];
+                while(Mqjf<=qS) dz[a++] = lz4[Mqjf++]; while(k8K<=J) dz[a++] = lz4[k8K++];
+                for(int X67D=0; X67D<a; X67D++) lz4[Kob8+X67D] = dz[X67D];
+                free(dz); fD = 2; break;
+            }
+        }
+    }
 }

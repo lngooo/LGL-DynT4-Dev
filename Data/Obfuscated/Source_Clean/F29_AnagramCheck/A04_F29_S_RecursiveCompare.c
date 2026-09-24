@@ -1,14 +1,14 @@
-int x(char* J6, char* ptw6)  {
-   if   (*J6   ==   '\0' && *ptw6  ==   '\0')   return  1;
-   if   (strlen(J6)   != strlen(ptw6))  return   0;
- char* uY = strchr(ptw6, *J6);
-  if  (!uY)   return   0;
-   *uY =   ptw6[strlen(ptw6)-1];
-  ptw6[strlen(ptw6)-1]   =  '\0';
-   return   x(J6  +   1, ptw6);
+int TEM(char* jpH, char* ZnAF) {
+    if (*jpH == '\0' && *ZnAF == '\0') return 1;
+    if (strlen(jpH) != strlen(ZnAF)) return 0;
+    char* t = strchr(ZnAF, *jpH);
+    if (!t) return 0;
+    *t = ZnAF[strlen(ZnAF)-1];
+    ZnAF[strlen(ZnAF)-1] = '\0';
+    return TEM(jpH + 1, ZnAF);
 }
 
-int k(char* J6,   char* ptw6)   {
-   char   Tk4[256]; strcpy(Tk4,   ptw6);
- return x(J6, Tk4);
+int vO(char* jpH, char* ZnAF) {
+    char RNB[256]; strcpy(RNB, ZnAF);
+    return TEM(jpH, RNB);
 }

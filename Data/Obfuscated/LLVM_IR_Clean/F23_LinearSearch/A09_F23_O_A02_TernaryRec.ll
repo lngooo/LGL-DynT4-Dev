@@ -1,4 +1,4 @@
-define dso_local i32 @TTr(i32* %0, i32 %1, i32 %2) {
+define dso_local i32 @sBfo(i32* %0, i32 %1, i32 %2) {
   %4 = alloca i32
   %5 = alloca i32*
   %6 = alloca i32
@@ -36,7 +36,7 @@ define dso_local i32 @TTr(i32* %0, i32 %1, i32 %2) {
   %28 = load i32, i32* %6
   %29 = sub nsw i32 %28, 1
   %30 = load i32, i32* %7
-  %31 = call i32 @TTr(i32* %27, i32 %29, i32 %30)
+  %31 = call i32 @sBfo(i32* %27, i32 %29, i32 %30)
   store i32 %31, i32* %8
   %32 = load i32, i32* %8
   %33 = icmp eq i32 %32, -1

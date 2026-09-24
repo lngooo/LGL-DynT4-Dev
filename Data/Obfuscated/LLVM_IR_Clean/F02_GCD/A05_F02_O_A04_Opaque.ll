@@ -1,4 +1,4 @@
-define dso_local i32 @VuO(i32 %0, i32 %1) {
+define dso_local i32 @aH7Z(i32 %0, i32 %1) {
   %3 = alloca i32
   %4 = alloca i32
   %5 = alloca i32
@@ -29,7 +29,7 @@ define dso_local i32 @VuO(i32 %0, i32 %1) {
   %23 = load i32, i32* %5
   %24 = call i32 @abs(i32 %23)
   %25 = srem i32 %22, %24
-  %26 = call i32 @VuO(i32 %20, i32 %25)
+  %26 = call i32 @aH7Z(i32 %20, i32 %25)
   store i32 %26, i32* %3
   br label %27
 27:

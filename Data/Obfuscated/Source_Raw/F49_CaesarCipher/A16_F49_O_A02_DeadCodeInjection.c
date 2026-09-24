@@ -5,31 +5,29 @@
  * Implementation Logic: A16_F49_O_A02_DeadCodeInjection
  * Input Format: <string> <shift_int>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
 
-void  U9(char *jF, int  FAcj8)  {
+void ZcvN(char *kNG, int iOs) {
 
- char  *HYQ9 = jF;
-  int   Hlr   =  (FAcj8   %   26  +  26)  % 26;
-   while(*HYQ9)  {
-  if(0)   {  Hlr   =   Hlr  + 1;   }
-   if(*HYQ9  >= 'A' &&   *HYQ9 <= 'Z')   *HYQ9   =   (*HYQ9 -   'A'  +  Hlr)   % 26   +   'A';
-  else if(*HYQ9 >=   'a'  && *HYQ9  <=   'z')  *HYQ9 =  (*HYQ9 - 'a'   + Hlr)  % 26   +  'a';
- HYQ9++;
-   }
+    char *U = kNG;
+    int O = (iOs % 26 + 26) % 26;
+    while(*U) {
+        if(0) { O = O + 1; }
+        if(*U >= 'A' && *U <= 'Z') *U = (*U - 'A' + O) % 26 + 'A';
+        else if(*U >= 'a' && *U <= 'z') *U = (*U - 'a' + O) % 26 + 'a';
+        U++;
+    }
 }
 
-int  main(int argc,   char  *argv[]) {
-  if  (argc  <  3)   {
- return   1;
-   }
-  int FAcj8 = atoi(argv[2]);
-  U9(argv[1],   FAcj8);
-  printf("%s\n",   argv[1]);
-   return   0;
+int main(int YTtU, char *i[]) {
+    if (YTtU < 3) {
+        return 1;
+    }
+    int iOs = atoi(i[2]);
+    ZcvN(i[1], iOs);
+    printf("%s\n", i[1]);
+    return 0;
 }

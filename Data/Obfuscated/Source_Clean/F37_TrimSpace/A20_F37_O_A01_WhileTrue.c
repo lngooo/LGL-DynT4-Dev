@@ -1,13 +1,13 @@
-void   Y(char*   KNH) {
- int   JvQ6 =   0,  n   =   0;
-   while   (1) {
-   if   (KNH[JvQ6]   ==   '\0')  break;
- unsigned   char DEn  =  (unsigned  char)KNH[JvQ6];
-  if   (!isspace(DEn))  {
- KNH[n]  =   (char)DEn;
- n++;
-  }
-   JvQ6++;
-  }
-   KNH[n] = '\0';
+void Okx(char* Glt) {
+    int hQ = 0, Gu = 0;
+    while (1) {
+        if (Glt[hQ] == '\0') break;
+        unsigned char xZW = (unsigned char)Glt[hQ];
+        if (!isspace(xZW)) {
+            Glt[Gu] = (char)xZW;
+            Gu++;
+        }
+        hQ++;
+    }
+    Glt[Gu] = '\0';
 }

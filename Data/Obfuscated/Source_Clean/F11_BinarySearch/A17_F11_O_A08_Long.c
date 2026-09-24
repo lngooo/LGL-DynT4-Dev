@@ -1,13 +1,13 @@
-int LyMz6(int mbr[],  int  FLjx,   int   aDwi) {
-   long long NVLl = FLjx,  hXX   =  aDwi;
-   long   long  qW1   =   sqrt(NVLl),   HKm   =  0;
-  while   (mbr[(qW1 <   NVLl   ?   qW1   :  NVLl)   -   1]  < hXX) {
-   HKm   =  qW1; qW1 += sqrt(NVLl);
- if  (HKm  >= NVLl)  return   -1;
- }
-   while   (mbr[HKm]  < hXX)  {
- HKm++;
-  if (HKm ==   (qW1   < NVLl ? qW1   :   NVLl)) return   -1;
-   }
-   return  (mbr[HKm]   == hXX) ?  (int)HKm :  -1;
+int WnAJ(int lxJJ[], int qtKw, int Vi23) {
+    long long V = qtKw, CY = Vi23;
+    long long gn = sqrt(V), YvZJ = 0;
+    while (lxJJ[(gn < V ? gn : V) - 1] < CY) {
+        YvZJ = gn; gn += sqrt(V);
+        if (YvZJ >= V) return -1;
+    }
+    while (lxJJ[YvZJ] < CY) {
+        YvZJ++;
+        if (YvZJ == (gn < V ? gn : V)) return -1;
+    }
+    return (lxJJ[YvZJ] == CY) ? (int)YvZJ : -1;
 }

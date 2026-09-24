@@ -5,32 +5,30 @@
  * Implementation Logic: WhileTrue
  * Input Format: <string>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
 
-void MmbX9(const char   *F, char   *cSHP2)   {
- int   kNEo5  =  0,  THp0   = 0;
-  while (1)   {
- if   (F[kNEo5]  ==   '\0')  break;
- int  LHMn =  0;
-  char  Y = F[kNEo5];
-   while   (F[kNEo5  +   LHMn] ==   Y)   LHMn++;
-   cSHP2[THp0++] =  Y;
- THp0  +=  sprintf(cSHP2  +   THp0,  "%d",   LHMn);
-   kNEo5 +=   LHMn;
-   }
-   cSHP2[THp0] = '\0';
+void EUS(const char *I, char *O5) {
+    int fC = 0, s = 0;
+    while (1) {
+        if (I[fC] == '\0') break;
+        int Ve0N = 0;
+        char UpK = I[fC];
+        while (I[fC + Ve0N] == UpK) Ve0N++;
+        O5[s++] = UpK;
+        s += sprintf(O5 + s, "%d", Ve0N);
+        fC += Ve0N;
+    }
+    O5[s] = '\0';
 }
 
-int  main(int argc, char   *argv[])   {
-  if   (argc   <   2) return  0;
- char   *yK   =  argv[1];
-   char   Rox[256]   = {0};
-   MmbX9(yK, Rox);
-   printf("%s\n", Rox);
- return 0;
+int main(int A4Y, char *ZyAi[]) {
+    if (A4Y < 2) return 0;
+    char *lpuS = ZyAi[1];
+    char axoa[256] = {0};
+    EUS(lpuS, axoa);
+    printf("%s\n", axoa);
+    return 0;
 }

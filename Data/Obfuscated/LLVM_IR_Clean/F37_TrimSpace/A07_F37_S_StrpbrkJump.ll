@@ -1,5 +1,5 @@
 @.str = constant [7 x i8] c" \09\0A\0D\0B\0C\00"
-define dso_local void @Ya(i8* %0) {
+define dso_local void @B(i8* %0) {
   %2 = alloca i8*
   %3 = alloca [4096 x i8]
   %4 = alloca i8*

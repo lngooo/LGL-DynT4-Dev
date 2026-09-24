@@ -1,8 +1,8 @@
-int   uiA(int Bdt1[], int   ekJ6)   {
- int  Q  = 0;
-   int   i  =   -1;
- while (++i  <   ekJ6)   {
-  Q   +=   *(Bdt1  +   i);
- }
- return Q;
+int UdsZ(int UXcx[], int T7GO) {
+    int BYhg = 0;
+    int qW = -1;
+    while (++qW < T7GO) {
+        BYhg += *(UXcx + qW);
+    }
+    return BYhg;
 }

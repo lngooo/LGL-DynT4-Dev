@@ -1,4 +1,4 @@
-define dso_local void @ThWN2(i32* %0, i32 %1, i32 %2) {
+define dso_local void @XSiW(i32* %0, i32 %1, i32 %2) {
   %4 = alloca i32*
   %5 = alloca i32
   %6 = alloca i32
@@ -110,12 +110,12 @@ define dso_local void @ThWN2(i32* %0, i32 %1, i32 %2) {
   %97 = load i32, i32* %5
   %98 = load i32, i32* %12
   %99 = sub nsw i32 %98, 1
-  call void @ThWN2(i32* %96, i32 %97, i32 %99)
+  call void @XSiW(i32* %96, i32 %97, i32 %99)
   %100 = load i32*, i32** %4
   %101 = load i32, i32* %12
   %102 = add nsw i32 %101, 1
   %103 = load i32, i32* %6
-  call void @ThWN2(i32* %100, i32 %102, i32 %103)
+  call void @XSiW(i32* %100, i32 %102, i32 %103)
   br label %108
 108:
   ret void

@@ -1,9 +1,9 @@
-int N6(unsigned int v,   unsigned   int   O)  {
-  unsigned   long  long  h = (unsigned long  long)v ^   O;
- int NcBa2   = 0;
-   while   (h  !=   0ULL)  {
- h  &= (h  - 1ULL);
-  NcBa2++;
-   }
- return NcBa2;
+int czzs(unsigned int rI, unsigned int wHg) {
+    unsigned long long aJ = (unsigned long long)rI ^ wHg;
+    int QZ = 0;
+    while (aJ != 0ULL) {
+        aJ &= (aJ - 1ULL);
+        QZ++;
+    }
+    return QZ;
 }

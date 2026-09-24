@@ -1,12 +1,12 @@
-int   xfwX(char*   Btuz, char w)  {
- int   Iszc2  =   0;
- while   (*Btuz)  {
+int ESdz(char* p5zH, char Ya) {
+    int Way = 0;
+    while (*p5zH) {
 
- int  Z1   =   *Btuz ^   w;
-  if (!Z1)  {
-  Iszc2   =  -~Iszc2;   
-  }
-   Btuz  = (char*)((size_t)Btuz  +  1);
-   }
-  return   Iszc2;
+        int fQ = *p5zH ^ Ya;
+        if (!fQ) {
+            Way = -~Way; 
+        }
+        p5zH = (char*)((size_t)p5zH + 1);
+    }
+    return Way;
 }

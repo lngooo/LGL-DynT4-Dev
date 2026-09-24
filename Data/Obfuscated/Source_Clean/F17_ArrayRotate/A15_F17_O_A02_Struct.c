@@ -1,18 +1,18 @@
-struct  RD  {  int IH;  int  nD0; int yl; };
+struct L { int Ki; int wAE; int lpiZ; };
 
-int  cuL6(int X8, int   VKZY)   {  return  VKZY  ==  0   ? X8  : cuL6(VKZY, X8 %  VKZY); }
+int tL(int G9PW, int tL4) { return tL4 == 0 ? G9PW : tL(tL4, G9PW % tL4); }
 
-void   cn(int   JVqO[], int   IH,   int  nD0)   {
-   if (IH  ==  0)  return;
-   struct RD Qxu =  {IH,   nD0  % IH,   cuL6(nD0 %   IH,  IH)};
- for (int U   =   0;   U  <  Qxu.yl;  U++)   {
- int VH  =   JVqO[U],   nnFl   =   U;
- while  (1) {
- int ib   = (nnFl +  Qxu.nD0) %   Qxu.IH;
-   if   (ib ==   U)  break;
- JVqO[nnFl] =  JVqO[ib];
- nnFl =   ib;
- }
-   JVqO[nnFl]  =  VH;
-  }
+void jE(int Mvs[], int Ki, int wAE) {
+    if (Ki == 0) return;
+    struct L aHL = {Ki, wAE % Ki, tL(wAE % Ki, Ki)};
+    for (int dp = 0; dp < aHL.lpiZ; dp++) {
+        int B = Mvs[dp], mmO = dp;
+        while (1) {
+            int Ye = (mmO + aHL.wAE) % aHL.Ki;
+            if (Ye == dp) break;
+            Mvs[mmO] = Mvs[Ye];
+            mmO = Ye;
+        }
+        Mvs[mmO] = B;
+    }
 }

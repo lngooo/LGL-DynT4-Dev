@@ -1,4 +1,4 @@
-define dso_local void @vbhy(i8* %0) {
+define dso_local void @LpI(i8* %0) {
   %2 = alloca i8*
   %3 = alloca [256 x i8]
   %4 = alloca i32

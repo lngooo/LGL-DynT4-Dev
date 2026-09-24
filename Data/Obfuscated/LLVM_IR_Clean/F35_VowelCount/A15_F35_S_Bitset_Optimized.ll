@@ -1,5 +1,5 @@
-@__const.f.brER = constant [11 x i8] c"aeiouAEIOU\00"
-define dso_local i32 @f(i8* %0) {
+@__const.q3q.alKl = constant [11 x i8] c"aeiouAEIOU\00"
+define dso_local i32 @q3q(i8* %0) {
   %2 = alloca i8*
   %3 = alloca i64
   %4 = alloca [11 x i8]
@@ -8,7 +8,7 @@ define dso_local i32 @f(i8* %0) {
   %7 = alloca i8
   store i8* %0, i8** %2
   store i64 0, i64* %3
-  call void @llvm.memcpy.p0i8.p0i8.i64(i8* align 1 %10, i8* align 1 getelementptr inbounds ([11 x i8], [11 x i8]* @__const.f.brER, i32 0, i32 0), i64 11, i1 false)
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* align 1 %10, i8* align 1 getelementptr inbounds ([11 x i8], [11 x i8]* @__const.q3q.alKl, i32 0, i32 0), i64 11, i1 false)
   store i32 0, i32* %5
   br label %12
 12:

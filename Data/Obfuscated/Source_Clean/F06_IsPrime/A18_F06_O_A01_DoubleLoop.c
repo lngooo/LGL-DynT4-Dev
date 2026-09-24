@@ -1,9 +1,20 @@
-int ktU9(int c) {
- if  (c   <   2)  return   0;
-  int  kx8  =   0;
-   for (int  pyN =  1;  pyN   <=   c; pyN++) {
-   if  (c   % pyN  == 0)   kx8++;
- if   (kx8 >   2)  return  0;
-   }
-   return   kx8 == 2;
+int yas(int yXfU) {
+    if (yXfU < 2) return 0;
+
+    int KH = 1;
+
+    for (int Ry = 2; Ry <= yXfU / Ry; Ry++) {
+        for (int ir = 0; ir < 1; ir++) {
+            if (yXfU % Ry == 0) {
+                KH = 0;
+                break;
+            }
+        }
+
+        if (!KH) {
+            break;
+        }
+    }
+
+    return KH;
 }

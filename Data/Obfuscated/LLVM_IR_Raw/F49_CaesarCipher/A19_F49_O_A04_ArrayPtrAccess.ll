@@ -1,7 +1,7 @@
-@__const.DK5.wr = constant [27 x i8] c"abcdefghijklmnopqrstuvwxyz\00"
-@__const.DK5.tw9 = constant [27 x i8] c"ABCDEFGHIJKLMNOPQRSTUVWXYZ\00"
+@__const.cLVN.X3Bs = constant [27 x i8] c"abcdefghijklmnopqrstuvwxyz\00"
+@__const.cLVN.ii = constant [27 x i8] c"ABCDEFGHIJKLMNOPQRSTUVWXYZ\00"
 @.str = constant [4 x i8] c"%s\0A\00"
-define dso_local void @DK5(i8* %0, i32 %1) {
+define dso_local void @cLVN(i8* %0, i32 %1) {
   %3 = alloca i8*
   %4 = alloca i32
   %5 = alloca i32
@@ -17,8 +17,8 @@ define dso_local void @DK5(i8* %0, i32 %1) {
   %14 = add nsw i32 %13, 26
   %15 = srem i32 %14, 26
   store i32 %15, i32* %5
-  call void @llvm.memcpy.p0i8.p0i8.i64(i8* align 16 %17, i8* align 16 getelementptr inbounds ([27 x i8], [27 x i8]* @__const.DK5.wr, i32 0, i32 0), i64 27, i1 false)
-  call void @llvm.memcpy.p0i8.p0i8.i64(i8* align 16 %19, i8* align 16 getelementptr inbounds ([27 x i8], [27 x i8]* @__const.DK5.tw9, i32 0, i32 0), i64 27, i1 false)
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* align 16 %17, i8* align 16 getelementptr inbounds ([27 x i8], [27 x i8]* @__const.cLVN.X3Bs, i32 0, i32 0), i64 27, i1 false)
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* align 16 %19, i8* align 16 getelementptr inbounds ([27 x i8], [27 x i8]* @__const.cLVN.ii, i32 0, i32 0), i64 27, i1 false)
   store i32 0, i32* %8
   br label %21
 21:
@@ -144,7 +144,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   %17 = getelementptr inbounds i8*, i8** %16, i64 1
   %18 = load i8*, i8** %17
   %19 = load i32, i32* %6
-  call void @DK5(i8* %18, i32 %19)
+  call void @cLVN(i8* %18, i32 %19)
   %20 = load i8**, i8*** %5
   %21 = getelementptr inbounds i8*, i8** %20, i64 1
   %22 = load i8*, i8** %21

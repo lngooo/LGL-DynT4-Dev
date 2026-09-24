@@ -1,3 +1,3 @@
-int cA(int  E) {
-   return (E   <=   0) ?   0 :  (E   +   cA(E   -   1));
+int kD(int r7OS) {
+    return (r7OS <= 0) ? 0 : (r7OS + kD(r7OS - 1));
 }

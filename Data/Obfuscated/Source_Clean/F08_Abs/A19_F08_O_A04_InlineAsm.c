@@ -1,8 +1,8 @@
-int vhd(int Kke)  {
-   int   d =  Kke;
-   if (d <  0)  {
-  d   =   ~d;
-  d  =   d  +  1;
-   }
-   return   d;
+int C4j(int N) {
+    int Ps = N;
+    if (Ps < 0) {
+        Ps = ~Ps;
+        Ps = Ps + 1;
+    }
+    return Ps;
 }

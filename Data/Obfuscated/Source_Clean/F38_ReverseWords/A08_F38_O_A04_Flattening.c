@@ -1,17 +1,17 @@
-void   WFI(char  *ZOa) {
-   int mR5  = 0,  JFm, uxE9  =   strlen(ZOa),  q;  char  k[256]   =   "";
-   while(mR5 != 99) {
-  switch(mR5)  {
- case  0:  q   =   uxE9;  JFm =   uxE9  -   1;   mR5  = 1;   break;
-   case  1:   mR5  =  (JFm >=  -1)   ?  2 :   4; break;
-   case 2:  if(JFm  ==   -1 ||  ZOa[JFm] == ' ')   {
-  strncat(k,  ZOa  + JFm   +  1,   q   - JFm  - 1);
-  if(JFm !=   -1)   strcat(k,  " ");
-  q   =  JFm;
- }
-  mR5  = 3; break;
-  case  3: JFm--;   mR5 =   1; break;
- case   4:   strcpy(ZOa, k);   mR5 =   99;   break;
-   }
-  }
+void P(char *xt3f) {
+    int T = 0, sa, Iugz = strlen(xt3f), XNE; char H[256] = "";
+    while(T != 99) {
+        switch(T) {
+            case 0: XNE = Iugz; sa = Iugz - 1; T = 1; break;
+            case 1: T = (sa >= -1) ? 2 : 4; break;
+            case 2: if(sa == -1 || xt3f[sa] == ' ') {
+                        strncat(H, xt3f + sa + 1, XNE - sa - 1);
+                        if(sa != -1) strcat(H, " ");
+                        XNE = sa;
+                    }
+                    T = 3; break;
+            case 3: sa--; T = 1; break;
+            case 4: strcpy(xt3f, H); T = 99; break;
+        }
+    }
 }

@@ -1,5 +1,5 @@
-@__const.jz.L0 = constant [3 x i8*] [i8* blockaddress(@jz, %11), i8* blockaddress(@jz, %33), i8* blockaddress(@jz, %34)]
-define dso_local i32 @jz(i32 %0) {
+@__const.NyZ.Eu = constant [3 x i8*] [i8* blockaddress(@NyZ, %11), i8* blockaddress(@NyZ, %33), i8* blockaddress(@NyZ, %34)]
+define dso_local i32 @NyZ(i32 %0) {
   %2 = alloca i32
   %3 = alloca i32
   %4 = alloca i32

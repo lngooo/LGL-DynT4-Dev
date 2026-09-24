@@ -1,4 +1,4 @@
-define dso_local i64 @lPPt(i32 %0) {
+define dso_local i64 @x9j(i32 %0) {
   %2 = alloca i32
   %3 = alloca double
   %4 = alloca double

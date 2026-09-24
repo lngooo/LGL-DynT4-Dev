@@ -1,4 +1,4 @@
-define dso_local i64 @AXi(i32 %0, i64 %1) {
+define dso_local i64 @piY(i32 %0, i64 %1) {
   %3 = alloca i32
   %4 = alloca i64
   store i32 %0, i32* %3
@@ -9,7 +9,7 @@ define dso_local i64 @AXi(i32 %0, i64 %1) {
   %8 = mul nsw i64 %6, %7
   ret i64 %8
 }
-define dso_local i64 @HWMh(i32 %0) {
+define dso_local i64 @vX(i32 %0) {
   %2 = alloca i64
   %3 = alloca i32
   %4 = alloca i64 (i32, i64)*
@@ -23,7 +23,7 @@ define dso_local i64 @HWMh(i32 %0) {
   store i64 0, i64* %2
   br label %32
 10:
-  store i64 (i32, i64)* @AXi, i64 (i32, i64)** %4
+  store i64 (i32, i64)* @piY, i64 (i32, i64)** %4
   store i64 1, i64* %5
   store i32 1, i32* %6
   br label %14

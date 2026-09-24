@@ -1,14 +1,14 @@
-int   jHDL(char*   bb,  char*   GrUi6)  {
-  int v8  = strlen(bb), dfSX =   strlen(GrUi6);
-  if  (dfSX  == 0) return  0;
-  int   JYJE = 0, O  = 0;
-   for (int  A   =   0;   A < dfSX; A++)   { JYJE   +=   GrUi6[A]; O += bb[A];   }
-  for (int A =  0; A   <= v8  -   dfSX;   A++) {
-  int  HVm1   =   JYJE  *   2;
- if   (JYJE  ==  O && HVm1 == JYJE   +  JYJE)  {
-   if   (strncmp(&bb[A],   GrUi6,  dfSX)  ==   0)   return  A;
-   }
-  if (A  <   v8  -  dfSX)  O   = O   -  bb[A]  +  bb[A +  dfSX];
- }
- return -1;
+int FD7(char* GKA, char* rd) {
+    int OFMg = strlen(GKA), Byuh = strlen(rd);
+    if (Byuh == 0) return 0;
+    int lh = 0, WZd = 0;
+    for (int e = 0; e < Byuh; e++) { lh += rd[e]; WZd += GKA[e]; }
+    for (int e = 0; e <= OFMg - Byuh; e++) {
+        int gJI = lh * 2;
+        if (lh == WZd && gJI == lh + lh) {
+            if (strncmp(&GKA[e], rd, Byuh) == 0) return e;
+        }
+        if (e < OFMg - Byuh) WZd = WZd - GKA[e] + GKA[e + Byuh];
+    }
+    return -1;
 }

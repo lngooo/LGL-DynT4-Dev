@@ -1,17 +1,17 @@
-struct Wsy2  {
- uint32_t   dhHV6  :   8;
-   uint32_t sro   : 8;
-  uint32_t   iehq9 :   8;
-  uint32_t   fxU0   :   8;
+struct blIi {
+    uint32_t iwqY : 8;
+    uint32_t c7 : 8;
+    uint32_t eP2 : 8;
+    uint32_t o5 : 8;
 };
 
-uint32_t   oJ(uint32_t   kF)  {
-  struct  Wsy2   *CwQ  =   (struct Wsy2  *)&kF;
- uint32_t   zv;
-  struct Wsy2  *Bo   =   (struct  Wsy2 *)&zv;
-  Bo->dhHV6   =   CwQ->fxU0;
- Bo->sro = CwQ->iehq9;
-  Bo->iehq9   = CwQ->sro;
- Bo->fxU0  =  CwQ->dhHV6;
-   return   zv;
+uint32_t N(uint32_t U) {
+    struct blIi *CDi = (struct blIi *)&U;
+    uint32_t r;
+    struct blIi *ebd = (struct blIi *)&r;
+    ebd->iwqY = CDi->o5;
+    ebd->c7 = CDi->eP2;
+    ebd->eP2 = CDi->c7;
+    ebd->o5 = CDi->iwqY;
+    return r;
 }

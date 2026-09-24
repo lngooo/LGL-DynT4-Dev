@@ -5,24 +5,22 @@
  * Implementation Logic: Naive iteration checking each bit of the 32-bit integer.
  * Input Format: <uint32_t>
  */
-
-
 #include <stdio.h>
 #include <stdint.h>
 #include <stdlib.h>
 
-int  XP(uint32_t   PxOw)   {
- int  Bqm =  0;
-   while (PxOw >   0) {
-   Bqm  +=  (PxOw  & 1);
-   PxOw >>=  1;
- }
- return   Bqm;
+int y4(uint32_t BSc) {
+    int vcb = 0;
+    while (BSc > 0) {
+        vcb += (BSc & 1);
+        BSc >>= 1;
+    }
+    return vcb;
 }
 
-int main(int  argc,   char* argv[]) {
-   if  (argc < 2)  return   0;
-   uint32_t   Yj  =  (uint32_t)strtoul(argv[1], NULL,  10);
-  printf("%d\n",   XP(Yj));
-  return   0;
+int main(int pwuS, char* Em[]) {
+    if (pwuS < 2) return 0;
+    uint32_t L = (uint32_t)strtoul(Em[1], NULL, 10);
+    printf("%d\n", y4(L));
+    return 0;
 }

@@ -5,29 +5,27 @@
  * Implementation Logic: Standard iterative approach with high/low pointers.
  * Input Format: <target> <val1> <val2> ...
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int  tkgX2(int   p7[], int   UTep,   int   cZSd)   {
-   int   ViZ8 = 0,  dAG  =   UTep   -  1;
-   while   (ViZ8   <=  dAG) {
- int uPxG0 =   ViZ8  +  (dAG  - ViZ8) / 2;
-  if (p7[uPxG0] == cZSd)  return   uPxG0;
- if  (p7[uPxG0] <  cZSd)   ViZ8   =  uPxG0 + 1;
- else dAG =  uPxG0   -  1;
- }
- return  -1;
+int b(int jdQd[], int rW, int sR) {
+    int j1d = 0, nWI = rW - 1;
+    while (j1d <= nWI) {
+        int w = j1d + (nWI - j1d) / 2;
+        if (jdQd[w] == sR) return w;
+        if (jdQd[w] < sR) j1d = w + 1;
+        else nWI = w - 1;
+    }
+    return -1;
 }
 
-int main(int   argc,  char *argv[]) {
-   if  (argc  <   3)   return  1;
-  int  cZSd   =   atoi(argv[1]);
-   int   UTep  =   argc   -  2;
-   int *p7   =   (int*)malloc(UTep   *   sizeof(int));
-   for(int   T=0;  T<UTep;   T++) p7[T] = atoi(argv[T+2]);
-  printf("%d\n",  tkgX2(p7,  UTep,  cZSd));
-   free(p7);
-  return  0;
+int main(int gN3R, char *VP[]) {
+    if (gN3R < 3) return 1;
+    int sR = atoi(VP[1]);
+    int rW = gN3R - 2;
+    int *jdQd = (int*)malloc(rW * sizeof(int));
+    for(int pGYY=0; pGYY<rW; pGYY++) jdQd[pGYY] = atoi(VP[pGYY+2]);
+    printf("%d\n", b(jdQd, rW, sR));
+    free(jdQd);
+    return 0;
 }

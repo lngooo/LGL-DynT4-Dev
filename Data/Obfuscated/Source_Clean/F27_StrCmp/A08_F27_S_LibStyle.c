@@ -1,4 +1,4 @@
-int eun(const  char  *Y4,   const  char  *K)   {
-  while(*Y4 &&   *K   &&  *Y4 == *K)  {  Y4++; K++;   }
-   return  *(unsigned   char*)Y4 -   *(unsigned   char*)K;
+int e9S(const char *u3, const char *YI) {
+    while(*u3 && *YI && *u3 == *YI) { u3++; YI++; }
+    return *(unsigned char*)u3 - *(unsigned char*)YI;
 }

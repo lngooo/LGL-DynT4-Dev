@@ -1,4 +1,4 @@
-define dso_local i32 @rs(i32 %0) {
+define dso_local i32 @gSyn(i32 %0) {
   %2 = alloca i32
   %3 = alloca i64
   %4 = alloca i64

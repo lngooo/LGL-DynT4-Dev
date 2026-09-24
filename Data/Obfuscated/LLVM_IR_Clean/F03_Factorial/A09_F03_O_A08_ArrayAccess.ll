@@ -1,4 +1,4 @@
-define dso_local i64 @iUe(i32 %0) {
+define dso_local i64 @D7u3(i32 %0) {
   %2 = alloca i64
   %3 = alloca i32
   %4 = alloca [21 x i64]

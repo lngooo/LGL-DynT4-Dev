@@ -1,10 +1,10 @@
-int  j9(char* GVNv, char   aqCI5)   {
-  int  dqvr  =  0;
-   char*  dRd   =  GVNv;
- int AG1  =   strlen(GVNv);
- while   ((dRd  =   memchr(dRd, aqCI5,   (GVNv  +  AG1)   -  dRd)) !=  NULL)   {
-   dqvr++;
- dRd++;
- }
-   return   dqvr;
+int aa(char* Mz64, char edh1) {
+    int Gmef = 0;
+    char* Nv = Mz64;
+    int d = strlen(Mz64);
+    while ((Nv = memchr(Nv, edh1, (Mz64 + d) - Nv)) != NULL) {
+        Gmef++;
+        Nv++;
+    }
+    return Gmef;
 }

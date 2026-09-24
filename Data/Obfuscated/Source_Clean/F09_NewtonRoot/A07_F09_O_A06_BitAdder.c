@@ -1,20 +1,20 @@
-long CslU5(long  I,   long ABl) {
-   while   (ABl  !=   0) {
-  long oWiT   =   I   &  ABl;
-   I   = I ^  ABl;
-  ABl   = oWiT <<  1;
-   }
- return  I;
+long kC(long Z, long s) {
+    while (s != 0) {
+        long u = Z & s;
+        Z = Z ^ s;
+        s = u << 1;
+    }
+    return Z;
 }
 
-int B(int  IJfE) {
- if (IJfE   <  0)  return -1;
-   if   (IJfE  == 0) return  0;
-   long   vHGh =   IJfE;
-  while (1) {
-  long   F = CslU5(vHGh,   IJfE /   vHGh)   >>  1;
-   if  (F  >= vHGh)  break;
-  vHGh   =   F;
- }
-   return   (int)vHGh;
+int gev(int yk) {
+    if (yk < 0) return -1;
+    if (yk == 0) return 0;
+    long J = yk;
+    while (1) {
+        long v = kC(J, yk / J) >> 1;
+        if (v >= J) break;
+        J = v;
+    }
+    return (int)J;
 }

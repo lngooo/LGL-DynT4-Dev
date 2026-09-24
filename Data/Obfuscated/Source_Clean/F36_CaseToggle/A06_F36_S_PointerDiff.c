@@ -1,9 +1,9 @@
-void   fZg6(char*   b3)  {
- char   *f2   =  b3;
- while   (*f2)  {
- char   YbPq  = *f2;
-   if  (YbPq  >=  65  &&  YbPq   <= 90)   *f2  =  YbPq   + (97 - 65);
-   else   if (YbPq   >= 97   &&  YbPq  <=  122)   *f2   =  YbPq -   (97   - 65);
- f2++;
-  }
+void B(char* LbAo) {
+    char *i3 = LbAo;
+    while (*i3) {
+        char HP8 = *i3;
+        if (HP8 >= 65 && HP8 <= 90) *i3 = HP8 + (97 - 65);
+        else if (HP8 >= 97 && HP8 <= 122) *i3 = HP8 - (97 - 65);
+        i3++;
+    }
 }

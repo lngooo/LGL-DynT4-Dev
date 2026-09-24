@@ -1,12 +1,12 @@
-int  ko(const   char* QK)   {
-  static int igP[256];
- for(int   Fs=0;  Fs<10;   Fs++)   igP['0'+Fs]=Fs;
-  for(int Fs=0;  Fs<6; Fs++) {  igP['a'+Fs]=10+Fs;  igP['A'+Fs]=10+Fs; }
-  int  Dfw1   =   0;
- const  int*  h5  =   igP;
- while(*QK)   {
-  Dfw1   =   (Dfw1 << 4) + *(h5  +  (unsigned  char)*QK);
-   QK++;
-  }
- return Dfw1;
+int lU(const char* zdy) {
+    static int Nv[256];
+    for(int xP=0; xP<10; xP++) Nv['0'+xP]=xP;
+    for(int xP=0; xP<6; xP++) { Nv['a'+xP]=10+xP; Nv['A'+xP]=10+xP; }
+    int y = 0;
+    const int* OY = Nv;
+    while(*zdy) {
+        y = (y << 4) + *(OY + (unsigned char)*zdy);
+        zdy++;
+    }
+    return y;
 }

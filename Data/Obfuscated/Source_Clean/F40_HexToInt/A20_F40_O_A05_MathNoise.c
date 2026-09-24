@@ -1,10 +1,10 @@
-int v(const  char*  L) {
- int   L1  = (int)strlen(L),   Yfm  =  0;
- for(int   f=0;  f<L1;   f++)   {
-  int   QoV = (L[f]|32); QoV  =  (QoV  >= 'a')  ? (QoV-'a'+10)   :   (QoV-'0');
-  int   kr   = 1;
-   for(int  d=0;   d<(L1-1-f);  d++)  kr *=  16;
-   Yfm  +=   QoV  *   kr;
-  }
-   return Yfm;
+int O(const char* vtmb) {
+    int loh = (int)strlen(vtmb), ck = 0;
+    for(int L=0; L<loh; L++) {
+        int w = (vtmb[L]|32); w = (w >= 'a') ? (w-'a'+10) : (w-'0');
+        int X = 1;
+        for(int FZy=0; FZy<(loh-1-L); FZy++) X *= 16;
+        ck += w * X;
+    }
+    return ck;
 }

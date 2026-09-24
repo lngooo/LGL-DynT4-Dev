@@ -1,6 +1,6 @@
-double Hb(int x4[], int ormI)  {
-   if  (ormI <=   0) return  0.0;
- double n =  0;
- for  (int   J  = 0;  J < ormI;   J++)  n +=  x4[J];
-   return n  /  ormI;
+double KxT(int t8T[], int KO) {
+    if (KO <= 0) return 0.0;
+    double ETC = 0;
+    for (int jVZ = 0; jVZ < KO; jVZ++) ETC += t8T[jVZ];
+    return ETC / KO;
 }

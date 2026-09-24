@@ -1,12 +1,12 @@
-int  i(char*  sQJ8,  char*   U5)  {
-  if  (strlen(sQJ8)  !=  strlen(U5))   return   0;
-   int YIZc[256]  = {0};
-  int  DhI = 0,  Gw   = 0;
-  while(sQJ8[DhI])  {
- YIZc[(unsigned  char)sQJ8[DhI]]++;
- YIZc[(unsigned  char)U5[Gw]]--;
- DhI++; Gw++;
- }
-  for  (int KHf2 =  0; KHf2   < 256;   KHf2++)  if   (YIZc[KHf2] != 0)  return 0;
-   return  1;
+int Gu(char* yWO, char* bGWs) {
+    if (strlen(yWO) != strlen(bGWs)) return 0;
+    int bQTS[256] = {0};
+    int Jecm = 0, n = 0;
+    while(yWO[Jecm]) {
+        bQTS[(unsigned char)yWO[Jecm]]++;
+        bQTS[(unsigned char)bGWs[n]]--;
+        Jecm++; n++;
+    }
+    for (int LF = 0; LF < 256; LF++) if (bQTS[LF] != 0) return 0;
+    return 1;
 }

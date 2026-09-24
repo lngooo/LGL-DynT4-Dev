@@ -4,35 +4,33 @@
  * File: A12_F17_O_A01_Arithmetic.c
  * Logic: Reversal with XOR swapping and pointer arithmetic.
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-void  Jk1(int   *TG,  int *D)   {
-   while(TG   < D)  {
-   *TG  ^=   *D;   *D  ^= *TG;   *TG ^=  *D;
- TG++;   D--;
- }
+void a8BP(int *u, int *ArhR) {
+    while(u < ArhR) {
+        *u ^= *ArhR; *ArhR ^= *u; *u ^= *ArhR;
+        u++; ArhR--;
+    }
 }
 
-void  b1(int KN[],   int WgVp,   int V)  {
-  if (WgVp   ==  0) return;
-   V  %= WgVp;
-  Jk1(KN,  KN   +  V   -  1);
-   Jk1(KN   +   V,   KN +  WgVp  -   1);
- Jk1(KN, KN +   WgVp -   1);
+void FxHW(int U[], int dr, int ICua) {
+    if (dr == 0) return;
+    ICua %= dr;
+    a8BP(U, U + ICua - 1);
+    a8BP(U + ICua, U + dr - 1);
+    a8BP(U, U + dr - 1);
 }
 
-int  main(int   argc,   char   *argv[])  {
-  if  (argc   <   3)  return  0;
- int   V  = atoi(argv[1]);
-   int  WgVp   =   argc  -   2;
-   int *KN   =  (int*)malloc(WgVp   * sizeof(int));
-   for(int   KlA=0; KlA<WgVp;   KlA++)  KN[KlA]  =  atoi(argv[KlA+2]);
-   b1(KN,  WgVp, V);
- for(int  KlA=0; KlA<WgVp;  KlA++)  printf("%d ",   KN[KlA]);
-  printf("\n");
-  free(KN);
-  return   0;
+int main(int mvf4, char *V[]) {
+    if (mvf4 < 3) return 0;
+    int ICua = atoi(V[1]);
+    int dr = mvf4 - 2;
+    int *U = (int*)malloc(dr * sizeof(int));
+    for(int SB=0; SB<dr; SB++) U[SB] = atoi(V[SB+2]);
+    FxHW(U, dr, ICua);
+    for(int SB=0; SB<dr; SB++) printf("%d ", U[SB]);
+    printf("\n");
+    free(U);
+    return 0;
 }

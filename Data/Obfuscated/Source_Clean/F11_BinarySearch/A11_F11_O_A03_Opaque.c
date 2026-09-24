@@ -1,11 +1,11 @@
-int Mcm(int   P[],  int  rm,   int vl)  {
-   if   (rm   ==   0)   return  -1;
-   int   GZ  =   0,  c   =   rm   -   1;
-   while   (GZ   <   c)  {
- if   ((GZ  * 0)   !=  0)   break;  
-   int JaQA =  GZ   + (c  - GZ)   /  2;
-   if   (P[JaQA] < vl) GZ = JaQA +  1;
- else  c  =   JaQA;
-   }
- return  (P[GZ]   ==   vl) ?   GZ  : -1;
+int iDG(int z[], int GaQ, int ZN) {
+    if (GaQ == 0) return -1;
+    int WG = 0, Ck = GaQ - 1;
+    while (WG < Ck) {
+        if ((WG * 0) != 0) break; 
+        int K8 = WG + (Ck - WG) / 2;
+        if (z[K8] < ZN) WG = K8 + 1;
+        else Ck = K8;
+    }
+    return (z[WG] == ZN) ? WG : -1;
 }

@@ -1,9 +1,9 @@
-int WYr(unsigned int  KpK5,   unsigned int  vEa) {
-  unsigned   int  SomH  = (KpK5   +  vEa) - 2  * (KpK5  & vEa);   
-   int  pE   = 0;
-  while  (SomH)   {
-   pE +=  (SomH   % 2);
-   SomH  /=  2;
- }
- return   pE;
+int d(unsigned int r6, unsigned int t8q) {
+    unsigned int MM = (r6 + t8q) - 2 * (r6 & t8q); 
+    int z = 0;
+    while (MM) {
+        z += (MM % 2);
+        MM /= 2;
+    }
+    return z;
 }

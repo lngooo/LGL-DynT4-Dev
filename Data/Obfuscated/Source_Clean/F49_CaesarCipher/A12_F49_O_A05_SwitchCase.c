@@ -1,12 +1,12 @@
-void   kmWx(char   *H, int  p) {
+void qk(char *E6pN, int oU) {
 
-  int  XvX = (p  % 26 +  26)  % 26;
-   for(int   yIS=0;  H[yIS];  yIS++)   {
- int  UIFU =   (H[yIS]   >=  'a'  &&  H[yIS] <= 'z')  ? 1 :   (H[yIS]   >= 'A'   &&   H[yIS]  <=   'Z' ?  2 : 0);
-  switch(UIFU)  {
-   case   1:  H[yIS]  =   (H[yIS]-'a'+XvX)%26+'a';   break;
-   case  2: H[yIS]  =  (H[yIS]-'A'+XvX)%26+'A';   break;
-  default:   break;
-   }
- }
+    int Pjc = (oU % 26 + 26) % 26;
+    for(int pR=0; E6pN[pR]; pR++) {
+        int bK = (E6pN[pR] >= 'a' && E6pN[pR] <= 'z') ? 1 : (E6pN[pR] >= 'A' && E6pN[pR] <= 'Z' ? 2 : 0);
+        switch(bK) {
+            case 1: E6pN[pR] = (E6pN[pR]-'a'+Pjc)%26+'a'; break;
+            case 2: E6pN[pR] = (E6pN[pR]-'A'+Pjc)%26+'A'; break;
+            default: break;
+        }
+    }
 }

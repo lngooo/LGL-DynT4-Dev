@@ -1,8 +1,8 @@
-int rsN7(int   W[],  int   jRvk,   int   eRRI)   {
- if (jRvk   ==   eRRI)   return  W[jRvk];
-  int YLN   = jRvk + (eRRI-jRvk)/2;
-  int qe   =   rsN7(W,   jRvk, YLN),  nfNb1   =  rsN7(W, YLN+1,   eRRI);
-  return   (qe > nfNb1) ?  qe   : nfNb1;
+int ffz5(int s9[], int g, int rh) {
+    if (g == rh) return s9[g];
+    int Fj = g + (rh-g)/2;
+    int H8 = ffz5(s9, g, Fj), s = ffz5(s9, Fj+1, rh);
+    return (H8 > s) ? H8 : s;
 }
 
-int  uaGd(int  F[],  int P9)   { return   (P9 >   0) ? rsN7(F, 0,  P9-1) :  0;  }
+int RI7i(int wACV[], int eb) { return (eb > 0) ? ffz5(wACV, 0, eb-1) : 0; }

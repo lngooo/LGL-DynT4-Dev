@@ -1,17 +1,17 @@
-void  Quw(int  soOA[], int   Zoys,  int k)  {
- while  (Zoys   <  k) {
-   int Nd  =  soOA[Zoys];
-  soOA[Zoys]   =  soOA[k];
-  soOA[k] = Nd;
-  Zoys++;   k--;
-   }
+void p1X(int UBG[], int U, int x) {
+    while (U < x) {
+        int OGw = UBG[U];
+        UBG[U] = UBG[x];
+        UBG[x] = OGw;
+        U++; x--;
+    }
 }
 
-void uZ3(int  soOA[],   int   Ru,   int rXt) {
-   if  (Ru ==  0)   return;
-  rXt   = rXt % Ru;
-  if  (rXt == 0)  return;
- Quw(soOA, 0,   rXt  -   1);
-  Quw(soOA, rXt,   Ru -  1);
- Quw(soOA, 0,  Ru   - 1);
+void d(int UBG[], int C, int KVa) {
+    if (C == 0) return;
+    KVa = KVa % C;
+    if (KVa == 0) return;
+    p1X(UBG, 0, KVa - 1);
+    p1X(UBG, KVa, C - 1);
+    p1X(UBG, 0, C - 1);
 }

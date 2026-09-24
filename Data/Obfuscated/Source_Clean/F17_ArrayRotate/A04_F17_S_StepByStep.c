@@ -1,11 +1,11 @@
-void  jfQ(int   bmxa[],  int  rq)   {
-  int   wVEd   =   bmxa[0],   wxM;
- for   (wxM   =   0; wxM <  rq -  1;   wxM++)   bmxa[wxM] = bmxa[wxM +  1];
- bmxa[rq   -  1]   =   wVEd;
+void bYjj(int d75t[], int nl0) {
+    int ahJw = d75t[0], c;
+    for (c = 0; c < nl0 - 1; c++) d75t[c] = d75t[c + 1];
+    d75t[nl0 - 1] = ahJw;
 }
 
-void   w1(int  bmxa[], int rq, int   cNL)  {
-  if   (rq == 0) return;
-   cNL  =  cNL %   rq;
- for (int wxM = 0;  wxM  <  cNL; wxM++)   jfQ(bmxa, rq);
+void EKtK(int d75t[], int nl0, int vYyE) {
+    if (nl0 == 0) return;
+    vYyE = vYyE % nl0;
+    for (int c = 0; c < vYyE; c++) bYjj(d75t, nl0);
 }

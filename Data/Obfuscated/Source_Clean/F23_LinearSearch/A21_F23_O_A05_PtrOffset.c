@@ -1,6 +1,6 @@
-int   R1(int   M[],  int LfO,  int  GURc) {
- for (int  FeP = 0;  FeP  <  LfO;   FeP++)  {
-  if  (*(M + FeP)   ==  GURc)   return FeP;
-   }
- return   -1;
+int jIKn(int wPZR[], int nvS, int fGX) {
+    for (int qn = 0; qn < nvS; qn++) {
+        if (*(wPZR + qn) == fGX) return qn;
+    }
+    return -1;
 }

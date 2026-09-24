@@ -4,25 +4,23 @@
  * File: A09_F27_O_A01_Flattening.c
  * Implementation Logic: Control flow flattening using switch-case derived from A01.
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int   R(const  char   *EzvU,   const char *f5)   {
- int P  = 1,  wr  = 0;
- while   (P   != 0)  {
- switch(P)  {
- case 1:  if(*EzvU   &&  (*EzvU ==  *f5))  P  =   2; else P =  3; break;
- case  2:   EzvU++;  f5++; P  = 1; break;
-   case   3: wr = *(unsigned   char *)EzvU   -   *(unsigned char *)f5; P  =   0; break;
- }
-  }
-   return  wr;
+int Uw(const char *Dr, const char *D) {
+    int FLBe = 1, bJ = 0;
+    while (FLBe != 0) {
+        switch(FLBe) {
+            case 1: if(*Dr && (*Dr == *D)) FLBe = 2; else FLBe = 3; break;
+            case 2: Dr++; D++; FLBe = 1; break;
+            case 3: bJ = *(unsigned char *)Dr - *(unsigned char *)D; FLBe = 0; break;
+        }
+    }
+    return bJ;
 }
 
-int  main(int   argc,  char *argv[])  {
- if   (argc   <  3) return 0;
- printf("%d\n", R(argv[1],  argv[2]));
-  return  0;
+int main(int JPd5, char *E3T[]) {
+    if (JPd5 < 3) return 0;
+    printf("%d\n", Uw(E3T[1], E3T[2]));
+    return 0;
 }

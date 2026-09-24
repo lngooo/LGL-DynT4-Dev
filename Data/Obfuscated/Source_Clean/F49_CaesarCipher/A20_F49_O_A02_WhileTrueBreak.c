@@ -1,11 +1,11 @@
-void  vrZ(char *WKJ,  int  qAK)   {
+void J7v(char *qb, int S) {
 
-  char  *WveB = WKJ;
- int G =  (qAK  %  26   + 26) %   26;
-  while(1)   {
-  if(*WveB   == 0)  break;
-  if(*WveB   >=  'A'   &&  *WveB  <=  'Z')  *WveB  = (*WveB  -   'A' +  G) %   26 +   'A';
-   else if(*WveB  >= 'a' &&  *WveB   <=  'z')  *WveB  =  (*WveB   -  'a'   +   G) % 26 + 'a';
-   WveB++;
- }
+    char *l = qb;
+    int BVS6 = (S % 26 + 26) % 26;
+    while(1) {
+        if(*l == 0) break;
+        if(*l >= 'A' && *l <= 'Z') *l = (*l - 'A' + BVS6) % 26 + 'A';
+        else if(*l >= 'a' && *l <= 'z') *l = (*l - 'a' + BVS6) % 26 + 'a';
+        l++;
+    }
 }

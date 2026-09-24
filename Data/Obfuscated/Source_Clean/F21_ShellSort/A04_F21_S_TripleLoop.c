@@ -1,3 +1,3 @@
-void D(int *vNJ, int   dmj)  {
- for(int  AShE=dmj/2;AShE>0;AShE/=2){for(int QCHM5=0;QCHM5<AShE;QCHM5++){for(int E=QCHM5+AShE;E<dmj;E+=AShE){int  i3=vNJ[E],MwLl0=E-AShE;while(MwLl0>=QCHM5&&vNJ[MwLl0]>i3){vNJ[MwLl0+AShE]=vNJ[MwLl0];MwLl0-=AShE;}vNJ[MwLl0+AShE]=i3;}}}
+void FNd(int *tSDF, int x) {
+    for(int b=x/2;b>0;b/=2){for(int d0=0;d0<b;d0++){for(int u=d0+b;u<x;u+=b){int okfm=tSDF[u],Ia7=u-b;while(Ia7>=d0&&tSDF[Ia7]>okfm){tSDF[Ia7+b]=tSDF[Ia7];Ia7-=b;}tSDF[Ia7+b]=okfm;}}}
 }

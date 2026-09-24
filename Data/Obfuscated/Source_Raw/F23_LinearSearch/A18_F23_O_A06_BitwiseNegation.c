@@ -5,28 +5,26 @@
  * Implementation Logic: BitwiseNegation
  * Input Format: <target> <val1> <val2> ...
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-int i7(int  s[],   int  JCWJ2, int qS)  {
- for  (int  XNI  =  0;  XNI   < JCWJ2; XNI++)  {
-   if  (~s[XNI]  == ~qS)  return  XNI;
-   }
-  return   -1;
+int e(int WG[], int Ur, int l) {
+    for (int crMm = 0; crMm < Ur; crMm++) {
+        if (~WG[crMm] == ~l) return crMm;
+    }
+    return -1;
 }
 
-int main(int  argc,  char  *argv[]) {
- if  (argc   < 3)   return 1;
-  int   qS  =  atoi(argv[1]);
- int  Qw5  =   argc  -   2;
- int  s[100];
-  for (int  XNI =   0;   XNI  < Qw5;   XNI++)   {
- s[XNI]  =   atoi(argv[XNI   +  2]);
- }
- int UXc  = i7(s, Qw5,  qS);
-  printf("%d\n",  UXc);
- return   0;
+int main(int lOV1, char *t[]) {
+    if (lOV1 < 3) return 1;
+    int l = atoi(t[1]);
+    int Jwh = lOV1 - 2;
+    int WG[100];
+    for (int crMm = 0; crMm < Jwh; crMm++) {
+        WG[crMm] = atoi(t[crMm + 2]);
+    }
+    int DK1 = e(WG, Jwh, l);
+    printf("%d\n", DK1);
+    return 0;
 }

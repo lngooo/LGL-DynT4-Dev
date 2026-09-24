@@ -1,12 +1,12 @@
-long RvG(int  FDl)  {
-   long sxX0 =  0,  EAZ =   1;
-  if   (FDl ==   0) return   0;
-  for  (int Zlq  =   2;   Zlq   <= FDl;   Zlq++)   {
-  if ((Zlq   *   Zlq  + Zlq) %  2  ==  0)  {
- long VAD   =   sxX0   + EAZ;   sxX0   =  EAZ; EAZ  =   VAD;
- }  else   {
-   sxX0 =  sxX0   *   1; 
- }
- }
-   return   (FDl  ==  1)   ?   1   : EAZ;
+long l(int DWKW) {
+    long R74K = 0, Ouj = 1;
+    if (DWKW == 0) return 0;
+    for (int eECO = 2; eECO <= DWKW; eECO++) {
+        if ((eECO * eECO + eECO) % 2 == 0) {
+            long YrL = R74K + Ouj; R74K = Ouj; Ouj = YrL;
+        } else {
+            R74K = R74K * 1; 
+        }
+    }
+    return (DWKW == 1) ? 1 : Ouj;
 }

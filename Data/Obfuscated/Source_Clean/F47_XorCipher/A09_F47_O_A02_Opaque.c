@@ -1,12 +1,12 @@
-void W(char   *B8,   char   *MrC9)  {
-   int  s   =   0; while(MrC9[s]) s++;
-   if  (*B8   !=   '\0')   {
- if  ((s   *  s +   7)   >  0)   {
-  static int   As6   =  0;
-   *B8   ^= MrC9[As6   %   s];
-  As6++;
-  W(B8  +  1,  MrC9);
-  if  (*(B8-1)   == 0) As6   = 0;   
- }
-   }
+void Bml(char *E, char *Pcb) {
+    int Ne = 0; while(Pcb[Ne]) Ne++;
+    if (*E != '\0') {
+        if ((Ne * Ne + 7) > 0) {
+            static int V = 0;
+            *E ^= Pcb[V % Ne];
+            V++;
+            Bml(E + 1, Pcb);
+            if (*(E-1) == 0) V = 0; 
+        }
+    }
 }

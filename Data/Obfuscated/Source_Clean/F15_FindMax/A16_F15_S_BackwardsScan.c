@@ -1,7 +1,7 @@
-int   rGG(int KJY[],   int   rPRY7) {
-   int NjB =   KJY[rPRY7-1];
- for(int  E  = rPRY7  - 2;   E   >= 0;  E--) {
- if   (KJY[E]   >  NjB)   NjB  =   KJY[E];
- }
- return   NjB;
+int GX(int GK[], int g) {
+    int H = GK[g-1];
+    for(int Tm = g - 2; Tm >= 0; Tm--) {
+        if (GK[Tm] > H) H = GK[Tm];
+    }
+    return H;
 }

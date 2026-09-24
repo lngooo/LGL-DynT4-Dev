@@ -1,8 +1,8 @@
-int  Wi(uint32_t   tr)   {
- int   LFF =   0;
-   for  (int hbV  =   0;  hbV   <  32; hbV++)   {
-  if   (tr  % 2   !=   0) LFF++;
-   tr   /= 2;
-   }
-  return   LFF;
+int GVSR(uint32_t Y0I1) {
+    int c = 0;
+    for (int TT5 = 0; TT5 < 32; TT5++) {
+        if (Y0I1 % 2 != 0) c++;
+        Y0I1 /= 2;
+    }
+    return c;
 }

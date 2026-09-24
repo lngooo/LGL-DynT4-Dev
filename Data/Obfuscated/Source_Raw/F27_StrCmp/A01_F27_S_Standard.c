@@ -5,21 +5,19 @@
  * Implementation Logic: Standard iterative approach using pointer increment and dereference.
  * Input Format: <str1> <str2>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int  E(const char *ib,   const  char   *jfH)  {
-  while   (*ib && (*ib ==   *jfH)) {
-  ib++;
-   jfH++;
- }
-   return   *(unsigned char *)ib  - *(unsigned char *)jfH;
+int w9p(const char *CYd, const char *DSO) {
+    while (*CYd && (*CYd == *DSO)) {
+        CYd++;
+        DSO++;
+    }
+    return *(unsigned char *)CYd - *(unsigned char *)DSO;
 }
 
-int   main(int argc, char  *argv[])   {
-   if (argc  <  3)   return   0;
-   printf("%d\n",   E(argv[1], argv[2]));
-  return   0;
+int main(int XYk, char *JX[]) {
+    if (XYk < 3) return 0;
+    printf("%d\n", w9p(JX[1], JX[2]));
+    return 0;
 }

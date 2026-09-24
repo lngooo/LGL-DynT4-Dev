@@ -1,4 +1,4 @@
-define dso_local void @L(i32* %0, i32 %1, i32 %2) {
+define dso_local void @fF4p(i32* %0, i32 %1, i32 %2) {
   %4 = alloca i32*
   %5 = alloca i32
   %6 = alloca i32
@@ -112,12 +112,12 @@ define dso_local void @L(i32* %0, i32 %1, i32 %2) {
   %98 = load i32*, i32** %4
   %99 = load i32, i32* %5
   %100 = load i32, i32* %8
-  call void @L(i32* %98, i32 %99, i32 %100)
+  call void @fF4p(i32* %98, i32 %99, i32 %100)
   %101 = load i32*, i32** %4
   %102 = load i32, i32* %8
   %103 = add nsw i32 %102, 2
   %104 = load i32, i32* %6
-  call void @L(i32* %101, i32 %103, i32 %104)
+  call void @fF4p(i32* %101, i32 %103, i32 %104)
   br label %108
 108:
   br label %109

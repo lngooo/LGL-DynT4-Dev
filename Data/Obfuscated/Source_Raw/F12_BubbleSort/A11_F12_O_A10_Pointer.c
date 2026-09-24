@@ -4,33 +4,31 @@
  * File: A11_F12_O_A10_Pointer.c
  * Implementation Logic: BS with pointer arithmetic and indirect swap.
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-void   IVMW(int  *nhJ,   int   *B)  {
-  int M  =   *nhJ;  *nhJ  =  *B;   *B  =   M;
+void iTC(int *o, int *F) {
+    int vA = *o; *o = *F; *F = vA;
 }
 
-void   HL(int   I[],  int  nkrm4)  {
-  for  (int   Yjtc   =   0;  Yjtc   <   nkrm4;  Yjtc++) {
-  int *mX  =  I;
-   for  (int  Q1  =  0;   Q1   <   nkrm4  - Yjtc  - 1;  Q1++) {
- if (*mX  >  *(mX  + 1))   IVMW(mX,   mX +   1);
-  mX++;
-   }
-  }
+void YZF(int DSY[], int v) {
+    for (int W = 0; W < v; W++) {
+        int *dr = DSY;
+        for (int eIEl = 0; eIEl < v - W - 1; eIEl++) {
+            if (*dr > *(dr + 1)) iTC(dr, dr + 1);
+            dr++;
+        }
+    }
 }
 
-int   main(int argc,  char *argv[])  {
-   if (argc  <  2)   return  0;
-  int  nkrm4  = argc - 1;
- int  *I  = (int*)malloc(nkrm4 *  sizeof(int));
-   for   (int Yjtc  = 0;  Yjtc <  nkrm4; Yjtc++)   I[Yjtc]  =   atoi(argv[Yjtc+1]);
-   HL(I,   nkrm4);
- for (int Yjtc  = 0;  Yjtc  <  nkrm4; Yjtc++)   printf("%d ", I[Yjtc]);
-  printf("\n");
-   free(I);
-  return 0;
+int main(int q0, char *ahXT[]) {
+    if (q0 < 2) return 0;
+    int v = q0 - 1;
+    int *DSY = (int*)malloc(v * sizeof(int));
+    for (int W = 0; W < v; W++) DSY[W] = atoi(ahXT[W+1]);
+    YZF(DSY, v);
+    for (int W = 0; W < v; W++) printf("%d ", DSY[W]);
+    printf("\n");
+    free(DSY);
+    return 0;
 }

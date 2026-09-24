@@ -4,20 +4,18 @@
  * File: A19_F07_O_A01_Pointer.c
  * Implementation Logic: Iterative approach using pointer manipulation for result.
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int   Gkdh(int   m0,   int exp)  {
-  int  uWpz3  =   1;
- int   *QJS  =  &uWpz3;
-   for  (int  hbhM8  =   0; hbhM8  <  exp;  hbhM8++) *QJS *=  m0;
-  return uWpz3;
+int eH(int N, int exp) {
+    int Cw = 1;
+    int *OV = &Cw;
+    for (int AN = 0; AN < exp; AN++) *OV *= N;
+    return Cw;
 }
 
-int   main(int  argc, char   *argv[])  {
- if   (argc   <   3)   return  1;
- printf("%d\n",  Gkdh(atoi(argv[1]), atoi(argv[2])));
-  return   0;
+int main(int nf5g, char *Wh[]) {
+    if (nf5g < 3) return 1;
+    printf("%d\n", eH(atoi(Wh[1]), atoi(Wh[2])));
+    return 0;
 }

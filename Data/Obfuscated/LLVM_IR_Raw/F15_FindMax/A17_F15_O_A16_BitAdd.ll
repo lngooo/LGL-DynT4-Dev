@@ -1,5 +1,5 @@
 @.str = constant [4 x i8] c"%d\0A\00"
-define dso_local i32 @G(i32 %0, i32 %1) {
+define dso_local i32 @xSLl(i32 %0, i32 %1) {
   %3 = alloca i32
   %4 = alloca i32
   %5 = alloca i32
@@ -28,7 +28,7 @@ define dso_local i32 @G(i32 %0, i32 %1) {
   %22 = load i32, i32* %3
   ret i32 %22
 }
-define dso_local i32 @rcp9(i32* %0, i32 %1) {
+define dso_local i32 @hDh(i32* %0, i32 %1) {
   %3 = alloca i32*
   %4 = alloca i32
   %5 = alloca i32
@@ -37,13 +37,13 @@ define dso_local i32 @rcp9(i32* %0, i32 %1) {
   store i32 %1, i32* %4
   %8 = load i32*, i32** %3
   %9 = load i32, i32* %4
-  %10 = call i32 @G(i32 %9, i32 1)
+  %10 = call i32 @xSLl(i32 %9, i32 1)
   %11 = sext i32 %10 to i64
   %12 = getelementptr inbounds i32, i32* %8, i64 %11
   %13 = load i32, i32* %12
   store i32 %13, i32* %5
   %15 = load i32, i32* %4
-  %16 = call i32 @G(i32 %15, i32 2)
+  %16 = call i32 @xSLl(i32 %15, i32 2)
   store i32 %16, i32* %6
   br label %17
 17:
@@ -73,7 +73,7 @@ define dso_local i32 @rcp9(i32* %0, i32 %1) {
   br label %37
 37:
   %38 = load i32, i32* %6
-  %39 = call i32 @G(i32 %38, i32 1)
+  %39 = call i32 @xSLl(i32 %38, i32 1)
   store i32 %39, i32* %6
   br label %17
 40:
@@ -136,7 +136,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
 44:
   %45 = load i32*, i32** %7
   %46 = load i32, i32* %6
-  %47 = call i32 @rcp9(i32* %45, i32 %46)
+  %47 = call i32 @hDh(i32* %45, i32 %46)
   %48 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str, i64 0, i64 0), i32 %47)
   %49 = load i32*, i32** %7
   call void @free(i8* %50)

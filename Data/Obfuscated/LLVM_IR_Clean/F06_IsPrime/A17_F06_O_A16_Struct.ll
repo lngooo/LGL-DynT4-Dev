@@ -1,17 +1,17 @@
-%struct.GL4 = type { i32, i32 }
-define dso_local i32 @K(i32 %0) {
+%struct.yT = type { i32, i32 }
+define dso_local i32 @t(i32 %0) {
   %2 = alloca i32
   %3 = alloca i32
-  %4 = alloca %struct.GL4
+  %4 = alloca %struct.yT
   %5 = alloca i32
   %6 = alloca i32
   store i32 %0, i32* %3
-  %8 = getelementptr inbounds %struct.GL4, %struct.GL4* %4, i32 0, i32 0
+  %8 = getelementptr inbounds %struct.yT, %struct.yT* %4, i32 0, i32 0
   %9 = load i32, i32* %3
   store i32 %9, i32* %8
-  %10 = getelementptr inbounds %struct.GL4, %struct.GL4* %4, i32 0, i32 1
+  %10 = getelementptr inbounds %struct.yT, %struct.yT* %4, i32 0, i32 1
   store i32 1, i32* %10
-  %11 = getelementptr inbounds %struct.GL4, %struct.GL4* %4, i32 0, i32 0
+  %11 = getelementptr inbounds %struct.yT, %struct.yT* %4, i32 0, i32 0
   %12 = load i32, i32* %11
   %13 = icmp slt i32 %12, 2
   br i1 %13, label %14, label %15
@@ -26,7 +26,7 @@ define dso_local i32 @K(i32 %0) {
   %18 = load i32, i32* %6
   %19 = load i32, i32* %6
   %20 = mul nsw i32 %18, %19
-  %21 = getelementptr inbounds %struct.GL4, %struct.GL4* %4, i32 0, i32 0
+  %21 = getelementptr inbounds %struct.yT, %struct.yT* %4, i32 0, i32 0
   %22 = load i32, i32* %21
   %23 = icmp sle i32 %20, %22
   br i1 %23, label %25, label %24
@@ -34,14 +34,14 @@ define dso_local i32 @K(i32 %0) {
   store i32 2, i32* %5
   br label %37
 25:
-  %26 = getelementptr inbounds %struct.GL4, %struct.GL4* %4, i32 0, i32 0
+  %26 = getelementptr inbounds %struct.yT, %struct.yT* %4, i32 0, i32 0
   %27 = load i32, i32* %26
   %28 = load i32, i32* %6
   %29 = srem i32 %27, %28
   %30 = icmp eq i32 %29, 0
   br i1 %30, label %31, label %33
 31:
-  %32 = getelementptr inbounds %struct.GL4, %struct.GL4* %4, i32 0, i32 1
+  %32 = getelementptr inbounds %struct.yT, %struct.yT* %4, i32 0, i32 1
   store i32 0, i32* %32
   store i32 2, i32* %5
   br label %37
@@ -55,7 +55,7 @@ define dso_local i32 @K(i32 %0) {
 37:
   br label %39
 39:
-  %40 = getelementptr inbounds %struct.GL4, %struct.GL4* %4, i32 0, i32 1
+  %40 = getelementptr inbounds %struct.yT, %struct.yT* %4, i32 0, i32 1
   %41 = load i32, i32* %40
   store i32 %41, i32* %2
   store i32 1, i32* %5

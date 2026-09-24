@@ -1,13 +1,13 @@
-void tUWO7(char*  XP) {
-  int Cs2   =   strlen(XP);
- if   (Cs2  == 0)  return;
-   for  (int   u   =  0;  u  < Cs2;   u++)   {
-   int   jtUB   =  1;
-   while   (u   +  1   <   Cs2   && XP[u] == XP[u   + 1])   {
-   jtUB++;
- u++;
- }
-   printf("%c%d", XP[u],  jtUB);
-  }
- printf("\n");
+void Q5(char* zqa) {
+    int co = strlen(zqa);
+    if (co == 0) return;
+    for (int pzaB = 0; pzaB < co; pzaB++) {
+        int e = 1;
+        while (pzaB + 1 < co && zqa[pzaB] == zqa[pzaB + 1]) {
+            e++;
+            pzaB++;
+        }
+        printf("%c%d", zqa[pzaB], e);
+    }
+    printf("\n");
 }

@@ -1,5 +1,5 @@
 @.str = constant [4 x i8] c"%d\0A\00"
-define dso_local i32 @hD(i8* %0, i32 %1, i32 %2, i8 signext %3) {
+define dso_local i32 @QiMi(i8* %0, i32 %1, i32 %2, i8 signext %3) {
   %5 = alloca i32
   %6 = alloca i8*
   %7 = alloca i32
@@ -47,13 +47,13 @@ define dso_local i32 @hD(i8* %0, i32 %1, i32 %2, i8 signext %3) {
   %39 = load i32, i32* %7
   %40 = load i32, i32* %10
   %41 = load i8, i8* %9
-  %42 = call i32 @hD(i8* %38, i32 %39, i32 %40, i8 signext %41)
+  %42 = call i32 @QiMi(i8* %38, i32 %39, i32 %40, i8 signext %41)
   %43 = load i8*, i8** %6
   %44 = load i32, i32* %10
   %45 = add nsw i32 %44, 1
   %46 = load i32, i32* %8
   %47 = load i8, i8* %9
-  %48 = call i32 @hD(i8* %43, i32 %45, i32 %46, i8 signext %47)
+  %48 = call i32 @QiMi(i8* %43, i32 %45, i32 %46, i8 signext %47)
   %49 = add nsw i32 %42, %48
   store i32 %49, i32* %5
   br label %51
@@ -61,7 +61,7 @@ define dso_local i32 @hD(i8* %0, i32 %1, i32 %2, i8 signext %3) {
   %52 = load i32, i32* %5
   ret i32 %52
 }
-define dso_local i32 @w(i8* %0, i8 signext %1) {
+define dso_local i32 @bz7(i8* %0, i8 signext %1) {
   %3 = alloca i32
   %4 = alloca i8*
   %5 = alloca i8
@@ -85,7 +85,7 @@ define dso_local i32 @w(i8* %0, i8 signext %1) {
   %17 = load i32, i32* %6
   %18 = sub nsw i32 %17, 1
   %19 = load i8, i8* %5
-  %20 = call i32 @hD(i8* %16, i32 0, i32 %18, i8 signext %19)
+  %20 = call i32 @QiMi(i8* %16, i32 0, i32 %18, i8 signext %19)
   store i32 %20, i32* %3
   store i32 1, i32* %7
   br label %21
@@ -116,7 +116,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   %15 = load i8*, i8** %14
   %16 = getelementptr inbounds i8, i8* %15, i64 0
   %17 = load i8, i8* %16
-  %18 = call i32 @w(i8* %12, i8 signext %17)
+  %18 = call i32 @bz7(i8* %12, i8 signext %17)
   %19 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str, i64 0, i64 0), i32 %18)
   store i32 0, i32* %3
   br label %20

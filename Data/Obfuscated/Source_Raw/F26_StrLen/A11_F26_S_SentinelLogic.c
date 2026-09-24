@@ -4,18 +4,16 @@
  * File: A11_F26_S_SentinelLogic.c
  * Implementation Logic: For-loop based variant (Seed 8).
  */
-
-
 #include <stdio.h>
 
-int  TJJA(const  char  *sVPW)  {
- int   RxI;
-   for   (RxI   = 0; sVPW[RxI];  ++RxI);
-  return RxI;
+int K3(const char *Z) {
+    int IoS;
+    for (IoS = 0; Z[IoS]; ++IoS);
+    return IoS;
 }
 
-int   main(int  argc,   char *argv[]) {
-   if   (argc <  2) return 0;
-   printf("%d\n", TJJA(argv[1]));
-  return  0;
+int main(int xk, char *R[]) {
+    if (xk < 2) return 0;
+    printf("%d\n", K3(R[1]));
+    return 0;
 }

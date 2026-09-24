@@ -1,4 +1,4 @@
-define dso_local i32 @ZEM(i8 signext %0) {
+define dso_local i32 @r(i8 signext %0) {
   %2 = alloca i8
   store i8 %0, i8* %2
   %3 = load i8, i8* %2
@@ -55,7 +55,7 @@ define dso_local i32 @ZEM(i8 signext %0) {
   %44 = zext i1 %43 to i32
   ret i32 %44
 }
-define dso_local i32 @oGs(i8* %0) {
+define dso_local i32 @zk4(i8* %0) {
   %2 = alloca i32
   %3 = alloca i8*
   store i8* %0, i8** %3
@@ -70,10 +70,10 @@ define dso_local i32 @oGs(i8* %0) {
 9:
   %10 = load i8*, i8** %3
   %11 = load i8, i8* %10
-  %12 = call i32 @ZEM(i8 signext %11)
+  %12 = call i32 @r(i8 signext %11)
   %13 = load i8*, i8** %3
   %14 = getelementptr inbounds i8, i8* %13, i64 1
-  %15 = call i32 @oGs(i8* %14)
+  %15 = call i32 @zk4(i8* %14)
   %16 = add nsw i32 %12, %15
   store i32 %16, i32* %2
   br label %17

@@ -1,13 +1,13 @@
-int  tWM(int   wh[],   int  UMV, int  P,   int x)  {
-  if   (UMV   > P)  return  -1;
-   int  R =   wh[P],  KwI1  =  UMV;
-   for  (int Ia  =  UMV;   Ia   <  P; Ia++)   if (wh[Ia]  <=   R) {  int  PM=wh[KwI1];  wh[KwI1]=wh[Ia];   wh[Ia]=PM; KwI1++;  }
-   int  PM=wh[KwI1];  wh[KwI1]=wh[P]; wh[P]=PM;
-   int  sqj = KwI1 - (x   -  1);
-  if (sqj == 0)  return  wh[KwI1];
- goto   *(&&O +  (sqj  >   0  ? 0   : (&&NFsc - &&O)));
-O:
-   return   tWM(wh,  UMV,   KwI1  -   1,  x);
-NFsc:
-   return   tWM(wh,  KwI1   +  1,   P,  x);
+int i2u(int KVat[], int L, int yB, int XxZ) {
+    if (L > yB) return -1;
+    int HQ = KVat[yB], gz = L;
+    for (int I = L; I < yB; I++) if (KVat[I] <= HQ) { int uj08=KVat[gz]; KVat[gz]=KVat[I]; KVat[I]=uj08; gz++; }
+    int uj08=KVat[gz]; KVat[gz]=KVat[yB]; KVat[yB]=uj08;
+    int oFR = gz - (XxZ - 1);
+    if (oFR == 0) return KVat[gz];
+    goto *(&&jMsj + (oFR > 0 ? 0 : (&&M - &&jMsj)));
+jMsj:
+    return i2u(KVat, L, gz - 1, XxZ);
+M:
+    return i2u(KVat, gz + 1, yB, XxZ);
 }

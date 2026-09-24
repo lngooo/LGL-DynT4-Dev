@@ -1,9 +1,9 @@
-void   HVh(int o[],  int  Fu)   {
- for  (int x4  = 0; x4  < Fu / 2; x4++)   {
- for(int   FR1=0; FR1<1;  FR1++)   {
-  int yWjg = o[x4];
- o[x4]  = o[Fu   -   1 - x4];
-   o[Fu -   1 - x4]  =   yWjg;
- }
-  }
+void FP(int E[], int p) {
+    for (int al = 0; al < p / 2; al++) {
+        for(int t=0; t<1; t++) {
+            int D = E[al];
+            E[al] = E[p - 1 - al];
+            E[p - 1 - al] = D;
+        }
+    }
 }

@@ -5,20 +5,18 @@
  * Implementation Logic: Uses bitwise XOR to detect differences between characters.
  * Input Format: <str1> <str2>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int FsTu(const  char   *U,  const char   *tLB) {
-   while (!(*U ^ *tLB)  &&   *U)  {
-  U++;   tLB++;
-   }
- return   (int)((unsigned   char)*U   - (unsigned char)*tLB);
+int NKf(const char *oC0, const char *p) {
+    while (!(*oC0 ^ *p) && *oC0) {
+        oC0++; p++;
+    }
+    return (int)((unsigned char)*oC0 - (unsigned char)*p);
 }
 
-int main(int argc,  char  *argv[])   {
- if  (argc  <  3) return   0;
- printf("%d\n",   FsTu(argv[1], argv[2]));
-  return  0;
+int main(int Qr, char *F[]) {
+    if (Qr < 3) return 0;
+    printf("%d\n", NKf(F[1], F[2]));
+    return 0;
 }

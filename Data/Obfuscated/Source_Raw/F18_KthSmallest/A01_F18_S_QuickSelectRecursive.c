@@ -4,41 +4,39 @@
  * File: A01_F18_S_QuickSelectRecursive.c
  * Implementation Logic: QuickSelectRecursive
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-int   uXy3(int   ah4[], int   mw, int  ybOG,  int   HVwu)   {
-   if (HVwu   >   0  &&   HVwu <= ybOG   -   mw +   1) {
-   int   Y =  ah4[ybOG],   zgcH4 =   mw;
-   for (int  b   =   mw;  b   < ybOG;  b++)   {
- if  (ah4[b] <=   Y) {
-  int  T   = ah4[zgcH4]; ah4[zgcH4]   =   ah4[b];   ah4[b]  =   T;
- zgcH4++;
- }
- }
-   int  T   =   ah4[zgcH4];   ah4[zgcH4] =   ah4[ybOG]; ah4[ybOG]   = T;
-  int a  =   zgcH4;
-  if   (a -  mw ==  HVwu   - 1)  return  ah4[a];
-  if (a   -   mw   >  HVwu   -  1)   return   uXy3(ah4,   mw,   a  - 1,  HVwu);
-  return  uXy3(ah4,   a  +   1,  ybOG, HVwu - a   + mw  -   1);
-  }
- return   -1;
+int aXt(int wYz[], int LWPa, int PGW8, int zo) {
+    if (zo > 0 && zo <= PGW8 - LWPa + 1) {
+        int UV = wYz[PGW8], Eo = LWPa;
+        for (int U0Dv = LWPa; U0Dv < PGW8; U0Dv++) {
+            if (wYz[U0Dv] <= UV) {
+                int u = wYz[Eo]; wYz[Eo] = wYz[U0Dv]; wYz[U0Dv] = u;
+                Eo++;
+            }
+        }
+        int u = wYz[Eo]; wYz[Eo] = wYz[PGW8]; wYz[PGW8] = u;
+        int BX = Eo;
+        if (BX - LWPa == zo - 1) return wYz[BX];
+        if (BX - LWPa > zo - 1) return aXt(wYz, LWPa, BX - 1, zo);
+        return aXt(wYz, BX + 1, PGW8, zo - BX + LWPa - 1);
+    }
+    return -1;
 }
 
-int  main(int   argc,  char   *argv[])  {
-  if   (argc < 3)  return   0;
-  int  HVwu = atoi(argv[1]);
- int   YhPP4 =   argc  -   2;
- int  *ah4  = (int   *)malloc(YhPP4  * sizeof(int));
-   for   (int  zgcH4 =   0;   zgcH4 < YhPP4;   zgcH4++)  ah4[zgcH4]  =  atoi(argv[zgcH4  + 2]);
+int main(int nCC2, char *x[]) {
+    if (nCC2 < 3) return 0;
+    int zo = atoi(x[1]);
+    int K3 = nCC2 - 2;
+    int *wYz = (int *)malloc(K3 * sizeof(int));
+    for (int Eo = 0; Eo < K3; Eo++) wYz[Eo] = atoi(x[Eo + 2]);
 
-   // 假设  K 是从  1  开始的   (1st   smallest)
- int  wp8   = uXy3(ah4,  0, YhPP4  - 1,  HVwu);
+    // 假设 K 是从 1 开始的 (1st smallest)
+    int t8 = aXt(wYz, 0, K3 - 1, zo);
 
- printf("%d\n", wp8);
- free(ah4);
-  return 0;
+    printf("%d\n", t8);
+    free(wYz);
+    return 0;
 }

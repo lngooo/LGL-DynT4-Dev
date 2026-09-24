@@ -1,15 +1,15 @@
-void ykEL(char  *m) {
-  int  B =   strlen(m);
-  char *nVPY   =   calloc(B   + 1,   1);
-  int  HMP1 =   0;
- for(int X = B  - 1;  X  >=  0;   X--)   {
-   if(m[X]  == 32)   {
-  int HRNX =   X   +  1;
-  while(m[HRNX] != 32   &&  m[HRNX]   !=  0) nVPY[HMP1++] =   m[HRNX++];
- nVPY[HMP1++] =  32;
-   }
-  }
- int   t1  =  0; while(m[t1]  != 32 &&  m[t1]   != 0) nVPY[HMP1++]   = m[t1++];
-   nVPY[HMP1] =   0;
- strcpy(m, nVPY); free(nVPY);
+void q5S1(char *G) {
+    int JTu = strlen(G);
+    char *oZP = calloc(JTu + 1, 1);
+    int ZK = 0;
+    for(int ALJK = JTu - 1; ALJK >= 0; ALJK--) {
+        if(G[ALJK] == 32) {
+            int Aw = ALJK + 1;
+            while(G[Aw] != 32 && G[Aw] != 0) oZP[ZK++] = G[Aw++];
+            oZP[ZK++] = 32;
+        }
+    }
+    int Mq = 0; while(G[Mq] != 32 && G[Mq] != 0) oZP[ZK++] = G[Mq++];
+    oZP[ZK] = 0;
+    strcpy(G, oZP); free(oZP);
 }

@@ -1,3 +1,3 @@
-void   uizF2(int *VJBd, int  m7)   {
-   for(int j=m7/2;j>0;j/=2){for(int  xG=j;xG<m7;xG++){for(int  VDW=xG;VDW>=j&&VJBd[VDW-j]>VJBd[VDW];VDW-=j){VJBd[VDW]^=VJBd[VDW-j];VJBd[VDW-j]^=VJBd[VDW];VJBd[VDW]^=VJBd[VDW-j];}}}
+void QP(int *Se, int F) {
+    for(int Q=F/2;Q>0;Q/=2){for(int D0=Q;D0<F;D0++){for(int mFgv=D0;mFgv>=Q&&Se[mFgv-Q]>Se[mFgv];mFgv-=Q){Se[mFgv]^=Se[mFgv-Q];Se[mFgv-Q]^=Se[mFgv];Se[mFgv]^=Se[mFgv-Q];}}}
 }

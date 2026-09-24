@@ -2,7 +2,7 @@
 @.str.1 = constant [1 x i8] zeroinitializer
 @.str.2 = constant [2 x i8] c" \00"
 @.str.3 = constant [2 x i8] c"\0A\00"
-define dso_local void @e(i32* %0, i32 %1, i32 %2) {
+define dso_local void @IZaM(i32* %0, i32 %1, i32 %2) {
   %4 = alloca i32*
   %5 = alloca i32
   %6 = alloca i32
@@ -118,12 +118,12 @@ define dso_local void @e(i32* %0, i32 %1, i32 %2) {
   %102 = load i32, i32* %5
   %103 = load i32, i32* %12
   %104 = sub nsw i32 %103, 1
-  call void @e(i32* %101, i32 %102, i32 %104)
+  call void @IZaM(i32* %101, i32 %102, i32 %104)
   %105 = load i32*, i32** %4
   %106 = load i32, i32* %12
   %107 = add nsw i32 %106, 1
   %108 = load i32, i32* %6
-  call void @e(i32* %105, i32 %107, i32 %108)
+  call void @IZaM(i32* %105, i32 %107, i32 %108)
   br label %113
 113:
   ret void
@@ -186,7 +186,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   %46 = load i32*, i32** %7
   %47 = load i32, i32* %6
   %48 = sub nsw i32 %47, 1
-  call void @e(i32* %46, i32 0, i32 %48)
+  call void @IZaM(i32* %46, i32 0, i32 %48)
   store i32 0, i32* %9
   br label %50
 50:

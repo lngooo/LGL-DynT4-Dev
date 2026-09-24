@@ -5,33 +5,31 @@
  * Implementation Logic: MathIdent
  * Input Format: <str1> <str2> ...
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
 
-void Bm(char  **YcxS,   int  ChCU,  char *LzeJ)   {
-   if (ChCU  <= 0)   return;
-   strcpy(LzeJ,  YcxS[0]);
-   for (int   QGJc = 1;   QGJc   <   ChCU;   QGJc++) {
-   int  RRv =   0;
-   while   (LzeJ[RRv]) {
- double  qCfP  =   (double)LzeJ[RRv]   -   (double)YcxS[QGJc][RRv];
- if   ((int)floor(qCfP * qCfP) !=  0) break;
-   RRv++;
- }
- LzeJ[RRv]   =  '\0';
-  }
+void UcJT(char **O, int dAnp, char *M2NJ) {
+    if (dAnp <= 0) return;
+    strcpy(M2NJ, O[0]);
+    for (int NwYb = 1; NwYb < dAnp; NwYb++) {
+        int ie = 0;
+        while (M2NJ[ie]) {
+            double r = (double)M2NJ[ie] - (double)O[NwYb][ie];
+            if ((int)floor(r * r) != 0) break;
+            ie++;
+        }
+        M2NJ[ie] = '\0';
+    }
 }
 
-int   main(int   argc, char   *argv[])  {
-  if (argc   <   2)   return 0;
-  int  M   = argc  - 1;
-  char   **YcxS = &argv[1];
- char iv[128]  =   {0};
- Bm(YcxS, M,  iv);
- printf("%s\n",  iv);
- return 0;
+int main(int h, char *q1Hh[]) {
+    if (h < 2) return 0;
+    int q = h - 1;
+    char **O = &q1Hh[1];
+    char PlJ[128] = {0};
+    UcJT(O, q, PlJ);
+    printf("%s\n", PlJ);
+    return 0;
 }

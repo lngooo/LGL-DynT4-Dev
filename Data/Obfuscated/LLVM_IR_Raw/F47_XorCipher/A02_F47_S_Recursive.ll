@@ -1,7 +1,7 @@
-@fYm0.gf = internal global i32 0
+@y.Cv = internal global i32 0
 @.str = constant [5 x i8] c"%02x\00"
 @.str.1 = constant [2 x i8] c"\0A\00"
-define dso_local void @fYm0(i8* %0, i8* %1) {
+define dso_local void @y(i8* %0, i8* %1) {
   %3 = alloca i8*
   %4 = alloca i8*
   %5 = alloca i32
@@ -13,7 +13,7 @@ define dso_local void @fYm0(i8* %0, i8* %1) {
   %9 = icmp eq i32 %8, 0
   br i1 %9, label %10, label %11
 10:
-  store i32 0, i32* @fYm0.gf
+  store i32 0, i32* @y.Cv
   br label %43
 11:
   store i32 0, i32* %5
@@ -33,7 +33,7 @@ define dso_local void @fYm0(i8* %0, i8* %1) {
   br label %13
 23:
   %24 = load i8*, i8** %4
-  %25 = load i32, i32* @fYm0.gf
+  %25 = load i32, i32* @y.Cv
   %26 = load i32, i32* %5
   %27 = srem i32 %25, %26
   %28 = sext i32 %27 to i64
@@ -46,13 +46,13 @@ define dso_local void @fYm0(i8* %0, i8* %1) {
   %35 = xor i32 %34, %31
   %36 = trunc i32 %35 to i8
   store i8 %36, i8* %32
-  %37 = load i32, i32* @fYm0.gf
+  %37 = load i32, i32* @y.Cv
   %38 = add nsw i32 %37, 1
-  store i32 %38, i32* @fYm0.gf
+  store i32 %38, i32* @y.Cv
   %39 = load i8*, i8** %3
   %40 = getelementptr inbounds i8, i8* %39, i64 1
   %41 = load i8*, i8** %4
-  call void @fYm0(i8* %40, i8* %41)
+  call void @y(i8* %40, i8* %41)
   br label %43
 43:
   ret void
@@ -101,7 +101,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
 33:
   %34 = load i8*, i8** %6
   %35 = load i8*, i8** %7
-  call void @fYm0(i8* %34, i8* %35)
+  call void @y(i8* %34, i8* %35)
   store i32 0, i32* %9
   br label %37
 37:

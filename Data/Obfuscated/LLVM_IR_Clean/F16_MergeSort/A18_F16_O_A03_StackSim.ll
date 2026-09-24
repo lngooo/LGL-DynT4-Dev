@@ -1,4 +1,4 @@
-define dso_local void @Sm(i32* %0, i32 %1, i32 %2) {
+define dso_local void @A18R(i32* %0, i32 %1, i32 %2) {
   %4 = alloca i32*
   %5 = alloca i32
   %6 = alloca i32
@@ -28,12 +28,12 @@ define dso_local void @Sm(i32* %0, i32 %1, i32 %2) {
   %25 = load i32*, i32** %4
   %26 = load i32, i32* %5
   %27 = load i32, i32* %7
-  call void @Sm(i32* %25, i32 %26, i32 %27)
+  call void @A18R(i32* %25, i32 %26, i32 %27)
   %28 = load i32*, i32** %4
   %29 = load i32, i32* %7
   %30 = add nsw i32 %29, 1
   %31 = load i32, i32* %6
-  call void @Sm(i32* %28, i32 %30, i32 %31)
+  call void @A18R(i32* %28, i32 %30, i32 %31)
   %34 = load i32, i32* %5
   store i32 %34, i32* %9
   %36 = load i32, i32* %7

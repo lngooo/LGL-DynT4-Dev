@@ -1,6 +1,6 @@
-@__const.YDON.Jl = constant [2 x [2 x i64]] [[2 x i64] [i64 1, i64 1], [2 x i64] [i64 1, i64 0]]
-@__const.YDON.AaR1 = constant [2 x [2 x i64]] [[2 x i64] [i64 1, i64 1], [2 x i64] [i64 1, i64 0]]
-define dso_local i64 @YDON(i32 %0) {
+@__const.ZB.blr = constant [2 x [2 x i64]] [[2 x i64] [i64 1, i64 1], [2 x i64] [i64 1, i64 0]]
+@__const.ZB.vwa = constant [2 x [2 x i64]] [[2 x i64] [i64 1, i64 1], [2 x i64] [i64 1, i64 0]]
+define dso_local i64 @ZB(i32 %0) {
   %2 = alloca i64
   %3 = alloca i32
   %4 = alloca [2 x [2 x i64]]

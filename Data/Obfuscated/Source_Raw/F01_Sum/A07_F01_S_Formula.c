@@ -5,18 +5,16 @@
  * Implementation Logic: Mathematical formula n(n+1)/2 (Seed 3).
  * Input Format: <n>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int a(int  d4) {
- if  (d4  < 0)  return   0;
-   return  (int)((d4   *   (d4   + 1))   /   2);
+int Z(int zre) {
+    if (zre < 0) return 0;
+    return (int)((zre * (zre + 1)) / 2);
 }
 
-int  main(int   argc, char *argv[])  {
- if (argc   <   2) return  1;
-  printf("%d\n",   a(atoi(argv[1])));
- return   0;
+int main(int K4, char *nPF[]) {
+    if (K4 < 2) return 1;
+    printf("%d\n", Z(atoi(nPF[1])));
+    return 0;
 }

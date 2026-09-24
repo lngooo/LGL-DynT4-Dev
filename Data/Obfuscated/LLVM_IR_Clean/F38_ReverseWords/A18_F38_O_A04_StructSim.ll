@@ -1,8 +1,8 @@
-%struct.uwrR = type { i32, i32 }
+%struct.lC = type { i32, i32 }
 @.str = constant [2 x i8] c" \00"
-define dso_local void @Jwx(i8* %0) {
+define dso_local void @a5(i8* %0) {
   %2 = alloca i8*
-  %3 = alloca [64 x %struct.uwrR]
+  %3 = alloca [64 x %struct.lC]
   %4 = alloca i32
   %5 = alloca i32
   %6 = alloca i32
@@ -47,8 +47,8 @@ define dso_local void @Jwx(i8* %0) {
   %41 = load i32, i32* %6
   %42 = load i32, i32* %4
   %43 = sext i32 %42 to i64
-  %44 = getelementptr inbounds [64 x %struct.uwrR], [64 x %struct.uwrR]* %3, i64 0, i64 %43
-  %45 = getelementptr inbounds %struct.uwrR, %struct.uwrR* %44, i32 0, i32 0
+  %44 = getelementptr inbounds [64 x %struct.lC], [64 x %struct.lC]* %3, i64 0, i64 %43
+  %45 = getelementptr inbounds %struct.lC, %struct.lC* %44, i32 0, i32 0
   store i32 %41, i32* %45
   %46 = load i32, i32* %7
   %47 = load i32, i32* %6
@@ -57,8 +57,8 @@ define dso_local void @Jwx(i8* %0) {
   %50 = add nsw i32 %49, 1
   store i32 %50, i32* %4
   %51 = sext i32 %49 to i64
-  %52 = getelementptr inbounds [64 x %struct.uwrR], [64 x %struct.uwrR]* %3, i64 0, i64 %51
-  %53 = getelementptr inbounds %struct.uwrR, %struct.uwrR* %52, i32 0, i32 1
+  %52 = getelementptr inbounds [64 x %struct.lC], [64 x %struct.lC]* %3, i64 0, i64 %51
+  %53 = getelementptr inbounds %struct.lC, %struct.lC* %52, i32 0, i32 1
   store i32 %48, i32* %53
   %54 = load i32, i32* %7
   %55 = add nsw i32 %54, 1
@@ -88,15 +88,15 @@ define dso_local void @Jwx(i8* %0) {
   %73 = load i8*, i8** %2
   %74 = load i32, i32* %9
   %75 = sext i32 %74 to i64
-  %76 = getelementptr inbounds [64 x %struct.uwrR], [64 x %struct.uwrR]* %3, i64 0, i64 %75
-  %77 = getelementptr inbounds %struct.uwrR, %struct.uwrR* %76, i32 0, i32 0
+  %76 = getelementptr inbounds [64 x %struct.lC], [64 x %struct.lC]* %3, i64 0, i64 %75
+  %77 = getelementptr inbounds %struct.lC, %struct.lC* %76, i32 0, i32 0
   %78 = load i32, i32* %77
   %79 = sext i32 %78 to i64
   %80 = getelementptr inbounds i8, i8* %73, i64 %79
   %81 = load i32, i32* %9
   %82 = sext i32 %81 to i64
-  %83 = getelementptr inbounds [64 x %struct.uwrR], [64 x %struct.uwrR]* %3, i64 0, i64 %82
-  %84 = getelementptr inbounds %struct.uwrR, %struct.uwrR* %83, i32 0, i32 1
+  %83 = getelementptr inbounds [64 x %struct.lC], [64 x %struct.lC]* %3, i64 0, i64 %82
+  %84 = getelementptr inbounds %struct.lC, %struct.lC* %83, i32 0, i32 1
   %85 = load i32, i32* %84
   %86 = sext i32 %85 to i64
   %87 = call i8* @strncat(i8* %72, i8* %80, i64 %86)

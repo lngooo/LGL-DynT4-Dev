@@ -5,25 +5,23 @@
  * Implementation Logic: Control flow flattening using switch-case derived from A01.
  * Input Format: <base> <exp>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int   o0(int   Aa,   int exp)   {
-  int  CRVA  =   1,   Woet  =  0, uc =  0;
-   while  (uc !=  -1) {
- switch (uc)  {
-   case  0: uc =  (Woet <   exp) ? 1 :   2; break;
-  case 1:   CRVA *=   Aa; Woet++; uc  = 0;   break;
-   case 2:   uc  = -1; break;
-  }
- }
-  return CRVA;
+int S5Z(int g, int exp) {
+    int QQ = 1, kPN = 0, K = 0;
+    while (K != -1) {
+        switch (K) {
+            case 0: K = (kPN < exp) ? 1 : 2; break;
+            case 1: QQ *= g; kPN++; K = 0; break;
+            case 2: K = -1; break;
+        }
+    }
+    return QQ;
 }
 
-int  main(int  argc,  char   *argv[]) {
-  if  (argc   <  3) return   1;
-   printf("%d\n", o0(atoi(argv[1]),  atoi(argv[2])));
-  return   0;
+int main(int Wv9Y, char *gagq[]) {
+    if (Wv9Y < 3) return 1;
+    printf("%d\n", S5Z(atoi(gagq[1]), atoi(gagq[2])));
+    return 0;
 }

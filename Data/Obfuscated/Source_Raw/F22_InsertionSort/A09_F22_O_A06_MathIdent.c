@@ -4,35 +4,33 @@
  * File: A09_F22_O_A06_MathIdent.c
  * Implementation Logic: MathIdent
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-void   Dcjm(int  R[], int   ax) {
-   for (int   EY   = 1;   EY   <   ax;  EY++)  {
-  for (int  tR =   EY;  tR > 0; tR--)   {
-   double   Xwfe  = (double)R[tR-1]  -  (double)R[tR];
-   if  (Xwfe   >  0.0)  {
- R[tR]   ^=  R[tR-1];  R[tR-1] ^=   R[tR];   R[tR] ^=   R[tR-1];
- }  else break;
-   }
-   }
+void r(int Fb3y[], int Ccon) {
+    for (int lQBI = 1; lQBI < Ccon; lQBI++) {
+        for (int Q = lQBI; Q > 0; Q--) {
+            double cIW = (double)Fb3y[Q-1] - (double)Fb3y[Q];
+            if (cIW > 0.0) {
+                Fb3y[Q] ^= Fb3y[Q-1]; Fb3y[Q-1] ^= Fb3y[Q]; Fb3y[Q] ^= Fb3y[Q-1];
+            } else break;
+        }
+    }
 }
 
-int main(int   argc, char *argv[])  {
-   if   (argc <  2) return   0;
-   int   ax   = argc  -  1;
-  int  *R  = (int   *)malloc(ax   *   sizeof(int));
-  for (int EY  = 0;  EY <  ax; EY++)  R[EY] =   atoi(argv[EY +   1]);
+int main(int b6M, char *qZW[]) {
+    if (b6M < 2) return 0;
+    int Ccon = b6M - 1;
+    int *Fb3y = (int *)malloc(Ccon * sizeof(int));
+    for (int lQBI = 0; lQBI < Ccon; lQBI++) Fb3y[lQBI] = atoi(qZW[lQBI + 1]);
 
-   Dcjm(R,   ax);
+    r(Fb3y, Ccon);
 
-   for (int  EY  = 0;   EY <   ax;   EY++) {
-   printf("%d%s",  R[EY],   (EY   == ax  -  1   ?  ""   : " "));
- }
- printf("\n");
- free(R);
-  return  0;
+    for (int lQBI = 0; lQBI < Ccon; lQBI++) {
+        printf("%d%s", Fb3y[lQBI], (lQBI == Ccon - 1 ? "" : " "));
+    }
+    printf("\n");
+    free(Fb3y);
+    return 0;
 }

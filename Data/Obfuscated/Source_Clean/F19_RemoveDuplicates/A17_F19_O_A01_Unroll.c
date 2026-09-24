@@ -1,13 +1,13 @@
-int  zW(int   hy[],   int iv)   {
-  int wwFV  =   0;
-  for  (int   E   = 0; E < iv; E++)  {
- int   BxKN   = 0;
- int  Yp  =   0;
- for  (; Yp  <= wwFV -   2;   Yp   += 2) {
- if (hy[E]   ==  hy[Yp]   ||   hy[E] ==   hy[Yp+1]) { BxKN  =  1;  break;   }
- }
- for (;  Yp <   wwFV; Yp++) if   (hy[E] ==   hy[Yp])   BxKN   =   1;
-   if   (!BxKN)  hy[wwFV++] = hy[E];
- }
-  return  wwFV;
+int rnL(int jCoU[], int xj5E) {
+    int F = 0;
+    for (int Dl = 0; Dl < xj5E; Dl++) {
+        int mK = 0;
+        int UlPs = 0;
+        for (; UlPs <= F - 2; UlPs += 2) {
+            if (jCoU[Dl] == jCoU[UlPs] || jCoU[Dl] == jCoU[UlPs+1]) { mK = 1; break; }
+        }
+        for (; UlPs < F; UlPs++) if (jCoU[Dl] == jCoU[UlPs]) mK = 1;
+        if (!mK) jCoU[F++] = jCoU[Dl];
+    }
+    return F;
 }

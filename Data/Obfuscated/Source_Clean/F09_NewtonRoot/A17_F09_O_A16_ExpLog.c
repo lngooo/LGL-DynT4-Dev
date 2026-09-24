@@ -1,5 +1,5 @@
-int  IfOK(int   FTIc1)   {
-   if   (FTIc1  <=  0)   return   FTIc1 ==  0   ?  0  :   -1;
-   double g  =   log((double)FTIc1);
-   return  (int)(exp(0.5   * g) +   1e-9);
+int R(int p) {
+    if (p <= 0) return p == 0 ? 0 : -1;
+    double FMC = log((double)p);
+    return (int)(exp(0.5 * FMC) + 1e-9);
 }

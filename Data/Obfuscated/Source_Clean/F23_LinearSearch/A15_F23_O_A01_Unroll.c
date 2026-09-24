@@ -1,9 +1,9 @@
-int   m(int cG[], int   FW, int   CZve)  {
- int   aciA = 0;
- for  (;  aciA   <=  FW   -   2;   aciA  += 2)   {
- if   (cG[aciA] ==   CZve)  return   aciA;
-   if   (cG[aciA+1]  ==  CZve)  return   aciA   +   1;
-  }
-   for   (;  aciA <  FW;  aciA++)  if (cG[aciA]   == CZve)  return  aciA;
-  return  -1;
+int Hf4(int k8[], int Tj1, int JCFS) {
+    int RhJ = 0;
+    for (; RhJ <= Tj1 - 2; RhJ += 2) {
+        if (k8[RhJ] == JCFS) return RhJ;
+        if (k8[RhJ+1] == JCFS) return RhJ + 1;
+    }
+    for (; RhJ < Tj1; RhJ++) if (k8[RhJ] == JCFS) return RhJ;
+    return -1;
 }

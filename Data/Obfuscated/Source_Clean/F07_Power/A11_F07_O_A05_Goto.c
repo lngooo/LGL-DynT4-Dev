@@ -1,10 +1,10 @@
-int  ksUQ(int X6, int exp)  {
-  int FTX  = 1;
-wMQG:
- if (exp   <=  0)  goto ikL;
-  FTX *= X6;
-  exp--;
-   goto wMQG;
-ikL:
-   return  FTX;
+int nZ(int TNO, int exp) {
+    int kNiY = 1;
+K:
+    if (exp <= 0) goto IrM;
+    kNiY *= TNO;
+    exp--;
+    goto K;
+IrM:
+    return kNiY;
 }

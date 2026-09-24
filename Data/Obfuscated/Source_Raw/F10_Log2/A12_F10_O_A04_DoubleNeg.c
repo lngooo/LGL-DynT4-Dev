@@ -5,27 +5,25 @@
  * Implementation Logic: DoubleNeg
  * Input Format: <integer>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-int LxuN(int  DoZS9) {
-  int  T = 0,   S   =   31, p  = 0;
- while (!!(T <=   S)) {
-  int   ft   =   T  +  (S -   T)   /  2;
- if   (!!((1ULL   << ft) <= (unsigned  int)DoZS9))   {  p = ft;  T  =  ft  + 1; }
-   else S   = ft  -   1;
-  }
-   return  p;
+int vw(int Nr4U) {
+    int x = 0, lhz = 31, Dr1y = 0;
+    while (!!(x <= lhz)) {
+        int ZAP4 = x + (lhz - x) / 2;
+        if (!!((1ULL << ZAP4) <= (unsigned int)Nr4U)) { Dr1y = ZAP4; x = ZAP4 + 1; }
+        else lhz = ZAP4 - 1;
+    }
+    return Dr1y;
 }
 
-int main(int  argc, char   *argv[])  {
- if (argc   <  2) return   0;
- int   DoZS9  =   atoi(argv[1]);
-   if  (DoZS9 <=   0)   return 0;  
-  int MtoH0   =  LxuN(DoZS9);
-  printf("%d\n",  MtoH0);
-   return 0;
+int main(int hi, char *k[]) {
+    if (hi < 2) return 0;
+    int Nr4U = atoi(k[1]);
+    if (Nr4U <= 0) return 0; 
+    int A = vw(Nr4U);
+    printf("%d\n", A);
+    return 0;
 }

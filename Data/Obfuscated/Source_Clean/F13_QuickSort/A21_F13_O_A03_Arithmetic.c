@@ -1,15 +1,15 @@
-void   D1(int  uavs[], int   Jvoz, int  qNsz2)  {
- if   (Jvoz <  qNsz2) {
- int  yoa = Jvoz,   rOvB0  =  qNsz2, dtn2 =   uavs[Jvoz   +  (qNsz2 - Jvoz) /   2];
-  while   (yoa <=   rOvB0)   {
-   while   (uavs[yoa] < dtn2)   yoa  =   yoa + 1;
-  while   (uavs[rOvB0]   > dtn2)   rOvB0  =   rOvB0 -   1;
-  if   (yoa  <=   rOvB0)  {
- int  SnO  = uavs[yoa];   uavs[yoa]  = uavs[rOvB0]; uavs[rOvB0]  =  SnO;
-   yoa  =   yoa +  1;  rOvB0 =  rOvB0 -  1;
-  }
-   }
-  D1(uavs,  Jvoz,   rOvB0);
- D1(uavs,   yoa,  qNsz2);
-  }
+void IsyN(int mnR4[], int tKY, int BT6) {
+    if (tKY < BT6) {
+        int fLa = tKY, i2sd = BT6, J9d = mnR4[tKY + (BT6 - tKY) / 2];
+        while (fLa <= i2sd) {
+            while (mnR4[fLa] < J9d) fLa = fLa + 1;
+            while (mnR4[i2sd] > J9d) i2sd = i2sd - 1;
+            if (fLa <= i2sd) {
+                int T = mnR4[fLa]; mnR4[fLa] = mnR4[i2sd]; mnR4[i2sd] = T;
+                fLa = fLa + 1; i2sd = i2sd - 1;
+            }
+        }
+        IsyN(mnR4, tKY, i2sd);
+        IsyN(mnR4, fLa, BT6);
+    }
 }

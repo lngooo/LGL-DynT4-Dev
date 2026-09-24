@@ -5,24 +5,22 @@
  * Implementation Logic: 基于 A05 使用位移代替乘除指令 [cite: 22, 28]
  * Input Format: <int1> <int2> ...
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 #include <string.h>
 
-void   Hi0(int *gB, int YE2)  {
-   for(int   J0=YE2>>1;J0>0;J0>>=1){for(int   *E3=gB+J0;E3<gB+YE2;E3++){int D=*E3,*X=E3;while(X>=gB+J0&&*(X-J0)>D){*X=*(X-J0);X-=J0;}*X=D;}}
+void D(int *Lhd, int taBw) {
+    for(int d=taBw>>1;d>0;d>>=1){for(int *iw4=Lhd+d;iw4<Lhd+taBw;iw4++){int Y2G=*iw4,*fT=iw4;while(fT>=Lhd+d&&*(fT-d)>Y2G){*fT=*(fT-d);fT-=d;}*fT=Y2G;}}
 }
 
-int main(int   argc,   char *argv[])  {
- if (argc  <   2)  return   0;
-  int   YE2  =   argc  - 1;
-   int  *gB   =  (int  *)malloc(YE2  *  sizeof(int));
-   for  (int   aS   = 0; aS   < YE2;   aS++)   gB[aS]  = atoi(argv[aS+1]);
- Hi0(gB, YE2);
-   for   (int  aS =   0;   aS   <  YE2;  aS++)   printf("%d%c",  gB[aS],   aS ==   YE2 -   1   ?  '\n'  : ' ');
-   free(gB);
-   return 0;
+int main(int jUm, char *L6fs[]) {
+    if (jUm < 2) return 0;
+    int taBw = jUm - 1;
+    int *Lhd = (int *)malloc(taBw * sizeof(int));
+    for (int cE = 0; cE < taBw; cE++) Lhd[cE] = atoi(L6fs[cE+1]);
+    D(Lhd, taBw);
+    for (int cE = 0; cE < taBw; cE++) printf("%d%c", Lhd[cE], cE == taBw - 1 ? '\n' : ' ');
+    free(Lhd);
+    return 0;
 }

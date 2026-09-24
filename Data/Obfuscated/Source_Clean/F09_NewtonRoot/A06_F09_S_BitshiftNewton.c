@@ -1,11 +1,11 @@
-int K9(int   LFx)   {
- if   (LFx  <  0)  return -1;
-   if   (LFx ==   0)  return   0;
-  long CyC =   LFx;
-   while  (1)  {
-  long  sxy  =   (CyC  + LFx /   CyC)   >> 1;
-   if  (sxy   >=  CyC)  break;
- CyC  =   sxy;
-   }
-  return (int)CyC;
+int w(int YgU) {
+    if (YgU < 0) return -1;
+    if (YgU == 0) return 0;
+    long d = YgU;
+    while (1) {
+        long CUAk = (d + YgU / d) >> 1;
+        if (CUAk >= d) break;
+        d = CUAk;
+    }
+    return (int)d;
 }

@@ -1,17 +1,17 @@
-int  a(const  char* Of1) {
- int  HFLM  =  0, n2  = 1;
-   while (n2 !=  0) {
-   switch(n2)   {
-   case   1: if  (!*Of1) n2   =  0;  else   n2 =   2;   break;
-   case 2:  {
- int  fXV5   =   0;   char   A   =   *Of1;
- if   (A  >=   '0'  &&  A <=   '9')   fXV5  =  A   -  '0';
-   else fXV5   = (A  | 32)   -   'a' +  10;
- HFLM   = HFLM  * 16  + fXV5;
-   Of1++;  n2   = 1;
-   break;
- }
-  }
-   }
-   return HFLM;
+int F(const char* cm) {
+    int m = 0, NwwT = 1;
+    while (NwwT != 0) {
+        switch(NwwT) {
+            case 1: if (!*cm) NwwT = 0; else NwwT = 2; break;
+            case 2: {
+                int HX = 0; char l6Ub = *cm;
+                if (l6Ub >= '0' && l6Ub <= '9') HX = l6Ub - '0';
+                else HX = (l6Ub | 32) - 'a' + 10;
+                m = m * 16 + HX;
+                cm++; NwwT = 1;
+                break;
+            }
+        }
+    }
+    return m;
 }

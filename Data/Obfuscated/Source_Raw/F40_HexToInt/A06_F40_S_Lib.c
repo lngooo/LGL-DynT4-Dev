@@ -5,18 +5,16 @@
  * Implementation Logic: Uses sscanf with %x format specifier.
  * Input Format: <hex_string>
  */
-
-
 #include <stdio.h>
 
-int  M(const   char* NbW) {
- int  vkH   = 0;
-   sscanf(NbW, "%x",  &vkH);
-   return vkH;
+int uPH(const char* c) {
+    int j = 0;
+    sscanf(c, "%x", &j);
+    return j;
 }
 
-int  main(int   argc,  char*  argv[])  {
-  if (argc  <   2)   return   0;
-  printf("%d",  M(argv[1]));
- return 0;
+int main(int RlUi, char* t[]) {
+    if (RlUi < 2) return 0;
+    printf("%d", uPH(t[1]));
+    return 0;
 }

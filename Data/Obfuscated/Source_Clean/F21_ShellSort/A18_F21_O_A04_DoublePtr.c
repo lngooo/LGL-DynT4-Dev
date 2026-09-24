@@ -1,3 +1,3 @@
-void egN(int *w,   int  q)   {
-  for(int uIPk=q/2;uIPk>0;uIPk/=2){for(int s8=0;s8<uIPk;s8++){for(int   nk=s8+uIPk;nk<q;nk+=uIPk){int  vq=w[nk],xGNV2=nk-uIPk;while(xGNV2>=s8){int  **UnK=&w;if((*UnK)[xGNV2]>vq){w[xGNV2+uIPk]=(*UnK)[xGNV2];xGNV2-=uIPk;}else  break;}w[xGNV2+uIPk]=vq;}}}
+void Iq(int *QNhB, int Ob) {
+    for(int j0=Ob/2;j0>0;j0/=2){for(int kG=0;kG<j0;kG++){for(int EE=kG+j0;EE<Ob;EE+=j0){int sQg=QNhB[EE],xQrz=EE-j0;while(xQrz>=kG){int **SZgD=&QNhB;if((*SZgD)[xQrz]>sQg){QNhB[xQrz+j0]=(*SZgD)[xQrz];xQrz-=j0;}else break;}QNhB[xQrz+j0]=sQg;}}}
 }

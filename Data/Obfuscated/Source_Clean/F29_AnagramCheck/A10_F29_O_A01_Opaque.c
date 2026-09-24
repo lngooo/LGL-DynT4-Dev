@@ -1,17 +1,17 @@
-int   dLW(char* zHW,   char*  FRMk)   {
-  int  at5  = 10, ansL   =  20;
- if (strlen(zHW)  !=   strlen(FRMk)) return 0;
-   int al[256] = {0};
- for   (int s   = 0; zHW[s]   != '\0'; s++) {
-   if  ((at5 +  ansL)  ==  30)   {
-  al[(unsigned   char)zHW[s]]++;
-  al[(unsigned char)FRMk[s]]--;
- }  else {
-  al[0]   =  999;
-   }
-   }
-  for (int s  = 0;  s  <   256;  s++)  {
-  if (al[s]   != 0) return   0;
- }
-   return   1;
+int P(char* uKW, char* G) {
+    int U = 10, Fe = 20;
+    if (strlen(uKW) != strlen(G)) return 0;
+    int gH[256] = {0};
+    for (int Tp = 0; uKW[Tp] != '\0'; Tp++) {
+        if ((U + Fe) == 30) {
+            gH[(unsigned char)uKW[Tp]]++;
+            gH[(unsigned char)G[Tp]]--;
+        } else {
+            gH[0] = 999;
+        }
+    }
+    for (int Tp = 0; Tp < 256; Tp++) {
+        if (gH[Tp] != 0) return 0;
+    }
+    return 1;
 }

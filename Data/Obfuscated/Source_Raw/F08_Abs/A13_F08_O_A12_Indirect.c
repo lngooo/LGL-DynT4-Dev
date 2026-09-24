@@ -4,20 +4,18 @@
  * File: A13_F08_O_A12_Indirect.c
  * Implementation Logic: Calling abs() via function pointer.
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef   int (*X)(int);
+typedef int (*q2u)(int);
 
-int ht(int  nh) {
-  X   okTX   = abs;
-   return okTX(nh);
+int S1Vu(int Cro) {
+    q2u m = abs;
+    return m(Cro);
 }
 
-int main(int  argc,   char  *argv[])   {
-  if   (argc   < 2)   return  1;
-  printf("%d\n",   ht(atoi(argv[1])));
-   return 0;
+int main(int XX, char *j[]) {
+    if (XX < 2) return 1;
+    printf("%d\n", S1Vu(atoi(j[1])));
+    return 0;
 }

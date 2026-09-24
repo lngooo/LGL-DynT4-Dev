@@ -1,4 +1,4 @@
-define dso_local void @etx(i32* %0, i32 %1, i32 %2) {
+define dso_local void @bSE(i32* %0, i32 %1, i32 %2) {
   %4 = alloca i32*
   %5 = alloca i32
   %6 = alloca i32
@@ -25,12 +25,12 @@ define dso_local void @etx(i32* %0, i32 %1, i32 %2) {
   %23 = load i32*, i32** %4
   %24 = load i32, i32* %5
   %25 = load i32, i32* %7
-  call void @etx(i32* %23, i32 %24, i32 %25)
+  call void @bSE(i32* %23, i32 %24, i32 %25)
   %26 = load i32*, i32** %4
   %27 = load i32, i32* %7
   %28 = add nsw i32 %27, 1
   %29 = load i32, i32* %6
-  call void @etx(i32* %26, i32 %28, i32 %29)
+  call void @bSE(i32* %26, i32 %28, i32 %29)
   %31 = load i32, i32* %7
   %32 = add nsw i32 %31, 1
   store i32 %32, i32* %8

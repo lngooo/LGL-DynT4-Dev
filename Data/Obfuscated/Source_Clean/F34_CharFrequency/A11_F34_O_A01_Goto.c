@@ -1,12 +1,12 @@
-int FVKy7(char*  dE,  char   zO)  {
-  int v   =  0,   Xuj   =  0;
-PL:
- if (dE[Xuj] == '\0') goto  d;
-  if   (dE[Xuj]   != zO)  goto   yhXo;
-  v++;
-yhXo:
-  Xuj++;
-  goto  PL;
-d:
-  return  v;
+int z(char* Ig7j, char VYFQ) {
+    int le = 0, k = 0;
+F:
+    if (Ig7j[k] == '\0') goto gO;
+    if (Ig7j[k] != VYFQ) goto qH;
+    le++;
+qH:
+    k++;
+    goto F;
+gO:
+    return le;
 }

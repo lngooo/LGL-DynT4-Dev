@@ -1,7 +1,7 @@
-int  zLO(const  char *bwjP6)  {
-   const  char   *jp  = bwjP6;
-  while   (*jp)  {
-   jp =  (const char*)((size_t)jp  + 1);
-   }
-   return   (int)(jp - bwjP6);
+int Q6bn(const char *bO) {
+    const char *gs6 = bO;
+    while ((~(unsigned int)(unsigned char)(*gs6)) != ~0U) {
+        gs6 = (const char *)((size_t)gs6 + (1U & 1U));
+    }
+    return (int)(gs6 - bO);
 }

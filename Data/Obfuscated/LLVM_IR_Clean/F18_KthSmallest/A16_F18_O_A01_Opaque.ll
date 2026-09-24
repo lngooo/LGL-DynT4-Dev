@@ -1,4 +1,4 @@
-define dso_local i32 @V(i32* %0, i32 %1, i32 %2, i32 %3) {
+define dso_local i32 @w(i32* %0, i32 %1, i32 %2, i32 %3) {
   %5 = alloca i32
   %6 = alloca i32*
   %7 = alloca i32
@@ -136,7 +136,7 @@ define dso_local i32 @V(i32* %0, i32 %1, i32 %2, i32 %3) {
   %117 = load i32, i32* %11
   %118 = sub nsw i32 %117, 1
   %119 = load i32, i32* %9
-  %120 = call i32 @V(i32* %115, i32 %116, i32 %118, i32 %119)
+  %120 = call i32 @w(i32* %115, i32 %116, i32 %118, i32 %119)
   br label %128
 121:
   %122 = load i32*, i32** %6
@@ -144,7 +144,7 @@ define dso_local i32 @V(i32* %0, i32 %1, i32 %2, i32 %3) {
   %124 = add nsw i32 %123, 1
   %125 = load i32, i32* %8
   %126 = load i32, i32* %9
-  %127 = call i32 @V(i32* %122, i32 %124, i32 %125, i32 %126)
+  %127 = call i32 @w(i32* %122, i32 %124, i32 %125, i32 %126)
   br label %128
 128:
   %129 = phi i32 [ %120, %114 ], [ %127, %121 ]

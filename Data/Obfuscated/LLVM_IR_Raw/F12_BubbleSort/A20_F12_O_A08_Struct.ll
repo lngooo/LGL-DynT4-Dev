@@ -1,40 +1,40 @@
-%struct.Kd = type { i32, i32, i32 }
+%struct.U = type { i32, i32, i32 }
 @.str = constant [4 x i8] c"%d \00"
 @.str.1 = constant [2 x i8] c"\0A\00"
-define dso_local void @W(i32* %0, i32 %1) {
+define dso_local void @cUZ(i32* %0, i32 %1) {
   %3 = alloca i32*
   %4 = alloca i32
-  %5 = alloca %struct.Kd
+  %5 = alloca %struct.U
   %6 = alloca i32
   %7 = alloca i32
   %8 = alloca i32
   %9 = alloca i32
   store i32* %0, i32** %3
   store i32 %1, i32* %4
-  %11 = getelementptr inbounds %struct.Kd, %struct.Kd* %5, i32 0, i32 0
+  %11 = getelementptr inbounds %struct.U, %struct.U* %5, i32 0, i32 0
   store i32 0, i32* %11
-  %12 = getelementptr inbounds %struct.Kd, %struct.Kd* %5, i32 0, i32 1
+  %12 = getelementptr inbounds %struct.U, %struct.U* %5, i32 0, i32 1
   %13 = load i32, i32* %4
   %14 = sub nsw i32 %13, 1
   store i32 %14, i32* %12
-  %15 = getelementptr inbounds %struct.Kd, %struct.Kd* %5, i32 0, i32 2
+  %15 = getelementptr inbounds %struct.U, %struct.U* %5, i32 0, i32 2
   store i32 1, i32* %15
   br label %16
 16:
-  %17 = getelementptr inbounds %struct.Kd, %struct.Kd* %5, i32 0, i32 2
+  %17 = getelementptr inbounds %struct.U, %struct.U* %5, i32 0, i32 2
   %18 = load i32, i32* %17
   %19 = icmp ne i32 %18, 0
   br i1 %19, label %20, label %141
 20:
-  %21 = getelementptr inbounds %struct.Kd, %struct.Kd* %5, i32 0, i32 2
+  %21 = getelementptr inbounds %struct.U, %struct.U* %5, i32 0, i32 2
   store i32 0, i32* %21
-  %23 = getelementptr inbounds %struct.Kd, %struct.Kd* %5, i32 0, i32 0
+  %23 = getelementptr inbounds %struct.U, %struct.U* %5, i32 0, i32 0
   %24 = load i32, i32* %23
   store i32 %24, i32* %6
   br label %25
 25:
   %26 = load i32, i32* %6
-  %27 = getelementptr inbounds %struct.Kd, %struct.Kd* %5, i32 0, i32 1
+  %27 = getelementptr inbounds %struct.U, %struct.U* %5, i32 0, i32 1
   %28 = load i32, i32* %27
   %29 = icmp slt i32 %26, %28
   br i1 %29, label %32, label %30
@@ -79,7 +79,7 @@ define dso_local void @W(i32* %0, i32 %1) {
   %66 = sext i32 %65 to i64
   %67 = getelementptr inbounds i32, i32* %63, i64 %66
   store i32 %62, i32* %67
-  %68 = getelementptr inbounds %struct.Kd, %struct.Kd* %5, i32 0, i32 2
+  %68 = getelementptr inbounds %struct.U, %struct.U* %5, i32 0, i32 2
   store i32 1, i32* %68
   br label %70
 70:
@@ -90,27 +90,27 @@ define dso_local void @W(i32* %0, i32 %1) {
   store i32 %73, i32* %6
   br label %25
 74:
-  %75 = getelementptr inbounds %struct.Kd, %struct.Kd* %5, i32 0, i32 2
+  %75 = getelementptr inbounds %struct.U, %struct.U* %5, i32 0, i32 2
   %76 = load i32, i32* %75
   %77 = icmp ne i32 %76, 0
   br i1 %77, label %79, label %78
 78:
   br label %141
 79:
-  %80 = getelementptr inbounds %struct.Kd, %struct.Kd* %5, i32 0, i32 2
+  %80 = getelementptr inbounds %struct.U, %struct.U* %5, i32 0, i32 2
   store i32 0, i32* %80
-  %81 = getelementptr inbounds %struct.Kd, %struct.Kd* %5, i32 0, i32 1
+  %81 = getelementptr inbounds %struct.U, %struct.U* %5, i32 0, i32 1
   %82 = load i32, i32* %81
   %83 = add nsw i32 %82, -1
   store i32 %83, i32* %81
-  %85 = getelementptr inbounds %struct.Kd, %struct.Kd* %5, i32 0, i32 1
+  %85 = getelementptr inbounds %struct.U, %struct.U* %5, i32 0, i32 1
   %86 = load i32, i32* %85
   %87 = sub nsw i32 %86, 1
   store i32 %87, i32* %8
   br label %88
 88:
   %89 = load i32, i32* %8
-  %90 = getelementptr inbounds %struct.Kd, %struct.Kd* %5, i32 0, i32 0
+  %90 = getelementptr inbounds %struct.U, %struct.U* %5, i32 0, i32 0
   %91 = load i32, i32* %90
   %92 = icmp sge i32 %89, %91
   br i1 %92, label %95, label %93
@@ -155,7 +155,7 @@ define dso_local void @W(i32* %0, i32 %1) {
   %129 = sext i32 %128 to i64
   %130 = getelementptr inbounds i32, i32* %126, i64 %129
   store i32 %125, i32* %130
-  %131 = getelementptr inbounds %struct.Kd, %struct.Kd* %5, i32 0, i32 2
+  %131 = getelementptr inbounds %struct.U, %struct.U* %5, i32 0, i32 2
   store i32 1, i32* %131
   br label %133
 133:
@@ -166,7 +166,7 @@ define dso_local void @W(i32* %0, i32 %1) {
   store i32 %136, i32* %8
   br label %88
 137:
-  %138 = getelementptr inbounds %struct.Kd, %struct.Kd* %5, i32 0, i32 0
+  %138 = getelementptr inbounds %struct.U, %struct.U* %5, i32 0, i32 0
   %139 = load i32, i32* %138
   %140 = add nsw i32 %139, 1
   store i32 %140, i32* %138
@@ -231,7 +231,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
 45:
   %46 = load i32*, i32** %7
   %47 = load i32, i32* %6
-  call void @W(i32* %46, i32 %47)
+  call void @cUZ(i32* %46, i32 %47)
   store i32 0, i32* %9
   br label %49
 49:

@@ -5,22 +5,20 @@
  * Implementation Logic: Basic iterative approach using a for loop.
  * Input Format: <n>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int   b3(int   MJ)   {
-   int  E1 =  0;
-   for  (int mF =   1;  mF  <=  MJ; mF++) {
-  E1 += mF;
-  }
- return  E1;
+int b(int poi) {
+    int R = 0;
+    for (int L = 1; L <= poi; L++) {
+        R += L;
+    }
+    return R;
 }
 
-int  main(int   argc,  char *argv[])   {
-  if   (argc <  2) return   1;
-  int   MJ   =  atoi(argv[1]);
-   printf("%d\n", b3(MJ));
-   return 0;
+int main(int cbfn, char *GM[]) {
+    if (cbfn < 2) return 1;
+    int poi = atoi(GM[1]);
+    printf("%d\n", b(poi));
+    return 0;
 }

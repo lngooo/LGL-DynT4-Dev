@@ -4,28 +4,26 @@
 * File: A13_F32_O_A05_Bitwise.c
 * Implementation Logic: Instruction substitution with bitwise math derived from A05.
 */
-
-
 #include <stdio.h>
 #include <string.h>
 
-void  ah(char* PJG6)   {
- int   j4  =  strlen(PJG6);
-  if (j4  ==   0)   return;
- int HmHZ3 = (1   <<   0);
-   for   (int BUdB6   = 1;  BUdB6  <=   j4;   BUdB6++)   {
- if (!(PJG6[BUdB6] ^   PJG6[BUdB6-1])  && PJG6[BUdB6] !=   0)  {
-  HmHZ3   =  HmHZ3 +  1;
- }   else {
-  printf("%c%d",  PJG6[BUdB6-1], HmHZ3);
-  HmHZ3  = (2  >> 1);
- }
-   }
- printf("\n");
+void KYU(char* FJ) {
+    int dB = strlen(FJ);
+    if (dB == 0) return;
+    int NQ = (1 << 0);
+    for (int m0Hs = 1; m0Hs <= dB; m0Hs++) {
+        if (!(FJ[m0Hs] ^ FJ[m0Hs-1]) && FJ[m0Hs] != 0) {
+            NQ = NQ + 1;
+        } else {
+            printf("%c%d", FJ[m0Hs-1], NQ);
+            NQ = (2 >> 1);
+        }
+    }
+    printf("\n");
 }
 
-int main(int argc,  char* argv[]) {
-   if   (argc <   2)   return   0;
-  ah(argv[1]);
- return 0;
+int main(int izL, char* Lsrp[]) {
+    if (izL < 2) return 0;
+    KYU(Lsrp[1]);
+    return 0;
 }

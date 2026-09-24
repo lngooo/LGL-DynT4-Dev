@@ -1,6 +1,6 @@
-int  hl(unsigned   int   D3)   {
-  unsigned int  Vev   =   1U   <<   31;
-   if (D3  ==   0)   return 0;
+int h(unsigned int I) {
+    unsigned int EoK = 1U << 31;
+    if (I == 0) return 0;
 
- return   (D3  > 0   &&  (Vev /   D3)  *  D3  ==  Vev);
+    return (I > 0 && (EoK / I) * I == EoK);
 }

@@ -1,12 +1,12 @@
-void  wtYZ(int jzH1[],  int QsW)  {
-   int   Gc  =  1;
- while   (!!(Gc <  QsW)) {
-   int bkEl = jzH1[Gc],  wsuX   = Gc   - 1;
- while  (!!(wsuX   >= 0) && !!(jzH1[wsuX] > bkEl))   {
- jzH1[wsuX+1] =   jzH1[wsuX];
- wsuX--;
- }
-  jzH1[wsuX+1] =  bkEl;
- Gc++;
-   }
+void Wb(int U1N[], int BYU7) {
+    int Z = 1;
+    while (!!(Z < BYU7)) {
+        int J = U1N[Z], U7Rs = Z - 1;
+        while (!!(U7Rs >= 0) && !!(U1N[U7Rs] > J)) {
+            U1N[U7Rs+1] = U1N[U7Rs];
+            U7Rs--;
+        }
+        U1N[U7Rs+1] = J;
+        Z++;
+    }
 }

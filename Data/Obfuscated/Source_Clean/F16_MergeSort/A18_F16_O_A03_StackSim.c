@@ -1,12 +1,12 @@
-void Sm(int   m[],   int   eNhl, int  q) {
-  if   (eNhl  >=  q) return;
-   int b   =  eNhl +   (q  - eNhl)   /   2;
-  Sm(m, eNhl, b);
-  Sm(m,   b   +   1,   q);
- int t7[256],  Rku7   =  eNhl, iNdq =   b   +   1, ItKE =  eNhl;
-  while  (Rku7  <=   b  ||  iNdq <= q) {
- if   (Rku7 <=  b   &&  (iNdq   >  q  || m[Rku7] <=   m[iNdq]))   t7[ItKE++]   = m[Rku7++];
-  else t7[ItKE++] =   m[iNdq++];
-  }
-   for (int Xrr   = eNhl; Xrr   <=  q;  Xrr++) m[Xrr]   =   t7[Xrr];
+void A18R(int YEZ[], int Nn, int SVf) {
+    if (Nn >= SVf) return;
+    int ilmk = Nn + (SVf - Nn) / 2;
+    A18R(YEZ, Nn, ilmk);
+    A18R(YEZ, ilmk + 1, SVf);
+    int gYA8[256], tpnJ = Nn, b = ilmk + 1, qwR = Nn;
+    while (tpnJ <= ilmk || b <= SVf) {
+        if (tpnJ <= ilmk && (b > SVf || YEZ[tpnJ] <= YEZ[b])) gYA8[qwR++] = YEZ[tpnJ++];
+        else gYA8[qwR++] = YEZ[b++];
+    }
+    for (int l0 = Nn; l0 <= SVf; l0++) YEZ[l0] = gYA8[l0];
 }

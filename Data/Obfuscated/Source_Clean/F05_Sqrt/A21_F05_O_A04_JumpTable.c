@@ -1,14 +1,14 @@
-int  EHZ(int MviA)  {
-  if (MviA <   0)  return -1;
- long   gKSg7  = 0, M  =  MviA,   VgS5  =   0;
-  void  *cht[]  =  {&&eJuD,   &&w3};
-eJuD:
-   if (gKSg7 <=   M)   {
-  long  pbh   =  gKSg7 +   (M  - gKSg7)   /   2;
-   if  (pbh  * pbh  <=  MviA)   { VgS5   =  pbh;   gKSg7  =   pbh + 1;   }
- else   M   =   pbh  -   1;
-   goto *cht[0];
-   }
-w3:
-   return (int)VgS5;
+int BGuf(int Qgli) {
+    if (Qgli < 0) return -1;
+    long u7pa = 0, ypC = Qgli, vtL = 0;
+    void *q[] = {&&Spd, &&exit};
+Spd:
+    if (u7pa <= ypC) {
+        long D = u7pa + (ypC - u7pa) / 2;
+        if (D * D <= Qgli) { vtL = D; u7pa = D + 1; }
+        else ypC = D - 1;
+        goto *q[0];
+    }
+exit:
+    return (int)vtL;
 }

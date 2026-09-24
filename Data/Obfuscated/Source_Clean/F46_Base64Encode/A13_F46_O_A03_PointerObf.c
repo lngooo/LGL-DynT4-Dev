@@ -1,14 +1,14 @@
-void nTe(unsigned  char  *Obdu,  int   lQQd,   char *kKf) {
-   const char  *oC  = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
-  unsigned   char   *ZY9   =  Obdu;
- char   *rp3   = kKf;
-  while (ZY9   <   Obdu   +   lQQd)  {
- int  abW   =   (int)(Obdu +  lQQd  - ZY9);
-   *rp3++   =   oC[*ZY9   >>   2];
-   *rp3++ =  oC[((*ZY9 & 3) <<  4)   | (abW  > 1   ?   *(ZY9+1)   >>  4   :   0)];
-   *rp3++   =   (abW   >  1)  ?  oC[((*(ZY9+1)   &  15) <<   2)  |  (abW  > 2  ? *(ZY9+2) >>  6  :   0)]  : '=';
-  *rp3++ = (abW  > 2) ?  oC[*(ZY9+2)   &   63]  :  '=';
-   ZY9  +=   3;
-  }
- *rp3 = 0;
+void Tvwq(unsigned char *B2, int L, char *j2l) {
+    const char *n3zV = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+    unsigned char *DU = B2;
+    char *ld = j2l;
+    while (DU < B2 + L) {
+        int l8 = (int)(B2 + L - DU);
+        *ld++ = n3zV[*DU >> 2];
+        *ld++ = n3zV[((*DU & 3) << 4) | (l8 > 1 ? *(DU+1) >> 4 : 0)];
+        *ld++ = (l8 > 1) ? n3zV[((*(DU+1) & 15) << 2) | (l8 > 2 ? *(DU+2) >> 6 : 0)] : '=';
+        *ld++ = (l8 > 2) ? n3zV[*(DU+2) & 63] : '=';
+        DU += 3;
+    }
+    *ld = 0;
 }

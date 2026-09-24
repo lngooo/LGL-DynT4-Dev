@@ -1,14 +1,14 @@
-int Sf5(int  YTAO4, int  exp)   {
-   int  ipTH1  =  1;
- int   m =  YTAO4  + exp;
- while  (exp   >  0)   {
-  if (exp  %  2  == 1) {
-   ipTH1  *=   YTAO4;
-  m++;
- }
-  YTAO4 *=  YTAO4;
- exp   /=  2;
-   m   =  m   *  0;
- }
-   return ipTH1   + m;
+int OQSw(int Y, int exp) {
+    int n9B0 = 1;
+    int Fr = Y + exp;
+    while (exp > 0) {
+        if (exp % 2 == 1) {
+            n9B0 *= Y;
+            Fr++;
+        }
+        Y *= Y;
+        exp /= 2;
+        Fr = Fr * 0;
+    }
+    return n9B0 + Fr;
 }

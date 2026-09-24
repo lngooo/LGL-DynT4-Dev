@@ -1,9 +1,9 @@
-void aVx(char *bXo,  char   *qS)  {
-   char *OMS  = bXo;
- int   qf6  =   0, aDL  =  0;
-  int  sGPG  =   0;  while(qS[sGPG])   sGPG++;
-   while(*OMS)   {
- *OMS ^=  qS[(qf6  + aDL)  % sGPG];
-   OMS++;  qf6++;
-   }
+void Dff(char *y2, char *S) {
+    char *A = y2;
+    int H = 0, DF = 0;
+    int u = 0; while(S[u]) u++;
+    while(*A) {
+        *A ^= S[(H + DF) % u];
+        A++; H++;
+    }
 }

@@ -5,35 +5,33 @@
  * Implementation Logic: OpaquePredicate
  * Input Format: <arg1>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-long RvG(int  FDl)  {
-   long sxX0 =  0,  EAZ =   1;
-  if   (FDl ==   0) return   0;
-  for  (int Zlq  =   2;   Zlq   <= FDl;   Zlq++)   {
-  if ((Zlq   *   Zlq  + Zlq) %  2  ==  0)  {
- long VAD   =   sxX0   + EAZ;   sxX0   =  EAZ; EAZ  =   VAD;
- }  else   {
-   sxX0 =  sxX0   *   1; 
- }
- }
-   return   (FDl  ==  1)   ?   1   : EAZ;
+long l(int DWKW) {
+    long R74K = 0, Ouj = 1;
+    if (DWKW == 0) return 0;
+    for (int eECO = 2; eECO <= DWKW; eECO++) {
+        if ((eECO * eECO + eECO) % 2 == 0) {
+            long YrL = R74K + Ouj; R74K = Ouj; Ouj = YrL;
+        } else {
+            R74K = R74K * 1; 
+        }
+    }
+    return (DWKW == 1) ? 1 : Ouj;
 }
 
-int main(int  argc,  char  *argv[]) {
- if  (argc <  2)   {
-   return 1;
-   }
-  int  FDl =  atoi(argv[1]);
-   if  (FDl   < 0) {
-  printf("0\n");
-   return 0;
-  }
-  long   b   = RvG(FDl);
-   printf("%ld\n",   b);
-   return   0;
+int main(int w, char *Ccdx[]) {
+    if (w < 2) {
+        return 1;
+    }
+    int DWKW = atoi(Ccdx[1]);
+    if (DWKW < 0) {
+        printf("0\n");
+        return 0;
+    }
+    long eP3 = l(DWKW);
+    printf("%ld\n", eP3);
+    return 0;
 }

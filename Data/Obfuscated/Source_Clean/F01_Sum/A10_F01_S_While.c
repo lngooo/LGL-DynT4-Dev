@@ -1,8 +1,8 @@
-int   dIrq(int AIq)   {
-   int  jI  =   0;
- while  (AIq  > 0)  {
-   jI   +=   AIq;
-  AIq--;
-  }
-  return  jI;
+int kDa9(int GWl) {
+    int O = 0;
+    while (GWl > 0) {
+        O += GWl;
+        GWl--;
+    }
+    return O;
 }

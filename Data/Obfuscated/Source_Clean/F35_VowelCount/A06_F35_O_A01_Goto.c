@@ -1,25 +1,25 @@
-int  vAIq3(const char*  iTmm) {
- int  uO  =   0;
- int  DqW =   0;
-a7:
-   if   (iTmm[DqW]   == '\0')  goto  danp3;
- char  ap   = iTmm[DqW];
-  if (ap == 'a') goto   c;
-   if   (ap  ==  'e') goto  c;
- if  (ap ==  'i') goto c;
- if (ap ==   'o')  goto c;
-  if  (ap   ==   'u') goto c;
- if  (ap ==   'A')  goto   c;
-  if   (ap   == 'E') goto  c;
-   if  (ap   ==  'I')   goto   c;
-  if (ap  == 'O')  goto c;
-   if  (ap  ==   'U')  goto  c;
-  goto PNF;
-c:
-   uO++;
-PNF:
- DqW++;
-  goto   a7;
-danp3:
- return  uO;
+int rt3k(const char* FT) {
+    int GvV = 0;
+    int IOv = 0;
+xY3u:
+    if (FT[IOv] == '\0') goto lGi;
+    char N6h = FT[IOv];
+    if (N6h == 'a') goto Z;
+    if (N6h == 'e') goto Z;
+    if (N6h == 'i') goto Z;
+    if (N6h == 'o') goto Z;
+    if (N6h == 'u') goto Z;
+    if (N6h == 'A') goto Z;
+    if (N6h == 'E') goto Z;
+    if (N6h == 'I') goto Z;
+    if (N6h == 'O') goto Z;
+    if (N6h == 'U') goto Z;
+    goto vbi7;
+Z:
+    GvV++;
+vbi7:
+    IOv++;
+    goto xY3u;
+lGi:
+    return GvV;
 }

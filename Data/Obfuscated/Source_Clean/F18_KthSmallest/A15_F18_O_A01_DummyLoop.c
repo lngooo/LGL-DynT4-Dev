@@ -1,10 +1,10 @@
-int   h(int   Vmy[],  int   WqMZ, int   Gav, int fbQE) {
- if   (WqMZ  > Gav)  return   -1;
-   int   VFTh   =  Vmy[Gav], A  = WqMZ;
-  for   (int  u1  =   WqMZ;   u1   <  Gav;   u1++)  {
- for(int wsa2=0; wsa2<1;   wsa2++) if  (Vmy[u1] <=  VFTh)  { int  aLj=Vmy[A];  Vmy[A]=Vmy[u1]; Vmy[u1]=aLj;   A++;  }
- }
-  int aLj=Vmy[A]; Vmy[A]=Vmy[Gav];   Vmy[Gav]=aLj;
-   if  (A ==   fbQE  -   1)  return Vmy[A];
-   return   (A  >   fbQE   -   1)   ?  h(Vmy,  WqMZ,  A   -  1,   fbQE)  : h(Vmy,  A   +   1,   Gav, fbQE);
+int p8x(int yNdw[], int Zga, int SzU1, int bM) {
+    if (Zga > SzU1) return -1;
+    int H = yNdw[SzU1], SW0 = Zga;
+    for (int xC = Zga; xC < SzU1; xC++) {
+        for(int GAQm=0; GAQm<1; GAQm++) if (yNdw[xC] <= H) { int O=yNdw[SW0]; yNdw[SW0]=yNdw[xC]; yNdw[xC]=O; SW0++; }
+    }
+    int O=yNdw[SW0]; yNdw[SW0]=yNdw[SzU1]; yNdw[SzU1]=O;
+    if (SW0 == bM - 1) return yNdw[SW0];
+    return (SW0 > bM - 1) ? p8x(yNdw, Zga, SW0 - 1, bM) : p8x(yNdw, SW0 + 1, SzU1, bM);
 }

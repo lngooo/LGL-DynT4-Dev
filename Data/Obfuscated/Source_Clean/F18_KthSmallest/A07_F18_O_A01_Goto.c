@@ -1,15 +1,15 @@
-int  SV6(int  nbCJ[],  int   DMSK, int  BxG,   int   c) {
- int xhwX   =   DMSK, Hx  = BxG;
-J:
-  if  (xhwX > Hx)  return  -1;
-  int lyd9 = nbCJ[Hx], Tf = xhwX,   JFZ  =  xhwX;
-PVH5:
-   if   (JFZ   >=  Hx)   goto hzuI;
-  if (nbCJ[JFZ] >   lyd9)  { JFZ++;  goto  PVH5;  }
- { int   ZZw7   =   nbCJ[Tf]; nbCJ[Tf]  =  nbCJ[JFZ];   nbCJ[JFZ] =  ZZw7;   Tf++;   JFZ++; goto   PVH5; }
-hzuI:
- { int  ZZw7 = nbCJ[Tf];   nbCJ[Tf]  =  nbCJ[Hx];   nbCJ[Hx] = ZZw7;   }
-   if  (Tf  ==   c   -  1)   return   nbCJ[Tf];
-   if  (Tf   >  c -   1)  { Hx  = Tf -  1;  goto  J; }
-  xhwX = Tf  + 1; goto  J;
+int a(int mRQ[], int o, int Z, int Uk) {
+    int A = o, u = Z;
+JOm:
+    if (A > u) return -1;
+    int Iz = mRQ[u], hong = A, ula = A;
+Puay:
+    if (ula >= u) goto Do;
+    if (mRQ[ula] > Iz) { ula++; goto Puay; }
+    { int Q = mRQ[hong]; mRQ[hong] = mRQ[ula]; mRQ[ula] = Q; hong++; ula++; goto Puay; }
+Do:
+    { int Q = mRQ[hong]; mRQ[hong] = mRQ[u]; mRQ[u] = Q; }
+    if (hong == Uk - 1) return mRQ[hong];
+    if (hong > Uk - 1) { u = hong - 1; goto JOm; }
+    A = hong + 1; goto JOm;
 }

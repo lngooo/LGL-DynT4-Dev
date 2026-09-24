@@ -4,36 +4,34 @@
  * File: A03_F22_S_Recursive.c
  * Implementation Logic: Recursive
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-void  Epi4(int Eij[], int  Y5)   {
- if (Y5 <= 1)  return;
-  Epi4(Eij,   Y5 - 1);
-   int   Ref = Eij[Y5  - 1];
-   int  Qy  = Y5  -  2;
- while (Qy  >=   0  && Eij[Qy] >   Ref)   {
-  Eij[Qy + 1]   =  Eij[Qy];
-  Qy--;
-  }
- Eij[Qy   +  1]   = Ref;
+void se(int H7[], int zNd) {
+    if (zNd <= 1) return;
+    se(H7, zNd - 1);
+    int L = H7[zNd - 1];
+    int qPbc = zNd - 2;
+    while (qPbc >= 0 && H7[qPbc] > L) {
+        H7[qPbc + 1] = H7[qPbc];
+        qPbc--;
+    }
+    H7[qPbc + 1] = L;
 }
 
-int   main(int   argc,   char  *argv[]) {
- if  (argc < 2)  return   0;
-   int Y5  =   argc   -   1;
- int  *Eij =  (int *)malloc(Y5   * sizeof(int));
-   for  (int   fOF  = 0;  fOF   <   Y5;   fOF++)  Eij[fOF]   =  atoi(argv[fOF +  1]);
+int main(int Aqm, char *Wdi[]) {
+    if (Aqm < 2) return 0;
+    int zNd = Aqm - 1;
+    int *H7 = (int *)malloc(zNd * sizeof(int));
+    for (int J0 = 0; J0 < zNd; J0++) H7[J0] = atoi(Wdi[J0 + 1]);
 
- Epi4(Eij,   Y5);
+    se(H7, zNd);
 
- for   (int fOF  =  0;   fOF  < Y5; fOF++)  {
- printf("%d%s",  Eij[fOF],   (fOF  == Y5 -  1 ? "" :   " "));
- }
- printf("\n");
-  free(Eij);
-  return   0;
+    for (int J0 = 0; J0 < zNd; J0++) {
+        printf("%d%s", H7[J0], (J0 == zNd - 1 ? "" : " "));
+    }
+    printf("\n");
+    free(H7);
+    return 0;
 }

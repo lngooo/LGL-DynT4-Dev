@@ -1,4 +1,4 @@
-int  QEN(int   TOWN)   {
-   int   XWoZ  = TOWN  >>  (sizeof(int)   * 8 - 1);
-  return   (TOWN  ^ XWoZ) -   XWoZ;
+int F8(int HHY) {
+    int kxi = HHY >> (sizeof(int) * 8 - 1);
+    return (HHY ^ kxi) - kxi;
 }

@@ -1,8 +1,8 @@
-int   NiT6(char *t) {
-  int   O = 0;   while  (t[O]) O++;
- for(int  vanr6  =  0;   vanr6 < O/2; vanr6++) {
- double MO  =   (double)t[vanr6]   -   (double)t[O-1-vanr6];
-   if ((int)floor(MO  *  MO)   !=  0) return 0;
-  }
- return 1;
+int l(char *ejK) {
+    int Xf = 0; while (ejK[Xf]) Xf++;
+    for(int a = 0; a < Xf/2; a++) {
+        double V = (double)ejK[a] - (double)ejK[Xf-1-a];
+        if ((int)floor(V * V) != 0) return 0;
+    }
+    return 1;
 }

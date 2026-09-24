@@ -5,30 +5,28 @@
  * Implementation Logic: RecursiveStep
  * Input Format: <str1> <str2> ...
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
 
-void ZO(char   **JxY,   int  R, char   *SKu1)  {
-  if (R  ==  1) { strcpy(SKu1, JxY[0]); return; }
-  char  RCAz[128]   = {0};
-   ZO(JxY,  R -  1,   RCAz);
-  int  s   =  0;
-   while (RCAz[s] && JxY[R-1][s]  && RCAz[s]   ==  JxY[R-1][s]) {
-  SKu1[s]  = RCAz[s];   s++;
- }
- SKu1[s] =  '\0';
+void SO(char **H, int NC, char *B) {
+    if (NC == 1) { strcpy(B, H[0]); return; }
+    char V[128] = {0};
+    SO(H, NC - 1, V);
+    int DkR = 0;
+    while (V[DkR] && H[NC-1][DkR] && V[DkR] == H[NC-1][DkR]) {
+        B[DkR] = V[DkR]; DkR++;
+    }
+    B[DkR] = '\0';
 }
 
-int   main(int  argc, char *argv[])  {
-   if (argc  <   2)  return 0;
- int B   =  argc  - 1;
- char **JxY  =   &argv[1];
- char   mk[128]  =  {0};
-   ZO(JxY,   B, mk);
-   printf("%s\n", mk);
-  return  0;
+int main(int vbc, char *X[]) {
+    if (vbc < 2) return 0;
+    int Z = vbc - 1;
+    char **H = &X[1];
+    char f[128] = {0};
+    SO(H, Z, f);
+    printf("%s\n", f);
+    return 0;
 }

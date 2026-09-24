@@ -1,6 +1,6 @@
 @.str = constant [5 x i8] c"%c%d\00"
 @.str.1 = constant [4 x i8] c"%s\0A\00"
-define dso_local void @Xcvp(i8* %0, i8* %1) {
+define dso_local void @ut(i8* %0, i8* %1) {
   %3 = alloca i8*
   %4 = alloca i8*
   %5 = alloca i32
@@ -63,7 +63,7 @@ define dso_local void @Xcvp(i8* %0, i8* %1) {
   %53 = sext i32 %52 to i64
   %54 = getelementptr inbounds i8, i8* %51, i64 %53
   %55 = load i8*, i8** %4
-  call void @Xcvp(i8* %54, i8* %55)
+  call void @ut(i8* %54, i8* %55)
   br label %58
 58:
   ret void
@@ -93,7 +93,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   call void @llvm.memset.p0i8.i64(i8* align 16 %17, i8 0, i64 256, i1 false)
   %18 = load i8*, i8** %6
   %19 = getelementptr inbounds [256 x i8], [256 x i8]* %7, i64 0, i64 0
-  call void @Xcvp(i8* %18, i8* %19)
+  call void @ut(i8* %18, i8* %19)
   %20 = getelementptr inbounds [256 x i8], [256 x i8]* %7, i64 0, i64 0
   %21 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.1, i64 0, i64 0), i8* %20)
   store i32 0, i32* %3

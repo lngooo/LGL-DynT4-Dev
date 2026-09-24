@@ -5,34 +5,32 @@
  * Implementation Logic: Bitwise
  * Input Format: <str1> <str2> ...
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
 
-void TXM(char   **FGcj3,   int  yaO, char   *U)  {
-   int MjH   = 0;
-  while   (1)  {
-   char RZW =   *(FGcj3[0]  +   MjH);
-   if  (!(RZW ^  0))   break;
- int AdC   =  1, eZxx  =   1;
-  while  (AdC  < yaO)   {
-  if  (*(FGcj3[AdC]   + MjH)  ^  RZW)  { eZxx   =  0;  break;  }
-   AdC++;
-   }
- if  (eZxx)  { *(U  + MjH)   =  RZW; MjH++;   }   else   break;
- }
-   *(U +   MjH) = '\0';
+void ngt9(char **fD3, int y, char *Oyk) {
+    int WxW = 0;
+    while (1) {
+        char clz = *(fD3[0] + WxW);
+        if (!(clz ^ 0)) break;
+        int UR = 1, vIR = 1;
+        while (UR < y) {
+            if (*(fD3[UR] + WxW) ^ clz) { vIR = 0; break; }
+            UR++;
+        }
+        if (vIR) { *(Oyk + WxW) = clz; WxW++; } else break;
+    }
+    *(Oyk + WxW) = '\0';
 }
 
-int  main(int   argc,   char   *argv[])  {
- if  (argc  < 2)   return   0;
-   int VZyd  =  argc  -   1;
-  char **FGcj3 =  &argv[1];
-   char   fbiN7[128]   =   {0};
-  TXM(FGcj3, VZyd,  fbiN7);
- printf("%s\n", fbiN7);
- return 0;
+int main(int sm, char *Q[]) {
+    if (sm < 2) return 0;
+    int E = sm - 1;
+    char **fD3 = &Q[1];
+    char tAYr[128] = {0};
+    ngt9(fD3, E, tAYr);
+    printf("%s\n", tAYr);
+    return 0;
 }

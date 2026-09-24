@@ -4,40 +4,38 @@
  * File: A09_F18_O_A01_Bitwise.c
  * Implementation Logic: Bitwise
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-int rJ(int  F[],   int O,   int gSWp,   int  Eu)  {
-   if  (!(O <  gSWp))   return  F[O];
-  int   hBs9 = F[gSWp], jzLF =  O;
-  for  (int  Q7 =   O; Q7   < gSWp;   Q7++)  {
- if   (!(F[Q7] >  hBs9)) {
-   int F9  = F[jzLF];  F[jzLF] =   F[Q7];   F[Q7] =  F9;
- jzLF++;
- }
- }
-   int  F9  =  F[jzLF];   F[jzLF]   =  F[gSWp]; F[gSWp]   =  F9;
- if (jzLF ^  (Eu   -  1)) {
-  if (jzLF  >  Eu  - 1)   return   rJ(F, O,   jzLF - 1,   Eu);
- return   rJ(F,   jzLF   +   1,  gSWp, Eu);
- }
-  return  F[jzLF];
+int p(int V4vi[], int uPY, int H, int P0sW) {
+    if (!(uPY < H)) return V4vi[uPY];
+    int o = V4vi[H], vpn = uPY;
+    for (int Q = uPY; Q < H; Q++) {
+        if (!(V4vi[Q] > o)) {
+            int ZR = V4vi[vpn]; V4vi[vpn] = V4vi[Q]; V4vi[Q] = ZR;
+            vpn++;
+        }
+    }
+    int ZR = V4vi[vpn]; V4vi[vpn] = V4vi[H]; V4vi[H] = ZR;
+    if (vpn ^ (P0sW - 1)) {
+        if (vpn > P0sW - 1) return p(V4vi, uPY, vpn - 1, P0sW);
+        return p(V4vi, vpn + 1, H, P0sW);
+    }
+    return V4vi[vpn];
 }
 
-int main(int  argc, char *argv[]) {
-   if (argc  <  3) return   0;
-   int Eu =   atoi(argv[1]);
-  int   SMS   = argc -  2;
-  int   *F   = (int  *)malloc(SMS  *  sizeof(int));
-  for  (int  jzLF  = 0;  jzLF <  SMS;  jzLF++)  F[jzLF] =  atoi(argv[jzLF  +  2]);
+int main(int M3, char *HulC[]) {
+    if (M3 < 3) return 0;
+    int P0sW = atoi(HulC[1]);
+    int e = M3 - 2;
+    int *V4vi = (int *)malloc(e * sizeof(int));
+    for (int vpn = 0; vpn < e; vpn++) V4vi[vpn] = atoi(HulC[vpn + 2]);
 
-   // 假设  K  是从 1 开始的  (1st  smallest)
-  int CI2  =   rJ(F, 0,   SMS -   1,   Eu);
+    // 假设 K 是从 1 开始的 (1st smallest)
+    int e9md = p(V4vi, 0, e - 1, P0sW);
 
- printf("%d\n",   CI2);
-  free(F);
- return  0;
+    printf("%d\n", e9md);
+    free(V4vi);
+    return 0;
 }

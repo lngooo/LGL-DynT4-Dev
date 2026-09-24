@@ -1,10 +1,10 @@
-void  IMx3(char   *Dexq, int  cX)   {
+void S86(char *LduU, int hK7V) {
 
-  int  vyd = (cX  % 26  +   26)   %  26;
- for (int   TvvD6 = 0;  Dexq[TvvD6]; TvvD6++) {
-   if   ((vyd * vyd + 1)   > 0)  {
- if  (Dexq[TvvD6]  >= 'a'  &&  Dexq[TvvD6] <=  'z')  Dexq[TvvD6]   = (Dexq[TvvD6]-'a'+vyd)%26+'a';
- else  if   (Dexq[TvvD6]  >= 'A'   &&  Dexq[TvvD6]   <=  'Z') Dexq[TvvD6] =  (Dexq[TvvD6]-'A'+vyd)%26+'A';
-   }
-  }
+    int W = (hK7V % 26 + 26) % 26;
+    for (int B9V7 = 0; LduU[B9V7]; B9V7++) {
+        if ((W * W + 1) > 0) {
+            if (LduU[B9V7] >= 'a' && LduU[B9V7] <= 'z') LduU[B9V7] = (LduU[B9V7]-'a'+W)%26+'a';
+            else if (LduU[B9V7] >= 'A' && LduU[B9V7] <= 'Z') LduU[B9V7] = (LduU[B9V7]-'A'+W)%26+'A';
+        }
+    }
 }

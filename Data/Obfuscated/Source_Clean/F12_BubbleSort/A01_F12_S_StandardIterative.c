@@ -1,11 +1,11 @@
-void   Zf(int sN[], int  ZT)  {
-  for  (int m  = 0;   m <  ZT  -   1; m++) {
-   for  (int  UrZc8 =   0;  UrZc8  < ZT  -   m  -   1; UrZc8++)   {
- if   (sN[UrZc8]  >   sN[UrZc8   +   1])   {
-   int u   =   sN[UrZc8];
-   sN[UrZc8] =  sN[UrZc8  +   1];
- sN[UrZc8 +  1] =  u;
-  }
-  }
-   }
+void Xg(int f[], int NaW2) {
+    for (int E = 0; E < NaW2 - 1; E++) {
+        for (int NuF = 0; NuF < NaW2 - E - 1; NuF++) {
+            if (f[NuF] > f[NuF + 1]) {
+                int FlW = f[NuF];
+                f[NuF] = f[NuF + 1];
+                f[NuF + 1] = FlW;
+            }
+        }
+    }
 }

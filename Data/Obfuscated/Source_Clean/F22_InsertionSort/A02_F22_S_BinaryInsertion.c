@@ -1,13 +1,13 @@
-void   NnYy6(int  TAf0[],  int   rn)  {
- for (int   Smx   = 1;   Smx < rn;   Smx++) {
-  int EH   =   TAf0[Smx];
-   int  oaQ  =   0, trM3 =   Smx - 1;
-   while   (oaQ  <=  trM3)   {
-  int  cFrf1 =  oaQ +  (trM3   -   oaQ) /   2;
-   if  (EH   < TAf0[cFrf1])  trM3 =  cFrf1 -   1;
-  else   oaQ  =  cFrf1  +   1;
- }
-   for  (int  HkHS  =   Smx   -   1;   HkHS >=   oaQ;   HkHS--)  TAf0[HkHS +  1]   =   TAf0[HkHS];
- TAf0[oaQ]   =   EH;
-   }
+void lRU(int m1nK[], int GwwN) {
+    for (int Ze = 1; Ze < GwwN; Ze++) {
+        int BOy3 = m1nK[Ze];
+        int K = 0, ghF = Ze - 1;
+        while (K <= ghF) {
+            int dM = K + (ghF - K) / 2;
+            if (BOy3 < m1nK[dM]) ghF = dM - 1;
+            else K = dM + 1;
+        }
+        for (int bo0 = Ze - 1; bo0 >= K; bo0--) m1nK[bo0 + 1] = m1nK[bo0];
+        m1nK[K] = BOy3;
+    }
 }

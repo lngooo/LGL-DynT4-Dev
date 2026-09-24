@@ -1,10 +1,10 @@
-void r(int tn[],   int  E) {
- int  *KCmX =  tn;
-  for(int  ou=0;   ou<E/2;   ou++)   {
- int  *y  = &KCmX[ou];
-   int  *rcJC6   =   &KCmX[E-1-ou];
- int CFkQ  = *y;
-   *y  =  *rcJC6;
-  *rcJC6 = CFkQ;
- }
+void cgVd(int kY[], int F) {
+    int *e = kY;
+    for(int UC=0; UC<F/2; UC++) {
+        int *AmV = &e[UC];
+        int *oXh = &e[F-1-UC];
+        int ogp = *AmV;
+        *AmV = *oXh;
+        *oXh = ogp;
+    }
 }

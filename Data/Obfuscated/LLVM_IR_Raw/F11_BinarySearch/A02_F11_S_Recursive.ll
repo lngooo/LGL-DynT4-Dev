@@ -1,5 +1,5 @@
 @.str = constant [4 x i8] c"%d\0A\00"
-define dso_local i32 @cEPn(i32* %0, i32 %1, i32 %2, i32 %3) {
+define dso_local i32 @SQd(i32* %0, i32 %1, i32 %2, i32 %3) {
   %5 = alloca i32
   %6 = alloca i32*
   %7 = alloca i32
@@ -54,7 +54,7 @@ define dso_local i32 @cEPn(i32* %0, i32 %1, i32 %2, i32 %3) {
   %44 = add nsw i32 %43, 1
   %45 = load i32, i32* %8
   %46 = load i32, i32* %9
-  %47 = call i32 @cEPn(i32* %42, i32 %44, i32 %45, i32 %46)
+  %47 = call i32 @SQd(i32* %42, i32 %44, i32 %45, i32 %46)
   store i32 %47, i32* %5
   store i32 1, i32* %11
   br label %55
@@ -64,7 +64,7 @@ define dso_local i32 @cEPn(i32* %0, i32 %1, i32 %2, i32 %3) {
   %51 = load i32, i32* %10
   %52 = sub nsw i32 %51, 1
   %53 = load i32, i32* %9
-  %54 = call i32 @cEPn(i32* %49, i32 %50, i32 %52, i32 %53)
+  %54 = call i32 @SQd(i32* %49, i32 %50, i32 %52, i32 %53)
   store i32 %54, i32* %5
   store i32 1, i32* %11
   br label %55
@@ -74,7 +74,7 @@ define dso_local i32 @cEPn(i32* %0, i32 %1, i32 %2, i32 %3) {
   %58 = load i32, i32* %5
   ret i32 %58
 }
-define dso_local i32 @vY(i32* %0, i32 %1, i32 %2) {
+define dso_local i32 @XU(i32* %0, i32 %1, i32 %2) {
   %4 = alloca i32*
   %5 = alloca i32
   %6 = alloca i32
@@ -85,7 +85,7 @@ define dso_local i32 @vY(i32* %0, i32 %1, i32 %2) {
   %8 = load i32, i32* %5
   %9 = sub nsw i32 %8, 1
   %10 = load i32, i32* %6
-  %11 = call i32 @cEPn(i32* %7, i32 0, i32 %9, i32 %10)
+  %11 = call i32 @SQd(i32* %7, i32 0, i32 %9, i32 %10)
   ret i32 %11
 }
 define dso_local i32 @main(i32 %0, i8** %1) {
@@ -151,7 +151,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   %51 = load i32*, i32** %8
   %52 = load i32, i32* %7
   %53 = load i32, i32* %6
-  %54 = call i32 @vY(i32* %51, i32 %52, i32 %53)
+  %54 = call i32 @XU(i32* %51, i32 %52, i32 %53)
   %55 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str, i64 0, i64 0), i32 %54)
   %56 = load i32*, i32** %8
   call void @free(i8* %57)

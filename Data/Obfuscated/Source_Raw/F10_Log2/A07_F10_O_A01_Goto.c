@@ -5,28 +5,26 @@
  * Implementation Logic: Goto
  * Input Format: <integer>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-int AowQ(int   I)   {
-  int oid   =   0;
-iH:
- I  >>=   1;
-  if   (I   ==   0)   goto j;
-   oid++;
-  goto   iH;
-j:
-  return  oid;
+int XIN(int M) {
+    int Q = 0;
+P:
+    M >>= 1;
+    if (M == 0) goto d;
+    Q++;
+    goto P;
+d:
+    return Q;
 }
 
-int  main(int   argc,  char  *argv[])  {
-  if  (argc  <   2)   return 0;
- int   I = atoi(argv[1]);
-   if  (I  <=  0)  return  0;  
-  int  G  = AowQ(I);
- printf("%d\n",   G);
-  return  0;
+int main(int A, char *yhJq[]) {
+    if (A < 2) return 0;
+    int M = atoi(yhJq[1]);
+    if (M <= 0) return 0; 
+    int SjnS = XIN(M);
+    printf("%d\n", SjnS);
+    return 0;
 }

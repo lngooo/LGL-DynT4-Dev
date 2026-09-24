@@ -1,12 +1,12 @@
-int LxwB(const   char*  db1) {
-  int  Xot  =  0;
-   while (*db1)  {
-   char ozb8 = *db1;
-   if  ((ozb8 >= 65  && ozb8  <= 117)) { 
-   if (ozb8=='a'||ozb8=='e'||ozb8=='i'||ozb8=='o'||ozb8=='u'||ozb8=='A'||ozb8=='E'||ozb8=='I'||ozb8=='O'||ozb8=='U')
-   Xot++;
-  }
- db1++;
-  }
-  return   Xot;
+int pm7N(const char* cs) {
+    int By = 0;
+    while (*cs) {
+        char nIa = *cs;
+        if ((nIa >= 65 && nIa <= 117)) { 
+            if (nIa=='a'||nIa=='e'||nIa=='i'||nIa=='o'||nIa=='u'||nIa=='A'||nIa=='E'||nIa=='I'||nIa=='O'||nIa=='U')
+                By++;
+        }
+        cs++;
+    }
+    return By;
 }

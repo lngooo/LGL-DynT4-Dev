@@ -1,3 +1,3 @@
-void   v9(int   *S,   int   x)   {
-  for(int uU=x/2;uU>0;uU/=2){for(int Poe=uU;Poe<x;Poe++){int IJ=S[Poe],ZMJ=Poe;while(ZMJ>=uU&&S[ZMJ-uU]>IJ){S[ZMJ]=S[ZMJ-uU];ZMJ-=uU;}S[ZMJ]=IJ;}}
+void k4c9(int *LAs, int zbh) {
+    for(int Zu=zbh/2;Zu>0;Zu/=2){for(int Ylwp=Zu;Ylwp<zbh;Ylwp++){int xjX=LAs[Ylwp],hau=Ylwp;while(hau>=Zu&&LAs[hau-Zu]>xjX){LAs[hau]=LAs[hau-Zu];hau-=Zu;}LAs[hau]=xjX;}}
 }

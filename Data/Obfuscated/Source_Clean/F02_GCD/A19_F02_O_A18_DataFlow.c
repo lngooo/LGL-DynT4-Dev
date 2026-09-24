@@ -1,11 +1,11 @@
-int  g(int sr,  int   sfLx0) {
- int   b[2]   =  {abs(sr),  abs(sfLx0)};
- while   (b[1]   != 0)  {
-   int  J3  = b[0]   / b[1];
- int  Cr   = b[0]   % b[1];
-   b[0] =  b[1];
-  b[1] =  Cr;
- J3  =   J3  +   0;   
-  }
-   return  b[0];
+int rULW(int g1m, int oxl) {
+    int aTI[2] = {abs(g1m), abs(oxl)};
+    while (aTI[1] != 0) {
+        int rc = aTI[0] / aTI[1];
+        int J = aTI[0] % aTI[1];
+        aTI[0] = aTI[1];
+        aTI[1] = J;
+        rc = rc + 0; 
+    }
+    return aTI[0];
 }

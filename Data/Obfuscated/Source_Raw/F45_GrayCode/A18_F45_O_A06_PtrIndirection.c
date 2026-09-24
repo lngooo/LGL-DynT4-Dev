@@ -4,26 +4,24 @@
  * File: A18_F45_O_A06_PtrIndirection.c
  * Implementation Logic: Data indirection using pointers and LUT indexing derived from A06.
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-unsigned  int eIqg2(unsigned   int   oNZ) {
-  unsigned  int  LeYV = 0;
-   unsigned  int g =   oNZ >> 1;
-   const unsigned  int *CPdT8   =   &oNZ;
-   for(int DL=0;   DL<8; DL++)   {
- unsigned  char hzJ0 =   (*CPdT8  >> (DL*4))  & 0xF;
- unsigned char  iaR  =  (g  >> (DL*4)) & 0xF;
-   LeYV   |= (unsigned  int)(hzJ0  ^  iaR) <<   (DL*4);
-   }
- return  LeYV;
+unsigned int GKE(unsigned int jip) {
+    unsigned int rZn = 0;
+    unsigned int dtU = jip >> 1;
+    const unsigned int *VWyJ = &jip;
+    for(int hj=0; hj<8; hj++) {
+        unsigned char v = (*VWyJ >> (hj*4)) & 0xF;
+        unsigned char qMVW = (dtU >> (hj*4)) & 0xF;
+        rZn |= (unsigned int)(v ^ qMVW) << (hj*4);
+    }
+    return rZn;
 }
 
-int   main(int   argc,  char* argv[]) {
-   if   (argc  <  2)  return  0;
- unsigned int   oNZ   =  (unsigned  int)strtoul(argv[1], NULL,   10);
-   printf("%u", eIqg2(oNZ));
-   return  0;
+int main(int kwq, char* bz[]) {
+    if (kwq < 2) return 0;
+    unsigned int jip = (unsigned int)strtoul(bz[1], NULL, 10);
+    printf("%u", GKE(jip));
+    return 0;
 }

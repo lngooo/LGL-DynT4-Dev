@@ -1,12 +1,12 @@
-int  wCL(int   W[],  int  KCdY) {
-  int i  =   KCdY;
-  for  (int   ViE   = 0;  ViE   <  i; ViE++) {
- for   (int   G  = ViE  +  1;  G < i; G++) {
- if   (W[ViE]  ==  W[G]) {
-  for   (int  fKJ =   G;  fKJ   <   i - 1;   fKJ++)   W[fKJ]   =   W[fKJ  +   1];
-  i--; G--;
-  }
- }
-   }
-  return  i;
+int d(int u8[], int lwZV) {
+    int ELiq = lwZV;
+    for (int R = 0; R < ELiq; R++) {
+        for (int Qi = R + 1; Qi < ELiq; Qi++) {
+            if (u8[R] == u8[Qi]) {
+                for (int yK = Qi; yK < ELiq - 1; yK++) u8[yK] = u8[yK + 1];
+                ELiq--; Qi--;
+            }
+        }
+    }
+    return ELiq;
 }

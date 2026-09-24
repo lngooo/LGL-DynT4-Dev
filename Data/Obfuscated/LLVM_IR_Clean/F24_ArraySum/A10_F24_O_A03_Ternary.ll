@@ -1,4 +1,4 @@
-define dso_local i32 @x(i32* %0, i32 %1) {
+define dso_local i32 @U0(i32* %0, i32 %1) {
   %3 = alloca i32*
   %4 = alloca i32
   store i32* %0, i32** %3
@@ -16,7 +16,7 @@ define dso_local i32 @x(i32* %0, i32 %1) {
   %13 = getelementptr inbounds i32, i32* %12, i64 1
   %14 = load i32, i32* %4
   %15 = sub nsw i32 %14, 1
-  %16 = call i32 @x(i32* %13, i32 %15)
+  %16 = call i32 @U0(i32* %13, i32 %15)
   %17 = add nsw i32 %11, %16
   br label %18
 18:

@@ -4,23 +4,21 @@
  * File: A16_F40_O_A01_ArithIdentity.c
  * Implementation Logic: Replace multiplication with (x << 4).
  */
-
-
 #include <stdio.h>
 
-int Blm(const   char*  Es)   {
-  int  GGb =   0;
-   while(*Es)   {
-   int  mqT3 = (*Es  <=   '9')   ?  (*Es - '0')   :   ((*Es|32) -  'a'   +  10);
-   GGb   = (GGb << 4);
-  GGb = GGb + mqT3;
- Es++;
-   }
-   return  GGb;
+int x(const char* B) {
+    int eeK = 0;
+    while(*B) {
+        int vBr = (*B <= '9') ? (*B - '0') : ((*B|32) - 'a' + 10);
+        eeK = (eeK << 4);
+        eeK = eeK + vBr;
+        B++;
+    }
+    return eeK;
 }
 
-int   main(int   argc,  char*  argv[]) {
-   if (argc  <  2) return  0;
-   printf("%d", Blm(argv[1]));
- return   0;
+int main(int K, char* LnLu[]) {
+    if (K < 2) return 0;
+    printf("%d", x(LnLu[1]));
+    return 0;
 }

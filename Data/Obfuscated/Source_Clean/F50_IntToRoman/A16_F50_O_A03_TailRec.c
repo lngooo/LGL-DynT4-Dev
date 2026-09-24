@@ -1,22 +1,22 @@
-void IV(int TcC1,  char*   vF)  {
-O:
-   if  (TcC1 <=  0) return;
-  if  (TcC1  >=   1000)   {   strcat(vF, "M");   TcC1  -=   1000;  goto O; }
-  if  (TcC1  >=   900) {   strcat(vF, "CM"); TcC1 -=   900;  goto O; }
- if (TcC1  >=   500) {  strcat(vF, "D"); TcC1   -= 500;   goto  O;  }
-   if (TcC1 >=  400)   {   strcat(vF,  "CD");   TcC1  -=   400;   goto   O;   }
-   if  (TcC1  >= 100) { strcat(vF, "C"); TcC1   -= 100; goto  O;  }
-   if  (TcC1 >=  90)  { strcat(vF,   "XC");   TcC1   -=   90;   goto O;   }
-  if  (TcC1 >= 50)   {  strcat(vF,   "L");   TcC1  -=   50; goto O; }
- if (TcC1  >=   40)   {  strcat(vF,   "XL");   TcC1   -= 40; goto O;  }
- if  (TcC1 >= 10)  { strcat(vF,  "X"); TcC1   -=   10;   goto O;   }
-  if (TcC1 >=   9)  {   strcat(vF,   "IX"); TcC1  -=   9;   goto   O;  }
- if  (TcC1   >=  5)   { strcat(vF,  "V");   TcC1  -= 5; goto O; }
-   if (TcC1 >= 4)   {  strcat(vF,  "IV"); TcC1 -=   4; goto   O;  }
- strcat(vF, "I");  TcC1   -=  1; goto O;
+void CNCI(int j, char* Ot) {
+wBG:
+    if (j <= 0) return;
+    if (j >= 1000) { strcat(Ot, "M"); j -= 1000; goto wBG; }
+    if (j >= 900) { strcat(Ot, "CM"); j -= 900; goto wBG; }
+    if (j >= 500) { strcat(Ot, "D"); j -= 500; goto wBG; }
+    if (j >= 400) { strcat(Ot, "CD"); j -= 400; goto wBG; }
+    if (j >= 100) { strcat(Ot, "C"); j -= 100; goto wBG; }
+    if (j >= 90) { strcat(Ot, "XC"); j -= 90; goto wBG; }
+    if (j >= 50) { strcat(Ot, "L"); j -= 50; goto wBG; }
+    if (j >= 40) { strcat(Ot, "XL"); j -= 40; goto wBG; }
+    if (j >= 10) { strcat(Ot, "X"); j -= 10; goto wBG; }
+    if (j >= 9) { strcat(Ot, "IX"); j -= 9; goto wBG; }
+    if (j >= 5) { strcat(Ot, "V"); j -= 5; goto wBG; }
+    if (j >= 4) { strcat(Ot, "IV"); j -= 4; goto wBG; }
+    strcat(Ot, "I"); j -= 1; goto wBG;
 }
 
-void  V(int  TcC1,   char* vF)  {
-   vF[0]  =  '\0';
- IV(TcC1,  vF);
+void qAE(int j, char* Ot) {
+    Ot[0] = '\0';
+    CNCI(j, Ot);
 }

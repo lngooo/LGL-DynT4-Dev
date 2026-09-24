@@ -5,26 +5,24 @@
  * Implementation Logic: Iterative logic reconstructed using goto labels to disrupt CFG.
  * Input Format: <n>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-long   long   ENHH(int   LSde)  {
- if  (LSde <   0)  return   0;
- long long  FcII0  =  1;
-   int Ki  =   1;
-eVY5:
-   if   (Ki >  LSde)  goto   wuHB1;
-  FcII0 *=  Ki;
-   Ki++;
- goto  eVY5;
-wuHB1:
- return  FcII0;
+long long f(int R1) {
+    if (R1 < 0) return 0;
+    long long W = 1;
+    int KcW = 1;
+EH:
+    if (KcW > R1) goto rlLB;
+    W *= KcW;
+    KcW++;
+    goto EH;
+rlLB:
+    return W;
 }
 
-int main(int   argc,   char   *argv[]) {
- if   (argc   < 2) return 1;
- printf("%lld\n", ENHH(atoi(argv[1])));
-  return  0;
+int main(int fEwA, char *uQg[]) {
+    if (fEwA < 2) return 1;
+    printf("%lld\n", f(atoi(uQg[1])));
+    return 0;
 }

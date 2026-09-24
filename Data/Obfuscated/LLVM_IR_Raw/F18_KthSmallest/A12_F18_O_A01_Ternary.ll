@@ -1,5 +1,5 @@
 @.str = constant [4 x i8] c"%d\0A\00"
-define dso_local i32 @zz(i32* %0, i32 %1, i32 %2, i32 %3) {
+define dso_local i32 @c60x(i32* %0, i32 %1, i32 %2, i32 %3) {
   %5 = alloca i32
   %6 = alloca i32*
   %7 = alloca i32
@@ -160,7 +160,7 @@ define dso_local i32 @zz(i32* %0, i32 %1, i32 %2, i32 %3) {
   %135 = load i32, i32* %11
   %136 = sub nsw i32 %135, 1
   %137 = load i32, i32* %9
-  %138 = call i32 @zz(i32* %133, i32 %134, i32 %136, i32 %137)
+  %138 = call i32 @c60x(i32* %133, i32 %134, i32 %136, i32 %137)
   br label %146
 139:
   %140 = load i32*, i32** %6
@@ -168,7 +168,7 @@ define dso_local i32 @zz(i32* %0, i32 %1, i32 %2, i32 %3) {
   %142 = add nsw i32 %141, 1
   %143 = load i32, i32* %8
   %144 = load i32, i32* %9
-  %145 = call i32 @zz(i32* %140, i32 %142, i32 %143, i32 %144)
+  %145 = call i32 @c60x(i32* %140, i32 %142, i32 %143, i32 %144)
   br label %146
 146:
   %147 = phi i32 [ %138, %132 ], [ %145, %139 ]
@@ -246,7 +246,7 @@ define dso_local i32 @main(i32 %0, i8** %1) {
   %54 = load i32, i32* %7
   %55 = sub nsw i32 %54, 1
   %56 = load i32, i32* %6
-  %57 = call i32 @zz(i32* %53, i32 0, i32 %55, i32 %56)
+  %57 = call i32 @c60x(i32* %53, i32 0, i32 %55, i32 %56)
   store i32 %57, i32* %10
   %58 = load i32, i32* %10
   %59 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str, i64 0, i64 0), i32 %58)

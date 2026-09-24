@@ -1,12 +1,12 @@
-struct   XDNx   {  int  da; int GtE;   };
+struct fr { int wQzz; int Ha; };
 
-int twi7(int   h[], int  wfCN,   int c6)  {
- if (wfCN   == 0)  return  -1;
- struct XDNx fu  =   {0, wfCN  - 1};
- while  (fu.da  <   fu.GtE)  {
-  int  z =  fu.da + (fu.GtE   - fu.da) / 2;
-   if  (h[z] <  c6)   fu.da   =   z  +  1;
-  else   fu.GtE  =   z;
-  }
-  return (h[fu.da] == c6)   ? fu.da  : -1;
+int f(int U1J[], int w90, int oM9) {
+    if (w90 == 0) return -1;
+    struct fr D7 = {0, w90 - 1};
+    while (D7.wQzz < D7.Ha) {
+        int Kaql = D7.wQzz + (D7.Ha - D7.wQzz) / 2;
+        if (U1J[Kaql] < oM9) D7.wQzz = Kaql + 1;
+        else D7.Ha = Kaql;
+    }
+    return (U1J[D7.wQzz] == oM9) ? D7.wQzz : -1;
 }

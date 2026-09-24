@@ -5,28 +5,26 @@
  * Implementation Logic: SubtractionLoop
  * Input Format: <integer>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-int   LCz7(int  P)   {
- int b1   =   -1;
-  unsigned   int  dt3   = 1;
-   while (dt3 <=   (unsigned int)P &&   dt3 > 0) {
-   dt3 <<= 1;
-  b1++;
-   if (dt3 > (unsigned   int)P) break;
-  }
-  return   b1;
+int v5(int wWmk) {
+    int booU = -1;
+    unsigned int nU = 1;
+    while (nU <= (unsigned int)wWmk && nU > 0) {
+        nU <<= 1;
+        booU++;
+        if (nU > (unsigned int)wWmk) break;
+    }
+    return booU;
 }
 
-int   main(int argc,  char *argv[])   {
-  if   (argc   < 2)  return  0;
-   int   P   = atoi(argv[1]);
-  if (P   <= 0) return 0; 
-  int S0   =   LCz7(P);
- printf("%d\n",   S0);
- return   0;
+int main(int L, char *hx[]) {
+    if (L < 2) return 0;
+    int wWmk = atoi(hx[1]);
+    if (wWmk <= 0) return 0; 
+    int y = v5(wWmk);
+    printf("%d\n", y);
+    return 0;
 }

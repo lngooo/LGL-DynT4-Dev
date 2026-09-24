@@ -1,4 +1,4 @@
-define dso_local i64 @p(i64 %0, i64 %1, i64 %2) {
+define dso_local i64 @e(i64 %0, i64 %1, i64 %2) {
   %4 = alloca i64
   %5 = alloca i64
   %6 = alloca i64
@@ -44,7 +44,7 @@ define dso_local i64 @p(i64 %0, i64 %1, i64 %2) {
   %34 = load i64, i64* %7
   ret i64 %34
 }
-define dso_local i32 @AEfa(i32 %0) {
+define dso_local i32 @yfR9(i32 %0) {
   %2 = alloca i32
   %3 = alloca i32
   %4 = alloca i32
@@ -69,7 +69,7 @@ define dso_local i32 @AEfa(i32 %0) {
   %16 = sext i32 %15 to i64
   %17 = load i32, i32* %3
   %18 = sext i32 %17 to i64
-  %19 = call i64 @p(i64 2, i64 %16, i64 %18)
+  %19 = call i64 @e(i64 2, i64 %16, i64 %18)
   %20 = icmp ne i64 %19, 1
   br i1 %20, label %21, label %22
 21:

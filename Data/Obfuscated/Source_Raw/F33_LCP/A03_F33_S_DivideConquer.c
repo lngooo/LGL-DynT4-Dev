@@ -5,31 +5,29 @@
  * Implementation Logic: DivideConquer
  * Input Format: <str1> <str2> ...
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
 
-void  Zc9(char  **k4,  int ch,   char   *LMo8)  {
- if   (ch   <= 0)  return;
-   if  (ch ==  1)  {   strcpy(LMo8,  k4[0]);  return;  }
- char   QVG[128] =  {0},   Ed4[128]   =   {0};
-  int   Gz  = ch / 2;
-   Zc9(k4,  Gz, QVG);
-   Zc9(k4 +  Gz,  ch   -  Gz,   Ed4);
-   int   mYMY  =   0;
-   while   (QVG[mYMY]   && Ed4[mYMY] && QVG[mYMY]   ==  Ed4[mYMY]) {   LMo8[mYMY] =   QVG[mYMY];  mYMY++;  }
-   LMo8[mYMY] =   '\0';
+void bV(char **O, int Q, char *ml0) {
+    if (Q <= 0) return;
+    if (Q == 1) { strcpy(ml0, O[0]); return; }
+    char oV[128] = {0}, U[128] = {0};
+    int m0 = Q / 2;
+    bV(O, m0, oV);
+    bV(O + m0, Q - m0, U);
+    int mi = 0;
+    while (oV[mi] && U[mi] && oV[mi] == U[mi]) { ml0[mi] = oV[mi]; mi++; }
+    ml0[mi] = '\0';
 }
 
-int main(int   argc,   char   *argv[])   {
-   if  (argc  <  2)  return 0;
- int   wMBG0  = argc  - 1;
-   char   **k4 =   &argv[1];
-  char  kaUX[128]  =   {0};
-   Zc9(k4,   wMBG0,   kaUX);
-  printf("%s\n",   kaUX);
- return   0;
+int main(int DdQ, char *oNic[]) {
+    if (DdQ < 2) return 0;
+    int xO = DdQ - 1;
+    char **O = &oNic[1];
+    char RBj[128] = {0};
+    bV(O, xO, RBj);
+    printf("%s\n", RBj);
+    return 0;
 }

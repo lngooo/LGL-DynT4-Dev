@@ -4,37 +4,35 @@
  * File: A05_F18_S_HoarePartition.c
  * Implementation Logic: HoarePartition
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-int   LG1(int   SES[], int  j3,  int   CEQ,  int XM)   {
-   if  (j3  ==  CEQ) return  SES[j3];
-  int   Ab7 =   SES[j3],  czI7   =  j3   -  1, sO   = CEQ + 1;
- while  (1) {
-  do {  czI7++;  }  while   (SES[czI7] <   Ab7);
-  do { sO--;  } while   (SES[sO]   > Ab7);
- if   (czI7   >=  sO)  break;
- int  so   = SES[czI7];  SES[czI7] =  SES[sO];   SES[sO] =   so;
-  }
-  int znOo =   sO;
-  if (znOo - j3  >= XM   - 1)   return   LG1(SES,   j3,   znOo,  XM);
- return   LG1(SES,   znOo   +   1,   CEQ,  XM  - (znOo  -   j3   +  1));
+int W(int G[], int ACk, int nGc, int beOS) {
+    if (ACk == nGc) return G[ACk];
+    int yvVz = G[ACk], zc = ACk - 1, q = nGc + 1;
+    while (1) {
+        do { zc++; } while (G[zc] < yvVz);
+        do { q--; } while (G[q] > yvVz);
+        if (zc >= q) break;
+        int T = G[zc]; G[zc] = G[q]; G[q] = T;
+    }
+    int uQ = q;
+    if (uQ - ACk >= beOS - 1) return W(G, ACk, uQ, beOS);
+    return W(G, uQ + 1, nGc, beOS - (uQ - ACk + 1));
 }
 
-int main(int   argc, char  *argv[]) {
-  if   (argc  <   3)  return   0;
-  int  XM  =   atoi(argv[1]);
-   int   bw  =   argc   -  2;
-  int   *SES   = (int *)malloc(bw  *   sizeof(int));
- for   (int czI7  =   0;  czI7   <   bw;   czI7++) SES[czI7]  =   atoi(argv[czI7 +   2]);
+int main(int FDef, char *T8[]) {
+    if (FDef < 3) return 0;
+    int beOS = atoi(T8[1]);
+    int iE0r = FDef - 2;
+    int *G = (int *)malloc(iE0r * sizeof(int));
+    for (int zc = 0; zc < iE0r; zc++) G[zc] = atoi(T8[zc + 2]);
 
- // 假设 K   是从  1 开始的 (1st smallest)
-   int w  =   LG1(SES, 0,  bw  - 1,  XM);
+    // 假设 K 是从 1 开始的 (1st smallest)
+    int k1 = W(G, 0, iE0r - 1, beOS);
 
-  printf("%d\n",  w);
-   free(SES);
- return   0;
+    printf("%d\n", k1);
+    free(G);
+    return 0;
 }

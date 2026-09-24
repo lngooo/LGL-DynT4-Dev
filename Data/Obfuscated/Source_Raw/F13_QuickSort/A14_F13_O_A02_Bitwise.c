@@ -4,38 +4,36 @@
  * File: A14_F13_O_A02_Bitwise.c
  * Implementation Logic: Bitwise
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-void  jQEN(int   I[],   int  zD,  int YOO1)  {
-   if (zD <   YOO1)  {
-   int  MVBQ = I[zD],  iEi9  =   zD   - 1,  Ye =   YOO1   +   1;
-  while   (!(0)) {
- while   (I[++iEi9] <   MVBQ);
-   while   (I[--Ye] >  MVBQ);
-   if   (!(iEi9 <  Ye))  break;
-   I[iEi9] ^=  I[Ye];   I[Ye]  ^=   I[iEi9];  I[iEi9]   ^= I[Ye];
-   }
- jQEN(I,  zD,   Ye);
-   jQEN(I,   Ye + 1,  YOO1);
-   }
+void KUR(int JIb[], int KR, int Z64) {
+    if (KR < Z64) {
+        int ejr = JIb[KR], v = KR - 1, OI1k = Z64 + 1;
+        while (!(0)) {
+            while (JIb[++v] < ejr);
+            while (JIb[--OI1k] > ejr);
+            if (!(v < OI1k)) break;
+            JIb[v] ^= JIb[OI1k]; JIb[OI1k] ^= JIb[v]; JIb[v] ^= JIb[OI1k];
+        }
+        KUR(JIb, KR, OI1k);
+        KUR(JIb, OI1k + 1, Z64);
+    }
 }
 
-int  main(int   argc,   char   *argv[]) {
-   if   (argc <  2) return 0;
-  int pZF4 =  argc -   1;
- int  *I   =  (int *)malloc(pZF4  * sizeof(int));
- for (int   iEi9   =   0; iEi9   <   pZF4; iEi9++)  I[iEi9] =  atoi(argv[iEi9 +   1]);
+int main(int lMh3, char *T2u[]) {
+    if (lMh3 < 2) return 0;
+    int r = lMh3 - 1;
+    int *JIb = (int *)malloc(r * sizeof(int));
+    for (int v = 0; v < r; v++) JIb[v] = atoi(T2u[v + 1]);
 
- jQEN(I,   0,  pZF4   - 1);
+    KUR(JIb, 0, r - 1);
 
-   for  (int  iEi9   =  0; iEi9   < pZF4;  iEi9++) {
-   printf("%d%s",   I[iEi9],   (iEi9   ==  pZF4   - 1   ?   ""  :   " "));
-  }
- printf("\n");
- free(I);
-  return   0;
+    for (int v = 0; v < r; v++) {
+        printf("%d%s", JIb[v], (v == r - 1 ? "" : " "));
+    }
+    printf("\n");
+    free(JIb);
+    return 0;
 }

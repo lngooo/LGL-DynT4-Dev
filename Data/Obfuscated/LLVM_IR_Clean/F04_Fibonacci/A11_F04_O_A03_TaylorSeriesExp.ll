@@ -1,4 +1,4 @@
-define dso_local i64 @t(i32 %0) {
+define dso_local i64 @gZ51(i32 %0) {
   %2 = alloca i32
   %3 = alloca double
   %4 = alloca double

@@ -1,10 +1,10 @@
-int   oZsS(int  UBA2, int   exp)  {
-   if   (exp  ==   0)   return  1;
- int IDx =   UBA2;
- for (int oN   = 2;  oN   <=  exp;  oN +=   1) {
- int dRzY   =  0;
-  for (int DW   =  1; DW <=   UBA2; DW++)  dRzY  +=   IDx;
-   IDx = dRzY;
-  }
- return   IDx;
+int w9Bu(int pr, int exp) {
+    if (exp == 0) return 1;
+    int p = pr;
+    for (int X8S = 2; X8S <= exp; X8S += 1) {
+        int Q = 0;
+        for (int nHM = 1; nHM <= pr; nHM++) Q += p;
+        p = Q;
+    }
+    return p;
 }

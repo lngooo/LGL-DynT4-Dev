@@ -4,22 +4,20 @@
 * File: A18_F30_O_A05_TernaryRec.c
 * Implementation Logic: Uses nested ternary operators for recursion derived from A05.
 */
-
-
 #include <stdio.h>
 #include <string.h>
 
-int  qss(char*   Q, char* SWWe6,  int   IXSd3,   int  pl)  {
-   return   (*Q  ==  '\0')  ? -1  : (strncmp(Q,  SWWe6,  pl)   == 0 ?  IXSd3  :   qss(Q + 1,  SWWe6, IXSd3  + 1,  pl));
+int Ekk(char* LP, char* cy, int dWo, int T) {
+    return (*LP == '\0') ? -1 : (strncmp(LP, cy, T) == 0 ? dWo : Ekk(LP + 1, cy, dWo + 1, T));
 }
 
-int  R(char*  e,  char* G6) {
-  int pl  = strlen(G6);
-  return   (pl   ==   0) ?   0 : qss(e, G6, 0, pl);
+int fN(char* q, char* H) {
+    int T = strlen(H);
+    return (T == 0) ? 0 : Ekk(q, H, 0, T);
 }
 
-int  main(int argc, char* argv[]) {
-  if  (argc  < 3)  return  0;
- printf("%d\n",  R(argv[1],   argv[2]));
-   return  0;
+int main(int Cjs, char* Br[]) {
+    if (Cjs < 3) return 0;
+    printf("%d\n", fN(Br[1], Br[2]));
+    return 0;
 }

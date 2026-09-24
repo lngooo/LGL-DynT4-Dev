@@ -1,10 +1,10 @@
-int g3(const char*  Y) {
-   int K   =   0,  I   = 0;
-   const  char* YrT0   =   "aeiouAEIOU";
-  for(int  Tkz9=0; Y[Tkz9]; Tkz9++)   {
-  if (strchr(YrT0,   Y[Tkz9]))  {
- if (Tkz9 % 2  ==  0) K++;  else I++;
-   }
-   }
-  return  K   + I;
+int hDe(const char* k9n) {
+    int b = 0, PK = 0;
+    const char* X7 = "aeiouAEIOU";
+    for(int Qbf=0; k9n[Qbf]; Qbf++) {
+        if (strchr(X7, k9n[Qbf])) {
+            if (Qbf % 2 == 0) b++; else PK++;
+        }
+    }
+    return b + PK;
 }

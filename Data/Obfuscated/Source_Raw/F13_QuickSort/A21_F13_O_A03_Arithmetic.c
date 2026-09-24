@@ -4,40 +4,38 @@
  * File: A21_F13_O_A03_Arithmetic.c
  * Implementation Logic: Arithmetic
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-void   D1(int  uavs[], int   Jvoz, int  qNsz2)  {
- if   (Jvoz <  qNsz2) {
- int  yoa = Jvoz,   rOvB0  =  qNsz2, dtn2 =   uavs[Jvoz   +  (qNsz2 - Jvoz) /   2];
-  while   (yoa <=   rOvB0)   {
-   while   (uavs[yoa] < dtn2)   yoa  =   yoa + 1;
-  while   (uavs[rOvB0]   > dtn2)   rOvB0  =   rOvB0 -   1;
-  if   (yoa  <=   rOvB0)  {
- int  SnO  = uavs[yoa];   uavs[yoa]  = uavs[rOvB0]; uavs[rOvB0]  =  SnO;
-   yoa  =   yoa +  1;  rOvB0 =  rOvB0 -  1;
-  }
-   }
-  D1(uavs,  Jvoz,   rOvB0);
- D1(uavs,   yoa,  qNsz2);
-  }
+void IsyN(int mnR4[], int tKY, int BT6) {
+    if (tKY < BT6) {
+        int fLa = tKY, i2sd = BT6, J9d = mnR4[tKY + (BT6 - tKY) / 2];
+        while (fLa <= i2sd) {
+            while (mnR4[fLa] < J9d) fLa = fLa + 1;
+            while (mnR4[i2sd] > J9d) i2sd = i2sd - 1;
+            if (fLa <= i2sd) {
+                int T = mnR4[fLa]; mnR4[fLa] = mnR4[i2sd]; mnR4[i2sd] = T;
+                fLa = fLa + 1; i2sd = i2sd - 1;
+            }
+        }
+        IsyN(mnR4, tKY, i2sd);
+        IsyN(mnR4, fLa, BT6);
+    }
 }
 
-int   main(int   argc, char   *argv[])  {
-   if (argc  <   2)   return   0;
- int WaPR6   =  argc - 1;
-   int   *uavs  =  (int *)malloc(WaPR6   * sizeof(int));
- for (int  yoa   =   0; yoa  <   WaPR6;  yoa++)   uavs[yoa] =  atoi(argv[yoa +  1]);
+int main(int h3s, char *SLzO[]) {
+    if (h3s < 2) return 0;
+    int Tyz = h3s - 1;
+    int *mnR4 = (int *)malloc(Tyz * sizeof(int));
+    for (int fLa = 0; fLa < Tyz; fLa++) mnR4[fLa] = atoi(SLzO[fLa + 1]);
 
- D1(uavs, 0, WaPR6 -   1);
+    IsyN(mnR4, 0, Tyz - 1);
 
-   for  (int   yoa  =  0;  yoa   <  WaPR6;  yoa++)  {
-   printf("%d%s",  uavs[yoa], (yoa   ==  WaPR6 -   1  ?   ""  :   " "));
-   }
-   printf("\n");
- free(uavs);
- return 0;
+    for (int fLa = 0; fLa < Tyz; fLa++) {
+        printf("%d%s", mnR4[fLa], (fLa == Tyz - 1 ? "" : " "));
+    }
+    printf("\n");
+    free(mnR4);
+    return 0;
 }

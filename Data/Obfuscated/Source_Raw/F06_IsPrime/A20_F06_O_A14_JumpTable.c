@@ -4,26 +4,24 @@
  * File: A20_F06_O_A14_JumpTable.c
  * Implementation Logic: Trial division using a jump table (computed gotos).
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int   jz(int bij)  {
-  if (bij < 2)   return 0;
- int dd6 =  2;
- void   *L0[]   = {&&imLt, &&Ql9, &&z};
-imLt:
-   if   (dd6  *   dd6 > bij) goto  *L0[1];
-   if  (bij %  dd6  ==  0) goto *L0[2];
- dd6++;
-   goto   *L0[0];
-Ql9:  return   1;
-z:   return 0;
+int NyZ(int CvB) {
+    if (CvB < 2) return 0;
+    int tu = 2;
+    void *Eu[] = {&&z9, &&sVS, &&KYpu};
+z9:
+    if (tu * tu > CvB) goto *Eu[1];
+    if (CvB % tu == 0) goto *Eu[2];
+    tu++;
+    goto *Eu[0];
+sVS: return 1;
+KYpu: return 0;
 }
 
-int main(int argc, char   *argv[])  {
- if   (argc  < 2) return 1;
- printf("%d\n", jz(atoi(argv[1])));
-  return  0;
+int main(int r0Yz, char *h7K[]) {
+    if (r0Yz < 2) return 1;
+    printf("%d\n", NyZ(atoi(h7K[1])));
+    return 0;
 }

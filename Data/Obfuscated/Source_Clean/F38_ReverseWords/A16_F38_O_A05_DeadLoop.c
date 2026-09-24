@@ -1,14 +1,14 @@
-void aIzk(char  *Rltb)   {
- char   *o  =  Rltb;  while(*o) o++;
- char   *I = Rltb, *PLzB9 = o  -  1;
- while(I <   PLzB9) { char   mKd6 =  *I;  *I++   = *PLzB9;  *PLzB9--  = mKd6;   }
-   if(0)  {  for(int   gmq=0; gmq<100; gmq++)   printf("Unreachable");   }
-   char  *A  =   Rltb;
- for(char *H   =   Rltb; H  <=   o; H++) {
-   if(*H  ==  32   || *H   ==  0)  {
- char  *G =  A,  *dv5 =   H -   1;
-   while(G  <   dv5) {  char  jj8  = *G; *G++  =   *dv5;   *dv5--   =  jj8;   }
- A   =  H   +   1;
- }
- }
+void IGm(char *luZ) {
+    char *y6 = luZ; while(*y6) y6++;
+    char *z6i = luZ, *v = y6 - 1;
+    while(z6i < v) { char dC0 = *z6i; *z6i++ = *v; *v-- = dC0; }
+    if(0) { for(int rTdz=0; rTdz<100; rTdz++) printf("Unreachable"); }
+    char *CNv = luZ;
+    for(char *fx9 = luZ; fx9 <= y6; fx9++) {
+        if(*fx9 == 32 || *fx9 == 0) {
+            char *knKl = CNv, *M = fx9 - 1;
+            while(knKl < M) { char I = *knKl; *knKl++ = *M; *M-- = I; }
+            CNv = fx9 + 1;
+        }
+    }
 }

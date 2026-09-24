@@ -5,22 +5,20 @@
  * Implementation Logic: Accumulator split into two variables to obfuscate data flow.
  * Input Format: <n>
  */
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
-int  eL(int JH)   {
-   int   e3 = 0, ItC   =  0;
-  for   (int   sxp3   =   1;  sxp3 <= JH;  sxp3++) {
-  if (sxp3  % 2   ==   0) e3  += sxp3;
- else   ItC  +=   sxp3;
- }
-   return  e3 + ItC;
+int R(int d) {
+    int UvZ3 = 0, p = 0;
+    for (int mI = 1; mI <= d; mI++) {
+        if (mI % 2 == 0) UvZ3 += mI;
+        else p += mI;
+    }
+    return UvZ3 + p;
 }
 
-int   main(int  argc,  char  *argv[])  {
-  if (argc <  2)  return 1;
- printf("%d\n",  eL(atoi(argv[1])));
-  return 0;
+int main(int iBlr, char *p37e[]) {
+    if (iBlr < 2) return 1;
+    printf("%d\n", R(atoi(p37e[1])));
+    return 0;
 }

@@ -1,15 +1,15 @@
-void  Am4(char **it, int   jh,  char *fHWW)  {
-   int  JId  = 0;
- while   (it[0][JId]   &&   it[0][JId+1]) {
- int G   = 1;
-   for  (int  M   =   1; M <   jh; M++)   
- if  (it[M][JId]  !=  it[0][JId]   ||  it[M][JId+1] !=  it[0][JId+1])  {  G  =   0;   break;  }
-  if  (G)   {  fHWW[JId] =   it[0][JId];   fHWW[JId+1]  = it[0][JId+1];  JId +=  2;   } else break;
- }
- if  (it[0][JId])   {
- int G  =   1;
-  for  (int   M  =   1;   M <  jh;   M++)  if (it[M][JId] !=   it[0][JId]) G = 0;
-  if  (G) { fHWW[JId] =  it[0][JId];  JId++;  }
-  }
-   fHWW[JId]   =   '\0';
+void pF7(char **BB9Y, int H, char *h) {
+    int BX = 0;
+    while (BB9Y[0][BX] && BB9Y[0][BX+1]) {
+        int c = 1;
+        for (int dH = 1; dH < H; dH++) 
+            if (BB9Y[dH][BX] != BB9Y[0][BX] || BB9Y[dH][BX+1] != BB9Y[0][BX+1]) { c = 0; break; }
+        if (c) { h[BX] = BB9Y[0][BX]; h[BX+1] = BB9Y[0][BX+1]; BX += 2; } else break;
+    }
+    if (BB9Y[0][BX]) {
+        int c = 1;
+        for (int dH = 1; dH < H; dH++) if (BB9Y[dH][BX] != BB9Y[0][BX]) c = 0;
+        if (c) { h[BX] = BB9Y[0][BX]; BX++; }
+    }
+    h[BX] = '\0';
 }

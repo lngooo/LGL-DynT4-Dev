@@ -1,6 +1,6 @@
-int aFi(const char  *e)  {
-  if  (!*e) return 0;
-   if   (!*(e+1)) return   1;
+int PA(const char *Lmp1) {
+    if (!*Lmp1) return 0;
+    if (!*(Lmp1+1)) return 1;
 
- return  1 +   aFi(e   +   1);
+    return 1 + PA(Lmp1 + 1);
 }

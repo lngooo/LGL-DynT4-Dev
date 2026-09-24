@@ -1,4 +1,4 @@
-int  dH1(unsigned  int Fi1) {
-  if (Fi1  ==  0)  return 0;
- return   (Fi1 & (Fi1  - 1)) ==  0;
+int ukg2(unsigned int Io) {
+    if (Io == 0) return 0;
+    return (Io & (Io - 1)) == 0;
 }

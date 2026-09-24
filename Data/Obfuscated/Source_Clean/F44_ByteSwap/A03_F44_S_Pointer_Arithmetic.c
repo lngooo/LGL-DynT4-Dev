@@ -1,9 +1,9 @@
-uint32_t KB(uint32_t   TRk6) {
-  uint32_t   Rsq;
-  uint8_t   *xG =   (uint8_t  *)&TRk6;
-  uint8_t *v9 =  (uint8_t   *)&Rsq;
-  for  (int RfAN =   0;  RfAN <  4;   RfAN++)   {
-   v9[RfAN]   =   xG[3  -   RfAN];
-   }
- return Rsq;
+uint32_t Kpnw(uint32_t ZN) {
+    uint32_t T;
+    uint8_t *O = (uint8_t *)&ZN;
+    uint8_t *Iu3 = (uint8_t *)&T;
+    for (int fxO9 = 0; fxO9 < 4; fxO9++) {
+        Iu3[fxO9] = O[3 - fxO9];
+    }
+    return T;
 }

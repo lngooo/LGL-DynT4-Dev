@@ -1,7 +1,7 @@
-int   yFJo5(unsigned   int rni)  {
-  if   (rni  ==   0) return 0;
-   while (rni   % 2   == 0)  {
-  rni   /=   2;
-  }
-   return   rni ==  1;
+int vUw(unsigned int gk) {
+    if (gk == 0) return 0;
+    while (gk % 2 == 0) {
+        gk /= 2;
+    }
+    return gk == 1;
 }

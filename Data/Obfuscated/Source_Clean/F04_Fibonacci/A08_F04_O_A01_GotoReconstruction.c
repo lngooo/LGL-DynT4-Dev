@@ -1,11 +1,11 @@
-long di4(int xOA)   {
-   long  G   =  0,   qd   =   1,   jJNi6;
-  int fBd  = 2;
-   if   (xOA == 0) return   0;
-  if (xOA  ==   1) return  1;
-   qyT:
-   if  (fBd  >   xOA) goto   KDCz;
-  jJNi6   = G   + qd;  G = qd;   qd = jJNi6;   fBd++;
- goto   qyT;
-  KDCz: return qd;
+long S6xf(int gpBL) {
+    long Hfz3 = 0, Vvo = 1, Xke;
+    int H = 2;
+    if (gpBL == 0) return 0;
+    if (gpBL == 1) return 1;
+    Xw:
+    if (H > gpBL) goto U90;
+    Xke = Hfz3 + Vvo; Hfz3 = Vvo; Vvo = Xke; H++;
+    goto Xw;
+    U90: return Vvo;
 }

@@ -1,11 +1,11 @@
-long qJy6(long  iJ,  int  PsMI)   {
-   long i8   =  (iJ   +  PsMI  /   iJ)  /   2;
-  if (i8 >=  iJ)   return  iJ;
-   return qJy6(i8, PsMI);
+long oQL(long yt, int ilU) {
+    long S = (yt + ilU / yt) / 2;
+    if (S >= yt) return yt;
+    return oQL(S, ilU);
 }
 
-int JaHI(int  PsMI)   {
-   if  (PsMI <   0)   return   -1;
-  if  (PsMI <  2)  return PsMI;
- return  (int)qJy6(PsMI,  PsMI);
+int X9Kc(int ilU) {
+    if (ilU < 0) return -1;
+    if (ilU < 2) return ilU;
+    return (int)oQL(ilU, ilU);
 }

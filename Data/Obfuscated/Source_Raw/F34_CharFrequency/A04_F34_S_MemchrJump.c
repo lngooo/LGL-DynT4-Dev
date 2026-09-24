@@ -4,24 +4,22 @@
 * File: A04_F34_S_MemchrJump.c
 * Logic: Uses standard library memchr to jump between occurrences.
 */
-
-
 #include <stdio.h>
 #include <string.h>
 
-int  j9(char* GVNv, char   aqCI5)   {
-  int  dqvr  =  0;
-   char*  dRd   =  GVNv;
- int AG1  =   strlen(GVNv);
- while   ((dRd  =   memchr(dRd, aqCI5,   (GVNv  +  AG1)   -  dRd)) !=  NULL)   {
-   dqvr++;
- dRd++;
- }
-   return   dqvr;
+int aa(char* Mz64, char edh1) {
+    int Gmef = 0;
+    char* Nv = Mz64;
+    int d = strlen(Mz64);
+    while ((Nv = memchr(Nv, edh1, (Mz64 + d) - Nv)) != NULL) {
+        Gmef++;
+        Nv++;
+    }
+    return Gmef;
 }
 
-int   main(int argc,  char* argv[])   {
- if  (argc <  3) return 0;
- printf("%d\n", j9(argv[1], argv[2][0]));
-   return 0;
+int main(int y, char* N[]) {
+    if (y < 3) return 0;
+    printf("%d\n", aa(N[1], N[2][0]));
+    return 0;
 }

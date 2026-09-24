@@ -1,3 +1,3 @@
-int   k(uint32_t   T) {
- return   __builtin_popcount(T);
+int xvEZ(uint32_t Xi) {
+    return __builtin_popcount(Xi);
 }

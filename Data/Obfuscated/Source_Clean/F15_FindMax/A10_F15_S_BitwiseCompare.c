@@ -1,9 +1,9 @@
-int  tOA(int UQmF,   int   h)  {
-  return  UQmF - ((UQmF   -   h)  &  ((UQmF - h)  >>  31));
+int JfnU(int VAZC, int kZU) {
+    return VAZC - ((VAZC - kZU) & ((VAZC - kZU) >> 31));
 }
 
-int Fi(int fQd[],   int qT4) {
-  int   TUVf  =   fQd[0];
-   for(int   Kv8=1;  Kv8<qT4;   Kv8++) TUVf   =   tOA(TUVf,  fQd[Kv8]);
-   return   TUVf;
+int U5Ai(int j[], int tE) {
+    int e79 = j[0];
+    for(int faAO=1; faAO<tE; faAO++) e79 = JfnU(e79, j[faAO]);
+    return e79;
 }

@@ -1,9 +1,9 @@
-int  i0(int  z[], int kb5,   int y)   {
-   if  (kb5   <= 0)   return   -1;
-   int  gi2  = z[kb5-1],  QxZ  =  -1;
- z[kb5-1]  =  y;
- while  (z[++QxZ]   !=   y);
- z[kb5-1]  =  gi2;
-  if   (QxZ  ==   kb5  -  1)  return  (gi2  ==   y)  ?   QxZ  :   -1;
-  return  QxZ;
+int g(int Seyi[], int k, int C3) {
+    if (k <= 0) return -1;
+    int c = Seyi[k-1], FkOZ = -1;
+    Seyi[k-1] = C3;
+    while (Seyi[++FkOZ] != C3);
+    Seyi[k-1] = c;
+    if (FkOZ == k - 1) return (c == C3) ? FkOZ : -1;
+    return FkOZ;
 }
